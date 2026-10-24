@@ -1,0 +1,115 @@
+# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Sage Active steht nicht in der Liste der Sage Cloud Services der Datenschutzerklärung;
+# Serverstandort und AVV für Sage Active vor Veröffentlichung beim Anbieter klären.
+slug: sage-active
+name: Sage Active
+vendor: sage
+categories:
+  - buchhaltungssoftware
+  - rechnungsprogramme
+status: draft
+verification: unverified
+lastReviewed: 2026-10-24
+author: null
+summary: Cloud-Lösung von Sage für Angebote, Rechnungen, Buchhaltung und Lohn, mit UStVA per ELSTER und DATEV-Export.
+website: https://www.sage.com/de-de/produkte/sage-active/
+marketAvailability:
+  status: verfuegbar
+  source: &produkt
+    url: https://www.sage.com/de-de/produkte/sage-active/
+    title: Sage Active Produktseite
+    accessed: 2026-10-24
+targetGroups:
+  - kmu
+  - selbststaendige
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: null
+  android: null
+freeTrialDays: null
+freePlan: false
+compliance:
+  gobd:
+    status: ja
+    note: "Laut Anbieter zertifizierte Software, konform mit den GoBD."
+    source: *produkt
+  eRechnungEmpfang:
+    status: ja
+    note: XRechnung und ZUGFeRD einlesen.
+    source: *produkt
+  eRechnungVersand:
+    status: unbekannt
+  datevExport:
+    status: ja
+    note: Buchhaltungsdaten im DATEV-Format exportieren.
+    source: *produkt
+  elster:
+    status: ja
+    note: UStVA per ELSTER in Sage Active Essentials.
+    source: *produkt
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: unbekannt
+  serverstandort:
+    status: unbekannt
+  avv:
+    status: unbekannt
+  deutscherSupport:
+    status: unbekannt
+features:
+  angebote:
+    status: ja
+    source: *produkt
+  rechnungen:
+    status: ja
+    source: *produkt
+  belegerfassungOcr:
+    status: ja
+    note: Belege per Foto in der App erfassen.
+    source: *produkt
+  lohn:
+    status: ja
+    note: Lohnabrechnung und HR in Sage Active Essentials.
+    source: *produkt
+  mobileApp:
+    status: ja
+    source: *produkt
+plans:
+  - name: Sage Active Starter
+    monthlyCents: 2500
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - 2 Nutzer
+      - Auftragsbearbeitung
+      - Forderungen und Verbindlichkeiten
+    note: Zum Prüfdatum 50 % Rabatt für 3 Monate für Neukunden (12,50 €), Aktion bis 04.01.2027. Laufzeit auf der Seite nicht angegeben.
+    source: *produkt
+  - name: Sage Active Essentials
+    monthlyCents: 4900
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - 4 Nutzer
+      - Einkauf und Verkauf
+      - Buchhaltung
+      - UStVA per ELSTER
+    note: Zum Prüfdatum 50 % Rabatt für 3 Monate für Neukunden (24,50 €). Laufzeit auf der Seite nicht angegeben.
+    source: *produkt
+pros:
+  - Im Starter-Tarif sind 2 Nutzer enthalten, in Essentials 4 Nutzer.
+  - Umsatzsteuer-Voranmeldung per ELSTER und Export im DATEV-Format.
+  - Lohnabrechnung und HR in derselben Lösung.
+cons:
+  - Serverstandort und Auftragsverarbeitung für Sage Active sind auf den geprüften Seiten nicht dokumentiert.
+  - Buchhaltung erst im Tarif Essentials für 49 € im Monat.
+  - Die Vertragslaufzeit steht nicht auf der Produktseite.
+idealFor:
+  - Kleine Unternehmen mit Mitarbeitenden, die Aufträge, Buchhaltung und Lohn aus einer Hand wollen
+notIdealFor:
+  - Selbstständige, die nur wenige Rechnungen schreiben und einen günstigen Einstieg suchen

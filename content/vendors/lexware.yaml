@@ -1,0 +1,13 @@
+slug: lexware
+name: Lexware
+legalName: Haufe-Lexware GmbH & Co. KG
+country: Deutschland
+city: null
+website: https://www.lexware.de
+sources:
+  - url: https://www.lexware.de/facts/lexware-office/
+    title: Lexware Office Kernfakten
+    accessed: 2026-10-24
+  - url: https://impressum.lexware.de/
+    title: Impressum Lexware
+    accessed: 2026-10-24

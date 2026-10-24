@@ -13,7 +13,7 @@ export const isoDateSchema = z.iso.date();
 
 export const httpsUrlSchema = z.url({ protocol: /^https$/ });
 
-export const sourceSchema = z.object({
+export const sourceSchema = z.strictObject({
   url: httpsUrlSchema,
   title: z.string().min(3),
   accessed: isoDateSchema,
@@ -27,12 +27,13 @@ const centsSchema = z.number().int().nonnegative();
 // ---------------------------------------------------------------------------------------------
 // Vendor
 
-export const vendorSchema = z.object({
+export const vendorSchema = z.strictObject({
   slug: slugSchema,
   name: z.string().min(2),
   legalName: z.string().min(2),
   country: z.string().min(2),
-  city: z.string().min(2),
+  // null while the seat is not confirmed on the vendor's own Impressum.
+  city: z.string().min(2).nullable(),
   website: httpsUrlSchema,
   sources: z.array(sourceSchema).min(1),
 });
@@ -41,7 +42,7 @@ export type Vendor = z.infer<typeof vendorSchema>;
 // ---------------------------------------------------------------------------------------------
 // Category
 
-export const categorySchema = z.object({
+export const categorySchema = z.strictObject({
   slug: slugSchema,
   name: z.string().min(3),
   description: z.string().min(10).max(155),
@@ -54,7 +55,7 @@ export type Category = z.infer<typeof categorySchema>;
 // ---------------------------------------------------------------------------------------------
 // Author (real people only)
 
-export const authorSchema = z.object({
+export const authorSchema = z.strictObject({
   slug: slugSchema,
   name: z.string().min(3),
   role: z.string().min(3),
@@ -65,7 +66,7 @@ export const authorSchema = z.object({
     .regex(/^\/authors\/.+\.(jpg|jpeg|png|webp|avif)$/)
     .optional(),
   expertise: z.array(z.string()).min(1),
-  links: z.array(z.object({ label: z.string(), url: httpsUrlSchema })).default([]),
+  links: z.array(z.strictObject({ label: z.string(), url: httpsUrlSchema })).default([]),
 });
 export type Author = z.infer<typeof authorSchema>;
 
@@ -77,7 +78,7 @@ export type FactStatus = z.infer<typeof factStatusSchema>;
 
 /** A sourced fact. "unbekannt" is allowed without a source; every other value needs one. */
 export const factSchema = z
-  .object({
+  .strictObject({
     status: factStatusSchema,
     note: z.string().min(3).optional(),
     source: sourceSchema.optional(),
@@ -89,7 +90,7 @@ export const factSchema = z
 export type Fact = z.infer<typeof factSchema>;
 
 export const planSchema = z
-  .object({
+  .strictObject({
     name: z.string().min(1),
     /** Price per month when billed monthly. null: plan not offered monthly. */
     monthlyCents: centsSchema.nullable(),
@@ -119,10 +120,10 @@ export const targetGroupSchema = z.enum([
   "gruender",
 ]);
 
-export const ratingSchema = z.object({
+export const ratingSchema = z.strictObject({
   method: z.literal("1.0"),
   date: isoDateSchema,
-  criteria: z.object({
+  criteria: z.strictObject({
     funktionen: z.number().min(0).max(10),
     bedienung: z.number().min(0).max(10),
     preisLeistung: z.number().min(0).max(10),
@@ -130,7 +131,7 @@ export const ratingSchema = z.object({
     supportDatenschutz: z.number().min(0).max(10),
   }),
   /** A rating requires a documented hands-on test (Section 3.3). */
-  test: z.object({
+  test: z.strictObject({
     date: isoDateSchema,
     tester: slugSchema,
     plan: z.string().min(1),
@@ -139,7 +140,7 @@ export const ratingSchema = z.object({
 });
 export type Rating = z.infer<typeof ratingSchema>;
 
-export const softwareSchema = z.object({
+export const softwareSchema = z.strictObject({
   slug: slugSchema,
   name: z.string().min(2),
   vendor: slugSchema,
@@ -152,14 +153,19 @@ export const softwareSchema = z.object({
   reviewer: slugSchema.nullable().default(null),
   summary: z.string().min(40).max(160),
   website: httpsUrlSchema,
-  marketAvailability: z.object({
+  marketAvailability: z.strictObject({
     status: z.enum(["verfuegbar", "eingeschraenkt", "nicht-verfuegbar"]),
     note: z.string().min(10).optional(),
     source: sourceSchema,
   }),
   targetGroups: z.array(targetGroupSchema).min(1),
   deployment: z.array(z.enum(["cloud", "desktop", "hybrid"])).min(1),
-  apps: z.object({ web: z.boolean(), ios: z.boolean(), android: z.boolean() }),
+  /** null: not stated by the vendor on the checked pages. */
+  apps: z.strictObject({
+    web: z.boolean().nullable(),
+    ios: z.boolean().nullable(),
+    android: z.boolean().nullable(),
+  }),
   freeTrialDays: z.number().int().nonnegative().nullable(),
   freePlan: z.boolean(),
   trialSource: sourceSchema.optional(),
@@ -173,7 +179,7 @@ export const softwareSchema = z.object({
   verdict: z.string().min(40).optional(),
   rating: ratingSchema.nullable().default(null),
   logo: z
-    .object({
+    .strictObject({
       file: z.string().regex(/^\/logos\/.+\.(svg|png|webp)$/),
       sourceUrl: httpsUrlSchema,
       accessed: isoDateSchema,
@@ -185,7 +191,7 @@ export type Software = z.infer<typeof softwareSchema>;
 // ---------------------------------------------------------------------------------------------
 // Comparison, affiliate link, guide
 
-export const comparisonSchema = z.object({
+export const comparisonSchema = z.strictObject({
   slug: slugSchema,
   software: z.array(slugSchema).min(2).max(3),
   centralQuestion: z.string().min(10),
@@ -199,7 +205,7 @@ export type Comparison = z.infer<typeof comparisonSchema>;
 const LINK_SHORTENERS =
   /^(bit\.ly|tinyurl\.com|t\.co|goo\.gl|ow\.ly|is\.gd|buff\.ly|rebrand\.ly|shorturl\.at)$/i;
 
-export const affiliateLinkSchema = z.object({
+export const affiliateLinkSchema = z.strictObject({
   software: slugSchema,
   network: z.string().min(2),
   targetUrl: httpsUrlSchema.refine((url) => !LINK_SHORTENERS.test(new URL(url).hostname), {
@@ -212,7 +218,7 @@ export const affiliateLinkSchema = z.object({
 });
 export type AffiliateLink = z.infer<typeof affiliateLinkSchema>;
 
-export const guideSchema = z.object({
+export const guideSchema = z.strictObject({
   slug: slugSchema,
   title: z.string().min(10).max(90),
   description: z.string().min(50).max(155),

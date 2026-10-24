@@ -1,0 +1,10 @@
+slug: buhl
+name: Buhl Data Service
+legalName: Buhl Data Service GmbH
+country: Deutschland
+city: Neunkirchen (Siegerland)
+website: https://www.meinbuero.de
+sources:
+  - url: https://www.meinbuero.de/impressum/
+    title: Impressum WISO MeinBüro
+    accessed: 2026-10-24

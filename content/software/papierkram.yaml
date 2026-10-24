@@ -1,0 +1,128 @@
+# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+slug: papierkram
+name: Papierkram
+vendor: odacer
+categories:
+  - buchhaltungssoftware
+  - rechnungsprogramme
+status: draft
+verification: unverified
+lastReviewed: 2026-10-24
+author: null
+summary: Online-Buchhaltung mit kostenlosem Einstieg, E-Rechnung in allen Paketen, EÜR, UStVA und Kleinunternehmerregelung.
+website: https://www.papierkram.de
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://www.papierkram.de/preise/
+    title: Papierkram Preise
+    accessed: 2026-10-24
+targetGroups:
+  - freiberufler
+  - selbststaendige
+  - kleinunternehmer
+  - gruender
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: null
+  android: null
+freeTrialDays: null
+freePlan: true
+compliance:
+  gobd:
+    status: ja
+    note: Die Preisseite nennt eine GoBD-Zertifizierung.
+    source: *preise
+  eRechnungEmpfang:
+    status: ja
+    note: E-Rechnungen, XRechnungen und ZUGFeRD in allen Paketen empfangen, ablegen und verbuchen.
+    source: *preise
+  eRechnungVersand:
+    status: ja
+    note: XRechnung und ZUGFeRD in allen Versionen.
+    source: *preise
+  datevExport:
+    status: unbekannt
+  elster:
+    status: unbekannt
+    note: "Die Preisseite nennt UStVA monatlich, vierteljährlich und jährlich, aber keine ELSTER-Übermittlung."
+  kleinunternehmer:
+    status: ja
+    note: Kleinunternehmerregelung aktivierbar.
+    source: *preise
+  bankanbindung:
+    status: ja
+    note: Digitales Belegarchiv mit Banksynchronisation.
+    source: *preise
+  serverstandort:
+    status: ja
+    note: Komplette Infrastruktur in deutschen Rechenzentren, Daten in Frankfurt am Main.
+    source:
+      url: https://www.papierkram.de/sicher-und-zuverlaessig-papierkram-buchhaltung-aus-der-cloud
+      title: Papierkram Sicherheit
+      accessed: 2026-10-24
+  avv:
+    status: unbekannt
+  deutscherSupport:
+    status: unbekannt
+features:
+  rechnungen:
+    status: ja
+    source: *preise
+  bankabgleich:
+    status: ja
+    source: *preise
+  euer:
+    status: ja
+    note: "EÜR, UStVA und BWA werden automatisch erstellt."
+    source: *preise
+plans:
+  - name: Free
+    monthlyCents: 0
+    yearlyMonthlyCents: 0
+    perUser: false
+    net: true
+    includes:
+      - Grundlegende Buchhaltung mit Basisfunktionen
+      - Bis 15 Belege im Monat
+    source: *preise
+  - name: S
+    monthlyCents: 1590
+    yearlyMonthlyCents: 1290
+    perUser: false
+    net: true
+    includes:
+      - Alle notwendigen Funktionen für Gründer und Kleinunternehmer
+    source: *preise
+  - name: M
+    monthlyCents: 2990
+    yearlyMonthlyCents: 2490
+    perUser: false
+    net: true
+    includes:
+      - Alle Papierkram-Funktionen
+    source: *preise
+  - name: L
+    monthlyCents: 5990
+    yearlyMonthlyCents: 4990
+    perUser: false
+    net: true
+    includes:
+      - Alle Papierkram-Funktionen
+      - Mehr Speicher für Dokumente
+    source: *preise
+pros:
+  - Kostenloser Einstieg im Paket Free, ideal zum Ausprobieren.
+  - E-Rechnungen in XRechnung und ZUGFeRD in allen Paketen erstellen und empfangen.
+  - Kleinunternehmerregelung lässt sich aktivieren.
+  - Hosting, Datensicherung und Support sind im Preis enthalten.
+cons:
+  - Das Paket Free ist auf 15 Belege im Monat begrenzt.
+  - Eine ELSTER-Übermittlung und ein DATEV-Export werden auf der Preisseite nicht ausdrücklich genannt.
+  - Zusätzliche Nutzer kosten 2,90 € im Monat, bei Jahreszahlung 2,32 €.
+idealFor:
+  - Freiberufler und nebenberuflich Selbstständige mit EÜR
+notIdealFor:
+  - Bilanzierende Unternehmen (vorher prüfen)

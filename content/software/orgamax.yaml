@@ -1,0 +1,166 @@
+# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Offen: Die Vergleichstabelle derselben Seite nennt abweichend 39,00 / 49,00 / 69,00 €.
+# Die Preise unten stammen aus den Preiskarten (data-price-monthly und data-price-yearly).
+slug: orgamax
+name: orgaMAX
+vendor: deltra
+categories:
+  - buchhaltungssoftware
+  - rechnungsprogramme
+status: draft
+verification: unverified
+lastReviewed: 2026-10-24
+author: null
+summary: Bürosoftware aus Detmold für Aufträge, E-Rechnungen, Buchhaltung und Warenwirtschaft, mit Serverstandort Deutschland.
+website: https://www.orgamax.de
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://www.orgamax.de/preise
+    title: orgaMAX Preise und Pakete
+    accessed: 2026-10-24
+targetGroups:
+  - kmu
+  - handwerk
+  - e-commerce
+  - selbststaendige
+deployment:
+  - cloud
+# Bereitstellung: Die Preisseite nennt ein deutsches Rechenzentrum und automatische Updates;
+# ob orgaMAX im Browser oder als installierte Anwendung läuft, vor Veröffentlichung prüfen.
+apps:
+  web: null
+  ios: null
+  android: null
+freeTrialDays: 14
+freePlan: false
+trialSource: *preise
+compliance:
+  gobd:
+    status: ja
+    note: GoBD-konforme Archivierung in allen Plänen.
+    source: *preise
+  eRechnungEmpfang:
+    status: ja
+    source: *preise
+  eRechnungVersand:
+    status: ja
+    source: *preise
+  datevExport:
+    status: ja
+    note: Buchungsdatenexport für DATEV und andere Systeme sowie Export via DATEV Cloud Services.
+    source: *preise
+  elster:
+    status: ja
+    note: Umsatzsteuer-Voranmeldung in allen Plänen.
+    source: *preise
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: ja
+    note: Zahlungen per Banking abgleichen.
+    source: *preise
+  serverstandort:
+    status: ja
+    note: Serverstandort Deutschland in allen Plänen.
+    source: *preise
+  avv:
+    status: unbekannt
+  deutscherSupport:
+    status: ja
+    note: Persönlicher Support per Telefon, Mail und Fernwartung in jedem Plan.
+    source: *preise
+features:
+  angebote:
+    status: ja
+    source: *preise
+  rechnungen:
+    status: ja
+    source: *preise
+  wiederkehrendeRechnungen:
+    status: aufpreis
+    note: Add-on für 10 € im Monat.
+    source: *preise
+  mahnwesen:
+    status: ja
+    source: *preise
+  belegerfassungOcr:
+    status: ja
+    source: *preise
+  bankabgleich:
+    status: ja
+    source: *preise
+  kassenbuch:
+    status: ja
+    source: *preise
+  euer:
+    status: ja
+    source: *preise
+  bilanz:
+    status: teilweise
+    note: "Einfache und doppelte Buchführung (SKR03, SKR04); eine Bilanz nennt die Preisseite nicht."
+    source: *preise
+  lager:
+    status: ja
+    note: Ab Plan Warenwirtschaft.
+    source: *preise
+  projektzeiten:
+    status: ja
+    note: Ab Plan Auftrag Pro.
+    source: *preise
+  api:
+    status: aufpreis
+    note: Add-on für 30 € im Monat.
+    source: *preise
+  steuerberaterzugang:
+    status: ja
+    source: *preise
+  mobileApp:
+    status: ja
+    source: *preise
+plans:
+  - name: Auftrag
+    monthlyCents: 4900
+    yearlyMonthlyCents: 4900
+    perUser: false
+    net: true
+    includes:
+      - 1 Nutzer
+      - Angebote, Aufträge und Rechnungen
+      - E-Rechnungen empfangen und versenden
+      - Buchhaltung und Steuern
+    note: Zum Prüfdatum 50 % Rabatt für 6 Monate bei jährlicher Zahlung, Mindestlaufzeit dann 12 Monate.
+    source: *preise
+  - name: Auftrag Pro
+    monthlyCents: 6900
+    yearlyMonthlyCents: 6900
+    perUser: false
+    net: true
+    includes:
+      - Alles aus Auftrag
+      - Teil-, Abschlags- und Schlussrechnungen
+      - Projekte und Zeiterfassung
+    source: *preise
+  - name: Warenwirtschaft
+    monthlyCents: 9900
+    yearlyMonthlyCents: 9900
+    perUser: false
+    net: true
+    includes:
+      - Alles aus Auftrag Pro
+      - Lager und Bestände
+      - Bestellungen bei Lieferanten
+    source: *preise
+pros:
+  - GoBD-konforme Archivierung und Serverstandort Deutschland in allen Plänen.
+  - Buchungsdatenexport für DATEV, Agenda, Simba, ADDISON und Stotax.
+  - Persönlicher Support per Telefon, Mail und Fernwartung in jedem Plan.
+  - Die Pläne bauen aufeinander auf, vom Auftragswesen bis zur Warenwirtschaft mit Lager und Einkauf.
+cons:
+  - Mit 49 € im Monat im Einstiegsplan teurer als reine Rechnungsprogramme.
+  - Weitere Büronutzer kosten je 20 € im Monat.
+  - API und wiederkehrende Rechnungen sind kostenpflichtige Add-ons.
+idealFor:
+  - Handwerks- und Handelsbetriebe, die Aufträge, Buchhaltung und später Lager in einem System wollen
+notIdealFor:
+  - Freiberufler mit wenigen Rechnungen im Monat

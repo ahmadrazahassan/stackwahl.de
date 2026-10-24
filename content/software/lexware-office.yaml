@@ -1,0 +1,171 @@
+# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Früherer Name: lexoffice (seit 2024 Lexware Office).
+slug: lexware-office
+name: Lexware Office
+vendor: lexware
+categories:
+  - buchhaltungssoftware
+  - rechnungsprogramme
+status: draft
+verification: unverified
+lastReviewed: 2026-10-24
+author: null
+summary: Cloud-Software von Lexware (früher lexoffice) für Belege, E-Rechnungen, Buchhaltung und optionale Lohnabrechnung in vier Versionen.
+website: https://www.lexware.de
+marketAvailability:
+  status: verfuegbar
+  source: &fakten
+    url: https://www.lexware.de/facts/lexware-office/
+    title: Lexware Office Kernfakten
+    accessed: 2026-10-24
+targetGroups:
+  - selbststaendige
+  - freiberufler
+  - gruender
+  - kmu
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: true
+  android: true
+freeTrialDays: 30
+freePlan: false
+trialSource: &preise
+  url: https://www.lexware.de/preise/
+  title: Lexware Office Preise und Versionen
+  accessed: 2026-10-24
+compliance:
+  gobd:
+    status: ja
+    note: GoBD-Langzeitbelegarchiv; laut Anbieter regelmäßige Prüfung nach IDW PS 880, IDW RS FAIT 1 und GoBD durch eine Wirtschaftsprüfungsgesellschaft.
+    source: &sicherheit
+      url: https://www.lexware.de/datenschutz-datensicherheit/
+      title: Datenschutz und Datensicherheit mit Lexware Office
+      accessed: 2026-10-24
+  eRechnungEmpfang:
+    status: ja
+    note: E-Rechnungen nach EN 16931 erfassen.
+    source: *preise
+  eRechnungVersand:
+    status: ja
+    note: ZUGFeRD und XRechnung erstellen und übermitteln.
+    source: *preise
+  datevExport:
+    status: teilweise
+    note: Steuerberater übernehmen Daten per elektronischer Pendelakte; ein DATEV-Export wird auf der Preisseite nicht ausdrücklich genannt.
+    source: *preise
+  elster:
+    status: ja
+    note: USt-Voranmeldung und Zusammenfassende Meldung, laut Preisseite ab Version L.
+    source: *preise
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: ja
+    note: Alle Bankkonten anbindbar, automatischer Zahlungsabgleich.
+    source: *preise
+  serverstandort:
+    status: ja
+    note: Mehrere nach DIN ISO 27001 geprüfte Rechenzentren am Standort Frankfurt am Main.
+    source: *sicherheit
+  avv:
+    status: unbekannt
+  deutscherSupport:
+    status: unbekannt
+features:
+  angebote:
+    status: ja
+    note: Ab Version M.
+    source: *preise
+  rechnungen:
+    status: ja
+    note: Ab Version M.
+    source: *preise
+  mahnwesen:
+    status: ja
+    source: *preise
+  belegerfassungOcr:
+    status: ja
+    note: Belegscanner in der App mit Buchungsvorschlag.
+    source: *preise
+  bankabgleich:
+    status: ja
+    source: *preise
+  kassenbuch:
+    status: ja
+    source: *preise
+  euer:
+    status: ja
+    note: "EÜR und GuV, laut Preisseite ab Version L."
+    source: *preise
+  lohn:
+    status: aufpreis
+    note: "Lohn und Gehalt für 12,90 € im Monat, mit allen Versionen kombinierbar."
+    source: *preise
+  api:
+    status: ja
+    note: Public API in Version XL.
+    source: *preise
+  steuerberaterzugang:
+    status: ja
+    note: Kostenloser Online-Zugang für den Steuerberater.
+    source: *preise
+  mobileApp:
+    status: ja
+    source: *preise
+plans:
+  - name: S
+    monthlyCents: 790
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Belegerfassung und Belegarchiv
+    note: Monatlich kündbar. Zum Prüfdatum 50 % Rabatt für 3 Monate (3,95 €).
+    source: *preise
+  - name: M
+    monthlyCents: 1290
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Angebote
+      - E-Rechnungen und Rechnungen
+      - Mahnungen
+    note: Monatlich kündbar. Zum Prüfdatum 50 % Rabatt für 3 Monate (6,45 €).
+    source: *preise
+  - name: L
+    monthlyCents: 2190
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Buchhaltung
+      - EÜR
+      - Umsatzsteuer
+    note: Monatlich kündbar. Zum Prüfdatum 50 % Rabatt für 3 Monate (10,95 €).
+    source: *preise
+  - name: XL
+    monthlyCents: 3290
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - EU- und Abschlagsrechnungen
+      - Public API
+    note: Monatlich kündbar. Zum Prüfdatum 50 % Rabatt für 3 Monate (16,45 €).
+    source: *preise
+pros:
+  - 30 Tage kostenlose Testphase mit allen Funktionen der Version XL und der Lohnabrechnung.
+  - Alle Versionen sind monatlich kündbar.
+  - Lohnabrechnung lässt sich zu jeder Version für 12,90 € im Monat hinzubuchen.
+  - Daten in mehreren ISO-27001-geprüften Rechenzentren in Frankfurt am Main.
+cons:
+  - Buchhaltung mit EÜR und Umsatzsteuer erst ab Version L für 21,90 € im Monat.
+  - Ein ausdrücklicher DATEV-Export wird auf der Preisseite nicht genannt, die Übergabe läuft über die Pendelakte.
+  - Die Anzahl der enthaltenen Benutzer nennt die Preisseite nicht.
+idealFor:
+  - Selbstständige und kleine Unternehmen mit Mitarbeitenden, die Lohn und Buchhaltung in einem Werkzeug wollen
+notIdealFor:
+  - Unternehmen, die einen klassischen DATEV-Export im eigenen Haus brauchen (vorher prüfen)

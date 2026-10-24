@@ -124,3 +124,35 @@ These values are checked by `src/lib/contrast.test.ts` (WCAG 2.2 AA, 4.5:1 for t
 ## 24.10.2026: ESLint 9 deprecation notice
 
 pnpm now marks eslint 9.39.5 as deprecated in favor of 10.x. We stay on 9 for the same peer reason as above (eslint-plugin-react, jsx-a11y and import support only up to 9). Revisit at the end of Phase 2.
+
+## 24.10.2026: Content Collections 0.15.3 for file-based content
+
+- **Decision:** `@content-collections/core` 0.15.3 and `@content-collections/next` 0.2.11, with YAML for structured records. The schemas live in `src/content` as plain Zod (Standard Schema) and are shared by the config, the guards and the tests. Each file name must equal its slug.
+- **Reason:** this is the build prompt's default (4.1). The validation script covers the pitfall that schema errors only show up as events.
+- **esbuild:** Content Collections depends on esbuild. Its install script stays blocked (`allowBuilds: esbuild: false`) because the binary comes from the platform package and works without it. This was verified with a transform call.
+- **MDX:** `@content-collections/mdx` isn't installed yet. It will be added in Phase 3 or 5, when the first long-form content exists.
+
+## 24.10.2026: Price policy for promotions
+
+- **Decision:** `monthlyCents` and `yearlyMonthlyCents` store the vendor's list price. A promotion that applies on the check date goes into the plan `note` with its terms ("Zum Prüfdatum …").
+- **Reason:** promotions change weekly, and a list price with a date is the honest comparison basis. Shoppers see the promotion on the vendor site anyway.
+
+## 24.10.2026: No scores without a hands-on test
+
+- **Decision:** `rating` stays `null` for every profile until a named editor has tested the product in a real account. `ratingSchema` requires a test (date, tester, plan, notes).
+- **Reason:** Section 3.2 and 3.3. A "Bedienung" (usability) score cannot be derived from vendor pages.
+
+## 24.10.2026: Unknown is a value
+
+- **Decision:** facts may be `unbekannt` (no source needed), app platforms may be `null`, and a vendor city may be `null`. Every other value needs a source.
+- **Reason:** absence of a statement on a vendor page is not proof that a feature doesn't exist. Writing "Nein" would be a claim without evidence.
+
+## 24.10.2026: Products left out of batch 1
+
+See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBooks (USD only) and Odoo (euro prices could not be verified from this location). Papierkram, easybill and Billomat were researched instead, bringing the batch to 10.
+
+## 24.10.2026: Incident: YAML flow style split values at commas
+
+- **What happened:** content files used inline YAML (`{ status: ja, note: Für 12,90 € im Monat }`). In YAML flow style an unquoted comma ends the value, so the note was stored as "Für 12" plus a stray key "90 € im Monat". Zod `object` silently dropped the stray key, and the Content Collections cache hid the schema change. Prettier's reformatting made it visible.
+- **Fix:** every schema is now `strictObject` (unknown keys fail). All content files were converted to block style and the split texts were rejoined, then checked (12,90 € and 19,90 € restored, and two split list items merged). `content:validate` rejects flow style in content YAML and always clears the Content Collections cache first. Unit tests reproduce the bug and prove both protections.
+- **Rule:** write content YAML in block style only. Quote a value if it starts with a special character.

@@ -31,7 +31,7 @@ Every later decision is checked against this mission.
 
 ---
 
-## Phase 1: Design system (status: done, waiting for approval)
+## Phase 1: Design system (status: approved 24.10.2026, wordmark option B)
 
 The 21st.dev MCP server is not connected (no API key), so the components are built on Radix primitives and restyled to Section 13. Every component and state goes on `/intern/styleguide` (noindex, disallowed in robots, outside the public shell) with labeled fictitious demo data.
 
@@ -41,6 +41,18 @@ The 21st.dev MCP server is not connected (no API key), so the components are bui
 4. Shell: SiteHeader with mega menu and mobile menu, SiteFooter with giant wordmark, CommandPalette (`Strg K`).
 5. Three wordmark options for Stackwahl, contrast table, and the token overview.
 6. E2E: axe clean on the styleguide at both widths, keyboard checks for the menus, palette, segmented control and comparison switch.
+
+---
+
+## Phase 2: Content layer (status: done, waiting for approval)
+
+1. Zod schemas for vendors, categories, software (plans, sourced facts, compliance, features), ratings with a mandatory documented test, authors, comparisons, affiliate links and guides (`src/content/schemas.ts`).
+2. Content Collections reads `/content` (YAML, later MDX). `pnpm content:validate` turns every collector, schema and skip event into a failure, then runs the build guards.
+3. Build guards (`src/content/guards.ts`), each proven by a unit test: duplicate slugs, unresolved references, future dates (UTC), stale prices (90 days) and facts (180 days), copy rules, test claims without a test, unverified or authorless published profiles, unexplained limited availability.
+4. Copy lint over the TypeScript AST and YAML (`pnpm lint:copy`), sharing its rules with the guards.
+5. Search index built at build time (`src/generated/search-index.json`).
+6. Data access layer (`src/lib/content`): pages will call `getSoftware(slug)`, `getLiveCategories()` and similar functions.
+7. First batch: 10 researched drafts with sources (docs/CONTENT_STATUS.md). QuickBooks and FreshBooks were left out, and Odoo is deferred.
 
 ---
 

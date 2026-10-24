@@ -1,0 +1,178 @@
+# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+slug: sevdesk
+name: sevdesk
+vendor: sevdesk
+categories:
+  - buchhaltungssoftware
+  - rechnungsprogramme
+status: draft
+verification: unverified
+lastReviewed: 2026-10-24
+author: null
+summary: Cloud-Buchhaltung mit kostenlosem E-Rechnungs-Tarif, DATEV-Schnittstelle ab dem kleinsten Bezahltarif und UStVA per ELSTER.
+website: https://sevdesk.de
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://sevdesk.de/preise/
+    title: sevdesk Preise
+    accessed: 2026-10-24
+targetGroups:
+  - selbststaendige
+  - freiberufler
+  - kleinunternehmer
+  - gruender
+  - kmu
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: null
+  android: null
+freeTrialDays: 14
+freePlan: true
+trialSource: *preise
+compliance:
+  gobd:
+    status: unbekannt
+    note: Die Preisseite nennt nur GoBD-konforme Angebote, keine Aussage zur gesamten Archivierung.
+  eRechnungEmpfang:
+    status: ja
+    note: Empfangene E-Rechnungen lassen sich hochladen, die Daten werden ausgelesen. Verfügbarkeit je Tarif auf der Preisseite unklar.
+    source: *preise
+  eRechnungVersand:
+    status: ja
+    note: ZUGFeRD und XRechnung, im Tarif Kostenlos bis 3 Rechnungen im Monat.
+    source: *preise
+  datevExport:
+    status: ja
+    note: DATEV- und ADDISON-Schnittstelle ab Tarif Rechnung.
+    source: *preise
+  elster:
+    status: ja
+    note: UStVA direkt ans Finanzamt ab Tarif Buchhaltung, ohne eigenes ELSTER-Zertifikat.
+    source: *preise
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: ja
+    note: Online-Banking-Verknüpfung ab Tarif Buchhaltung.
+    source: *preise
+  serverstandort:
+    status: ja
+    note: Laut Datenschutzseite bewusst für den Serverstandort Deutschland entschieden.
+    source: &datenschutz
+      url: https://sevdesk.de/datenschutz/
+      title: sevdesk Datenschutz
+      accessed: 2026-10-24
+  avv:
+    status: ja
+    note: Auftragsverarbeitungsvertrag auf der Datenschutzseite verlinkt.
+    source: *datenschutz
+  deutscherSupport:
+    status: ja
+    note: Persönlicher Support per Live-Chat, E-Mail und Telefon ab Tarif Rechnung.
+    source: *preise
+features:
+  angebote:
+    status: ja
+    source: *preise
+  rechnungen:
+    status: ja
+    source: *preise
+  mahnwesen:
+    status: ja
+    note: "Zahlungserinnerungen ab Tarif Rechnung, Mahnstufen ab Tarif Buchhaltung."
+    source: *preise
+  belegerfassungOcr:
+    status: ja
+    note: KI-gestützte Belegerfassung ab Tarif Buchhaltung.
+    source: *preise
+  bankabgleich:
+    status: ja
+    source: *preise
+  kassenbuch:
+    status: ja
+    note: Ab Tarif Buchhaltung.
+    source: *preise
+  euer:
+    status: ja
+    note: EÜR und GuV ab Tarif Buchhaltung.
+    source: *preise
+  lager:
+    status: aufpreis
+    note: "Erweiterung Inventar für 19,90 € im Monat."
+    source: *preise
+  api:
+    status: ja
+    note: REST-API nur im Tarif Buchhaltung Pro.
+    source: *preise
+  steuerberaterzugang:
+    status: ja
+    source: *preise
+  mobileApp:
+    status: ja
+    source: *preise
+plans:
+  - name: Kostenlos
+    monthlyCents: 0
+    yearlyMonthlyCents: 0
+    perUser: false
+    net: true
+    includes:
+      - 3 Rechnungen oder E-Rechnungen pro Monat
+      - ZUGFeRD und XRechnung
+      - Unbegrenzt Kontakte und Produkte
+    source: *preise
+  - name: Rechnung
+    monthlyCents: 1190
+    yearlyMonthlyCents: 990
+    perUser: false
+    net: true
+    includes:
+      - Unbegrenzt Rechnungen und Angebote
+      - Zahlungserinnerungen
+      - DATEV- und ADDISON-Schnittstelle
+      - Persönlicher Support
+    note: Listenpreise. Bei 24 Monaten Laufzeit 8,90 € im Monat. Zum Prüfdatum galt ein Aktionspreis von 4,45 € im Monat.
+    source: *preise
+  - name: Buchhaltung
+    monthlyCents: 2590
+    yearlyMonthlyCents: 2290
+    perUser: false
+    net: true
+    includes:
+      - Alles aus Rechnung
+      - Einfache und doppelte Buchführung
+      - KI-gestützte Belegerfassung
+      - UStVA per ELSTER
+      - EÜR und GuV
+      - Online-Banking
+    note: Listenpreise. Bei 24 Monaten Laufzeit 19,90 € im Monat. Zum Prüfdatum galt ein Aktionspreis von 9,95 € im Monat.
+    source: *preise
+  - name: Buchhaltung Pro
+    monthlyCents: 3490
+    yearlyMonthlyCents: 3090
+    perUser: false
+    net: true
+    includes:
+      - Alles aus Buchhaltung
+      - Kostenstellen
+      - REST-API
+      - BWA
+    note: Listenpreise. Bei 24 Monaten Laufzeit 27,90 € im Monat. Zum Prüfdatum galt ein Aktionspreis von 13,95 € im Monat.
+    source: *preise
+pros:
+  - Dauerhaft kostenloser Tarif für bis zu 3 E-Rechnungen im Monat in ZUGFeRD und XRechnung.
+  - DATEV- und ADDISON-Schnittstelle schon im kleinsten Bezahltarif Rechnung.
+  - Umsatzsteuer-Voranmeldung direkt per ELSTER, ohne eigenes Zertifikat.
+  - Persönlicher Support per Live-Chat, E-Mail und Telefon in den Bezahltarifen.
+cons:
+  - Jeder Tarif enthält nur einen Benutzer, weitere kosten je 5,90 € im Monat.
+  - Die Listenpreise liegen bei monatlicher Zahlung deutlich über den beworbenen Aktionspreisen.
+  - REST-API und Kostenstellen gibt es erst im teuersten Tarif Buchhaltung Pro.
+idealFor:
+  - Selbstständige, die mit einem kostenlosen Tarif für E-Rechnungen starten möchten
+  - Kleine Unternehmen mit Steuerberater, der über DATEV arbeitet
+notIdealFor:
+  - Teams mit vielen Benutzern, weil jeder weitere Zugang extra kostet

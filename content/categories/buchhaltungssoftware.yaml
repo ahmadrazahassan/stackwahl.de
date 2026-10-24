@@ -2,8 +2,6 @@ slug: buchhaltungssoftware
 name: Buchhaltungssoftware
 description: Cloud-Buchhaltung für Selbstständige und kleine Unternehmen in Deutschland, mit Blick auf GoBD, DATEV und E-Rechnung.
 intro: >-
-  Buchhaltungssoftware erfasst Belege, gleicht Bankbewegungen ab und bereitet Umsatzsteuer und
-  Jahresabschluss vor. Für Unternehmen in Deutschland zählt dabei vor allem, ob die Software
-  GoBD-konform archiviert, E-Rechnungen verarbeitet und Daten an den Steuerberater übergeben kann.
+  Buchhaltungssoftware erfasst Belege, gleicht Bankbewegungen ab und bereitet Umsatzsteuer und Jahresabschluss vor. Für Unternehmen in Deutschland zählt dabei vor allem, ob die Software GoBD-konform archiviert, E-Rechnungen verarbeitet und Daten an den Steuerberater übergeben kann.
 launchOrder: 1
 status: draft

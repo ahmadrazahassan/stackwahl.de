@@ -1,0 +1,175 @@
+# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+slug: fastbill
+name: FastBill
+vendor: fastbill
+categories:
+  - rechnungsprogramme
+  - buchhaltungssoftware
+status: draft
+verification: unverified
+lastReviewed: 2026-10-24
+author: null
+summary: Rechnungsprogramm mit Belegverwaltung, E-Rechnung in allen Tarifen, DATEV-Export und Banking ab 9 € im Monat.
+website: https://www.fastbill.com
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://www.fastbill.com/preise
+    title: FastBill Preise und Tarife
+    accessed: 2026-10-24
+targetGroups:
+  - freiberufler
+  - selbststaendige
+  - kleinunternehmer
+  - kmu
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: null
+  android: null
+freeTrialDays: 14
+freePlan: false
+trialSource: *preise
+compliance:
+  gobd:
+    status: ja
+    note: GoBD-konforme Aufbewahrung laut Funktionsvergleich.
+    source: *preise
+  eRechnungEmpfang:
+    status: ja
+    note: ZUGFeRD und XRechnung.
+    source: *preise
+  eRechnungVersand:
+    status: ja
+    note: ZUGFeRD und XRechnung in allen Tarifen.
+    source: *preise
+  datevExport:
+    status: ja
+    note: DATEV-Export in allen Tarifen, DATEV Rechnungsdatenservice 1.0 ab Pro.
+    source: *preise
+  elster:
+    status: unbekannt
+    note: Die Preisseite nennt eine Umsatzsteuervoranmeldung, aber keine ELSTER-Übermittlung.
+  kleinunternehmer:
+    status: ja
+    note: Kleinunternehmerregelung einstellbar.
+    source: *preise
+  bankanbindung:
+    status: ja
+    note: Solo 1 Konto, Plus 5 Konten, ab Pro unbegrenzt.
+    source: *preise
+  serverstandort:
+    status: ja
+    note: Daten bei einem Cloud-Hosting-Dienstleister in einem Rechenzentrum in Deutschland.
+    source:
+      url: https://support.fastbill.com/hc/de/articles/231642667-Ort-der-Datenspeicherung
+      title: FastBill Hilfe, Ort der Datenspeicherung
+      accessed: 2026-10-24
+  avv:
+    status: unbekannt
+  deutscherSupport:
+    status: unbekannt
+features:
+  angebote:
+    status: ja
+    source: *preise
+  rechnungen:
+    status: ja
+    source: *preise
+  wiederkehrendeRechnungen:
+    status: ja
+    note: Ab Tarif Pro.
+    source: *preise
+  mahnwesen:
+    status: ja
+    note: "Zahlungserinnerungen in allen Tarifen; vollautomatisches Mahnwesen als Add-on, in Premium mit 20 Vorgängen."
+    source: *preise
+  belegerfassungOcr:
+    status: ja
+    note: Scan-App mit Texterkennung.
+    source: *preise
+  bankabgleich:
+    status: ja
+    note: Automatischer Bankabgleich in Premium.
+    source: *preise
+  projektzeiten:
+    status: ja
+    note: Zeiterfassung in allen Tarifen.
+    source: *preise
+  mobileApp:
+    status: ja
+    note: Eigene Scan-App mit Direktupload.
+    source: *preise
+  mehrwaehrung:
+    status: ja
+    note: Ab Tarif Plus.
+    source: *preise
+  api:
+    status: ja
+    note: Offene API mit Limits je Tarif.
+    source: *preise
+  steuerberaterzugang:
+    status: ja
+    source: *preise
+plans:
+  - name: Solo
+    monthlyCents: 1000
+    yearlyMonthlyCents: 900
+    perUser: false
+    net: true
+    includes:
+      - 1 Benutzer
+      - 1 Bankkonto
+      - Angebote und Rechnungen
+      - E-Rechnung
+      - DATEV-Export
+      - Steuerberaterzugang
+    source: *preise
+  - name: Plus
+    monthlyCents: 1500
+    yearlyMonthlyCents: 1400
+    perUser: false
+    net: true
+    includes:
+      - 1 Benutzer
+      - 5 Bankkonten
+      - Verschiedene Währungen
+      - Auftragsbestätigungen und Lieferscheine
+    source: *preise
+  - name: Pro
+    monthlyCents: 3000
+    yearlyMonthlyCents: 2700
+    perUser: false
+    net: true
+    includes:
+      - 3 Benutzer
+      - Unbegrenzte Bankkonten
+      - Wiederkehrende Rechnungen
+      - DATEV Rechnungsdatenservice 1.0
+    source: *preise
+  - name: Premium
+    monthlyCents: 5900
+    yearlyMonthlyCents: 5300
+    perUser: false
+    net: true
+    includes:
+      - 5 Benutzer
+      - Automatischer Belegimport
+      - Automatischer Bankabgleich
+      - Premium-Support
+    note: Ab-Preis, Abschluss über eine Demo.
+    source: *preise
+pros:
+  - E-Rechnungen in ZUGFeRD und XRechnung erstellen, senden und empfangen, in allen Tarifen.
+  - DATEV-Export und Steuerberaterzugang schon im Tarif Solo für 9 € im Monat.
+  - Kleinunternehmerregelung lässt sich einstellen.
+  - 14 Tage kostenlos testen, ohne Abo.
+cons:
+  - Mehrere Benutzer erst ab Tarif Pro für 27 € im Monat.
+  - Automatischer Bankabgleich und automatische Belegerfassung nur im Tarif Premium.
+  - Eine ELSTER-Übermittlung der Umsatzsteuer-Voranmeldung nennt die Preisseite nicht.
+idealFor:
+  - Freiberufler und Selbstständige, die vor allem Rechnungen schreiben und Belege für die Steuerberatung sammeln
+notIdealFor:
+  - Unternehmen, die die komplette Buchhaltung mit Bilanz selbst erledigen wollen

@@ -1,0 +1,133 @@
+# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+slug: easybill
+name: easybill
+vendor: easybill
+categories:
+  - rechnungsprogramme
+status: draft
+verification: unverified
+lastReviewed: 2026-10-24
+author: null
+summary: Rechnungsprogramm mit dauerhaft kostenlosem Einstieg, E-Rechnung, DATEV-Anbindung und Automatisierung für Onlinehändler.
+website: https://www.easybill.de
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://www.easybill.de/preise
+    title: easybill Pakete und Preise
+    accessed: 2026-10-24
+targetGroups:
+  - selbststaendige
+  - kmu
+  - e-commerce
+  - kleinunternehmer
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: null
+  android: null
+freeTrialDays: null
+freePlan: true
+compliance:
+  gobd:
+    status: unbekannt
+  eRechnungEmpfang:
+    status: unbekannt
+  eRechnungVersand:
+    status: ja
+    note: E-Rechnungen in allen Paketen inklusive.
+    source: *preise
+  datevExport:
+    status: ja
+    note: DATEV-Anbindung schon im Paket Free.
+    source: *preise
+  elster:
+    status: unbekannt
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: unbekannt
+  serverstandort:
+    status: ja
+    note: Laut Produktseite Serverstandort Deutschland.
+    source:
+      url: https://www.easybill.de/produkte/invoice/
+      title: easybill Invoice
+      accessed: 2026-10-24
+  avv:
+    status: unbekannt
+  deutscherSupport:
+    status: unbekannt
+features:
+  angebote:
+    status: ja
+    source: *preise
+  rechnungen:
+    status: ja
+    source: *preise
+  wiederkehrendeRechnungen:
+    status: ja
+    note: Wiederkehrende Dokumente ab Paket Professional.
+    source: *preise
+  mahnwesen:
+    status: ja
+    note: Automatisches Mahnwesen.
+    source: *preise
+  belegerfassungOcr:
+    status: ja
+    note: Belegerfassung mit KI ab Paket Starter.
+    source: *preise
+  api:
+    status: ja
+    source: *preise
+  steuerberaterzugang:
+    status: ja
+    note: 1 Zugang im Paket Free.
+    source: *preise
+plans:
+  - name: Free
+    monthlyCents: 0
+    yearlyMonthlyCents: 0
+    perUser: false
+    net: true
+    includes:
+      - 50 Dokumente im Monat inklusive E-Rechnung
+      - 3 Kontakte
+      - Steuerberater-Zugang
+      - DATEV-Anbindung
+    source: *preise
+  - name: Starter
+    monthlyCents: 1200
+    yearlyMonthlyCents: 900
+    perUser: false
+    net: true
+    includes:
+      - Bis 250 Dokumente im Monat
+      - 20 Kontakte
+      - Eigenes Briefpapier
+      - Belegerfassung mit KI
+    source: *preise
+  - name: Professional
+    monthlyCents: 3900
+    yearlyMonthlyCents: 2500
+    perUser: false
+    net: true
+    includes:
+      - Unbegrenzte Kunden
+      - Wiederkehrende Dokumente
+      - Versandmanagement
+      - Cloud-Backup
+    source: *preise
+pros:
+  - Dauerhaft kostenloses Paket mit 50 Dokumenten im Monat, inklusive E-Rechnung.
+  - DATEV-Anbindung und Steuerberater-Zugang schon im kostenlosen Paket.
+  - Bei jährlicher Zahlung bis zu 29 % günstiger.
+cons:
+  - Das Paket Free erlaubt nur 3 Kontakte, Starter 20 Kontakte.
+  - Wiederkehrende Dokumente erst ab Paket Professional für 25 € im Monat.
+  - Die Zahl der Dokumente ist je Paket begrenzt, im Paket Free auf 50 und im Paket Starter auf 250 im Monat.
+idealFor:
+  - Onlinehändler und Dienstleister, die viele Rechnungen automatisiert erstellen
+notIdealFor:
+  - Selbstständige, die auch ihre Buchhaltung und Umsatzsteuer im selben Werkzeug erledigen wollen

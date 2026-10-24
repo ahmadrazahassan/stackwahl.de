@@ -1,0 +1,121 @@
+# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+slug: billomat
+name: Billomat
+vendor: aifinyo
+categories:
+  - rechnungsprogramme
+status: draft
+verification: unverified
+lastReviewed: 2026-10-24
+author: null
+summary: Cloud-Rechnungsprogramm der aifinyo AG mit E-Rechnung, Banking und DATEV Buchungsdatenservice, ab 19 € im Monat.
+website: https://www.billomat.com
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://www.billomat.com/preise/
+    title: Billomat Preise und Tarifstufen
+    accessed: 2026-10-24
+targetGroups:
+  - freiberufler
+  - selbststaendige
+  - kmu
+  - e-commerce
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: null
+  android: null
+freeTrialDays: 14
+freePlan: false
+trialSource: *preise
+compliance:
+  gobd:
+    status: unbekannt
+  eRechnungEmpfang:
+    status: unbekannt
+  eRechnungVersand:
+    status: ja
+    source: *preise
+  datevExport:
+    status: ja
+    note: DATEV Buchungsdatenservice, Übermittlung direkt an das DATEV-Rechenzentrum.
+    source: *preise
+  elster:
+    status: unbekannt
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: ja
+    source: *preise
+  serverstandort:
+    status: unbekannt
+  avv:
+    status: ja
+    note: Vertrag zur Auftragsverarbeitung, digital signierbar über die Datenschutzbestimmungen.
+    source:
+      url: https://www.billomat.com/magazin/billomat-und-dsgvo/
+      title: Billomat und die DSGVO
+      accessed: 2026-10-24
+  deutscherSupport:
+    status: unbekannt
+features:
+  rechnungen:
+    status: ja
+    source: *preise
+  api:
+    status: ja
+    note: "Ab Tarif Business, 100 API-Aufrufe je 15 Minuten."
+    source: *preise
+  steuerberaterzugang:
+    status: ja
+    source: *preise
+plans:
+  - name: Professional
+    monthlyCents: 2900
+    yearlyMonthlyCents: 1900
+    perUser: false
+    net: true
+    includes:
+      - 1 Nutzer
+      - keine weiteren Nutzer möglich
+      - Basis-Funktionsumfang
+    note: Ab-Preis.
+    source: *preise
+  - name: Business
+    monthlyCents: 3900
+    yearlyMonthlyCents: 2900
+    perUser: false
+    net: true
+    includes:
+      - 1 Nutzer
+      - jeder weitere 10 € im Monat
+      - Kompletter Funktionsumfang
+      - API
+    note: Ab-Preis.
+    source: *preise
+  - name: Enterprise
+    monthlyCents: 11900
+    yearlyMonthlyCents: 9900
+    perUser: false
+    net: true
+    includes:
+      - 5 Nutzer
+      - jeder weitere 10 € im Monat
+      - 300 API-Aufrufe je 15 Minuten
+      - Sandbox-Account
+    note: Ab-Preis.
+    source: *preise
+pros:
+  - 14 Tage kostenlos testen, die Testphase endet automatisch.
+  - DATEV Buchungsdatenservice überträgt Dokumente direkt an das DATEV-Rechenzentrum.
+  - Mit Jahrestarif mehr als 20 % günstiger.
+cons:
+  - Im Tarif Professional ist nur ein Nutzer möglich.
+  - Die API gibt es erst ab Tarif Business für 29 € im Monat.
+  - Serverstandort und E-Rechnung-Empfang sind auf der Preisseite nicht genannt.
+idealFor:
+  - Selbstständige und Unternehmen, die Rechnungen schreiben und Belege per DATEV an die Kanzlei übergeben
+notIdealFor:
+  - Teams, die mehrere Nutzer zum kleinen Preis brauchen

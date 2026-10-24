@@ -1,0 +1,155 @@
+# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+slug: buchhaltungsbutler
+name: BuchhaltungsButler
+vendor: buchhaltungsbutler
+categories:
+  - buchhaltungssoftware
+status: draft
+verification: unverified
+lastReviewed: 2026-10-24
+author: null
+summary: Cloud-Buchhaltung für EÜR und Bilanz mit KI-Belegerkennung, Bankanbindung und Steuerberater-Zugang in allen Paketen.
+website: https://www.buchhaltungsbutler.de
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://www.buchhaltungsbutler.de/preise/
+    title: BuchhaltungsButler Preise
+    accessed: 2026-10-24
+targetGroups:
+  - selbststaendige
+  - kmu
+  - e-commerce
+  - vereine
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: true
+  android: true
+freeTrialDays: null
+freePlan: false
+compliance:
+  gobd:
+    status: ja
+    note: Buchungen lassen sich revisionssicher festschreiben.
+    source: *preise
+  eRechnungEmpfang:
+    status: ja
+    source: *preise
+  eRechnungVersand:
+    status: ja
+    source: *preise
+  datevExport:
+    status: ja
+    note: Buchungen werden samt Kommentaren an DATEV oder andere Kanzleisoftware übergeben.
+    source: *preise
+  elster:
+    status: teilweise
+    note: Die Preisseite nennt die EÜR mit direkter ELSTER-Übermittlung; die Umsatzsteuer-Voranmeldung wird dort nicht ausdrücklich genannt.
+    source: *preise
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: ja
+    note: Über drei Schnittstellenpartner mehr als 5.000 Banken.
+    source: *preise
+  serverstandort:
+    status: ja
+    note: Hosting ausschließlich in zertifizierten Rechenzentren in Deutschland (ISO/IEC 27001, 27017, 27018).
+    source: &datenschutz
+      url: https://www.buchhaltungsbutler.de/datenschutz-saas/
+      title: BuchhaltungsButler Datenschutzbestimmungen (Software)
+      accessed: 2026-10-24
+  avv:
+    status: ja
+    note: Die AVV wird mit der Registrierung für einen Testaccount Vertragsbestandteil.
+    source: *datenschutz
+  deutscherSupport:
+    status: unbekannt
+features:
+  rechnungen:
+    status: ja
+    note: "Rechnungen, Angebote und Gutschriften."
+    source: *preise
+  angebote:
+    status: ja
+    source: *preise
+  belegerfassungOcr:
+    status: ja
+    note: KI-gestützte Belegerkennung und Scan-App.
+    source: *preise
+  bankabgleich:
+    status: ja
+    source: *preise
+  kassenbuch:
+    status: ja
+    note: Kassen- und Auslagekonten.
+    source: *preise
+  euer:
+    status: ja
+    source: *preise
+  bilanz:
+    status: ja
+    note: Doppelte Buchführung mit Debitoren und Kreditoren; E-Bilanz über eBilanz+.
+    source: *preise
+  mehrwaehrung:
+    status: teilweise
+    note: "Buchungen in Fremdwährung, z. B. USD auf einem PayPal-Konto, mit Tageskurs."
+    source: *preise
+  api:
+    status: ja
+    source: *preise
+  steuerberaterzugang:
+    status: ja
+    note: In allen Paketen ein Steuerberater-Zugang inklusive.
+    source: *preise
+  mobileApp:
+    status: ja
+    note: Scan-App für iOS und Android.
+    source: *preise
+plans:
+  - name: Light
+    monthlyCents: 3990
+    yearlyMonthlyCents: 2990
+    perUser: false
+    net: true
+    includes:
+      - 1 Nutzer und 1 Steuerberater-Zugang
+      - Vorbuchen für die Steuerberatung
+    note: Fair-Use-Grenze von 500 Belegen im Monat. Zum Prüfdatum 70 % Rabatt auf den ersten Monat.
+    source: *preise
+  - name: Smart
+    monthlyCents: 4690
+    yearlyMonthlyCents: 3490
+    perUser: false
+    net: true
+    includes:
+      - 1 Nutzer und 1 Steuerberater-Zugang
+      - Voller Funktionsumfang für EÜR und Bilanz
+    note: Fair-Use-Grenze von 500 Belegen im Monat.
+    source: *preise
+  - name: Premium
+    monthlyCents: 8990
+    yearlyMonthlyCents: 5990
+    perUser: false
+    net: true
+    includes:
+      - 5 Nutzer und 1 Steuerberater-Zugang
+      - Alle Funktionen aus Smart
+    note: Fair-Use-Grenze von 500 Belegen im Monat.
+    source: *preise
+pros:
+  - Doppelte Buchführung mit Debitoren und Kreditoren, also auch für bilanzierende Unternehmen.
+  - In jedem Paket ist ein Zugang für die Steuerberatung enthalten.
+  - Mehr als 5.000 Banken über drei Schnittstellenpartner anbindbar.
+  - Hosting laut Datenschutzbestimmungen ausschließlich in Rechenzentren in Deutschland.
+cons:
+  - Mit 39,90 € im Monat bei monatlicher Laufzeit teurer als reine Einsteigerprogramme.
+  - Die Preisseite nennt keine kostenlose Testphase, sondern einen Rabatt und eine Geld-zurück-Garantie.
+  - Pro Monat stehen im Rahmen der Fair-Use-Regel 500 Belege zur Verfügung.
+idealFor:
+  - Kleine und mittlere Unternehmen, die selbst buchen oder mit der Steuerberatung arbeitsteilig buchen
+  - Bilanzierende Unternehmen und Online-Händler
+notIdealFor:
+  - Freiberufler mit wenigen Belegen, die nur Rechnungen schreiben wollen

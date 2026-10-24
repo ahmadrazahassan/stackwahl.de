@@ -1,0 +1,156 @@
+# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Die Preisseite gilt für die Web-Version; WISO MeinBüro Desktop ist ein eigenes Produkt.
+slug: wiso-meinbuero
+name: WISO MeinBüro
+vendor: buhl
+categories:
+  - buchhaltungssoftware
+  - rechnungsprogramme
+status: draft
+verification: unverified
+lastReviewed: 2026-10-24
+author: null
+summary: Web-Bürosoftware von Buhl mit E-Rechnung, UStVA per ELSTER und DATEV-Schnittstelle schon im kleinsten Plan, nur im Jahresabo.
+website: https://www.meinbuero.de
+marketAvailability:
+  status: verfuegbar
+  note: Das Angebot richtet sich laut Preisseite nur an Unternehmer nach § 14 BGB.
+  source: &preise
+    url: https://www.meinbuero.de/preise/
+    title: WISO MeinBüro Preise
+    accessed: 2026-10-24
+targetGroups:
+  - selbststaendige
+  - kleinunternehmer
+  - gruender
+  - handwerk
+  - kmu
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: null
+  android: null
+freeTrialDays: null
+freePlan: false
+compliance:
+  gobd:
+    status: unbekannt
+  eRechnungEmpfang:
+    status: ja
+    source: *preise
+  eRechnungVersand:
+    status: ja
+    note: XRechnung und ZUGFeRD.
+    source: *preise
+  datevExport:
+    status: ja
+    note: DATEV-Schnittstelle und Steuerberaterexport für DATEV, Simba, Agenda, ADDISON, Stotax.
+    source: *preise
+  elster:
+    status: ja
+    note: UStVA über die ELSTER-Schnittstelle direkt ans Finanzamt.
+    source: *preise
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: ja
+    note: "Online-Banking, laut Anbieter BaFin-lizenziert."
+    source: *preise
+  serverstandort:
+    status: ja
+    note: Eigene Rechenzentren in Deutschland, VdS-10000-Zertifizierung.
+    source:
+      url: https://www.meinbuero.de/datensicherheit/
+      title: WISO MeinBüro Datensicherheit
+      accessed: 2026-10-24
+  avv:
+    status: unbekannt
+  deutscherSupport:
+    status: ja
+    note: Schriftlicher und telefonischer Support.
+    source: *preise
+features:
+  angebote:
+    status: ja
+    source: *preise
+  rechnungen:
+    status: ja
+    source: *preise
+  mahnwesen:
+    status: ja
+    source: *preise
+  belegerfassungOcr:
+    status: ja
+    note: "Belege per App scannen, automatische Erfassung von Betrag und IBAN."
+    source: *preise
+  euer:
+    status: ja
+    source: *preise
+  lager:
+    status: ja
+    note: Im Plan Warenwirtschaft.
+    source: *preise
+  steuerberaterzugang:
+    status: ja
+    source: *preise
+plans:
+  - name: Rechnungen & Angebote
+    monthlyCents: null
+    yearlyMonthlyCents: 1090
+    perUser: false
+    net: true
+    includes:
+      - 1 Nutzer
+      - Bis 25.000 € Umsatz in 365 Tagen
+      - E-Rechnungen
+      - EÜR und UStVA
+      - DATEV- und ELSTER-Schnittstelle
+    note: Nur Jahresabo, jährlich im Voraus (130,80 € im Jahr).
+    source: *preise
+  - name: Buchhaltung
+    monthlyCents: null
+    yearlyMonthlyCents: 1990
+    perUser: false
+    net: true
+    includes:
+      - 1 Nutzer
+      - Bis 120.000 € Umsatz in 365 Tagen
+      - Buchhaltung
+      - Banking
+    note: Nur Jahresabo (238,80 € im Jahr).
+    source: *preise
+  - name: Auftragswesen
+    monthlyCents: null
+    yearlyMonthlyCents: 3990
+    perUser: false
+    net: true
+    includes:
+      - 2 Nutzer
+      - Auftragswesen
+      - Dokumentenverwaltung
+    note: Nur Jahresabo (478,80 € im Jahr).
+    source: *preise
+  - name: Warenwirtschaft
+    monthlyCents: null
+    yearlyMonthlyCents: 6990
+    perUser: false
+    net: true
+    includes:
+      - 5 Nutzer
+      - Warenwirtschaft
+    note: Nur Jahresabo (838,80 € im Jahr).
+    source: *preise
+pros:
+  - DATEV- und ELSTER-Schnittstelle schon im kleinsten Plan für 10,90 € im Monat.
+  - E-Rechnungen in XRechnung und ZUGFeRD senden und empfangen.
+  - Daten in eigenen Rechenzentren des Anbieters in Deutschland.
+  - Schriftlicher und telefonischer Support enthalten.
+cons:
+  - Nur im Jahresabo erhältlich, eine monatliche Zahlung ist nicht vorgesehen.
+  - Die kleinen Pläne sind auf 25.000 € beziehungsweise 120.000 € Umsatz in 365 Tagen begrenzt.
+  - Weitere Nutzer kosten je 6 € im Monat.
+idealFor:
+  - Kleinunternehmer und Gründer mit überschaubarem Umsatz, die Rechnungen und UStVA in einem Werkzeug wollen
+notIdealFor:
+  - Unternehmen, die monatlich kündbare Verträge bevorzugen

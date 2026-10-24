@@ -1,0 +1,10 @@
+slug: fastbill
+name: FastBill
+legalName: FastBill GmbH
+country: Deutschland
+city: Frankfurt am Main
+website: https://www.fastbill.com
+sources:
+  - url: https://www.fastbill.com/impressum
+    title: Impressum der FastBill GmbH
+    accessed: 2026-10-24

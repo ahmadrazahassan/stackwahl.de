@@ -5,10 +5,12 @@
 //   pnpm content:validate --production  production rules (used by `pnpm build`)
 //   --config <path>                     another content-collections config (tests)
 
-import { join } from "node:path";
+import { readdirSync, readFileSync, rmSync, statSync } from "node:fs";
+import { join, relative } from "node:path";
 import { pathToFileURL } from "node:url";
 import { createBuilder } from "@content-collections/core";
 import { checkContent, utcToday, type ContentSet } from "../src/content/guards.ts";
+import { findFlowCollections } from "../src/content/yaml-style.ts";
 
 const production = process.argv.includes("--production") || process.env.NODE_ENV === "production";
 const root = process.cwd();
@@ -16,6 +18,26 @@ const configArg = process.argv.indexOf("--config");
 const configPath =
   configArg > -1 ? process.argv[configArg + 1] : join(root, "content-collections.ts");
 const problems: string[] = [];
+
+// Block style only (src/content/yaml-style.ts): flow style splits values at commas.
+function yamlFiles(dir: string): string[] {
+  return readdirSync(dir).flatMap((entry) => {
+    const full = join(dir, entry);
+    if (statSync(full).isDirectory()) return entry.startsWith(".") ? [] : yamlFiles(full);
+    return full.endsWith(".yaml") ? [full] : [];
+  });
+}
+for (const file of yamlFiles(join(configPath, "..", configArg > -1 ? "." : "content"))) {
+  for (const f of findFlowCollections(readFileSync(file, "utf8"))) {
+    problems.push(
+      `Flow-Stil in ${relative(root, file)}:${f.line} („${f.text}“). Bitte Block-Stil verwenden.`,
+    );
+  }
+}
+
+// The Content Collections cache does not notice schema changes, so a stale cache can hide
+// schema errors (seen in Phase 2). Validation always starts from a clean cache.
+rmSync(join(configPath, "..", ".content-collections", "cache"), { recursive: true, force: true });
 
 const builder = await createBuilder(configPath);
 const outputDir = join(configPath, "..", ".content-collections", "generated");
