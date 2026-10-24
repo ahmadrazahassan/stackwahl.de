@@ -17,7 +17,7 @@ Every later decision is checked against this mission.
 
 ---
 
-## Phase 0: Foundation (status: done, waiting for approval)
+## Phase 0: Foundation (status: approved 24.10.2026)
 
 1. Latest stable stack, verified live on 24.10.2026 (versions and exceptions in `DECISIONS.md`).
 2. Strict TypeScript, ESLint, Prettier, Vitest, Playwright with axe, GitHub Actions CI.
@@ -31,7 +31,20 @@ Every later decision is checked against this mission.
 
 ---
 
-## Information architecture proposal (needs owner approval)
+## Phase 1: Design system (status: done, waiting for approval)
+
+The 21st.dev MCP server is not connected (no API key), so the components are built on Radix primitives and restyled to Section 13. Every component and state goes on `/intern/styleguide` (noindex, disallowed in robots, outside the public shell) with labeled fictitious demo data.
+
+1. Formatting helpers for euro, dates and scores (de-DE), with unit tests.
+2. Primitives: Container, Panel, split Button (primary, dark, outline; link and button), Eyebrow, Headline with muted tail, TextLink, DisclosureLabel ("Affiliate-Link", "Anzeige"), Input, Select, Checkbox, Switch, SegmentedControl, Tag.
+3. Signature components (13.6): FeatureTiles with line illustrations, SoftwareCard, ScoreDisplay, ProsCons, ComplianceChecklist, ProfileHeader with sticky in-page TabBar, PriceTable, ComparisonTable with "Unterschiede hervorheben", StepCards, VerdictCard, GuideCards, Marquee, LogoRow, NewsletterPanel.
+4. Shell: SiteHeader with mega menu and mobile menu, SiteFooter with giant wordmark, CommandPalette (`Strg K`).
+5. Three wordmark options for Stackwahl, contrast table, and the token overview.
+6. E2E: axe clean on the styleguide at both widths, keyboard checks for the menus, palette, segmented control and comparison switch.
+
+---
+
+## Information architecture (approved by the owner on 24.10.2026, including the score weights)
 
 ### Page types
 

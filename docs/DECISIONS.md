@@ -93,3 +93,34 @@ These values are checked by `src/lib/contrast.test.ts` (WCAG 2.2 AA, 4.5:1 for t
 - **Decision:** `@types/node` stays on the 24.x line.
 - **Reason:** the types must match the runtime, which is Node 24 Active LTS (locally and on Vercel). Node 26 is not LTS yet.
 - **Revisit:** when Node 26 becomes Active LTS and the runtime moves.
+
+## 24.10.2026: Phase 1 UI dependencies
+
+| Package                  | Version | Reason                                                                              |
+| ------------------------ | ------- | ----------------------------------------------------------------------------------- |
+| radix-ui                 | 1.8.1   | Accessible primitives (Dialog, NavigationMenu, Tabs, Checkbox, Switch), unstyled    |
+| cmdk                     | 1.1.1   | Command palette with keyboard navigation (Section 8, search)                        |
+| lucide-react             | 1.61.0  | The only icon set allowed by the brief (13.9)                                       |
+| class-variance-authority | 0.7.1   | Button variants                                                                     |
+
+`motion` is not installed. The only animations so far (arrow nudge, tab underline, switch, marquee) are plain CSS, so the library isn't needed yet.
+
+## 24.10.2026: Components built without 21st.dev
+
+- **Decision:** the 21st.dev MCP server still isn't connected (no `API_KEY_21ST`), so every component is written in-house on Radix primitives and styled to Section 13.
+- **Revisit:** once the key is set. Catalog components may then serve as structural starting points, restyled to the tokens.
+
+## 24.10.2026: Arrow segment and icon containers
+
+- **Decision:** the split button keeps the arrow in a second segment of the button itself (reference 1). Everywhere else, icons have no background: the "Weiterlesen" arrows on the guide cards are plain icons, not squares.
+- **Reason:** the owner banned backgrounds behind icons. The button segment is part of the button shape and reads as one control.
+- **Revisit:** if the owner prefers plain buttons. That would be a one-line change in `src/components/ui/button.tsx`.
+
+## 24.10.2026: Scroll containers are positioned
+
+- **Decision:** every `overflow-x-auto` container also gets `position: relative`, and scrollable regions without their own focusable content get `role="region"`, an `aria-label` and `tabIndex={0}`.
+- **Reason:** visually hidden text (`sr-only`) inside horizontally scrolling tables escaped the scroll container and widened the page on phones (531 px on a 390 px screen). axe also requires scrollable regions to be reachable with the keyboard.
+
+## 24.10.2026: ESLint 9 deprecation notice
+
+pnpm now marks eslint 9.39.5 as deprecated in favor of 10.x. We stay on 9 for the same peer reason as above (eslint-plugin-react, jsx-a11y and import support only up to 9). Revisit at the end of Phase 2.
