@@ -96,12 +96,12 @@ These values are checked by `src/lib/contrast.test.ts` (WCAG 2.2 AA, 4.5:1 for t
 
 ## 24.10.2026: Phase 1 UI dependencies
 
-| Package                  | Version | Reason                                                                              |
-| ------------------------ | ------- | ----------------------------------------------------------------------------------- |
-| radix-ui                 | 1.8.1   | Accessible primitives (Dialog, NavigationMenu, Tabs, Checkbox, Switch), unstyled    |
-| cmdk                     | 1.1.1   | Command palette with keyboard navigation (Section 8, search)                        |
-| lucide-react             | 1.61.0  | The only icon set allowed by the brief (13.9)                                       |
-| class-variance-authority | 0.7.1   | Button variants                                                                     |
+| Package                  | Version | Reason                                                                           |
+| ------------------------ | ------- | -------------------------------------------------------------------------------- |
+| radix-ui                 | 1.8.1   | Accessible primitives (Dialog, NavigationMenu, Tabs, Checkbox, Switch), unstyled |
+| cmdk                     | 1.1.1   | Command palette with keyboard navigation (Section 8, search)                     |
+| lucide-react             | 1.61.0  | The only icon set allowed by the brief (13.9)                                    |
+| class-variance-authority | 0.7.1   | Button variants                                                                  |
 
 `motion` is not installed. The only animations so far (arrow nudge, tab underline, switch, marquee) are plain CSS, so the library isn't needed yet.
 

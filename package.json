@@ -4,19 +4,22 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "pnpm content:validate && pnpm search:index && next dev",
+    "build": "pnpm content:validate --production && pnpm search:index --production && next build",
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "next typegen && tsc --noEmit",
+    "typecheck": "pnpm content:validate && next typegen && tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "check:css": "node scripts/check-css.ts",
     "placeholders": "node scripts/placeholders.ts",
-    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm check:css"
+    "check": "pnpm format:check && pnpm lint && pnpm lint:copy && pnpm typecheck && pnpm test && pnpm build && pnpm check:css",
+    "content:validate": "node scripts/validate-content.ts",
+    "search:index": "node scripts/build-search-index.ts",
+    "lint:copy": "node scripts/lint-copy.ts"
   },
   "dependencies": {
     "class-variance-authority": "0.7.1",
@@ -27,11 +30,15 @@
     "radix-ui": "1.8.1",
     "react": "19.3.1",
     "react-dom": "19.3.1",
+    "server-only": "0.0.1",
     "tailwind-merge": "3.7.0",
+    "yaml": "2.9.1",
     "zod": "4.6.7"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
+    "@content-collections/core": "0.15.3",
+    "@content-collections/next": "0.2.11",
     "@playwright/test": "1.64.1",
     "@tailwindcss/turbopack": "4.3.3",
     "@types/node": "24.19.2",

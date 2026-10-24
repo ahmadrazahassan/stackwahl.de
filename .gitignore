@@ -46,3 +46,9 @@ next-env.d.ts
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# content collections
+/.content-collections/
+/src/generated/
+
+/src/content/__fixtures__/**/.content-collections/

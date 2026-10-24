@@ -7,3 +7,5 @@ test-results
 coverage
 src/styles/preflight.css
 GENERAL_BUILD_PROMPT.md
+.content-collections
+src/generated

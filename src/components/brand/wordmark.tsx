@@ -64,5 +64,5 @@ export function Wordmark({
   );
 }
 
-/** The option currently used in header and footer. Owner decides in the Phase 1 review. */
-export const ACTIVE_WORDMARK: WordmarkOption = "b";
+/** The approved option used in header and footer. */
+export const ACTIVE_WORDMARK: WordmarkOption = "b"; // approved by the owner on 24.10.2026
