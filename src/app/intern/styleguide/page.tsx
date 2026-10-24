@@ -11,6 +11,7 @@ import {
 import { CommandPalette } from "@/components/layout/command-palette";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { buildNavigation } from "@/components/layout/navigation";
 import { FeatureTiles } from "@/components/marketing/feature-tiles";
 import { GuideCards } from "@/components/marketing/guide-cards";
 import { Marquee } from "@/components/marketing/marquee";
@@ -111,6 +112,18 @@ function Specimen({
     </section>
   );
 }
+
+// The styleguide shows the full navigation, as if every tool existed.
+const demoNav = buildNavigation({
+  finder: true,
+  comparisonTool: true,
+  costCalculator: true,
+  guides: true,
+  glossary: true,
+  authors: true,
+  reviewPolicy: true,
+  categories: true,
+});
 
 export default function StyleguidePage() {
   const demo = demoSoftware[0];
@@ -484,13 +497,23 @@ export default function StyleguidePage() {
             </p>
           </Container>
         </Panel>
-        <SiteHeader categories={demoCategories} searchEntries={demoSearch} />
+        <SiteHeader
+          categories={demoCategories}
+          searchEntries={demoSearch}
+          primary={demoNav.primary}
+          cta={demoNav.cta}
+        />
         <Section className="py-8 sm:py-10 lg:py-10">
           <Container>
             <CommandPalette entries={demoSearch} />
           </Container>
         </Section>
-        <SiteFooter categories={demoCategories} year={2026} />
+        <SiteFooter
+          categories={demoCategories}
+          columns={demoNav.footer}
+          cta={demoNav.cta}
+          year={2026}
+        />
       </section>
     </main>
   );

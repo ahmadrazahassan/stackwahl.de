@@ -101,6 +101,9 @@
     font-family: var(--font-display);
     font-weight: 500;
     text-wrap: balance;
+    /* German compounds ("Umsatzsteuer-Voranmeldung") must not push narrow screens sideways. */
+    hyphens: auto;
+    overflow-wrap: break-word;
   }
 
   p {

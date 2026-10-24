@@ -21,6 +21,7 @@ const content: ContentSet = {
   comparisons: generated.allComparisons ?? [],
   affiliateLinks: generated.allAffiliateLinks ?? [],
   guides: generated.allGuides ?? [],
+  glossary: generated.allGlossaries ?? [],
 };
 
 const index = buildSearchIndex(content, showDrafts);

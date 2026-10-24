@@ -38,6 +38,10 @@ const siteConfigSchema = z.object({
     database: openString,
     analytics: openString,
     affiliateNetworks: openString,
+    /** Date the Vercel DPA was concluded, or a placeholder until then. */
+    hostingDpa: openString,
+    /** How long the host keeps request logs (from the host's documentation). */
+    hostingLogRetention: openString,
   }),
   score: z.object({
     name: openString,
@@ -50,6 +54,12 @@ const siteConfigSchema = z.object({
     consultationRequest: z.boolean(),
     affiliateLinks: z.boolean(),
     analytics: z.boolean(),
+    // Interactive tools from Phase 4. Navigation links appear only when a tool exists.
+    finder: z.boolean(),
+    comparisonTool: z.boolean(),
+    costCalculator: z.boolean(),
+    // false shows a visible "Entwurf" notice on every legal page (Section 9).
+    legalReviewed: z.boolean(),
   }),
 });
 
@@ -86,6 +96,8 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
     database: "{{DATABASE_PROVIDER}}",
     analytics: "{{ANALYTICS_PROVIDER}}",
     affiliateNetworks: "{{AFFILIATE_NETWORKS}}",
+    hostingDpa: "{{HOSTING_DPA}}",
+    hostingLogRetention: "{{HOSTING_LOG_RETENTION}}",
   },
   score: {
     name: "{{SCORE_NAME}}",
@@ -97,5 +109,9 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
     consultationRequest: false,
     affiliateLinks: false,
     analytics: false,
+    finder: false,
+    comparisonTool: false,
+    costCalculator: false,
+    legalReviewed: false,
   },
 });

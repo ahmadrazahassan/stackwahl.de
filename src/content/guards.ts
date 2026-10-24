@@ -4,6 +4,7 @@ import type {
   Author,
   Category,
   Comparison,
+  GlossaryTerm,
   Guide,
   Software,
   Source,
@@ -21,6 +22,7 @@ export type ContentSet = {
   comparisons: Comparison[];
   affiliateLinks: AffiliateLink[];
   guides: Guide[];
+  glossary: GlossaryTerm[];
 };
 
 export type Issue = {
@@ -179,6 +181,12 @@ export function checkContent(content: ContentSet, options: GuardOptions): Issue[
       content.guides.map((g) => g.slug),
     ),
   );
+  issues.push(
+    ...duplicates(
+      "glossary",
+      content.glossary.map((t) => t.slug),
+    ),
+  );
 
   const vendors = new Set(content.vendors.map((v) => v.slug));
   const categories = new Set(content.categories.map((c) => c.slug));
@@ -300,6 +308,26 @@ export function checkContent(content: ContentSet, options: GuardOptions): Issue[
       issues.push(...futureDate(`${at}.sources[${i}]`, src.accessed, today)),
     );
     issues.push(...copyIssues(at, [g.title, g.description, g.centralQuestion]));
+  }
+
+  const terms = new Set(content.glossary.map((t) => t.slug));
+  for (const t of content.glossary) {
+    const at = `glossary/${t.slug}`;
+    issues.push(...reference(`${at}.author`, "Autor", t.author, authors));
+    t.related.forEach((r) => issues.push(...reference(`${at}.related`, "Begriff", r, terms)));
+    issues.push(...futureDate(`${at}.lastReviewed`, t.lastReviewed, today));
+    t.sources.forEach((src, i) =>
+      issues.push(...futureDate(`${at}.sources[${i}]`, src.accessed, today)),
+    );
+    issues.push(...copyIssues(at, [t.term, t.short, t.definition]));
+    if (t.status === "published" && !t.author) {
+      issues.push({
+        severity: "error",
+        code: "missing-author",
+        where: at,
+        message: "Veröffentlicht ohne echte Autorin oder echten Autor.",
+      });
+    }
   }
 
   for (const c of content.categories) {

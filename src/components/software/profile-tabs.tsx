@@ -38,7 +38,7 @@ export function ProfileTabs({
 
   return (
     <nav
-      aria-label="Abschnitte des Testberichts"
+      aria-label="Abschnitte des Profils"
       className={cn("sticky top-0 z-30 border-b border-line bg-surface", className)}
     >
       <ul className="relative flex [scrollbar-width:none] gap-1 overflow-x-auto px-1">

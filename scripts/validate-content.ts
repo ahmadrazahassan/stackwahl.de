@@ -84,6 +84,7 @@ const content: ContentSet = {
   comparisons: generated.allComparisons ?? [],
   affiliateLinks: generated.allAffiliateLinks ?? [],
   guides: generated.allGuides ?? [],
+  glossary: generated.allGlossaries ?? [],
 };
 
 const issues = checkContent(content, { today: utcToday(), production });

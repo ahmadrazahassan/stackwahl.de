@@ -1,0 +1,23 @@
+slug: umsatzsteuer-voranmeldung
+term: Umsatzsteuer-Voranmeldung (UStVA)
+short: Die regelmäßige Meldung der Umsatzsteuer an das Finanzamt nach § 18 UStG, in der Regel elektronisch über ELSTER.
+definition: >-
+  Nach § 18 des Umsatzsteuergesetzes übermitteln Unternehmer bis zum zehnten Tag nach Ablauf jedes
+  Voranmeldungszeitraums eine Voranmeldung nach amtlich vorgeschriebenem Datensatz über die amtlich
+  bestimmte Schnittstelle. Darin berechnen sie die Steuer für den Zeitraum selbst; die
+  Vorauszahlung ist ebenfalls am zehnten Tag nach Ablauf des Zeitraums fällig. Die amtliche
+  Schnittstelle ist ELSTER. Viele Buchhaltungsprogramme erstellen die Voranmeldung aus den
+  Buchungen und senden sie direkt.
+status: draft
+lastReviewed: 2026-10-24
+author: null
+related:
+  - kleinunternehmerregelung
+  - einnahmen-ueberschuss-rechnung
+sources:
+  - url: https://www.gesetze-im-internet.de/ustg_1980/__18.html
+    title: § 18 UStG, Besteuerungsverfahren
+    accessed: 2026-10-24
+  - url: https://www.elster.de/eportal/start
+    title: Mein ELSTER
+    accessed: 2026-10-24

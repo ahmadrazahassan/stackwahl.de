@@ -4,13 +4,16 @@ import {
   allAuthors,
   allCategories,
   allComparisons,
+  allGlossaries,
   allGuides,
   allSoftware,
   allVendors,
 } from "content-collections";
-import type { SoftwareSummary } from "@/components/software/types";
-import { COMPLIANCE } from "@/content/features";
-import type { Software } from "@/content/schemas";
+import type { Availability } from "@/components/layout/navigation";
+import type { ComplianceRow, PricePlan, SoftwareSummary } from "@/components/software/types";
+import { COMPLIANCE, COMPLIANCE_KEYS, FEATURES, type FeatureKey } from "@/content/features";
+import type { Fact, Software, Source } from "@/content/schemas";
+import { siteConfig } from "@/site.config";
 import {
   entryPriceCents,
   isVisible,
@@ -91,7 +94,7 @@ export function toSummary(software: Software, affiliateEnabled = false): Softwar
   const cheapest = software.plans.reduce(
     (min, p) => {
       const price = Math.min(
-        ...[p.monthlyCents, p.yearlyMonthlyCents].filter((v): v is number => v !== null),
+        ...[p.monthlyCents, p.yearlyMonthlyCents].filter((v): v is number => v !== null && v > 0),
       );
       return price < min.price ? { price, plan: p } : min;
     },
@@ -108,6 +111,7 @@ export function toSummary(software: Software, affiliateEnabled = false): Softwar
     category: category?.name ?? software.categories[0],
     score: editorialScore(software),
     priceFromCents: entryPriceCents(software),
+    freePlan: software.freePlan,
     priceNet: cheapest.plan.net,
     priceCheckedAt: priceDates[0],
     keyFacts,
@@ -121,4 +125,115 @@ export function toSummary(software: Software, affiliateEnabled = false): Softwar
 
 export function profileHref(software: Pick<Software, "slug">) {
   return routes.software(software.slug);
+}
+
+// ---------------------------------------------------------------------------------------------
+// Glossary
+
+export function getGlossary() {
+  return allGlossaries
+    .filter((t) => isVisible(t))
+    .sort((a, b) => a.term.localeCompare(b.term, "de"));
+}
+
+export function getTerm(slug: string) {
+  return getGlossary().find((t) => t.slug === slug);
+}
+
+// ---------------------------------------------------------------------------------------------
+// Availability: navigation only links to pages that have content (Section 6, hide empty pages).
+
+export function getAvailability(): Availability {
+  const { features } = siteConfig;
+  return {
+    finder: features.finder,
+    comparisonTool: features.comparisonTool,
+    costCalculator: features.costCalculator,
+    guides: getGuides().length > 0,
+    glossary: getGlossary().length > 0,
+    authors: allAuthors.length > 0,
+    reviewPolicy: features.userReviews,
+    categories: getLiveCategories().length > 0,
+  };
+}
+
+/**
+ * Params for generateStaticParams. Cache Components needs at least one entry, so an empty list
+ * becomes a placeholder that the page answers with notFound() (pitfall 4.2).
+ */
+export const PLACEHOLDER_SLUG = "__keine-inhalte__";
+export function staticSlugs(slugs: string[]): { slug: string }[] {
+  return slugs.length > 0 ? slugs.map((slug) => ({ slug })) : [{ slug: PLACEHOLDER_SLUG }];
+}
+
+// ---------------------------------------------------------------------------------------------
+// Profile helpers
+
+export function toPricePlans(software: Software): PricePlan[] {
+  return software.plans.map((p) => ({
+    name: p.name,
+    monthlyCents: p.monthlyCents,
+    yearlyMonthlyCents: p.yearlyMonthlyCents,
+    perUser: p.perUser,
+    net: p.net,
+    includes: p.includes,
+    note: p.note,
+    sourceUrl: p.source.url,
+    checkedAt: p.source.accessed,
+  }));
+}
+
+export function toComplianceRows(software: Software): ComplianceRow[] {
+  return COMPLIANCE_KEYS.map((key) => {
+    const fact = software.compliance[key];
+    return {
+      criterion: COMPLIANCE[key].label,
+      status: fact.status,
+      note: fact.note,
+      sourceUrl: fact.source?.url,
+      sourceLabel: fact.source ? "Quelle" : undefined,
+    };
+  });
+}
+
+/** Oldest access date among the facts shown, so the "Stand" never overstates freshness. */
+export function factsCheckedAt(software: Software): string {
+  const dates = Object.values(software.compliance)
+    .map((f) => f.source?.accessed)
+    .filter((d): d is string => Boolean(d))
+    .sort();
+  return dates[0] ?? software.lastReviewed;
+}
+
+export type FeatureEntry = { key: FeatureKey; label: string; fact: Fact };
+
+export function featureGroups(software: Software): { group: string; items: FeatureEntry[] }[] {
+  const groups = new Map<string, FeatureEntry[]>();
+  for (const key of Object.keys(FEATURES) as FeatureKey[]) {
+    const fact = software.features[key];
+    if (!fact) continue;
+    const { group, label } = FEATURES[key];
+    groups.set(group, [...(groups.get(group) ?? []), { key, label, fact }]);
+  }
+  return [...groups].map(([group, items]) => ({ group, items }));
+}
+
+/** Every distinct source used in a profile, for the "Quellen" section. */
+export function profileSources(software: Software): Source[] {
+  const all: Source[] = [
+    software.marketAvailability.source,
+    ...(software.trialSource ? [software.trialSource] : []),
+    ...software.plans.map((p) => p.source),
+    ...Object.values(software.compliance).flatMap((f) => (f.source ? [f.source] : [])),
+    ...Object.values(software.features).flatMap((f) => (f?.source ? [f.source] : [])),
+  ];
+  const seen = new Map<string, Source>();
+  for (const source of all) if (!seen.has(source.url)) seen.set(source.url, source);
+  return [...seen.values()];
+}
+
+export function alternativesFor(software: Software): Software[] {
+  return getAllSoftware().filter(
+    (s) => s.slug !== software.slug && s.categories.some((c) => software.categories.includes(c)),
+  );
 }

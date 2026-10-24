@@ -1,0 +1,20 @@
+slug: einnahmen-ueberschuss-rechnung
+term: Einnahmen-Überschuss-Rechnung (EÜR)
+short: Die vereinfachte Gewinnermittlung nach § 4 Abs. 3 EStG für alle, die nicht zur Buchführung verpflichtet sind.
+definition: >-
+  Wer nicht auf Grund gesetzlicher Vorschriften verpflichtet ist, Bücher zu führen und regelmäßig
+  Abschlüsse zu machen, und das auch nicht freiwillig tut, kann nach § 4 Absatz 3 des
+  Einkommensteuergesetzes als Gewinn den Überschuss der Betriebseinnahmen über die
+  Betriebsausgaben ansetzen. Diese Einnahmen-Überschuss-Rechnung ist für viele Freiberufler und
+  kleine Gewerbetreibende die übliche Form der Gewinnermittlung. Buchhaltungsprogramme erstellen
+  sie aus den erfassten Einnahmen und Ausgaben, manche übermitteln die Anlage EÜR direkt per ELSTER.
+status: draft
+lastReviewed: 2026-10-24
+author: null
+related:
+  - umsatzsteuer-voranmeldung
+  - aufbewahrungsfristen
+sources:
+  - url: https://www.gesetze-im-internet.de/estg/__4.html
+    title: § 4 EStG, Gewinnbegriff im Allgemeinen
+    accessed: 2026-10-24

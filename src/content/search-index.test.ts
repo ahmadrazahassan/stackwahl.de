@@ -29,6 +29,7 @@ const content = (list: Software[]): ContentSet => ({
   comparisons: [],
   affiliateLinks: [],
   guides: [],
+  glossary: [],
 });
 
 describe("buildSearchIndex", () => {

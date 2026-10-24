@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   partialPrefetching: true,
   reactCompiler: true,
   poweredByHeader: false,
+  // Inlined at build time: "1" only in preview builds (scripts/build-preview.ts).
+  env: { STACKWAHL_SHOW_DRAFTS: process.env.STACKWAHL_SHOW_DRAFTS === "1" ? "1" : "0" },
   turbopack: {
     rules: {
       "*.css": {

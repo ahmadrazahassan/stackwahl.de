@@ -10,7 +10,7 @@
     "lint": "eslint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "pnpm content:validate && next typegen && tsc --noEmit",
+    "typecheck": "pnpm content:validate && pnpm search:index && next typegen && tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
@@ -19,7 +19,8 @@
     "check": "pnpm format:check && pnpm lint && pnpm lint:copy && pnpm typecheck && pnpm test && pnpm build && pnpm check:css",
     "content:validate": "node scripts/validate-content.ts",
     "search:index": "node scripts/build-search-index.ts",
-    "lint:copy": "node scripts/lint-copy.ts"
+    "lint:copy": "node scripts/lint-copy.ts",
+    "build:preview": "node scripts/build-preview.ts"
   },
   "dependencies": {
     "class-variance-authority": "0.7.1",

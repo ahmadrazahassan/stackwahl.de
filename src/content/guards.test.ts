@@ -107,6 +107,7 @@ function set(overrides: Partial<ContentSet> = {}): ContentSet {
     comparisons: [],
     affiliateLinks: [],
     guides: [],
+    glossary: [],
     ...overrides,
   };
 }

@@ -4,6 +4,7 @@ import {
   authorSchema,
   categorySchema,
   comparisonSchema,
+  glossaryTermSchema,
   guideSchema,
   softwareSchema,
   vendorSchema,
@@ -83,6 +84,15 @@ const guides = defineCollection({
   transform: slugMatchesFile,
 });
 
+const glossary = defineCollection({
+  name: "glossary",
+  directory: "content/glossary",
+  include: "*.yaml",
+  parser: "yaml",
+  schema: glossaryTermSchema,
+  transform: slugMatchesFile,
+});
+
 export default defineConfig({
-  content: [vendors, categories, software, authors, comparisons, affiliateLinks, guides],
+  content: [vendors, categories, software, authors, comparisons, affiliateLinks, guides, glossary],
 });

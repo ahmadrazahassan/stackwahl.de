@@ -1,0 +1,20 @@
+slug: e-rechnung
+term: E-Rechnung
+short: Eine Rechnung in einem strukturierten elektronischen Format, das sich maschinell verarbeiten lässt, nach § 14 UStG.
+definition: >-
+  § 14 des Umsatzsteuergesetzes definiert die elektronische Rechnung als eine Rechnung, die in einem
+  strukturierten elektronischen Format ausgestellt, übermittelt und empfangen wird und eine
+  elektronische Verarbeitung ermöglicht. Eine einfache PDF-Datei ist danach keine E-Rechnung, weil
+  ihr der strukturierte Datensatz fehlt. In Deutschland verbreitete Formate sind XRechnung und
+  ZUGFeRD. Ob eine Software E-Rechnungen nur erstellen oder auch empfangen und auslesen kann,
+  steht in jedem Softwareprofil unter Rechtssicherheit.
+status: draft
+lastReviewed: 2026-10-24
+author: null
+related:
+  - kleinunternehmerregelung
+  - aufbewahrungsfristen
+sources:
+  - url: https://www.gesetze-im-internet.de/ustg_1980/__14.html
+    title: § 14 UStG, Ausstellung von Rechnungen
+    accessed: 2026-10-24

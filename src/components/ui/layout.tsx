@@ -54,8 +54,8 @@ export function SplitGrid({
 }) {
   return (
     <div className={cn("grid gap-8 lg:grid-cols-12 lg:gap-6", className)}>
-      <div className="lg:col-span-3">{aside}</div>
-      <div className="lg:col-span-8 lg:col-start-5">{children}</div>
+      <div className="min-w-0 lg:col-span-3">{aside}</div>
+      <div className="min-w-0 lg:col-span-8 lg:col-start-5">{children}</div>
     </div>
   );
 }

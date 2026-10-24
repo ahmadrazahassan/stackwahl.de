@@ -151,7 +151,8 @@ export const softwareSchema = z.strictObject({
   lastReviewed: isoDateSchema,
   author: slugSchema.nullable(),
   reviewer: slugSchema.nullable().default(null),
-  summary: z.string().min(40).max(160),
+  /** Also the meta description, so at most 155 characters (Section 11). */
+  summary: z.string().min(40).max(155),
   website: httpsUrlSchema,
   marketAvailability: z.strictObject({
     status: z.enum(["verfuegbar", "eingeschraenkt", "nicht-verfuegbar"]),
@@ -232,3 +233,20 @@ export const guideSchema = z.strictObject({
   sources: z.array(sourceSchema).min(1),
 });
 export type Guide = z.infer<typeof guideSchema>;
+
+// ---------------------------------------------------------------------------------------------
+// Glossary
+
+export const glossaryTermSchema = z.strictObject({
+  slug: slugSchema,
+  term: z.string().min(2),
+  /** One sentence, also the meta description. */
+  short: z.string().min(30).max(155),
+  definition: z.string().min(80),
+  status: statusSchema,
+  lastReviewed: isoDateSchema,
+  author: slugSchema.nullable(),
+  related: z.array(slugSchema).default([]),
+  sources: z.array(sourceSchema).min(1),
+});
+export type GlossaryTerm = z.infer<typeof glossaryTermSchema>;

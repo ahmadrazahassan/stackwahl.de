@@ -1,0 +1,121 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ConfigValue, LegalDraftNotice } from "@/components/page/legal";
+import { PageHeader, PageSection } from "@/components/page/page-header";
+import { Prose } from "@/components/ui/typography";
+import { routes } from "@/lib/routes";
+import { siteConfig } from "@/site.config";
+
+export const metadata: Metadata = {
+  title: "Datenschutzerklärung",
+  description:
+    "Welche personenbezogenen Daten Stackwahl verarbeitet, zu welchem Zweck, auf welcher Rechtsgrundlage und welche Rechte Sie haben.",
+  alternates: { canonical: routes.privacy() },
+};
+
+// Draft for lawyer review (Section 9). It describes the site as it is built today: hosting on
+// Vercel, no cookies, no analytics, no third-party embeds, self-hosted fonts, no forms.
+// Every new processor, cookie or form must be added here in the same commit (Section 3.10).
+
+export default function PrivacyPage() {
+  const { legal } = siteConfig;
+  return (
+    <main id="inhalt" className="flex flex-col gap-3 pt-3 sm:gap-4 sm:pt-4">
+      <PageHeader
+        crumbs={[{ label: "Start", href: routes.home() }, { label: "Datenschutz" }]}
+        eyebrow="Rechtliches"
+        title="Datenschutzerklärung"
+      >
+        <div className="mt-8">
+          <LegalDraftNotice />
+        </div>
+      </PageHeader>
+
+      <PageSection
+        id="verantwortlicher"
+        label="Verantwortlicher"
+        title="Wer für die Daten verantwortlich ist"
+      >
+        <Prose>
+          <p>
+            Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) ist {legal.ownerName},{" "}
+            {legal.street}, {legal.postalCode} {legal.city}, E-Mail:{" "}
+            <ConfigValue value={legal.email} />.
+          </p>
+        </Prose>
+      </PageSection>
+
+      <PageSection id="hosting" label="Hosting" title="Aufruf der Website und Server-Protokolle">
+        <Prose>
+          <p>
+            Die Website wird bei der Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723,
+            USA, gehostet. Beim Aufruf einer Seite verarbeitet Vercel technisch notwendige Daten,
+            insbesondere Ihre IP-Adresse, Datum und Uhrzeit, die aufgerufene Adresse, die
+            übertragene Datenmenge sowie Browser und Betriebssystem. Das ist erforderlich, um die
+            Website auszuliefern und vor Angriffen zu schützen.
+          </p>
+          <p>
+            Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt im
+            sicheren und stabilen Betrieb der Website. Vercel ist nach dem EU-US Data Privacy
+            Framework zertifiziert; eine Übermittlung in die USA stützt sich auf den
+            Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO).
+          </p>
+          <p>
+            Vertrag über die Auftragsverarbeitung nach Art. 28 DSGVO mit Vercel:{" "}
+            <ConfigValue value={siteConfig.services.hostingDpa} />
+            <br />
+            Speicherdauer der Protokolldaten bei Vercel:{" "}
+            <ConfigValue value={siteConfig.services.hostingLogRetention} />
+          </p>
+        </Prose>
+      </PageSection>
+
+      <PageSection id="cookies" label="Cookies" title="Cookies, Analyse und eingebundene Dienste">
+        <Prose>
+          <p>
+            Diese Website setzt keine Cookies, nutzt keine Analyse- oder Werbedienste und bindet
+            keine Inhalte von Drittanbietern ein. Die Schriften liegen auf unserem eigenen Server.
+            Eine Einwilligung nach § 25 TDDDG ist daher derzeit nicht erforderlich. Den aktuellen
+            Stand finden Sie unter <Link href={routes.cookieSettings()}>Cookie-Einstellungen</Link>.
+          </p>
+        </Prose>
+      </PageSection>
+
+      <PageSection id="links" label="Links" title="Links zu Anbietern">
+        <Prose>
+          <p>
+            Links zu Softwareanbietern führen direkt auf deren Website. Wir übermitteln dabei keine
+            Daten über Sie. Mit dem Aufruf der Anbieterseite gilt deren Datenschutzerklärung; der
+            Anbieter kann dort eigene Cookies setzen.
+          </p>
+        </Prose>
+      </PageSection>
+
+      <PageSection id="kontakt" label="Kontakt" title="Wenn Sie uns schreiben">
+        <Prose>
+          <p>
+            Schreiben Sie uns per E-Mail, verarbeiten wir Ihre Adresse und den Inhalt der Nachricht,
+            um Ihre Anfrage zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO, bei
+            vorvertraglichen Anfragen Art. 6 Abs. 1 lit. b DSGVO. Wir löschen die Daten, sobald die
+            Anfrage erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+          </p>
+        </Prose>
+      </PageSection>
+
+      <PageSection id="rechte" label="Ihre Rechte" title="Ihre Rechte">
+        <Prose>
+          <p>
+            Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art.
+            17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und
+            Widerspruch gegen eine Verarbeitung auf Grundlage berechtigter Interessen (Art. 21).
+          </p>
+          <p>
+            Sie können sich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77
+            DSGVO). Zuständig für uns ist: Der Hessische Beauftragte für Datenschutz und
+            Informationsfreiheit, Wilhelmstraße 7, 65185 Wiesbaden.
+          </p>
+        </Prose>
+      </PageSection>
+    </main>
+  );
+}

@@ -8,7 +8,10 @@ import {
   SegmentedRoot,
   SegmentedTrigger,
 } from "@/components/ui/segmented";
+import { Arcs, Lattice, NestedSquares, RayBurst } from "@/components/illustrations/line-art";
 import { cn } from "@/lib/cn";
+
+const fallbackArt = [Lattice, RayBurst, NestedSquares, Arcs];
 
 export type Step = {
   id: string;
@@ -75,15 +78,29 @@ export function StepCards({
               </div>
             </div>
             <div className="p-3 md:p-4">
-              <MediaFrame
-                image={step.image}
-                className="h-full min-h-64"
-                sizes="(min-width: 768px) 40vw, 100vw"
-              />
+              {step.image ? (
+                <MediaFrame
+                  image={step.image}
+                  className="h-full min-h-64"
+                  sizes="(min-width: 768px) 40vw, 100vw"
+                />
+              ) : (
+                // Without a real photo the card shows line art, never an empty frame.
+                <StepArt index={index} />
+              )}
             </div>
           </div>
         </SegmentedContent>
       ))}
     </SegmentedRoot>
+  );
+}
+
+function StepArt({ index }: { index: number }) {
+  const Art = fallbackArt[index % fallbackArt.length];
+  return (
+    <div className="flex h-full min-h-64 items-center justify-center rounded-card">
+      <Art size={200} className="opacity-90" />
+    </div>
   );
 }

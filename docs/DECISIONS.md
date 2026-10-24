@@ -156,3 +156,15 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 - **What happened:** content files used inline YAML (`{ status: ja, note: Für 12,90 € im Monat }`). In YAML flow style an unquoted comma ends the value, so the note was stored as "Für 12" plus a stray key "90 € im Monat". Zod `object` silently dropped the stray key, and the Content Collections cache hid the schema change. Prettier's reformatting made it visible.
 - **Fix:** every schema is now `strictObject` (unknown keys fail). All content files were converted to block style and the split texts were rejoined, then checked (12,90 € and 19,90 € restored, and two split list items merged). `content:validate` rejects flow style in content YAML and always clears the Content Collections cache first. Unit tests reproduce the bug and prove both protections.
 - **Rule:** write content YAML in block style only. Quote a value if it starts with a special character.
+
+## 24.10.2026: Phase 3 template decisions
+
+- **Navigation reflects what exists.** `buildNavigation(getAvailability())` adds links for the Finder, the comparison tool, the cost calculator, guides, the glossary, the editorial team and the review policy only when they exist (feature flags or content). An E2E test opens every header and footer link and expects status 200.
+- **Real 404 status.** With Cache Components, a dynamic page that calls `notFound()` after streaming has begun keeps status 200 (Next.js docs, "Status codes"). `src/proxy.ts` checks software, category and glossary slugs against the visible content and rewrites unknown ones to `/nicht-gefunden`. That route calls `notFound()` while being prerendered, so it returns 404.
+- **`instant = false` on the dynamic content routes.** Every known slug is prerendered, so a navigation loads a static page. Streaming skeletons would add complexity without a visible gain. Revisit if pages gain request-time data.
+- **Preview build.** `pnpm build:preview` inlines `STACKWAHL_SHOW_DRAFTS=1`, so the E2E tests can exercise the templates with draft content. The normal build never shows drafts. Never deploy a preview build.
+- **Free plans.** "ab … €" always means the cheapest paid plan. A free plan is shown separately as "Kostenloser Tarif verfügbar".
+- **Wording without a test.** "im Test", "Testbericht" and "Tests" appear only when a documented test exists. Otherwise the copy says "im Überblick", "Zum Profil" and "Vergleiche".
+- **Alternatives pages are `noindex`.** They are generated from data without editorial text, so they stay out of the index (Section 11, no thin programmatic pages) until the editors write a comparison.
+- **Legal placeholders.** The legal pages read from `site.config.ts` and show missing values as "Angabe fehlt: NAME". Unverified hosting facts (Vercel DPA, log retention) are placeholders too, not claims. A visible notice says that the lawyer review is still pending (`features.legalReviewed`).
+- **Mobile overflow.** Grid children get `min-w-0`, and headings use `hyphens: auto` so that long German compounds wrap.

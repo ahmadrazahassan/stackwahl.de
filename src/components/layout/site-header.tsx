@@ -10,7 +10,7 @@ import { ButtonLink } from "@/components/ui/button";
 import { cn } from "@/lib/cn";
 import { routes } from "@/lib/routes";
 import { CommandPalette, type SearchEntry } from "./command-palette";
-import { primaryNav, type NavLink } from "./navigation";
+import type { NavLink } from "./navigation";
 
 const navLink =
   "inline-flex min-h-11 items-center gap-1 rounded-control px-3 text-small font-medium text-ink transition-colors hover:bg-bg data-[active]:text-primary aria-[current=page]:text-primary";
@@ -22,10 +22,15 @@ const navLink =
 export function SiteHeader({
   categories,
   searchEntries,
+  primary,
+  cta,
 }: {
   /** Only live categories (at least five published profiles). */
   categories: NavLink[];
   searchEntries: SearchEntry[];
+  /** Only routes that exist (see buildNavigation). */
+  primary: NavLink[];
+  cta: NavLink | null;
 }) {
   const pathname = usePathname();
   return (
@@ -95,7 +100,7 @@ export function SiteHeader({
                 </NavigationMenu.Content>
               </NavigationMenu.Item>
             ) : null}
-            {primaryNav.map((item) => (
+            {primary.map((item) => (
               <NavigationMenu.Item key={item.href}>
                 <NavigationMenu.Link asChild active={pathname === item.href}>
                   <Link
@@ -112,12 +117,23 @@ export function SiteHeader({
         </NavigationMenu.Root>
 
         <div className="flex items-center gap-2">
-          <CommandPalette entries={searchEntries} shortcut className="hidden xl:inline-flex" />
-          <CommandPalette entries={searchEntries} compact className="xl:hidden" />
-          <ButtonLink href={routes.finder()} className="hidden sm:inline-flex">
-            Software finden
-          </ButtonLink>
-          <MobileMenu categories={categories} searchEntries={searchEntries} />
+          {searchEntries.length > 0 ? (
+            <>
+              <CommandPalette entries={searchEntries} shortcut className="hidden xl:inline-flex" />
+              <CommandPalette entries={searchEntries} compact className="xl:hidden" />
+            </>
+          ) : null}
+          {cta ? (
+            <ButtonLink href={cta.href} className="hidden sm:inline-flex">
+              {cta.label}
+            </ButtonLink>
+          ) : null}
+          <MobileMenu
+            categories={categories}
+            searchEntries={searchEntries}
+            primary={primary}
+            cta={cta}
+          />
         </div>
       </div>
     </header>
@@ -127,9 +143,13 @@ export function SiteHeader({
 function MobileMenu({
   categories,
   searchEntries,
+  primary,
+  cta,
 }: {
   categories: NavLink[];
   searchEntries: SearchEntry[];
+  primary: NavLink[];
+  cta: NavLink | null;
 }) {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
@@ -153,7 +173,9 @@ function MobileMenu({
             </Dialog.Close>
           </div>
           <div className="mt-3 flex flex-col gap-8 rounded-card bg-surface p-5">
-            <CommandPalette entries={searchEntries} className="w-full" />
+            {searchEntries.length > 0 ? (
+              <CommandPalette entries={searchEntries} className="w-full" />
+            ) : null}
             {categories.length > 0 ? (
               <nav aria-label="Kategorien">
                 <p className="eyebrow text-muted">Kategorien</p>
@@ -177,9 +199,9 @@ function MobileMenu({
                 </ul>
               </nav>
             ) : null}
-            <nav aria-label="Werkzeuge und Ratgeber">
+            <nav aria-label="Werkzeuge und Wissen" hidden={primary.length === 0}>
               <ul>
-                {primaryNav.map((item) => (
+                {primary.map((item) => (
                   <li key={item.href} className="border-b border-line">
                     <Link
                       href={item.href}
@@ -192,9 +214,11 @@ function MobileMenu({
                 ))}
               </ul>
             </nav>
-            <ButtonLink href={routes.finder()} onClick={close} className="self-start">
-              Software finden
-            </ButtonLink>
+            {cta ? (
+              <ButtonLink href={cta.href} onClick={close} className="self-start">
+                {cta.label}
+              </ButtonLink>
+            ) : null}
           </div>
         </Dialog.Content>
       </Dialog.Portal>

@@ -5,7 +5,8 @@ test.describe("Foundation", () => {
   test("home renders in German and is noindex before launch", async ({ page }) => {
     await page.goto("/");
     await expect(page.locator("html")).toHaveAttribute("lang", "de");
-    await expect(page.getByRole("heading", { level: 1 })).toContainText("Stackwahl");
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    await expect(page).toHaveTitle(/Stackwahl/);
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
   });
 

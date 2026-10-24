@@ -44,7 +44,7 @@ The 21st.dev MCP server is not connected (no API key), so the components are bui
 
 ---
 
-## Phase 2: Content layer (status: done, waiting for approval)
+## Phase 2: Content layer (status: approved 24.10.2026)
 
 1. Zod schemas for vendors, categories, software (plans, sourced facts, compliance, features), ratings with a mandatory documented test, authors, comparisons, affiliate links and guides (`src/content/schemas.ts`).
 2. Content Collections reads `/content` (YAML, later MDX). `pnpm content:validate` turns every collector, schema and skip event into a failure, then runs the build guards.
@@ -53,6 +53,27 @@ The 21st.dev MCP server is not connected (no API key), so the components are bui
 5. Search index built at build time (`src/generated/search-index.json`).
 6. Data access layer (`src/lib/content`): pages will call `getSoftware(slug)`, `getLiveCategories()` and similar functions.
 7. First batch: 10 researched drafts with sources (docs/CONTENT_STATUS.md). QuickBooks and FreshBooks were left out, and Odoo is deferred.
+
+---
+
+## Phase 3: Templates (status: done, waiting for approval)
+
+Built in the `(site)` route group with a shared header and footer:
+
+| Template                                  | Route                                                                      | Notes                                                                                                       |
+| ----------------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Home                                      | `/`                                                                        | Category and software sections appear only when content is visible                                          |
+| Category hub                              | `/kategorien`                                                              | 404 while no category is live                                                                               |
+| Category page                             | `/kategorien/[slug]`                                                       | Ranking explanation (§ 5b Abs. 2 UWG), cards, compliance and price comparison table                         |
+| Software profile                          | `/software/[slug]`                                                         | Sticky sections: Überblick, Funktionen, Preise, Vor- und Nachteile, Rechtssicherheit, Alternativen, Quellen |
+| Pricing                                   | `/software/[slug]/preise`                                                  | 12 and 36 month costs, net and gross, yearly saving                                                         |
+| Alternatives                              | `/software/[slug]/alternativen`                                            | Comparison table and cards; `noindex` until editorial text exists                                           |
+| Glossary hub and term                     | `/glossar`, `/glossar/[slug]`                                              | 5 terms with law sources                                                                                    |
+| Methodology, transparency, about, contact | `/methodik`, `/transparenz`, `/ueber-uns`, `/kontakt`                      |                                                                                                             |
+| Legal                                     | `/impressum`, `/datenschutz`, `/barrierefreiheit`, `/cookie-einstellungen` | Marked placeholders and a visible draft notice until the lawyer review                                      |
+| 404, error, sitemap                       |                                                                            | German 404 with real status codes, sitemap with content dates                                               |
+
+Not built yet, because the content or tool doesn't exist: comparison pages (`/vergleich/[a]-vs-[b]`), guides, the editorial team page, the review policy and user reviews, and the tools (Finder, comparison tool, cost calculator; Phase 4). Navigation links to these only once they exist.
 
 ---
 

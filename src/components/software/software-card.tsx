@@ -72,10 +72,15 @@ export function SoftwareCard({
           {software.category} · {software.vendor}
         </p>
       </div>
-      {software.priceFromCents !== null ? (
+      {software.priceFromCents !== null || software.freePlan ? (
         <p className="text-small">
-          <span className="font-medium tabular">
-            {formatPriceFrom(software.priceFromCents, { net: software.priceNet })}
+          {software.freePlan ? (
+            <span className="block font-medium">Kostenloser Tarif verfügbar</span>
+          ) : null}
+          <span className={software.freePlan ? "tabular" : "font-medium tabular"}>
+            {software.priceFromCents !== null
+              ? formatPriceFrom(software.priceFromCents, { net: software.priceNet })
+              : null}
           </span>
           <span className="block text-muted">Preisstand {formatDate(software.priceCheckedAt)}</span>
         </p>
@@ -91,7 +96,9 @@ export function SoftwareCard({
         </ul>
       ) : null}
       <div className="relative z-10 mt-auto flex flex-wrap items-center justify-between gap-2">
-        <ArrowLink href={profile}>Zum Testbericht</ArrowLink>
+        <ArrowLink href={profile}>
+          {software.score !== null ? "Zum Testbericht" : "Zum Profil"}
+        </ArrowLink>
         {software.affiliate ? <DisclosureLabel kind="affiliate" /> : null}
       </div>
     </article>

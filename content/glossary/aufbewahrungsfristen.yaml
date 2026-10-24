@@ -1,0 +1,20 @@
+slug: aufbewahrungsfristen
+term: Aufbewahrungsfristen
+short: Wie lange Unternehmen Bücher, Belege und Geschäftsunterlagen nach § 147 AO aufbewahren müssen.
+definition: >-
+  § 147 der Abgabenordnung legt fest, welche Unterlagen geordnet aufzubewahren sind und wie lange.
+  Bücher und Aufzeichnungen, Inventare, Jahresabschlüsse, Lageberichte und die Eröffnungsbilanz sind
+  zehn Jahre aufzubewahren, Buchungsbelege acht Jahre und die übrigen genannten Unterlagen, etwa
+  empfangene Handels- und Geschäftsbriefe, sechs Jahre. Eine Buchhaltungssoftware muss diese
+  Unterlagen unveränderbar und auffindbar archivieren können. Prüfen Sie beim Anbieterwechsel, wie
+  Sie Ihre Daten exportieren und weiter vorhalten.
+status: draft
+lastReviewed: 2026-10-24
+author: null
+related:
+  - e-rechnung
+  - einnahmen-ueberschuss-rechnung
+sources:
+  - url: https://www.gesetze-im-internet.de/ao_1977/__147.html
+    title: § 147 AO, Ordnungsvorschriften für die Aufbewahrung von Unterlagen
+    accessed: 2026-10-24

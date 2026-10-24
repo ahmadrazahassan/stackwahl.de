@@ -1,4 +1,4 @@
-import { Check, ExternalLink, Minus, X } from "lucide-react";
+import { Check, CircleHelp, ExternalLink, Minus, X } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { formatDate } from "@/lib/format";
 import type { ComplianceRow, ComplianceStatus } from "./types";
@@ -8,6 +8,7 @@ const statusMeta: Record<ComplianceStatus, { label: string; icon: typeof Check; 
   nein: { label: "Nein", icon: X, tone: "text-negative" },
   teilweise: { label: "Teilweise", icon: Minus, tone: "text-ink" },
   aufpreis: { label: "Gegen Aufpreis", icon: Minus, tone: "text-ink" },
+  unbekannt: { label: "Keine Angabe", icon: CircleHelp, tone: "text-muted" },
 };
 
 /** Criterion, status, note and source (Section 13.6.8). */

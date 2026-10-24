@@ -3,33 +3,64 @@ import { cn } from "@/lib/cn";
 import { formatDate, formatEuro } from "@/lib/format";
 import type { PricePlan } from "./types";
 
-/** Plan cards with monthly and yearly price, net/gross note, date and source. */
+function PriceLine({
+  label,
+  cents,
+  perUser,
+}: {
+  label: string;
+  cents: number | null;
+  perUser: boolean;
+}) {
+  if (cents === null) {
+    return (
+      <div className="flex items-baseline justify-between gap-4 border-t border-line py-3 text-small">
+        <dt className="text-muted">{label}</dt>
+        <dd className="text-muted">nicht angeboten</dd>
+      </div>
+    );
+  }
+  return (
+    <div className="flex items-baseline justify-between gap-4 border-t border-line py-3">
+      <dt className="text-small text-muted">{label}</dt>
+      <dd className="text-right">
+        <span className="font-display text-h3 leading-none font-medium tabular">
+          {formatEuro(cents)}
+        </span>
+        <span className="ml-1 text-small text-muted">/ Monat{perUser ? " je Nutzer" : ""}</span>
+      </dd>
+    </div>
+  );
+}
+
+/** Plan cards with monthly and yearly billing, net/gross note, date, source and promo note. */
 export function PriceTable({ plans, className }: { plans: PricePlan[]; className?: string }) {
   return (
     <ul className={cn("grid gap-4 md:grid-cols-2 xl:grid-cols-3", className)}>
       {plans.map((plan) => (
         <li
           key={plan.name}
-          className="flex flex-col gap-6 rounded-card border border-line bg-surface p-6"
+          className="flex flex-col gap-5 rounded-card border border-line bg-surface p-6"
         >
           <div>
             <h3 className="text-h3">{plan.name}</h3>
-            <p className="mt-4 font-display text-h2 leading-none font-medium tabular">
-              {plan.monthlyCents === null ? "Auf Anfrage" : formatEuro(plan.monthlyCents)}
-              {plan.monthlyCents !== null ? (
-                <span className="ml-2 align-middle font-body text-small font-normal tracking-normal text-muted">
-                  / Monat{plan.perUser ? " je Nutzer" : ""}
-                </span>
-              ) : null}
-            </p>
-            <p className="mt-2 text-small text-muted">
-              {plan.net ? "zzgl. MwSt." : "inkl. MwSt."}
-              {plan.yearlyCents !== null
-                ? ` · jährlich ${formatEuro(plan.yearlyCents)}${plan.perUser ? " je Nutzer" : ""}`
-                : ""}
+            <p className="mt-1 text-small text-muted">
+              {plan.net ? "Preise zzgl. MwSt." : "Preise inkl. MwSt."}
             </p>
           </div>
-          <ul className="flex flex-col gap-2 border-t border-line pt-4 text-small">
+          <dl>
+            <PriceLine
+              label="Monatliche Zahlung"
+              cents={plan.monthlyCents}
+              perUser={plan.perUser}
+            />
+            <PriceLine
+              label="Jährliche Zahlung"
+              cents={plan.yearlyMonthlyCents}
+              perUser={plan.perUser}
+            />
+          </dl>
+          <ul className="flex flex-col gap-2 text-small">
             {plan.includes.map((item) => (
               <li key={item} className="flex gap-2">
                 <Check
@@ -41,6 +72,9 @@ export function PriceTable({ plans, className }: { plans: PricePlan[]; className
               </li>
             ))}
           </ul>
+          {plan.note ? (
+            <p className="rounded-control bg-bg p-3 text-small text-muted">{plan.note}</p>
+          ) : null}
           <p className="mt-auto text-small text-muted">
             Stand {formatDate(plan.checkedAt)} ·{" "}
             <a
