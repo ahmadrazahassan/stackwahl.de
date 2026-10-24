@@ -59,7 +59,8 @@ export function SoftwareCard({
       )}
     >
       <div className="flex min-h-12 items-start justify-between gap-4">
-        <SoftwareLogo software={software} size={40} />
+        {/* Without a logo file the name stands only in the heading below. */}
+        {software.logo ? <SoftwareLogo software={software} size={40} /> : <span />}
         <ScoreBadge value={software.score} />
       </div>
       <div>
