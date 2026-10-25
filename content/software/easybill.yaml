@@ -151,3 +151,9 @@ idealFor:
   - Onlinehändler und Dienstleister, die viele Rechnungen automatisiert erstellen
 notIdealFor:
   - Selbstständige, die auch ihre Buchhaltung und Umsatzsteuer im selben Werkzeug erledigen wollen
+logo:
+  file: /logos/easybill.svg
+  width: 210
+  height: 52
+  sourceUrl: https://www.easybill.de/presse/
+  accessed: 2026-10-25

@@ -27,6 +27,12 @@ function yamlFiles(dir: string): string[] {
     return full.endsWith(".yaml") ? [full] : [];
   });
 }
+function listFiles(dir: string): string[] {
+  return readdirSync(dir).flatMap((entry) => {
+    const full = join(dir, entry);
+    return statSync(full).isDirectory() ? listFiles(full) : [full];
+  });
+}
 for (const file of yamlFiles(join(configPath, "..", configArg > -1 ? "." : "content"))) {
   for (const f of findFlowCollections(readFileSync(file, "utf8"))) {
     problems.push(
@@ -87,7 +93,13 @@ const content: ContentSet = {
   glossary: generated.allGlossaries ?? [],
 };
 
-const issues = checkContent(content, { today: utcToday(), production });
+const publicDir = join(root, "public");
+const publicFiles = new Set(
+  listFiles(publicDir).map((f) => "/" + relative(publicDir, f).split("\\").join("/")),
+);
+const logosDoc = readFileSync(join(root, "docs", "LOGOS.md"), "utf8");
+
+const issues = checkContent(content, { today: utcToday(), production, publicFiles, logosDoc });
 const errors = issues.filter((i) => i.severity === "error");
 const warnings = issues.filter((i) => i.severity === "warning");
 

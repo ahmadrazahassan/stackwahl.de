@@ -28,8 +28,9 @@ export function SoftwareLogo({
         alt={software.logo.alt}
         width={software.logo.width}
         height={software.logo.height}
-        className={cn("h-auto object-contain", className)}
-        style={{ maxHeight: size, width: "auto" }}
+        className={cn("min-w-0 shrink object-contain object-left", className)}
+        // Same height for every logo; very wide wordmarks shrink inside a box of 4:1 at most.
+        style={{ height: size, maxWidth: `min(100%, ${size * 4}px)`, width: "auto" }}
       />
     );
   }

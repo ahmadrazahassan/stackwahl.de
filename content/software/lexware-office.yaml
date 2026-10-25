@@ -179,3 +179,9 @@ idealFor:
   - Selbstständige und kleine Unternehmen mit Mitarbeitenden, die Lohn und Buchhaltung in einem Werkzeug wollen
 notIdealFor:
   - Unternehmen, die einen klassischen DATEV-Export im eigenen Haus brauchen (vorher prüfen)
+logo:
+  file: /logos/lexware-office.svg
+  width: 100
+  height: 15
+  sourceUrl: https://www.lexware.de/presse/
+  accessed: 2026-10-25

@@ -37,7 +37,8 @@ export type Issue = {
     | "test-claim"
     | "unverified-published"
     | "missing-author"
-    | "unavailable-without-note";
+    | "unavailable-without-note"
+    | "logo-asset";
   where: string;
   message: string;
 };
@@ -47,6 +48,10 @@ export type GuardOptions = {
   today: string;
   /** Production build: stale data on published pages is an error, not a warning. */
   production: boolean;
+  /** Paths under public/ (for example "/logos/sevdesk.svg"). Omit to skip the asset check. */
+  publicFiles?: ReadonlySet<string>;
+  /** Text of docs/LOGOS.md. Every logo file must be listed there with its source. */
+  logosDoc?: string;
 };
 
 export const PRICE_MAX_AGE_DAYS = 90;
@@ -270,6 +275,25 @@ export function checkContent(content: ContentSet, options: GuardOptions): Issue[
         where: at,
         message: "Veröffentlicht ohne echte Autorin oder echten Autor.",
       });
+    }
+    if (s.logo) {
+      issues.push(...futureDate(`${at}.logo.accessed`, s.logo.accessed, today));
+      if (options.publicFiles && !options.publicFiles.has(s.logo.file)) {
+        issues.push({
+          severity: "error",
+          code: "logo-asset",
+          where: `${at}.logo`,
+          message: `Logodatei ${s.logo.file} fehlt in public/.`,
+        });
+      }
+      if (options.logosDoc !== undefined && !options.logosDoc.includes(s.logo.file)) {
+        issues.push({
+          severity: "error",
+          code: "logo-asset",
+          where: `${at}.logo`,
+          message: `Logo ${s.logo.file} ist nicht mit Quelle in docs/LOGOS.md eingetragen.`,
+        });
+      }
     }
     if (s.marketAvailability.status !== "verfuegbar" && !s.marketAvailability.note) {
       issues.push({

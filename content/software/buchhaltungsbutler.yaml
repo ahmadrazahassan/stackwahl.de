@@ -163,3 +163,9 @@ trialSource:
   url: https://www.buchhaltungsbutler.de/
   title: BuchhaltungsButler Startseite
   accessed: 2026-10-25
+logo:
+  file: /logos/buchhaltungsbutler.png
+  width: 558
+  height: 80
+  sourceUrl: https://www.buchhaltungsbutler.de/
+  accessed: 2026-10-25

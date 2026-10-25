@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ConfigValue, LegalDraftNotice } from "@/components/page/legal";
 import { PageHeader, PageSection } from "@/components/page/page-header";
+import { Prose } from "@/components/ui/typography";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/site.config";
 
@@ -67,6 +68,15 @@ export default function ImprintPage() {
           </Row>
           <Row term="Anschrift">{legal.responsibleEditor.address}</Row>
         </dl>
+      </PageSection>
+      <PageSection id="marken" label="Hinweis" title="Marken und Logos">
+        <Prose>
+          <p>
+            Produktnamen, Marken und Logos gehören ihren jeweiligen Inhabern. Wir verwenden sie nur,
+            um die besprochenen Produkte zu kennzeichnen. Eine Partnerschaft oder Empfehlung durch
+            die Inhaber ist damit nicht verbunden.
+          </p>
+        </Prose>
       </PageSection>
     </main>
   );

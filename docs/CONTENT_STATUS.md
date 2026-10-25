@@ -12,7 +12,7 @@ Updated 25.10.2026, after the second research pass in Phase 4.
 | Authors           | missing                         | Needs real people (name, role, photo, bio) from the owner               |
 | Guides            | missing                         | Phase 5                                                                 |
 | Legal pages       | missing                         | Drafted in Phase 3, lawyer review before launch                         |
-| Vendor logos      | missing                         | Official press kits only, sources in LOGOS.md                           |
+| Vendor logos      | 9 of 10                         | Sources in LOGOS.md. WISO MeinBüro: only a white logo is published.     |
 | Screenshots       | missing                         | Need real trial accounts                                                |
 
 ## Why everything is still a draft

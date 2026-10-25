@@ -185,3 +185,9 @@ idealFor:
   - Kleine Unternehmen mit Steuerberater, der über DATEV arbeitet
 notIdealFor:
   - Teams mit vielen Benutzern, weil jeder weitere Zugang extra kostet
+logo:
+  file: /logos/sevdesk.svg
+  width: 124
+  height: 36
+  sourceUrl: https://sevdesk.de/presse/
+  accessed: 2026-10-25

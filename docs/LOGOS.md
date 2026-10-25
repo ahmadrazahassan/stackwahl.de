@@ -1,10 +1,36 @@
 # Logos and brand assets
 
-Every vendor logo comes from the vendor's official press kit or website. Record the source URL, the access date and the license or usage note before the logo is committed.
+Every vendor logo comes from the vendor's official press kit or website. Record the source URL, the access date and the license or usage note before the logo is committed. `content:validate` fails when a profile's logo file is missing in `public/` or not listed in this file.
 
-| Vendor | File | Source URL | Accessed | Usage note |
-| ------ | ---- | ---------- | -------- | ---------- |
+All files are unmodified downloads (same bytes as served by the vendor). They are used only to identify the product next to our own editorial content, never as an endorsement or partner badge. Product names and logos belong to their owners (trademark note in the Impressum). None of the vendors publishes a license text for logo use; the press pages offer the files for media use. Ask the vendor's press contact before using a logo in ads or anywhere outside the profile and card context.
 
-No logos added yet.
+## Vendor logos (accessed 25.10.2026)
 
-Stackwahl's own wordmark: three options will be designed in Phase 1 (Section 13.10).
+| Vendor             | File                            | Found on (page)                    | File URL                                                                                                                            | Notes                                                                                                                                                                                                                                                                                        |
+| ------------------ | ------------------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sevdesk            | `/logos/sevdesk.svg`            | https://sevdesk.de/presse/         | https://cdn.prod.website-files.com/65c9eb8b18a74904c71e4d3c/65ddcb8c00788f194d437e5d_sevdesk_logo.svg                               | Logo shown on the press page. The page offers no downloadable press kit.                                                                                                                                                                                                                     |
+| Lexware Office     | `/logos/lexware-office.svg`     | https://www.lexware.de/presse/     | https://www.lexware.de/_assets/d2a8d400651672af0bc262c14fd1c0b7/Images/logo_lexware.svg                                             | Header logo, shown on the press page too. The press zip (https://www.lexware.de/fileadmin/pressematerial/lexware-logos.zip) has the same mark with wide built-in margins that make it unreadably small on cards. There is no separate "Lexware Office" logo, so the alt text says "Lexware". |
+| BuchhaltungsButler | `/logos/buchhaltungsbutler.png` | https://www.buchhaltungsbutler.de/ | https://www.buchhaltungsbutler.de/wp-content/uploads/bhb-logo-dark2x.png                                                            | Header logo, 558 × 80 px. The footer links a "Pressemappe" on Google Drive that requires sign-in, so the website file is used.                                                                                                                                                               |
+| FastBill           | `/logos/fastbill.svg`           | https://www.fastbill.com/presse    | https://www.fastbill.com/themes/custom/fastbill/img/FastBill-Logo-Black.svg                                                         | Logo shown on the press page (dark version for light backgrounds).                                                                                                                                                                                                                           |
+| orgaMAX            | `/logos/orgamax.png`            | https://www.orgamax.de/            | https://cdn.prod.website-files.com/6a7981e0c5fe5f5bfb985799/6acca3a9b4f6d005888cb2d4_orgamax-b-rosoftware-logo-blau-blau_1-1-30.png | Website logo with the line "Bürosoftware", 757 × 210 px. No press page found.                                                                                                                                                                                                                |
+| Papierkram         | `/logos/papierkram.png`         | https://www.papierkram.de/presse/  | https://www.papierkram.de/media/papierkram_logo_highres.png                                                                         | High-resolution logo offered on the press page, 1200 × 262 px.                                                                                                                                                                                                                               |
+| easybill           | `/logos/easybill.svg`           | https://www.easybill.de/presse/    | https://www.easybill.de/wp-content/uploads/2026/02/EasyBillLogo-1.svg                                                               | Logo shown on the press page.                                                                                                                                                                                                                                                                |
+| Billomat           | `/logos/billomat.svg`           | https://www.billomat.com/          | https://www.billomat.com/wp-content/themes/billomat/img/logo.svg                                                                    | Website header logo. No press page found.                                                                                                                                                                                                                                                    |
+| Sage Active        | `/logos/sage-active.svg`        | https://www.sage.com/de-de/        | https://www.sage.com/de-de/-/media/images/sagedotcom/master/global%20navigation/sage-logo.svg                                       | Corporate Sage logo from the site navigation; there is no separate Sage Active logo, so the alt text says "Sage".                                                                                                                                                                            |
+
+## Checks done before committing
+
+- Each SVG was searched for `<script>`, event handler attributes, `javascript:` URLs, `<foreignObject>` and external references. None found.
+- Each file was viewed on a white background to confirm it is the dark-on-light variant.
+
+## Not added
+
+| Vendor        | Reason                                                                                                                                                                              | Next step                                                        |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| WISO MeinBüro | meinbuero.de and the MeinBüro handbook only serve a white wordmark (`meinbuero_logo_schriftzug_weiss-2024`), which is invisible on white cards. Recoloring it would alter the logo. | Ask Buhl Data Service's press contact for the colored logo file. |
+
+Until then the profile shows the product name as text (no imitation of the logo).
+
+## Stackwahl
+
+Stackwahl's own wordmark: option B (three stacked bars plus "Stackwahl"), approved on 24.10.2026, in `src/components/brand/wordmark.tsx`.

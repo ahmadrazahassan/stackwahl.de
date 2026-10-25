@@ -187,3 +187,9 @@ idealFor:
   - Freiberufler und Selbstständige, die vor allem Rechnungen schreiben und Belege für die Steuerberatung sammeln
 notIdealFor:
   - Unternehmen, die die komplette Buchhaltung mit Bilanz selbst erledigen wollen
+logo:
+  file: /logos/fastbill.svg
+  width: 700
+  height: 126
+  sourceUrl: https://www.fastbill.com/presse
+  accessed: 2026-10-25

@@ -174,3 +174,9 @@ idealFor:
   - Handwerks- und Handelsbetriebe, die Aufträge, Buchhaltung und später Lager in einem System wollen
 notIdealFor:
   - Freiberufler mit wenigen Rechnungen im Monat
+logo:
+  file: /logos/orgamax.png
+  width: 757
+  height: 210
+  sourceUrl: https://www.orgamax.de/
+  accessed: 2026-10-25

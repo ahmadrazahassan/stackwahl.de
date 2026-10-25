@@ -124,7 +124,12 @@ export function toSummary(
     affiliate: Boolean(getAffiliateLink(software.slug, affiliateEnabled)),
     vendorUrl: software.website,
     logo: software.logo
-      ? { src: software.logo.file, alt: `Logo ${software.name}`, width: 160, height: 40 }
+      ? {
+          src: software.logo.file,
+          alt: `Logo ${vendor?.name ?? software.name}`,
+          width: software.logo.width,
+          height: software.logo.height,
+        }
       : undefined,
   };
 }

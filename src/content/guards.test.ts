@@ -215,6 +215,27 @@ describe("checkContent", () => {
     const s = validSoftware({ marketAvailability: { status: "eingeschraenkt", source: src() } });
     expect(codes(set({ software: [s] }))).toContain("unavailable-without-note");
   });
+
+  it("requires every logo file to exist and to be listed in LOGOS.md", () => {
+    const logo = {
+      file: "/logos/beispiel.svg",
+      width: 120,
+      height: 30,
+      sourceUrl: "https://example.com/presse",
+      accessed: "2026-10-01",
+    };
+    const content = set({ software: [validSoftware({ logo })] });
+    const check = (publicFiles: string[], logosDoc: string) =>
+      checkContent(content, {
+        today: TODAY,
+        production: true,
+        publicFiles: new Set(publicFiles),
+        logosDoc,
+      }).filter((i) => i.code === "logo-asset");
+    expect(check([logo.file], `| Beispiel | ${logo.file} |`)).toEqual([]);
+    expect(check([], `| Beispiel | ${logo.file} |`)).toHaveLength(1);
+    expect(check([logo.file], "No logos added yet.")).toHaveLength(1);
+  });
 });
 
 describe("schemas", () => {

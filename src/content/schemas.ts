@@ -182,6 +182,9 @@ export const softwareSchema = z.strictObject({
   logo: z
     .strictObject({
       file: z.string().regex(/^\/logos\/.+\.(svg|png|webp)$/),
+      /** Intrinsic size of the file, so the logo keeps its aspect ratio. */
+      width: z.number().int().positive(),
+      height: z.number().int().positive(),
       sourceUrl: httpsUrlSchema,
       accessed: isoDateSchema,
     })

@@ -136,3 +136,9 @@ idealFor:
   - Selbstständige und Unternehmen, die Rechnungen schreiben und Belege per DATEV an die Kanzlei übergeben
 notIdealFor:
   - Teams, die mehrere Nutzer zum kleinen Preis brauchen
+logo:
+  file: /logos/billomat.svg
+  width: 160
+  height: 41
+  sourceUrl: https://www.billomat.com/
+  accessed: 2026-10-25

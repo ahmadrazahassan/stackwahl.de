@@ -145,3 +145,9 @@ idealFor:
   - Freiberufler und nebenberuflich Selbstständige mit EÜR
 notIdealFor:
   - Bilanzierende Unternehmen (vorher prüfen)
+logo:
+  file: /logos/papierkram.png
+  width: 1200
+  height: 262
+  sourceUrl: https://www.papierkram.de/presse/
+  accessed: 2026-10-25

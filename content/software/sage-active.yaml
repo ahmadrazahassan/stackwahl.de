@@ -129,3 +129,9 @@ idealFor:
   - Kleine Unternehmen mit Mitarbeitenden, die Aufträge, Buchhaltung und Lohn aus einer Hand wollen
 notIdealFor:
   - Selbstständige, die nur wenige Rechnungen schreiben und einen günstigen Einstieg suchen
+logo:
+  file: /logos/sage-active.svg
+  width: 57
+  height: 32
+  sourceUrl: https://www.sage.com/de-de/
+  accessed: 2026-10-25
