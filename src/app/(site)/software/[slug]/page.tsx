@@ -24,6 +24,7 @@ import {
   toComplianceRows,
   toPricePlans,
   toSummary,
+  vendorLink,
 } from "@/lib/content";
 import { formatDate } from "@/lib/format";
 import { routes } from "@/lib/routes";
@@ -141,7 +142,7 @@ export default async function SoftwarePage({ params }: PageProps<"/software/[slu
             className="mt-10 pb-12"
             software={summary}
             summary={software.summary}
-            vendorHref={software.website}
+            vendorHref={vendorLink(software, "profil").href}
           />
         </Container>
         <ProfileTabs sections={sections} className="rounded-b-[1.25rem] sm:rounded-b-panel" />

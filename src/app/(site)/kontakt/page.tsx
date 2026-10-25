@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { ContactForm } from "@/components/forms/contact-form";
 import { ConfigValue } from "@/components/page/legal";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { Prose } from "@/components/ui/typography";
+import { contactFormAvailable } from "@/lib/forms/availability";
 import { isPlaceholder } from "@/lib/placeholders";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/site.config";
+import { sendContact } from "./actions";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -56,6 +59,11 @@ export default function ContactPage() {
           </p>
         </Prose>
       </PageSection>
+      {contactFormAvailable() ? (
+        <PageSection id="formular" label="Formular" title="Nachricht schreiben">
+          <ContactForm action={sendContact} />
+        </PageSection>
+      ) : null}
     </main>
   );
 }

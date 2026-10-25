@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { Prose } from "@/components/ui/typography";
+import { CONSENT_SERVICES } from "@/lib/consent";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
@@ -9,10 +10,6 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
   alternates: { canonical: routes.cookieSettings() },
 };
-
-// The consent module (Section 9) is driven by a list of services. While the list is empty there
-// is no banner, but this page stays so the footer link always works.
-const consentServices: Array<{ name: string; purpose: string }> = [];
 
 export default function CookieSettingsPage() {
   return (
@@ -24,7 +21,7 @@ export default function CookieSettingsPage() {
       />
       <PageSection id="stand" label="Stand" title="Was diese Website speichert">
         <Prose>
-          {consentServices.length === 0 ? (
+          {CONSENT_SERVICES.length === 0 ? (
             <p>
               Stackwahl setzt derzeit keine Cookies und lädt keine Dienste, die Ihre Einwilligung
               brauchen. Es gibt deshalb nichts einzustellen. Sobald sich das ändert, können Sie Ihre

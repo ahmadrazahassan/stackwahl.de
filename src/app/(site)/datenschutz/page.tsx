@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ConfigValue, LegalDraftNotice } from "@/components/page/legal";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { Prose } from "@/components/ui/typography";
+import { contactFormAvailable, newsletterAvailable } from "@/lib/forms/availability";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/site.config";
 
@@ -94,13 +95,44 @@ export default function PrivacyPage() {
       <PageSection id="kontakt" label="Kontakt" title="Wenn Sie uns schreiben">
         <Prose>
           <p>
-            Schreiben Sie uns per E-Mail, verarbeiten wir Ihre Adresse und den Inhalt der Nachricht,
-            um Ihre Anfrage zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO, bei
+            Schreiben Sie uns per E-Mail
+            {contactFormAvailable() ? " oder über das Kontaktformular" : ""}, verarbeiten wir Ihren
+            Namen, Ihre E-Mail-Adresse, das gewählte Thema und den Inhalt der Nachricht, um Ihre
+            Anfrage zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO, bei
             vorvertraglichen Anfragen Art. 6 Abs. 1 lit. b DSGVO. Wir löschen die Daten, sobald die
             Anfrage erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
           </p>
+          {contactFormAvailable() ? (
+            <p>
+              Zum Schutz vor Missbrauch begrenzen wir die Zahl der Nachrichten pro Absender. Dafür
+              wird Ihre IP-Adresse kurzzeitig im Arbeitsspeicher des Servers gehalten und nicht
+              gespeichert. Die Nachricht wird über unseren E-Mail-Dienstleister zugestellt:{" "}
+              <ConfigValue value={siteConfig.services.mailProvider} />
+            </p>
+          ) : null}
         </Prose>
       </PageSection>
+
+      {newsletterAvailable() ? (
+        <PageSection id="newsletter" label="Newsletter" title="Newsletter">
+          <Prose>
+            <p>
+              Für den Newsletter verarbeiten wir Ihre E-Mail-Adresse auf Grundlage Ihrer
+              Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Nach der Anmeldung erhalten Sie eine E-Mail
+              mit einem Bestätigungslink, der 48 Stunden gültig ist. Erst wenn Sie auf der
+              verlinkten Seite die Anmeldung bestätigen, erhalten Sie den Newsletter
+              (Double-Opt-in). Ohne Bestätigung wird die Adresse nicht für den Versand genutzt.
+            </p>
+            <p>
+              Zum Nachweis der Einwilligung speichern wir den Zeitpunkt der Bestätigung, die Version
+              des Einwilligungstextes und eine nicht umkehrbare Kennung der Anmeldung, aber nicht
+              Ihre E-Mail-Adresse. Sie können die Einwilligung jederzeit widerrufen, etwa über den
+              Abmeldelink in jeder Ausgabe oder per E-Mail. Versanddienstleister:{" "}
+              <ConfigValue value={siteConfig.services.mailProvider} />
+            </p>
+          </Prose>
+        </PageSection>
+      ) : null}
 
       <PageSection id="rechte" label="Ihre Rechte" title="Ihre Rechte">
         <Prose>

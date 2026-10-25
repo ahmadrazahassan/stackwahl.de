@@ -2,13 +2,16 @@ import Link from "next/link";
 import { Lattice, NestedSquares, RayBurst, StackLines } from "@/components/illustrations/line-art";
 import { FeatureTiles } from "@/components/marketing/feature-tiles";
 import { Marquee } from "@/components/marketing/marquee";
+import { NewsletterPanel } from "@/components/marketing/newsletter-panel";
 import { StepCards, type Step } from "@/components/marketing/step-cards";
 import { SoftwareCard } from "@/components/software/software-card";
 import { ArrowLink, ButtonLink } from "@/components/ui/button";
 import { Container, Panel, SplitGrid } from "@/components/ui/layout";
 import { Eyebrow, Headline, Lead } from "@/components/ui/typography";
 import { getAllSoftware, getLiveCategories, getSoftwareInCategory, toSummary } from "@/lib/content";
+import { newsletterAvailable } from "@/lib/forms/availability";
 import { routes } from "@/lib/routes";
+import { subscribeNewsletter } from "./newsletter/actions";
 
 const pillars = [
   {
@@ -184,6 +187,14 @@ export default function HomePage() {
       ) : null}
 
       <Marquee text="Klar vergleichen. Sicher entscheiden." className="py-6" />
+
+      {newsletterAvailable() ? (
+        <Panel as="section" aria-label="Newsletter">
+          <Container className="py-16 sm:py-24">
+            <NewsletterPanel action={subscribeNewsletter} />
+          </Container>
+        </Panel>
+      ) : null}
     </main>
   );
 }

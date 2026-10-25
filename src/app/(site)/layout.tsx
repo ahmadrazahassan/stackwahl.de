@@ -1,4 +1,7 @@
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { ConsentBanner } from "@/components/consent/consent-banner";
 import { buildNavigation } from "@/components/layout/navigation";
+import { CONSENT_SERVICES } from "@/lib/consent";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import searchIndex from "@/generated/search-index.json";
@@ -19,7 +22,7 @@ export default async function SiteLayout({ children }: LayoutProps<"/">) {
     description: `${getSoftwareInCategory(c.slug).length} Programme im Vergleich`,
   }));
   return (
-    <>
+    <NuqsAdapter>
       <SiteHeader
         categories={categories}
         searchEntries={searchIndex}
@@ -33,6 +36,7 @@ export default async function SiteLayout({ children }: LayoutProps<"/">) {
         cta={nav.cta}
         year={await currentYear()}
       />
-    </>
+      {CONSENT_SERVICES.length > 0 ? <ConsentBanner services={CONSENT_SERVICES} /> : null}
+    </NuqsAdapter>
   );
 }

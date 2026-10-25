@@ -1,94 +1,93 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
+import { useActionState } from "react";
 import { Button } from "@/components/ui/button";
 import { Field, Input } from "@/components/ui/form";
 import { Headline } from "@/components/ui/typography";
 import { cn } from "@/lib/cn";
+import type { FormState } from "@/lib/forms/schemas";
 import { routes } from "@/lib/routes";
 
+type Action = (state: FormState<"email">, data: FormData) => Promise<FormState<"email">>;
+
+const preview: Action = async () => ({ status: "idle" });
+
 /**
- * Newsletter sign-up UI. The double opt in flow (Section 8) is wired in Phase 4; until then
- * `onSubmit` is supplied by the caller (the styleguide shows the states only).
+ * Newsletter sign-up, step one of the double opt-in (Section 8). The server action creates a
+ * pending contact and sends the confirmation link. Without an action (styleguide) it only shows
+ * the form.
  */
 export function NewsletterPanel({
-  onSubmit,
+  action = preview,
   className,
 }: {
-  onSubmit?: (email: string) => Promise<"ok" | "error">;
+  action?: Action;
   className?: string;
 }) {
-  const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
-  const [error, setError] = useState<string>();
+  const [state, formAction, pending] = useActionState(action, { status: "idle" });
+  const error = state.fieldErrors?.email;
 
   return (
     <div className={cn("grid gap-10 lg:grid-cols-12", className)}>
-      <div className="lg:col-span-6">
+      <div className="min-w-0 lg:col-span-6">
         <Headline size="h2" tail="Einmal im Monat.">
-          Neue Tests, Preisänderungen und Fristen.
+          Neue Profile, Preisänderungen und Fristen.
         </Headline>
         <p className="mt-6 max-w-[48ch] text-body text-muted">
-          Kein Spam, keine Weitergabe Ihrer Adresse. Sie können sich jederzeit abmelden. Details in
-          der{" "}
-          <a
+          Kein Spam, keine Weitergabe Ihrer Adresse. Nach der Anmeldung bestätigen Sie per Link,
+          abmelden können Sie sich jederzeit. Details in der{" "}
+          <Link
             href={routes.privacy()}
             className="underline decoration-1 underline-offset-4 hover:text-ink"
           >
             Datenschutzerklärung
-          </a>
+          </Link>
           .
         </p>
       </div>
-      <form
-        noValidate
-        className="flex flex-col gap-4 lg:col-span-5 lg:col-start-8 lg:self-end"
-        onSubmit={async (event) => {
-          event.preventDefault();
-          const email = String(new FormData(event.currentTarget).get("email") ?? "").trim();
-          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            setError("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
-            return;
-          }
-          setError(undefined);
-          if (!onSubmit) return;
-          setStatus("sending");
-          setStatus(await onSubmit(email));
-        }}
-      >
-        {/* Honeypot: hidden from people, filled by bots. */}
-        <input
-          type="text"
-          name="firma"
-          tabIndex={-1}
-          autoComplete="off"
-          className="hidden"
-          aria-hidden="true"
-        />
-        <Field label="E-Mail-Adresse" error={error}>
-          {({ id, describedBy, invalid }) => (
-            <Input
-              id={id}
-              name="email"
-              type="email"
-              autoComplete="email"
-              inputMode="email"
-              placeholder="name@firma.de"
-              aria-describedby={describedBy}
-              aria-invalid={invalid || undefined}
-            />
-          )}
-        </Field>
-        <Button type="submit" variant="dark" disabled={status === "sending"} className="self-start">
-          {status === "sending" ? "Wird gesendet …" : "Anmelden"}
-        </Button>
-        <p role="status" className="min-h-6 text-small">
-          {status === "ok"
-            ? "Fast geschafft: Bitte bestätigen Sie Ihre Anmeldung über den Link in der E-Mail."
-            : status === "error"
-              ? "Das hat nicht geklappt. Bitte versuchen Sie es später erneut."
-              : ""}
+      {state.status === "ok" ? (
+        <p
+          role="status"
+          className="self-end rounded-card bg-primary-tint p-6 text-body lg:col-span-5 lg:col-start-8"
+        >
+          {state.message}
         </p>
-      </form>
+      ) : (
+        <form
+          action={formAction}
+          noValidate
+          className="flex min-w-0 flex-col gap-4 lg:col-span-5 lg:col-start-8 lg:self-end"
+        >
+          <div aria-hidden="true" className="hidden">
+            <label>
+              Firma
+              <input type="text" name="firma" tabIndex={-1} autoComplete="off" />
+            </label>
+          </div>
+          <Field label="E-Mail-Adresse" error={error}>
+            {({ id, describedBy, invalid }) => (
+              <Input
+                id={id}
+                name="email"
+                type="email"
+                autoComplete="email"
+                inputMode="email"
+                placeholder="name@firma.de"
+                defaultValue={state.values?.email}
+                aria-describedby={describedBy}
+                aria-invalid={invalid || undefined}
+              />
+            )}
+          </Field>
+          <Button type="submit" variant="dark" disabled={pending} className="self-start">
+            {pending ? "Wird gesendet …" : "Anmelden"}
+          </Button>
+          <p role="status" className="min-h-6 text-small font-medium text-negative">
+            {state.status === "error" && state.message ? state.message : ""}
+          </p>
+        </form>
+      )}
     </div>
   );
 }

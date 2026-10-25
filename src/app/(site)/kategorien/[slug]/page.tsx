@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { ComparisonTable, type ComparisonGroup } from "@/components/software/comparison-table";
 import { SoftwareCard } from "@/components/software/software-card";
+import type { SoftwareSummary } from "@/components/software/types";
+import { FilteredList, type FilterableSoftware } from "@/components/tools/filtered-list";
 import { Container, Panel } from "@/components/ui/layout";
 import { COMPLIANCE, COMPLIANCE_KEYS } from "@/content/features";
 import { rankSoftware } from "@/content/ranking";
@@ -66,6 +69,18 @@ export default async function CategoryPage({ params }: PageProps<"/kategorien/[s
     .map((s) => s.lastReviewed)
     .sort()
     .at(-1)!;
+  const filterable: FilterableSoftware[] = ordered.map((s, i) => ({
+    slug: s.slug,
+    summary: ranking.items[i],
+    flags: {
+      kostenlos: s.freePlan,
+      test: (s.freeTrialDays ?? 0) > 0,
+      datev: s.compliance.datevExport.status === "ja",
+      erechnung: s.compliance.eRechnungEmpfang.status === "ja",
+      elster: s.compliance.elster.status === "ja",
+      server: s.compliance.serverstandort.status === "ja",
+    },
+  }));
 
   const groups: ComparisonGroup[] = [
     {
@@ -127,13 +142,12 @@ export default async function CategoryPage({ params }: PageProps<"/kategorien/[s
               </Link>
             </p>
           </div>
-          <ul className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {ranking.items.map((s) => (
-              <li key={s.slug}>
-                <SoftwareCard software={s} />
-              </li>
-            ))}
-          </ul>
+          <div className="mt-10">
+            {/* useSearchParams needs a Suspense boundary; the fallback is the unfiltered list. */}
+            <Suspense fallback={<StaticList summaries={ranking.items} />}>
+              <FilteredList items={filterable} />
+            </Suspense>
+          </div>
         </Container>
       </Panel>
 
@@ -153,5 +167,17 @@ export default async function CategoryPage({ params }: PageProps<"/kategorien/[s
         />
       </PageSection>
     </main>
+  );
+}
+
+function StaticList({ summaries }: { summaries: SoftwareSummary[] }) {
+  return (
+    <ul className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      {summaries.map((s) => (
+        <li key={s.slug}>
+          <SoftwareCard software={s} />
+        </li>
+      ))}
+    </ul>
   );
 }

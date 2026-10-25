@@ -20,6 +20,9 @@ import {
   MIN_PROFILES_PER_CATEGORY,
   visibleSoftware,
 } from "@/content/visibility";
+import type { CalculatorProduct } from "@/lib/content/calculator-types";
+import type { Placement } from "@/lib/affiliate";
+import type { FinderProduct } from "@/lib/finder";
 import { routes } from "@/lib/routes";
 import { SCORE_CRITERIA, weightedScore } from "@/lib/scoring";
 
@@ -88,7 +91,10 @@ export function editorialScore(software: Software): number | null {
 }
 
 /** Maps a content record to the UI summary used by cards and headers. */
-export function toSummary(software: Software, affiliateEnabled = false): SoftwareSummary {
+export function toSummary(
+  software: Software,
+  affiliateEnabled = siteConfig.features.affiliateLinks,
+): SoftwareSummary {
   const vendor = getVendor(software.vendor);
   const category = getCategory(software.categories[0]);
   const cheapest = software.plans.reduce(
@@ -236,4 +242,55 @@ export function alternativesFor(software: Software): Software[] {
   return getAllSoftware().filter(
     (s) => s.slug !== software.slug && s.categories.some((c) => software.categories.includes(c)),
   );
+}
+
+// ---------------------------------------------------------------------------------------------
+// Tools (Phase 4)
+
+/** Product data for the Software-Finder. Deliberately without any affiliate information. */
+export function finderProducts(): FinderProduct[] {
+  return getAllSoftware().map((s) => ({
+    slug: s.slug,
+    name: s.name,
+    category: getCategory(s.categories[0])?.name ?? s.categories[0],
+    freePlan: s.freePlan,
+    freeTrialDays: s.freeTrialDays,
+    entryPriceCents: entryPriceCents(s),
+    features: Object.fromEntries(
+      Object.entries(s.features).map(([k, f]) => [k, f?.status ?? "unbekannt"]),
+    ) as FinderProduct["features"],
+    compliance: Object.fromEntries(
+      COMPLIANCE_KEYS.map((k) => [k, s.compliance[k].status]),
+    ) as FinderProduct["compliance"],
+  }));
+}
+
+export function calculatorProducts(): CalculatorProduct[] {
+  return getAllSoftware().map((s) => ({
+    slug: s.slug,
+    name: s.name,
+    plans: toPricePlans(s)
+      .filter((p) => (p.monthlyCents ?? 0) > 0 || (p.yearlyMonthlyCents ?? 0) > 0)
+      .map((p) => ({
+        name: p.name,
+        monthlyCents: p.monthlyCents,
+        yearlyMonthlyCents: p.yearlyMonthlyCents,
+        perUser: p.perUser,
+        net: p.net,
+        note: p.note,
+        sourceUrl: p.sourceUrl,
+        checkedAt: p.checkedAt,
+      })),
+  }));
+}
+
+/**
+ * Where "Zum Anbieter" points: the internal /go route when an active affiliate link exists and
+ * the feature is on, otherwise the vendor's website directly (no tracking, no label).
+ */
+export function vendorLink(software: Software, from: Placement, pos = 1) {
+  const link = getAffiliateLink(software.slug, siteConfig.features.affiliateLinks);
+  return link
+    ? { href: routes.affiliate(software.slug, from, pos), affiliate: true }
+    : { href: software.website, affiliate: false };
 }

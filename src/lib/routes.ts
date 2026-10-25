@@ -12,6 +12,7 @@ export const routes = {
   comparisonTool: () => "/vergleich",
   comparison: (slugs: readonly string[]) => `/vergleich/${slugs.join("-vs-")}`,
   finder: () => "/software-finder",
+  finderResults: () => "/software-finder/ergebnis",
   costCalculator: () => "/kostenrechner",
   guides: () => "/ratgeber",
   guide: (slug: string) => `/ratgeber/${slug}`,
@@ -32,6 +33,7 @@ export const routes = {
   cookieSettings: () => "/cookie-einstellungen",
   search: () => "/suche",
   styleguide: () => "/intern/styleguide",
+  affiliate: (slug: string, from: string, pos = 1) => `/go/${slug}?from=${from}&pos=${pos}`,
 } as const;
 
 const UMLAUTS: Record<string, string> = { ä: "ae", ö: "oe", ü: "ue", ß: "ss" };

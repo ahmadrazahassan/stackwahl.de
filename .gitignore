@@ -52,3 +52,6 @@ next-env.d.ts
 /src/generated/
 
 /src/content/__fixtures__/**/.content-collections/
+
+# local mail outbox (development and E2E)
+/.outbox/

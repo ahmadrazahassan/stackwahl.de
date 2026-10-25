@@ -41,3 +41,28 @@ export function yearlySaving(plan: CostPlan): number | null {
   if (plan.monthlyCents === null || plan.yearlyMonthlyCents === null) return null;
   return (plan.monthlyCents - plan.yearlyMonthlyCents) * 12;
 }
+
+export type CostInput = {
+  plan: CostPlan & { perUser: boolean };
+  billing: "monatlich" | "jährlich";
+  users: number;
+  months: number;
+};
+
+export type CostResult = {
+  perMonth: { net: number; gross: number };
+  total: { net: number; gross: number };
+};
+
+/** Total cost of a plan for a period. null when the plan is not offered with that billing. */
+export function computeCost({ plan, billing, users, months }: CostInput): CostResult | null {
+  const perMonthCents = billing === "monatlich" ? plan.monthlyCents : plan.yearlyMonthlyCents;
+  if (perMonthCents === null) return null;
+  if (!Number.isInteger(users) || users < 1) throw new Error(`Ungültige Nutzerzahl: ${users}`);
+  if (!Number.isInteger(months) || months < 1) throw new Error(`Ungültige Laufzeit: ${months}`);
+  const seats = plan.perUser ? users : 1;
+  return {
+    perMonth: netGross(perMonthCents * seats, plan.net),
+    total: netGross(perMonthCents * seats * months, plan.net),
+  };
+}

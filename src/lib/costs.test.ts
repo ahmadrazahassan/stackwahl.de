@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { rankSoftware } from "../content/ranking.ts";
-import { costOverview, netGross, yearlySaving } from "./costs.ts";
+import { computeCost, costOverview, netGross, yearlySaving } from "./costs.ts";
 
 describe("netGross", () => {
   it("adds 19 % VAT to net prices and removes it from gross prices", () => {
@@ -56,5 +56,33 @@ describe("rankSoftware", () => {
     ]);
     expect(result.basis).toBe("score");
     expect(result.items.map((s) => s.name)).toEqual(["D", "A", "B", "C"]);
+  });
+});
+
+describe("computeCost", () => {
+  const flat = { monthlyCents: 1990, yearlyMonthlyCents: 1590, net: true, perUser: false };
+  const seat = { monthlyCents: 990, yearlyMonthlyCents: null, net: true, perUser: true };
+
+  it("multiplies by users only for per-user plans", () => {
+    expect(computeCost({ plan: flat, billing: "monatlich", users: 5, months: 12 })?.total.net).toBe(
+      23880,
+    );
+    expect(computeCost({ plan: seat, billing: "monatlich", users: 3, months: 12 })?.total.net).toBe(
+      35640,
+    );
+  });
+
+  it("returns null for a billing period the vendor does not offer", () => {
+    expect(computeCost({ plan: seat, billing: "jährlich", users: 1, months: 12 })).toBeNull();
+  });
+
+  it("adds VAT for net prices", () => {
+    expect(computeCost({ plan: flat, billing: "jährlich", users: 1, months: 1 })?.perMonth).toEqual(
+      { net: 1590, gross: 1892 },
+    );
+  });
+
+  it("rejects invalid input", () => {
+    expect(() => computeCost({ plan: flat, billing: "monatlich", users: 0, months: 12 })).toThrow();
   });
 });

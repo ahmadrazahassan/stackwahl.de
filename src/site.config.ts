@@ -60,6 +60,8 @@ const siteConfigSchema = z.object({
     costCalculator: z.boolean(),
     // false shows a visible "Entwurf" notice on every legal page (Section 9).
     legalReviewed: z.boolean(),
+    // Shown only when mail is configured too (src/lib/forms/availability.ts).
+    contactForm: z.boolean(),
   }),
 });
 
@@ -104,14 +106,15 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
   },
   features: {
     indexing: false,
-    newsletter: false,
+    newsletter: true,
     userReviews: false,
     consultationRequest: false,
     affiliateLinks: false,
     analytics: false,
-    finder: false,
-    comparisonTool: false,
-    costCalculator: false,
+    finder: true,
+    comparisonTool: true,
+    costCalculator: true,
     legalReviewed: false,
+    contactForm: true,
   },
 });

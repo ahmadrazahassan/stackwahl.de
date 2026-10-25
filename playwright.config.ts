@@ -1,4 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
+import { TEST_MAIL_ENV } from "./e2e/test-env";
 
 const PORT = 3100;
 
@@ -25,6 +26,7 @@ export default defineConfig({
     command: `pnpm start --port ${PORT}`,
     url: `http://localhost:${PORT}`,
     reuseExistingServer: !process.env.CI,
+    env: { ...TEST_MAIL_ENV },
     timeout: 120_000,
   },
 });
