@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
 # Sage Active steht nicht in der Liste der Sage Cloud Services der Datenschutzerklärung;
 # Serverstandort und AVV für Sage Active vor Veröffentlichung beim Anbieter klären.
 slug: sage-active
@@ -9,7 +9,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-24
+lastReviewed: 2026-10-25
 author: null
 summary: Cloud-Lösung von Sage für Angebote, Rechnungen, Buchhaltung und Lohn, mit UStVA per ELSTER und DATEV-Export.
 website: https://www.sage.com/de-de/produkte/sage-active/
@@ -40,7 +40,12 @@ compliance:
     note: XRechnung und ZUGFeRD einlesen.
     source: *produkt
   eRechnungVersand:
-    status: unbekannt
+    status: nein
+    note: Eingehende XRechnung und ZUGFeRD werden eingelesen; der Versand von E-Rechnungen ist laut Anbieter erst „in Kürze“ möglich.
+    source:
+      url: https://www.sage.com/de-de/produkte/sage-active/
+      title: Sage Active Produktseite, FAQ
+      accessed: 2026-10-25
   datevExport:
     status: ja
     note: Buchhaltungsdaten im DATEV-Format exportieren.
@@ -52,13 +57,23 @@ compliance:
   kleinunternehmer:
     status: unbekannt
   bankanbindung:
-    status: unbekannt
+    status: ja
+    note: Bankkontenabgleich in Sage Active Essentials.
+    source:
+      url: https://www.sage.com/de-de/produkte/sage-active/essentials/
+      title: Sage Active Essentials
+      accessed: 2026-10-25
   serverstandort:
     status: unbekannt
   avv:
     status: unbekannt
   deutscherSupport:
-    status: unbekannt
+    status: ja
+    note: Supportteam, Hilfestellungen direkt im Produkt.
+    source:
+      url: https://www.sage.com/de-de/produkte/sage-active/
+      title: Sage Active Produktseite, FAQ
+      accessed: 2026-10-25
 features:
   angebote:
     status: ja
@@ -109,6 +124,7 @@ cons:
   - Serverstandort und Auftragsverarbeitung für Sage Active sind auf den geprüften Seiten nicht dokumentiert.
   - Buchhaltung erst im Tarif Essentials für 49 € im Monat.
   - Die Vertragslaufzeit steht nicht auf der Produktseite.
+  - E-Rechnungen lassen sich bisher nur empfangen, der Versand ist laut Anbieter angekündigt.
 idealFor:
   - Kleine Unternehmen mit Mitarbeitenden, die Aufträge, Buchhaltung und Lohn aus einer Hand wollen
 notIdealFor:

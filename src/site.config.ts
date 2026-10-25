@@ -87,7 +87,7 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
     phone: "{{CONTACT_PHONE}}",
     vatId: "{{VAT_ID}}",
     responsibleEditor: {
-      name: "{{RESPONSIBLE_EDITOR}}",
+      name: "Dietmar Riedel",
       address: "Neue Kräme 32, 60314 Frankfurt am Main",
     },
   },
@@ -102,7 +102,7 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
     hostingLogRetention: "{{HOSTING_LOG_RETENTION}}",
   },
   score: {
-    name: "{{SCORE_NAME}}",
+    name: "Stackwahl-Wertung",
   },
   features: {
     indexing: false,

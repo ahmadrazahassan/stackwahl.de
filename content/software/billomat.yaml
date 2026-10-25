@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
 slug: billomat
 name: Billomat
 vendor: aifinyo
@@ -6,7 +6,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-24
+lastReviewed: 2026-10-25
 author: null
 summary: Cloud-Rechnungsprogramm der aifinyo AG mit E-Rechnung, Banking und DATEV Buchungsdatenservice, ab 19 € im Monat.
 website: https://www.billomat.com
@@ -25,8 +25,8 @@ deployment:
   - cloud
 apps:
   web: true
-  ios: null
-  android: null
+  ios: true
+  android: true
 freeTrialDays: 14
 freePlan: false
 trialSource: *preise
@@ -34,7 +34,12 @@ compliance:
   gobd:
     status: unbekannt
   eRechnungEmpfang:
-    status: unbekannt
+    status: ja
+    note: Empfang und Verarbeitung von E-Rechnungen seit 01.01.2025 für alle Nutzer ohne Zusatzkosten.
+    source:
+      url: https://www.billomat.com/magazin/e-rechnung-die-zukunft-der-rechnungsstellung/
+      title: Billomat Magazin, E-Rechnung
+      accessed: 2026-10-25
   eRechnungVersand:
     status: ja
     source: *preise
@@ -50,7 +55,12 @@ compliance:
     status: ja
     source: *preise
   serverstandort:
-    status: unbekannt
+    status: ja
+    note: Laut englischsprachiger Banking-Seite stehen die Server in Deutschland.
+    source:
+      url: https://www.billomat.com/en/banking/
+      title: Billomat Banking
+      accessed: 2026-10-25
   avv:
     status: ja
     note: Vertrag zur Auftragsverarbeitung, digital signierbar über die Datenschutzbestimmungen.
@@ -71,6 +81,13 @@ features:
   steuerberaterzugang:
     status: ja
     source: *preise
+  mobileApp:
+    status: ja
+    note: Rechnungen per App erstellen und verschicken, im App Store und bei Google Play.
+    source:
+      url: https://www.billomat.com/funktionen/
+      title: Billomat Funktionen
+      accessed: 2026-10-25
 plans:
   - name: Professional
     monthlyCents: 2900
@@ -114,7 +131,7 @@ pros:
 cons:
   - Im Tarif Professional ist nur ein Nutzer möglich.
   - Die API gibt es erst ab Tarif Business für 29 € im Monat.
-  - Serverstandort und E-Rechnung-Empfang sind auf der Preisseite nicht genannt.
+  - Jeder weitere Nutzer kostet in den Tarifen Business und Enterprise 10 € im Monat.
 idealFor:
   - Selbstständige und Unternehmen, die Rechnungen schreiben und Belege per DATEV an die Kanzlei übergeben
 notIdealFor:

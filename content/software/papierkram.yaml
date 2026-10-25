@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
 slug: papierkram
 name: Papierkram
 vendor: odacer
@@ -7,7 +7,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-24
+lastReviewed: 2026-10-25
 author: null
 summary: Online-Buchhaltung mit kostenlosem Einstieg, E-Rechnung in allen Paketen, EÜR, UStVA und Kleinunternehmerregelung.
 website: https://www.papierkram.de
@@ -44,10 +44,19 @@ compliance:
     note: XRechnung und ZUGFeRD in allen Versionen.
     source: *preise
   datevExport:
-    status: unbekannt
+    status: ja
+    note: DATEV-Export aller gebuchten Rechnungen und Belege eines frei wählbaren Zeitraums.
+    source:
+      url: https://www.papierkram.de/funktionen/berichte-und-integrationen/
+      title: Papierkram Berichte und Integrationen
+      accessed: 2026-10-25
   elster:
-    status: unbekannt
-    note: "Die Preisseite nennt UStVA monatlich, vierteljährlich und jährlich, aber keine ELSTER-Übermittlung."
+    status: teilweise
+    note: Die UStVA wird als XML erstellt und im ELSTER-Portal selbst hochgeladen, keine direkte Übermittlung.
+    source:
+      url: https://www.papierkram.de/funktionen/berichte-und-integrationen/
+      title: Papierkram Berichte und Integrationen
+      accessed: 2026-10-25
   kleinunternehmer:
     status: ja
     note: Kleinunternehmerregelung aktivierbar.
@@ -64,9 +73,19 @@ compliance:
       title: Papierkram Sicherheit
       accessed: 2026-10-24
   avv:
-    status: unbekannt
+    status: ja
+    note: Die Auftragsverarbeitung lässt sich in den Einstellungen akzeptieren, speichern und einsehen.
+    source:
+      url: https://www.papierkram.de/hilfe/einstellungen/
+      title: Papierkram Hilfe, Einstellungen
+      accessed: 2026-10-25
   deutscherSupport:
-    status: unbekannt
+    status: ja
+    note: Support nur per Formular unter mein.papierkram.de, kein Telefon-Support.
+    source:
+      url: https://www.papierkram.de/impressum/
+      title: Papierkram Impressum
+      accessed: 2026-10-25
 features:
   rechnungen:
     status: ja
@@ -120,8 +139,8 @@ pros:
   - Hosting, Datensicherung und Support sind im Preis enthalten.
 cons:
   - Das Paket Free ist auf 15 Belege im Monat begrenzt.
-  - Eine ELSTER-Übermittlung und ein DATEV-Export werden auf der Preisseite nicht ausdrücklich genannt.
   - Zusätzliche Nutzer kosten 2,90 € im Monat, bei Jahreszahlung 2,32 €.
+  - Die UStVA muss als XML-Datei selbst im ELSTER-Portal hochgeladen werden.
 idealFor:
   - Freiberufler und nebenberuflich Selbstständige mit EÜR
 notIdealFor:

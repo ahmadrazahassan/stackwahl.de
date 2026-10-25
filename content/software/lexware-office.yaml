@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
 # Früherer Name: lexoffice (seit 2024 Lexware Office).
 slug: lexware-office
 name: Lexware Office
@@ -8,7 +8,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-24
+lastReviewed: 2026-10-25
 author: null
 summary: Cloud-Software von Lexware (früher lexoffice) für Belege, E-Rechnungen, Buchhaltung und optionale Lohnabrechnung in vier Versionen.
 website: https://www.lexware.de
@@ -70,9 +70,19 @@ compliance:
     note: Mehrere nach DIN ISO 27001 geprüfte Rechenzentren am Standort Frankfurt am Main.
     source: *sicherheit
   avv:
-    status: unbekannt
+    status: ja
+    note: Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO auf der Website zum Download.
+    source:
+      url: https://help.lexware.de/de-form/articles/548171-dsgvo-vertrag-zur-auftragsverarbeitung
+      title: Lexware Office Hilfe, Vertrag zur Auftragsverarbeitung
+      accessed: 2026-10-25
   deutscherSupport:
-    status: unbekannt
+    status: ja
+    note: Support ist im Preis enthalten, das Service-Team ist über das Fragezeichen-Symbol in Lexware Office erreichbar.
+    source:
+      url: https://www.lexware.de/preise/
+      title: Lexware Office Preise, FAQ
+      accessed: 2026-10-25
 features:
   angebote:
     status: ja

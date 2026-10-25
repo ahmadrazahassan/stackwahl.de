@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
 slug: fastbill
 name: FastBill
 vendor: fastbill
@@ -7,7 +7,7 @@ categories:
   - buchhaltungssoftware
 status: draft
 verification: unverified
-lastReviewed: 2026-10-24
+lastReviewed: 2026-10-25
 author: null
 summary: Rechnungsprogramm mit Belegverwaltung, E-Rechnung in allen Tarifen, DATEV-Export und Banking ab 9 € im Monat.
 website: https://www.fastbill.com
@@ -49,8 +49,12 @@ compliance:
     note: DATEV-Export in allen Tarifen, DATEV Rechnungsdatenservice 1.0 ab Pro.
     source: *preise
   elster:
-    status: unbekannt
-    note: Die Preisseite nennt eine Umsatzsteuervoranmeldung, aber keine ELSTER-Übermittlung.
+    status: ja
+    note: UStVA-Übertragung ohne gesondertes ELSTER-Zertifikat, ohne weitere Kosten.
+    source:
+      url: https://support.fastbill.com/hc/de/articles/360012662874-Umsatzsteuer-Voranmeldung-USt-VA
+      title: FastBill Hilfe, Umsatzsteuer-Voranmeldung
+      accessed: 2026-10-25
   kleinunternehmer:
     status: ja
     note: Kleinunternehmerregelung einstellbar.
@@ -67,9 +71,19 @@ compliance:
       title: FastBill Hilfe, Ort der Datenspeicherung
       accessed: 2026-10-24
   avv:
-    status: unbekannt
+    status: ja
+    note: AVV nach Art. 28 DSGVO wird im Account per Pop-up oder unter den Stammdaten abgeschlossen.
+    source:
+      url: https://support.fastbill.com/hc/de/articles/360004441953-Vereinbarung-zur-Auftragsverarbeitung-AVV
+      title: FastBill Hilfe, Vereinbarung zur Auftragsverarbeitung
+      accessed: 2026-10-25
   deutscherSupport:
-    status: unbekannt
+    status: ja
+    note: E-Mail-Support und Hilfe-Center mit Videos, Premium-Support mit Telefontermin im Tarif Premium.
+    source:
+      url: https://www.fastbill.com/preise
+      title: FastBill Preise
+      accessed: 2026-10-25
 features:
   angebote:
     status: ja
@@ -168,7 +182,7 @@ pros:
 cons:
   - Mehrere Benutzer erst ab Tarif Pro für 27 € im Monat.
   - Automatischer Bankabgleich und automatische Belegerfassung nur im Tarif Premium.
-  - Eine ELSTER-Übermittlung der Umsatzsteuer-Voranmeldung nennt die Preisseite nicht.
+  - Im Tarif Solo ist nur ein Bankkonto angebunden, im Tarif Plus fünf.
 idealFor:
   - Freiberufler und Selbstständige, die vor allem Rechnungen schreiben und Belege für die Steuerberatung sammeln
 notIdealFor:

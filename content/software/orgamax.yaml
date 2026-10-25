@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
 # Offen: Die Vergleichstabelle derselben Seite nennt abweichend 39,00 / 49,00 / 69,00 €.
 # Die Preise unten stammen aus den Preiskarten (data-price-monthly und data-price-yearly).
 slug: orgamax
@@ -9,7 +9,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-24
+lastReviewed: 2026-10-25
 author: null
 summary: Bürosoftware aus Detmold für Aufträge, E-Rechnungen, Buchhaltung und Warenwirtschaft, mit Serverstandort Deutschland.
 website: https://www.orgamax.de
@@ -55,7 +55,12 @@ compliance:
     note: Umsatzsteuer-Voranmeldung in allen Plänen.
     source: *preise
   kleinunternehmer:
-    status: unbekannt
+    status: ja
+    note: Die Kleinunternehmerregelung lässt sich in den Steuereinstellungen aktivieren.
+    source:
+      url: https://info.orgamax.de/faq-orgamax-buchhaltung/die-steuereinstellungen
+      title: orgaMAX FAQ, Steuereinstellungen
+      accessed: 2026-10-25
   bankanbindung:
     status: ja
     note: Zahlungen per Banking abgleichen.
@@ -65,7 +70,12 @@ compliance:
     note: Serverstandort Deutschland in allen Plänen.
     source: *preise
   avv:
-    status: unbekannt
+    status: ja
+    note: Der AV-Vertrag lässt sich in den Einstellungen der App anfordern.
+    source:
+      url: https://info.orgamax.de/faq-orgamax-buchhaltung/einstellungen-der-orgamax-buchhaltung-app
+      title: orgaMAX FAQ, Einstellungen der Buchhaltung-App
+      accessed: 2026-10-25
   deutscherSupport:
     status: ja
     note: Persönlicher Support per Telefon, Mail und Fernwartung in jedem Plan.

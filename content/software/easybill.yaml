@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
 slug: easybill
 name: easybill
 vendor: easybill
@@ -6,7 +6,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-24
+lastReviewed: 2026-10-25
 author: null
 summary: Rechnungsprogramm mit dauerhaft kostenlosem Einstieg, E-Rechnung, DATEV-Anbindung und Automatisierung für Onlinehändler.
 website: https://www.easybill.de
@@ -31,9 +31,19 @@ freeTrialDays: null
 freePlan: true
 compliance:
   gobd:
-    status: unbekannt
+    status: ja
+    note: Laut Anbieter stellt die Software die GoBD-Konformität automatisch sicher.
+    source:
+      url: https://www.easybill.de/en/free-invoicing-software/
+      title: easybill Free invoicing software
+      accessed: 2026-10-25
   eRechnungEmpfang:
-    status: unbekannt
+    status: ja
+    note: E-Rechnungen empfangen, prüfen und archivieren, auch im Free-Tarif.
+    source:
+      url: https://www.easybill.de/ratgeber/e-rechnung-empfangen/
+      title: easybill Ratgeber, E-Rechnung empfangen
+      accessed: 2026-10-25
   eRechnungVersand:
     status: ja
     note: E-Rechnungen in allen Paketen inklusive.
@@ -56,9 +66,19 @@ compliance:
       title: easybill Invoice
       accessed: 2026-10-24
   avv:
-    status: unbekannt
+    status: ja
+    note: Der Vertrag nach Art. 28 DSGVO wird im Account unter DSGVO Auftragsverarbeitung bereitgestellt.
+    source:
+      url: https://support.easybill.de/hc/de/articles/360001287249-Vertragsdokument-Auftrag-gem%C3%A4%C3%9F-Art-28-DSGVO-Vereinbarung
+      title: easybill Helpcenter, Vertragsdokument Art. 28 DSGVO
+      accessed: 2026-10-25
   deutscherSupport:
-    status: unbekannt
+    status: ja
+    note: Die Preisseite nennt kostenlosen und persönlichen Support sowie Support für Steuerberater.
+    source:
+      url: https://www.easybill.de/preise/
+      title: easybill Preise
+      accessed: 2026-10-25
 features:
   angebote:
     status: ja

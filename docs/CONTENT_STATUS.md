@@ -1,6 +1,6 @@
 # Content status
 
-Updated 24.10.2026, end of Phase 2.
+Updated 25.10.2026, after the second research pass in Phase 4.
 
 ## Overview
 
@@ -19,22 +19,24 @@ Updated 24.10.2026, end of Phase 2.
 
 1. **No author.** Production pages need a real named author (Section 3.7 and the `missing-author` guard). The owner has not named one yet.
 2. **No hands-on test.** No product has been tested in a real account, so no product has an editorial score (`rating: null`, shown as "Noch nicht bewertet"). The text says "recherchiert", never "getestet". The `test-claim` guard enforces this.
-3. **Editorial sign-off.** Every fact below was read on the vendor's own page on 24.10.2026, and its source is stored in the content file. A named editor should re-check the facts and set `verification: verified`.
+3. **Editorial sign-off.** Every fact was read on the vendor's own page on 24.10.2026 or 25.10.2026, and its source is stored in the content file. A named editor should re-check the facts and set `verification: verified`.
 
-## First batch (accessed 24.10.2026)
+## First batch (accessed 24.10.2026, completed 25.10.2026)
 
-| Software           | Categories              | Prices                         | Open items before publishing                                                                                                                      |
-| ------------------ | ----------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| sevdesk            | Buchhaltung, Rechnungen | List prices; promo noted       | A second price block on the same page shows different 24-month values (12,90 / 25,90 / 34,90 € struck through). GoBD statement, Kleinunternehmer. |
-| Lexware Office     | Buchhaltung, Rechnungen | Monthly only on the page       | Users per version, explicit DATEV export, AVV, support. Vendor city.                                                                              |
-| BuchhaltungsButler | Buchhaltung             | Monthly and yearly term        | UStVA via ELSTER not stated on the pricing page. Trial (only a discount and a money-back guarantee).                                              |
-| FastBill           | Rechnungen, Buchhaltung | Monthly and yearly             | ELSTER transmission, AVV, app platforms.                                                                                                          |
-| orgaMAX            | Buchhaltung, Rechnungen | From the price cards           | The comparison table on the same page shows 39,00 / 49,00 / 69,00 €. Browser or installed app? Bilanz.                                            |
-| WISO MeinBüro      | Buchhaltung, Rechnungen | Yearly subscription only       | GoBD statement, trial length, AVV, app platforms.                                                                                                 |
-| Sage Active        | Buchhaltung, Rechnungen | Monthly price, term not stated | Not listed among "Sage Cloud Services" in the Sage privacy notice; ask Sage for server location and AVV. E-invoice sending.                       |
-| Papierkram         | Buchhaltung, Rechnungen | Monthly and yearly             | DATEV export, ELSTER transmission, AVV.                                                                                                           |
-| easybill           | Rechnungen              | Monthly and yearly             | GoBD, e-invoice receiving, AVV, Kleinunternehmer.                                                                                                 |
-| Billomat           | Rechnungen              | "ab" prices                    | Server location (only a 2018 article found), e-invoice receiving, GoBD.                                                                           |
+On 25.10.2026, 30 of 55 open facts and two trial periods were filled from vendor pages (AVV, ELSTER, DATEV, Kleinunternehmer, support, trial, apps, e-invoices, server location). The rest stay `unbekannt` until a vendor page or a test account shows them. "Unbekannt" is shown as "Keine Angabe", never as "Nein".
+
+| Software           | Still `unbekannt`                                     | Other open items before publishing                                                                                                                 |
+| ------------------ | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sevdesk            | GoBD (only GoBD-compliant quotes are mentioned)       | A second price block on the pricing page shows different 24-month values (12,90 / 25,90 / 34,90 € struck through).                                 |
+| Lexware Office     | Kleinunternehmer                                      | Users per version, vendor city.                                                                                                                    |
+| BuchhaltungsButler | Kleinunternehmer                                      | The home page says "ab 24,95 €", the pricing page starts lower. Check which price applies before publishing.                                       |
+| FastBill           | App platforms                                         | None.                                                                                                                                              |
+| orgaMAX            | Web, iOS and Android apps                             | The comparison table on the pricing page shows 39,00 / 49,00 / 69,00 €. Browser or installed app? Bilanz.                                          |
+| WISO MeinBüro      | GoBD (only marketing wording, no vendor statement)    | None.                                                                                                                                              |
+| Sage Active        | Kleinunternehmer, server location, AVV, app platforms | Not listed among "Sage Cloud Services" in the Sage privacy notice. Ask Sage for server location and AVV. E-invoice sending is announced, not live. |
+| Papierkram         | App platforms                                         | None.                                                                                                                                              |
+| easybill           | ELSTER, Kleinunternehmer, bank connection, apps       | None.                                                                                                                                              |
+| Billomat           | GoBD, ELSTER, Kleinunternehmer, German support        | Server location is stated only on the English banking page. Confirm it on a German page.                                                           |
 
 ## Researched and left out of batch 1
 

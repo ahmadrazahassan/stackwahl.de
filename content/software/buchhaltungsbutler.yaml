@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
 slug: buchhaltungsbutler
 name: BuchhaltungsButler
 vendor: buchhaltungsbutler
@@ -6,7 +6,7 @@ categories:
   - buchhaltungssoftware
 status: draft
 verification: unverified
-lastReviewed: 2026-10-24
+lastReviewed: 2026-10-25
 author: null
 summary: Cloud-Buchhaltung für EÜR und Bilanz mit KI-Belegerkennung, Bankanbindung und Steuerberater-Zugang in allen Paketen.
 website: https://www.buchhaltungsbutler.de
@@ -27,7 +27,7 @@ apps:
   web: true
   ios: true
   android: true
-freeTrialDays: null
+freeTrialDays: 14
 freePlan: false
 compliance:
   gobd:
@@ -66,7 +66,12 @@ compliance:
     note: Die AVV wird mit der Registrierung für einen Testaccount Vertragsbestandteil.
     source: *datenschutz
   deutscherSupport:
-    status: unbekannt
+    status: ja
+    note: Support per Ticket über das Hilfe-Center, dazu Webinare und Sprechstunden.
+    source:
+      url: https://www.buchhaltungsbutler.de/kontaktmoeglichkeit/
+      title: BuchhaltungsButler Kontaktmöglichkeiten
+      accessed: 2026-10-25
 features:
   rechnungen:
     status: ja
@@ -144,12 +149,17 @@ pros:
   - In jedem Paket ist ein Zugang für die Steuerberatung enthalten.
   - Mehr als 5.000 Banken über drei Schnittstellenpartner anbindbar.
   - Hosting laut Datenschutzbestimmungen ausschließlich in Rechenzentren in Deutschland.
+  - 14 Tage kostenlos und unverbindlich testen, mit Sprechstunde für Testnutzer.
 cons:
   - Mit 39,90 € im Monat bei monatlicher Laufzeit teurer als reine Einsteigerprogramme.
-  - Die Preisseite nennt keine kostenlose Testphase, sondern einen Rabatt und eine Geld-zurück-Garantie.
   - Pro Monat stehen im Rahmen der Fair-Use-Regel 500 Belege zur Verfügung.
+  - Nur das Paket Premium enthält mehr als einen Nutzer (5 Nutzerzugänge).
 idealFor:
   - Kleine und mittlere Unternehmen, die selbst buchen oder mit der Steuerberatung arbeitsteilig buchen
   - Bilanzierende Unternehmen und Online-Händler
 notIdealFor:
   - Freiberufler mit wenigen Belegen, die nur Rechnungen schreiben wollen
+trialSource:
+  url: https://www.buchhaltungsbutler.de/
+  title: BuchhaltungsButler Startseite
+  accessed: 2026-10-25

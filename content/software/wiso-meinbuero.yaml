@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
 # Die Preisseite gilt für die Web-Version; WISO MeinBüro Desktop ist ein eigenes Produkt.
 slug: wiso-meinbuero
 name: WISO MeinBüro
@@ -8,7 +8,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-24
+lastReviewed: 2026-10-25
 author: null
 summary: Web-Bürosoftware von Buhl mit E-Rechnung, UStVA per ELSTER und DATEV-Schnittstelle schon im kleinsten Plan, nur im Jahresabo.
 website: https://www.meinbuero.de
@@ -29,9 +29,9 @@ deployment:
   - cloud
 apps:
   web: true
-  ios: null
-  android: null
-freeTrialDays: null
+  ios: true
+  android: true
+freeTrialDays: 14
 freePlan: false
 compliance:
   gobd:
@@ -52,7 +52,12 @@ compliance:
     note: UStVA über die ELSTER-Schnittstelle direkt ans Finanzamt.
     source: *preise
   kleinunternehmer:
-    status: unbekannt
+    status: ja
+    note: Die Kleinunternehmerregelung nach § 19 UStG wird automatisch berücksichtigt.
+    source:
+      url: https://www.meinbuero.de/funktionen-fuer-kleinunternehmer/
+      title: WISO MeinBüro für Kleinunternehmer
+      accessed: 2026-10-25
   bankanbindung:
     status: ja
     note: "Online-Banking, laut Anbieter BaFin-lizenziert."
@@ -65,7 +70,12 @@ compliance:
       title: WISO MeinBüro Datensicherheit
       accessed: 2026-10-24
   avv:
-    status: unbekannt
+    status: ja
+    note: AVV nach Art. 28 DSGVO zum Download und im buhl:Konto.
+    source:
+      url: https://handbuch.meinbuero.de/mb/dsgvo-avv
+      title: WISO MeinBüro Handbuch, DSGVO-AVV
+      accessed: 2026-10-25
   deutscherSupport:
     status: ja
     note: Schriftlicher und telefonischer Support.
@@ -94,6 +104,13 @@ features:
   steuerberaterzugang:
     status: ja
     source: *preise
+  mobileApp:
+    status: ja
+    note: Mobile Scan-App für iOS und Android.
+    source:
+      url: https://www.meinbuero.de/
+      title: WISO MeinBüro Startseite
+      accessed: 2026-10-25
 plans:
   - name: Rechnungen & Angebote
     monthlyCents: null
@@ -154,3 +171,7 @@ idealFor:
   - Kleinunternehmer und Gründer mit überschaubarem Umsatz, die Rechnungen und UStVA in einem Werkzeug wollen
 notIdealFor:
   - Unternehmen, die monatlich kündbare Verträge bevorzugen
+trialSource:
+  url: https://www.meinbuero.de/
+  title: WISO MeinBüro Startseite, FAQ
+  accessed: 2026-10-25

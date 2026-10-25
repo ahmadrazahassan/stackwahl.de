@@ -168,3 +168,12 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 - **Alternatives pages are `noindex`.** They are generated from data without editorial text, so they stay out of the index (Section 11, no thin programmatic pages) until the editors write a comparison.
 - **Legal placeholders.** The legal pages read from `site.config.ts` and show missing values as "Angabe fehlt: NAME". Unverified hosting facts (Vercel DPA, log retention) are placeholders too, not claims. A visible notice says that the lawyer review is still pending (`features.legalReviewed`).
 - **Mobile overflow.** Grid children get `min-w-0`, and headings use `hyphens: auto` so that long German compounds wrap.
+
+## 25.10.2026: Real data pass
+
+- **Facts.** 30 of 55 open facts and two trial periods in the ten profiles were filled from the vendors' own pages, each with a source and access date. Facts that no vendor page states stay `unbekannt` ("Keine Angabe"). Cons that the new facts made wrong were replaced (FastBill ELSTER, Papierkram ELSTER and DATEV, Billomat server location and e-invoice receiving, BuchhaltungsButler trial). Each new con repeats a sourced plan or vendor fact.
+- **Access dates use UTC.** The content guard compares dates with today's date in UTC, so research done in the first hours of 26.10. local time is stored as 25.10.2026.
+- **Responsible editor and score name.** The responsible editor under § 18 Abs. 2 MStV defaults to Dietmar Riedel, as the build prompt states. The score name is the proposed "Stackwahl-Wertung". The owner can change either in `site.config.ts`.
+- **Vercel region.** `vercel.json` pins functions to `fra1`, so the hosting statement in `site.config.ts` ("Region Frankfurt (fra1)") is true for the deployment and not just a plan.
+- **Log retention stays open.** Vercel's retention depends on the plan (Hobby 1 hour, Pro 1 day) and covers runtime logs only. The privacy text needs the owner's plan and a check of Vercel's DPA, so `{{HOSTING_LOG_RETENTION}}` stays a visible placeholder.
+- **The styleguide keeps fictitious data.** Section 5.6 asks for labeled fictitious demo data on `/intern/styleguide`. Real brands there would need sample scores and "Affiliate-Link" labels, which would be false statements about real vendors. All public pages read real content only.
