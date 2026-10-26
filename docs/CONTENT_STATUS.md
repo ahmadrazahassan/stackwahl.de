@@ -10,7 +10,7 @@ Updated 26.10.2026, all 20 profiles with long reviews.
 | Vendors           | 17 records from Impressum pages | Lexware seat (Freiburg) confirmed via the Haufe X360 Impressum of the same company.                                                                        |
 | Categories        | 3 drafts                        | Buchhaltungssoftware (13), Rechnungsprogramme (12), ERP-Software (6)                                                                                       |
 | Authors           | missing                         | Needs real people (name, role, photo, bio) from the owner                                                                                                  |
-| Guides            | missing                         | Phase 5                                                                                                                                                    |
+| Guides            | 10 drafts, researched           | Ratgeber articles on user pain points (E-Rechnung, UStVA, costs, Sage, alternatives, DATEV, ERP). No author yet.                                           |
 | Legal pages       | missing                         | Drafted in Phase 3, lawyer review before launch                                                                                                            |
 | Vendor logos      | 16 vendors                      | Sources in LOGOS.md. Sage logo also on Sage 50, Sage 50 Handwerk and Sage 100. Collmex only as a small PNG. WISO MeinBüro: only a white logo is published. |
 | Screenshots       | missing                         | Need real trial accounts                                                                                                                                   |

@@ -1,0 +1,129 @@
+slug: e-rechnungspflicht-software
+title: "E-Rechnungspflicht 2025 bis 2028: Was Ihr Unternehmen jetzt braucht"
+description: Seit 2025 müssen Unternehmen E-Rechnungen empfangen können, der Versand folgt bis 2028. Fristen, Formate und passende Software im Überblick.
+centralQuestion: Welche Pflichten gelten für meine Rechnungen bis 2028, und welche Software erfüllt sie heute schon?
+topic: E-Rechnung
+tags:
+  - E-Rechnung
+  - Recht
+  - Rechnungen
+status: draft
+published: 2026-10-26
+updated: 2026-10-26
+author: null
+thumbnail:
+  tone: primary
+  kicker: Pflicht seit 2025
+  headline: E-Rechnung ohne Stress
+  art: lattice
+sources:
+  - &ustg14
+    url: https://www.gesetze-im-internet.de/ustg_1980/__14.html
+    title: § 14 UStG, Ausstellung von Rechnungen
+    accessed: 2026-10-24
+  - &ustg27
+    url: https://www.gesetze-im-internet.de/ustg_1980/__27.html
+    title: § 27 UStG, Übergangsvorschriften (Absatz 38)
+    accessed: 2026-10-26
+  - &ustdv33
+    url: https://www.gesetze-im-internet.de/ustdv_1980/__33.html
+    title: § 33 UStDV, Rechnungen über Kleinbeträge
+    accessed: 2026-10-26
+  - &ustdv34a
+    url: https://www.gesetze-im-internet.de/ustdv_1980/__34a.html
+    title: § 34a UStDV, Rechnungen für Kleinunternehmer
+    accessed: 2026-10-26
+  - &sevdesk
+    url: https://sevdesk.de/preise/
+    title: sevdesk Preise
+    accessed: 2026-10-24
+  - &lexware
+    url: https://www.lexware.de/preise/
+    title: Lexware Office Preise und Versionsvergleich
+    accessed: 2026-10-26
+  - &collmex
+    url: https://www.collmex.de/buchhaltungssoftware.html
+    title: Collmex Komplettpakete, Funktionen
+    accessed: 2026-10-25
+  - &fastbill
+    url: https://www.fastbill.com/preise
+    title: FastBill Preise und Funktionsvergleich
+    accessed: 2026-10-26
+  - &sageactive
+    url: https://www.sage.com/de-de/produkte/sage-active/
+    title: Sage Active Produktseite, Pakete und FAQ
+    accessed: 2026-10-26
+  - &xentral
+    url: https://xentral.com/de/erp/buchhaltung
+    title: Xentral ERP Buchhaltung
+    accessed: 2026-10-25
+intro: Die E-Rechnung ist keine Zukunftsmusik mehr. Seit dem 1. Januar 2025 müssen Unternehmen in Deutschland elektronische Rechnungen empfangen können, und bis Ende 2027 laufen die letzten Übergangsfristen für den Versand aus. Viele Betriebe fragen sich, ob ihr Rechnungsprogramm schon bereit ist, ob ein PDF noch reicht und welche Ausnahmen gelten. Dieser Artikel fasst die Regeln aus dem Umsatzsteuergesetz zusammen und zeigt, welche Programme Versand und Empfang heute schon beherrschen.
+sections:
+  - id: was-ist-eine-e-rechnung
+    title: Was als E-Rechnung zählt und was nicht
+    paragraphs:
+      - "§ 14 UStG definiert die elektronische Rechnung als Rechnung, die in einem strukturierten elektronischen Format ausgestellt, übermittelt und empfangen wird und eine elektronische Verarbeitung ermöglicht. Das Format muss der europäischen Norm EN 16931 entsprechen. In Deutschland verbreitet sind die XRechnung, eine reine XML-Datei, und ZUGFeRD, ein PDF mit eingebetteten XML-Daten."
+      - Eine einfache PDF-Datei ist damit keine E-Rechnung mehr, sondern eine sonstige Rechnung, ebenso wie eine Rechnung auf Papier. Der Unterschied ist für den Alltag wichtig, denn eine E-Rechnung lässt sich ohne Abtippen in die Buchhaltung übernehmen, und genau darauf zielt die Pflicht.
+    sources:
+      - *ustg14
+  - id: fristen
+    title: Die Fristen von 2025 bis 2028
+    paragraphs:
+      - Den Empfang müssen alle Unternehmen seit 2025 sicherstellen. Für den Versand gibt es Übergangsregeln in § 27 Absatz 38 UStG. Für Umsätze in den Jahren 2025 und 2026 dürfen Rechnungen bis zum 31. Dezember 2026 noch auf Papier oder, mit Zustimmung des Empfängers, in einem anderen elektronischen Format wie PDF übermittelt werden.
+      - Für Umsätze im Jahr 2027 gilt diese Erleichterung nur noch für Unternehmen, deren Gesamtumsatz im Vorjahr nicht mehr als 800.000 € betragen hat. Ebenfalls bis Ende 2027 dürfen Rechnungen über das EDI-Verfahren ausgetauscht werden. Ab 2028 gilt die Pflicht zur E-Rechnung im B2B-Geschäft damit grundsätzlich für alle.
+    points:
+      - Seit 1. Januar 2025 E-Rechnungen empfangen können, für alle Unternehmen.
+      - Bis 31. Dezember 2026 dürfen Rechnungen für Umsätze aus 2025 und 2026 noch auf Papier oder als PDF gehen.
+      - Für Umsätze aus 2027 gilt das nur bei höchstens 800.000 € Vorjahresumsatz, EDI ebenfalls bis Ende 2027.
+      - Ab 2028 E-Rechnung im B2B-Geschäft für alle, mit den Ausnahmen unten.
+    sources:
+      - *ustg27
+  - id: ausnahmen
+    title: Ausnahmen für Kleinbeträge und Kleinunternehmer
+    paragraphs:
+      - Zwei Ausnahmen entlasten kleine Fälle. Rechnungen, deren Gesamtbetrag 250 € nicht übersteigt, dürfen nach § 33 UStDV immer als sonstige Rechnung übermittelt werden, also auf Papier oder als einfaches PDF. Das betrifft etwa Tankquittungen oder kleine Einkäufe.
+      - Kleinunternehmer nach § 19 UStG dürfen ihre Rechnungen nach § 34a UStDV ebenfalls immer als sonstige Rechnung übermitteln. Empfangen können müssen aber auch sie E-Rechnungen, denn diese Pflicht gilt für alle Unternehmen. Eine Software, die XRechnung und ZUGFeRD lesen kann, ist deshalb für jeden Betrieb sinnvoll.
+    sources:
+      - *ustdv33
+      - *ustdv34a
+  - id: software-pruefen
+    title: Worauf Sie bei der Software achten sollten
+    paragraphs:
+      - Prüfen Sie zwei Funktionen getrennt, denn viele Programme beherrschen nur eine davon. Der Empfang bedeutet, dass die Software eine XRechnung oder ZUGFeRD-Datei einlesen, lesbar anzeigen und die Daten in die Buchhaltung übernehmen kann. Der Versand bedeutet, dass sie aus Ihrer Rechnung eine normgerechte E-Rechnung erzeugt und verschickt.
+      - In unseren Profilen steht beides getrennt unter Rechtssicherheit, jeweils mit Quelle. Dort sehen Sie auch, ob die Funktion in jedem Tarif enthalten ist oder erst in einem teureren Paket.
+    points:
+      - Empfang von XRechnung und ZUGFeRD mit lesbarer Darstellung
+      - Versand in beiden Formaten, auch für Abschlags- und Schlussrechnungen
+      - Archivierung nach GoBD, damit die XML-Datei unverändert aufbewahrt wird
+      - E-Rechnung in dem Tarif, den Sie tatsächlich buchen wollen
+    sources:
+      - *ustg14
+  - id: programme
+    title: Programme mit Versand und Empfang schon im Einstiegstarif
+    paragraphs:
+      - Mehrere Programme decken beide Richtungen schon in kleinen Tarifen ab. sevdesk erstellt ZUGFeRD und XRechnung bereits im kostenlosen Tarif für bis zu drei Rechnungen im Monat. Lexware Office erfasst E-Rechnungen in jeder Version und erstellt sie ab Version M. Collmex erstellt E-Rechnungen nach EN 16931 und übernimmt empfangene Daten in der Belegverwaltung. FastBill erstellt, versendet und empfängt ZUGFeRD und XRechnung schon im Tarif Solo.
+      - Zwei Beispiele zeigen, warum sich der Blick ins Detail lohnt. Sage Active liest eingehende E-Rechnungen ein, den Versand kündigt Sage laut FAQ erst an. Xentral versendet Rechnungen als ZUGFeRD-PDF und XML, das Modul für eingehende E-Rechnungen gehört aber erst zum Plan Business.
+    software:
+      - sevdesk
+      - lexware-office
+      - collmex
+      - fastbill
+    sources:
+      - *sevdesk
+      - *lexware
+      - *collmex
+      - *fastbill
+      - *sageactive
+      - *xentral
+  - id: fahrplan
+    title: Ihr Fahrplan für die nächsten Monate
+    paragraphs:
+      - Sorgen Sie zuerst dafür, dass eingehende E-Rechnungen ankommen und lesbar sind, denn diese Pflicht gilt bereits. Stellen Sie danach Ihre Ausgangsrechnungen um, spätestens für Umsätze ab 2027, wenn Ihr Vorjahresumsatz über 800.000 € liegt, und für Umsätze ab 2028 in jedem Fall. Fragen Sie Ihre wichtigsten Kunden, welches Format sie bevorzugen, und stimmen Sie den Ablauf mit Ihrer Steuerberatung ab.
+      - Nutzen Sie die Testphasen der Programme, um eine echte E-Rechnung zu erzeugen und einzulesen, bevor Sie sich festlegen. Dieser Artikel ersetzt keine Steuerberatung, er fasst die gesetzlichen Regeln und die Angaben der Anbieter zusammen.
+    sources:
+      - *ustg27
+software:
+  - sevdesk
+  - lexware-office
+  - collmex
+  - fastbill

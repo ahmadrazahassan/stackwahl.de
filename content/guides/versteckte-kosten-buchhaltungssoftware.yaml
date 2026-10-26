@@ -1,0 +1,131 @@
+slug: versteckte-kosten-buchhaltungssoftware
+title: "Versteckte Kosten bei Buchhaltungssoftware: Nutzer, Belege, Archiv und Laufzeit"
+description: Der Einstiegspreis ist selten der Endpreis. Wir zeigen die sechs häufigsten Kostenfallen mit echten Beispielen aus den Preislisten der Anbieter.
+centralQuestion: Welche Kosten kommen zum beworbenen Monatspreis hinzu, und wie rechne ich den echten Preis aus?
+topic: Kosten
+tags:
+  - Kosten
+  - Preise
+  - Buchhaltung
+status: draft
+published: 2026-10-26
+updated: 2026-10-26
+author: null
+thumbnail:
+  tone: ink
+  kicker: Kostenfallen
+  headline: Der echte Preis
+  art: rayburst
+sources:
+  - &sevdesk
+    url: https://sevdesk.de/preise/
+    title: sevdesk Preise
+    accessed: 2026-10-26
+  - &papierkram
+    url: https://www.papierkram.de/preise/
+    title: Papierkram Preise und Funktionsübersicht
+    accessed: 2026-10-26
+  - &orgamax
+    url: https://www.orgamax.de/preise
+    title: orgaMAX Preise und Funktionsvergleich
+    accessed: 2026-10-26
+  - &billomat
+    url: https://www.billomat.com/preise/
+    title: Billomat Preise und Funktionsvergleich
+    accessed: 2026-10-26
+  - &easybill
+    url: https://www.easybill.de/preise/
+    title: easybill Preise, Archivierungskosten und FAQ
+    accessed: 2026-10-26
+  - &sageactive
+    url: https://www.sage.com/de-de/produkte/sage-active/
+    title: Sage Active Produktseite, Pakete und FAQ
+    accessed: 2026-10-26
+  - &sage50
+    url: https://www.sage.com/de-de/produkte/sage-50connected/
+    title: Sage 50 Produktseite mit Preisen und Paketen
+    accessed: 2026-10-25
+  - &handwerk
+    url: https://www.sage.com/de-de/produkte/sage-50-handwerk/
+    title: Sage 50 Handwerk Produktseite mit Preisen und FAQ
+    accessed: 2026-10-25
+  - &meinbuero
+    url: https://www.meinbuero.de/preise/
+    title: WISO MeinBüro Preise und Pläne
+    accessed: 2026-10-26
+  - &lexware
+    url: https://www.lexware.de/preise/
+    title: Lexware Office Preise und Versionsvergleich
+    accessed: 2026-10-26
+  - &bb
+    url: https://www.buchhaltungsbutler.de/preise/
+    title: BuchhaltungsButler Preise
+    accessed: 2026-10-26
+  - &haufe
+    url: https://www.haufe-x360.de/preise
+    title: Haufe X360 Preise und Rechenbeispiele
+    accessed: 2026-10-25
+intro: "ab 7,90 € im Monat, ab 9 €, sogar kostenlos: Die Einstiegspreise von Buchhaltungssoftware sehen günstig aus. Doch wer im Alltag mit mehreren Personen arbeitet, viele Belege hat oder eine bestimmte Funktion braucht, zahlt oft deutlich mehr. Wir haben die Preislisten aller Programme in unserem Vergleich durchgesehen und die sechs häufigsten Kostenfallen mit echten Beispielen zusammengestellt."
+sections:
+  - id: nutzer
+    title: "Kostenfalle 1: weitere Benutzer"
+    paragraphs:
+      - Viele Tarife enthalten nur einen Benutzer. Bei sevdesk kostet jeder weitere 5,90 € im Monat, bei orgaMAX 20 €, bei Billomat in den Tarifen Business und Enterprise 10 €, und im Tarif Professional von Billomat sind weitere Benutzer gar nicht möglich. Papierkram berechnet nur 2,90 € im Monatspaket und 2,32 € im Jahrespaket.
+      - Andere Anbieter rechnen anders. Sage Active enthält seit Februar 2026 fünf Nutzer im Paket Starter und zehn in Essentials. Rechnen Sie deshalb immer mit der Zahl der Personen, die tatsächlich im Programm arbeiten, auch mit Ihrer Buchhaltungskraft.
+    sources:
+      - *sevdesk
+      - *orgamax
+      - *billomat
+      - *papierkram
+      - *sageactive
+  - id: kontingente
+    title: "Kostenfalle 2: Kontingente für Rechnungen und Belege"
+    paragraphs:
+      - Einige Tarife begrenzen die Zahl der Dokumente. Billomat Professional enthält laut Funktionsvergleich 30 Rechnungen im Monat, easybill Starter 250 Dokumente, wobei auch erfasste Belege zählen. Wer mehr braucht, zahlt bei easybill 0,29 € je zusätzlichem Dokument, gedeckelt durch eine Kostenbremse. Sage Active enthält 300 beziehungsweise 500 Rechnungen im Monat, zusätzliche Pakete kosten zum Beispiel 10 € für 100 Rechnungen.
+      - BuchhaltungsButler nennt eine Fair-Use-Grenze von 500 Belegen im Monat, Papierkram begrenzt das kostenlose Paket auf 15 Belege. Für Onlinehändler mit vielen Bestellungen lohnt sich ein Blick auf diese Grenzen, bevor der Vertrag läuft.
+    sources:
+      - *billomat
+      - *easybill
+      - *sageactive
+      - *bb
+      - *papierkram
+  - id: archiv
+    title: "Kostenfalle 3: Archivierung"
+    paragraphs:
+      - Rechnungen und Belege müssen über Jahre unverändert aufbewahrt werden. Die meisten Anbieter rechnen die Archivierung in den Preis ein. easybill weist sie gesondert aus, für die zeitlich unbegrenzte, GoBD-konforme Speicherung fallen je nach Zahl der gespeicherten Dokumente 2 € bis 15 € im Monat an, auch für Kunden im Paket Free.
+      - Bei Sage 50 Handwerk erfüllt laut FAQ erst das Zusatzmodul DMS die GoBD-Anforderungen. Prüfen Sie deshalb, ob das Archiv im gewünschten Tarif enthalten ist oder als Zusatz bezahlt werden muss.
+    sources:
+      - *easybill
+      - *handwerk
+  - id: laufzeit
+    title: "Kostenfalle 4: Laufzeiten und Aktionspreise"
+    paragraphs:
+      - Der niedrigste beworbene Preis gilt oft nur bei langer Bindung oder für die ersten Monate. sevdesk nennt 19,90 € für den Tarif Buchhaltung bei 24 Monaten Laufzeit, monatlich sind es 25,90 €. WISO MeinBüro gibt es nur im Jahresabo, mit Rabatten nur im ersten Vertragsjahr. orgaMAX gewährte am Prüfdatum 50 % Rabatt für sechs Monate bei jährlicher Zahlung und 12 Monaten Mindestlaufzeit, Lexware Office 50 % für drei Monate, BuchhaltungsButler 70 % auf den ersten Monat.
+      - Vergleichen Sie deshalb den Preis über 12 und 24 Monate nach Ablauf aller Aktionen. Unser Kostenrechner rechnet die Listenpreise netto und brutto hoch.
+    sources:
+      - *sevdesk
+      - *meinbuero
+      - *orgamax
+      - *lexware
+      - *bb
+  - id: module
+    title: "Kostenfalle 5: Funktionen als Zusatzmodul"
+    paragraphs:
+      - Manche Funktion, die man im Grundpreis vermutet, kostet extra. Bei Lexware Office kostet die Lohnabrechnung ab 12,90 € im Monat zusätzlich, bei sevdesk die Erweiterung Inventar 19,90 € und die Zeiterfassung 4,90 €. orgaMAX berechnet für wiederkehrende Rechnungen 10 € und für die API 30 € im Monat. Bei Sage 50 Handwerk sind Finanzbuchhaltung, Zeiterfassung und das Cloud-Paket Zusatzmodule mit Preisen auf Anfrage.
+    sources:
+      - *lexware
+      - *sevdesk
+      - *orgamax
+      - *handwerk
+  - id: mindestmengen
+    title: "Kostenfalle 6: Mindestmengen"
+    paragraphs:
+      - Einige Programme lassen sich erst ab einer bestimmten Größe buchen. Sage 50 Comfort gibt es ab zwei Arbeitsplätzen, Professional ab drei, jeweils bei jährlicher Rechnungsstellung. Haufe X360 hat einen Mindestbuchungsbetrag von 449 € im Monat, unabhängig davon, wie wenige Nutzer Sie haben.
+      - Unser Tipp für den echten Preis ist einfach. Nehmen Sie den Tarif mit allen Funktionen, die Sie wirklich brauchen, addieren Sie alle Benutzer, Module und Archivkosten und rechnen Sie das auf 24 Monate ohne Aktionsrabatt hoch. Erst dann sind die Angebote vergleichbar.
+    sources:
+      - *sage50
+      - *haufe
+software:
+  - papierkram
+  - collmex
+  - sage-active

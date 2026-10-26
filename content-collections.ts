@@ -78,8 +78,8 @@ const affiliateLinks = defineCollection({
 const guides = defineCollection({
   name: "guides",
   directory: "content/guides",
-  include: "*.mdx",
-  parser: "frontmatter",
+  include: "*.yaml",
+  parser: "yaml",
   schema: guideSchema,
   transform: slugMatchesFile,
 });

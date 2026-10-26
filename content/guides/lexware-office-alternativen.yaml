@@ -1,0 +1,121 @@
+slug: lexware-office-alternativen
+title: "Lexware Office Alternativen: 6 Programme für Rechnungen und Buchhaltung"
+description: Sechs Alternativen zu Lexware Office mit Preisen, ELSTER, DATEV und den wichtigsten Unterschieden, damit Sie gezielt wechseln oder vergleichen können.
+centralQuestion: Welche Programme können, was Lexware Office kann, und wo sind sie günstiger, flexibler oder umfangreicher?
+topic: Alternativen
+tags:
+  - Alternativen
+  - Lexware Office
+  - Buchhaltung
+status: draft
+published: 2026-10-26
+updated: 2026-10-26
+author: null
+thumbnail:
+  tone: ink
+  kicker: Alternativen im Vergleich
+  headline: Statt Lexware Office
+  art: lattice
+  logos:
+    - lexware-office
+    - sevdesk
+    - orgamax
+sources:
+  - &lexware
+    url: https://www.lexware.de/preise/
+    title: Lexware Office Preise und Versionsvergleich
+    accessed: 2026-10-26
+  - &sevdesk
+    url: https://sevdesk.de/preise/
+    title: sevdesk Preise
+    accessed: 2026-10-26
+  - &meinbuero
+    url: https://www.meinbuero.de/preise/
+    title: WISO MeinBüro Preise und Pläne
+    accessed: 2026-10-26
+  - &papierkram
+    url: https://www.papierkram.de/preise/
+    title: Papierkram Preise und Funktionsübersicht
+    accessed: 2026-10-26
+  - &collmex
+    url: https://www.collmex.de/preise.html
+    title: Collmex Preisliste
+    accessed: 2026-10-25
+  - &bb
+    url: https://www.buchhaltungsbutler.de/preise/
+    title: BuchhaltungsButler Preise
+    accessed: 2026-10-26
+  - &bbfn
+    url: https://www.buchhaltungsbutler.de/funktionen/
+    title: BuchhaltungsButler Funktionen
+    accessed: 2026-10-26
+  - &orgamax
+    url: https://www.orgamax.de/preise
+    title: orgaMAX Preise und Funktionsvergleich
+    accessed: 2026-10-26
+intro: Lexware Office, früher lexoffice, ist eines der bekanntesten Programme für Rechnungen und Buchhaltung in Deutschland. Gründe für einen Blick auf Alternativen gibt es trotzdem. Manche suchen einen kostenlosen Einstieg, andere eine Warenwirtschaft, eine doppelte Buchführung mit mehr Automatisierung oder schlicht einen anderen Preis. Wir stellen sechs Programme vor, die Rechnungen, Belege und Buchhaltung mit Umsatzsteuer abdecken, und zeigen, worin sie sich von Lexware Office unterscheiden.
+sections:
+  - id: ausgangspunkt
+    title: Der Ausgangspunkt Lexware Office
+    paragraphs:
+      - Lexware Office gibt es in vier Versionen. S für 7,90 € deckt nur Belegerfassung und Archiv ab, M für 12,90 € ergänzt Angebote, E-Rechnungen und Mahnungen, L für 21,90 € die Buchhaltung mit EÜR und Umsatzsteuer, XL für 32,90 € besondere Rechnungstypen und eine Programmierschnittstelle. Alle Versionen sind monatlich kündbar. Die Lohnabrechnung lässt sich zu jeder Version hinzubuchen.
+      - Ein Programm ist also dann eine echte Alternative, wenn es Rechnungen mit E-Rechnung, die laufende Buchhaltung und die Umsatzsteuer abdeckt. Genau das erfüllen die sechs Programme unten, jeweils mit eigenem Schwerpunkt.
+    sources:
+      - *lexware
+  - id: sevdesk-meinbuero
+    title: "sevdesk und WISO MeinBüro: ähnlicher Umfang, anderer Preisaufbau"
+    paragraphs:
+      - sevdesk ist die naheliegendste Alternative. Es bietet einen kostenlosen Tarif für drei E-Rechnungen im Monat, die Buchhaltung mit UStVA per ELSTER kostet 25,90 € im Monat bei monatlicher Zahlung, 22,90 € bei 12 und 19,90 € bei 24 Monaten Laufzeit. Eine DATEV- und ADDISON-Schnittstelle gibt es schon im Tarif Rechnung. Jeder weitere Benutzer kostet 5,90 € im Monat.
+      - WISO MeinBüro vom Hersteller der Steuersoftware WISO Steuer gibt es nur im Jahresabo. Der Plan Buchhaltung kostet 238,80 € im Jahr, also 19,90 € im Monat, mit E-Rechnung, UStVA per ELSTER und DATEV-Schnittstelle. Er ist auf 120.000 € Umsatz in 365 Tagen begrenzt. Die Daten liegen in eigenen Rechenzentren des Anbieters in Deutschland.
+    software:
+      - sevdesk
+      - wiso-meinbuero
+    sources:
+      - *sevdesk
+      - *meinbuero
+  - id: papierkram-collmex
+    title: "Papierkram und Collmex: günstig mit kostenlosem Einstieg"
+    paragraphs:
+      - Papierkram verbindet Rechnungen, Belege, Bank, Projekte mit Zeiterfassung und Steuerberichte. Das Paket M kostet 24,90 € im Monat bei jährlicher Zahlung, ein kostenloses Paket mit 15 Belegen im Monat gibt es auch. Weitere Nutzer kosten nur 2,32 € im Monat im Jahrespaket. Die UStVA wird allerdings als XML-Datei für den Upload im ELSTER-Portal erstellt und nicht selbst übertragen.
+      - Collmex ist die günstigste vollständige Alternative. Das Komplettpaket basic mit Buchhaltung, Verkauf, Projekten und Warenwirtschaft kostet 16,95 € im Monat, monatlich kündbar, die reine Buchhaltung gibt es ab 0 €. Die UStVA geht direkt per Elster aus dem Programm. Support gibt es ausschließlich per E-Mail.
+    software:
+      - papierkram
+      - collmex
+    sources:
+      - *papierkram
+      - *collmex
+  - id: buchhaltungsbutler-orgamax
+    title: "BuchhaltungsButler und orgaMAX: mehr Automatisierung oder mehr Auftragswesen"
+    paragraphs:
+      - BuchhaltungsButler lohnt sich für Unternehmen mit vielen Belegen und für Bilanzierer. Die KI-gestützte Belegerkennung, Regeln und Sammelfunktionen automatisieren die laufende Buchhaltung, ab dem Paket Smart für 34,90 € im Monat bei jährlicher Laufzeit gehen UStVA und Zusammenfassende Meldung per Elster ans Finanzamt. In jedem Paket ist ein Steuerberater-Zugang enthalten.
+      - orgaMAX richtet sich an Betriebe, die Auftragswesen, Buchhaltung und Dokumente zusammen führen und später ein Lager brauchen. Der Plan Auftrag kostet 49 € im Monat bei jährlicher Zahlung, mit UStVA, GoBD-konformer Archivierung und Exporten für DATEV, Agenda, Simba, ADDISON und Stotax. Persönlicher Support per Telefon, Mail und Fernwartung ist in jedem Plan enthalten.
+    software:
+      - buchhaltungsbutler
+      - orgamax
+    sources:
+      - *bb
+      - *bbfn
+      - *orgamax
+  - id: wechsel
+    title: Worauf Sie beim Wechsel achten sollten
+    paragraphs:
+      - Ein Wechsel mitten im Geschäftsjahr ist möglich, aber aufwendiger als zum Jahreswechsel. Prüfen Sie, wie Sie Kunden, Artikel und offene Posten übernehmen, und sprechen Sie den Zeitpunkt mit Ihrer Steuerberatung ab, damit Buchungen nicht doppelt oder gar nicht ankommen. Belege und Rechnungen aus Lexware Office müssen Sie weiter aufbewahren, bis die gesetzlichen Fristen ablaufen.
+      - Nutzen Sie die Testphasen. sevdesk und WISO MeinBüro lassen sich 14 Tage testen, Collmex 30 Tage, BuchhaltungsButler und orgaMAX 14 Tage, Papierkram im kostenlosen Paket. Spielen Sie dabei einen typischen Monat mit echten Belegen durch.
+    points:
+      - Stammdaten und offene Posten übernehmen
+      - Zeitpunkt des Wechsels mit der Steuerberatung abstimmen
+      - Alte Belege und Rechnungen weiter aufbewahren
+      - Einen typischen Monat in der Testphase durchspielen
+    sources:
+      - *sevdesk
+      - *meinbuero
+      - *collmex
+      - *bb
+      - *orgamax
+software:
+  - sevdesk
+  - wiso-meinbuero
+  - papierkram
+  - collmex
+  - buchhaltungsbutler
+  - orgamax

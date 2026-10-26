@@ -1,0 +1,128 @@
+slug: erp-kleine-unternehmen-kosten
+title: "Was kostet ein ERP für kleine Unternehmen? Fünf Programme durchgerechnet"
+description: Fünf ERP-Programme für einen Händler mit fünf Nutzern durchgerechnet, mit Lizenzkosten pro Jahr und den Kosten, die noch hinzukommen.
+centralQuestion: Mit welchen jährlichen Kosten muss ein kleines Handelsunternehmen mit fünf Nutzern für ein ERP rechnen?
+topic: ERP
+tags:
+  - ERP
+  - Kosten
+  - Warenwirtschaft
+status: draft
+published: 2026-10-26
+updated: 2026-10-26
+author: null
+thumbnail:
+  tone: tint
+  kicker: ERP-Kosten im Vergleich
+  headline: Fünf Nutzer, fünf Preise
+  art: nestedsquares
+  logos:
+    - weclapp
+    - xentral
+    - sage-100
+sources:
+  - &weclapp
+    url: https://www.weclapp.com/de/preise/
+    title: weclapp Preise und Funktionen
+    accessed: 2026-10-25
+  - &weclappfibu
+    url: https://www.weclapp.com/de/buchhaltungssoftware/
+    title: weclapp Buchhaltungssoftware
+    accessed: 2026-10-25
+  - &weclappsupport
+    url: https://www.weclapp.com/de/support/
+    title: weclapp Support und Support-Pakete
+    accessed: 2026-10-25
+  - &xentral
+    url: https://xentral.com/de/preise
+    title: Xentral Preise und Pläne
+    accessed: 2026-10-25
+  - &xentralfibu
+    url: https://xentral.com/de/erp/buchhaltung
+    title: Xentral ERP Buchhaltung
+    accessed: 2026-10-25
+  - &haufe
+    url: https://www.haufe-x360.de/preise
+    title: Haufe X360 Preise und Rechenbeispiele
+    accessed: 2026-10-25
+  - &sage100
+    url: https://www.sage.com/de-de/produkte/sage-100/
+    title: Sage 100 Produktseite mit Preisen und FAQ
+    accessed: 2026-10-25
+  - &sage50
+    url: https://www.sage.com/de-de/produkte/sage-50connected/
+    title: Sage 50 Produktseite mit Preisen und Paketen
+    accessed: 2026-10-25
+intro: Wer mit Rechnungsprogramm, Tabellen und Shop-Backend an Grenzen stößt, landet beim Thema ERP. Die erste Frage ist fast immer die nach dem Preis, und genau die ist schwer zu beantworten, weil jeder Anbieter anders rechnet. Mal je Nutzer, mal je Arbeitsplatz, mal pauschal nach Auftragsvolumen, mal mit Mindestbetrag. Wir haben fünf Programme für dasselbe Beispiel durchgerechnet, ein Handelsunternehmen mit fünf Personen, die im System arbeiten, mit Lager, Rechnungen und Buchhaltung.
+sections:
+  - id: annahmen
+    title: Das Rechenbeispiel
+    paragraphs:
+      - Wir rechnen mit fünf Nutzern, jährlicher Zahlung und dem Paket, das laut Anbieter Warenwirtschaft, Lager und Rechnungen abdeckt. Alle Beträge sind Listenpreise netto am Prüfdatum. Einführung, Datenübernahme, Schulungen und Support-Pakete sind nicht enthalten, weil die meisten Anbieter sie nur auf Anfrage nennen. Die Reihenfolge unten richtet sich allein nach den Jahreskosten im Beispiel.
+    points:
+      - "Sage 50 Professional: 5 Arbeitsplätze zu 40 €, 2.400 € netto im Jahr"
+      - "Sage 100 Warenwirtschaft und Rechnungswesen: 5 Nutzer zu 114 €, 6.840 € netto im Jahr"
+      - "Xentral Business: Pauschale von 649 € im Monat, 7.788 € netto im Jahr"
+      - "Haufe X360 Handel: 5 Nutzer zu 142 € im Beispiel, 8.520 € netto im Jahr"
+      - "weclapp ERP Handel: 5 Nutzer zu 163 €, 9.780 € netto im Jahr"
+    sources:
+      - *sage50
+      - *sage100
+      - *xentral
+      - *haufe
+      - *weclapp
+  - id: sage
+    title: "Sage 50 und Sage 100: je Arbeitsplatz und je Modul"
+    paragraphs:
+      - Sage 50 ist im Beispiel mit Abstand am günstigsten. Professional kostet ab 40 € je Arbeitsplatz und Monat, ist ab drei Arbeitsplätzen buchbar und gilt bei jährlicher Rechnungsstellung mit 12 Monaten Mindestlaufzeit, nur für Neukunden. Sage 50 ist allerdings eine installierte Software mit Cloud-Ergänzung, keine reine Browserlösung. Wer ohne eigene Rechner im Büro arbeiten möchte, sollte das vorab klären.
+      - Sage 100 berechnet je Modul und Nutzer. Warenwirtschaft kostet ab 56 €, Rechnungswesen ab 58 € im Monat. Wenn alle fünf Personen beide Module brauchen, sind das 570 € im Monat. Arbeiten nur zwei davon in der Buchhaltung, sinkt der Betrag deutlich. Sage 100 gibt es lokal oder in der Cloud.
+    software:
+      - sage-50
+      - sage-100
+    sources:
+      - *sage50
+      - *sage100
+  - id: xentral
+    title: "Xentral: pauschal statt je Nutzer"
+    paragraphs:
+      - Xentral berechnet keine Nutzer. Alle Pläne enthalten unbegrenzte Nutzer, die Preise steigen mit Funktionsumfang, Umsatz und Versandvolumen. Business kostet ab 649 € im Monat bei Jahreszahlung und enthält Automatisierung, Pick und Pack, Wareneingang, Bankanbindungen und Lieferantenbestellungen. Für ein größeres Team wird Xentral im Vergleich günstiger, für fünf Personen liegt es im Mittelfeld.
+      - Wichtig für die Buchhaltung ist eine Einschränkung, die Xentral selbst nennt. BWA, Saldenliste und Umsatzsteuer-Voranmeldung sind im aktuellen Stand des Moduls noch nicht vorgesehen. Die Daten gehen an DATEV, die Finanzbuchhaltung bleibt bei der Steuerberatung oder in einem eigenen Programm.
+    software:
+      - xentral
+    sources:
+      - *xentral
+      - *xentralfibu
+  - id: haufe-weclapp
+    title: "Haufe X360 und weclapp: je Nutzer, mit vollständiger Buchhaltung"
+    paragraphs:
+      - Haufe X360 veröffentlicht keine festen Tarife, sondern Rechenbeispiele. Für den Handel nennt Haufe 108 € bis 161 € je Nutzer und Monat, für unser Beispiel nehmen wir die Konfiguration für 142 €. Fünf Nutzer kosten damit 710 € im Monat und liegen über dem Mindestbuchungsbetrag von 449 €. Die Einführung läuft über Partner, deren Kosten hinzukommen.
+      - weclapp nennt feste Preise je Nutzer. ERP Handel kostet 163 € im Monat bei jährlicher und 179 € bei monatlicher Zahlung und enthält Warenwirtschaft, Lager mit Mobile Lager-App, Produktion und die Anbindung von Shops und Marktplätzen. Fibu, Banking, DATEV-Export und UStVA-Versand sind laut Anbieter in allen Paketen dabei. Telefonsupport gibt es in den Support-Paketen Bronze, Silber und Gold für 189 €, 389 € und 599 €.
+    software:
+      - haufe-x360
+      - weclapp
+    sources:
+      - *haufe
+      - *weclapp
+      - *weclappfibu
+      - *weclappsupport
+  - id: zusatzkosten
+    title: Was zu den Lizenzen hinzukommt
+    paragraphs:
+      - Die Lizenz ist bei einem ERP nur ein Teil der Kosten. Hinzu kommen die Einführung, die Übernahme von Artikeln, Kunden und Beständen, Schulungen, Schnittstellen zu Shop und Versand und oft ein Support-Paket. Diese Posten nennen die Anbieter meist erst im Angebot. Planen Sie sie von Anfang an ein und fragen Sie gezielt danach.
+      - Achten Sie außerdem darauf, was das Paket in der Buchhaltung leistet. Wer die Umsatzsteuer-Voranmeldung selbst senden möchte, braucht ein ERP mit ELSTER-Übertragung oder ein zusätzliches Buchhaltungsprogramm. Nutzen Sie die Testphasen, weclapp und Sage 50 lassen sich 30 Tage testen.
+    points:
+      - Einführung und Datenübernahme
+      - Schulungen und Support-Pakete
+      - Schnittstellen zu Shop, Marktplatz und Versand
+      - Buchhaltung mit UStVA im ERP oder separat
+    sources:
+      - *weclapp
+      - *weclappsupport
+      - *sage50
+      - *xentralfibu
+software:
+  - sage-50
+  - sage-100
+  - xentral
+  - haufe-x360
+  - weclapp

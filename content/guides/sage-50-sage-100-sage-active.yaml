@@ -1,0 +1,106 @@
+slug: sage-50-sage-100-sage-active
+title: "Sage 50, Sage 100 oder Sage Active: Welches Sage-Produkt passt zu Ihrem Betrieb?"
+description: Sage verkauft in Deutschland vier Programme für Buchhaltung und ERP. Wir zeigen Preise, Unterschiede und für wen sich welches eignet.
+centralQuestion: Welches der vier Sage-Programme passt zu Größe, Branche und Arbeitsweise meines Unternehmens?
+topic: Sage im Vergleich
+tags:
+  - Sage
+  - ERP
+  - Buchhaltung
+status: draft
+published: 2026-10-26
+updated: 2026-10-26
+author: null
+thumbnail:
+  tone: ink
+  kicker: Sage im Vergleich
+  headline: Welches Sage passt zu Ihnen?
+  art: nestedsquares
+  logos:
+    - sage-active
+sources:
+  - &active
+    url: https://www.sage.com/de-de/produkte/sage-active/
+    title: Sage Active Produktseite, Pakete und FAQ
+    accessed: 2026-10-26
+  - &s50
+    url: https://www.sage.com/de-de/produkte/sage-50connected/
+    title: Sage 50 Produktseite mit Preisen und Paketen
+    accessed: 2026-10-25
+  - &s100
+    url: https://www.sage.com/de-de/produkte/sage-100/
+    title: Sage 100 Produktseite mit Preisen und FAQ
+    accessed: 2026-10-25
+  - &handwerk
+    url: https://www.sage.com/de-de/produkte/sage-50-handwerk/
+    title: Sage 50 Handwerk Produktseite mit Preisen und FAQ
+    accessed: 2026-10-25
+  - &produkte
+    url: https://www.sage.com/de-de/produkte/
+    title: Sage Produktübersicht Deutschland
+    accessed: 2026-10-25
+intro: Wer Sage sucht, findet nicht ein Programm, sondern eine ganze Familie. Für kleine Unternehmen gibt es die Cloud-Lösung Sage Active, für Betriebe mit Lager die installierte Software Sage 50, für das Handwerk Sage 50 Handwerk und für den Mittelstand das ERP Sage 100. Die Namen ähneln sich, die Konzepte, Preise und Einsatzgebiete unterscheiden sich deutlich. Dieser Artikel ordnet die vier Programme anhand der Angaben von Sage ein.
+sections:
+  - id: ueberblick
+    title: Vier Programme, vier Zielgruppen
+    paragraphs:
+      - Die Produktübersicht von Sage Deutschland gliedert das Angebot nach Aufgaben. Unter Buchhaltung und Finanzen steht Sage Active als Komplettlösung aus Auftragsbearbeitung, Buchhaltung und Lohn in der Cloud für kleine Unternehmen. Unter Warenwirtschaft und ERP stehen Sage 100 als ERP für Unternehmen mit individuellen Anforderungen, als Desktop-Software mit optionalen Cloud-Services, sowie Sage X3 für international tätige Mittelständler. Sage 50 und Sage 50 Handwerk richten sich an kleine Betriebe, die eine installierte Software mit Warenwirtschaft beziehungsweise Handwerksfunktionen suchen.
+      - Für Ihre Entscheidung sind drei Fragen hilfreich. Wollen Sie im Browser arbeiten oder eine Software auf eigenen Rechnern installieren? Brauchen Sie Lager, Bestellwesen oder Produktion? Und wie viele Personen arbeiten im System? Die Antworten führen fast immer zu genau einem der vier Programme.
+    points:
+      - Sage Active für kleine B2B-Unternehmen, die alles im Browser erledigen wollen, inklusive Lohn.
+      - Sage 50 für kleine Händler, Fertiger und Dienstleister mit Lager, installiert mit Cloud-Funktionen.
+      - Sage 50 Handwerk für Handwerksbetriebe mit Aufmaß, Projekten und Abschlagsrechnungen.
+      - Sage 100 für den Mittelstand mit Warenwirtschaft, Rechnungswesen und Produktion als Module.
+    sources:
+      - *produkte
+  - id: sage-active
+    title: "Sage Active: die Cloud-Lösung für kleine Unternehmen"
+    paragraphs:
+      - Sage Active läuft im Browser auf PCs und Tablets mit Windows, macOS und Android, dazu gibt es eine App. Das Paket Starter kostet 25 € im Monat und deckt Angebote, Rechnungen, die KI-gestützte Erfassung von Belegen und E-Rechnungen, einen einfachen Bankkontenabgleich und die Zusammenarbeit mit einem externen Buchhalter ab. Essentials kostet 49 € im Monat und ergänzt die doppelte Buchführung nach SKR03 oder SKR04, GuV, Bilanz, EÜR-Bericht, die Umsatzsteuer-Voranmeldung per ELSTER, den DATEV-Export sowie Lohnabrechnung und HR für zwei Mitarbeitende.
+      - Seit dem 01.02.2026 enthält Starter laut FAQ fünf Nutzer und 300 Rechnungen im Monat, Essentials zehn Nutzer und 500 Rechnungen. Das Abo verlängert sich monatlich und lässt sich zum Ende des Abrechnungsmonats kündigen. Wichtig zu wissen ist eine Lücke, denn E-Rechnungen lassen sich bisher nur empfangen, den Versand kündigt Sage für die nahe Zukunft an. Jahressteuererklärungen und die E-Bilanz sind laut FAQ nicht möglich.
+    software:
+      - sage-active
+    sources:
+      - *active
+  - id: sage-50
+    title: "Sage 50: Buchhaltung und Warenwirtschaft für kleine Betriebe"
+    paragraphs:
+      - Sage 50 ist eine installierte Software mit Cloud-Funktionen, die Auftragsbearbeitung, Warenwirtschaft mit mehreren Lagern und Finanzbuchhaltung bis zur Bilanz verbindet. Laut Produktseite sendet und empfängt Sage 50 E-Rechnungen in XRechnung und ZUGFeRD, enthält eine DATEV-Schnittstelle und ein Onlinebanking mit Sammelüberweisungen und automatischem Abgleich.
+      - Bei den Kosten gibt es eine Hürde. Das Paket Comfort kostet ab 35 € je Arbeitsplatz und Monat und ist erst ab zwei Arbeitsplätzen buchbar, Professional kostet ab 40 € und ist ab drei Arbeitsplätzen buchbar, jeweils bei jährlicher Rechnungsstellung mit 12 Monaten Mindestlaufzeit. Comfort kostet damit mindestens 840 € netto im Jahr, Professional mindestens 1.440 € netto. Für einen Betrieb mit einer Person im Büro ist das viel, für ein kleines Team mit Lager ist es ein überschaubarer Preis für ein vollständiges System.
+    software:
+      - sage-50
+    sources:
+      - *s50
+  - id: sage-50-handwerk
+    title: "Sage 50 Handwerk: Aufmaß, Projekte und Abschlagsrechnungen"
+    paragraphs:
+      - Sage 50 Handwerk ist auf die Abläufe im Handwerk zugeschnitten, mit Aufmaß direkt im Angebot, Projektordnern, Abschlags-, Teil- und Schlussrechnungen, Wartungsverwaltung und Schnittstellen wie GAEB, IDS und DATANORM. Das Paket Essential kostet 19,90 € im Monat für einen Benutzer, Enterprise 59 € im Monat für unbegrenzte Benutzer, bei jährlicher Rechnungsstellung. E-Rechnungen in ZUGFeRD 2.1 und XRechnung sind schon im Paket Essential enthalten.
+      - Der niedrige Einstiegspreis gilt allerdings für ein schlankes Grundpaket. GoBD-konforme Archivierung gibt es laut FAQ erst mit dem Zusatzmodul DMS, Finanzbuchhaltung, Zeiterfassung und das Cloud-Paket für mobiles Arbeiten kosten ebenfalls extra. Rechnen Sie deshalb mit einem Angebot über die tatsächlich benötigten Module.
+    software:
+      - sage-50-handwerk
+    sources:
+      - *handwerk
+  - id: sage-100
+    title: "Sage 100: das modulare ERP für den Mittelstand"
+    paragraphs:
+      - Sage 100 verwaltet Warenwirtschaft, Rechnungswesen und Produktion als Module, lokal auf eigenen Servern oder in der Cloud mit deutschen Rechenzentren. Laut FAQ eignet es sich vom Einzelunternehmer bis zu Unternehmen mit 50 bis 100 Nutzern und mehreren tausend Belegen am Tag. Das Rechnungswesen enthält den DATEV-Export und -Import sowie die Umsatzsteuer-Voranmeldung via Elster, E-Rechnungen werden erstellt, empfangen, per OCR erkannt und über einen Workflow freigegeben.
+      - Sage veröffentlicht Ab-Preise je Modul und Nutzer, nämlich 56 € für Warenwirtschaft, 58 € für Rechnungswesen und 90 € für Produktion im Monat, bei jährlicher Rechnungsstellung. Fünf Nutzer mit Warenwirtschaft und Rechnungswesen kosten nach Listenpreis 6.840 € netto im Jahr. Zusatzlösungen, die Cloud-Version und die Einführung kommen hinzu und werden individuell angeboten.
+    software:
+      - sage-100
+    sources:
+      - *s100
+  - id: entscheidung
+    title: So treffen Sie die Wahl
+    paragraphs:
+      - Für Gründer und kleine Dienstleister ohne Lager ist Sage Active der naheliegende Einstieg, monatlich kündbar und mit vielen Nutzern im Grundpreis. Wer Waren verkauft und mit zwei oder mehr Personen im Büro arbeitet, findet in Sage 50 die passendere Warenwirtschaft. Handwerksbetriebe sollten Sage 50 Handwerk wegen Aufmaß und GAEB prüfen. Sage 100 lohnt sich, sobald Produktion, viele Nutzer oder mehrere Gesellschaften ins Spiel kommen.
+      - Testen können Sie Sage Active Starter 14 Tage ohne Kreditkarte und Essentials 30 Tage, Sage 50 30 Tage als Download und Sage 50 Handwerk 30 Tage über einen Fachhandelspartner. Für Sage 100 bietet Sage eine Produkttour und ein persönliches Angebot an.
+    sources:
+      - *active
+      - *s50
+      - *handwerk
+      - *s100
+software:
+  - sage-active
+  - sage-50
+  - sage-50-handwerk
+  - sage-100

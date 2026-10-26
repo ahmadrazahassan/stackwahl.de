@@ -67,8 +67,15 @@ export function getComparisons() {
   return allComparisons.filter((c) => isVisible(c));
 }
 
+/** Visible guides, newest first. */
 export function getGuides() {
-  return allGuides.filter((g) => isVisible(g));
+  return allGuides
+    .filter((g) => isVisible(g))
+    .sort((a, b) => b.published.localeCompare(a.published) || a.title.localeCompare(b.title, "de"));
+}
+
+export function getGuide(slug: string) {
+  return getGuides().find((g) => g.slug === slug);
 }
 
 /** Active affiliate link for a software, only when the feature flag allows it. */

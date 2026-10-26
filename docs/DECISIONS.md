@@ -194,3 +194,11 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 - **Refetch before writing.** The reviews are based on pages fetched on 26.10.2026, not on the notes from 24.10. Where a page now says something else, the facts, plans, pros and cons were updated in the same change (see CONTENT_STATUS). Where a page could no longer be fetched (FastBill help center, 403), the earlier access date stays.
 - **Contradictions on vendor pages are named, not resolved.** If a vendor shows two different prices on the same page (sevdesk, orgaMAX, BuchhaltungsButler), the review says so and recommends checking the price in the order process. We store the price from the tariff cards.
 - **Sage Active terms.** The FAQ distinguishes subscriptions before and after 01.02.2026. The profile uses the current terms and mentions the old ones.
+
+## 26.10.2026: Ratgeber
+
+- **Guides as YAML, not MDX.** Articles are structured data (intro, sections with paragraphs, points, named programs and their own sources), so the same guards as for profiles apply: copy rules, test claims, future dates and software references. Each section shows its sources directly beneath it.
+- **Thumbnails drawn in code.** The cards use flat brand colors (primary, ink, tint), the line art from the illustrations and up to three real vendor logos. No stock photos and no AI images (Sections 3.8 and 13.11). The thumbnail is decorative (`aria-hidden`); the title is the accessible name.
+- **Topics from buying questions.** The ten articles answer the questions people search before buying (E-Rechnungspflicht, UStVA per ELSTER, Kleinunternehmer, free plans, hidden costs, Lexware Office alternatives, sevdesk vs. Lexware Office, Sage 50/100/Active, ERP costs, DATEV). Every figure comes from a vendor page or a law text with a date.
+- **No author yet.** All articles are drafts with `author: null`. The guard blocks publishing without a real author.
+- **Home page.** A Ratgeber section shows the six newest articles and links to the index.

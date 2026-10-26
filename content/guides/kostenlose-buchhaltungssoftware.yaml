@@ -1,0 +1,108 @@
+slug: kostenlose-buchhaltungssoftware
+title: "Kostenlose Buchhaltungssoftware: Was die Gratis-Tarife wirklich können"
+description: Fünf Programme haben einen dauerhaft kostenlosen Tarif. Wir zeigen die Grenzen bei Rechnungen, Belegen und Kontakten und wann sich das Upgrade lohnt.
+centralQuestion: Reicht ein kostenloser Tarif für meine Buchhaltung, und wo liegen die Grenzen?
+topic: Kostenlos starten
+tags:
+  - Kostenlos
+  - Buchhaltung
+  - Gründung
+status: draft
+published: 2026-10-26
+updated: 2026-10-26
+author: null
+thumbnail:
+  tone: tint
+  kicker: Gratis-Tarife im Check
+  headline: Was kostenlos wirklich kann
+  art: arcs
+  logos:
+    - collmex
+    - easybill
+    - norman
+sources:
+  - &sevdesk
+    url: https://sevdesk.de/preise/
+    title: sevdesk Preise
+    accessed: 2026-10-26
+  - &papierkram
+    url: https://www.papierkram.de/preise/
+    title: Papierkram Preise und Funktionsübersicht
+    accessed: 2026-10-26
+  - &collmex
+    url: https://www.collmex.de/preise.html
+    title: Collmex Preisliste
+    accessed: 2026-10-25
+  - &easybill
+    url: https://www.easybill.de/preise/
+    title: easybill Preise, Archivierungskosten und FAQ
+    accessed: 2026-10-26
+  - &norman
+    url: https://norman.finance/de/preise
+    title: Norman Preise und FAQ
+    accessed: 2026-10-25
+intro: Ein kostenloser Tarif ist für Gründer und Nebenberufler verlockend. Doch kostenlos heißt fast nie unbegrenzt. Mal ist die Zahl der Rechnungen begrenzt, mal die der Belege oder Kontakte, mal fehlen Bankanbindung oder Steuerfunktionen. Von den 20 Programmen in unserem Vergleich bieten fünf einen dauerhaft kostenlosen Tarif. Wir zeigen, was jeder davon enthält und ab wann sich ein bezahlter Tarif rechnet.
+sections:
+  - id: ueberblick
+    title: Die fünf kostenlosen Tarife im Überblick
+    paragraphs:
+      - Dauerhaft kostenlos sind die Einstiegstarife von sevdesk, Papierkram, Collmex, easybill und Norman. Sie unterscheiden sich stark. sevdesk und easybill zielen auf Rechnungen, Collmex auf die Buchhaltung, Papierkram auf Belege und Buchhaltung, Norman auf Buchhaltung und E-Rechnungen mit KI-Unterstützung.
+    points:
+      - sevdesk Kostenlos, 3 Rechnungen oder E-Rechnungen im Monat
+      - Papierkram Free, bis 15 Belege im Monat, Papierkram-Logo in den Dokumenten
+      - Collmex buchhaltung free, 1 Administrator, bis 100.000 Buchungen
+      - easybill Free, 50 Dokumente und 3 Kontakte im Monat
+      - Norman Kostenlos, unbegrenzte E-Rechnungen, für UG und GmbH mit doppelter Buchführung
+    sources:
+      - *sevdesk
+      - *papierkram
+      - *collmex
+      - *easybill
+      - *norman
+  - id: rechnungen
+    title: Kostenlos Rechnungen schreiben
+    paragraphs:
+      - Der kostenlose Tarif von sevdesk erlaubt drei Rechnungen oder E-Rechnungen im Monat in ZUGFeRD und XRechnung, mit unbegrenzt Kontakten und Produkten. Für gelegentliche Rechnungen reicht das, wer regelmäßig fakturiert, braucht den Tarif Rechnung für 9,90 € im Monat bei 12 Monaten Laufzeit.
+      - easybill Free erlaubt 50 Dokumente im Monat, darunter Angebote, Rechnungen mit E-Rechnung und Lieferscheine, aber nur drei Kontakte. Ein Steuerberater-Zugang und Schnittstellen zu DATEV und Lexware Office sind schon dabei. Beachten Sie, dass laut Preisseite auch im Paket Free Archivierungskosten für die GoBD-konforme Speicherung anfallen, je nach Zahl der gespeicherten Dokumente.
+    software:
+      - sevdesk
+      - easybill
+    sources:
+      - *sevdesk
+      - *easybill
+  - id: buchhaltung
+    title: Kostenlos buchen
+    paragraphs:
+      - Collmex buchhaltung free ist eine vollständige Finanzbuchhaltung für einen Administrator mit bis zu 100.000 Buchungen, die sich nicht erweitern lassen. Rechnungen schreiben Sie mit Collmex rechnung free, ebenfalls kostenlos. Bezahlte Pakete beginnen bei 8,95 € im Monat und sind monatlich kündbar.
+      - Papierkram Free bietet eine grundlegende Buchhaltung mit Basisfunktionen für bis zu 15 Belege im Monat. Laut Anbieter eignet sich das Paket für nebenberufliche Gründer und zum Testen. Norman stellt Buchhaltung, unbegrenzte E-Rechnungen und den KI-Autopiloten kostenlos bereit, für UG und GmbH sogar die doppelte Buchführung mit einem synchronisierten Bankkonto. Bezahlt wird bei Norman erst für die Übermittlung von Steuererklärungen.
+    software:
+      - collmex
+      - papierkram
+      - norman
+    sources:
+      - *collmex
+      - *papierkram
+      - *norman
+  - id: grenzen
+    title: Die typischen Grenzen
+    paragraphs:
+      - Fast alle kostenlosen Tarife verzichten auf das, was im Alltag Zeit spart. Die Umsatzsteuer-Voranmeldung per ELSTER, eine automatische Bankanbindung und mehrere Benutzer sind in den Gratis-Tarifen meist nicht enthalten. Bei Papierkram und easybill zählen außerdem Belege beziehungsweise Dokumente gegen ein Monatskontingent.
+      - Rechnen Sie deshalb nach, wie viele Rechnungen und Belege Sie im Monat haben. Wer regelmäßig mehr als ein paar Rechnungen schreibt oder umsatzsteuerpflichtig ist, landet schnell in einem bezahlten Tarif. Der Vorteil des kostenlosen Starts bleibt, denn Sie lernen das Programm ohne Zeitdruck kennen und behalten Ihre Daten beim Upgrade.
+    sources:
+      - *papierkram
+      - *easybill
+  - id: upgrade
+    title: Wann sich ein bezahlter Tarif lohnt
+    paragraphs:
+      - Ein bezahlter Tarif lohnt sich, sobald das Kontingent regelmäßig nicht reicht oder Sie die Umsatzsteuer-Voranmeldung selbst senden möchten. Bei sevdesk beginnt die UStVA im Tarif Buchhaltung, bei Norman im Tarif Pro für Selbstständige, bei Collmex in den Buchhaltungspaketen. Papierkram erstellt die Voranmeldung als XML-Datei für das ELSTER-Portal.
+      - Vergleichen Sie die bezahlten Tarife über ein ganzes Jahr, denn Laufzeiten und Rabatte unterscheiden sich stark. Unser Kostenrechner zeigt die Summe über 12 und 36 Monate, netto und brutto.
+    sources:
+      - *sevdesk
+      - *norman
+      - *papierkram
+software:
+  - sevdesk
+  - collmex
+  - papierkram
+  - norman
+  - easybill

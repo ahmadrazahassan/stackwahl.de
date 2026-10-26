@@ -1,0 +1,158 @@
+slug: steuerberater-datev-zusammenarbeit
+title: "Buchhaltungssoftware mit DATEV: So kommen Ihre Daten zur Steuerberatung"
+description: DATEV-Export, Buchungsdatenservice, DATEV Unternehmen online und Kanzleizugang, welche Programme welchen Weg zur Steuerberatung anbieten.
+centralQuestion: Wie gebe ich Rechnungen, Belege und Buchungen am einfachsten an meine Steuerberatung weiter?
+topic: Steuerberatung
+tags:
+  - DATEV
+  - Steuerberatung
+  - Buchhaltung
+status: draft
+published: 2026-10-26
+updated: 2026-10-26
+author: null
+thumbnail:
+  tone: primary
+  kicker: Zusammenarbeit mit der Kanzlei
+  headline: Ihre Daten zur Steuerberatung
+  art: stacklines
+  logos:
+    - candis
+    - buchhaltungsbutler
+    - lexware-office
+sources:
+  - &papierkram
+    url: https://www.papierkram.de/funktionen/berichte-und-integrationen/
+    title: Papierkram Berichte und Integrationen
+    accessed: 2026-10-25
+  - &fastbill
+    url: https://www.fastbill.com/preise
+    title: FastBill Preise
+    accessed: 2026-10-26
+  - &meinbuero
+    url: https://www.meinbuero.de/preise/
+    title: WISO MeinBüro Preise und Pläne
+    accessed: 2026-10-26
+  - &orgamax
+    url: https://www.orgamax.de/preise
+    title: orgaMAX Preise und Funktionsvergleich
+    accessed: 2026-10-26
+  - &weclapp
+    url: https://www.weclapp.com/de/buchhaltungssoftware/
+    title: weclapp Buchhaltungssoftware
+    accessed: 2026-10-25
+  - &billomat
+    url: https://www.billomat.com/preise/
+    title: Billomat Preise und Funktionsvergleich
+    accessed: 2026-10-26
+  - &candis
+    url: https://www.candis.io/funktionen/datev-schnittstelle
+    title: Candis DATEV-Schnittstelle
+    accessed: 2026-10-25
+  - &xentral
+    url: https://xentral.com/de/preise
+    title: Xentral Preise und Pläne
+    accessed: 2026-10-25
+  - &sevdesk
+    url: https://sevdesk.de/preise/
+    title: sevdesk Preise
+    accessed: 2026-10-26
+  - &sevdeskfn
+    url: https://sevdesk.de/funktionen/
+    title: sevdesk Funktionen
+    accessed: 2026-10-26
+  - &lexwarefakten
+    url: https://www.lexware.de/facts/lexware-office/
+    title: Lexware Office Kernfakten
+    accessed: 2026-10-26
+  - &lexware
+    url: https://www.lexware.de/preise/
+    title: Lexware Office Preise und Versionsvergleich
+    accessed: 2026-10-26
+  - &bb
+    url: https://www.buchhaltungsbutler.de/preise/
+    title: BuchhaltungsButler Preise
+    accessed: 2026-10-26
+intro: Viele Selbstständige und kleine Unternehmen schreiben ihre Rechnungen selbst und lassen Buchhaltung, Umsatzsteuer oder Jahresabschluss von einer Steuerberatung erledigen. Viele Kanzleien arbeiten mit DATEV, und fast alle Programme in unserem Vergleich bieten dafür eine Schnittstelle. Ob die Zusammenarbeit reibungslos läuft, hängt deshalb stark davon ab, wie Ihr Programm Daten an DATEV übergibt. Wir zeigen die drei üblichen Wege und welche Programme in unserem Vergleich welchen davon anbieten.
+sections:
+  - id: wege
+    title: Drei Wege zur Steuerberatung
+    paragraphs:
+      - Der einfachste Weg ist eine Exportdatei im DATEV-Format, die Sie herunterladen und der Kanzlei schicken. Bequemer ist die direkte Übertragung, bei der die Daten ohne Datei an DATEV gehen, etwa über den DATEV Buchungsdatenservice oder DATEV Unternehmen online. Der dritte Weg ist ein eigener Zugang für die Kanzlei im Programm, über den sie selbst Daten abruft und prüft.
+      - Welcher Weg der richtige ist, entscheidet in der Praxis oft die Kanzlei. Fragen Sie deshalb vor der Wahl des Programms, wie Ihre Steuerberatung die Daten am liebsten bekommt.
+    points:
+      - Export als Datei im DATEV-Format
+      - Direkte Übertragung an DATEV
+      - Zugang für die Kanzlei im Programm
+    sources:
+      - *papierkram
+      - *candis
+      - *sevdeskfn
+  - id: export
+    title: Export als Datei
+    paragraphs:
+      - Papierkram exportiert alle gebuchten Rechnungen und Belege eines frei wählbaren Zeitraums im DATEV-Format, mit wählbarem Kontenrahmen SKR03 oder SKR04. FastBill bietet den DATEV-Export schon im Tarif Solo für 9 € im Monat bei jährlicher Zahlung. weclapp nennt einen DATEV-Export mit mehreren Varianten.
+      - Arbeitet Ihre Kanzlei nicht mit DATEV, lohnt ein Blick auf WISO MeinBüro und orgaMAX. MeinBüro exportiert laut Preisseite für DATEV, Simba, Agenda, ADDISON und Stotax, orgaMAX nennt Exporte für DATEV, Agenda, Simba, ADDISON und Stotax.
+    software:
+      - papierkram
+      - fastbill
+      - wiso-meinbuero
+      - orgamax
+    sources:
+      - *papierkram
+      - *fastbill
+      - *weclapp
+      - *meinbuero
+      - *orgamax
+  - id: direkt
+    title: Direkte Übertragung an DATEV
+    paragraphs:
+      - Billomat überträgt Dokumente über den DATEV Buchungsdatenservice direkt an das DATEV-Rechenzentrum. Candis ist lizenzierter DATEV-Schnittstellenpartner und erzeugt über den Buchungsdatenservice fertige Buchungsstapel für DATEV Rechnungswesen, inklusive Vorkontierung, Zahlungsfälligkeiten und Rückstellungen, während die Belegbilder in DATEV Unternehmen online landen.
+      - FastBill bietet den DATEV Rechnungsdatenservice 1.0 ab dem Tarif Pro für 27 € im Monat bei jährlicher Zahlung. Papierkram lässt sich mit DATEV verbinden und überträgt die Buchungsdaten dann automatisch an DATEV Unternehmen online, orgaMAX bietet einen Export über die DATEV Cloud Services. Xentral übermittelt die Daten einschließlich der Belegbilder in allen Plänen an DATEV.
+    software:
+      - billomat
+      - candis
+      - fastbill
+    sources:
+      - *billomat
+      - *candis
+      - *fastbill
+      - *papierkram
+      - *orgamax
+      - *xentral
+  - id: zugang
+    title: Zugang für die Kanzlei
+    paragraphs:
+      - sevdesk bietet ein eigenes Steuerberaterportal, über das Kanzleien direkt auf die Daten ihrer Mandanten zugreifen, und eine DATEV- und ADDISON-Schnittstelle ab dem Tarif Rechnung. Lexware Office arbeitet laut Kernfakten über DATEV mit Kanzleien zusammen, die Kanzlei übernimmt Daten und Belege per elektronischer Pendelakte, der Online-Zugang für die Steuerberatung ist kostenlos.
+      - BuchhaltungsButler enthält in jedem Paket einen Steuerberater-Zugang und übergibt Buchungen samt Kommentaren an DATEV oder andere Kanzleisoftware. Auch weclapp nennt einen kostenlosen Zugang für Steuerberater.
+    software:
+      - sevdesk
+      - lexware-office
+      - buchhaltungsbutler
+    sources:
+      - *sevdesk
+      - *sevdeskfn
+      - *lexwarefakten
+      - *lexware
+      - *bb
+      - *weclapp
+  - id: checkliste
+    title: Fragen an Ihre Kanzlei
+    paragraphs:
+      - Klären Sie die Zusammenarbeit, bevor Sie sich für ein Programm entscheiden. So vermeiden Sie, dass Daten doppelt erfasst oder Belege nachträglich zusammengesucht werden müssen.
+    points:
+      - Arbeitet die Kanzlei mit DATEV oder mit anderer Software?
+      - Bevorzugt sie eine Exportdatei, die direkte Übertragung oder einen eigenen Zugang?
+      - Welcher Kontenrahmen gilt, SKR03 oder SKR04?
+      - Sollen Belegbilder mit übertragen werden?
+      - Wer bucht, Sie selbst oder die Kanzlei?
+    sources:
+      - *papierkram
+      - *candis
+software:
+  - candis
+  - billomat
+  - papierkram
+  - sevdesk
+  - lexware-office
+  - buchhaltungsbutler

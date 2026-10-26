@@ -12,5 +12,10 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/software/:path*", "/kategorien/:slug/:rest*", "/glossar/:slug/:rest*"],
+  matcher: [
+    "/software/:path*",
+    "/kategorien/:slug/:rest*",
+    "/glossar/:slug/:rest*",
+    "/ratgeber/:slug/:rest*",
+  ],
 };

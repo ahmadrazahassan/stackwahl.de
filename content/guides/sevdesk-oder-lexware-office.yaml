@@ -1,0 +1,102 @@
+slug: sevdesk-oder-lexware-office
+title: "sevdesk oder Lexware Office? Preise, Funktionen und Unterschiede im Detail"
+description: sevdesk und Lexware Office im direkten Vergleich, mit Preisen über ein Jahr, E-Rechnung, ELSTER, DATEV, Benutzern und Datenschutz.
+centralQuestion: Welches der beiden bekanntesten Programme passt besser zu meinem Unternehmen und meinem Budget?
+topic: Vergleich
+tags:
+  - Vergleich
+  - sevdesk
+  - Lexware Office
+status: draft
+published: 2026-10-26
+updated: 2026-10-26
+author: null
+thumbnail:
+  tone: primary
+  kicker: Direktvergleich
+  headline: sevdesk oder Lexware Office?
+  art: arcs
+  logos:
+    - sevdesk
+    - lexware-office
+sources:
+  - &sevdesk
+    url: https://sevdesk.de/preise/
+    title: sevdesk Preise
+    accessed: 2026-10-26
+  - &sevdeskfn
+    url: https://sevdesk.de/funktionen/
+    title: sevdesk Funktionen
+    accessed: 2026-10-26
+  - &sevdeskds
+    url: https://sevdesk.de/datenschutz/
+    title: sevdesk Datenschutz
+    accessed: 2026-10-26
+  - &lexware
+    url: https://www.lexware.de/preise/
+    title: Lexware Office Preise und Versionsvergleich
+    accessed: 2026-10-26
+  - &lexwarefakten
+    url: https://www.lexware.de/facts/lexware-office/
+    title: Lexware Office Kernfakten
+    accessed: 2026-10-26
+  - &lexwaresicher
+    url: https://www.lexware.de/datenschutz-datensicherheit/
+    title: Datenschutz und Datensicherheit mit Lexware Office
+    accessed: 2026-10-26
+intro: sevdesk und Lexware Office sind die beiden Programme, die Selbstständige und kleine Unternehmen in Deutschland am häufigsten gegeneinander abwägen. Beide laufen im Browser und als App, beide decken Rechnungen, Belege, Bank und Buchhaltung mit Umsatzsteuer ab. Die Unterschiede stecken im Preisaufbau, bei Benutzern, Laufzeiten und Zusatzfunktionen. Wir vergleichen beide anhand der Angaben der Anbieter.
+sections:
+  - id: preise
+    title: Preise über ein Jahr gerechnet
+    paragraphs:
+      - Lexware Office kostet in Version S 7,90 €, in M 12,90 €, in L 21,90 € und in XL 32,90 € im Monat, alle monatlich kündbar. sevdesk hat einen kostenlosen Tarif, der Tarif Rechnung kostet 11,90 €, Buchhaltung 25,90 € und Buchhaltung Pro 34,90 € im Monat bei monatlicher Zahlung, mit Rabatten bei 12 und 24 Monaten Laufzeit.
+      - Für eine Person mit Buchhaltung und UStVA kostet Lexware Office L 262,80 € netto im Jahr, sevdesk Buchhaltung 274,80 € netto bei 12 Monaten Laufzeit oder 238,80 € netto bei 24 Monaten. Lexware ist damit ohne Bindung etwas günstiger, sevdesk mit zwei Jahren Laufzeit. Beide Anbieter warben am 26.10.2026 mit befristeten Rabatten, die den ersten Monaten zugutekommen.
+    software:
+      - sevdesk
+      - lexware-office
+    sources:
+      - *sevdesk
+      - *lexware
+  - id: einstieg
+    title: Einstieg und Testphase
+    paragraphs:
+      - Für den Start ohne Kosten hat sevdesk die Nase vorn, der kostenlose Tarif erlaubt drei Rechnungen oder E-Rechnungen im Monat ohne Ablaufdatum. Lexware Office hat keinen kostenlosen Tarif, bietet aber eine 30-tägige Testphase mit allen Funktionen der Version XL und der Lohnabrechnung. sevdesk lässt sich 14 Tage mit allen Funktionen testen und fällt danach in den kostenlosen Tarif zurück.
+    sources:
+      - *sevdesk
+      - *lexware
+  - id: funktionen
+    title: Funktionen im Vergleich
+    paragraphs:
+      - Beide erstellen und empfangen E-Rechnungen in XRechnung und ZUGFeRD, gleichen Zahlungen mit offenen Rechnungen ab, erkennen Belege aus Fotos und erstellen EÜR, GuV und BWA. Die Umsatzsteuer-Voranmeldung senden beide direkt an das Finanzamt, sevdesk ab dem Tarif Buchhaltung, Lexware Office ab Version L.
+      - Unterschiede gibt es bei den Extras. Lexware Office bietet eine Lohnabrechnung als Zusatzmodul ab 12,90 € im Monat und in Version XL Abschlags-, Sammel- und Schlussrechnungen sowie Rechnungen für Bauleistungen nach § 13b UStG. sevdesk bietet das OSS-Verfahren für EU-Verkäufe an Verbraucher, Kostenstellen und eine REST-API im Tarif Buchhaltung Pro sowie eine Lagerfunktion als Erweiterung Inventar für 19,90 € im Monat. Eine Lohnabrechnung nennt die sevdesk-Preisseite nicht.
+    sources:
+      - *sevdeskfn
+      - *sevdesk
+      - *lexware
+  - id: team
+    title: Benutzer und Zusammenarbeit
+    paragraphs:
+      - sevdesk enthält in jedem Tarif einen Benutzer, jeder weitere kostet 5,90 € im Monat. Für drei Personen im Tarif Buchhaltung sind das bei 12 Monaten Laufzeit 416,40 € netto im Jahr. Lexware Office nennt die Zahl der enthaltenen Benutzer auf der Preisseite nicht und verweist auf eine Fair Usage Policy, das sollten Teams vor dem Kauf klären.
+      - Für die Steuerberatung bieten beide einen kostenlosen Zugang. sevdesk hat ein eigenes Steuerberaterportal und eine DATEV- und ADDISON-Schnittstelle, Lexware Office arbeitet laut Kernfakten über DATEV mit Kanzleien zusammen und übergibt Daten per elektronischer Pendelakte. Laut Preisseite nutzen über 50.000 Steuerberater den Zugang zu Lexware Office.
+    sources:
+      - *sevdesk
+      - *sevdeskfn
+      - *lexware
+      - *lexwarefakten
+  - id: datenschutz
+    title: Datenschutz und Sicherheit
+    paragraphs:
+      - Lexware Office speichert laut Anbieter in mehreren nach ISO 27001 und PCI DSS zertifizierten Rechenzentren in Frankfurt am Main, das GoBD-Langzeitbelegarchiv wird regelmäßig von einer Wirtschaftsprüfungsgesellschaft geprüft. sevdesk hat sich laut Datenschutzseite bewusst für den Serverstandort Deutschland entschieden und verlinkt dort Auftragsverarbeitungserklärung und technische Maßnahmen. Eine Aussage zur GoBD-Archivierung aller Belege haben wir bei sevdesk nicht gefunden.
+    sources:
+      - *lexwaresicher
+      - *sevdeskds
+  - id: fazit
+    title: Für wen sich welches Programm eignet
+    paragraphs:
+      - sevdesk passt zu Selbstständigen, die kostenlos beginnen und später mit einer längeren Laufzeit sparen wollen, sowie zu Onlinehändlern mit EU-Verkäufen. Lexware Office passt zu Unternehmen mit Mitarbeitenden, die Lohn und Buchhaltung in einem Werkzeug wollen, monatlich kündbar bleiben möchten und eng mit einer DATEV-Kanzlei arbeiten. Testen Sie beide mit einem echten Monat, bevor Sie sich festlegen.
+    sources:
+      - *sevdesk
+      - *lexware
+software:
+  - sevdesk
+  - lexware-office

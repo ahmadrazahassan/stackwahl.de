@@ -241,17 +241,52 @@ export const affiliateLinkSchema = z.strictObject({
 });
 export type AffiliateLink = z.infer<typeof affiliateLinkSchema>;
 
+/** Thumbnail drawn in code from the brand palette (Section 13.11: no stock or AI images). */
+export const guideThumbnailSchema = z.strictObject({
+  tone: z.enum(["primary", "ink", "tint"]),
+  /** Small uppercase line above the headline, e.g. the vendor or the topic. */
+  kicker: z.string().min(2).max(32),
+  /** Two to five words, set large on the thumbnail. */
+  headline: z.string().min(3).max(44),
+  art: z.enum(["rayburst", "nestedsquares", "lattice", "stacklines", "arcs"]),
+  /** Software slugs whose real logos appear on white plates. */
+  logos: z.array(slugSchema).max(4).default([]),
+});
+
+/**
+ * Ratgeber article, written from the sourced profiles and primary legal sources. Like the
+ * profile reviews, every section names the pages it is based on.
+ */
 export const guideSchema = z.strictObject({
   slug: slugSchema,
   title: z.string().min(10).max(90),
+  /** Also the meta description. */
   description: z.string().min(50).max(155),
   centralQuestion: z.string().min(10),
   topic: z.string().min(2),
+  tags: z.array(z.string().min(2).max(40)).min(1).max(4),
   status: statusSchema,
   published: isoDateSchema,
   updated: isoDateSchema,
-  author: slugSchema,
+  author: slugSchema.nullable(),
   reviewer: slugSchema.nullable().default(null),
+  thumbnail: guideThumbnailSchema,
+  intro: z.string().min(80),
+  sections: z
+    .array(
+      z.strictObject({
+        id: slugSchema,
+        title: z.string().min(3),
+        paragraphs: z.array(z.string().min(40)).min(1),
+        points: z.array(z.string().min(5)).optional(),
+        /** Software discussed in this section, shown as compact cards below it. */
+        software: z.array(slugSchema).optional(),
+        sources: z.array(sourceSchema).min(1),
+      }),
+    )
+    .min(3),
+  /** Software the article recommends looking at, shown at the end with both actions. */
+  software: z.array(slugSchema).default([]),
   sources: z.array(sourceSchema).min(1),
 });
 export type Guide = z.infer<typeof guideSchema>;

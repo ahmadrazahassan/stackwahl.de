@@ -1,3 +1,4 @@
+import { ArticleGrid } from "@/components/guides/article-card";
 import { FactBoard } from "@/components/home/fact-board";
 import { OverviewList } from "@/components/home/overview-list";
 import { SituationLinks } from "@/components/home/situation-links";
@@ -13,6 +14,7 @@ import { Container, Panel, SplitGrid } from "@/components/ui/layout";
 import { Eyebrow, Headline, Lead } from "@/components/ui/typography";
 import { getAllSoftware, getLiveCategories } from "@/lib/content";
 import { factLists, homeLogos, latestReview, overviewTabs, showcaseTabs } from "@/lib/content/home";
+import { articleTeasers } from "@/lib/content/guides";
 import { formatDate } from "@/lib/format";
 import { newsletterAvailable } from "@/lib/forms/availability";
 import { routes } from "@/lib/routes";
@@ -45,6 +47,7 @@ export default function HomePage() {
   const facts = factLists();
   const logos = homeLogos();
   const stand = latestReview();
+  const articles = articleTeasers(6);
   const finder = siteConfig.features.finder;
 
   const steps: Step[] = [
@@ -218,6 +221,27 @@ export default function HomePage() {
             <div className="mt-12">
               <FactBoard lists={facts} />
             </div>
+          </Container>
+        </Panel>
+      ) : null}
+
+      {articles.length > 0 ? (
+        <Panel as="section" aria-labelledby="ratgeber-titel">
+          <Container className="py-16 sm:py-24">
+            <SplitGrid aside={<Eyebrow className="text-muted">Ratgeber</Eyebrow>}>
+              <Headline id="ratgeber-titel" size="h2" tail="Mit Quellen belegt.">
+                Antworten auf die Fragen vor dem Kauf.
+              </Headline>
+              <p className="mt-6 max-w-[62ch] text-body text-muted">
+                E-Rechnung, Umsatzsteuer, versteckte Kosten oder der Wechsel von einem Programm zum
+                anderen: Unsere Artikel beantworten die häufigsten Fragen mit den Angaben der
+                Anbieter und den Gesetzestexten.
+              </p>
+              <ArrowLink href={routes.guides()} className="mt-6">
+                Alle Artikel
+              </ArrowLink>
+            </SplitGrid>
+            <ArticleGrid articles={articles} className="mt-12" />
           </Container>
         </Panel>
       ) : null}

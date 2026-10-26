@@ -1,0 +1,158 @@
+slug: ustva-elster-software
+title: "UStVA ohne eigenes ELSTER-Zertifikat: Diese Programme senden selbst"
+description: Welche Buchhaltungsprogramme die Umsatzsteuer-Voranmeldung selbst an das Finanzamt übertragen, ab welchem Tarif und was es kostet.
+centralQuestion: Mit welcher Software kann ich die Umsatzsteuer-Voranmeldung direkt aus der Buchhaltung senden, ohne das ELSTER-Portal?
+topic: Umsatzsteuer
+tags:
+  - Umsatzsteuer
+  - ELSTER
+  - Buchhaltung
+status: draft
+published: 2026-10-26
+updated: 2026-10-26
+author: null
+thumbnail:
+  tone: primary
+  kicker: Umsatzsteuer-Voranmeldung
+  headline: UStVA mit einem Klick
+  art: rayburst
+  logos:
+    - fastbill
+    - buchhaltungsbutler
+    - norman
+sources:
+  - &ustg18
+    url: https://www.gesetze-im-internet.de/ustg_1980/__18.html
+    title: § 18 UStG, Besteuerungsverfahren
+    accessed: 2026-10-24
+  - &fastbill
+    url: https://www.fastbill.com/funktionen
+    title: FastBill Funktionen
+    accessed: 2026-10-26
+  - &fastbillhilfe
+    url: https://support.fastbill.com/hc/de/articles/360012662874-Umsatzsteuer-Voranmeldung-USt-VA
+    title: FastBill Hilfe, Umsatzsteuer-Voranmeldung
+    accessed: 2026-10-25
+  - &meinbuero
+    url: https://www.meinbuero.de/preise/
+    title: WISO MeinBüro Preise und Pläne
+    accessed: 2026-10-26
+  - &bb
+    url: https://www.buchhaltungsbutler.de/funktionen/
+    title: BuchhaltungsButler Funktionen
+    accessed: 2026-10-26
+  - &bbpreise
+    url: https://www.buchhaltungsbutler.de/preise/
+    title: BuchhaltungsButler Preise
+    accessed: 2026-10-26
+  - &norman
+    url: https://norman.finance/de/ustva/ohne-elster
+    title: Norman UStVA ohne ELSTER
+    accessed: 2026-10-25
+  - &normanpreise
+    url: https://norman.finance/de/preise
+    title: Norman Preise und FAQ
+    accessed: 2026-10-25
+  - &sevdesk
+    url: https://sevdesk.de/funktionen/
+    title: sevdesk Funktionen
+    accessed: 2026-10-26
+  - &sevdeskpreise
+    url: https://sevdesk.de/preise/
+    title: sevdesk Preise
+    accessed: 2026-10-26
+  - &lexware
+    url: https://www.lexware.de/preise/
+    title: Lexware Office Preise und Versionsvergleich
+    accessed: 2026-10-26
+  - &collmex
+    url: https://www.collmex.de/buchhaltungssoftware.html
+    title: Collmex Komplettpakete, Funktionen
+    accessed: 2026-10-25
+  - &orgamax
+    url: https://www.orgamax.de/preise
+    title: orgaMAX Preise und Funktionsvergleich
+    accessed: 2026-10-26
+  - &papierkram
+    url: https://www.papierkram.de/funktionen/berichte-und-integrationen/
+    title: Papierkram Berichte und Integrationen
+    accessed: 2026-10-26
+  - &xentral
+    url: https://xentral.com/de/erp/buchhaltung
+    title: Xentral ERP Buchhaltung
+    accessed: 2026-10-25
+  - &sageactive
+    url: https://www.sage.com/de-de/produkte/sage-active/
+    title: Sage Active Produktseite, Pakete und FAQ
+    accessed: 2026-10-26
+intro: Wer umsatzsteuerpflichtig ist, meldet die Umsatzsteuer monatlich oder vierteljährlich an. Viele Selbstständige erledigen das im ELSTER-Portal und tippen die Werte aus der Buchhaltung ab, mit Fehlerrisiko und Zeitaufwand. Einfacher ist es, wenn das Buchhaltungsprogramm die Voranmeldung aus den Buchungen erzeugt und selbst überträgt. Wir haben in allen Profilen nachgesehen, welche Programme das laut Anbieter können, ab welchem Tarif und wo es Einschränkungen gibt.
+sections:
+  - id: warum
+    title: Warum die direkte Übertragung Zeit spart
+    paragraphs:
+      - "§ 18 UStG verpflichtet Unternehmer, die Voranmeldung auf elektronischem Weg an das Finanzamt zu übermitteln. Ob Sie dafür das ELSTER-Portal nutzen oder ein Programm, das eine zertifizierte ELSTER-Schnittstelle enthält, bleibt Ihnen überlassen."
+      - Der Vorteil eines Programms mit eigener Übertragung liegt auf der Hand. Die Werte entstehen aus Ihren Rechnungen und Belegen, Sie prüfen eine Vorschau und senden mit einem Klick. Mehrere Anbieter werben ausdrücklich damit, dass Sie dafür kein eigenes ELSTER-Zertifikat benötigen.
+    sources:
+      - *ustg18
+  - id: guenstig
+    title: Günstige Programme mit direkter Übertragung
+    paragraphs:
+      - FastBill reicht die Umsatzsteuer-Voranmeldung laut Funktionsseite direkt beim Finanzamt ein, ohne gesondertes ELSTER-Zertifikat, und führt sie schon im Tarif Solo für 9 € im Monat bei jährlicher Abbuchung. Eine Einschränkung nennt FastBill selbst, die Voranmeldung wird bei Soll-Versteuerung automatisch ausgefüllt. Wer nach vereinnahmten Entgelten versteuert, sollte das in der Testphase prüfen.
+      - WISO MeinBüro überträgt die Voranmeldung über die ELSTER-Schnittstelle schon im kleinsten Plan für 130,80 € im Jahr, der allerdings auf 25.000 € Umsatz in 365 Tagen begrenzt ist. Collmex sendet die Voranmeldung laut Funktionsseite mit einem Mausklick aus dem Programm, ohne separates Programm, und ist monatlich kündbar.
+    software:
+      - fastbill
+      - wiso-meinbuero
+      - collmex
+    sources:
+      - *fastbill
+      - *fastbillhilfe
+      - *meinbuero
+      - *collmex
+  - id: buchhaltung
+    title: Vollständige Buchhaltung mit Übertragung
+    paragraphs:
+      - sevdesk erstellt die Voranmeldung laut Funktionsseite in unter zwei Minuten und sendet sie über eine integrierte ELSTER-Schnittstelle, ohne zusätzliches Zertifikat, ab dem Tarif Buchhaltung für 22,90 € im Monat bei 12 Monaten Laufzeit. Lexware Office erstellt und versendet Voranmeldung und Zusammenfassende Meldung ab Version L für 21,90 € im Monat, monatlich kündbar.
+      - BuchhaltungsButler übermittelt Voranmeldung und Zusammenfassende Meldung ab dem Paket Smart über eine eigene Elster-Integration, ebenfalls ohne Zertifikat, für 34,90 € im Monat bei jährlicher Laufzeit. Vor der Übermittlung lassen sich alle Buchungen revisionssicher festschreiben. orgaMAX führt die Voranmeldung in allen Plänen ab 49 € im Monat. Norman überträgt sie über die zertifizierte ELSTER-Schnittstelle für Selbstständige im Tarif Pro für 21 € im Monat bei jährlicher Zahlung und für UG und GmbH im Tarif Max.
+    software:
+      - sevdesk
+      - lexware-office
+      - buchhaltungsbutler
+      - norman
+    sources:
+      - *sevdesk
+      - *sevdeskpreise
+      - *lexware
+      - *bb
+      - *bbpreise
+      - *orgamax
+      - *norman
+      - *normanpreise
+  - id: einschraenkungen
+    title: Wo die Übertragung fehlt oder nur teilweise klappt
+    paragraphs:
+      - Papierkram erstellt die Voranmeldung monatlich, vierteljährlich oder jährlich, überträgt sie aber nicht selbst. Sie laden sie als XML-Datei herunter und im ELSTER-Portal hoch. Das ist schneller als Abtippen, aber ein zusätzlicher Schritt. Xentral schreibt auf seiner Buchhaltungsseite, dass BWA, Saldenliste und UStVA im aktuellen Stand des Moduls noch nicht vorgesehen sind.
+      - Sage Active überträgt die Voranmeldung nur im Paket Essentials, nicht im Starter. Bei reinen Rechnungsprogrammen wie easybill und Billomat und bei Candis als Werkzeug für eingehende Rechnungen nennen die geprüften Seiten keine Übertragung, dort bleibt die Voranmeldung bei der Steuerberatung.
+    sources:
+      - *papierkram
+      - *xentral
+      - *sageactive
+  - id: checkliste
+    title: Checkliste vor der Entscheidung
+    paragraphs:
+      - Prüfen Sie in der Testphase eine echte Voranmeldung mit Ihren eigenen Buchungen, bevor Sie einen Jahresvertrag schließen. Achten Sie darauf, ob die Funktion in dem Tarif enthalten ist, den Sie buchen wollen, denn bei mehreren Anbietern beginnt sie erst in einem höheren Paket.
+    points:
+      - Übertragung direkt aus dem Programm oder nur XML-Export
+      - Enthalten im gewünschten Tarif und nicht erst im nächsthöheren
+      - Vorschau der Kennzahlen vor dem Senden
+      - Soll- und Ist-Versteuerung, je nachdem, was für Sie gilt
+      - Zusammenfassende Meldung, falls Sie in die EU liefern
+    sources:
+      - *fastbill
+      - *bb
+software:
+  - fastbill
+  - wiso-meinbuero
+  - collmex
+  - sevdesk
+  - lexware-office
+  - buchhaltungsbutler

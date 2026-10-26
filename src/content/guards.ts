@@ -334,10 +334,47 @@ export function checkContent(content: ContentSet, options: GuardOptions): Issue[
     issues.push(...reference(`${at}.reviewer`, "Prüfer", g.reviewer, authors));
     issues.push(...futureDate(`${at}.published`, g.published, today));
     issues.push(...futureDate(`${at}.updated`, g.updated, today));
-    g.sources.forEach((src, i) =>
+    const guideSources = [...g.sources, ...g.sections.flatMap((s) => s.sources)];
+    guideSources.forEach((src, i) =>
       issues.push(...futureDate(`${at}.sources[${i}]`, src.accessed, today)),
     );
-    issues.push(...copyIssues(at, [g.title, g.description, g.centralQuestion]));
+    const slugs = [
+      ...g.thumbnail.logos,
+      ...g.software,
+      ...g.sections.flatMap((s) => s.software ?? []),
+    ];
+    slugs.forEach((slug) =>
+      issues.push(...reference(`${at}.software`, "Software", slug, software)),
+    );
+    const texts = [
+      g.title,
+      g.description,
+      g.centralQuestion,
+      g.intro,
+      g.thumbnail.kicker,
+      g.thumbnail.headline,
+      ...g.tags,
+      ...g.sections.flatMap((s) => [s.title, ...s.paragraphs, ...(s.points ?? [])]),
+    ];
+    issues.push(...copyIssues(at, texts));
+    for (const text of texts) {
+      if (TEST_CLAIM.test(text)) {
+        issues.push({
+          severity: "error",
+          code: "test-claim",
+          where: at,
+          message: `Testaussage ohne dokumentierten Test: „${text.slice(0, 60)}“`,
+        });
+      }
+    }
+    if (g.status === "published" && !g.author) {
+      issues.push({
+        severity: "error",
+        code: "missing-author",
+        where: at,
+        message: "Veröffentlicht ohne echte Autorin oder echten Autor.",
+      });
+    }
   }
 
   const terms = new Set(content.glossary.map((t) => t.slug));

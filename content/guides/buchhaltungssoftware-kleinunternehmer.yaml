@@ -1,0 +1,143 @@
+slug: buchhaltungssoftware-kleinunternehmer
+title: "Buchhaltungssoftware für Kleinunternehmer: 8 Programme mit § 19 UStG"
+description: Welche Programme die Kleinunternehmerregelung unterstützen, was sie kosten und worauf Sie bei Rechnungen ohne Umsatzsteuer achten sollten.
+centralQuestion: Welche Software unterstützt die Kleinunternehmerregelung zuverlässig und kostet dabei möglichst wenig?
+topic: Kleinunternehmer
+tags:
+  - Kleinunternehmer
+  - Buchhaltung
+  - Gründung
+status: draft
+published: 2026-10-26
+updated: 2026-10-26
+author: null
+thumbnail:
+  tone: tint
+  kicker: Paragraf 19 UStG
+  headline: Software für Kleinunternehmer
+  art: stacklines
+  logos:
+    - sevdesk
+    - papierkram
+    - collmex
+sources:
+  - &ustg19
+    url: https://www.gesetze-im-internet.de/ustg_1980/__19.html
+    title: § 19 UStG, Besteuerung der Kleinunternehmer
+    accessed: 2026-10-26
+  - &ustdv34a
+    url: https://www.gesetze-im-internet.de/ustdv_1980/__34a.html
+    title: § 34a UStDV, Rechnungen für Kleinunternehmer
+    accessed: 2026-10-26
+  - &sevdesk
+    url: https://hilfe.sevdesk.de/de/articles/9382213-einstellung-zu-buchhaltung-steuer
+    title: sevdesk Hilfe, Einstellung zu Buchhaltung und Steuer
+    accessed: 2026-10-25
+  - &sevdeskpreise
+    url: https://sevdesk.de/preise/
+    title: sevdesk Preise
+    accessed: 2026-10-26
+  - &papierkram
+    url: https://www.papierkram.de/preise/
+    title: Papierkram Preise und Funktionsübersicht
+    accessed: 2026-10-26
+  - &collmex
+    url: https://www.collmex.de/preise.html
+    title: Collmex Preisliste
+    accessed: 2026-10-25
+  - &collmexbh
+    url: https://www.collmex.de/buchhaltung_software.html
+    title: Collmex Buchhaltung
+    accessed: 2026-10-25
+  - &norman
+    url: https://norman.finance/de/preise
+    title: Norman Preise und FAQ
+    accessed: 2026-10-25
+  - &meinbuero
+    url: https://www.meinbuero.de/preise/
+    title: WISO MeinBüro Preise und Pläne
+    accessed: 2026-10-26
+  - &meinbuerokl
+    url: https://www.meinbuero.de/funktionen-fuer-kleinunternehmer/
+    title: WISO MeinBüro für Kleinunternehmer
+    accessed: 2026-10-25
+  - &fastbill
+    url: https://www.fastbill.com/preise
+    title: FastBill Preise und Funktionsvergleich
+    accessed: 2026-10-26
+  - &bb
+    url: https://www.buchhaltungsbutler.de/funktionen/
+    title: BuchhaltungsButler Funktionen
+    accessed: 2026-10-26
+  - &orgamax
+    url: https://info.orgamax.de/faq-orgamax-buchhaltung/die-steuereinstellungen
+    title: orgaMAX FAQ, Steuereinstellungen
+    accessed: 2026-10-25
+intro: Als Kleinunternehmer stellen Sie Rechnungen ohne Umsatzsteuer aus und sparen sich die Umsatzsteuer-Voranmeldung. Das klingt einfach, doch die Rechnung braucht den richtigen Hinweis, die Umsatzgrenzen müssen im Blick bleiben, und spätestens beim Überschreiten der Grenze muss die Software umstellen können. Wir haben in allen 20 Profilen nachgesehen, welche Programme die Kleinunternehmerregelung laut Anbieter ausdrücklich unterstützen. Acht sind es.
+sections:
+  - id: regeln
+    title: Die Regeln in Kürze
+    paragraphs:
+      - "Nach § 19 Absatz 1 UStG ist der Umsatz eines Unternehmers steuerfrei, wenn der Gesamtumsatz im vorangegangenen Kalenderjahr 25.000 € nicht überschritten hat und im laufenden Kalenderjahr 100.000 € nicht überschreitet. Wer die Regelung nutzt, weist keine Umsatzsteuer aus und kann im Gegenzug keine Vorsteuer abziehen."
+      - Eine Rechnung als Kleinunternehmer muss nach § 34a UStDV mindestens den vollständigen Namen und die Anschrift beider Seiten, die Steuernummer, Umsatzsteuer-Identifikationsnummer oder Kleinunternehmer-Identifikationsnummer, das Ausstellungsdatum, Menge und Art der Leistung sowie das Entgelt in einer Summe mit einem Hinweis auf die Steuerbefreiung enthalten. Solche Rechnungen dürfen Sie immer als sonstige Rechnung übermitteln, also auch als einfaches PDF.
+    sources:
+      - *ustg19
+      - *ustdv34a
+  - id: worauf-achten
+    title: Was gute Software für Kleinunternehmer leisten sollte
+    paragraphs:
+      - Entscheidend ist eine Einstellung für die Kleinunternehmerregelung, die den Hinweis auf die Steuerbefreiung automatisch auf jede Rechnung setzt und bei den Ausgaben keine Vorsteuer verbucht. Ebenso wichtig ist, dass Sie jederzeit in die Regelbesteuerung wechseln können, wenn Ihr Umsatz die Grenzen überschreitet, ohne das Programm zu wechseln.
+      - Achten Sie außerdem auf den Empfang von E-Rechnungen, denn diese Pflicht gilt auch für Kleinunternehmer, und auf eine Einnahmen-Überschuss-Rechnung für die Steuererklärung. Ein günstiger oder kostenloser Einstieg ist für viele Gründer das wichtigste Kriterium.
+    points:
+      - Einstellung Kleinunternehmer mit automatischem Hinweis auf der Rechnung
+      - Wechsel in die Regelbesteuerung im selben Programm
+      - E-Rechnungen empfangen und archivieren
+      - EÜR für die Steuererklärung
+    sources:
+      - *ustdv34a
+  - id: kostenlos-starten
+    title: Kostenlos oder sehr günstig starten
+    paragraphs:
+      - sevdesk bietet eine Einstellung Kleinunternehmer, bei der laut Hilfe-Center der Hinweis nach § 19 UStG automatisch auf die Rechnungen kommt und bei Ausgaben keine Steuer auswählbar ist. Der kostenlose Tarif erlaubt drei Rechnungen oder E-Rechnungen im Monat, der Tarif Rechnung kostet 9,90 € im Monat bei 12 Monaten Laufzeit.
+      - Papierkram lässt die Kleinunternehmerregelung aktivieren und bietet ein kostenloses Paket mit bis zu 15 Belegen im Monat, das Paket S kostet 12,90 € im Monat bei jährlicher Zahlung. Collmex macht die Regelung je Geschäftsjahr wählbar, Collmex buchhaltung free kostet 0 €, das Komplettpaket basic mit Rechnungen 16,95 € im Monat und ist monatlich kündbar. Norman hat einen eigenen Tarif Klein für Kleinunternehmer für 9 € im Monat bei jährlicher Zahlung. Wichtig dabei ist, dass EÜR und Steuererklärungen dort laut FAQ nur bei jährlicher Zahlung abgegeben werden können.
+    software:
+      - sevdesk
+      - papierkram
+      - collmex
+      - norman
+    sources:
+      - *sevdesk
+      - *sevdeskpreise
+      - *papierkram
+      - *collmex
+      - *collmexbh
+      - *norman
+  - id: mehr-funktionen
+    title: Mehr Funktionen für wachsende Kleinunternehmen
+    paragraphs:
+      - WISO MeinBüro berücksichtigt die Kleinunternehmerregelung laut Anbieter automatisch. Der Plan Rechnungen und Angebote kostet 130,80 € im Jahr und ist auf 25.000 € Umsatz in 365 Tagen begrenzt, was zur Umsatzgrenze der Regelung passt. FastBill macht die Kleinunternehmerregelung einstellbar und kostet im Tarif Solo 9 € im Monat bei jährlicher Abbuchung.
+      - BuchhaltungsButler eignet sich laut Funktionsseite für Kleinunternehmer ebenso wie für Soll- und Istversteuerer, kostet aber mindestens 29,90 € im Monat bei jährlicher Laufzeit und ist damit eher für Kleinunternehmer mit vielen Belegen gedacht. orgaMAX lässt die Regelung in den Steuereinstellungen aktivieren, beginnt aber bei 49 € im Monat und richtet sich an Betriebe, die Auftragswesen und Buchhaltung in einem System wollen.
+    software:
+      - wiso-meinbuero
+      - fastbill
+    sources:
+      - *meinbuero
+      - *meinbuerokl
+      - *fastbill
+      - *bb
+      - *orgamax
+  - id: grenze-ueberschritten
+    title: Wenn Ihr Umsatz die Grenze überschreitet
+    paragraphs:
+      - Überschreitet Ihr Umsatz im laufenden Jahr 100.000 €, endet die Steuerbefreiung nach § 19 UStG. Danach weisen Sie Umsatzsteuer aus und geben Voranmeldungen ab. Programme, die die Umsatzsteuer-Voranmeldung direkt an das Finanzamt übertragen, ersparen Ihnen dann einen Wechsel. sevdesk, FastBill, WISO MeinBüro, BuchhaltungsButler, orgaMAX, Collmex und Norman nennen eine solche Übertragung, Papierkram erstellt die Voranmeldung als XML-Datei für den Upload im ELSTER-Portal.
+      - Klären Sie den Zeitpunkt des Wechsels mit Ihrer Steuerberatung, denn er hängt von den Umsätzen im Vorjahr und im laufenden Jahr ab. Dieser Artikel ersetzt keine Steuerberatung.
+    sources:
+      - *ustg19
+      - *papierkram
+software:
+  - sevdesk
+  - papierkram
+  - collmex
+  - norman
+  - wiso-meinbuero
+  - fastbill

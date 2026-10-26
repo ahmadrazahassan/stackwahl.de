@@ -9,6 +9,7 @@ export const PLACEMENTS = [
   "alternativen",
   "vergleich",
   "finder",
+  "ratgeber",
 ] as const;
 export type Placement = (typeof PLACEMENTS)[number];
 
