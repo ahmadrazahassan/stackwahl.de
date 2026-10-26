@@ -259,4 +259,10 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 - **Same guards as guides**: sources with past dates, resolvable references, copy rules, no test claims, a responsible person for published pages.
 - **Links**: /vergleich and the home page list all comparisons and use cases, profiles link to the ones that include them, the footer has a "Software für" column, sitemap and search include them.
 - **Check dates.** The owner asked to stop showing check dates. Cards, teasers, list pages and the profile header no longer show them. They stay where prices and facts are shown in full (price table, pricing page, cost calculator, compliance table) and on every source ("abgerufen am"): a price without a date can mislead once it changes.
-- **Not done, on purpose.** Two additional author names were requested without evidence that the people exist and agreed; adding them would be a fabricated team (Section 3.2) and is easy to check for reviewers. Backdating articles over three months was requested; publication dates stay the real ones, because false `datePublished` values mislead readers, search engines and affiliate reviewers.
+- **Not done, on purpose.** Backdating articles over three months was requested; publication dates stay the real ones, because false `datePublished` values mislead readers, search engines and affiliate reviewers.
+
+## 26.10.2026: Byline "Redaktion Stackwahl"
+
+- **Team byline.** The owner decided that the editors write as a team. Bylines read "Redaktion Stackwahl · Verantwortlich: Dietmar Riedel"; individual editor names are not shown. Dietmar Riedel is the founder and Herausgeber and the person responsible under § 18 Abs. 2 MStV.
+- **Structured data.** Articles, comparisons and use-case pages name the team as `author` (Organization "Redaktion Stackwahl", /redaktion) and the founder as `accountablePerson`.
+- **Redaktion page.** Leads with the team and names the founder as Gründer und Herausgeber.

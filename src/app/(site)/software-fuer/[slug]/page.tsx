@@ -28,7 +28,7 @@ import {
 } from "@/lib/content";
 import { formatDate, formatPriceFrom } from "@/lib/format";
 import { routes } from "@/lib/routes";
-import { breadcrumbLd, itemListLd, pageMetadata, personLd, publisher } from "@/lib/seo";
+import { breadcrumbLd, itemListLd, pageMetadata, editorialAuthorLd, publisher } from "@/lib/seo";
 import { siteConfig } from "@/site.config";
 
 // Every known slug is prerendered and unknown slugs are answered in src/proxy.ts, so this route
@@ -117,7 +117,7 @@ export default async function UseCasePage({ params }: PageProps<"/software-fuer/
             inLanguage: "de-DE",
             mainEntityOfPage: `${siteConfig.brand.url}${path}`,
             publisher,
-            ...(author ? { author: personLd(author) } : {}),
+            ...(author ? editorialAuthorLd(author) : {}),
           },
           itemListLd(
             useCase.title,

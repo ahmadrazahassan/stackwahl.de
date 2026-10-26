@@ -93,6 +93,10 @@ test.describe("Templates", () => {
     await expect(wertung.getByText("Erst nach einem Praxistest")).toBeVisible();
     await expect(page.getByText(/noch nicht in einem eigenen Konto ausprobiert/)).toBeVisible();
     await expect(page.getByText("Entwurf, nicht veröffentlicht")).toHaveCount(0);
+    await expect(page.getByRole("link", { name: "Redaktion Stackwahl" }).first()).toHaveAttribute(
+      "href",
+      "/redaktion",
+    );
     await expect(page.getByRole("link", { name: "Dietmar Riedel" }).first()).toHaveAttribute(
       "href",
       "/redaktion/dietmar-riedel",

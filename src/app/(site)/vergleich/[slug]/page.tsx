@@ -26,7 +26,7 @@ import {
 import { compareProducts } from "@/lib/content/home";
 import { formatDate } from "@/lib/format";
 import { routes } from "@/lib/routes";
-import { breadcrumbLd, pageMetadata, personLd, publisher } from "@/lib/seo";
+import { breadcrumbLd, pageMetadata, editorialAuthorLd, publisher } from "@/lib/seo";
 import { siteConfig } from "@/site.config";
 
 // Every known slug is prerendered and unknown slugs are answered in src/proxy.ts, so this route
@@ -90,7 +90,7 @@ export default async function ComparisonPage({ params }: PageProps<"/vergleich/[
             inLanguage: "de-DE",
             mainEntityOfPage: `${siteConfig.brand.url}${path}`,
             publisher,
-            ...(author ? { author: personLd(author) } : {}),
+            ...(author ? editorialAuthorLd(author) : {}),
             about: programs.map((p) => ({ "@type": "SoftwareApplication", name: p.name })),
           },
           breadcrumbLd(crumbs, path),

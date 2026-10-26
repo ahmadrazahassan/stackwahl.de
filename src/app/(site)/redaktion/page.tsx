@@ -11,9 +11,9 @@ import { breadcrumbLd, pageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/site.config";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Redaktion: Wer hinter Stackwahl steht",
+  title: "Redaktion: Wer bei Stackwahl schreibt und verantwortet",
   description:
-    "Wer bei Stackwahl Programme auswählt, Angaben prüft und Profile und Ratgeber freigibt, und wie wir dabei arbeiten.",
+    "Die Redaktion von Stackwahl schreibt Profile, Vergleiche und Ratgeber. Wer verantwortlich ist und wie die Redaktion arbeitet.",
   path: routes.editorial(),
 });
 
@@ -27,11 +27,11 @@ export default function EditorialPage() {
       <PageHeader
         crumbs={crumbs}
         eyebrow="Redaktion"
-        title="Wer hinter Stackwahl steht."
-        tail="Mit Namen."
-        lead="Jedes Profil und jeder Ratgeber nennt die Person, die für den Inhalt verantwortlich ist. Hier stehen alle, die bei Stackwahl Inhalte freigeben."
+        title="Die Redaktion von Stackwahl."
+        tail="Mit klarer Verantwortung."
+        lead="Profile, Vergleiche und Ratgeber schreibt die Redaktion von Stackwahl. Verantwortlich für alle Inhalte ist der Gründer und Herausgeber, der jeden Text freigibt."
       />
-      <PageSection id="personen" label="Personen" title="Die Redaktion">
+      <PageSection id="personen" label="Verantwortlich" title="Gründer und Herausgeber">
         <ul className="grid gap-4 md:grid-cols-2">
           {authors.map((a) => (
             <li key={a.slug}>

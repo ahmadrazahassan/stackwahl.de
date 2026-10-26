@@ -15,7 +15,7 @@ import { formatDate } from "@/lib/format";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/site.config";
 import { JsonLd } from "@/components/seo/json-ld";
-import { breadcrumbLd, pageMetadata, personLd, publisher } from "@/lib/seo";
+import { breadcrumbLd, pageMetadata, editorialAuthorLd, publisher } from "@/lib/seo";
 import { getAuthor } from "@/lib/content";
 
 // Every known slug is prerendered and unknown slugs are answered in src/proxy.ts, so this route
@@ -85,7 +85,7 @@ export default async function GuidePage({ params }: PageProps<"/ratgeber/[slug]"
     inLanguage: "de-DE",
     mainEntityOfPage: `${siteConfig.brand.url}${routes.guide(guide.slug)}`,
     publisher,
-    ...(author ? { author: personLd(author) } : {}),
+    ...(author ? editorialAuthorLd(author) : {}),
     citation: allSources.map((s) => s.url),
   };
 

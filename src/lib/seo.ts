@@ -191,6 +191,21 @@ export function itemListLd(name: string, items: { name: string; path: string }[]
   };
 }
 
+/**
+ * Articles are written by the editorial team; the founder is the accountable person. Both are
+ * real: the team as an organization, the founder by name.
+ */
+export function editorialAuthorLd(author: { slug: string; name: string; role: string }) {
+  return {
+    author: {
+      "@type": "Organization",
+      name: `Redaktion ${brand.name}`,
+      url: absoluteUrl(routes.editorial()),
+    },
+    accountablePerson: personLd(author),
+  };
+}
+
 export function personLd(author: { slug: string; name: string; role: string }) {
   return {
     "@type": "Person",
