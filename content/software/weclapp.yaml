@@ -1,0 +1,246 @@
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+slug: weclapp
+name: weclapp
+vendor: weclapp
+categories:
+  - erp-software
+status: draft
+verification: unverified
+lastReviewed: 2026-10-25
+author: null
+summary: Cloud-ERP aus Kitzingen mit CRM, Projekten, Warenwirtschaft und Buchhaltung, E-Rechnung, DATEV-Export und Servern in Deutschland, ab 39 € je Nutzer.
+website: https://www.weclapp.com/de/
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://www.weclapp.com/de/preise/
+    title: weclapp Preise und Funktionen
+    accessed: 2026-10-25
+targetGroups:
+  - kmu
+  - agenturen
+  - e-commerce
+  - gruender
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: null
+  android: null
+freeTrialDays: 30
+freePlan: false
+trialSource: *preise
+compliance:
+  gobd:
+    status: ja
+    note: Laut Anbieter GoBD-konforme Cloud-Buchhaltung; Buchungssätze werden festgeschrieben.
+    source: &buchhaltung
+      url: https://www.weclapp.com/de/buchhaltungssoftware/
+      title: weclapp Buchhaltungssoftware
+      accessed: 2026-10-25
+  eRechnungEmpfang:
+    status: ja
+    note: Eingehende E-Rechnungen erfassen, OCR für Eingangsbelege.
+    source: *preise
+  eRechnungVersand:
+    status: ja
+    note: ZUGFeRD und XRechnung in allen Paketen.
+    source: *buchhaltung
+  datevExport:
+    status: ja
+    note: DATEV-Export mit mehreren Varianten, kostenloser Zugang für Steuerberater.
+    source: *buchhaltung
+  elster:
+    status: ja
+    note: Laut Anbieter Umsatzsteuer-Voranmeldung erstellen und an das Finanzamt senden.
+    source: *buchhaltung
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: ja
+    note: Anbindung des Online-Banking-Kontos, Transaktionen abrufen und buchen, Zahllauf an die Bank.
+    source: *buchhaltung
+  serverstandort:
+    status: ja
+    note: Zertifizierte Rechenzentren in Deutschland, laut Anbieter ISO 27001 und PCI DSS.
+    source: *buchhaltung
+  avv:
+    status: ja
+    note: Vorlage für den Vertrag zur Auftragsverarbeitung in der Datenschutzerklärung, unterschrieben per E-Mail zurück.
+    source:
+      url: https://www.weclapp.com/de/datenschutz/
+      title: weclapp Datenschutzerklärung
+      accessed: 2026-10-25
+  deutscherSupport:
+    status: ja
+    note: E-Mail-Support per Ticketsystem in allen Paketen, Telefonsupport erst mit einem Support-Paket ab Bronze.
+    source: &support
+      url: https://www.weclapp.com/de/support/
+      title: weclapp Support-Pakete
+      accessed: 2026-10-25
+features:
+  angebote:
+    status: ja
+    source: *preise
+  rechnungen:
+    status: ja
+    note: Auch Abschlags- und Sammelrechnungen.
+    source: *preise
+  mahnwesen:
+    status: ja
+    note: Dreistufiges Mahnwesen mit Verzugszinsen.
+    source: *buchhaltung
+  belegerfassungOcr:
+    status: ja
+    source: *buchhaltung
+  bankabgleich:
+    status: ja
+    source: *buchhaltung
+  kassenbuch:
+    status: ja
+    source: *preise
+  euer:
+    status: ja
+    source: *buchhaltung
+  lager:
+    status: aufpreis
+    note: Warenwirtschaft, Lager und Produktion erst im Paket ERP Handel.
+    source: *preise
+  projektzeiten:
+    status: aufpreis
+    note: Projektmanagement und Zeiterfassung ab Paket ERP Dienstleistung.
+    source: *preise
+  api:
+    status: aufpreis
+    note: REST-API ab Paket ERP Dienstleistung.
+    source: *preise
+  steuerberaterzugang:
+    status: ja
+    note: Kostenloser Zugang für Steuerberater.
+    source: *preise
+  mobileApp:
+    status: aufpreis
+    note: Mobile Lager-App im Paket ERP Handel.
+    source: *preise
+plans:
+  - name: ERP Starter
+    monthlyCents: 3900
+    yearlyMonthlyCents: null
+    perUser: true
+    net: true
+    includes:
+      - Kontaktmanagement
+      - Angebote und Rechnungen
+      - Aufgaben und Kalender
+      - Fibu und Banking, Berichtswesen
+      - E-Rechnung
+    note: Nur monatlich buchbar und nicht mit anderen Paketen kombinierbar.
+    source: *preise
+  - name: ERP Dienstleistung
+    monthlyCents: 9500
+    yearlyMonthlyCents: 8600
+    perUser: true
+    net: true
+    includes:
+      - Alles aus ERP Starter
+      - CRM mit Kampagnen und Chancen
+      - Projektmanagement inklusive Leistungsnachweis
+      - Personal-Zeiterfassung
+      - API-Zugriff
+    source: *preise
+  - name: ERP Handel
+    monthlyCents: 17900
+    yearlyMonthlyCents: 16300
+    perUser: true
+    net: true
+    includes:
+      - Alles aus ERP Dienstleistung
+      - Warenwirtschaft, Disposition und Einkauf
+      - Lagerverwaltung inklusive Mobile Lager-App
+      - Serien- und Chargennummern, Produktion
+      - Anbindung von Shops und Marktplätzen
+    source: *preise
+pros:
+  - Veröffentlichte Preise je Nutzer, monatlich oder jährlich buchbar, 30 Tage kostenlos mit automatischer Kündigung.
+  - E-Rechnung in ZUGFeRD und XRechnung, DATEV-Export und UStVA-Versand laut Anbieter in allen Paketen.
+  - Server in zertifizierten deutschen Rechenzentren, Vorlage für die Auftragsverarbeitung öffentlich verfügbar.
+  - Kostenloser Zugang für Steuerberater und kostenloser E-Mail-Support.
+  - Anbindung an Shopware, WooCommerce, Shopify, Amazon, eBay und kaufland.de im Paket Handel.
+cons:
+  - Warenwirtschaft und Lager erst im Paket ERP Handel für 163 € je Nutzer bei Jahreszahlung.
+  - Telefonsupport nur mit einem kostenpflichtigen Support-Paket.
+  - ERP Starter ist nur monatlich buchbar und lässt sich nicht mit anderen Paketen kombinieren.
+  - Preise je Nutzer, größere Teams zahlen entsprechend mehr; Enterprise ab 10 Lizenzen auf Anfrage.
+idealFor:
+  - Dienstleister, Agenturen und Händler, die CRM, Projekte, Lager und Buchhaltung in einem Cloud-System bündeln wollen
+notIdealFor:
+  - Einzelunternehmer, die nur Rechnungen schreiben und keine ERP-Funktionen brauchen
+  - Teams, die Telefonsupport ohne Zusatzkosten erwarten
+review:
+  sections:
+    - id: einordnung
+      title: Was weclapp ist und für wen es gedacht ist
+      paragraphs:
+        - weclapp ist ein ERP-System, das vollständig im Browser läuft. Hinter dem Produkt steht die weclapp GmbH mit Sitz in Kitzingen. Das System verbindet Kontaktmanagement und CRM, Angebote und Aufträge, Projekte mit Zeiterfassung, Einkauf, Lager und Produktion sowie eine Finanzbuchhaltung mit E-Rechnung und DATEV-Export.
+        - Die Pakete sind nach Branchen geschnitten. ERP Starter richtet sich an kleine Teams, die mit Rechnungen und Buchhaltung beginnen. ERP Dienstleistung zielt auf Beratung, Agenturen und IT-Dienstleister, ERP Handel auf Produktion, E-Commerce und Systemhäuser. Ab mehr als zehn Lizenzen bietet weclapp ein Enterprise-Angebot mit Preisvorteilen und eigenem Ansprechpartner an.
+      sources:
+        - *preise
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Im Vertrieb verwaltet weclapp Kontakte, Interessenten und Kunden mit Kundenakte, Konditionen, Chancen, Kampagnen und einer Vertriebspipeline. Kontaktdaten aus Webformularen gelangen über Web2Lead direkt ins System, E-Mails werden automatisch abgelegt. Angebote lassen sich über einen öffentlichen Link teilen. Das Auftragswesen unterstützt Vorkasse, Abschlag und Anzahlung, flexible Workflows und Provisionspartner.
+        - Für Dienstleister enthält das Paket ERP Dienstleistung ein Projektmanagement mit Projektabrechnung und Controlling, Leistungsnachweisen, Kontingenten und Ressourcenauslastung sowie eine Personal-Zeiterfassung. Händler bekommen im Paket ERP Handel eine Warenwirtschaft mit Disposition und Bestellvorschlägen, eine konfigurierbare Lagerstruktur, Kommissionierung, Retouren, Inventur und Bestandsbewertung, eine Mobile Lager-App sowie Produktion mit Stücklisten und Arbeitsplänen.
+        - Die Buchhaltung arbeitet mit Standard-Kontenplänen oder importierten eigenen Plänen, Kontierungsregeln, Steuermatrix und Stapelbuchung. Bankumsätze werden über das angebundene Online-Banking abgerufen, mit offenen Posten verrechnet und gebucht. Für Eingangsbelege gibt es eine OCR-Texterkennung. Auswertungen reichen von der Summen- und Saldenliste über die Einnahmen-Überschuss-Rechnung bis zur Zusammenfassenden Meldung. Mahnläufe sind dreistufig und auf Wunsch mit Verzugszinsen.
+        - Technisch bietet weclapp eine REST-API ab dem Paket Dienstleistung, Erweiterungen im weclapp-store, individuell konfigurierbare Datenfelder, einen Formulardesigner für alle Belege und mehr als 100 Standardberichte. Als Add-ons nennt der Anbieter eine Kassensoftware, ein Vertragsmanagement und einen Helpdesk.
+      sources:
+        - *preise
+        - *buchhaltung
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - weclapp rechnet je Nutzer und Monat ab, alle Preise netto. ERP Starter kostet 39 € und ist nur monatlich buchbar. ERP Dienstleistung kostet 95 € bei monatlicher und 86 € bei jährlicher Zahlung. ERP Handel kostet 179 € monatlich oder 163 € bei jährlicher Zahlung. In den ersten 30 Tagen ist die Nutzung kostenlos, die Testphase endet automatisch.
+        - Ein Rechenbeispiel für eine Agentur mit drei Nutzern im Paket ERP Dienstleistung bei Jahreszahlung ergibt 258 € netto im Monat, also 3.096 € netto oder 3.684,24 € brutto im Jahr. Bei monatlicher Zahlung sind es 285 € netto im Monat oder 3.420 € netto im Jahr. Ein Händler mit fünf Nutzern im Paket ERP Handel zahlt bei Jahreszahlung 815 € netto im Monat, also 9.780 € netto im Jahr.
+        - Zu den Lizenzen kommen optional Support-Pakete. Laut Support-Seite ist der E-Mail-Support per Ticketsystem immer enthalten. Telefonsupport, Fernwartung und kürzere Reaktionszeiten gibt es in den Paketen Bronze, Silber und Gold, für die die Tabelle 189 €, 389 € und 599 € bei einer Mindestlaufzeit ab einem Monat nennt. Ob diese Beträge monatlich gelten, sagt die Tabelle nicht ausdrücklich. Onboarding-Pakete und Schulungen der Professional Services kosten ebenfalls extra.
+      sources:
+        - *preise
+        - *support
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und ELSTER
+      paragraphs:
+        - Die E-Rechnung ist in allen Paketen enthalten. weclapp unterstützt laut Buchhaltungsseite die Formate ZUGFeRD und XRechnung für Ausgangsrechnungen, und eingehende E-Rechnungen lassen sich im Einkauf erfassen. Damit sind Empfangspflicht und Versand abgedeckt.
+        - Für die Steuerberatung gibt es einen DATEV-Export mit mehreren Varianten und einen kostenlosen Zugang für Steuerberater, für Österreich zusätzlich einen BMD-Export. Gebuchte Belege werden festgeschrieben und lassen sich danach nicht mehr löschen. Die Umsatzsteuer-Voranmeldung wird laut Anbieter in weclapp erstellt und an das Finanzamt gesendet. Die Buchhaltung bezeichnet weclapp als GoBD-konform, eine Bescheinigung eines Wirtschaftsprüfers nennt die Seite nicht.
+      sources:
+        - *buchhaltung
+        - *preise
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - weclapp speichert alle Daten laut Buchhaltungsseite in zertifizierten Rechenzentren in Deutschland und nennt die Standards ISO 27001 und PCI DSS. Die Verfügbarkeit gibt der Anbieter mit 99,5 % an, tägliche Backups und 256-Bit-Verschlüsselung sind in allen Paketen enthalten. Kunden werden aufgefordert, eine mehrstufige Anmeldung zu nutzen.
+        - Den Vertrag zur Auftragsverarbeitung stellt weclapp als Vorlage über die Datenschutzerklärung bereit. Kunden senden den unterschriebenen Vertrag per E-Mail an die dort genannte Adresse zurück. Das ist transparenter als bei Anbietern, die den Vertrag erst auf Nachfrage herausgeben.
+      sources:
+        - *buchhaltung
+        - *preise
+        - url: https://www.weclapp.com/de/datenschutz/
+          title: weclapp Datenschutzerklärung
+          accessed: 2026-10-25
+    - id: einstieg-und-support
+      title: Einstieg, Testphase und Support
+      paragraphs:
+        - Der Einstieg beginnt mit einer 30-tägigen kostenlosen Testphase. weclapp bietet kostenlose Webinare, ein Hilfecenter, Video-Tutorials und integrierte Tipps an. Für die Einführung gibt es Onboarding-Pakete und Schulungen der Professional Services sowie Partner, die bei der Einrichtung helfen.
+        - Der Support ist gestaffelt. Ohne Zusatzpaket bleibt es beim E-Mail-Support mit einer Reaktionszeit von 48 Stunden innerhalb der Servicezeiten von 8:30 bis 18 Uhr. Bronze ergänzt 10 Telefonanfragen im Monat und Fernwartung bei 16 Stunden Reaktionszeit, Silber 20 Anrufe bei 8 Stunden, Gold 40 Anrufe bei 4 Stunden. Die Pakete gelten laut Tabelle für bis zu 2, 10, 20 oder 40 Nutzer.
+      sources:
+        - *support
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Die Preise je Nutzer machen weclapp für kleine Teams kalkulierbar, mit wachsender Nutzerzahl steigen die Kosten aber linear. Wer Lager und Warenwirtschaft braucht, landet im Paket ERP Handel, das mehr als das Vierfache von ERP Starter kostet. Telefonsupport ist nicht im Lizenzpreis enthalten.
+        - Offen sind nach unserer Recherche die Unterstützung der Kleinunternehmerregelung und die Frage, ob es neben der Mobile Lager-App eine allgemeine App für iOS und Android gibt. Auch eine Bilanz nennt die Funktionsliste nicht ausdrücklich, sie führt Summen- und Saldenliste, EÜR und Umsatzsteuer-Voranmeldung.
+      sources:
+        - *preise
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - weclapp ist ein durchgängiges Cloud-ERP mit veröffentlichten Preisen, deutschen Rechenzentren und einem öffentlich verfügbaren Auftragsverarbeitungsvertrag. E-Rechnung, DATEV-Export und UStVA sind laut Anbieter in allen Paketen enthalten. Für Dienstleister und Händler, die CRM, Projekte, Lager und Buchhaltung bündeln wollen, ist es eine naheliegende Wahl, für reine Rechnungsstellung ist es überdimensioniert. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise
+        - *buchhaltung

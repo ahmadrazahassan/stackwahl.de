@@ -143,6 +143,11 @@ function softwareSources(
   }
   list.push({ where: "marketAvailability", source: s.marketAvailability.source, kind: "fact" });
   if (s.trialSource) list.push({ where: "trialSource", source: s.trialSource, kind: "fact" });
+  s.review?.sections.forEach((section) =>
+    section.sources.forEach((source, i) =>
+      list.push({ where: `review.${section.id}.sources[${i}]`, source, kind: "fact" }),
+    ),
+  );
   return list;
 }
 
@@ -237,6 +242,7 @@ export function checkContent(content: ContentSet, options: GuardOptions): Issue[
       s.summary,
       s.verdict,
       s.marketAvailability.note,
+      ...(s.review?.sections.flatMap((section) => [section.title, ...section.paragraphs]) ?? []),
       ...s.pros,
       ...s.cons,
       ...s.idealFor,

@@ -1,6 +1,7 @@
 "use client";
 
 import { Check } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useQueryState, useQueryStates } from "nuqs";
 import type { ReactNode } from "react";
 import { Button, ButtonLink } from "@/components/ui/button";
@@ -119,6 +120,7 @@ const yesNo: Option<"ja" | "nein">[] = [
 export function Finder() {
   const [state, setState] = useQueryStates(finderParsers, { history: "replace" });
   const [step, setStep] = useQueryState("schritt", stepParser.withOptions({ history: "push" }));
+  const router = useRouter();
 
   const steps = [
     <Step
@@ -242,7 +244,18 @@ export function Finder() {
         {current < total ? (
           <Button onClick={() => setStep(current + 1)}>Weiter</Button>
         ) : (
-          <ButtonLink href={resultHref}>Ergebnis anzeigen</ButtonLink>
+          <ButtonLink
+            href={resultHref}
+            onClick={async (event) => {
+              // nuqs writes the URL shortly after a step change. Navigating before that write
+              // lands would let it push the Finder URL back on top of the result page.
+              event.preventDefault();
+              await setStep(current);
+              router.push(resultHref);
+            }}
+          >
+            Ergebnis anzeigen
+          </ButtonLink>
         )}
       </div>
     </div>

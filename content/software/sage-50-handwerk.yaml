@@ -1,0 +1,197 @@
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Die FAQ nennt noch die Versionen Start, Basic und Professional, die Preistabelle Essential und Enterprise.
+slug: sage-50-handwerk
+name: Sage 50 Handwerk
+vendor: sage
+categories:
+  - rechnungsprogramme
+status: draft
+verification: unverified
+lastReviewed: 2026-10-25
+author: null
+summary: Handwerkersoftware von Sage für Angebote, Aufmaß, Projekte und Abschlagsrechnungen, mit E-Rechnung und GAEB, ab 19,90 € im Monat.
+website: https://www.sage.com/de-de/produkte/sage-50-handwerk/
+marketAvailability:
+  status: verfuegbar
+  source: &produkt
+    url: https://www.sage.com/de-de/produkte/sage-50-handwerk/
+    title: Sage 50 Handwerk Produktseite mit Preisen und FAQ
+    accessed: 2026-10-25
+targetGroups:
+  - handwerk
+  - kmu
+deployment:
+  - desktop
+apps:
+  web: null
+  ios: null
+  android: null
+freeTrialDays: 30
+freePlan: false
+trialSource: *produkt
+compliance:
+  gobd:
+    status: aufpreis
+    note: Laut FAQ erfüllt das Zusatzmodul Sage 50 Handwerk DMS die GoBD-Anforderungen, mit Archiv lokal oder in einem deutschen Rechenzentrum.
+    source: *produkt
+  eRechnungEmpfang:
+    status: ja
+    note: E-Rechnungen automatisiert einlesen.
+    source: *produkt
+  eRechnungVersand:
+    status: ja
+    note: ZUGFeRD 2.1 und XRechnung schon im Paket Essential, auch für Abschlags-, Teil- und Schlussrechnungen.
+    source: *produkt
+  datevExport:
+    status: unbekannt
+    note: Die Produktseite nennt eine optionale Finanzbuchhaltung, aber keinen DATEV-Export.
+  elster:
+    status: unbekannt
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: unbekannt
+    note: Die Seite nennt Zahlungen und offene Posten, aber keine Bankanbindung.
+  serverstandort:
+    status: ja
+    note: Die Software wird lokal installiert; das Cloud-Dokumentenmanagement speichert laut Anbieter in einem deutschen Rechenzentrum.
+    source: *produkt
+  avv:
+    status: unbekannt
+  deutscherSupport:
+    status: ja
+    note: Support-Team von Sage und zertifizierte Fachhandelspartner, Telefon 069-50007-2020 für Fragen zum Produkt.
+    source: *produkt
+features:
+  angebote:
+    status: ja
+    source: *produkt
+  rechnungen:
+    status: ja
+    note: Teil- und Schlussrechnungen erst im Paket Enterprise.
+    source: *produkt
+  mahnwesen:
+    status: ja
+    source: *produkt
+  lager:
+    status: ja
+    note: Mehrere Lager bis zu Projekt- und Fahrzeuglagern, Stücklisten, Bestellvorschläge.
+    source: *produkt
+  projektzeiten:
+    status: aufpreis
+    note: Projektverwaltung im Paket Essential, mobile Zeiterfassung als optionale Erweiterung Zeitmanagement.
+    source: *produkt
+  mobileApp:
+    status: aufpreis
+    note: Mobile Projektmappe und Monteur-Planung über das hinzubuchbare Cloud-Paket.
+    source: *produkt
+plans:
+  - name: Essential
+    monthlyCents: null
+    yearlyMonthlyCents: 1990
+    perUser: false
+    net: true
+    includes:
+      - 1 Benutzer
+      - E-Rechnung (ZUGFeRD 2.1, XRechnung)
+      - Angebote, Aufträge, Rechnungen
+      - Stammdaten und Projektverwaltung
+      - SmartFinder und Express-Auftrag
+    note: Bei jährlicher Rechnungsstellung und 12 Monaten Mindestlaufzeit. Schnittstellen wie GAEB und IDS, DMS und Finanzbuchhaltung optional.
+    source: *produkt
+  - name: Enterprise
+    monthlyCents: null
+    yearlyMonthlyCents: 5900
+    perUser: false
+    net: true
+    includes:
+      - Unbegrenzte Benutzer
+      - Alles aus Essential
+      - Teil- und Schlussrechnungen
+      - Terminkalender
+    note: Bei jährlicher Rechnungsstellung und 12 Monaten Mindestlaufzeit. Nachkalkulation, Wartung und Service, Finanzbuchhaltung, Regiezentrum und Ressourcenplanung optional.
+    source: *produkt
+pros:
+  - Abschlags-, Teil- und Schlussrechnungen sowie Aufmaß direkt im Angebot, zugeschnitten auf das Handwerk.
+  - Großhändler-Schnittstellen OCI und IDS, Ausschreibungen über GAEB, DATANORM, ELDANORM und ZVEHNorm.
+  - E-Rechnung in ZUGFeRD 2.1 und XRechnung schon im Paket Essential für 19,90 € im Monat.
+  - Paket Enterprise mit unbegrenzten Benutzern für 59 € im Monat.
+  - Testlizenz über den Fachhandelspartner, mit der nach der Testzeit direkt weitergearbeitet werden kann.
+cons:
+  - GoBD-konforme Archivierung erst mit dem Zusatzmodul DMS.
+  - Finanzbuchhaltung, Zeiterfassung und Cloud-Paket kosten extra, die Preise stehen nicht auf der Seite.
+  - Teil- und Schlussrechnungen gibt es erst im Paket Enterprise.
+  - Die Software wird lokal installiert, mobiles Arbeiten nur mit dem Cloud-Paket.
+idealFor:
+  - Handwerksbetriebe aller Gewerke, die Angebote mit Aufmaß, Projekte und Abschlagsrechnungen in einem Programm führen wollen
+notIdealFor:
+  - Betriebe, die eine reine Browserlösung ohne Installation suchen
+  - Betriebe, die Finanzbuchhaltung und Archiv ohne Zusatzmodule brauchen
+logo:
+  file: /logos/sage-active.svg
+  width: 57
+  height: 32
+  sourceUrl: https://www.sage.com/de-de/
+  accessed: 2026-10-25
+review:
+  sections:
+    - id: einordnung
+      title: Was Sage 50 Handwerk ist und für wen es gedacht ist
+      paragraphs:
+        - Sage 50 Handwerk ist die kaufmännische Software von Sage für Handwerksbetriebe. Sie deckt Auftragsbearbeitung, Projektverwaltung und Warenwirtschaft ab und wird lokal installiert. Laut FAQ eignet sich das Programm für alle Gewerke aus Handwerk und Dienstleistung, ausdrücklich genannt werden unter anderem Sanitär, Heizung und Klima, Elektro, Dachdecker und Zimmerer.
+        - Sage verweist auf über 40 Jahre Erfahrung mit Handwerkssoftware. Der Vertrieb läuft stark über Fachhandelspartner, die nach Angaben von Sage auch die Demoversion installieren, Testlizenzen anfordern und bei der Datenübernahme helfen. Für Betriebe, die eine Betreuung vor Ort schätzen, ist das ein Unterschied zu reinen Online-Anbietern.
+      sources:
+        - *produkt
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Im Büro erstellt Sage 50 Handwerk Angebote, Aufträge, Lieferscheine und Rechnungen, dazu Abschlags-, Teil- und Schlussrechnungen, wie sie bei Bauleistungen üblich sind. Stammdaten für Leistungen, Material und Löhne werden zentral gepflegt. Telefonische Anfragen lassen sich mit dem Modul Express-Auftrag sofort erfassen. Der SmartFinder durchsucht Vorgänge, Dokumente und Programmfunktionen.
+        - In der Projektverwaltung liegen alle Schriftstücke vom Angebot bis zur Schlussrechnung in einem Projektordner, auch Word-Anschreiben, PDF-Dokumente und E-Mails. Dazu kommen Projektkalkulation, Ausschreibungen, Disposition sowie Termin- und Zeitmanagement. Aufmaße werden direkt im Angebot erfasst, eine Schnellerfassung beschleunigt das Aufmessen auf der Baustelle. Ein Terminkalender plant Aufträge und Monteure mit Filtern und zeigt geplante und offene Stunden.
+        - Die Lagerverwaltung reicht vom klassischen Lager bis zu Projekt- und Fahrzeuglagern. Stücklisten und Seriennummern werden erfasst, Bestellvorschläge entstehen automatisch, und Bestellungen gehen direkt an den Lieferanten. Für Wartungsverträge verwaltet das Programm Anlagen mit Wartungshistorie und Messwerten und erinnert Kunden per Serienbrief an Termine.
+        - Wichtig für das Handwerk sind die Schnittstellen. Sage nennt OCI und IDS für den Großhandel mit aktuellen Preisen und Verfügbarkeiten, GAEB für Ausschreibungen sowie die Formate DATANORM, ELDANORM und ZVEHNorm. Damit müssen Artikeldaten nicht abgetippt werden.
+      sources:
+        - *produkt
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Die Preistabelle zeigt zwei Pakete. Essential kostet 19,90 € im Monat für einen Benutzer, Enterprise kostet 59 € im Monat für unbegrenzte Benutzer. Beide Preise verstehen sich zuzüglich Umsatzsteuer und gelten laut Fußnote bei jährlicher Rechnungsstellung mit 12 Monaten Mindestlaufzeit. Kürzere oder längere Laufzeiten sind optional verfügbar.
+        - Im Jahr kostet Essential damit 238,80 € netto oder 284,17 € brutto, Enterprise 708 € netto oder 842,52 € brutto. Enterprise ergänzt Teil- und Schlussrechnungen und den Terminkalender. Ab zwei Benutzern gibt es nur Enterprise, denn Essential ist auf einen Benutzer begrenzt.
+        - Viele Funktionen sind optional und nicht im Grundpreis enthalten, darunter Schnittstellen wie GAEB und IDS, das Dokumentenmanagement, die Finanzbuchhaltung, Nachkalkulation, Wartung und Service, Regiezentrum sowie Termin- und Ressourcenplanung. Auch das Cloud-Paket für mobiles Arbeiten wird hinzugebucht. Die Preise dieser Erweiterungen stehen nicht auf der Produktseite, Sage verweist auf ein Angebot.
+        - Uneinheitlich ist die Benennung. Die FAQ spricht von den Versionen Start, Basic und Professional und schreibt, dass Basic auf zwei Arbeitsplätze begrenzt ist. Die Preistabelle nennt dagegen Essential und Enterprise. Vor dem Kauf sollte geklärt werden, welche Version zu welchem Preis gemeint ist.
+      sources:
+        - *produkt
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung und gesetzliche Vorgaben
+      paragraphs:
+        - Die E-Rechnung ist schon im Paket Essential enthalten. Rechnungen entstehen im Format ZUGFeRD 2.1 oder XRechnung und lassen sich digital versenden, auch Abschlags-, Teil- und Schlussrechnungen. Eingehende E-Rechnungen kann das Programm laut Anbieter automatisiert einlesen. Für Rechnungen an Behörden und den Großhandel ist das eine wichtige Voraussetzung.
+        - Zur GoBD schreibt Sage in der FAQ, dass die Anforderungen mit dem Zusatzmodul Sage 50 Handwerk DMS erfüllt werden. Steuerrelevante Belege wie Angebote, Lieferscheine und Rechnungen werden dann entweder in einem deutschen Cloud-Rechenzentrum oder in einem zentralen Archiv im Unternehmen abgelegt. Ohne dieses Modul nennt die Seite keine GoBD-konforme Archivierung, deshalb führen wir den Punkt als Aufpreis.
+        - Außerdem nennt Sage den Arbeitszeitnachweis nach dem Mindestlohngesetz und den Ausweis von Lohnkosten nach § 35a EStG auf Rechnungen. Einen DATEV-Export und die ELSTER-Übertragung nennt die Produktseite nicht. Die Finanzbuchhaltung ist ein optionales Modul.
+      sources:
+        - *produkt
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Sage 50 Handwerk läuft auf den Rechnern des Betriebs, die Daten bleiben damit grundsätzlich im eigenen Netzwerk. Laut FAQ braucht die Installation mindestens 2 GB freien Speicherplatz, einen Prozessor mit 2,0 GHz und 4 GB Arbeitsspeicher. Das Cloud-Dokumentenmanagement speichert Dokumente laut Anbieter in einem deutschen Rechenzentrum. Das Cloud-Paket für mobiles Arbeiten stammt laut Webinar-Hinweis vom Partner Loginfinity.
+        - Einen Auftragsverarbeitungsvertrag für die Cloud-Dienste nennt die Produktseite nicht. Er sollte vor der Nutzung des Cloud-Pakets und des Cloud-Dokumentenmanagements angefordert werden.
+      sources:
+        - *produkt
+    - id: einstieg-und-support
+      title: Einstieg, Testphase und Support
+      paragraphs:
+        - Eine Testversion für 30 Tage installiert laut FAQ der Fachhandelspartner. Wer mit echten Unternehmensdaten starten möchte, kann über den Partner eine kostenlose Testlizenz anfordern und nach der Testzeit direkt mit derselben Installation weiterarbeiten. Bestehende Stammdaten wie Kunden, Lieferanten und Artikel lassen sich über einen Datenimport übernehmen.
+        - Gesetzesänderungen kommen über Programmstände und Servicepacks, die mit einem gültigen Wartungsvertrag als Live-Update bereitstehen. Für Fragen nennt Sage ein Support-Team und die Telefonnummer 069-50007-2020. Zusätzlich gibt es Webinare zum Cloud-Paket.
+      sources:
+        - *produkt
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Der günstige Einstiegspreis gilt für ein schlankes Grundpaket. Wer GoBD-konform archivieren, die Buchhaltung im selben Programm führen und mobil auf der Baustelle arbeiten möchte, braucht Zusatzmodule, deren Preise nicht veröffentlicht sind. Die tatsächlichen Kosten lassen sich deshalb erst mit einem Angebot beurteilen.
+        - Offen sind nach unserer Recherche der DATEV-Export, die ELSTER-Übertragung, die Bankanbindung und der Auftragsverarbeitungsvertrag. Außerdem sollte die Abweichung zwischen den Versionsnamen in der FAQ und in der Preistabelle geklärt werden.
+      sources:
+        - *produkt
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - Sage 50 Handwerk ist auf die Abläufe im Handwerk zugeschnitten, von Aufmaß und GAEB-Ausschreibung bis zu Abschlags- und Schlussrechnung, und bietet die E-Rechnung schon im kleinsten Paket. Der Grundpreis ist niedrig, viele wichtige Funktionen kommen aber als Zusatzmodule hinzu. Für Betriebe, die eine lokale Installation und Betreuung durch einen Fachhändler bevorzugen, ist das Programm eine naheliegende Wahl. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *produkt

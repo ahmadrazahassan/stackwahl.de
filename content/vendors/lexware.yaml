@@ -2,7 +2,7 @@ slug: lexware
 name: Lexware
 legalName: Haufe-Lexware GmbH & Co. KG
 country: Deutschland
-city: null
+city: Freiburg
 website: https://www.lexware.de
 sources:
   - url: https://www.lexware.de/facts/lexware-office/
@@ -11,3 +11,6 @@ sources:
   - url: https://impressum.lexware.de/
     title: Impressum Lexware
     accessed: 2026-10-24
+  - url: https://www.haufe-x360.de/impressum
+    title: Impressum Haufe X360 (gleiche Gesellschaft, Sitz Freiburg)
+    accessed: 2026-10-25

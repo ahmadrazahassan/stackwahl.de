@@ -1,0 +1,7 @@
+slug: erp-software
+name: ERP-Software
+description: ERP-Systeme für kleine und mittlere Unternehmen in Deutschland, mit Warenwirtschaft, Buchhaltung, E-Rechnung und DATEV-Anbindung.
+intro: >-
+  Ein ERP-System verbindet Einkauf, Verkauf, Lager, Produktion und Finanzbuchhaltung in einer Datenbasis. Für Unternehmen in Deutschland zählt neben dem Funktionsumfang, ob das System E-Rechnungen nach XRechnung und ZUGFeRD erstellt und empfängt, Daten an DATEV übergibt und in einem Rechenzentrum in Deutschland oder der EU läuft. Die Preismodelle unterscheiden sich stark: pro Nutzer, pro Modul, nach Auftragsvolumen oder als Beispielkonfiguration auf Anfrage.
+launchOrder: 3
+status: draft

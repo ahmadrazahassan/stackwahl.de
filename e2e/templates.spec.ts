@@ -9,6 +9,9 @@ const PAGES = [
   "/kategorien/buchhaltungssoftware",
   "/software/sevdesk",
   "/software/sevdesk/preise",
+  "/software/weclapp",
+  "/software/collmex/preise",
+  "/kategorien/erp-software",
   "/software/wiso-meinbuero/alternativen",
   "/glossar",
   "/glossar/e-rechnung",
@@ -44,10 +47,29 @@ test.describe("Templates", () => {
   test("category page lists the profiles and explains the order", async ({ page }) => {
     await page.goto("/kategorien/buchhaltungssoftware");
     await expect(page.getByText(/Sortiert nach Name/)).toBeVisible();
-    await expect(page.getByRole("link", { name: "Zum Profil" })).toHaveCount(8);
+    await expect(page.getByRole("link", { name: "Zum Profil" })).toHaveCount(13);
     await expect(
       page.getByRole("region", { name: "Rechtssicherheit und Preise: Buchhaltungssoftware" }),
     ).toBeVisible();
+  });
+
+  test("long review lists its sections and the sources of each section", async ({ page }) => {
+    await page.goto("/software/weclapp");
+    const detail = page.getByRole("region", { name: "weclapp im Detail" });
+    await expect(detail).toBeVisible();
+    await expect(detail.getByRole("navigation", { name: "Abschnitte im Detail" })).toBeVisible();
+    const prices = detail.getByRole("region", { name: "Preise und Kosten im Detail" });
+    await expect(prices.getByText(/3\.096 € netto/)).toBeVisible();
+    await expect(
+      prices.getByRole("link", { name: /weclapp Preise und Funktionen/ }),
+    ).toHaveAttribute("href", "https://www.weclapp.com/de/preise/");
+    await expect(page.getByRole("link", { name: "Im Detail" }).first()).toBeVisible();
+  });
+
+  test("ERP category lists its profiles", async ({ page }) => {
+    await page.goto("/kategorien/erp-software");
+    await expect(page.getByRole("heading", { level: 1 })).toContainText("ERP-Software");
+    await expect(page.getByRole("link", { name: "Zum Profil" })).toHaveCount(6);
   });
 
   test("profile is honest about research, prices and sources", async ({ page }) => {

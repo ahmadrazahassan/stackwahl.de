@@ -1,0 +1,295 @@
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Die Seiten von Collmex sind in ISO-8859-1 kodiert; Zitate wurden nach UTF-8 umgewandelt.
+slug: collmex
+name: Collmex
+vendor: collmex
+categories:
+  - buchhaltungssoftware
+  - rechnungsprogramme
+status: draft
+verification: unverified
+lastReviewed: 2026-10-25
+author: null
+summary: Browser-Buchhaltung aus Saarbrücken mit UStVA per ELSTER, E-Rechnung, Online-Banking und DATEV-Format, kostenloser Einstieg, Komplettpaket ab 16,95 €.
+website: https://www.collmex.de/
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://www.collmex.de/preise.html
+    title: Collmex Preisliste
+    accessed: 2026-10-25
+targetGroups:
+  - selbststaendige
+  - kleinunternehmer
+  - kmu
+  - e-commerce
+  - vereine
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: null
+  android: null
+freeTrialDays: 30
+freePlan: true
+trialSource: *preise
+compliance:
+  gobd:
+    status: ja
+    note: Laut FAQ hält Collmex die Anforderungen der GoBD ein; Daten lassen sich für die Betriebsprüfung auf einem Datenträger überlassen.
+    source: &faq
+      url: https://www.collmex.de/faq.html
+      title: Collmex FAQ
+      accessed: 2026-10-25
+  eRechnungEmpfang:
+    status: ja
+    note: Belegverwaltung übernimmt die Daten aus empfangenen E-Rechnungen, prüft und stellt sie dar.
+    source: &komplett
+      url: https://www.collmex.de/buchhaltungssoftware.html
+      title: Collmex Komplettpakete, Funktionen
+      accessed: 2026-10-25
+  eRechnungVersand:
+    status: ja
+    note: E-Rechnungen im Format UN/CEFACT CII nach EN 16931, als XML zusätzlich zum PDF an der Mail.
+    source: *komplett
+  datevExport:
+    status: ja
+    note: Export aller Buchungen in eine Datei im DATEV-Format, Kontenrahmen SKR03 und SKR04.
+    source: *komplett
+  elster:
+    status: ja
+    note: Umsatzsteuer-Voranmeldung mit einem Mausklick direkt aus dem Programm an das Finanzamt (Elster).
+    source: *komplett
+  kleinunternehmer:
+    status: ja
+    note: Kleinunternehmerregelung je Geschäftsjahr wählbar.
+    source: &buchhaltung
+      url: https://www.collmex.de/buchhaltung_software.html
+      title: Collmex Buchhaltung
+      accessed: 2026-10-25
+  bankanbindung:
+    status: ja
+    note: Kontoauszüge per FinTS/HBCI abrufen oder als CAMT/MT940 importieren, Zahlungsaufträge per FinTS/HBCI.
+    source: *komplett
+  serverstandort:
+    status: ja
+    note: Rechenzentrum in Köln, betrieben von der PlusServer GmbH.
+    source: &sicherheit
+      url: https://www.collmex.de/sicherheit.html
+      title: Collmex Sicherheit
+      accessed: 2026-10-25
+  avv:
+    status: ja
+    note: Zusatzvereinbarung zur Auftragsverarbeitung gemäß DSGVO auf der Website.
+    source: &av
+      url: https://www.collmex.de/auftragsverarbeitung.html
+      title: Collmex Auftragsverarbeitung
+      accessed: 2026-10-25
+  deutscherSupport:
+    status: ja
+    note: Support per E-Mail inklusive; laut FAQ keine Hotline, Anfragen ausschließlich per Mail.
+    source: *faq
+features:
+  angebote:
+    status: ja
+    source: *komplett
+  rechnungen:
+    status: ja
+    note: Auch Abschlagsrechnungen, Rechnungen nach § 13b UStG, Sammelrechnungen und Rechnungen in Englisch.
+    source: *komplett
+  wiederkehrendeRechnungen:
+    status: ja
+    note: Periodische Rechnungen für Abonnements und Mieten im Abrechnungslauf.
+    source: *komplett
+  mahnwesen:
+    status: ja
+    source: *komplett
+  bankabgleich:
+    status: ja
+    note: Kontoauszüge dienen als Arbeitsvorrat für die Buchhaltung.
+    source: *komplett
+  kassenbuch:
+    status: ja
+    source: *komplett
+  euer:
+    status: ja
+    note: EÜR nach amtlichem Vordruck.
+    source: *komplett
+  bilanz:
+    status: ja
+    note: Bilanz, GuV und Salden-Export für die E-Bilanz.
+    source: *komplett
+  lager:
+    status: ja
+    note: Lieferungen, Bestellwesen, Lager mit Sperrbestand, Inventur, Chargen und Produktion im Komplettpaket.
+    source: *komplett
+  projektzeiten:
+    status: ja
+    note: Kundenprojekte mit Tätigkeitserfassung, Stoppuhr und Abrechnung.
+    source: *komplett
+  mehrwaehrung:
+    status: ja
+    note: Währung für Angebote und Rechnungen frei wählbar.
+    source: *komplett
+  api:
+    status: ja
+    note: Collmex-API, unter anderem für Shop-Schnittstellen und die Anbindung der Sage Lohnabrechnung.
+    source: *komplett
+  steuerberaterzugang:
+    status: ja
+    note: Benutzerrolle Steuerprüfer in allen Paketen.
+    source: *preise
+plans:
+  - name: Buchhaltung free
+    monthlyCents: 0
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - 1 Administrator
+      - Bis 100.000 Buchungen, nicht erweiterbar
+    source: *preise
+  - name: Buchhaltung light
+    monthlyCents: 895
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Administrator, Buchhalter und Steuerprüfer
+      - 100.000 Buchungen, erweiterbar bis 500.000
+    note: Monatlich kündbar zum Monatsende.
+    source: *preise
+  - name: Buchhaltung basic
+    monthlyCents: 1195
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Administrator, Buchhalter, Steuerprüfer und 25 Mitarbeiterportale
+      - Weitere Benutzer je 11,95 € im Monat
+      - 100.000 Buchungen, erweiterbar bis 500.000
+    note: Monatlich kündbar zum Monatsende.
+    source: *preise
+  - name: Komplettpaket basic
+    monthlyCents: 1695
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Buchhaltung, Verkauf, Projekte, CRM und Warenwirtschaft
+      - Administrator, Buchhalter und Steuerprüfer, nicht erweiterbar
+      - 100.000 Dokumente, erweiterbar bis 500.000
+    note: Monatlich kündbar zum Monatsende.
+    source: *preise
+  - name: Komplettpaket plus
+    monthlyCents: 2495
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Größerer Funktionsumfang als basic
+      - Administrator, Buchhalter und Steuerprüfer, nicht erweiterbar
+      - 100.000 Dokumente, erweiterbar bis 500.000
+    note: Monatlich kündbar zum Monatsende.
+    source: *preise
+  - name: Komplettpaket pro
+    monthlyCents: 4695
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Voller Funktionsumfang inklusive Shop-Aufträgen
+      - Administrator, Buchhalter, Steuerprüfer und 50 Mitarbeiterportale
+      - Weitere Benutzer je 11,95 € im Monat
+    note: Monatlich kündbar zum Monatsende.
+    source: *preise
+pros:
+  - Kostenloser Einstieg mit Collmex buchhaltung free, bezahlte Pakete monatlich kündbar zum Monatsende.
+  - Umsatzsteuer-Voranmeldung direkt aus dem Programm per Elster, ohne separates Programm.
+  - E-Rechnung in beide Richtungen, Online-Banking per FinTS/HBCI und Export im DATEV-Format.
+  - Rechenzentrum in Köln und Auftragsverarbeitungsvertrag auf der Website.
+  - Komplettpaket mit Verkauf, Projekten, CRM und Warenwirtschaft ab 16,95 € im Monat.
+cons:
+  - Support ausschließlich per E-Mail, es gibt keine Hotline.
+  - Mehrere Benutzer über die Standardrollen hinaus nur in Collmex pro und buchhaltung basic, je 11,95 € im Monat.
+  - Keine Apps für iOS oder Android auf den geprüften Seiten.
+  - Shop-Schnittstellen stammen von Partnern und sind Zusatzmodule.
+idealFor:
+  - Selbstständige, kleine Unternehmen und Vereine, die eine günstige Browser-Buchhaltung mit Elster, DATEV-Format und Rechnungsstellung suchen
+notIdealFor:
+  - Unternehmen, die telefonischen Support erwarten
+  - Teams, die vor allem mobil per App arbeiten wollen
+review:
+  sections:
+    - id: einordnung
+      title: Was Collmex ist und für wen es gedacht ist
+      paragraphs:
+        - Collmex ist eine Buchhaltungs- und Firmensoftware der Collmex GmbH aus Saarbrücken, die im Browser läuft. Laut Anbieter besteht das Unternehmen seit 2003, hat über 10.000 Kunden gewonnen und ist seit vielen Jahren profitabel. Die beteiligten Entwickler waren nach eigener Angabe über zehn Jahre bei der SAP AG in Entwicklung und Beratung tätig.
+        - Collmex gibt es in vier Produktlinien. Collmex buchhaltung ist eine reine Finanzbuchhaltung, Collmex rechnung ein Rechnungsprogramm, die Komplettpakete basic, plus und pro verbinden Buchhaltung, Verkauf, Projekte, CRM und Warenwirtschaft, und Collmex verein richtet sich an Vereine. Damit reicht das Angebot vom Freiberufler mit EÜR bis zum kleinen Händler mit Lager und Onlineshop.
+      sources:
+        - url: https://www.collmex.de/impressum.html
+          title: Impressum Collmex
+          accessed: 2026-10-25
+        - *preise
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Im Verkauf erstellt Collmex Angebote, Kundenaufträge, Auftragsbestätigungen und Rechnungen als PDF, auf Wunsch in Englisch und in jeder Währung. Unterstützt werden Abschlagsrechnungen mit Verrechnung in der Schlussrechnung, Rechnungen nach § 13b UStG für Bauleistungen, periodische Rechnungen für Abonnements und Mieten, Sammelrechnungen, Gutscheine und Provisionsabrechnungen. Auf Rechnungen lässt sich ein GiroCode drucken, damit Kunden per Banking-App überweisen. Dokumente gehen per E-Mail, Postbrief oder Fax hinaus.
+        - Die Projektverwaltung erfasst Arbeitsstunden tabellarisch oder per Stoppfunktion, dazu den Materialverbrauch, und macht daraus per Mausklick eine Rechnung. Mitarbeiter erfassen Tätigkeiten und Reisen selbst über ein Mitarbeiter-Portal. Die Warenwirtschaft im Komplettpaket umfasst Lieferungen, Bestellwesen mit automatischen Lieferantenaufträgen bei Mindestbestand, Lager mit Sperrbestand, Inventurlisten, Chargenverwaltung, Produktionsaufträge und den Export von Lieferadressen für DHL, UPS und GLS.
+        - Die Buchhaltung erstellt die Einnahmen-Überschuss-Rechnung nach amtlichem Vordruck oder Bilanz und GuV, mit einem Salden-Export für die E-Bilanz. Buchungsvorlagen mit Erklärungen erleichtern die Erfassung, hinterlegt sind die Kontenrahmen SKR03 und SKR04. Dazu kommen Anlagenbuchhaltung mit AfA-Rechner, offene Posten, Mahnwesen, Soll- und Istbesteuerung, Reisekosten, Kassenbücher, Kostenstellen und Unterfirmen für mehrere Gewerbe unter einer Steuernummer.
+        - Für den Onlinehandel gibt es eine eBay-Integration und Schnittstellen zu Shopware, Magento, WooCommerce, Shopify und modified, die als Zusatzmodule von Partnern angeboten werden. Über die Collmex-API ist außerdem die Sage Business Cloud Lohnabrechnung angebunden, deren FiBu-Journal sich importieren lässt.
+      sources:
+        - *komplett
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Alle Preise gelten pro Monat zuzüglich Umsatzsteuer, abgerechnet wird monatlich per Bankeinzug, und gekündigt werden kann jederzeit zum Monatsende. Die ersten 30 Tage sind eine kostenlose Testphase. Collmex buchhaltung gibt es als free für 0 €, light für 8,95 € und basic für 11,95 €. Collmex rechnung kostet als free 0 €, als basic 8,95 € und als plus 11,95 €. Die Komplettpakete kosten 16,95 € für basic, 24,95 € für plus und 46,95 € für pro. Collmex verein kostet 13,95 € mit unbegrenzten Benutzern.
+        - Umgerechnet kostet das Komplettpaket basic 203,40 € netto oder 242,05 € brutto im Jahr, Collmex pro 563,40 € netto oder 670,45 € brutto. Wer nur die Buchhaltung braucht, zahlt mit buchhaltung light 107,40 € netto im Jahr.
+        - Begrenzt sind Benutzer und Speicher. Die meisten Pakete enthalten die Rollen Administrator, Buchhalter und Steuerprüfer und lassen sich nicht um Benutzer erweitern. Nur Collmex pro und buchhaltung basic erlauben weitere Benutzer für je 11,95 € im Monat und enthalten 50 beziehungsweise 25 Mitarbeiterportale. Jedes Paket enthält Speicher für 100.000 Dokumente oder Buchungen, jede weitere angefangene 100.000 kosten 11,95 € im Monat, bis höchstens 500.000. Laut Anbieter reichen 100.000 Dokumente im Versandhandel für etwa 20.000 Verkäufe.
+      sources:
+        - *preise
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und ELSTER
+      paragraphs:
+        - Collmex erstellt E-Rechnungen im Format UN/CEFACT CII nach der Norm EN 16931. Beim Versand per Mail hängt das Programm die XML-Datei zusätzlich zur PDF-Datei an. Eingehende E-Rechnungen übernimmt die Belegverwaltung, prüft sie und stellt sie dar, bei anderen PDF-Dokumenten wird der Textinhalt analysiert.
+        - Die Umsatzsteuer-Voranmeldung senden Sie laut Anbieter direkt aus dem Programm mit einem Mausklick an das Finanzamt, ein separates Programm ist nicht nötig. Für andere Steuererklärungen verweist die FAQ auf das Portal elster.de, die Werte lassen sich aus Collmex übernehmen. Am Jahresende exportieren Sie alle Buchungen in eine Datei im DATEV-Format für die Steuerberatung.
+        - Zur GoBD schreibt Collmex in der FAQ, dass der Gesetzgeber keine Zulassungen vergibt und die Software die Anforderungen der GoBD einhält. Für Betriebsprüfungen ermöglicht Collmex den direkten Zugriff des Prüfers und die Überlassung der Daten auf einem Datenträger. Die Unveränderbarkeit der Daten lässt sich laut FAQ organisatorisch sicherstellen. Die Kleinunternehmerregelung ist je Geschäftsjahr wählbar.
+      sources:
+        - *komplett
+        - *faq
+        - *buchhaltung
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Collmex läuft laut Sicherheitsseite in einem Rechenzentrum in Köln, das von der PlusServer GmbH betrieben wird. Laut Startseite ist das Rechenzentrum vom TÜV SÜD nach ISO/IEC 27001:2022 und ISO 9001:2015 zertifiziert. Die Sicherheitsseite verweist auf die GoBD-Vorgabe regelmäßiger Datensicherungen an einem zweiten Standort.
+        - Eine Zusatzvereinbarung zur Auftragsverarbeitung nach DSGVO steht auf der Website. Laut Art. 28 DSGVO muss die Auftragsverarbeitung auf einem Vertrag beruhen, Collmex stellt diesen öffentlich bereit, eine Nachfrage beim Anbieter ist also nicht nötig.
+      sources:
+        - *sicherheit
+        - *av
+        - url: https://www.collmex.de/
+          title: Collmex Startseite
+          accessed: 2026-10-25
+    - id: einstieg-und-support
+      title: Einstieg und Support
+      paragraphs:
+        - Der Start ist ohne Installation möglich, Collmex braucht nur einen Browser und läuft unter Windows, Linux und Mac. Die 30-tägige Testphase ist kostenlos und unverbindlich. Wer während der Testphase den Dauerzugang aktiviert, erhält danach jeden Monat eine Rechnung per Mail, der Betrag wird per Lastschrift eingezogen.
+        - Der Support läuft ausschließlich per E-Mail und ist im Preis enthalten. Eine Hotline gibt es laut FAQ nicht, auch Vertriebsanfragen werden nur per Mail beantwortet. Die Website enthält ein Handbuch, eine ausführliche FAQ und ein Partnerverzeichnis für Unterstützung vor Ort.
+      sources:
+        - *komplett
+        - *faq
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Collmex ist funktional breit und günstig. Wer Telefonsupport oder eine App für unterwegs erwartet, wird hier nicht fündig. Die Begrenzung auf feste Benutzerrollen in den meisten Paketen bremst Teams, die mehr als drei Personen im System brauchen.
+        - Welche Funktionen genau zu den Komplettpaketen basic, plus und pro gehören, zeigt die Funktionsseite nur über Spaltenmarkierungen. Ausdrücklich nur in Collmex pro nennt die Seite das automatische Anlegen von Kundenaufträgen aus dem Onlineshop und Kassenbücher für Mitarbeiter ohne Buchhaltungsrecht. Vor dem Kauf sollte geprüft werden, ob basic oder plus für den eigenen Bedarf reicht.
+      sources:
+        - *komplett
+        - *preise
+        - *faq
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - Collmex bietet für wenig Geld eine vollständige Buchhaltung mit Elster, E-Rechnung in beide Richtungen, Online-Banking und DATEV-Format, dazu im Komplettpaket Verkauf, Projekte und Warenwirtschaft. Rechenzentrum in Köln, öffentlicher Auftragsverarbeitungsvertrag und monatliche Kündbarkeit sprechen für den Anbieter, reiner E-Mail-Support und fehlende Apps dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise
+        - *komplett

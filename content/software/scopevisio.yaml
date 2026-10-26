@@ -1,0 +1,225 @@
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Preise nur als Beispielkonfigurationen; die Tarife hier sind die drei Beispiele für Dienstleister.
+slug: scopevisio
+name: Scopevisio
+vendor: scopevisio
+categories:
+  - erp-software
+  - buchhaltungssoftware
+status: draft
+verification: unverified
+lastReviewed: 2026-10-25
+author: null
+summary: Cloud-ERP aus Bonn für den Mittelstand mit Finanzbuchhaltung, DMS, Projekten und Abrechnung, Rechenzentrum in Frankfurt und GoBD-Testat.
+website: https://www.scopevisio.com/
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://www.scopevisio.com/preise/
+    title: Scopevisio Preise und Beispielkonfigurationen
+    accessed: 2026-10-25
+targetGroups:
+  - mittelstand
+  - kmu
+  - agenturen
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: null
+  android: null
+freeTrialDays: 30
+freePlan: false
+trialSource: *preise
+compliance:
+  gobd:
+    status: ja
+    note: Testat nach IDW PS 880 bestätigt laut Anbieter, dass Anwender GoBD-konform arbeiten können; Bescheinigungen im Trust Center.
+    source: &gobd
+      url: https://www.scopevisio.com/unternehmen/gobd/
+      title: Scopevisio GoBD
+      accessed: 2026-10-25
+  eRechnungEmpfang:
+    status: ja
+    note: KI-gestützte Belegerkennung liest XRechnung, ZUGFeRD und PDF und schlägt die Kontierung vor.
+    source: &finanzen
+      url: https://www.scopevisio.com/loesung/finanzen/
+      title: Scopevisio Finanzen
+      accessed: 2026-10-25
+  eRechnungVersand:
+    status: unbekannt
+    note: Die geprüften Seiten beschreiben den Rechnungseingang, aber nicht die Ausgabe von E-Rechnungen.
+  datevExport:
+    status: ja
+    note: DATEV-Export im Standard, Lesezugriffe für die Steuerberatung.
+    source: *finanzen
+  elster:
+    status: unbekannt
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: ja
+    note: Online-Banking als Teil der Beispielkonfigurationen, Zahlungseingänge werden automatisch offenen Posten zugeordnet.
+    source: *preise
+  serverstandort:
+    status: ja
+    note: Betrieb im Rechenzentrum in Frankfurt, laut Anbieter ISO 27001 und BSI C5.
+    source: &sicherheit
+      url: https://www.scopevisio.com/unternehmen/sicherheit/
+      title: Scopevisio Sicherheit
+      accessed: 2026-10-25
+  avv:
+    status: unbekannt
+  deutscherSupport:
+    status: unbekannt
+    note: Der Anbieter nennt Service-Onboarding und einen Customer Lifetime Service, aber keine Supportkanäle.
+features:
+  rechnungen:
+    status: ja
+    note: Modul Abrechnungsmanagement.
+    source: *preise
+  belegerfassungOcr:
+    status: ja
+    note: KI-gestützte Belegerkennung für Eingangsrechnungen.
+    source: *finanzen
+  bankabgleich:
+    status: ja
+    source: *finanzen
+  bilanz:
+    status: ja
+    note: GuV, Bilanz, BWA, Kostenstellenreports und Anlagenbuchhaltung.
+    source: *finanzen
+  projektzeiten:
+    status: ja
+    note: Modul Projektmanagement.
+    source: *preise
+  api:
+    status: ja
+    note: REST-API OpenScope.
+    source: *preise
+  steuerberaterzugang:
+    status: ja
+    note: Lesezugriffe für die Steuerberatung.
+    source: *finanzen
+  mobileApp:
+    status: ja
+    note: Mobile 2Go-Apps, unter anderem für Bedarfsanforderung, Rechnungsprüfung, Kasse, Projekte und Vertrieb.
+    source: *preise
+plans:
+  - name: Beispiel Essential
+    monthlyCents: 66500
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Beratungsunternehmen mit 1 Gesellschaft und 10 Named Usern
+      - Business Automation Platform Essential mit Organisation und DMS
+      - Abrechnungsmanagement und Projektmanagement
+    note: Beispielkonfiguration des Anbieters, im Schnitt 2,20 € je Named User und Tag.
+    source: *preise
+  - name: Beispiel Professional
+    monthlyCents: 321500
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - IT-Dienstleister mit 3 Gesellschaften und 50 Named Usern
+      - Business Automation Platform Professional
+      - Abrechnung, Projekte, Rechnungseingangsbuch, Finanzen Plus, Vertrieb
+    note: Beispielkonfiguration des Anbieters, im Schnitt 2,10 € je Named User und Tag.
+    source: *preise
+  - name: Beispiel Enterprise
+    monthlyCents: 2511000
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Softwareunternehmen mit 10 Gesellschaften und 500 Named Usern
+      - Business Automation Platform Enterprise
+      - Zusätzlich Reisekosten und Spesen, Beschaffung und 100 2Go-Apps
+    note: Beispielkonfiguration des Anbieters, im Schnitt 1,70 € je Named User und Tag.
+    source: *preise
+pros:
+  - Testat nach IDW PS 880 zur GoBD-Konformität, Bescheinigungen im Trust Center einsehbar.
+  - Rechenzentrum in Frankfurt, laut Anbieter ISO 27001-zertifiziert und BSI C5-testiert.
+  - KI-gestützte Belegerkennung für XRechnung, ZUGFeRD und PDF mit Kontierungsvorschlag.
+  - Mandantenfähig für Firmengruppen, Konzernabschluss über die Anbindung an Lucanet.
+  - Veröffentlichte Beispielpreise für Dienstleister, Hotellerie und Gesundheitswesen.
+cons:
+  - Keine festen Tarife, Preise nur als Beispielkonfigurationen und Preisanfrage.
+  - Die Ausgabe von E-Rechnungen beschreiben die geprüften Seiten nicht.
+  - Die GoBD-Seite nennt zwei verschiedene Prüfgesellschaften.
+  - Supportkanäle und Auftragsverarbeitungsvertrag stehen nicht auf den geprüften Seiten.
+idealFor:
+  - Mittelständische Dienstleister und Unternehmensgruppen, die Finanzbuchhaltung, DMS, Projekte und Abrechnung in einer deutschen Cloud bündeln wollen
+notIdealFor:
+  - Einzelunternehmer und Kleinbetriebe, die nur Rechnungen schreiben
+  - Händler mit Lager und Versand als Kerngeschäft
+review:
+  sections:
+    - id: einordnung
+      title: Was Scopevisio ist und für wen es gedacht ist
+      paragraphs:
+        - Scopevisio ist ein Cloud-ERP der Scopevisio AG mit Sitz in Bonn. Grundlage ist die Business Automation Platform, die bereits die Module Organisation und Dokumentenmanagement enthält und um Module für Finanzen, Vertrieb, Beschaffung, Projekte und Abrechnung erweitert wird. Laut Anbieter ist Scopevisio branchenübergreifend einsetzbar, die Preisseite zeigt Beispiele für Dienstleister, die Hotellerie und das Gesundheitswesen.
+        - Die Zielgruppe ist der Mittelstand mit hohen Anforderungen an Rechnungswesen und Controlling. Die Beispiele reichen vom Beratungsunternehmen mit 25 Beschäftigten bis zur Unternehmensgruppe mit zehn Gesellschaften und 2.500 Beschäftigten. Scopevisio ist mandantenfähig, mehrere Gesellschaften lassen sich in einer Instanz rechtlich getrennt führen.
+      sources:
+        - *preise
+        - url: https://www.scopevisio.com/impressum/
+          title: Impressum Scopevisio
+          accessed: 2026-10-25
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Scopevisio Finanzen ist die Buchhaltung des Systems. Eingangsrechnungen werden digital erfasst, geprüft, gebucht und revisionssicher archiviert. Eine KI-gestützte Belegerkennung liest XRechnung, ZUGFeRD und PDF aus und schlägt die Kontierung auf Basis der Buchungshistorie vor. Freigaben lassen sich per Smartphone, Tablet oder Desktop erteilen. Die Buchhaltung arbeitet jahresübergreifend mit Drill-Down bis auf den Einzelbeleg und erstellt GuV, Bilanz, BWA, Kostenstellenreports und Liquiditätsübersichten.
+        - Zahlungseingänge werden automatisch erfasst und offenen Posten zugeordnet. Eine Anlagenbuchhaltung bucht Abschreibungen automatisch und in Echtzeit zwischen Anlagen- und Hauptbuch. Für Firmengruppen bildet Scopevisio Intercompany-Beziehungen ab, gibt Berichtslayouts und Banking-Regeln an Tochtergesellschaften weiter und übergibt die Daten per API an Lucanet, das die Konsolidierung übernimmt. Außerdem nennt der Anbieter eine integrierte virtuelle Kreditkartenlösung.
+        - Weitere Module sind Abrechnungsmanagement, Projektmanagement, Rechnungseingangsbuch, Vertrieb, Reisekosten- und Spesenmanagement und Beschaffung. Mobile 2Go-Apps decken unter anderem Kasse, Projekte, Vertrieb, Lagerverwaltung und Bedarfsanforderungen ab. Über die REST-API OpenScope lassen sich bestehende Systeme anbinden.
+      sources:
+        - *finanzen
+        - *preise
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Das Preismodell besteht aus drei Bausteinen, der Plattform, den Modulen und den Nutzern. Jeder Nutzer ist ein Named User, also eine personengebundene Lizenz, die nicht geteilt werden darf, auch nicht zeitversetzt. Module werden nur für die Nutzer freigeschaltet, die sie brauchen. Wartung, Updates und die API sind laut Anbieter inklusive.
+        - Feste Tarife gibt es nicht. Für Dienstleister nennt Scopevisio drei Beispiele. Ein Beratungsunternehmen mit zehn Named Usern, Abrechnungs- und Projektmanagement kostet 665 € netto im Monat, also 7.980 € netto oder 9.496,20 € brutto im Jahr. Ein IT-Dienstleister mit 50 Named Usern und Finanzen, Vertrieb und Rechnungseingangsbuch kostet 3.215 € netto im Monat. Ein Softwareunternehmen mit 500 Named Usern kostet 25.110 € netto im Monat. Umgerechnet sind das laut Anbieter im Schnitt 2,20 €, 2,10 € und 1,70 € je Named User und Tag.
+        - Für die Hotellerie beginnt das Beispiel bei 800 € netto im Monat für ein Einzelhotel mit Finanzen, Online-Banking, Anlagenbuchhaltung, Beschaffung und 2Go-App. Alle Beispiele dienen laut Anbieter der Veranschaulichung, das tatsächliche Paket wird gemeinsam konfiguriert. Kosten für Onboarding und Service nennt die Preisseite nicht.
+      sources:
+        - *preise
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung und DATEV
+      paragraphs:
+        - Zur GoBD verweist Scopevisio auf eine regelmäßige Softwareprüfung nach dem Prüfungsstandard IDW PS 880. Das Testat bestätigt laut Anbieter, dass Anwender mit Scopevisio GoBD-konform arbeiten können, die Bescheinigungen liegen im Trust Center. Auffällig ist, dass die GoBD-Seite im selben Absatz zwei Prüfgesellschaften nennt, HKKG und PwC. Wer das Testat für die eigene Verfahrensdokumentation braucht, sollte die Bescheinigung im Trust Center ansehen.
+        - Für die Empfangspflicht ist Scopevisio gerüstet, die Belegerkennung verarbeitet XRechnung und ZUGFeRD. Wie Ausgangsrechnungen als E-Rechnung erzeugt werden, beschreiben die geprüften Seiten nicht, deshalb führen wir den Versand als Keine Angabe. Der DATEV-Export ist im Standard enthalten, und die Steuerberatung kann lesend zugreifen. Eine ELSTER-Übertragung nennen die Seiten nicht.
+      sources:
+        - *gobd
+        - *finanzen
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Scopevisio wird laut Anbieter im Rechenzentrum in Frankfurt betrieben. Im Colocation-Betrieb nutzt Scopevisio die Infrastruktur des Rechenzentrums mit eigenen Servern. Die Kommunikation ist per HTTPS verschlüsselt, Daten werden regelmäßig und redundant gesichert. Scopevisio ist nach ISO 27001 zertifiziert und laut Finanzen-Seite nach BSI C5 testiert.
+        - Daten lassen sich jederzeit im DATEV- oder CSV-Format exportieren, etwa Kontakte oder Buchungen. Einen Auftragsverarbeitungsvertrag nennen die geprüften Seiten nicht, er sollte vor Vertragsschluss angefordert werden.
+      sources:
+        - *sicherheit
+        - *finanzen
+    - id: einstieg-und-support
+      title: Einstieg und Support
+      paragraphs:
+        - Scopevisio bietet einen 30-tägigen Test an, den die Navigation der Preisseite verlinkt, außerdem ein Erstgespräch und eine Preisanfrage. Für die Einführung gibt es ein Service-Onboarding, für die laufende Betreuung einen Customer Lifetime Service sowie eine Data-Analytics-Beratung. Ein Hilfebereich, Webinare und ein Podcast ergänzen das Angebot.
+        - Welche Supportkanäle mit welchen Reaktionszeiten zur Verfügung stehen und was sie kosten, nennen die geprüften Seiten nicht. Das sollte im Erstgespräch geklärt werden.
+      sources:
+        - *preise
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Scopevisio ist für den Mittelstand gebaut. Schon das kleinste Beispiel kostet 665 € im Monat, ein Kleinbetrieb mit zwei Nutzern findet keinen passenden Einstieg auf der Preisseite. Lager und Versand sind über eine 2Go-App vorhanden, stehen aber nicht im Mittelpunkt.
+        - Offen sind nach unserer Recherche die Ausgabe von E-Rechnungen, die ELSTER-Übertragung, die Supportkanäle, der Auftragsverarbeitungsvertrag und die Frage, welche Prüfgesellschaft das GoBD-Testat ausgestellt hat.
+      sources:
+        - *preise
+        - *gobd
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - Scopevisio ist ein deutsches Cloud-ERP mit Schwerpunkt Finanzbuchhaltung, Dokumentenmanagement und Abrechnung, betrieben in Frankfurt, mit ISO 27001, BSI C5 und einem GoBD-Testat. Es passt zu Dienstleistern und Unternehmensgruppen, die viele Belege verarbeiten und mehrere Gesellschaften führen. Preise gibt es nur als Beispiele, und einige Fragen zur E-Rechnung und zum Support bleiben offen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise
+        - *finanzen
+        - *gobd

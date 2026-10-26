@@ -1,0 +1,227 @@
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Die Preisseite zeigt standardmäßig die Jahrespreise; die Monatspreise stehen in den Seitendaten.
+slug: xentral
+name: Xentral
+vendor: xentral
+categories:
+  - erp-software
+status: draft
+verification: unverified
+lastReviewed: 2026-10-25
+author: null
+summary: ERP aus Augsburg für Onlinehändler mit Shop- und Marktplatzanbindung, Lager, Versand und DATEV, unbegrenzte Nutzer, ab 99 € im Monat.
+website: https://xentral.com/de
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://xentral.com/de/preise
+    title: Xentral Preise und Pläne
+    accessed: 2026-10-25
+targetGroups:
+  - e-commerce
+  - kmu
+  - gruender
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: null
+  android: null
+freeTrialDays: null
+freePlan: false
+compliance:
+  gobd:
+    status: ja
+    note: Laut Anbieter automatische, GoBD-konforme Rechnungen.
+    source: &buchhaltung
+      url: https://xentral.com/de/erp/buchhaltung
+      title: Xentral ERP Buchhaltung
+      accessed: 2026-10-25
+  eRechnungEmpfang:
+    status: aufpreis
+    note: E-Rechnungen im Verbindlichkeiten-Modul hochladen (ZUGFeRD, XRechnung, XML, PDF); Verbindlichkeiten erst ab Plan Business.
+    source: *buchhaltung
+  eRechnungVersand:
+    status: ja
+    note: Rechnungen gehen seit 1. Januar 2025 automatisch als ZUGFeRD-PDF und als XML-Datei per E-Mail hinaus.
+    source: *buchhaltung
+  datevExport:
+    status: ja
+    note: DATEV-Übermittlung inklusive Belegbildern in allen Plänen.
+    source: *buchhaltung
+  elster:
+    status: nein
+    note: Laut Anbieter sind BWA, Saldenliste und UStVA im aktuellen Stand des Moduls noch nicht vorgesehen.
+    source: *buchhaltung
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: aufpreis
+    note: Bankanbindungen erst ab Plan Business (649 € im Monat bei Jahreszahlung).
+    source: *preise
+  serverstandort:
+    status: unbekannt
+    note: Die Datenschutzerklärung nennt AWS als Hoster der Website, aber keinen Serverstandort für das ERP.
+  avv:
+    status: unbekannt
+  deutscherSupport:
+    status: ja
+    note: Service-Paket ab Plan Starter inklusive, dazu Help Center und Academy.
+    source: *preise
+features:
+  rechnungen:
+    status: ja
+    note: Rechnungen und Gutschriften in allen Plänen.
+    source: *preise
+  angebote:
+    status: aufpreis
+    note: Anfragen und Angebote erst im Plan Pro.
+    source: *preise
+  mahnwesen:
+    status: aufpreis
+    note: Mahnwesen erst im Plan Pro.
+    source: *preise
+  lager:
+    status: ja
+    note: Lagerbestand und Versand in allen Plänen; Wareneingang, Pick und Pack ab Business.
+    source: *preise
+  projektzeiten:
+    status: aufpreis
+    note: Arbeitszeiterfassung ab Plan Business.
+    source: *preise
+  api:
+    status: aufpreis
+    note: API-Zugriff mit bis zu 100 Aufrufen je Minute ab Plan Business.
+    source: *preise
+plans:
+  - name: Launch
+    monthlyCents: 9900
+    yearlyMonthlyCents: 9900
+    perUser: false
+    net: true
+    includes:
+      - Ein Online-Shop und ein Marktplatz
+      - 0,30 € je Auftrag, höchstens 100 Aufträge im Monat
+      - Höchstens 500.000 € Umsatz im Jahr
+      - Lager, Versanddienstleister, Lieferscheine, Rechnungen, DATEV
+    note: Ab-Preis. Laut Anbieter abhängig von Umsatz und Versandvolumen, gültig für Neukunden.
+    source: *preise
+  - name: Starter
+    monthlyCents: 38900
+    yearlyMonthlyCents: 34900
+    perUser: false
+    net: true
+    includes:
+      - Unbegrenzte Nutzer
+      - 500 Aufträge im Monat inklusive
+      - Service-Paket
+      - Shops und Marktplätze, Lager, Versand, Rechnungen, DATEV
+    note: Ab-Preis. Laut Anbieter abhängig von Umsatz und Versandvolumen, gültig für Neukunden.
+    source: *preise
+  - name: Business
+    monthlyCents: 71900
+    yearlyMonthlyCents: 64900
+    perUser: false
+    net: true
+    includes:
+      - Alles aus Starter
+      - Automatisierung und Xentral Connect
+      - Pick und Pack, Wareneingang, Retourenportal (bis 24 im Monat)
+      - Bankanbindungen, Verbindlichkeiten, Lieferantenbestellungen
+      - Arbeitszeiterfassung, API-Zugriff
+    note: Ab-Preis. Laut Anbieter abhängig von Umsatz und Versandvolumen, gültig für Neukunden.
+    source: *preise
+  - name: Pro
+    monthlyCents: 93900
+    yearlyMonthlyCents: 84900
+    perUser: false
+    net: true
+    includes:
+      - Alles aus Business
+      - Anfragen und Angebote
+      - Mahnwesen, Kostenstellen, SEPA-Gut- und Lastschriften
+      - Rabatte, Liefertermine, Bestellvorschlag, Preisanfrage
+    note: Ab-Preis. Laut Anbieter abhängig von Umsatz und Versandvolumen, gültig für Neukunden.
+    source: *preise
+pros:
+  - Unbegrenzte Nutzer in allen Plänen, Kosten wachsen mit dem Auftragsvolumen statt mit dem Team.
+  - Anbindung an Amazon, Shopify, Shopware, eBay und WooCommerce und an alle gängigen Versanddienstleister.
+  - E-Rechnungen gehen automatisch als ZUGFeRD-PDF und XML-Datei hinaus.
+  - DATEV-Übermittlung inklusive Belegbildern schon im kleinsten Plan.
+  - Veröffentlichte Ab-Preise für monatliche und jährliche Zahlung.
+cons:
+  - Keine Umsatzsteuer-Voranmeldung im Programm, die Buchhaltung bleibt bei DATEV oder der Steuerberatung.
+  - Bankanbindungen und das Verbindlichkeiten-Modul für eingehende E-Rechnungen erst ab Plan Business.
+  - Angebote und Mahnwesen erst im Plan Pro für 849 € im Monat bei Jahreszahlung.
+  - Den Serverstandort des ERP nennen die geprüften Seiten nicht.
+idealFor:
+  - Onlinehändler mit mehreren Shops und Marktplätzen, die Aufträge, Lager und Versand automatisieren wollen
+notIdealFor:
+  - Dienstleister ohne Warenverkehr
+  - Unternehmen, die die gesamte Finanzbuchhaltung bis zur UStVA im ERP führen wollen
+review:
+  sections:
+    - id: einordnung
+      title: Was Xentral ist und für wen es gedacht ist
+      paragraphs:
+        - Xentral ist ein ERP-System der Xentral ERP Software GmbH aus Augsburg. Es läuft im Browser und ist auf den Handel ausgerichtet, besonders auf Onlinehändler, die über eigene Shops und Marktplätze verkaufen. Als Branchen nennt der Anbieter unter anderem Lebensmittel und Getränke, Möbel, Mode, Kosmetik und Pharma, jeweils im B2C- und B2B-Geschäft.
+        - Der Schwerpunkt liegt auf Auftragsabwicklung, Lager und Versand. Die Buchhaltung ist bewusst schlank gehalten. Xentral erzeugt Rechnungen, gleicht Zahlungen ab und übergibt die Daten an DATEV, die Finanzbuchhaltung mit Umsatzsteuer-Voranmeldung bleibt aber bei der Steuerberatung oder in einem eigenen Buchhaltungsprogramm.
+      sources:
+        - *preise
+        - *buchhaltung
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Im E-Commerce verbindet Xentral die wichtigsten Shops und Marktplätze, namentlich Amazon, Shopify, Shopware, eBay und WooCommerce, und verwaltet den Produktkatalog zentral. Kundenaufträge werden automatisch bearbeitet, Lieferscheine erzeugt und Sendungen an alle gängigen Versanddienstleister übergeben. Ab Plan Business kommen mehrstufige Kommissionier- und Versandprozesse, Wareneingang und ein Retourenportal hinzu. Für das Lager gibt es eine Mobile Picking App und eine Inventur-App für Smartphones und MDE-Geräte.
+        - Im CRM verwaltet Xentral Kundendaten, die Kommunikation mit Kunden und eine Anbindung an HubSpot. Anfragen und individuelle Angebote gibt es erst im Plan Pro. Im Einkauf erstellt das System Bestellungen bei Lieferanten, im Plan Pro mit Bestellvorschlag und Preisanfragen.
+        - In der Buchhaltung erstellt Xentral Rechnungen und Gutschriften, verbindet Geschäftskonten und ordnet Transaktionen zu, überwacht Lieferschwellen und Verbindlichkeiten und übermittelt Daten an DATEV. Laut FAQ gleicht das System Zahlungen von PayPal, Stripe, Klarna, Amazon und Kreditkarten mit den Bestellungen ab. Im Plan Pro kommen Mahnwesen, Kostenstellen, SEPA-Gut- und Lastschriften sowie Proformarechnungen hinzu.
+        - Als Zusatzmodule nennt Xentral ein Berichtswesen mit kostenlosem Basispaket, eine Kassenoberfläche für das Ladengeschäft, eine Amazon Seller App, eine Produktion für eigene Artikel und die Differenzbesteuerung für gebrauchte Waren. In jedem Plan sind KI-Agenten und ein Co-Pilot enthalten, ab Business ein MCP-Server.
+      sources:
+        - *preise
+        - *buchhaltung
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Xentral berechnet keine Preise je Nutzer. Alle Pläne enthalten unbegrenzte Nutzer, die Preise steigen mit dem Funktionsumfang und laut Fußnote mit Umsatz und Versandvolumen. Die Preisseite zeigt standardmäßig die Jahrespreise. Launch kostet 99 € im Monat, Starter 349 €, Business 649 € und Pro 849 € bei Jahreszahlung. Bei monatlicher Zahlung kosten Starter 389 €, Business 719 € und Pro 939 €. Der Plan Scale ist nur auf Anfrage erhältlich. Alle Angaben sind Ab-Preise für Neukunden.
+        - Launch hat ein eigenes Modell. Zum Grundpreis von 99 € kommen 0,30 € je Auftrag hinzu, bei höchstens 100 Aufträgen im Monat und 500.000 € Umsatz im Jahr. Bei voller Auslastung sind das 129 € netto im Monat. Starter enthält 500 Aufträge im Monat.
+        - Ein Rechenbeispiel für den Plan Starter bei Jahreszahlung ergibt 4.188 € netto oder 4.983,72 € brutto im Jahr. Bei monatlicher Zahlung sind es 4.668 € netto im Jahr. Wer Bankanbindungen und das Verbindlichkeiten-Modul braucht, landet bei Business mit 7.788 € netto im Jahr bei Jahreszahlung. Onboarding mit Academy und Expertensitzungen oder über einen zertifizierten Partner wird zusätzlich angeboten, die Preise stehen nicht auf der Seite.
+      sources:
+        - *preise
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und Umsatzsteuer
+      paragraphs:
+        - Seit dem 1. Januar 2025 versendet Xentral Rechnungen laut Buchhaltungsseite automatisch per E-Mail in zwei Formaten, als PDF im ZUGFeRD-Format und als XML-Datei. Eingehende E-Rechnungen werden im Verbindlichkeiten-Modul hochgeladen, das die Formate ZUGFeRD, XRechnung, XML und PDF liest. Dieses Modul gehört laut Preisseite erst zum Plan Business, deshalb führen wir den Empfang als Aufpreis.
+        - Die DATEV-Übermittlung einschließlich der Belegbilder ist in allen Plänen enthalten. Die Rechnungen beschreibt Xentral als GoBD-konform. Ausdrücklich schreibt der Anbieter aber, dass BWA, Saldenliste und Umsatzsteuer-Voranmeldung im aktuellen Stand des Moduls noch nicht vorgesehen sind und langfristig das Ziel sind. Für die UStVA braucht es also weiterhin die Steuerberatung oder ein eigenes Buchhaltungsprogramm.
+      sources:
+        - *buchhaltung
+        - *preise
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Die Datenschutzerklärung von Xentral nennt Amazon Web Services als Hoster der Website. Einen Serverstandort für das ERP selbst und einen Auftragsverarbeitungsvertrag haben wir auf den geprüften Seiten nicht gefunden. Beides sollte vor dem Vertrag angefragt werden, weil im ERP Kunden-, Bestell- und Zahlungsdaten verarbeitet werden.
+      sources:
+        - url: https://xentral.com/de/legal/datenschutz
+          title: Xentral Datenschutzerklärung
+          accessed: 2026-10-25
+    - id: einstieg-und-support
+      title: Einstieg und Support
+      paragraphs:
+        - Auf der Preisseite lassen sich die Pläne Starter und Business kostenlos testen, die Dauer der Testphase nennt die Seite nicht. Für den Plan Pro und Scale verweist Xentral auf den Vertrieb. Zur Einführung gibt es zwei Wege, das Assisted Onboarding mit Academy, Projektplan und Expertensitzungen oder ein individuelles Onboarding über einen zertifizierten Partner.
+        - Ab Starter ist ein Service-Paket enthalten. Laut FAQ umfassen alle Pakete Zugang zu Support, Academy und Help Center, wobei der Plan Launch einen anderen Umfang hat. Weitere Service-Pakete mit persönlicher Betreuung und strategischer Beratung sind buchbar.
+      sources:
+        - *preise
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Xentral ist kein vollständiges Buchhaltungsprogramm. Die fehlende Umsatzsteuer-Voranmeldung ist für Händler, die ihre Buchhaltung selbst machen, ein wichtiger Punkt. Außerdem liegen Funktionen, die viele Händler früh brauchen, in höheren Plänen, etwa Bankanbindungen ab Business und Angebote sowie Mahnwesen erst im Plan Pro.
+        - Offen sind nach unserer Recherche der Serverstandort des ERP, der Auftragsverarbeitungsvertrag, die Dauer der Testphase und die Unterstützung der Kleinunternehmerregelung. Weil die Preise laut Anbieter von Umsatz und Versandvolumen abhängen, sollten Händler mit hohem Volumen den endgültigen Preis vor Vertragsschluss schriftlich bestätigen lassen.
+      sources:
+        - *preise
+        - *buchhaltung
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - Xentral passt zu Onlinehändlern, die viele Aufträge über mehrere Kanäle abwickeln und Lager und Versand automatisieren wollen, ohne für jeden Nutzer zu zahlen. E-Rechnung und DATEV-Übergabe sind abgedeckt, die Umsatzsteuer-Voranmeldung nicht. Wer ein ERP mit vollständiger Finanzbuchhaltung sucht, sollte weclapp, Haufe X360 oder Sage 100 vergleichen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise
+        - *buchhaltung

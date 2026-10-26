@@ -1,0 +1,209 @@
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Candis verarbeitet eingehende Rechnungen und Ausgaben; es schreibt keine Ausgangsrechnungen.
+slug: candis
+name: Candis
+vendor: candis
+categories:
+  - buchhaltungssoftware
+status: draft
+verification: unverified
+lastReviewed: 2026-10-25
+author: null
+summary: Rechnungseingang aus Berlin mit KI-Erfassung, Freigaben, Archiv und DATEV-Schnittstelle, unbegrenzte Nutzer und Server in Deutschland, ab 389 €.
+website: https://www.candis.io/
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://www.candis.io/preise
+    title: Candis Preise und Funktionsvergleich
+    accessed: 2026-10-25
+targetGroups:
+  - mittelstand
+  - kmu
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: true
+  android: true
+freeTrialDays: 30
+freePlan: false
+trialSource: *preise
+compliance:
+  gobd:
+    status: ja
+    note: Laut Anbieter nach GoBD zertifiziert, geprüft durch einen unabhängigen Prüfer.
+    source: &home
+      url: https://www.candis.io/
+      title: Candis Startseite und Vergleich
+      accessed: 2026-10-25
+  eRechnungEmpfang:
+    status: ja
+    note: XRechnung und ZUGFeRD empfangen, validieren, freigeben und archivieren.
+    source: &erechnung
+      url: https://www.candis.io/e-rechnungen
+      title: Candis E-Rechnungen
+      accessed: 2026-10-25
+  eRechnungVersand:
+    status: unbekannt
+    note: Candis ist auf eingehende Rechnungen ausgerichtet; die Ausgabe von Rechnungen nennen die Seiten nicht.
+  datevExport:
+    status: ja
+    note: Lizenzierter DATEV-Schnittstellenpartner für DATEV Rechnungswesen und DATEV Unternehmen online.
+    source: &datev
+      url: https://www.candis.io/funktionen/datev-schnittstelle
+      title: Candis DATEV-Schnittstelle
+      accessed: 2026-10-25
+  elster:
+    status: unbekannt
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: unbekannt
+    note: Die Preisseite nennt einen SEPA-XML-Export für Zahlungen, aber keine Bankanbindung.
+  serverstandort:
+    status: ja
+    note: Alle Daten auf Servern in Deutschland, laut Anbieter ohne Drittlandübertragung.
+    source: *home
+  avv:
+    status: ja
+    note: Candis schließt einen Auftragsverarbeitungsvertrag ab; Liste der Subprozessoren auf Anfrage.
+    source: *home
+  deutscherSupport:
+    status: ja
+    note: Kostenlose Implementierung, Onboarding und Support für Candis und DATEV in allen Paketen.
+    source: *preise
+features:
+  belegerfassungOcr:
+    status: ja
+    note: Rechnungsdaten automatisch mit der Candis KI erfassen und nach § 14 UStG prüfen.
+    source: *preise
+  api:
+    status: ja
+    note: Offene Rechnungsdaten-Schnittstelle.
+    source: *preise
+  mobileApp:
+    status: ja
+    note: Apps für iOS und Android, unter anderem für Reisekosten.
+    source: *home
+plans:
+  - name: Basis
+    monthlyCents: 38900
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Unbegrenzt viele Nutzer und Gesellschaften
+      - Preis nach Rechnungsanzahl
+      - Kostenlose Implementierung, Onboarding und Support
+    note: Ab-Preis. Vertragslaufzeit und Mehrwertsteuer-Ausweis nennt die Preisseite nicht.
+    source: *preise
+  - name: Plus
+    monthlyCents: 59900
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Unbegrenzt viele Nutzer und Gesellschaften
+      - Preis nach Dokumentenanzahl
+      - Kostenlose Implementierung, Onboarding und Support
+    note: Ab-Preis. Vertragslaufzeit und Mehrwertsteuer-Ausweis nennt die Preisseite nicht.
+    source: *preise
+  - name: Max
+    monthlyCents: 78900
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Unbegrenzt viele Nutzer und Gesellschaften
+      - Preis nach Dokumentenanzahl
+      - Kostenlose Implementierung, Onboarding und Support
+    note: Ab-Preis. Vertragslaufzeit und Mehrwertsteuer-Ausweis nennt die Preisseite nicht.
+    source: *preise
+pros:
+  - Unbegrenzt viele Nutzer und Gesellschaften in jedem Paket, der Preis hängt von der Belegmenge ab.
+  - Offizieller DATEV-Schnittstellenpartner mit Buchungsdatenservice, Rückstellungen und Stammdatenabgleich.
+  - Laut Anbieter GoBD-Zertifizierung durch einen unabhängigen Prüfer.
+  - Server in Deutschland und Auftragsverarbeitungsvertrag, Subprozessoren auf Anfrage.
+  - Implementierung, Onboarding und Support ohne Aufpreis.
+cons:
+  - Einstieg ab 389 € im Monat, für kleine Belegmengen teuer.
+  - Kein Programm für Ausgangsrechnungen, Buchhaltung und UStVA bleiben in DATEV oder einem ERP.
+  - Der genaue Preis entsteht erst über die Rechnungs- oder Dokumentenanzahl.
+  - Mehrere angekündigte Funktionen wie die regelbasierte Freigabe sind erst für das vierte Quartal geplant.
+idealFor:
+  - Mittelständische Unternehmen mit vielen Eingangsrechnungen, die Freigaben, Archiv und DATEV-Übergabe automatisieren wollen
+notIdealFor:
+  - Selbstständige und Kleinbetriebe mit wenigen Belegen im Monat
+  - Unternehmen, die vor allem Ausgangsrechnungen schreiben
+review:
+  sections:
+    - id: einordnung
+      title: Was Candis ist und für wen es gedacht ist
+      paragraphs:
+        - Candis ist eine Software für die vorbereitende Buchhaltung und den Rechnungseingang der Candis GmbH aus Berlin. Sie erfasst Eingangsrechnungen automatisch, liest sie aus, prüft sie, kontiert sie vor und steuert sie durch Freigabeprozesse, bevor die Daten an DATEV oder ein ERP gehen. Laut Anbieter nutzen seit 2015 mehr als 10.000 Unternehmen Candis.
+        - Candis ersetzt kein Rechnungsprogramm und keine Finanzbuchhaltung. Es sitzt zwischen dem Posteingang und der Buchhaltung. Neben Rechnungen verwaltet es Bestellanforderungen, Auslagen und Reisekosten, Verträge mit Fristen und Firmenkreditkarten. Damit richtet es sich an Unternehmen, bei denen viele Belege durch mehrere Hände gehen.
+      sources:
+        - *home
+        - url: https://www.candis.io/impressum
+          title: Impressum Candis
+          accessed: 2026-10-25
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Im Rechnungsmanagement erfasst die Candis KI die Rechnungsdaten automatisch und prüft Rechnungen nach den Pflichtangaben des § 14 UStG. Anhänge wie Verträge und Lieferscheine lassen sich verknüpfen, Angaben zur Künstlersozialkasse und Buchungstexte werden erfasst, und eine automatische IBAN-Risikoprüfung warnt vor geänderten Bankverbindungen. Bestellanforderungen bekommen automatisch Bestellnummern und werden mit der späteren Rechnung verknüpft.
+        - Freigaben laufen über individuelle, mehrstufige Workflows mit automatischen Erinnerungen, Vertretungsregeln und vollständiger Prozessdokumentation. Für DATEV-Selbstbucher bildet Candis Rückstellungen für offene Freigaben. Als angekündigt kennzeichnet die Preisseite eine automatische Freigabeanfrage mit der KI, eine regelbasierte Freigabe und die Dunkelverbuchung von Warenrechnungen, jeweils für das vierte Quartal. Erinnerungen über Slack und Microsoft Teams übernimmt ein KI-Agent.
+        - Das Dokumentenarchiv speichert unbegrenzt viele Anhänge, sortiert Dokumenttypen automatisch, verschlagwortet sie und bietet eine Volltextsuche. Auch Ausgangsrechnungen lassen sich archivieren. Für Auslagen und Reisekosten berechnet Candis Verpflegungsmehraufwand, Übernachtungspauschalen und Kilometerpauschalen und erlaubt das Einreichen für Kolleginnen und Kollegen. Für Zahlungen gibt es einen SEPA-XML-Export.
+        - Über die Nutzerverwaltung lassen sich Zugriffsrechte bis auf einzelne Dokumente einschränken, Single Sign-On und eine Anbindung an Personio sind möglich. Neben DATEV nennt Candis Integrationen mit SAP Business One, Sage 100, Oracle NetSuite und Microsoft Dynamics 365 Business Central sowie eine offene Rechnungsdaten-Schnittstelle.
+      sources:
+        - *preise
+        - *home
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Candis bietet drei Pakete an. Basis kostet ab 389 € im Monat und wird nach der Zahl der Rechnungen berechnet, Plus ab 599 € und Max ab 789 € im Monat werden nach der Zahl der Dokumente berechnet. In jedem Paket sind unbegrenzt viele Nutzer und Gesellschaften enthalten, dazu kostenlose Implementierung, Onboarding und Support für Candis und DATEV. Die Preisseite bietet einen Rechner für den genauen Preis.
+        - Ob die Preise netto sind und welche Vertragslaufzeit gilt, nennt die Preisseite nicht. Unter der Annahme, dass es Nettopreise sind, kostet Basis mindestens 4.668 € netto oder 5.554,92 € brutto im Jahr. Weil die Kosten nicht mit der Zahl der Nutzer steigen, lohnt sich das Modell vor allem für Unternehmen, in denen viele Personen an Freigaben beteiligt sind.
+        - Welche Funktionen genau in welchem Paket stecken, zeigt die Vergleichstabelle der Preisseite nur grafisch. Vor dem Vertrag sollte deshalb schriftlich festgehalten werden, ob etwa Single Sign-On, die Anbindung an SAP oder die Rückstellungen im gewählten Paket enthalten sind.
+      sources:
+        - *preise
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung und DATEV
+      paragraphs:
+        - Für die seit 2025 geltende Pflicht zum Empfang von E-Rechnungen empfängt Candis XRechnung und ZUGFeRD, validiert sie, steuert die Freigabe und archiviert sie. Eine XRechnung ist eine reine XML-Datei, die sich ohne Software nicht lesen lässt. Candis zeigt die enthaltenen Rechnungsdaten an und übergibt sie strukturiert an die Buchhaltung. Ausgangsrechnungen als E-Rechnung zu erstellen, gehört nicht zum beschriebenen Funktionsumfang.
+        - Candis ist lizenzierter DATEV-Schnittstellenpartner. Für Unternehmen mit eigener DATEV-Buchhaltung erzeugt der DATEV Buchungsdatenservice fertige Buchungsstapel für DATEV Rechnungswesen, inklusive Vorkontierung, Zahlungsfälligkeiten, Rückstellungen und Stammdaten. Belegbilder werden parallel in DATEV Unternehmen online abgelegt. Unternehmen, die über ein Steuerbüro buchen, exportieren Belegdaten und Bilder zu DATEV Unternehmen online.
+        - Zur GoBD schreibt Candis, die Software sei nach GoBD zertifiziert und von einem unabhängigen Prüfer bestätigt. Jede Aktion wird laut Anbieter unveränderlich protokolliert. Den Namen des Prüfers nennen die geprüften Seiten nicht.
+      sources:
+        - *erechnung
+        - *datev
+        - *home
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Laut Startseite werden alle Daten DSGVO-konform auf Servern in Deutschland gespeichert, ohne Übertragung in Drittländer. Candis schließt mit Kunden einen Auftragsverarbeitungsvertrag ab, eine vollständige Liste der Subprozessoren gibt es auf Anfrage. Für ein Werkzeug, das Rechnungen mit Bankverbindungen und Personendaten verarbeitet, sind das wichtige Voraussetzungen.
+      sources:
+        - *home
+    - id: einstieg-und-support
+      title: Einstieg, Apps und Support
+      paragraphs:
+        - Candis lässt sich 30 Tage kostenlos testen, außerdem bietet der Anbieter ein kostenloses Beratungsgespräch an. Implementierung, Onboarding und Support für Candis und DATEV sind in jedem Paket ohne Aufpreis enthalten, für DATEV gibt es zusätzlich einen Expertenservice. Apps für iOS und Android sind im App Store und bei Google Play verlinkt.
+      sources:
+        - *preise
+        - *home
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Candis ist ein Spezialwerkzeug für den Rechnungseingang. Wer Angebote und Rechnungen schreiben, Bankumsätze buchen und die Umsatzsteuer-Voranmeldung abgeben will, braucht zusätzlich ein Buchhaltungs- oder ERP-System. Mit einem Einstieg ab 389 € im Monat lohnt sich Candis erst bei einer nennenswerten Zahl an Eingangsrechnungen.
+        - Offen sind nach unserer Recherche die Vertragslaufzeit, der Mehrwertsteuer-Ausweis der Preise, der genaue Funktionsumfang je Paket und der Name des GoBD-Prüfers. Auffällig ist außerdem, dass die E-Rechnungsseite die Pflicht als EU-Regel für Rechnungen über 250 Euro beschreibt. In Deutschland ergibt sie sich aus dem Umsatzsteuerrecht, und Rechnungen bis 250 € dürfen nach § 33 UStDV immer als sonstige Rechnung übermittelt werden, also auf Papier oder als einfaches PDF.
+      sources:
+        - *preise
+        - *erechnung
+        - url: https://www.gesetze-im-internet.de/ustdv_1980/__33.html
+          title: § 33 UStDV, Rechnungen über Kleinbeträge
+          accessed: 2026-10-26
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - Candis passt zu mittelständischen Unternehmen mit vielen Eingangsrechnungen und verteilten Freigaben, die ihre Buchhaltung in DATEV führen. Die enge DATEV-Anbindung, unbegrenzte Nutzer, Server in Deutschland und der veröffentlichte Auftragsverarbeitungsvertrag sprechen für das Werkzeug. Für Selbstständige und Kleinbetriebe ist es zu groß und zu teuer. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *home
+        - *datev

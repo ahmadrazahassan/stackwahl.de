@@ -70,10 +70,10 @@ test.describe("Comparison tool and calculator", () => {
 test.describe("Filters and search", () => {
   test("category filters count only documented facts", async ({ page }) => {
     await page.goto("/kategorien/buchhaltungssoftware");
-    await expect(page.getByText(/^8 von 8 Programmen/)).toBeVisible();
+    await expect(page.getByText(/^13 von 13 Programmen/)).toBeVisible();
     await page.getByRole("button", { name: "Kostenloser Tarif" }).click();
     await expect(page).toHaveURL(/filter=kostenlos/);
-    await expect(page.getByText(/^2 von 8 Programmen/)).toBeVisible();
+    await expect(page.getByText(/^4 von 13 Programmen/)).toBeVisible();
   });
 
   test("search page finds software with German normalization", async ({ page }) => {

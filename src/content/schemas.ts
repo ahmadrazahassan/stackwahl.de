@@ -140,6 +140,24 @@ export const ratingSchema = z.strictObject({
 });
 export type Rating = z.infer<typeof ratingSchema>;
 
+/**
+ * Long-form profile text, written from the sources (Section 3: no hands-on claim without a test).
+ * Every section names the pages it is based on, so readers can check each paragraph.
+ */
+export const reviewSchema = z.strictObject({
+  sections: z
+    .array(
+      z.strictObject({
+        id: slugSchema,
+        title: z.string().min(3),
+        paragraphs: z.array(z.string().min(40)).min(1),
+        sources: z.array(sourceSchema).min(1),
+      }),
+    )
+    .min(4),
+});
+export type Review = z.infer<typeof reviewSchema>;
+
 export const softwareSchema = z.strictObject({
   slug: slugSchema,
   name: z.string().min(2),
@@ -178,6 +196,7 @@ export const softwareSchema = z.strictObject({
   idealFor: z.array(z.string().min(5)).min(1),
   notIdealFor: z.array(z.string().min(5)).min(1),
   verdict: z.string().min(40).optional(),
+  review: reviewSchema.optional(),
   rating: ratingSchema.nullable().default(null),
   logo: z
     .strictObject({

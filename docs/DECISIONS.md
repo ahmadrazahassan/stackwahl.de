@@ -177,3 +177,13 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 - **Vercel region.** `vercel.json` pins functions to `fra1`, so the hosting statement in `site.config.ts` ("Region Frankfurt (fra1)") is true for the deployment and not just a plan.
 - **Log retention stays open.** Vercel's retention depends on the plan (Hobby 1 hour, Pro 1 day) and covers runtime logs only. The privacy text needs the owner's plan and a check of Vercel's DPA, so `{{HOSTING_LOG_RETENTION}}` stays a visible placeholder.
 - **The styleguide keeps fictitious data.** Section 5.6 asks for labeled fictitious demo data on `/intern/styleguide`. Real brands there would need sample scores and "Affiliate-Link" labels, which would be false statements about real vendors. All public pages read real content only.
+
+## 26.10.2026: Batch 2 and long reviews
+
+- **Long reviews.** Profiles get an optional `review` with at least four sections. Each section lists its own sources, and the page shows them directly under the section ("Grundlage dieses Abschnitts"), so a reader can check every paragraph. The guards treat review text like every other text (copy rules, Sie-Form, test claims) and review sources like fact sources (future dates, 180-day freshness). Reviews describe what the vendor states and what that means in practice, with worked cost examples; they never claim a hands-on test.
+- **Prices without tariffs.** Haufe X360 and Scopevisio publish only example configurations. Haufe X360 is stored with its minimum of 449 € a month as the plan; Scopevisio with its three published examples for service companies, each marked "Beispiel". Sage X3 publishes no price and is not listed.
+- **Xentral prices.** The price page shows yearly prices by default; the monthly prices come from the page's own data and are stored as `monthlyCents`.
+- **Payroll deferred.** Sage HR & Payroll and Sage HR Suite have public prices, but the accounting compliance block does not fit payroll software. They wait for a payroll checklist and category.
+- **ERP category.** New draft category `erp-software` with six profiles, above the threshold of five.
+- **Logos for new vendors.** Not downloaded yet. The owner's approval covered the logos of the first ten vendors; the seven new vendors show their names as text until approved.
+- **Finder race fixed.** After the last step, "Ergebnis anzeigen" could be clicked before nuqs had written the step to the URL; the late write then pushed the Finder URL over the result page (seen as a flaky E2E test, 1 in 8 runs). The link now waits for the pending URL write and then navigates. Without JavaScript the plain link still works.

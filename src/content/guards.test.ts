@@ -216,6 +216,29 @@ describe("checkContent", () => {
     expect(codes(set({ software: [s] }))).toContain("unavailable-without-note");
   });
 
+  it("applies copy rules, test claims and source dates to the long review", () => {
+    const section = (paragraph: string, accessed = "2026-10-01") => ({
+      id: "abschnitt",
+      title: "Ein Abschnitt",
+      paragraphs: [paragraph],
+      sources: [{ ...src(), accessed }],
+    });
+    const review = (paragraph: string, accessed?: string) => ({
+      sections: Array.from({ length: 4 }, () => section(paragraph, accessed)),
+    });
+    const ok = "Die Software erstellt Rechnungen und überträgt die UStVA an das Finanzamt.";
+    expect(codes(set({ software: [validSoftware({ review: review(ok) })] }))).toEqual([]);
+    expect(
+      codes(set({ software: [validSoftware({ review: review(`${ok} Wir haben es getestet.`) })] })),
+    ).toContain("test-claim");
+    expect(
+      codes(set({ software: [validSoftware({ review: review(`${ok} Das klappt nahtlos.`) })] })),
+    ).toContain("copy");
+    expect(
+      codes(set({ software: [validSoftware({ review: review(ok, "2099-01-01") })] })),
+    ).toContain("future-date");
+  });
+
   it("requires every logo file to exist and to be listed in LOGOS.md", () => {
     const logo = {
       file: "/logos/beispiel.svg",

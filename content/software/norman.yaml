@@ -1,0 +1,273 @@
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Norman hat getrennte Tarife für Selbstständige und für UG und GmbH; beide stehen hier als Tarife.
+slug: norman
+name: Norman
+vendor: norman
+categories:
+  - buchhaltungssoftware
+  - rechnungsprogramme
+status: draft
+verification: unverified
+lastReviewed: 2026-10-25
+author: null
+summary: KI-Buchhaltung aus Berlin mit kostenlosem Tarif, E-Rechnung, UStVA per ELSTER-Schnittstelle und Jahresabschluss für GmbHs, ab 9 € im Monat.
+website: https://norman.finance/de
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://norman.finance/de/preise
+    title: Norman Preise und FAQ
+    accessed: 2026-10-25
+targetGroups:
+  - freiberufler
+  - selbststaendige
+  - kleinunternehmer
+  - gruender
+  - kmu
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: true
+  android: true
+freeTrialDays: null
+freePlan: true
+compliance:
+  gobd:
+    status: unbekannt
+  eRechnungEmpfang:
+    status: unbekannt
+    note: Die Seiten nennen deutsche E-Rechnungs-Workflows, aber nicht ausdrücklich den Empfang.
+  eRechnungVersand:
+    status: ja
+    note: Unbegrenzte E-Rechnungen schon im kostenlosen Tarif.
+    source: *preise
+  datevExport:
+    status: ja
+    note: DATEV-Export, im Tarif für UG und GmbH ab Pro.
+    source: *preise
+  elster:
+    status: ja
+    note: UStVA über die zertifizierte ELSTER-Schnittstelle, ohne eigenes ELSTER-Zertifikat; für Selbstständige im Tarif Pro, für UG und GmbH im Tarif Max.
+    source: &ustva
+      url: https://norman.finance/de/ustva/ohne-elster
+      title: Norman UStVA ohne ELSTER
+      accessed: 2026-10-25
+  kleinunternehmer:
+    status: ja
+    note: Eigener Tarif Klein für Kleinunternehmer; Jahreserklärungen dort nur bei jährlicher Zahlung.
+    source: *preise
+  bankanbindung:
+    status: ja
+    note: Bank-Synchronisierung ab Tarif Klein, bis zu 5 Konten; für UG und GmbH ein Konto schon kostenlos.
+    source: *preise
+  serverstandort:
+    status: ja
+    note: App auf EU-Infrastruktur von DigitalOcean und AWS, Verarbeitung in Frankfurt am Main.
+    source: &datenschutz
+      url: https://norman.finance/de/datenschutz
+      title: Norman Datenschutzerklärung
+      accessed: 2026-10-25
+  avv:
+    status: ja
+    note: Auftragsverarbeitungsvertrag nach Art. 28 DSGVO öffentlich abrufbar.
+    source: &avv
+      url: https://norman.finance/de/avv
+      title: Norman Auftragsverarbeitungsvertrag
+      accessed: 2026-10-25
+  deutscherSupport:
+    status: ja
+    note: Support per E-Mail an support@norman.finance und Hilfe-Center auf Deutsch.
+    source: &impressum
+      url: https://norman.finance/de/impressum
+      title: Impressum Norman
+      accessed: 2026-10-25
+features:
+  angebote:
+    status: ja
+    source: *preise
+  rechnungen:
+    status: ja
+    note: Eigenes Logo, Rechnungskorrekturen und Lieferscheine, Mehrwährungsrechnungen.
+    source: *preise
+  belegerfassungOcr:
+    status: ja
+    note: Beleg-Scan per OCR, Belege lassen sich auch weiterleiten.
+    source: *preise
+  bankabgleich:
+    status: ja
+    note: Automatischer Belegabgleich mit Bankbewegungen.
+    source: *preise
+  euer:
+    status: ja
+    note: EÜR ab Tarif Klein bei jährlicher Zahlung.
+    source: *preise
+  bilanz:
+    status: ja
+    note: Doppelte Buchführung für UG und GmbH kostenlos, Jahresabschluss mit E-Bilanz im Tarif Max.
+    source: *preise
+  api:
+    status: ja
+    note: API, CLI und MCP-Server für KI-Assistenten.
+    source: *preise
+  steuerberaterzugang:
+    status: ja
+    note: Steuerberater-Zugang schon im kostenlosen Tarif.
+    source: *preise
+  mobileApp:
+    status: ja
+    note: Apps für iOS und Android.
+    source: *preise
+plans:
+  - name: Kostenlos (Selbstständige)
+    monthlyCents: 0
+    yearlyMonthlyCents: 0
+    perUser: false
+    net: true
+    includes:
+      - Unbegrenzte E-Rechnungen
+      - KI-Autopilot und Tipps zu Steuerabzügen
+      - Steuerberater-Zugang
+      - Kein Ablaufdatum
+    source: *preise
+  - name: Klein (Selbstständige)
+    monthlyCents: 1200
+    yearlyMonthlyCents: 900
+    perUser: false
+    net: true
+    includes:
+      - Für Kleinunternehmer
+      - Bank-Synchronisierung
+      - EÜR und private Einkommensteuer nur bei jährlicher Zahlung
+      - EU-Umsatzmeldungen (ZM)
+    note: Neukunden zahlen im Monatsabo die ersten 3 Monate 3 €.
+    source: *preise
+  - name: Pro (Selbstständige)
+    monthlyCents: 2800
+    yearlyMonthlyCents: 2100
+    perUser: false
+    net: true
+    includes:
+      - Für Selbstständige mit Umsatzsteuer
+      - Umsatzsteuervoranmeldungen und alle Steuererklärungen
+      - Automatischer Belegabgleich
+      - Bis zu 5 synchronisierte Bankkonten
+    note: Neukunden zahlen im Monatsabo die ersten 3 Monate 7 €.
+    source: *preise
+  - name: Kostenlos (UG und GmbH)
+    monthlyCents: 0
+    yearlyMonthlyCents: 0
+    perUser: false
+    net: true
+    includes:
+      - Vollständige doppelte Buchführung
+      - Unbegrenzte E-Rechnungen
+      - Bank-Synchronisierung für 1 Konto
+    source: *preise
+  - name: Pro (UG und GmbH)
+    monthlyCents: 1200
+    yearlyMonthlyCents: 900
+    perUser: false
+    net: true
+    includes:
+      - BWA und Finanzberichte
+      - DATEV-Export
+      - Steuerberater- und Multi-User-Zugang
+    note: Neukunden zahlen im Monatsabo die ersten 3 Monate 3 €.
+    source: *preise
+  - name: Max (UG und GmbH)
+    monthlyCents: 5200
+    yearlyMonthlyCents: 3900
+    perUser: false
+    net: true
+    includes:
+      - UStVA und ZM-Meldung
+      - Körperschaft- und Gewerbesteuer
+      - Jahresabschluss mit E-Bilanz
+      - Bank-Synchronisierung für 5 Konten
+    note: Neukunden zahlen im Monatsabo die ersten 3 Monate 13 €.
+    source: *preise
+pros:
+  - Buchhaltung und unbegrenzte E-Rechnungen kostenlos und ohne Ablaufdatum, Start ohne Zahlungsdaten.
+  - UStVA über die zertifizierte ELSTER-Schnittstelle, ohne eigenes ELSTER-Zertifikat.
+  - Für UG und GmbH Jahresabschluss mit E-Bilanz, Körperschaft- und Gewerbesteuer im Tarif Max.
+  - Verarbeitung in Frankfurt am Main und öffentlich abrufbarer Auftragsverarbeitungsvertrag.
+  - Apps für iOS und Android, dazu API, CLI und MCP-Server.
+cons:
+  - Für Kleinunternehmer gibt es EÜR und Steuererklärungen nur bei jährlicher Zahlung.
+  - Die UStVA kostet für Selbstständige erst ab Tarif Pro für 21 € im Monat bei Jahreszahlung.
+  - Junger Anbieter, eine GoBD-Aussage nennen die geprüften Seiten nicht.
+  - Website und App duzen ihre Kundinnen und Kunden.
+idealFor:
+  - Freiberufler, Kleinunternehmer und kleine GmbHs, die Buchhaltung, Rechnungen und Steuern ohne Steuerbüro selbst erledigen wollen
+notIdealFor:
+  - Unternehmen mit Warenwirtschaft, Lager oder Produktion
+  - Betriebe, die eine geprüfte GoBD-Bescheinigung voraussetzen
+review:
+  sections:
+    - id: einordnung
+      title: Was Norman ist und für wen es gedacht ist
+      paragraphs:
+        - Norman ist eine KI-gestützte Buchhaltungs- und Steuer-App der Norman AI GmbH aus Berlin. Der Anbieter beschreibt das Produkt als KI-Buchhalter für Selbstständige und Unternehmen in Deutschland. Buchhaltung, Rechnungen und Steuern laufen in einer App, die KI bereitet Buchungen, Belegabgleich und Steuermeldungen vor, und die Nutzerin oder der Nutzer gibt jeden Schritt frei. Laut Preisseite nutzen mehr als 8.000 Unternehmer Norman.
+        - Die Tarife sind nach Zielgruppen getrennt, nämlich Privatpersonen und Angestellte, Selbstständige wie Freiberufler und Gewerbetreibende sowie Unternehmen in der Rechtsform UG oder GmbH. Für GmbHs reicht der Umfang laut FAQ bis zum Jahresabschluss mit Bilanz, GuV und E-Bilanz.
+      sources:
+        - *preise
+        - *impressum
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - In der Buchhaltung ordnet Norman laufende Bankbewegungen zu und schlägt passende Konten vor. Belege werden gescannt oder weitergeleitet, per OCR ausgelesen, mit Zahlungen abgeglichen und verbucht. Für Unternehmen bietet schon der kostenlose Tarif eine vollständige doppelte Buchführung, im Tarif Pro kommen BWA und Finanzberichte hinzu.
+        - Rechnungen und Angebote entstehen mit eigenem Logo und ohne Wasserzeichen, dazu Rechnungskorrekturen, Lieferscheine, Rechnungsvorlagen, wiederkehrende Rechnungen, automatische Mahnungen und Mehrwährungsrechnungen. Unbegrenzte E-Rechnungen sind in jedem Tarif enthalten, der Umsatz wird automatisch verbucht.
+        - Bei den Steuern erstellt Norman die Umsatzsteuer-Voranmeldung aus den laufenden Daten, zeigt eine Vorschau mit den Kennzahlen und übermittelt sie erst nach Freigabe. Je nach Tarif kommen die Zusammenfassende Meldung, EÜR, Einkommensteuer mit Anlage K und Anlage V sowie für Unternehmen Körperschaft- und Gewerbesteuer hinzu. Eine Echtzeit-Steuerschätzung zeigt die erwartete Last und die nächsten Fristen.
+        - Technisch bietet Norman eine Web-Oberfläche, Apps für iOS und Android, eine ChatGPT-App, einen MCP-Server für KI-Assistenten wie Claude, eine Kommandozeile und eine API. Daten lassen sich jederzeit exportieren und von anderen Plattformen übernehmen.
+      sources:
+        - *preise
+        - *ustva
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Für Selbstständige kostet der Tarif Kostenlos dauerhaft 0 €. Klein für Kleinunternehmer kostet 12 € im Monat oder 9 € bei jährlicher Zahlung, Pro für Selbstständige mit Umsatzsteuer 28 € im Monat oder 21 € bei jährlicher Zahlung. Für UG und GmbH kostet Pro 12 € im Monat oder 9 € bei jährlicher Zahlung, Max 52 € im Monat oder 39 € bei jährlicher Zahlung. Alle Preise verstehen sich zuzüglich Umsatzsteuer. Die jährliche Zahlung entspricht laut Preisseite drei geschenkten Monaten.
+        - Neukunden erhalten im Monatsabo 75 % Rabatt für die ersten drei Monate. Klein und Pro für UG und GmbH kosten dann 3 €, Pro für Selbstständige 7 € und Max 13 € im Monat. Danach gilt der volle Monatspreis. Kündigen und wechseln geht laut FAQ jederzeit zum Ende des Abrechnungszeitraums.
+        - Ein Rechenbeispiel für eine Freiberuflerin mit Umsatzsteuer im Tarif Pro bei jährlicher Zahlung ergibt 252 € netto oder 299,88 € brutto im Jahr. Eine GmbH im Tarif Max zahlt bei jährlicher Zahlung 468 € netto oder 556,92 € brutto im Jahr, einschließlich Jahresabschluss, E-Bilanz, Körperschaft- und Gewerbesteuer. Privatpersonen können ihre Einkommensteuererklärung für einmalig 19 € je Steuerjahr abgeben.
+      sources:
+        - *preise
+    - id: rechtssicherheit
+      title: E-Rechnung, ELSTER, DATEV und Kleinunternehmer
+      paragraphs:
+        - Norman übermittelt die Umsatzsteuer-Voranmeldung laut Anbieter über die zertifizierte ELSTER-Schnittstelle. Ein eigenes ELSTER-Konto oder Zertifikat ist nicht nötig. Für Selbstständige ist die UStVA im Tarif Pro enthalten, für UG und GmbH im Tarif Max. Der Tarif Klein ist für Kleinunternehmer gedacht, die keine Umsatzsteuer ausweisen.
+        - Wichtig für Kleinunternehmer ist eine Einschränkung aus der FAQ. EÜR, Einkommensteuer, Umsatzsteuererklärung und Gewerbesteuererklärung lassen sich im Tarif Klein nur bei jährlicher Abrechnung einreichen. Buchhaltung, Rechnungen und Bank-Synchronisierung laufen auch im Monatstarif.
+        - E-Rechnungen sind in jedem Tarif unbegrenzt enthalten. Ob Norman eingehende E-Rechnungen im Format XRechnung oder ZUGFeRD auslesen kann, nennen die geprüften Seiten nicht ausdrücklich. Ein DATEV-Export ist für UG und GmbH ab dem Tarif Pro aufgeführt, ein Steuerberater-Zugang schon kostenlos. Eine Aussage zur GoBD haben wir nicht gefunden.
+      sources:
+        - *ustva
+        - *preise
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Laut Datenschutzerklärung läuft die App auf Cloud-Infrastruktur innerhalb der EU. Für Infrastruktur und Hosting setzt Norman DigitalOcean ein, für Cloud-Speicher Amazon Web Services, die Verarbeitung erfolgt ausschließlich in Rechenzentren in Frankfurt am Main. Die Website selbst liegt bei Vercel. Für Übermittlungen in Drittländer nennt Norman Standardvertragsklauseln und das EU-U.S. Data Privacy Framework.
+        - Der Auftragsverarbeitungsvertrag nach Art. 28 DSGVO ist öffentlich abrufbar, eine Liste der Unterauftragsverarbeiter ebenfalls. Bei verbundenen Google-Konten arbeiten die Connectoren laut Datenschutzerklärung nur lesend, und Google-Daten werden nicht zum Training allgemeiner KI-Modelle genutzt.
+      sources:
+        - *datenschutz
+        - *avv
+    - id: einstieg-und-support
+      title: Einstieg und Support
+      paragraphs:
+        - Der Einstieg ist kostenlos. Die Registrierung braucht nur eine E-Mail-Adresse, Zahlungsdaten erst beim Wechsel in einen bezahlten Tarif. Eine Testphase gibt es nicht, weil der kostenlose Tarif kein Ablaufdatum hat. Für den Wechsel von anderen Anbietern bietet Norman eine Datenmigration an.
+        - Den Support erreicht man laut Impressum per E-Mail an support@norman.finance. Die Website bietet ein Hilfe-Center, eine Academy, einen Blog und kostenlose Rechner, etwa einen Einkommensteuer- und einen Brutto-Netto-Rechner.
+      sources:
+        - *impressum
+        - *preise
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Norman ist auf Selbstständige und kleine Kapitalgesellschaften zugeschnitten. Warenwirtschaft, Lager oder Projektabrechnung mit Zeiterfassung gehören nicht zum beschriebenen Umfang. Website und App duzen ihre Nutzerinnen und Nutzer.
+        - Offen sind nach unserer Recherche eine Aussage zur GoBD, der Empfang von E-Rechnungen im Format XRechnung und ZUGFeRD und die Frage, wie die KI-Vorschläge dokumentiert werden. Weil Norman Steuererklärungen übermittelt, bleibt die Verantwortung für die Richtigkeit bei der Nutzerin oder dem Nutzer, die jede Abgabe freigeben.
+      sources:
+        - *preise
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - Norman bietet einen kostenlosen Einstieg in Buchhaltung und E-Rechnung und deckt in den bezahlten Tarifen die Steuererklärungen bis zum Jahresabschluss einer GmbH ab. Die UStVA über die ELSTER-Schnittstelle, die Verarbeitung in Frankfurt und der öffentliche Auftragsverarbeitungsvertrag sprechen für den Anbieter. Offene Punkte zur GoBD und zum E-Rechnungsempfang sollten vor dem Wechsel geklärt werden. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise
+        - *ustva
+        - *datenschutz

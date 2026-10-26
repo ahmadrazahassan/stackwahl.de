@@ -1,0 +1,217 @@
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Die Produktseite heißt „Sage 50 Connected“; die Testversion wird heruntergeladen und installiert.
+slug: sage-50
+name: Sage 50
+vendor: sage
+categories:
+  - buchhaltungssoftware
+  - erp-software
+status: draft
+verification: unverified
+lastReviewed: 2026-10-25
+author: null
+summary: Buchhaltung, Warenwirtschaft und Auftragsbearbeitung von Sage für kleine Betriebe, mit E-Rechnung, DATEV-Schnittstelle und ab 35 € je Arbeitsplatz.
+website: https://www.sage.com/de-de/produkte/sage-50connected/
+marketAvailability:
+  status: verfuegbar
+  source: &produkt
+    url: https://www.sage.com/de-de/produkte/sage-50connected/
+    title: Sage 50 Produktseite mit Preisen und Paketen
+    accessed: 2026-10-25
+targetGroups:
+  - kmu
+  - e-commerce
+  - handwerk
+deployment:
+  - hybrid
+apps:
+  web: null
+  ios: null
+  android: null
+freeTrialDays: 30
+freePlan: false
+trialSource: *produkt
+compliance:
+  gobd:
+    status: ja
+    note: Laut Anbieter GoBD-konforme Buchführung mit erweiterten Prüffunktionen.
+    source: *produkt
+  eRechnungEmpfang:
+    status: ja
+    note: E-Rechnungen in XRechnung und ZUGFeRD empfangen.
+    source: *produkt
+  eRechnungVersand:
+    status: ja
+    note: ZUGFeRD-konforme E-Rechnungen im PDF/A-Format, Versand in XRechnung und ZUGFeRD.
+    source: *produkt
+  datevExport:
+    status: ja
+    note: DATEV-Schnittstelle in beiden Paketen, dazu Belegexport als CSV und ZIP.
+    source: *produkt
+  elster:
+    status: unbekannt
+    note: Die Produktseite nennt die UStVA mit dem Monatsabschlussassistenten, aber nicht den Übertragungsweg.
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: ja
+    note: Integriertes Onlinebanking mit Überweisungen, Lastschriften und automatischem Bankabgleich.
+    source: *produkt
+  serverstandort:
+    status: ja
+    note: Laut Anbieter zertifiziertes Microsoft-Azure-Rechenzentrum in Deutschland für die Cloud-Funktionen.
+    source: *produkt
+  avv:
+    status: unbekannt
+  deutscherSupport:
+    status: ja
+    note: Persönlicher Telefon- und Onlinesupport, Servicewelt mit über 440 Artikeln und Videos.
+    source: *produkt
+features:
+  angebote:
+    status: ja
+    source: *produkt
+  rechnungen:
+    status: ja
+    note: Angebote, Lieferscheine und Rechnungen, Offene-Posten-Verwaltung.
+    source: *produkt
+  mahnwesen:
+    status: ja
+    note: Mehrstufiges Mahnwesen.
+    source: *produkt
+  bankabgleich:
+    status: ja
+    source: *produkt
+  euer:
+    status: ja
+    source: *produkt
+  bilanz:
+    status: ja
+    source: *produkt
+  lager:
+    status: ja
+    note: Warenwirtschaft mit Mehrlager, Stücklisten, Seriennummern und Chargen.
+    source: *produkt
+  lohn:
+    status: aufpreis
+    note: Lohnabrechnung als Zusatzlösung, Lohndaten lassen sich aus einer Sage-Lösung übernehmen.
+    source: *produkt
+  steuerberaterzugang:
+    status: ja
+    note: Der Steuerberater kann direkt auf die Dokumente zugreifen.
+    source: *produkt
+  mobileApp:
+    status: ja
+    note: Belege mobil über die App archivieren, mobile Auftrags-App für den Außendienst.
+    source: *produkt
+plans:
+  - name: Comfort
+    monthlyCents: null
+    yearlyMonthlyCents: 3500
+    perUser: true
+    net: true
+    includes:
+      - Preis je Arbeitsplatz, buchbar ab 2 Arbeitsplätzen
+      - Angebote und Rechnungen, integriertes Onlinebanking
+      - Warenwirtschaft und Bestellwesen
+      - Digitale Belegarchivierung, EÜR oder Bilanz
+      - DATEV-Schnittstelle, E-Rechnung, Anlagenbuchhaltung
+    note: Ab-Preis bei jährlicher Rechnungsstellung und 12 Monaten Mindestlaufzeit, nur für Neukunden.
+    source: *produkt
+  - name: Professional
+    monthlyCents: null
+    yearlyMonthlyCents: 4000
+    perUser: true
+    net: true
+    includes:
+      - Preis je Arbeitsplatz, buchbar ab 3 Arbeitsplätzen
+      - Alles aus Comfort
+      - Kosten- und Erlösrechnung
+      - Variantenartikelverwaltung
+      - Anpassbare Chefübersichten
+    note: Ab-Preis bei jährlicher Rechnungsstellung und 12 Monaten Mindestlaufzeit, nur für Neukunden.
+    source: *produkt
+pros:
+  - Buchhaltung, Warenwirtschaft und Auftragsbearbeitung in einem Programm, mit Lager über mehrere Standorte.
+  - E-Rechnungen in XRechnung und ZUGFeRD senden und empfangen, in beiden Paketen enthalten.
+  - DATEV-Schnittstelle und Belegexport als CSV- und ZIP-Datei für die Steuerberatung.
+  - 30 Tage kostenlos testen, ohne Zahlungsangaben, die Testphase endet automatisch.
+  - Onlinebanking mit Sammelüberweisungen, Lastschriften und automatischem Abgleich offener Posten.
+cons:
+  - Comfort ist erst ab 2 Arbeitsplätzen, Professional erst ab 3 Arbeitsplätzen buchbar.
+  - Der Listenpreis gilt bei jährlicher Rechnungsstellung mit 12 Monaten Mindestlaufzeit.
+  - Kosten- und Erlösrechnung sowie Variantenartikel gibt es erst im Paket Professional.
+  - Ob die UStVA direkt per ELSTER übertragen wird, nennt die Produktseite nicht.
+idealFor:
+  - Kleine Handels-, Produktions- und Dienstleistungsbetriebe mit Lager, die Warenwirtschaft und Buchhaltung in einem Programm führen wollen
+notIdealFor:
+  - Einzelunternehmer mit nur einem Arbeitsplatz, weil die Pakete erst ab zwei Arbeitsplätzen buchbar sind
+  - Teams, die ausschließlich im Browser arbeiten wollen, denn die Software wird installiert
+logo:
+  file: /logos/sage-active.svg
+  width: 57
+  height: 32
+  sourceUrl: https://www.sage.com/de-de/
+  accessed: 2026-10-25
+review:
+  sections:
+    - id: einordnung
+      title: Was Sage 50 ist und für wen es gedacht ist
+      paragraphs:
+        - Sage 50 ist die kaufmännische Komplettlösung von Sage für kleine Unternehmen. Die Produktseite trägt den Namen Sage 50 Connected und beschreibt eine installierte Software, die um Cloud-Funktionen ergänzt wird. Anders als reine Rechnungsprogramme verbindet Sage 50 drei Bereiche in einer Datenbasis, nämlich die Auftragsbearbeitung von Angebot bis Rechnung, die Warenwirtschaft mit Lager und Bestellwesen sowie die Finanzbuchhaltung bis zur Bilanz.
+        - Sage richtet das Programm ausdrücklich an kleine Unternehmen mit Wachstumsabsichten und nennt als Beispiele unter anderem Kfz-Werkstätten, Freiberufler, das Baugewerbe, IT-Dienstleister und den öffentlichen Dienst. Ausführlich beschreibt die Seite drei Einsatzfelder, nämlich die Produktion mit Seriennummern und Chargen, den Handel mit Onlineshop-Anbindung und Kassenmodul sowie Dienstleister mit mobiler Auftrags-App für den Außendienst.
+        - Hinter dem Produkt steht die Sage GmbH mit Sitz in Frankfurt am Main. Laut Produktseite arbeiten in Deutschland über 630 Beschäftigte an vier Standorten, und mehr als 200 zertifizierte Fachhändler betreuen Kunden vor Ort. Diese Händlerstruktur ist für viele Betriebe ein Argument, weil Einrichtung und Schulung nicht allein über eine Hotline laufen müssen.
+      sources:
+        - *produkt
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - In der Auftragsbearbeitung erstellt Sage 50 Angebote, Lieferscheine und Rechnungen und verwaltet Kunden-, Lieferanten- und Artikeldaten an einer Stelle. Belege landen in einem zentralen Archiv, offene Posten werden in einer eigenen Verwaltung überwacht, und ein mehrstufiges Mahnwesen erinnert säumige Kunden. Zahlungen lassen sich über PayPal und Stripe abwickeln.
+        - Die Warenwirtschaft verwaltet Lagerbestände, Bewegungen und Inventuren über mehrere Lager hinweg. Nachbestellungen lassen sich über Melde- und Mindestbestände automatisieren, Stücklisten, Seriennummern und Chargen werden erfasst, und Inventurlisten entstehen laut Anbieter per Knopfdruck mit Unterstützung von Handscannern. Für den Onlinehandel bietet Sage eine Anbindung an bestehende Shops über den Multishop-Connector oder einen eigenen Sage-Webshop, der Bestellungen, Artikel und Bestände abgleicht.
+        - In der Buchhaltung bucht das Programm Einnahmen und Ausgaben mit automatischem Bankabgleich, bietet vordefinierte Geschäftsvorfälle für die schnelle Erfassung und erstellt wahlweise die Einnahmen-Überschuss-Rechnung oder die Bilanz. Für die Umsatzsteuer-Voranmeldung gibt es einen Monatsabschlussassistenten. Das integrierte Onlinebanking überträgt Überweisungen und Lastschriften, auch als Sammelauftrag, und verwaltet mehrere Geschäftskonten gleichzeitig.
+        - Als Zusatzlösungen nennt Sage unter anderem einen Onlineshop, die Lohnabrechnung, ein Kassenmodul mit der Touchkasse und ein Versandmodul. Diese Module kosten extra; ihre Preise stehen nicht auf der Produktseite.
+      sources:
+        - *produkt
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Sage 50 gibt es in zwei Paketen. Comfort kostet ab 35 € je Arbeitsplatz und Monat und ist ab zwei Arbeitsplätzen verfügbar. Professional kostet ab 40 € je Arbeitsplatz und Monat und ist ab drei Arbeitsplätzen verfügbar. Beide Preise gelten laut Fußnote bei jährlicher Rechnungsstellung mit 12 Monaten Mindestlaufzeit, zuzüglich Umsatzsteuer und nur für Neukunden. Kürzere oder längere Laufzeiten sind laut Anbieter möglich, ihre Preise nennt die Seite nicht.
+        - Daraus ergibt sich ein Mindestbetrag. Comfort mit zwei Arbeitsplätzen kostet 70 € netto im Monat, also 840 € netto oder 999,60 € brutto im Jahr. Professional mit drei Arbeitsplätzen kostet 120 € netto im Monat, also 1.440 € netto oder 1.713,60 € brutto im Jahr. Für einen Einzelunternehmer mit nur einem Arbeitsplatz ist Sage 50 damit deutlich teurer als ein reines Rechnungsprogramm.
+        - Professional ergänzt die Kosten- und Erlösrechnung, die Verwaltung von Variantenartikeln und anpassbare Chefübersichten. Wer keine Kostenstellen auswertet und keine Artikel in Größen oder Farben führt, kommt mit Comfort aus. Zusatzlösungen wie Lohnabrechnung, Onlineshop oder Kasse kommen zu diesen Preisen hinzu.
+      sources:
+        - *produkt
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und Umsatzsteuer
+      paragraphs:
+        - Sage beschreibt die Buchführung als GoBD-konform mit erweiterten Prüffunktionen. Eine Bescheinigung eines Wirtschaftsprüfers nennt die Produktseite nicht. Für die Pflicht zur Verfahrensdokumentation bleibt wie bei jeder Software das Unternehmen selbst verantwortlich.
+        - Bei der E-Rechnung ist Sage 50 vollständig aufgestellt. Laut Produktseite erstellt das Programm ZUGFeRD-konforme E-Rechnungen im PDF/A-Format und sendet und empfängt E-Rechnungen in den Formaten XRechnung und ZUGFeRD. Beide Pakete führen die E-Rechnung in der Funktionsliste. Damit erfüllt das Programm laut Anbieter die Empfangspflicht seit 2025 und den schrittweise eingeführten Versand.
+        - Für die Zusammenarbeit mit der Steuerberatung gibt es eine DATEV-Schnittstelle, dazu exportiert Sage 50 Belege mit Buchungsinformationen als CSV- und ZIP-Datei. Offen bleibt, wie die Umsatzsteuer-Voranmeldung an das Finanzamt gelangt. Die Seite nennt den Monatsabschlussassistenten, aber nicht ausdrücklich eine ELSTER-Übertragung aus dem Programm. Wir führen diesen Punkt deshalb als Keine Angabe.
+      sources:
+        - *produkt
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Für die Cloud-Funktionen nennt Sage ein zertifiziertes Microsoft-Azure-Rechenzentrum in Deutschland. Die eigentliche Software läuft als Installation auf den Rechnern des Unternehmens, die Buchhaltungsdaten liegen damit grundsätzlich im eigenen Netzwerk. Welche Daten genau in die Cloud übertragen werden, hängt von den genutzten Cloud-Funktionen ab und steht nicht auf der Produktseite.
+        - Einen Vertrag zur Auftragsverarbeitung erwähnt die Produktseite nicht. Sage betreibt einen eigenen DSGVO-Service, den die Navigation unter Support nennt. Vor dem Einsatz der Cloud-Funktionen sollten Unternehmen dort den Auftragsverarbeitungsvertrag anfordern.
+      sources:
+        - *produkt
+    - id: einstieg-und-support
+      title: Einstieg, Testphase und Support
+      paragraphs:
+        - Sage bietet eine 30-tägige Testversion an. Nach dem Absenden eines Formulars wird die Software heruntergeladen. Zahlungsangaben sind nicht nötig, und die Testphase endet automatisch, eine Kündigung entfällt. Während der Testphase gibt es auf Wunsch persönliche Unterstützung.
+        - Beim Wechsel von einem anderen Anbieter lassen sich laut Sage Kunden-, Lieferanten- und Artikeldaten importieren. Den laufenden Support beschreibt die Seite als interaktive Hilfe im Produkt sowie persönlichen Telefon- und Onlinesupport. Die Servicewelt enthält laut Anbieter über 440 Artikel, Videos und Beiträge. Zusätzlich bietet Sage eine kostenlose zehnminütige Bedarfsanalyse an.
+      sources:
+        - *produkt
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Die wichtigste Einschränkung ist die Mindestzahl an Arbeitsplätzen. Ein Betrieb mit nur einer Person im Büro zahlt bei Comfort trotzdem für zwei Arbeitsplätze. Zweitens ist Sage 50 eine installierte Software mit Cloud-Ergänzung und keine reine Browserlösung. Wer von mehreren Orten ohne eigene Server arbeiten möchte, sollte klären, welche Funktionen über die Cloud erreichbar sind.
+        - Offen sind nach unserer Recherche die direkte ELSTER-Übertragung der Umsatzsteuer-Voranmeldung, die Unterstützung der Kleinunternehmerregelung und der Auftragsverarbeitungsvertrag für die Cloud-Funktionen. Diese Punkte stehen nicht auf der Produktseite und sollten in der Testphase oder im Gespräch mit Sage geklärt werden.
+      sources:
+        - *produkt
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - Sage 50 passt zu kleinen Betrieben, die mehr brauchen als Rechnungen und Belege, also Lager, Bestellwesen, Onlineshop-Anbindung und eine vollständige Buchhaltung bis zur Bilanz. Die E-Rechnung ist in beide Richtungen abgedeckt, die DATEV-Schnittstelle ist enthalten. Die Mindestzahl an Arbeitsplätzen und die Jahresbindung machen das Programm für Einzelunternehmer teuer. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *produkt

@@ -1,0 +1,224 @@
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+slug: sage-100
+name: Sage 100
+vendor: sage
+categories:
+  - erp-software
+status: draft
+verification: unverified
+lastReviewed: 2026-10-25
+author: null
+summary: Modulares ERP von Sage für den Mittelstand mit Warenwirtschaft, Rechnungswesen und Produktion, lokal oder in der Cloud, ab 56 € je Nutzer.
+website: https://www.sage.com/de-de/produkte/sage-100/
+marketAvailability:
+  status: verfuegbar
+  source: &produkt
+    url: https://www.sage.com/de-de/produkte/sage-100/
+    title: Sage 100 Produktseite mit Preisen und FAQ
+    accessed: 2026-10-25
+targetGroups:
+  - mittelstand
+  - kmu
+deployment:
+  - desktop
+  - cloud
+apps:
+  web: null
+  ios: null
+  android: null
+freeTrialDays: null
+freePlan: false
+compliance:
+  gobd:
+    status: ja
+    note: GoBD-konforme Belegarchivierung im Rechnungswesen und im integrierten DMS-Archiv.
+    source: *produkt
+  eRechnungEmpfang:
+    status: ja
+    note: Zentraler Rechnungseingang mit OCR, Freigabe-Workflow und automatischer Buchungsübergabe.
+    source: *produkt
+  eRechnungVersand:
+    status: ja
+    note: Erstellen und Versenden von XRechnung und ZUGFeRD.
+    source: *produkt
+  datevExport:
+    status: ja
+    note: DATEV-Export und -Import im Modul Rechnungswesen.
+    source: *produkt
+  elster:
+    status: ja
+    note: Umsatzsteuer-Voranmeldung via Elster im Modul Rechnungswesen.
+    source: *produkt
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: ja
+    note: Zahlungsverkehr und Bankanbindung über Girostar.
+    source: *produkt
+  serverstandort:
+    status: ja
+    note: Die Cloud-Version speichert laut Anbieter in deutschen Rechenzentren; alternativ läuft Sage 100 auf eigenen Servern.
+    source: *produkt
+  avv:
+    status: unbekannt
+  deutscherSupport:
+    status: ja
+    note: Support durch Experten von Sage, Telefon 069 50007-6300 für Fragen zum Produkt.
+    source: *produkt
+features:
+  rechnungen:
+    status: ja
+    source: *produkt
+  mahnwesen:
+    status: ja
+    note: Automatisiertes Mahnwesen und Offene-Posten-Verwaltung.
+    source: *produkt
+  belegerfassungOcr:
+    status: ja
+    note: Erkennung der Rechnungsdaten per OCR im Rechnungseingang.
+    source: *produkt
+  kassenbuch:
+    status: ja
+    source: *produkt
+  bilanz:
+    status: ja
+    note: Finanz- und Anlagenbuchhaltung, Bilanzierung und Kostenrechnung.
+    source: *produkt
+  lager:
+    status: ja
+    note: Lagerverwaltung, Inventur, mobile Datenerfassung, Seriennummern und Chargen.
+    source: *produkt
+  projektzeiten:
+    status: aufpreis
+    note: Projektmanagement mit mobiler Zeiterfassung über die Zusatzlösung xRM.
+    source: *produkt
+  mehrwaehrung:
+    status: ja
+    note: Mehrere Mandanten, Sprachen und Währungen.
+    source: *produkt
+  api:
+    status: ja
+    note: Partnerlösungen über eine API-Schnittstelle.
+    source: *produkt
+plans:
+  - name: Modul Warenwirtschaft
+    monthlyCents: null
+    yearlyMonthlyCents: 5600
+    perUser: true
+    net: true
+    includes:
+      - Kunden- und Lieferantenverwaltung
+      - Artikel, Waren und Preislisten
+      - Auftragsverwaltung im Verkauf, Bestellwesen und Kommissionierung
+      - Lagerverwaltung und Inventur, Seriennummern und Chargen
+      - Unbegrenzte Mandantenanzahl
+    note: Ab-Preis je Nutzer bei jährlicher Rechnungsstellung und 12 Monaten Mindestlaufzeit.
+    source: *produkt
+  - name: Modul Rechnungswesen
+    monthlyCents: null
+    yearlyMonthlyCents: 5800
+    perUser: true
+    net: true
+    includes:
+      - Controlling und Dashboard
+      - Finanz- und Anlagenbuchhaltung, Bilanzierung und Kostenrechnung
+      - Kassenbuch und digitale Belegverarbeitung
+      - Zahlungsverkehr und Bankanbindung (Girostar)
+      - DATEV-Export und -Import, Umsatzsteuer-Voranmeldung via Elster
+      - Unbegrenzte Mandantenanzahl
+    note: Ab-Preis je Nutzer bei jährlicher Rechnungsstellung und 12 Monaten Mindestlaufzeit.
+    source: *produkt
+  - name: Modul Produktion
+    monthlyCents: null
+    yearlyMonthlyCents: 9000
+    perUser: true
+    net: true
+    includes:
+      - Inklusive Warenwirtschaftspaket
+      - Fertigungssteuerung, Ressourcenliste, grafische Ressourcenplanung
+      - CAD-Schnittstelle, Simulation, Vor- und Nachkalkulation
+      - Betriebsdatenerfassung, Fremdfertigung, Projektfertigung
+    note: Ab-Preis je Nutzer bei jährlicher Rechnungsstellung und 12 Monaten Mindestlaufzeit.
+    source: *produkt
+pros:
+  - Warenwirtschaft, Rechnungswesen und Produktion als Module, die sich einzeln buchen und kombinieren lassen.
+  - Veröffentlichte Ab-Preise je Nutzer statt reiner Preise auf Anfrage.
+  - E-Rechnung in beide Richtungen mit OCR, Freigabe-Workflow und revisionssicherem Belegarchiv.
+  - DATEV-Export und -Import sowie Umsatzsteuer-Voranmeldung via Elster im Rechnungswesen.
+  - Betrieb auf eigenen Servern oder in der Cloud mit deutschen Rechenzentren.
+cons:
+  - Die Preise gelten bei jährlicher Rechnungsstellung mit 12 Monaten Mindestlaufzeit.
+  - CRM, Projektmanagement, DMS und Webshop sind Zusatzlösungen mit Preisen auf Anfrage.
+  - Für die Cloud-Version nennt die FAQ nur ein individuelles Angebot.
+  - Eine kostenlose Testversion nennt die Produktseite nicht, nur eine Produkttour.
+idealFor:
+  - Mittelständische Handels- und Fertigungsunternehmen, die ein anpassbares ERP mit Produktion und Finanzbuchhaltung suchen
+notIdealFor:
+  - Kleine Betriebe, die nur Rechnungen schreiben und Belege sammeln
+  - Unternehmen, die eine monatlich kündbare Browserlösung ohne Einführungsprojekt suchen
+logo:
+  file: /logos/sage-active.svg
+  width: 57
+  height: 32
+  sourceUrl: https://www.sage.com/de-de/
+  accessed: 2026-10-25
+review:
+  sections:
+    - id: einordnung
+      title: Was Sage 100 ist und für wen es gedacht ist
+      paragraphs:
+        - Sage 100 ist das ERP-System von Sage für kleine und mittelständische Unternehmen mit individuellen Anforderungen. Die Software verwaltet Warenwirtschaft, Buchhaltung und Produktion zentral und lässt sich laut Anbieter branchenunabhängig an eigene Prozesse anpassen. Sie läuft wahlweise als Desktop-Installation auf eigenen Servern oder in der Cloud.
+        - Die FAQ beschreibt die Zielgruppe ungewöhnlich konkret. Profitieren sollen sowohl Einzelunternehmer als auch Unternehmen mit 50 bis 100 Nutzern und einem hohen Aufkommen von bis zu mehreren tausend Belegen pro Tag. Unterstützt werden mehrere Mandanten, Sprachen und Währungen, was Sage 100 auch für Firmengruppen und international handelnde Betriebe interessant macht.
+      sources:
+        - *produkt
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Die Warenwirtschaft deckt Einkauf und Verkauf, Lagerverwaltung mit Inventur und mobiler Datenerfassung, die Disposition nach Bestand und Reichweite sowie alle gängigen Versanddienstleister in einer Anwendung ab. Sage nennt außerdem eine automatische Sanktionslistenprüfung und ein Qualitätsmanagement. Für den Onlinehandel lassen sich Shopsysteme wie Shopware, Magento, OXID eShop und xt:Commerce sowie Marktplätze wie eBay, Amazon und Rakuten anbinden.
+        - Das Rechnungswesen umfasst Finanz- und Anlagenbuchhaltung, Kassenbuch, digitale Belegverarbeitung, Zahlungsverkehr, Bilanzierung und eine integrierte Kostenrechnung nach Kostenträgern, Kostenstellen und Kostenarten. Für das Controlling nennt Sage über 40 Kennzahlen, Auswertungen zum Zahlungsverhalten der Kunden und Trendvergleiche.
+        - Das Modul Produktion richtet sich an Einzel-, Projekt- und Serienfertiger. Es enthält Fertigungssteuerung, Ressourcenliste, CAD-Schnittstelle, Simulation, Vor- und Nachkalkulation, mobile Betriebsdatenerfassung, Fremdfertigung und eine grafische Ressourcenplanung. Die Material- und Bestellbedarfsplanung läuft laut Anbieter automatisch.
+        - Als Zusatzlösungen nennt Sage ein xRM für Vertrieb, Kampagnen und Service, ein Projektmanagement mit mobiler Zeiterfassung, ein vollständig integriertes DMS-Archiv, ein B2B-Bestell- und Kundenserviceportal, ein Kassenmodul und HR-Funktionen. Ein KI-Assistent beantwortet laut Produktseite Fragen zu Unternehmensdaten in natürlicher Sprache und erstellt Entwürfe für E-Mails, Angebote und Berichte.
+      sources:
+        - *produkt
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Sage veröffentlicht für Sage 100 Ab-Preise je Modul und Nutzer. Das Modul Warenwirtschaft kostet ab 56 €, das Modul Rechnungswesen ab 58 € und das Modul Produktion ab 90 € pro Monat und Nutzer, wobei Produktion das Warenwirtschaftspaket enthält. Alle Preise gelten bei jährlicher Rechnungsstellung mit 12 Monaten Mindestlaufzeit zuzüglich Umsatzsteuer.
+        - Ein Rechenbeispiel nach Listenpreis zeigt die Größenordnung. Fünf Nutzer, die jeweils Warenwirtschaft und Rechnungswesen brauchen, kosten 570 € netto im Monat, also 6.840 € netto oder 8.139,60 € brutto im Jahr. Ob jeder Nutzer beide Module lizenzieren muss, hängt von der Aufgabenverteilung ab und wird im Angebot festgelegt.
+        - Zusatzlösungen wie xRM, DMS oder der Sage Webshop sind in diesen Preisen nicht enthalten. Für die Cloud-Version verweist die FAQ auf ein individuelles Angebot nach einer Beratung. Kosten für Einführung, Anpassung und Schulung durch Sage oder einen Partner nennt die Seite nicht. Sie sollten im Angebot getrennt ausgewiesen werden, damit sich die Gesamtkosten über mehrere Jahre vergleichen lassen.
+      sources:
+        - *produkt
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und ELSTER
+      paragraphs:
+        - Für die E-Rechnungspflicht bietet Sage 100 einen vollständigen Ablauf. Ausgangsrechnungen entstehen als XRechnung oder ZUGFeRD. Eingehende Rechnungen, ob eingescannt oder als E-Rechnung, landen in einem zentralen Rechnungseingang, werden per OCR erkannt, über intelligente Vorlagen klassifiziert, über einen Workflow freigegeben, automatisch an die Buchhaltung übergeben und revisionssicher archiviert.
+        - Das Modul Rechnungswesen enthält den DATEV-Export und -Import sowie die Umsatzsteuer-Voranmeldung via Elster. Die Belegarchivierung beschreibt Sage als GoBD-konform, ebenso das integrierte DMS-Archiv. Eine Bescheinigung eines Wirtschaftsprüfers nennt die Produktseite nicht.
+      sources:
+        - *produkt
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Sage 100 kann auf eigenen Servern betrieben werden. Dann bleiben die Daten vollständig im Unternehmen. Die Cloud-Version bietet laut FAQ automatische Backup-Pläne und speichert die Daten in deutschen Rechenzentren. Den KI-Assistenten beschreibt Sage als DSGVO-konform und sowohl in der Cloud als auch lokal nutzbar.
+        - Einen Auftragsverarbeitungsvertrag für die Cloud-Version nennt die Produktseite nicht. Sage führt in der Navigation einen DSGVO-Service, über den sich der Vertrag anfordern lassen sollte.
+      sources:
+        - *produkt
+    - id: einstieg-und-support
+      title: Einführung und Support
+      paragraphs:
+        - Statt einer frei herunterladbaren Testversion bietet Sage eine interaktive Produkttour, ein Infopaket und ein persönliches Angebot an. Die Einführung läuft über Sage oder einen Partner. Laut Produktseite lässt sich Sage 100 mit integrierten Anpassungswerkzeugen an die eigenen Abläufe anpassen.
+        - Für Fragen nennt Sage die Telefonnummer 069 50007-6300 und beschreibt professionellen Support durch Experten. Hinzu kommen eine Member Masterclass mit Videos und Artikeln sowie Ratgeber zu Gesetzesänderungen rund um Buchhaltung, HR und Lohnabrechnung.
+      sources:
+        - *produkt
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Sage 100 ist ein ERP-Projekt und kein Programm, das man an einem Nachmittag einrichtet. Die Lizenzpreise je Modul sind veröffentlicht, die Kosten für Zusatzlösungen, Einführung und die Cloud-Version aber nicht. Eine belastbare Gesamtkostenrechnung entsteht erst mit einem Angebot.
+        - Offen sind nach unserer Recherche die Unterstützung der Kleinunternehmerregelung, der Auftragsverarbeitungsvertrag für die Cloud-Version und die Frage, ob es eine Browseroberfläche oder Apps gibt. Die FAQ nennt mobilen Zugriff über Notebook, Tablet und Smartphone für xRM und Projektmanagement, ohne die Technik näher zu beschreiben.
+      sources:
+        - *produkt
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - Sage 100 passt zu mittelständischen Handels- und Fertigungsbetrieben, die Warenwirtschaft, Produktion und Finanzbuchhaltung mit DATEV, ELSTER und E-Rechnung in einem anpassbaren System führen wollen und die Wahl zwischen eigenem Server und Cloud schätzen. Die veröffentlichten Modulpreise erleichtern den ersten Vergleich, die Gesamtkosten hängen aber stark von Zusatzlösungen und Einführung ab. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *produkt

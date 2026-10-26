@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { PageSection } from "@/components/page/page-header";
 import { ComplianceChecklist } from "@/components/software/compliance-checklist";
 import { PriceTable } from "@/components/software/price-table";
+import { ProfileReview } from "@/components/software/profile-review";
 import { Breadcrumbs, ProfileHeader } from "@/components/software/profile-header";
 import { ProfileTabs } from "@/components/software/profile-tabs";
 import { ProsCons } from "@/components/software/pros-cons";
@@ -51,8 +52,9 @@ export async function generateMetadata({
   };
 }
 
-const sections = [
+const allSections = [
   { id: "ueberblick", label: "Überblick" },
+  { id: "im-detail", label: "Im Detail" },
   { id: "funktionen", label: "Funktionen" },
   { id: "preise", label: "Preise" },
   { id: "vor-und-nachteile", label: "Vor- und Nachteile" },
@@ -105,6 +107,11 @@ export default async function SoftwarePage({ params }: PageProps<"/software/[slu
   const summary = toSummary(software);
   const alternatives = alternativesFor(software);
   const sources = profileSources(software);
+  const sections = allSections.filter(
+    (s) =>
+      (s.id !== "im-detail" || software.review) &&
+      (s.id !== "alternativen" || alternatives.length > 0),
+  );
 
   const facts: Array<[string, string]> = [
     [
@@ -196,6 +203,12 @@ export default async function SoftwarePage({ params }: PageProps<"/software/[slu
           </dl>
         </div>
       </PageSection>
+
+      {software.review ? (
+        <PageSection id="im-detail" label="Im Detail" title={`${software.name} im Detail`}>
+          <ProfileReview review={software.review} />
+        </PageSection>
+      ) : null}
 
       <PageSection id="funktionen" label="Funktionen" title="Was das Programm kann">
         <div className="grid gap-10 md:grid-cols-2">

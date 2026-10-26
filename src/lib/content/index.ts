@@ -237,6 +237,7 @@ export function profileSources(software: Software): Source[] {
     ...software.plans.map((p) => p.source),
     ...Object.values(software.compliance).flatMap((f) => (f.source ? [f.source] : [])),
     ...Object.values(software.features).flatMap((f) => (f?.source ? [f.source] : [])),
+    ...(software.review?.sections.flatMap((section) => section.sources) ?? []),
   ];
   const seen = new Map<string, Source>();
   for (const source of all) if (!seen.has(source.url)) seen.set(source.url, source);

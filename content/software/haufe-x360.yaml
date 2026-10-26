@@ -1,0 +1,207 @@
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Preise nur als Beispielkonfigurationen; als Tarif steht hier der Mindestbuchungsbetrag.
+slug: haufe-x360
+name: Haufe X360
+vendor: haufe
+categories:
+  - erp-software
+status: draft
+verification: unverified
+lastReviewed: 2026-10-25
+author: null
+summary: Modulares Cloud-ERP von Haufe auf Basis von Acumatica, in Deutschland gehostet, mit ELSTER-Schnittstelle und Mobile App, ab 449 € im Monat.
+website: https://www.haufe-x360.de/
+marketAvailability:
+  status: verfuegbar
+  source: &preise
+    url: https://www.haufe-x360.de/preise
+    title: Haufe X360 Preise und Rechenbeispiele
+    accessed: 2026-10-25
+targetGroups:
+  - mittelstand
+  - kmu
+  - e-commerce
+deployment:
+  - cloud
+apps:
+  web: true
+  ios: true
+  android: true
+freeTrialDays: null
+freePlan: false
+compliance:
+  gobd:
+    status: unbekannt
+    note: Die Seiten nennen eine revisionssichere Speicherung im integrierten DMS, aber keine ausdrückliche GoBD-Aussage.
+  eRechnungEmpfang:
+    status: ja
+    note: Über die Schnittstelle crossinx von Unifiedpost, die elektronische Rechnungen nach den Standards öffentlicher Auftraggeber empfängt und verarbeitet.
+    source: &crossinx
+      url: https://www.haufe-x360.de/schnittstellen/schnittstellen-detail/crossinx
+      title: Haufe X360 Schnittstelle crossinx
+      accessed: 2026-10-25
+  eRechnungVersand:
+    status: ja
+    note: XRechnung, ZUGFeRD und EN 16931 über die Schnittstelle crossinx; ob dafür Zusatzkosten anfallen, nennt die Seite nicht.
+    source: *crossinx
+  datevExport:
+    status: unbekannt
+  elster:
+    status: ja
+    note: Elster-Schnittstelle für Umsatzsteuer-Voranmeldungen und Meldungen ans Finanzamt.
+    source: &schnittstellen
+      url: https://www.haufe-x360.de/schnittstellen
+      title: Haufe X360 Schnittstellen
+      accessed: 2026-10-25
+  kleinunternehmer:
+    status: unbekannt
+  bankanbindung:
+    status: ja
+    note: Bankdaten und Transaktionen über die Schnittstelle BANKSapi Onlinebanking.
+    source: *schnittstellen
+  serverstandort:
+    status: ja
+    note: Daten in einem deutschen Rechenzentrum auf Microsoft Azure; laut Datenschutzerklärung sind bei Wartung und Support Übermittlungen in die USA möglich.
+    source: &home
+      url: https://www.haufe-x360.de/
+      title: Haufe X360 Startseite
+      accessed: 2026-10-25
+  avv:
+    status: unbekannt
+  deutscherSupport:
+    status: unbekannt
+    note: Beratung, Einführung und Betreuung laufen laut Anbieter über zertifizierte Partner.
+features:
+  rechnungen:
+    status: ja
+    note: Auftrags- und Bestellmanagement, erweiterte Rechnungsstellung im Projektcontrolling.
+    source: *preise
+  bilanz:
+    status: ja
+    note: Modul Finanzbuchhaltung und Controlling mit Hauptbuch, Kreditoren- und Debitorenbuchhaltung, Steuern und Kostenrechnung.
+    source: *preise
+  lager:
+    status: ja
+    note: Modul Warenwirtschaft mit Lager-, Artikel-, Auftrags- und Bestellverwaltung.
+    source: *preise
+  projektzeiten:
+    status: ja
+    note: Modul Projektcontrolling mit Ressourcen- und Kostenverwaltung.
+    source: *preise
+  mehrwaehrung:
+    status: ja
+    note: Währungsmanagement in der Finanzbuchhaltung.
+    source: *preise
+  api:
+    status: ja
+    note: Offene API und über 60 Schnittstellen.
+    source: *home
+  mobileApp:
+    status: ja
+    note: Kostenlose Mobile App für Android ab 5.1 und iOS ab 15.
+    source: &mobile
+      url: https://www.haufe-x360.de/erp-system/mobileapp
+      title: Haufe X360 Mobile App
+      accessed: 2026-10-25
+plans:
+  - name: Mindestbuchung
+    monthlyCents: 44900
+    yearlyMonthlyCents: null
+    perUser: false
+    net: true
+    includes:
+      - Lizenzkosten nach gebuchten Modulen und Nutzern
+      - Module Auftrags- und Bestellmanagement, Dokumentenmanagement, Finanzbuchhaltung, CRM, Warenwirtschaft, Produktion, Servicemanagement
+      - Beispielkonfigurationen laut Anbieter von 49 € bis 240 € je Nutzer und Monat
+    note: Mindestbetrag der monatlichen Lizenzkosten. Beispielpreise laut Preisliste vom 19.11.2025, Zusatzfunktionen auf Anfrage.
+    source: *preise
+pros:
+  - In einem deutschen Rechenzentrum auf Microsoft Azure gehostet, laut Anbieter mit ISO-27001-zertifizierter Cloud.
+  - Sehr breiter Funktionsumfang mit Produktion, Qualitätsmanagement, Servicemanagement und Projektcontrolling.
+  - Kostenlose Mobile App für iOS und Android mit Zugriff auf alle Funktionen.
+  - Über 60 Schnittstellen, darunter Elster, BANKSapi, Shopware, HubSpot und Microsoft.
+  - Rechenbeispiele je Branche zeigen die Größenordnung der Lizenzkosten.
+cons:
+  - Mindestbuchungsbetrag von 449 € im Monat, auch für kleine Teams.
+  - Konkrete Preise nur als unverbindliche Beispiele, Zusatzfunktionen auf Anfrage.
+  - E-Rechnung über die Partnerschnittstelle crossinx, Kosten dafür nicht veröffentlicht.
+  - DATEV-Export und GoBD-Aussage auf den geprüften Seiten nicht genannt.
+idealFor:
+  - Mittelständische Händler, Dienstleister und Fertiger, die ein umfassendes Cloud-ERP mit Einführungspartner suchen
+notIdealFor:
+  - Kleinbetriebe mit geringem Budget, für die der Mindestbetrag zu hoch ist
+  - Unternehmen, die sofort selbst ohne Beratung starten wollen
+review:
+  sections:
+    - id: einordnung
+      title: Was Haufe X360 ist und für wen es gedacht ist
+      paragraphs:
+        - Haufe X360 ist ein cloudbasiertes ERP-System der Haufe-Lexware GmbH & Co. KG aus Freiburg, also aus demselben Haus wie Lexware Office. Es bildet Einkauf, Verkauf, Lagerverwaltung, Produktion und Finanzen in einem System ab und richtet sich an kleine und mittlere Unternehmen, die über ein Rechnungsprogramm hinausgewachsen sind. Eine der Referenzen auf der Startseite beschreibt genau diesen Wechsel von Lexware zu Haufe X360.
+        - Technisch kombiniert das Produkt nach Angaben des Anbieters drei Partner. Die kaufmännische Ausrichtung kommt von Haufe, die ERP-Plattform vom Technologiepartner Acumatica und das Hosting von Microsoft Azure. Die Einführung läuft über zertifizierte Haufe X360 Partner, die Beratung, Einrichtung und Betreuung übernehmen. Außerdem bewirbt Haufe eine eigene Version für Schweizer Unternehmen.
+      sources:
+        - *home
+        - &impressum
+          url: https://www.haufe-x360.de/impressum
+          title: Impressum Haufe X360
+          accessed: 2026-10-25
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Das Modul Finanzbuchhaltung und Controlling umfasst Hauptbuch, Kreditoren- und Debitorenbuchhaltung, Zahlungsverkehr und Banking, Währungsmanagement, Steuern sowie Controlling und Kostenrechnung. Für Firmengruppen gibt es eine Erweiterung für Firmen- und Holdingstrukturen mit Inter-Company-Transaktionen und mehreren Niederlassungen je Firma.
+        - Die Warenwirtschaft verwaltet Lager, Artikel, Aufträge und Bestellungen. Das CRM bietet Lead- und Opportunity-Management, Kampagnen, Angebotserstellung, ein Ticketsystem und ein Add-in für Microsoft Outlook. Im Projektcontrolling werden Ressourcen und Kosten verwaltet und Projekte mit erweiterter Rechnungsstellung abgerechnet. Das integrierte Dokumentenmanagement speichert Geschäftsdokumente laut Anbieter revisionssicher und unterstützt Workflows.
+        - Für die Fertigung gibt es Produktionsplanung und -steuerung, Materialbedarfsplanung, Feinplanung, mehrstufige Stücklisten und Arbeitspläne sowie Vorkalkulation. Ein Qualitätsmanagement mit Prüfplanung, CAPA-Management und mobiler Qualitätskontrolle sowie ein Servicemanagement mit Routenplanung und Gerätemanagement für Techniker im Außendienst ergänzen den Umfang. Zusatzmodule sind ein Kundenportal und ein Produktkonfigurator.
+        - Laut Startseite ist eine KI fest im Kern des Systems verankert. Über 60 Schnittstellen und eine offene API binden Drittsoftware an, darunter Shopware, Shopify und Magento für den Onlinehandel, HubSpot und Salesforce für den Vertrieb sowie Snabble als Kassenlösung.
+      sources:
+        - *preise
+        - *home
+        - *schnittstellen
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Haufe veröffentlicht keine festen Tarife, sondern einen Mindestbetrag und Rechenbeispiele. Die monatlichen Lizenzkosten beginnen bei 449 €. Wie hoch sie darüber liegen, hängt von den gebuchten Funktionen, der Zahl der Nutzer je Funktion und den Schnittstellen ab. Die Beispielpreise basieren laut Fußnote auf der Preisliste vom 19.11.2025 und sind unverbindlich, Zusatzfunktionen sind nicht enthalten.
+        - Für Dienstleister reichen die Beispiele von 49 € je Nutzer und Monat für Auftragsmanagement und DMS bis 185 € mit Finanzbuchhaltung, CRM, Servicemanagement und Warenwirtschaft. Für den Handel nennt Haufe 108 € bis 161 € je Nutzer, für die Produktion 182 € bis 240 € je Nutzer. In jedem Beispiel gilt der Mindestbuchungsbetrag von 449 €.
+        - Daraus folgt, dass kleine Teams den Mindestbetrag zahlen. Bei 49 € je Nutzer ist er erst ab zehn Nutzern ausgeschöpft, denn neun Nutzer kosten 441 €. Ein Händler mit acht Nutzern in der Beispielkonfiguration für 142 € zahlt 1.136 € netto im Monat, also 13.632 € netto oder 16.222,08 € brutto im Jahr. Einführung und Partnerleistungen kommen hinzu. Haufe bietet über einen Partner auch eine Leasingfinanzierung an.
+      sources:
+        - *preise
+        - *home
+    - id: rechtssicherheit
+      title: E-Rechnung, ELSTER und Buchhaltung
+      paragraphs:
+        - Die E-Rechnung läuft über die Schnittstelle crossinx des Anbieters Unifiedpost. Laut Schnittstellenseite unterstützt sie E-Rechnungen im Format XRechnung, im ZUGFeRD-Format als PDF mit eingebettetem XML und nach der Norm EN 16931. Unifiedpost beherrscht außerdem den Empfang und die Verarbeitung elektronischer Rechnungen nach den Standards öffentlicher Auftraggeber. Optional übernimmt ein Druckservice den Versand auf Papier, abgerechnet je Vorgang. Ob die Schnittstelle selbst Zusatzkosten verursacht, nennt die Seite nicht.
+        - Für die Umsatzsteuer gibt es eine Elster-Schnittstelle, die Umsatzsteuer-Voranmeldungen und Meldungen elektronisch ans Finanzamt übermittelt. Einen DATEV-Export und eine ausdrückliche Aussage zur GoBD haben wir auf den geprüften Seiten nicht gefunden. Das DMS beschreibt Haufe als revisionssicher.
+      sources:
+        - *crossinx
+        - *schnittstellen
+        - *home
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Laut Startseite werden die Daten in einem deutschen Rechenzentrum auf Microsoft Azure gespeichert. Haufe nennt eine ISO-27001-zertifizierte Cloud, Verschlüsselung mit SSL und AES, kontinuierliche Backups und eine Verfügbarkeit von 99 %. Die Datenschutzerklärung ergänzt, dass Daten grundsätzlich in europäischen Rechenzentren verarbeitet werden und es im Rahmen von Wartung und Support zu Übermittlungen in die USA kommen kann.
+        - Einen Auftragsverarbeitungsvertrag nennen die geprüften Seiten nicht. Er sollte vor Vertragsschluss angefordert werden, ebenso eine Liste der Unterauftragsverarbeiter mit Acumatica und Microsoft.
+      sources:
+        - *home
+        - url: https://www.haufe-x360.de/impressum/datenschutz
+          title: Haufe X360 Datenschutzerklärung
+          accessed: 2026-10-25
+    - id: einstieg-und-support
+      title: Einstieg, Mobile App und Support
+      paragraphs:
+        - Eine frei zugängliche Testversion gibt es nicht. Der Einstieg beginnt mit einem kostenlosen Erstgespräch, danach folgt eine auf das Unternehmen abgestimmte Produktdemo. Haufe bietet Live-Webinare mit Partnern an und verweist für Einführung und Betreuung auf zertifizierte Partner vor Ort.
+        - Die Haufe X360 Mobile App ist kostenlos und bietet laut Anbieter mobilen Zugriff auf alle Funktionen des Systems. Sie läuft auf Android ab Version 5.1 und auf iOS ab Version 15. Wie der laufende Support organisiert ist und ob er direkt von Haufe oder vom Partner kommt, steht nicht auf den geprüften Seiten.
+      sources:
+        - *home
+        - *mobile
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Der Mindestbetrag von 449 € im Monat macht Haufe X360 für kleine Betriebe teuer, und die tatsächlichen Kosten lassen sich ohne Angebot nur abschätzen. Weil die Einführung über Partner läuft, unterscheiden sich Projektkosten und Betreuung je nach Partner.
+        - Offen sind nach unserer Recherche der DATEV-Export, eine ausdrückliche GoBD-Aussage, der Auftragsverarbeitungsvertrag, die Unterstützung der Kleinunternehmerregelung und die Kosten der E-Rechnungs-Schnittstelle. Diese Punkte sollten in der Produktdemo geklärt werden.
+      sources:
+        - *preise
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - Haufe X360 ist ein umfassendes Cloud-ERP für den Mittelstand mit Hosting in Deutschland, kostenloser Mobile App und vielen Schnittstellen. Es passt zu Unternehmen, die von einem Rechnungsprogramm wie Lexware Office in ein vollwertiges ERP wechseln und dafür einen Einführungspartner einplanen. Der Mindestbetrag und die Preise nur als Beispiele erschweren den schnellen Vergleich. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise
+        - *home
