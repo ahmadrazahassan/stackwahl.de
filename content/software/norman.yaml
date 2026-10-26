@@ -277,3 +277,20 @@ logo:
   height: 181
   sourceUrl: https://norman.finance/de
   accessed: 2026-10-26
+videos:
+  - provider: "youtube"
+    id: "qhbYGfSCjpM"
+    originalTitle: "So bereitest du dich in ein paar Minuten auf die Steuererklärung vor"
+    channel: "Norman Finance"
+    source:
+      url: "https://norman.finance/de"
+      title: "Norman Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26
+  - provider: "youtube"
+    id: "p7Oom6kmzbQ"
+    originalTitle: "Arbeiten mit einem Steuerberater"
+    channel: "Norman Finance"
+    source:
+      url: "https://norman.finance/de"
+      title: "Norman Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26

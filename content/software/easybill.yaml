@@ -285,3 +285,24 @@ videos:
       url: "https://www.easybill.de/"
       title: "easybill Startseite mit Link zum YouTube-Kanal"
       accessed: 2026-10-26
+screenshots:
+  - file: "/screenshots/easybill/rechnungen.webp"
+    width: 1600
+    height: 639
+    alt: "Rechnungsübersicht in easybill mit Status, Kontakten, Fälligkeiten und Beträgen"
+    caption: "Rechnungsübersicht mit Status und Fälligkeiten. Bild aus dem Pressematerial von easybill mit Testdaten."
+    origin: "presse"
+    source:
+      url: "https://zeroheight.com/15eff6b86/p/349647-bilder-und-screenshots"
+      title: "easybill Styleguide, Bilder und Screenshots (verlinkt von der Pressseite)"
+      accessed: 2026-10-26
+  - file: "/screenshots/easybill/e-rechnungsformate.webp"
+    width: 1600
+    height: 727
+    alt: "Formatauswahl in easybill mit ZUGFeRD 2.4 und XRechnung 3.0.2"
+    caption: "Auswahl der E-Rechnungsformate ZUGFeRD und XRechnung. Bild aus dem Pressematerial von easybill."
+    origin: "presse"
+    source:
+      url: "https://zeroheight.com/15eff6b86/p/349647-bilder-und-screenshots"
+      title: "easybill Styleguide, Bilder und Screenshots (verlinkt von der Pressseite)"
+      accessed: 2026-10-26

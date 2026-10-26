@@ -20,6 +20,9 @@ Every screenshot and video on a profile, with its source. The content guard fail
 | `/screenshots/fastbill/rechnungsmaske.webp`             | fastbill       | https://www.fastbill.com/pressematerial | „Unter Pressematerial findest du Logos und Screenshots der Anwendung.“ The ZIP `FastBill-Anwendung.zip` shows an older interface (VAT example May 2021). | 2026-10-26 |
 | `/screenshots/fastbill/ustva.webp`                      | fastbill       | https://www.fastbill.com/pressematerial | „Unter Pressematerial findest du Logos und Screenshots der Anwendung.“ The ZIP `FastBill-Anwendung.zip` shows an older interface (VAT example May 2021). | 2026-10-26 |
 
+| `/screenshots/easybill/rechnungen.webp` | easybill | https://zeroheight.com/15eff6b86/p/349647-bilder-und-screenshots | Linked from https://www.easybill.de/presse/ as „Presse-Downloads“: „In unserem Online-Styleguide finden Sie Logos, Bilder, Farben und Schriften.“ | 2026-10-26 |
+| `/screenshots/easybill/e-rechnungsformate.webp` | easybill | https://zeroheight.com/15eff6b86/p/349647-bilder-und-screenshots | Linked from https://www.easybill.de/presse/ as „Presse-Downloads“: „In unserem Online-Styleguide finden Sie Logos, Bilder, Farben und Schriften.“ | 2026-10-26 |
+
 ## Videos
 
 | Video id      | Provider | Software           | Title (as published)                                                         | Channel                                | Vendor page with the link or embed                                                        |
@@ -44,8 +47,11 @@ Every screenshot and video on a profile, with its source. The content guard fail
 | `UB44XcT3Nc0` | youtube  | haufe-x360         | Eingangsbelege automatisiert verarbeiten                                     | Haufe X360 – die Unternehmensplattform | https://www.haufe-x360.de/                                                                |
 | `C2CobpZH7VE` | youtube  | scopevisio         | Scopevisio ERP-Cloud Unternehmenssoftware                                    | Scopevisio AG                          | https://www.scopevisio.com/                                                               |
 | `FDGOoyM7ICI` | youtube  | candis             | So arbeitest du mit Candis: Live Demo der DATEV Exporte                      | Candis                                 | https://www.candis.io/                                                                    |
+| `qhbYGfSCjpM` | youtube  | norman             | So bereitest du dich in ein paar Minuten auf die Steuererklärung vor         | Norman Finance                         | https://norman.finance/de                                                                 |
+| `p7Oom6kmzbQ` | youtube  | norman             | Arbeiten mit einem Steuerberater                                             | Norman Finance                         | https://norman.finance/de                                                                 |
 
 ## Not yet covered
 
-- Videos: Billomat, WISO MeinBüro, Collmex, Norman (German), Sage 50 Handwerk. No channel linked from the vendor site, or only videos in other languages.
-- Screenshots: all other vendors. Their press pages offer no screenshots with usage terms (sevdesk, weclapp, Sage), need a sign-in (BuchhaltungsButler, Google Drive) or offer them only via download buttons we could not resolve (easybill). Own screenshots from trial accounts would close the gap.
+- **Videos, no proof of an official channel.** Collmex (`@collmex`, "Collmex GmbH"), Billomat (`@billomatcom`) and Sage 50 Handwerk (`@SageSupport`, "Sage Customer Support and Training") have channels that link to the vendor, but the vendor's own site links neither the channel nor its videos (checked on 2026-10-26). They stay out until a vendor page confirms them.
+- **WISO MeinBüro** has no video channel. meinbuero.de hosts a product preview video itself (2023); we do not hotlink vendor files.
+- **Screenshots.** sevdesk, weclapp and Sage offer only logos or press releases; Buhl only box images of the desktop edition; Scopevisio images on request; BuchhaltungsButler's press link needs a Google sign-in; Xentral, Candis, orgaMAX, Billomat, Collmex and Norman have no press download area. Requests are drafted in `docs/PRESS_REQUESTS.md`. easybill's "Alle Belege" image was left out because it shows real merchant names.

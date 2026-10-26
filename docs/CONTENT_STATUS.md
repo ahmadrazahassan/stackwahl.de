@@ -13,7 +13,7 @@ Updated 26.10.2026, all 20 profiles with long reviews.
 | Guides            | 10 drafts, researched           | Ratgeber articles on user pain points (E-Rechnung, UStVA, costs, Sage, alternatives, DATEV, ERP). No author yet.                                           |
 | Legal pages       | missing                         | Drafted in Phase 3, lawyer review before launch                                                                                                            |
 | Vendor logos      | 16 vendors                      | Sources in LOGOS.md. Sage logo also on Sage 50, Sage 50 Handwerk and Sage 100. Collmex only as a small PNG. WISO MeinBüro: only a white logo is published. |
-| Screenshots       | 7 press images, 3 vendors       | Lexware Office, Papierkram, FastBill (older UI). 20 official videos for 15 programs. Sources in MEDIA.md. Own screenshots need trial accounts.             |
+| Screenshots       | 9 press images, 4 vendors       | Lexware Office, Papierkram, FastBill (older UI), easybill. 22 official videos for 16 programs. Sources in MEDIA.md, requests in PRESS_REQUESTS.md.         |
 
 ## Why everything is still a draft
 
