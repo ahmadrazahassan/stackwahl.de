@@ -2,6 +2,7 @@ import { ArticleGrid } from "@/components/guides/article-card";
 import { FactBoard } from "@/components/home/fact-board";
 import { FeaturedSoftware } from "@/components/home/featured-software";
 import { HomeCompare } from "@/components/home/home-compare";
+import { EditorialLinks } from "@/components/page/editorial-links";
 import { OverviewList } from "@/components/home/overview-list";
 import { SituationLinks } from "@/components/home/situation-links";
 import { SoftwareShowcase } from "@/components/home/software-showcase";
@@ -14,19 +15,17 @@ import { StepCards, type Step } from "@/components/marketing/step-cards";
 import { ArrowLink, ButtonLink } from "@/components/ui/button";
 import { Container, Panel, SplitGrid } from "@/components/ui/layout";
 import { Eyebrow, Headline, Lead } from "@/components/ui/typography";
-import { getAllSoftware, getLiveCategories } from "@/lib/content";
+import { getAllSoftware, getComparisons, getLiveCategories, getUseCases } from "@/lib/content";
 import {
   comparePresets,
   compareProducts,
   factLists,
   featuredSoftware,
   homeLogos,
-  latestReview,
   overviewTabs,
   showcaseTabs,
 } from "@/lib/content/home";
 import { articleTeasers } from "@/lib/content/guides";
-import { formatDate } from "@/lib/format";
 import { newsletterAvailable } from "@/lib/forms/availability";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/site.config";
@@ -59,7 +58,6 @@ export default function HomePage() {
   const overview = overviewTabs();
   const facts = factLists();
   const logos = homeLogos();
-  const stand = latestReview();
   const articles = articleTeasers(6);
   const featured = featuredSoftware(4);
   const compare = compareProducts();
@@ -186,6 +184,22 @@ export default function HomePage() {
             <div className="mt-12">
               <HomeCompare products={compare} presets={presets} initial={presets[0].slugs} />
             </div>
+            <div className="mt-12 grid gap-10 border-t border-line pt-10 lg:grid-cols-2">
+              <EditorialLinks
+                title="Ausführliche Vergleiche"
+                links={getComparisons().map((c) => ({
+                  href: routes.comparison(c.slug),
+                  label: c.title,
+                }))}
+              />
+              <EditorialLinks
+                title="Software für Ihren Betrieb"
+                links={getUseCases().map((u) => ({
+                  href: routes.useCase(u.slug),
+                  label: u.title,
+                }))}
+              />
+            </div>
           </Container>
         </Panel>
       ) : null}
@@ -262,7 +276,6 @@ export default function HomePage() {
                 Je Kategorie die fünf Programme mit dem günstigsten bezahlten Einstieg, jeweils mit
                 Zielgruppe, den wichtigsten Stärken und dem, was Sie vor dem Abschluss wissen
                 sollten. Provisionen beeinflussen weder Auswahl noch Reihenfolge.
-                {stand ? ` Stand der Recherche: ${formatDate(stand)}.` : ""}
               </p>
             </SplitGrid>
             <div className="mt-12">

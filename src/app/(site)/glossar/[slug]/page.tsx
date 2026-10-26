@@ -73,7 +73,7 @@ export default async function TermPage({ params }: PageProps<"/glossar/[slug]">)
         lead={term.short}
         meta={
           <>
-            Stand {formatDate(term.lastReviewed)} · <Byline author={term.author} />
+            <Byline author={term.author} />
           </>
         }
         draft={term.status === "draft"}

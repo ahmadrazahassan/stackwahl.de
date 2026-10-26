@@ -1,0 +1,76 @@
+slug: sevdesk-vs-papierkram
+title: "sevdesk vs. Papierkram: Preise, ELSTER, Teams und Unterschiede"
+description: sevdesk und Papierkram im Vergleich, mit Jahreskosten für eine und drei Personen, UStVA per ELSTER, E-Rechnung, Projekten und Serverstandort.
+software:
+  - sevdesk
+  - papierkram
+centralQuestion: Welches Cloud-Programm passt besser zu Selbstständigen und kleinen Teams, die Rechnungen und Buchhaltung in einem Werkzeug wollen?
+intro: sevdesk und Papierkram richten sich an dieselben Menschen, Selbstständige, Freiberufler und kleine Teams. Beide laufen im Browser, beide haben einen kostenlosen Einstieg und beide erstellen E-Rechnungen. Die Unterschiede zeigen sich bei der Umsatzsteuer-Voranmeldung, bei den Kosten für weitere Personen und bei Projekten mit Zeiterfassung.
+sources:
+  - &sevpreise
+    url: https://sevdesk.de/preise/
+    title: sevdesk Preise
+    accessed: 2026-10-24
+  - &sevds
+    url: https://sevdesk.de/datenschutz/
+    title: sevdesk Datenschutz
+    accessed: 2026-10-24
+  - &pkpreise
+    url: https://www.papierkram.de/preise/
+    title: Papierkram Preise
+    accessed: 2026-10-24
+  - &pkberichte
+    url: https://www.papierkram.de/funktionen/berichte-und-integrationen/
+    title: Papierkram Berichte und Integrationen
+    accessed: 2026-10-25
+  - &pksicher
+    url: https://www.papierkram.de/sicher-und-zuverlaessig-papierkram-buchhaltung-aus-der-cloud
+    title: Papierkram Sicherheit der Cloud-Buchhaltung
+    accessed: 2026-10-26
+sections:
+  - id: preise
+    title: Was beide im Jahr kosten
+    paragraphs:
+      - sevdesk hat einen kostenlosen Tarif für drei Rechnungen oder E-Rechnungen im Monat. Der Tarif Rechnung kostet 9,90 € und der Tarif Buchhaltung mit Umsatzsteuer-Voranmeldung 22,90 € im Monat bei 12 Monaten Laufzeit, monatlich sind es 11,90 € und 25,90 €. Papierkram startet mit dem Paket Free für bis zu 15 Belege im Monat, das Paket S kostet 12,90 €, M mit allen Funktionen 24,90 € im Monat bei jährlicher Zahlung.
+      - Für eine Person mit Buchhaltung kostet sevdesk damit 274,80 € netto im Jahr, Papierkram M 298,80 €. Bei drei Personen dreht sich das Bild. sevdesk berechnet je weiterem Benutzer 5,90 € im Monat, Papierkram im Jahrespaket 2,32 €. Drei Personen kosten bei sevdesk Buchhaltung 416,40 € und bei Papierkram M 354,48 € netto im Jahr.
+    points:
+      - "Eine Person, Buchhaltung: sevdesk 274,80 €, Papierkram M 298,80 € netto im Jahr"
+      - "Drei Personen, Buchhaltung: sevdesk 416,40 €, Papierkram M 354,48 € netto im Jahr"
+    sources:
+      - *sevpreise
+      - *pkpreise
+  - id: umsatzsteuer
+    title: Umsatzsteuer-Voranmeldung und E-Rechnung
+    paragraphs:
+      - Hier liegt der größte Unterschied im Alltag. sevdesk sendet die Voranmeldung ab dem Tarif Buchhaltung direkt an das Finanzamt, ohne eigenes ELSTER-Zertifikat. Papierkram erstellt die Voranmeldung als XML-Datei, die Sie selbst im ELSTER-Portal hochladen. Das ist ein zusätzlicher Schritt pro Monat oder Quartal.
+      - Bei der E-Rechnung sind beide gut aufgestellt. sevdesk erstellt XRechnung und ZUGFeRD schon im kostenlosen Tarif, Papierkram erstellt und empfängt E-Rechnungen in allen Paketen und verbucht sie. Einen DATEV-Export bieten beide, sevdesk zusätzlich eine Schnittstelle zu ADDISON.
+    sources:
+      - *sevpreise
+      - *pkberichte
+      - *pkpreise
+  - id: arbeitsweise
+    title: Projekte, Daten und Sicherheit
+    paragraphs:
+      - Papierkram verbindet Rechnungen und Buchhaltung mit Projekten und Zeiterfassung, das hilft Agenturen und Beratern, die nach Stunden abrechnen. sevdesk nennt in seinen Tarifen keine Zeiterfassung im Grundumfang. Für Kostenstellen und eine REST-API braucht es bei sevdesk den Tarif Buchhaltung Pro.
+      - Beide speichern in Deutschland. Papierkram nennt Rechenzentren in Frankfurt am Main und Hamburg und laut Anbieter eine GoBD-Zertifizierung aller Abo-Versionen. sevdesk hat sich laut Datenschutzseite bewusst für den Serverstandort Deutschland entschieden, eine Aussage zur GoBD-Archivierung aller Belege haben wir dort nicht gefunden.
+    sources:
+      - *pkpreise
+      - *pksicher
+      - *sevds
+      - *sevpreise
+choose:
+  - software: sevdesk
+    reasons:
+      - Sie die Umsatzsteuer-Voranmeldung direkt aus dem Programm senden möchten.
+      - Sie allein arbeiten und mit einer längeren Laufzeit sparen wollen.
+      - Ihre Kanzlei mit ADDISON statt DATEV arbeitet.
+  - software: papierkram
+    reasons:
+      - Sie im Team arbeiten, denn weitere Nutzer kosten nur 2,32 € im Monat.
+      - Sie Projekte und Arbeitszeiten im selben Programm erfassen.
+      - Ihnen der zusätzliche Upload der Voranmeldung im ELSTER-Portal nichts ausmacht.
+verdict: Für Einzelkämpfer, die ihre Umsatzsteuer selbst melden, ist sevdesk bequemer, weil die Voranmeldung direkt ans Finanzamt geht. Für kleine Teams und Projektarbeit ist Papierkram günstiger und vielseitiger, verlangt aber den Upload der Voranmeldung im ELSTER-Portal. Testen Sie beide mit einem echten Monat, beide haben einen kostenlosen Einstieg.
+status: published
+published: 2026-10-26
+updated: 2026-10-26
+author: dietmar-riedel

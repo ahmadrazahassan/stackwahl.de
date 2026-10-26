@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowLink } from "@/components/ui/button";
 import { DisclosureLabel } from "@/components/ui/labels";
 import { cn } from "@/lib/cn";
-import { formatDate, formatPriceFrom } from "@/lib/format";
+import { formatPriceFrom } from "@/lib/format";
 import { routes } from "@/lib/routes";
 import { ScoreBadge } from "./score";
 import type { SoftwareSummary } from "./types";
@@ -84,7 +84,6 @@ export function SoftwareCard({
               ? formatPriceFrom(software.priceFromCents, { net: software.priceNet })
               : null}
           </span>
-          <span className="block text-muted">Preisstand {formatDate(software.priceCheckedAt)}</span>
         </p>
       ) : null}
       {software.keyFacts.length > 0 ? (

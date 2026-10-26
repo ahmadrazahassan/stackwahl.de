@@ -78,7 +78,14 @@ test.describe("Filters and search", () => {
 
   test("search page finds software with German normalization", async ({ page }) => {
     await page.goto("/suche?q=meinbuero");
-    await expect(page.getByRole("link", { name: /WISO MeinBüro/ })).toBeVisible();
+    // The profile comes first; the comparison with Lexware Office is found as well.
+    await expect(page.getByRole("link", { name: /^WISO MeinBüro/ })).toHaveAttribute(
+      "href",
+      "/software/wiso-meinbuero",
+    );
+    await expect(
+      page.getByRole("link", { name: /Lexware Office vs. WISO MeinBüro/ }),
+    ).toBeVisible();
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
     await expectNoAxe(page);
   });

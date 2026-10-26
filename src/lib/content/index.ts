@@ -7,12 +7,13 @@ import {
   allGlossaries,
   allGuides,
   allSoftware,
+  allUseCases,
   allVendors,
 } from "content-collections";
 import type { Availability } from "@/components/layout/navigation";
 import type { ComplianceRow, PricePlan, SoftwareSummary } from "@/components/software/types";
 import { COMPLIANCE, COMPLIANCE_KEYS, FEATURES, type FeatureKey } from "@/content/features";
-import type { Fact, Software, Source } from "@/content/schemas";
+import type { Fact, Software, Source, UseCase } from "@/content/schemas";
 import { siteConfig } from "@/site.config";
 import {
   entryPriceCents,
@@ -69,7 +70,52 @@ export function getLiveCategories() {
 }
 
 export function getComparisons() {
-  return allComparisons.filter((c) => isVisible(c));
+  return allComparisons
+    .filter((c) => isVisible(c) && c.software.every((slug) => getSoftware(slug)))
+    .sort((a, b) => a.title.localeCompare(b.title, "de"));
+}
+
+export function getComparison(slug: string) {
+  return getComparisons().find((c) => c.slug === slug);
+}
+
+/** Editorial comparisons that include this program. */
+export function comparisonsFor(slug: string) {
+  return getComparisons().filter((c) => c.software.includes(slug));
+}
+
+export function getUseCases() {
+  return allUseCases
+    .filter((u) => isVisible(u))
+    .sort((a, b) => a.label.localeCompare(b.label, "de"));
+}
+
+export function getUseCase(slug: string) {
+  return getUseCases().find((u) => u.slug === slug);
+}
+
+/**
+ * The programs a use-case rule selects, best Recherche-Wertung first, ties by name. Every
+ * condition must hold: one of the target groups, one of the categories, every listed fact.
+ */
+export function softwareForUseCase(useCase: UseCase): Software[] {
+  const { targetGroups, categories, facts } = useCase.rule;
+  return getAllSoftware()
+    .filter((s) => !targetGroups || targetGroups.some((g) => s.targetGroups.includes(g)))
+    .filter((s) => !categories || categories.some((c) => s.categories.includes(c)))
+    .filter((s) =>
+      Object.entries(facts ?? {}).every(([key, accepted]) => {
+        const fact =
+          (s.compliance as Record<string, Fact | undefined>)[key] ??
+          (s.features as Record<string, Fact | undefined>)[key];
+        return accepted.includes(fact?.status ?? "unbekannt");
+      }),
+    )
+    .sort(
+      (a, b) =>
+        (researchScore(b)?.total ?? -1) - (researchScore(a)?.total ?? -1) ||
+        a.name.localeCompare(b.name, "de"),
+    );
 }
 
 /** Visible guides, newest first. */

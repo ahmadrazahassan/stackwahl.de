@@ -18,5 +18,7 @@ export const config = {
     "/glossar/:slug/:rest*",
     "/ratgeber/:slug/:rest*",
     "/redaktion/:slug/:rest*",
+    "/vergleich/:slug/:rest*",
+    "/software-fuer/:slug/:rest*",
   ],
 };

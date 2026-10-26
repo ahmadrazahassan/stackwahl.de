@@ -5,7 +5,12 @@ import { CONSENT_SERVICES } from "@/lib/consent";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import searchIndex from "@/generated/search-index.json";
-import { getAvailability, getLiveCategories, getSoftwareInCategory } from "@/lib/content";
+import {
+  getAvailability,
+  getLiveCategories,
+  getSoftwareInCategory,
+  getUseCases,
+} from "@/lib/content";
 import { routes } from "@/lib/routes";
 
 async function currentYear() {
@@ -21,6 +26,18 @@ export default async function SiteLayout({ children }: LayoutProps<"/">) {
     href: routes.category(c.slug),
     description: `${getSoftwareInCategory(c.slug).length} Programme im Vergleich`,
   }));
+  const useCases = getUseCases();
+  const footerColumns = [
+    ...(useCases.length > 0
+      ? [
+          {
+            title: "Software für",
+            links: useCases.map((u) => ({ label: u.label, href: routes.useCase(u.slug) })),
+          },
+        ]
+      : []),
+    ...nav.footer,
+  ];
   return (
     <NuqsAdapter>
       <SiteHeader
@@ -32,7 +49,7 @@ export default async function SiteLayout({ children }: LayoutProps<"/">) {
       {children}
       <SiteFooter
         categories={categories}
-        columns={nav.footer}
+        columns={footerColumns}
         cta={nav.cta}
         year={await currentYear()}
       />

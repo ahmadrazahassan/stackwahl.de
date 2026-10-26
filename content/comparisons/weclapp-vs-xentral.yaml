@@ -1,0 +1,75 @@
+slug: weclapp-vs-xentral
+title: "weclapp vs. Xentral: ERP für Händler im Kostenvergleich"
+description: weclapp und Xentral im Vergleich, mit Kosten für drei und fünf Nutzer, Lager, Shops, Buchhaltung, UStVA, DATEV und Testphase.
+software:
+  - weclapp
+  - xentral
+centralQuestion: Welches Cloud-ERP passt zu einem wachsenden Händler, und was kostet es bei drei oder fünf Personen im Team?
+intro: weclapp aus Kitzingen und Xentral aus Augsburg sind zwei der bekanntesten Cloud-ERP-Systeme für kleine und mittlere Händler in Deutschland. Beide verbinden Aufträge, Lager und Rechnungen. Sie rechnen aber völlig unterschiedlich ab, weclapp je Nutzer, Xentral pauschal nach Plan und Auftragsvolumen, und sie decken die Buchhaltung unterschiedlich weit ab.
+sources:
+  - &weclapp
+    url: https://www.weclapp.com/de/preise/
+    title: weclapp Preise und Funktionen
+    accessed: 2026-10-25
+  - &weclappfibu
+    url: https://www.weclapp.com/de/buchhaltungssoftware/
+    title: weclapp Buchhaltungssoftware
+    accessed: 2026-10-25
+  - &weclappsupport
+    url: https://www.weclapp.com/de/support/
+    title: weclapp Support-Pakete
+    accessed: 2026-10-25
+  - &xentral
+    url: https://xentral.com/de/preise
+    title: Xentral Preise und Pläne
+    accessed: 2026-10-25
+  - &xentralfibu
+    url: https://xentral.com/de/erp/buchhaltung
+    title: Xentral ERP Buchhaltung
+    accessed: 2026-10-25
+sections:
+  - id: preise
+    title: Je Nutzer oder pauschal
+    paragraphs:
+      - weclapp ERP Handel kostet 163 € je Nutzer im Monat bei jährlicher Zahlung und enthält Warenwirtschaft, Lager mit Mobile Lager-App, Produktion und die Anbindung von Shops und Marktplätzen. Drei Nutzer kosten damit 5.868 €, fünf Nutzer 9.780 € netto im Jahr.
+      - Xentral berechnet keine Nutzer. Starter kostet 349 € im Monat bei Jahreszahlung mit 500 Aufträgen im Monat, Business 649 € mit Bankanbindungen, Verbindlichkeiten und Lieferantenbestellungen. Das sind 4.188 € beziehungsweise 7.788 € netto im Jahr, unabhängig von der Teamgröße. Laut Anbieter hängen die Preise zusätzlich von Umsatz und Versandvolumen ab.
+    points:
+      - "Drei Nutzer: weclapp Handel 5.868 €, Xentral Starter 4.188 €, Xentral Business 7.788 € netto im Jahr"
+      - "Fünf Nutzer: weclapp Handel 9.780 €, Xentral unverändert"
+    sources:
+      - *weclapp
+      - *xentral
+  - id: buchhaltung
+    title: Buchhaltung und Umsatzsteuer
+    paragraphs:
+      - Hier liegt der größte Unterschied. weclapp enthält laut Anbieter in allen Paketen eine Finanzbuchhaltung mit Banking, den DATEV-Export und den Versand der Umsatzsteuer-Voranmeldung. Xentral schreibt auf seiner Buchhaltungsseite, dass BWA, Saldenliste und Umsatzsteuer-Voranmeldung im aktuellen Stand des Moduls noch nicht vorgesehen sind. Die Daten gehen mit Belegbildern an DATEV, die Buchhaltung bleibt bei der Steuerberatung.
+      - Bei der E-Rechnung sind beide aufgestellt. Xentral verschickt Rechnungen automatisch als ZUGFeRD-PDF und XML, eingehende E-Rechnungen verarbeitet es im Verbindlichkeiten-Modul ab Plan Business. weclapp erstellt ZUGFeRD und XRechnung in allen Paketen und erfasst eingehende Belege per OCR.
+    sources:
+      - *weclappfibu
+      - *xentralfibu
+      - *xentral
+  - id: einstieg
+    title: Testphase, Support und Einführung
+    paragraphs:
+      - weclapp lässt sich 30 Tage kostenlos testen. Telefonsupport und Fernwartung gibt es in Support-Paketen, für die der Anbieter 189 €, 389 € und 599 € nennt. Für Xentral nennen die geprüften Seiten keine kostenlose Testphase.
+      - Bei beiden kommen Einführung, Datenübernahme und Schulungen hinzu, die die Anbieter meist erst im Angebot nennen. Planen Sie diese Kosten von Anfang an ein.
+    sources:
+      - *weclapp
+      - *weclappsupport
+      - *xentral
+choose:
+  - software: weclapp
+    reasons:
+      - Sie Buchhaltung und Umsatzsteuer-Voranmeldung im ERP erledigen wollen.
+      - Ihr Team klein bleibt, denn weclapp rechnet je Nutzer ab.
+      - Sie das System 30 Tage kostenlos ausprobieren möchten.
+  - software: xentral
+    reasons:
+      - Viele Personen im System arbeiten, denn Nutzer sind unbegrenzt.
+      - Sie viele Aufträge über Shops und Marktplätze abwickeln.
+      - Ihre Steuerberatung die Buchhaltung über DATEV übernimmt.
+verdict: weclapp ist das vollständigere ERP für kleine Teams, die auch die Buchhaltung im System führen wollen. Xentral lohnt sich für Händler mit vielen Mitarbeitenden und hohem Auftragsvolumen, die die Buchhaltung bei der Steuerberatung lassen. Ab drei Nutzern ist Xentral Starter günstiger als weclapp Handel, Xentral Business ab vier Nutzern.
+status: published
+published: 2026-10-26
+updated: 2026-10-26
+author: dietmar-riedel

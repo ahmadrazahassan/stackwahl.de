@@ -12,7 +12,7 @@ import { COMPLIANCE, COMPLIANCE_KEYS } from "@/content/features";
 import { rankSoftware } from "@/content/ranking";
 import type { FactStatus } from "@/content/schemas";
 import { MIN_PROFILES_PER_CATEGORY } from "@/content/visibility";
-import { formatDate, formatEuro } from "@/lib/format";
+import { formatEuro } from "@/lib/format";
 import {
   getCategory,
   getLiveCategories,
@@ -68,10 +68,6 @@ export default async function CategoryPage({ params }: PageProps<"/kategorien/[s
   const summaries = software.map((s) => toSummary(s, undefined, category.slug));
   const ranking = rankSoftware(summaries);
   const ordered = ranking.items.map((summary) => software.find((s) => s.slug === summary.slug)!);
-  const latest = software
-    .map((s) => s.lastReviewed)
-    .sort()
-    .at(-1)!;
   const filterable: FilterableSoftware[] = ordered.map((s, i) => ({
     slug: s.slug,
     summary: ranking.items[i],
@@ -141,7 +137,7 @@ export default async function CategoryPage({ params }: PageProps<"/kategorien/[s
         title={category.name}
         tail="im Vergleich."
         lead={category.intro}
-        meta={`${software.length} Programme recherchiert · Stand ${formatDate(latest)}`}
+        meta={`${software.length} Programme recherchiert`}
         draft={category.status === "draft"}
       />
 

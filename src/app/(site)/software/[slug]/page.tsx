@@ -9,6 +9,7 @@ import { ProfileMedia } from "@/components/software/profile-media";
 import { ProfileReview } from "@/components/software/profile-review";
 import { Breadcrumbs, ProfileHeader } from "@/components/software/profile-header";
 import { ProfileTabs } from "@/components/software/profile-tabs";
+import { EditorialLinks } from "@/components/page/editorial-links";
 import { ProsCons } from "@/components/software/pros-cons";
 import { ResearchScoreBreakdown } from "@/components/software/research-score";
 import { SoftwareCard } from "@/components/software/software-card";
@@ -20,11 +21,14 @@ import { SHOW_DRAFTS } from "@/content/visibility";
 import { cn } from "@/lib/cn";
 import {
   alternativesFor,
+  comparisonsFor,
   factsCheckedAt,
   highestPriceCents,
   featureGroups,
   getAllSoftware,
+  getUseCases,
   profileSources,
+  softwareForUseCase,
   staticSlugs,
   toComplianceRows,
   toPricePlans,
@@ -69,6 +73,7 @@ const allSections = [
   { id: "preise", label: "Preise" },
   { id: "vor-und-nachteile", label: "Vor- und Nachteile" },
   { id: "rechtssicherheit", label: "Rechtssicherheit" },
+  { id: "vergleiche", label: "Vergleiche" },
   { id: "alternativen", label: "Alternativen" },
   { id: "quellen", label: "Quellen" },
 ];
@@ -117,12 +122,27 @@ export default async function SoftwarePage({ params }: PageProps<"/software/[slu
   const summary = toSummary(software);
   const alternatives = alternativesFor(software);
   const sources = profileSources(software);
+  const related = [
+    ...comparisonsFor(software.slug).map((c) => ({
+      href: routes.comparison(c.slug),
+      label: c.title,
+      hint: "Vergleich",
+    })),
+    ...getUseCases()
+      .filter((u) => softwareForUseCase(u).some((s) => s.slug === software.slug))
+      .map((u) => ({
+        href: routes.useCase(u.slug),
+        label: u.title,
+        hint: `Software für ${u.label}`,
+      })),
+  ];
   const research = software.rating ? null : researchScore(software);
   const sections = allSections.filter(
     (s) =>
       (s.id !== "im-detail" || software.review) &&
       (s.id !== "wertung" || research) &&
       (s.id !== "einblicke" || software.screenshots.length + software.videos.length > 0) &&
+      (s.id !== "vergleiche" || related.length > 0) &&
       (s.id !== "alternativen" || alternatives.length > 0),
   );
 
@@ -145,7 +165,6 @@ export default async function SoftwarePage({ params }: PageProps<"/software/[slu
       "Kostenlose Testphase",
       software.freeTrialDays ? `${software.freeTrialDays} Tage` : "Keine Angabe",
     ],
-    ["Zuletzt recherchiert", formatDate(software.lastReviewed)],
   ];
 
   return (
@@ -218,9 +237,8 @@ export default async function SoftwarePage({ params }: PageProps<"/software/[slu
               </ul>
             </div>
             <p className="rounded-card bg-bg p-5 text-small text-muted">
-              Recherchiert auf den Seiten des Anbieters, Stand {formatDate(software.lastReviewed)}.
-              Wir haben dieses Programm noch nicht in einem eigenen Konto ausprobiert.{" "}
-              <Byline author={software.author} />.
+              Recherchiert auf den Seiten des Anbieters. Wir haben dieses Programm noch nicht in
+              einem eigenen Konto ausprobiert. <Byline author={software.author} />.
             </p>
           </div>
           <dl className="text-body">
@@ -300,6 +318,12 @@ export default async function SoftwarePage({ params }: PageProps<"/software/[slu
           checkedAt={factsCheckedAt(software)}
         />
       </PageSection>
+
+      {related.length > 0 ? (
+        <PageSection id="vergleiche" label="Vergleiche" title={`${software.name} im Vergleich`}>
+          <EditorialLinks title="Ausführlich verglichen und eingeordnet" links={related} />
+        </PageSection>
+      ) : null}
 
       {alternatives.length > 0 ? (
         <PageSection

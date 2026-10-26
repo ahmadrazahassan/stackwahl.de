@@ -8,6 +8,7 @@ import type {
   Guide,
   Software,
   Source,
+  UseCase,
   Vendor,
 } from "./schemas.ts";
 
@@ -20,6 +21,7 @@ export type ContentSet = {
   software: Software[];
   authors: Author[];
   comparisons: Comparison[];
+  useCases: UseCase[];
   affiliateLinks: AffiliateLink[];
   guides: Guide[];
   glossary: GlossaryTerm[];
@@ -355,14 +357,107 @@ export function checkContent(content: ContentSet, options: GuardOptions): Issue[
     }
   }
 
-  for (const c of content.comparisons) {
-    const at = `comparisons/${c.slug}`;
-    c.software.forEach((slug) =>
+  // Comparisons and use cases follow the same rules as guides: sources with past dates,
+  // resolvable references, copy rules, no test claims and a real responsible person.
+  const editorial = (
+    at: string,
+    item: {
+      status: "draft" | "published";
+      author: string | null;
+      published: string;
+      updated: string;
+      sources: Source[];
+      sections: { sources: Source[] }[];
+    },
+    slugs: string[],
+    texts: string[],
+  ) => {
+    issues.push(...reference(`${at}.author`, "Autor", item.author, authors));
+    issues.push(...futureDate(`${at}.published`, item.published, today));
+    issues.push(...futureDate(`${at}.updated`, item.updated, today));
+    [...item.sources, ...item.sections.flatMap((s) => s.sources)].forEach((src, i) =>
+      issues.push(...futureDate(`${at}.sources[${i}]`, src.accessed, today)),
+    );
+    slugs.forEach((slug) =>
       issues.push(...reference(`${at}.software`, "Software", slug, software)),
     );
-    issues.push(...reference(`${at}.author`, "Autor", c.author, authors));
-    issues.push(...futureDate(`${at}.lastReviewed`, c.lastReviewed, today));
-    issues.push(...copyIssues(at, [c.centralQuestion, c.verdict]));
+    issues.push(...copyIssues(at, texts));
+    for (const text of texts) {
+      if (TEST_CLAIM.test(text)) {
+        issues.push({
+          severity: "error",
+          code: "test-claim",
+          where: at,
+          message: `Testaussage ohne dokumentierten Test: „${text.slice(0, 60)}“`,
+        });
+      }
+    }
+    if (item.status === "published" && !item.author) {
+      issues.push({
+        severity: "error",
+        code: "missing-author",
+        where: at,
+        message: "Veröffentlicht ohne echte Autorin oder echten Autor.",
+      });
+    }
+  };
+  const sectionTexts = (sections: Comparison["sections"]) =>
+    sections.flatMap((s) => [s.title, ...s.paragraphs, ...(s.points ?? [])]);
+
+  for (const c of content.comparisons) {
+    const at = `comparisons/${c.slug}`;
+    editorial(
+      at,
+      c,
+      [...c.software, ...c.choose.map((x) => x.software)],
+      [
+        c.title,
+        c.description,
+        c.centralQuestion,
+        c.intro,
+        c.verdict,
+        ...sectionTexts(c.sections),
+        ...c.choose.flatMap((x) => x.reasons),
+      ],
+    );
+    if (c.choose.some((x) => !c.software.includes(x.software))) {
+      issues.push({
+        severity: "error",
+        code: "unresolved-reference",
+        where: `${at}.choose`,
+        message: "„Wählen Sie …“ nennt ein Programm, das nicht verglichen wird.",
+      });
+    }
+  }
+
+  const guideSlugs = new Set(content.guides.map((g) => g.slug));
+  const comparisonSlugs = new Set(content.comparisons.map((c) => c.slug));
+  const categorySlugs = new Set(content.categories.map((c) => c.slug));
+  for (const u of content.useCases) {
+    const at = `use-cases/${u.slug}`;
+    editorial(
+      at,
+      u,
+      [],
+      [
+        u.title,
+        u.description,
+        u.label,
+        u.centralQuestion,
+        u.intro,
+        u.rule.explanation,
+        ...sectionTexts(u.sections),
+      ],
+    );
+    u.related.guides.forEach((g) =>
+      issues.push(...reference(`${at}.related`, "Ratgeber", g, guideSlugs)),
+    );
+    u.related.comparisons.forEach((c) =>
+      issues.push(...reference(`${at}.related`, "Vergleich", c, comparisonSlugs)),
+    );
+    (u.rule.categories ?? []).forEach((c) =>
+      issues.push(...reference(`${at}.rule`, "Kategorie", c, categorySlugs)),
+    );
   }
 
   for (const link of content.affiliateLinks) {

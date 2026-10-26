@@ -11,7 +11,7 @@ import {
   SegmentedTrigger,
 } from "@/components/ui/segmented";
 import type { OverviewRow, OverviewTab } from "@/lib/content/home";
-import { formatDate, formatPriceFrom } from "@/lib/format";
+import { formatPriceFrom } from "@/lib/format";
 import { routes } from "@/lib/routes";
 
 /**
@@ -89,7 +89,6 @@ function Row({ row, position }: { row: OverviewRow; position: number }) {
               {formatPriceFrom(summary.priceFromCents, { net: summary.priceNet })}
             </span>
           ) : null}
-          <span className="block text-muted">Preisstand {formatDate(summary.priceCheckedAt)}</span>
         </p>
         <ul className="flex flex-col gap-2 text-small">
           {row.facts.map((fact) => (

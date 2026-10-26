@@ -248,16 +248,78 @@ export type Software = z.infer<typeof softwareSchema>;
 // ---------------------------------------------------------------------------------------------
 // Comparison, affiliate link, guide
 
+/** A text section with its own sources, shared by comparisons and use-case pages. */
+export const sourcedSectionSchema = z.strictObject({
+  id: slugSchema,
+  title: z.string().min(3),
+  paragraphs: z.array(z.string().min(40)).min(1),
+  points: z.array(z.string().min(5)).optional(),
+  sources: z.array(sourceSchema).min(1),
+});
+
+/**
+ * Editorial "X vs. Y" page for a pair people actually search for (Section 8). The facts table
+ * is computed from the profiles; the text explains the differences and names its sources.
+ */
 export const comparisonSchema = z.strictObject({
   slug: slugSchema,
+  title: z.string().min(10).max(90),
+  /** Also the meta description. */
+  description: z.string().min(50).max(155),
   software: z.array(slugSchema).min(2).max(3),
   centralQuestion: z.string().min(10),
+  intro: z.string().min(80),
+  sections: z.array(sourcedSectionSchema).min(3),
+  /** "Wählen Sie X, wenn ..." for every program, same order as `software`. */
+  choose: z
+    .array(z.strictObject({ software: slugSchema, reasons: z.array(z.string().min(10)).min(2) }))
+    .min(2),
   verdict: z.string().min(40),
   status: statusSchema,
-  lastReviewed: isoDateSchema,
-  author: slugSchema,
+  published: isoDateSchema,
+  updated: isoDateSchema,
+  author: slugSchema.nullable(),
+  sources: z.array(sourceSchema).min(1),
 });
 export type Comparison = z.infer<typeof comparisonSchema>;
+
+/**
+ * "Software für ..." page: which programs fit a use case. The list is not hand-picked: a
+ * published rule (target groups, categories, facts) selects the programs, sorted by the
+ * Recherche-Wertung. The text explains what matters for this use case, with sources.
+ */
+export const useCaseSchema = z.strictObject({
+  slug: slugSchema,
+  title: z.string().min(10).max(90),
+  description: z.string().min(50).max(155),
+  /** Short name for links and breadcrumbs, e.g. "Handwerksbetriebe". */
+  label: z.string().min(3).max(40),
+  centralQuestion: z.string().min(10),
+  intro: z.string().min(80),
+  rule: z.strictObject({
+    /** The rule in plain German, shown above the list. */
+    explanation: z.string().min(30),
+    targetGroups: z.array(targetGroupSchema).optional(),
+    categories: z.array(slugSchema).optional(),
+    /** Fact or feature key with the accepted statuses. */
+    facts: z.record(z.string(), z.array(factStatusSchema).min(1)).optional(),
+  }),
+  /** Facts shown as "Passt, weil" on every program card. */
+  highlights: z.array(z.string()).min(2).max(6),
+  sections: z.array(sourcedSectionSchema).min(2),
+  related: z
+    .strictObject({
+      guides: z.array(slugSchema).default([]),
+      comparisons: z.array(slugSchema).default([]),
+    })
+    .default({ guides: [], comparisons: [] }),
+  status: statusSchema,
+  published: isoDateSchema,
+  updated: isoDateSchema,
+  author: slugSchema.nullable(),
+  sources: z.array(sourceSchema).min(1),
+});
+export type UseCase = z.infer<typeof useCaseSchema>;
 
 const LINK_SHORTENERS =
   /^(bit\.ly|tinyurl\.com|t\.co|goo\.gl|ow\.ly|is\.gd|buff\.ly|rebrand\.ly|shorturl\.at)$/i;

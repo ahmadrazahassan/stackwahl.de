@@ -1,0 +1,63 @@
+slug: gmbh-ug
+title: "Buchhaltungssoftware für GmbH und UG: Programme mit Bilanz"
+description: Welche Buchhaltungsprogramme eine Bilanz erstellen, wie GmbH und UG in Deutschland bilanzieren müssen und worauf es bei der Software ankommt.
+label: GmbH und UG
+centralQuestion: Welche Buchhaltungssoftware erstellt die Bilanz, die eine GmbH oder UG jedes Jahr braucht?
+intro: Eine GmbH oder UG kann ihren Gewinn nicht mit einer einfachen Einnahmen-Überschuss-Rechnung ermitteln. Sie muss doppelt buchen und jedes Jahr eine Bilanz mit Gewinn- und Verlustrechnung aufstellen, die anschließend elektronisch an das Finanzamt geht. Viele günstige Programme für Selbstständige können das nicht. Hier stehen die Programme, die laut Anbieter eine Bilanz erstellen.
+rule:
+  explanation: Ausgewählt sind alle Programme der Kategorie Buchhaltungssoftware, deren Anbieter Bilanz und doppelte Buchführung ausdrücklich nennt.
+  categories:
+    - buchhaltungssoftware
+  facts:
+    bilanz:
+      - ja
+highlights:
+  - bilanz
+  - elster
+  - datevExport
+  - eRechnungVersand
+  - steuerberaterzugang
+sources:
+  - &gmbhg
+    url: https://www.gesetze-im-internet.de/gmbhg/__13.html
+    title: § 13 GmbHG, Juristische Person, Handelsgesellschaft
+    accessed: 2026-10-26
+  - &hgb242
+    url: https://www.gesetze-im-internet.de/hgb/__242.html
+    title: § 242 HGB, Pflicht zur Aufstellung
+    accessed: 2026-10-26
+  - &estg5b
+    url: https://www.gesetze-im-internet.de/estg/__5b.html
+    title: § 5b EStG, Elektronische Übermittlung von Bilanzen
+    accessed: 2026-10-26
+sections:
+  - id: pflicht
+    title: Warum GmbH und UG bilanzieren müssen
+    paragraphs:
+      - Eine GmbH gilt nach § 13 Abs. 3 GmbHG als Handelsgesellschaft und damit als Kaufmann. Das gilt auch für die UG, die eine besondere Form der GmbH ist. Jeder Kaufmann muss nach § 242 HGB zu Beginn eine Eröffnungsbilanz und zum Ende jedes Geschäftsjahres eine Bilanz und eine Gewinn- und Verlustrechnung aufstellen.
+      - Die Erleichterung für kleine Einzelkaufleute nach § 241a HGB gilt für Kapitalgesellschaften nicht. Eine GmbH oder UG braucht deshalb immer eine doppelte Buchführung, unabhängig von ihrem Umsatz.
+    sources:
+      - *gmbhg
+      - *hgb242
+  - id: e-bilanz
+    title: Die E-Bilanz an das Finanzamt
+    paragraphs:
+      - Nach § 5b EStG werden Bilanz und Gewinn- und Verlustrechnung nach amtlich vorgeschriebenem Datensatz elektronisch an das Finanzamt übermittelt, die sogenannte E-Bilanz. Viele Unternehmen lassen das die Steuerberatung erledigen. Wichtig ist dann, dass die Buchhaltungssoftware die Daten sauber an die Kanzlei übergibt, etwa im DATEV-Format.
+      - Prüfen Sie vor dem Kauf, ob das Programm den Jahresabschluss selbst erstellt oder nur die laufende Buchhaltung führt und die Daten an die Kanzlei weitergibt. Beides ist sinnvoll, entscheidend ist die Absprache mit Ihrer Steuerberatung.
+    points:
+      - Doppelte Buchführung mit Kontenrahmen SKR03 oder SKR04
+      - Bilanz und Gewinn- und Verlustrechnung
+      - Übergabe an die Kanzlei, etwa im DATEV-Format
+      - Umsatzsteuer-Voranmeldung per ELSTER
+    sources:
+      - *estg5b
+related:
+  guides:
+    - steuerberater-datev-zusammenarbeit
+    - ustva-elster-software
+  comparisons:
+    - sage-active-vs-lexware-office
+status: published
+published: 2026-10-26
+updated: 2026-10-26
+author: dietmar-riedel

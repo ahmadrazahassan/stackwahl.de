@@ -19,6 +19,7 @@ const content: ContentSet = {
   software: generated.allSoftware ?? [],
   authors: generated.allAuthors ?? [],
   comparisons: generated.allComparisons ?? [],
+  useCases: generated.allUseCases ?? [],
   affiliateLinks: generated.allAffiliateLinks ?? [],
   guides: generated.allGuides ?? [],
   glossary: generated.allGlossaries ?? [],

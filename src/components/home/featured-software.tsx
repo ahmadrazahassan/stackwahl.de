@@ -5,7 +5,7 @@ import { SoftwareLogo } from "@/components/software/software-card";
 import { ButtonLink, VendorButton } from "@/components/ui/button";
 import { DisclosureLabel } from "@/components/ui/labels";
 import type { FeaturedItem } from "@/lib/content/home";
-import { formatDate, formatPriceFrom, formatScore } from "@/lib/format";
+import { formatPriceFrom, formatScore } from "@/lib/format";
 import { routes } from "@/lib/routes";
 
 /**
@@ -103,7 +103,6 @@ function FeaturedCard({ item }: { item: FeaturedItem }) {
               {formatPriceFrom(summary.priceFromCents, { net: summary.priceNet })}
             </span>
           ) : null}
-          <span className="block text-muted">Preisstand {formatDate(summary.priceCheckedAt)}</span>
         </p>
         <VendorButton
           href={item.vendor.href}

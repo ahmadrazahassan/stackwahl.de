@@ -27,6 +27,7 @@ const content = (list: Software[]): ContentSet => ({
   software: list,
   authors: [],
   comparisons: [],
+  useCases: [],
   affiliateLinks: [],
   guides: [],
   glossary: [],

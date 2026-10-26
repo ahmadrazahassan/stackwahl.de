@@ -1,0 +1,59 @@
+slug: handwerk
+title: "Software für Handwerksbetriebe: Angebote, Rechnungen und Buchhaltung"
+description: Welche Programme sich laut Anbieter an Handwerksbetriebe richten und was Handwerker bei Rechnungen, § 13b UStG und Handwerkerleistungen beachten.
+label: Handwerksbetriebe
+centralQuestion: Welche Software unterstützt Handwerksbetriebe bei Angeboten, Rechnungen an Privatkunden und Bauleistungen?
+intro: Im Handwerk gelten bei Rechnungen besondere Regeln. Bei Bauleistungen an andere Unternehmen geht die Steuerschuld auf den Auftraggeber über, Privatkunden brauchen eine Rechnung innerhalb von sechs Monaten, und viele wollen den Lohnanteil für ihre Steuererklärung sehen. Hier stehen die Programme, die sich laut Anbieter ausdrücklich an Handwerksbetriebe richten.
+rule:
+  explanation: Ausgewählt sind alle Programme, deren Anbieter Handwerksbetriebe als Zielgruppe nennt.
+  targetGroups:
+    - handwerk
+highlights:
+  - angebote
+  - rechnungen
+  - lager
+  - projektzeiten
+  - eRechnungVersand
+sources:
+  - &ustg13b
+    url: https://www.gesetze-im-internet.de/ustg_1980/__13b.html
+    title: § 13b UStG, Leistungsempfänger als Steuerschuldner
+    accessed: 2026-10-26
+  - &ustg14
+    url: https://www.gesetze-im-internet.de/ustg_1980/__14.html
+    title: § 14 UStG, Ausstellung von Rechnungen
+    accessed: 2026-10-26
+  - &estg35a
+    url: https://www.gesetze-im-internet.de/estg/__35a.html
+    title: § 35a EStG, Steuerermäßigung für Handwerkerleistungen
+    accessed: 2026-10-26
+sections:
+  - id: bauleistungen
+    title: Bauleistungen an andere Unternehmen
+    paragraphs:
+      - Erbringen Sie Bauleistungen an Gebäuden für ein anderes Unternehmen, schuldet nach § 13b UStG in vielen Fällen der Auftraggeber die Umsatzsteuer. Ihre Rechnung weist dann keine Umsatzsteuer aus, sondern einen Hinweis auf die Steuerschuldnerschaft des Leistungsempfängers. Die Software sollte solche Rechnungen ohne Umwege erstellen können.
+    sources:
+      - *ustg13b
+  - id: privatkunden
+    title: Rechnungen an Privatkunden
+    paragraphs:
+      - Für Werklieferungen und Leistungen im Zusammenhang mit einem Grundstück müssen Sie nach § 14 Abs. 2 Satz 1 Nr. 3 UStG auch Privatkunden innerhalb von sechs Monaten eine Rechnung ausstellen. Viele Privatkunden nutzen die Rechnung zudem für die Steuerermäßigung nach § 35a EStG. Begünstigt sind dort nur die Arbeitskosten, und die Zahlung muss auf das Konto des Betriebs gehen.
+      - Praktisch heißt das, Arbeitskosten und Material getrennt auf der Rechnung auszuweisen und Barzahlungen zu vermeiden. Prüfen Sie in der Testphase, ob das Programm getrennte Positionen für Lohn und Material bequem unterstützt.
+    points:
+      - Angebote, Aufträge, Abschlags- und Schlussrechnungen
+      - Getrennter Ausweis von Arbeitskosten und Material
+      - Rechnungen nach § 13b UStG ohne Umsatzsteuer
+      - Lager und Material, wenn Sie Ware vorhalten
+    sources:
+      - *ustg14
+      - *estg35a
+related:
+  guides:
+    - sage-50-sage-100-sage-active
+    - e-rechnungspflicht-software
+  comparisons:
+    - lexware-office-vs-wiso-meinbuero
+status: published
+published: 2026-10-26
+updated: 2026-10-26
+author: dietmar-riedel

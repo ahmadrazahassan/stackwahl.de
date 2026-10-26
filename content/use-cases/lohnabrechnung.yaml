@@ -1,0 +1,63 @@
+slug: lohnabrechnung
+title: "Buchhaltung mit Lohnabrechnung: Programme für Betriebe mit Angestellten"
+description: Welche Buchhaltungsprogramme die Lohnabrechnung gleich mitbringen, was Arbeitgeber melden müssen und worauf es bei der Auswahl ankommt.
+label: Betriebe mit Angestellten
+centralQuestion: Welche Buchhaltungssoftware erledigt auch die Lohnabrechnung, damit ich nicht zwei Programme brauche?
+intro: Sobald Sie Angestellte haben, kommen neue Pflichten dazu. Sie führen ein Lohnkonto, melden die Lohnsteuer an das Finanzamt und Ihre Beschäftigten an die Sozialversicherung. Viele kleine Betriebe geben das an die Steuerberatung ab. Wer es selbst erledigen will, spart mit einem Programm, das Buchhaltung und Lohn verbindet, doppelte Arbeit. Hier stehen die Programme, die laut Anbieter eine Lohnabrechnung enthalten oder gegen Aufpreis anbieten.
+rule:
+  explanation: Ausgewählt sind alle Programme, die laut Anbieter eine Lohnabrechnung enthalten oder als Zusatz anbieten.
+  facts:
+    lohn:
+      - ja
+      - aufpreis
+highlights:
+  - lohn
+  - bilanz
+  - euer
+  - elster
+  - datevExport
+sources:
+  - &estg41
+    url: https://www.gesetze-im-internet.de/estg/__41.html
+    title: § 41 EStG, Aufzeichnungspflichten beim Lohnsteuerabzug
+    accessed: 2026-10-26
+  - &estg41a
+    url: https://www.gesetze-im-internet.de/estg/__41a.html
+    title: § 41a EStG, Anmeldung und Abführung der Lohnsteuer
+    accessed: 2026-10-26
+  - &sgb4
+    url: https://www.gesetze-im-internet.de/sgb_4/__28a.html
+    title: § 28a SGB IV, Meldepflicht
+    accessed: 2026-10-26
+sections:
+  - id: pflichten
+    title: Was Arbeitgeber erledigen müssen
+    paragraphs:
+      - Nach § 41 EStG führen Sie für jeden Beschäftigten und jedes Kalenderjahr ein Lohnkonto mit den Merkmalen für den Lohnsteuerabzug, den gezahlten Löhnen und der einbehaltenen Lohnsteuer. Nach § 41a EStG melden Sie die Lohnsteuer bis zum zehnten Tag nach Ende des Anmeldungszeitraums an das Finanzamt und führen sie ab, in der Regel elektronisch.
+      - Dazu kommen nach § 28a SGB IV die Meldungen zur Sozialversicherung, etwa beim Beginn einer Beschäftigung. Eine Lohnsoftware erstellt diese Meldungen und überträgt sie, das spart Zeit und senkt das Risiko von Fehlern.
+    sources:
+      - *estg41
+      - *estg41a
+      - *sgb4
+  - id: auswahl
+    title: Worauf Sie bei der Auswahl achten
+    paragraphs:
+      - Fragen Sie zuerst, ob Lohn im Preis enthalten ist oder als Zusatz bezahlt wird, und wie sich der Preis mit der Zahl der Beschäftigten ändert. Prüfen Sie auch, ob Lohnbuchungen automatisch in die Finanzbuchhaltung übernommen werden und wie Ihre Steuerberatung die Daten erhält.
+      - Bei Minijobs, Kurzarbeit oder Branchen mit Sonderregeln lohnt ein Test mit einem echten Monat. Viele Betriebe lassen die Lohnabrechnung trotz Software von der Steuerberatung prüfen, das ist mit allen Programmen hier möglich.
+    points:
+      - Lohn im Preis enthalten oder Zusatzmodul
+      - Preis je Beschäftigtem
+      - Meldungen an Finanzamt und Sozialversicherung direkt aus dem Programm
+      - Übernahme der Lohnbuchungen in die Buchhaltung
+    sources:
+      - *estg41a
+related:
+  guides:
+    - sage-50-sage-100-sage-active
+    - steuerberater-datev-zusammenarbeit
+  comparisons:
+    - sage-active-vs-lexware-office
+status: published
+published: 2026-10-26
+updated: 2026-10-26
+author: dietmar-riedel

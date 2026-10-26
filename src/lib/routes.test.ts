@@ -15,9 +15,8 @@ describe("routes", () => {
   it("builds German URLs without trailing slashes", () => {
     expect(routes.category("buchhaltungssoftware")).toBe("/kategorien/buchhaltungssoftware");
     expect(routes.softwareAlternatives("sevdesk")).toBe("/software/sevdesk/alternativen");
-    expect(routes.comparison(["sevdesk", "lexware-office"])).toBe(
-      "/vergleich/sevdesk-vs-lexware-office",
-    );
+    expect(routes.comparison("sevdesk-vs-papierkram")).toBe("/vergleich/sevdesk-vs-papierkram");
+    expect(routes.useCase("handwerk")).toBe("/software-fuer/handwerk");
   });
 
   it("never returns a trailing slash except for home", () => {

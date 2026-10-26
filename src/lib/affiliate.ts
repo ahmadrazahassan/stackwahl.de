@@ -11,6 +11,7 @@ export const PLACEMENTS = [
   "vergleich",
   "finder",
   "ratgeber",
+  "branche",
 ] as const;
 export type Placement = (typeof PLACEMENTS)[number];
 

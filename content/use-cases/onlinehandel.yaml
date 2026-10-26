@@ -1,0 +1,58 @@
+slug: onlinehandel
+title: "Software für Onlinehändler: Rechnungen, Lager und EU-Umsatzsteuer"
+description: Welche Programme sich an Onlinehändler richten, was die Lieferschwelle von 10.000 € und das OSS-Verfahren bedeuten und worauf Händler achten.
+label: Onlinehändler
+centralQuestion: Welche Software passt zu Onlinehändlern, die über Shops und Marktplätze verkaufen, auch in andere EU-Länder?
+intro: Onlinehändler haben andere Sorgen als Dienstleister. Viele Bestellungen brauchen automatisch erzeugte Rechnungen, Zahlungen von PayPal, Kreditkarte und Marktplätzen müssen den Bestellungen zugeordnet werden, und wer an Privatkunden in andere EU-Länder verkauft, muss dort Umsatzsteuer abführen. Hier stehen die Programme, die sich laut Anbieter an den Onlinehandel richten, von Rechnungsprogrammen bis zum ERP.
+rule:
+  explanation: Ausgewählt sind alle Programme, deren Anbieter den Onlinehandel als Zielgruppe nennt.
+  targetGroups:
+    - e-commerce
+highlights:
+  - lager
+  - bankabgleich
+  - mehrwaehrung
+  - datevExport
+  - api
+sources:
+  - &ustg3c
+    url: https://www.gesetze-im-internet.de/ustg_1980/__3c.html
+    title: § 3c UStG, Ort der Lieferung beim Fernverkauf
+    accessed: 2026-10-26
+  - &ustg18j
+    url: https://www.gesetze-im-internet.de/ustg_1980/__18j.html
+    title: § 18j UStG, Besonderes Besteuerungsverfahren für Fernverkäufe
+    accessed: 2026-10-26
+sections:
+  - id: eu
+    title: Verkäufe in andere EU-Länder
+    paragraphs:
+      - Verkaufen Sie Waren an Privatkunden in anderen EU-Ländern, gilt nach § 3c UStG grundsätzlich das Land als Ort der Lieferung, in dem die Ware ankommt. Dann fällt die Umsatzsteuer dieses Landes an. Ausgenommen sind kleine Händler mit Sitz in nur einem Mitgliedstaat, deren grenzüberschreitende Fernverkäufe und bestimmte Dienstleistungen zusammen im vorigen und im laufenden Jahr 10.000 € nicht übersteigen.
+      - Damit Sie sich nicht in jedem Land registrieren müssen, gibt es das besondere Verfahren nach § 18j UStG, den One-Stop-Shop. Die Meldung läuft in Deutschland über das Bundeszentralamt für Steuern. Eine Software für Händler sollte die Steuersätze der Zielländer kennen und die Umsätze je Land auswerten.
+    sources:
+      - *ustg3c
+      - *ustg18j
+  - id: alltag
+    title: Was Händler im Alltag brauchen
+    paragraphs:
+      - Je nach Größe reicht ein Rechnungsprogramm, das Shops anbindet, oder es braucht ein ERP mit Lager, Versand und Einkauf. Rechnungsprogramme rechnen oft nach Dokumenten ab, ERP-Systeme nach Nutzern oder Aufträgen. Rechnen Sie deshalb mit Ihrer tatsächlichen Zahl an Bestellungen und Personen.
+      - Prüfen Sie außerdem, wie Zahlungen von Marktplätzen und Zahlungsdiensten den Bestellungen zugeordnet werden und wie die Daten zur Steuerberatung kommen. Bei großen Bestellzahlen spart eine automatische Zuordnung viele Stunden im Monat.
+    points:
+      - Anbindung an Shop und Marktplätze
+      - Automatische Rechnungen und Gutschriften
+      - Zuordnung von Zahlungen aus PayPal, Kreditkarte und Marktplätzen
+      - Umsatzsteuer je EU-Land und OSS-Auswertung
+      - Lager und Versand, wenn Sie selbst versenden
+    sources:
+      - *ustg18j
+related:
+  guides:
+    - erp-kleine-unternehmen-kosten
+    - versteckte-kosten-buchhaltungssoftware
+  comparisons:
+    - weclapp-vs-xentral
+    - fastbill-vs-easybill
+status: published
+published: 2026-10-26
+updated: 2026-10-26
+author: dietmar-riedel

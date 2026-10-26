@@ -1,0 +1,71 @@
+slug: fastbill-vs-easybill
+title: "FastBill vs. easybill: Rechnungsprogramme im direkten Vergleich"
+description: FastBill und easybill im Vergleich, mit Preisen, Dokumentgrenzen, Archivkosten, E-Rechnung, ELSTER, DATEV und Onlinehandel.
+software:
+  - fastbill
+  - easybill
+centralQuestion: Welches Rechnungsprogramm passt zu Freiberuflern und Onlinehändlern, die vor allem Rechnungen schreiben und Belege für die Steuerberatung sammeln?
+intro: FastBill und easybill sind Rechnungsprogramme aus Deutschland, keine vollständigen Buchhaltungen. Beide erstellen E-Rechnungen und geben Daten an die Steuerberatung weiter. FastBill überträgt zusätzlich die Umsatzsteuer-Voranmeldung, easybill punktet mit einem kostenlosen Paket und Funktionen für Onlinehändler.
+sources:
+  - &fbpreise
+    url: https://www.fastbill.com/preise
+    title: FastBill Preise und Tarife
+    accessed: 2026-10-24
+  - &fbustva
+    url: https://support.fastbill.com/hc/de/articles/360012662874-Umsatzsteuer-Voranmeldung-USt-VA
+    title: FastBill Hilfe, Umsatzsteuer-Voranmeldung
+    accessed: 2026-10-25
+  - &ebpreise
+    url: https://www.easybill.de/preise/
+    title: easybill Preise, Archivierungskosten und FAQ
+    accessed: 2026-10-26
+  - &ebstart
+    url: https://www.easybill.de/
+    title: easybill Startseite
+    accessed: 2026-10-26
+sections:
+  - id: preise
+    title: Tarife, Grenzen und Zusatzkosten
+    paragraphs:
+      - FastBill Solo kostet 9 € im Monat bei jährlicher Abbuchung und enthält Angebote, Rechnungen, E-Rechnung, DATEV-Export und einen Steuerberaterzugang für einen Benutzer mit einem Bankkonto. Plus für 14 € bringt fünf Bankkonten und Fremdwährungen, Pro für 27 € drei Benutzer und wiederkehrende Rechnungen. Eine Begrenzung der Rechnungszahl nennt die Preisseite nicht.
+      - easybill hat ein kostenloses Paket mit 50 Dokumenten und drei Kontakten im Monat. Starter kostet 9 € im Monat bei jährlicher Zahlung für bis zu 250 Dokumente und 20 Kontakte, Professional 25 € mit unbegrenzten Kunden und wiederkehrenden Dokumenten. Dazu kommen laut Preisseite Kosten für die GoBD-konforme Archivierung von 2 € bis 15 € im Monat, auch im Paket Free.
+    points:
+      - "Einstieg mit Jahreszahlung: beide 9 € im Monat, bei easybill zuzüglich Archivkosten"
+      - "Wiederkehrende Rechnungen: FastBill ab 27 €, easybill ab 25 € im Monat"
+    sources:
+      - *fbpreise
+      - *ebpreise
+  - id: steuern
+    title: Umsatzsteuer und Steuerberatung
+    paragraphs:
+      - FastBill überträgt die Umsatzsteuer-Voranmeldung ohne gesondertes ELSTER-Zertifikat und ohne weitere Kosten, bei Soll-Versteuerung werden die Felder automatisch ausgefüllt. Für easybill nennen die geprüften Seiten keine Übertragung der Voranmeldung, sie bleibt bei der Steuerberatung oder einem Buchhaltungsprogramm.
+      - Beide geben Daten an die Kanzlei weiter. easybill bietet die DATEV-Anbindung und einen Steuerberater-Zugang schon im Paket Free, FastBill den DATEV-Export ab Solo und den DATEV Rechnungsdatenservice ab Pro.
+    sources:
+      - *fbpreise
+      - *fbustva
+      - *ebpreise
+  - id: einsatz
+    title: Freiberufler oder Onlinehandel
+    paragraphs:
+      - FastBill richtet sich an Freiberufler und Selbstständige, die Rechnungen schreiben und Belege für die Steuerberatung sammeln. Die Kleinunternehmerregelung lässt sich einstellen, automatischer Bankabgleich und automatische Belegerfassung gibt es erst im Tarif Premium.
+      - easybill bindet Onlineshops und Versanddienstleister an und rechnet nach Dokumenten ab. Das passt zu Händlern mit vielen Bestellungen, die Rechnungen automatisch erzeugen wollen. Achten Sie dabei auf die Dokumentgrenzen der Pakete.
+    sources:
+      - *fbpreise
+      - *ebstart
+      - *ebpreise
+choose:
+  - software: fastbill
+    reasons:
+      - Sie die Umsatzsteuer-Voranmeldung selbst aus dem Programm senden wollen.
+      - Sie viele Rechnungen schreiben und keine Dokumentgrenze im Blick behalten möchten.
+      - Sie ohne zusätzliche Archivkosten rechnen möchten.
+  - software: easybill
+    reasons:
+      - Sie kostenlos mit wenigen Dokumenten beginnen möchten.
+      - Sie einen Onlineshop oder Versanddienstleister anbinden wollen.
+      - Ihre Steuerberatung die Umsatzsteuer übernimmt.
+verdict: FastBill ist für Freiberufler die rundere Lösung, weil es die Umsatzsteuer-Voranmeldung überträgt und keine Dokumentgrenze nennt. easybill passt besser zu Onlinehändlern und zu allen, die kostenlos starten möchten, rechnet aber Dokumente und Archivierung zusätzlich ab.
+status: published
+published: 2026-10-26
+updated: 2026-10-26
+author: dietmar-riedel

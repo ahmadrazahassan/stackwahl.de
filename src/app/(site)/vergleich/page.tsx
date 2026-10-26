@@ -3,7 +3,8 @@ import { Suspense } from "react";
 import { PageHeader } from "@/components/page/page-header";
 import { ComparisonTool } from "@/components/tools/comparison-tool";
 import { Container, Panel } from "@/components/ui/layout";
-import { finderProducts } from "@/lib/content";
+import { EditorialLinks } from "@/components/page/editorial-links";
+import { finderProducts, getComparisons, getUseCases } from "@/lib/content";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
@@ -28,6 +29,19 @@ export default function ComparisonPage() {
           <Suspense fallback={<p className="text-small text-muted">Vergleich wird geladen …</p>}>
             <ComparisonTool products={finderProducts()} />
           </Suspense>
+          <div className="mt-16 grid gap-10 lg:grid-cols-2">
+            <EditorialLinks
+              title="Ausführliche Vergleiche"
+              links={getComparisons().map((c) => ({
+                href: routes.comparison(c.slug),
+                label: c.title,
+              }))}
+            />
+            <EditorialLinks
+              title="Software für Ihren Betrieb"
+              links={getUseCases().map((u) => ({ href: routes.useCase(u.slug), label: u.title }))}
+            />
+          </div>
         </Container>
       </Panel>
     </main>

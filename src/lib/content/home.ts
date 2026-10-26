@@ -209,14 +209,6 @@ export function factLists(): FactList[] {
   ].filter((list) => list.items.length > 0);
 }
 
-/** Latest research date across all profiles, for the "Stand" line. */
-export function latestReview(): string | null {
-  const dates = getAllSoftware()
-    .map((s) => s.lastReviewed)
-    .sort();
-  return dates.at(-1) ?? null;
-}
-
 const COMPARE_COMPLIANCE = [
   "eRechnungVersand",
   "eRechnungEmpfang",

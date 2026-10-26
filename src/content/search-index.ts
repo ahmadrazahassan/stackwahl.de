@@ -46,5 +46,23 @@ export function buildSearchIndex(content: ContentSet, showDrafts: boolean): Sear
       hint: g.topic,
     }));
 
-  return [...softwareEntries, ...categories, ...guides];
+  // Comparisons and use-case pages are editorial reading, so they join the Ratgeber group.
+  const comparisons = content.comparisons
+    .filter((c) => isVisible(c, showDrafts))
+    .map((c): SearchIndexEntry => ({
+      group: "Ratgeber",
+      label: c.title,
+      href: routes.comparison(c.slug),
+      hint: "Vergleich",
+    }));
+  const useCases = content.useCases
+    .filter((u) => isVisible(u, showDrafts))
+    .map((u): SearchIndexEntry => ({
+      group: "Ratgeber",
+      label: u.title,
+      href: routes.useCase(u.slug),
+      hint: `Software für ${u.label}`,
+    }));
+
+  return [...softwareEntries, ...categories, ...guides, ...comparisons, ...useCases];
 }

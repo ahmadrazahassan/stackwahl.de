@@ -35,7 +35,10 @@ export function SiteFooter({
               </ButtonLink>
             ) : null}
           </div>
-          <nav aria-label="Fußzeile" className="grid gap-10 sm:grid-cols-3 lg:col-span-7">
+          <nav
+            aria-label="Fußzeile"
+            className="grid gap-10 sm:grid-cols-2 lg:col-span-7 xl:grid-cols-4"
+          >
             {columns.map((column) => (
               <div key={column.title}>
                 <h2 className="eyebrow">{column.title}</h2>

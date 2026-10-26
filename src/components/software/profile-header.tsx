@@ -4,7 +4,7 @@ import { routes } from "@/lib/routes";
 import { VendorButton } from "@/components/ui/button";
 import { DisclosureLabel } from "@/components/ui/labels";
 import { cn } from "@/lib/cn";
-import { formatDate, formatPriceFrom } from "@/lib/format";
+import { formatPriceFrom } from "@/lib/format";
 import { ResearchScoreDisplay } from "./research-score";
 import { ScoreDisplay } from "./score";
 import { SoftwareLogo } from "./software-card";
@@ -113,7 +113,6 @@ export function ProfileHeader({
                   ? formatPriceFrom(software.priceFromCents, { net: software.priceNet })
                   : null}
               </span>
-              <span className="text-muted"> · Stand {formatDate(software.priceCheckedAt)}</span>
             </p>
           ) : null}
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">

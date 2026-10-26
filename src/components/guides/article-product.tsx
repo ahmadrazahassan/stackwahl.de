@@ -4,7 +4,7 @@ import { ButtonLink, VendorButton } from "@/components/ui/button";
 import { DisclosureLabel } from "@/components/ui/labels";
 import type { ArticleProduct } from "@/lib/content/guides";
 import { cn } from "@/lib/cn";
-import { formatDate, formatPriceFrom } from "@/lib/format";
+import { formatPriceFrom } from "@/lib/format";
 import { routes } from "@/lib/routes";
 
 /**
@@ -49,7 +49,6 @@ export function ArticleProductCard({
             {formatPriceFrom(summary.priceFromCents, { net: summary.priceNet })}
           </span>
         ) : null}
-        <span className="block text-muted">Preisstand {formatDate(summary.priceCheckedAt)}</span>
       </p>
       <div className="mt-auto grid gap-3 sm:grid-cols-2">
         <VendorButton

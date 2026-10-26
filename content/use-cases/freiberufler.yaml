@@ -1,0 +1,62 @@
+slug: freiberufler
+title: "Software für Freiberufler: Rechnungen, EÜR und Umsatzsteuer"
+description: Welche Programme sich an Freiberufler richten, warum die EÜR reicht und worauf es bei Rechnungen, E-Rechnung und Umsatzsteuer ankommt.
+label: Freiberufler
+centralQuestion: Welche Software brauchen Freiberufler, die Rechnungen schreiben und ihren Gewinn mit der EÜR ermitteln?
+intro: Freiberufler wie Designer, Berater, Übersetzer, Journalisten oder Ärzte haben es bei der Buchhaltung oft einfacher als Gewerbetreibende. Sie müssen keine Bücher führen und ermitteln ihren Gewinn mit der Einnahmen-Überschuss-Rechnung. Wichtig sind deshalb vor allem gute Rechnungen, die EÜR und, falls Sie umsatzsteuerpflichtig sind, die Voranmeldung. Hier stehen die Programme, die sich laut Anbieter an Freiberufler richten.
+rule:
+  explanation: Ausgewählt sind alle Programme, deren Anbieter Freiberufler als Zielgruppe nennt.
+  targetGroups:
+    - freiberufler
+highlights:
+  - euer
+  - kleinunternehmer
+  - elster
+  - eRechnungVersand
+  - projektzeiten
+sources:
+  - &estg18
+    url: https://www.gesetze-im-internet.de/estg/__18.html
+    title: § 18 EStG, Selbständige Arbeit
+    accessed: 2026-10-26
+  - &estg4
+    url: https://www.gesetze-im-internet.de/estg/__4.html
+    title: § 4 EStG, Gewinnbegriff im Allgemeinen
+    accessed: 2026-10-26
+  - &ustg14
+    url: https://www.gesetze-im-internet.de/ustg_1980/__14.html
+    title: § 14 UStG, Ausstellung von Rechnungen
+    accessed: 2026-10-26
+sections:
+  - id: euer
+    title: EÜR statt Bilanz
+    paragraphs:
+      - Als freiberuflich gilt nach § 18 EStG unter anderem eine selbständig ausgeübte wissenschaftliche, künstlerische, schriftstellerische, unterrichtende oder erzieherische Tätigkeit sowie Berufe wie Ärzte, Rechtsanwälte, Architekten, Ingenieure, Journalisten und Übersetzer. Freiberufler sind keine Kaufleute und müssen deshalb keine Bücher führen.
+      - Wer nicht zur Buchführung verpflichtet ist, darf seinen Gewinn nach § 4 Abs. 3 EStG als Überschuss der Betriebseinnahmen über die Betriebsausgaben ermitteln. Eine Software für Freiberufler braucht deshalb keine Bilanz, aber eine saubere EÜR, die Sie oder Ihre Steuerberatung für die Steuererklärung nutzen.
+    sources:
+      - *estg18
+      - *estg4
+  - id: rechnungen
+    title: Rechnungen und E-Rechnung
+    paragraphs:
+      - Für Rechnungen an andere Unternehmen gilt in Deutschland die E-Rechnung. Empfangen müssen Sie E-Rechnungen schon heute, das Ausstellen wird nach Übergangsfristen Pflicht. Achten Sie darauf, dass das Programm XRechnung oder ZUGFeRD erstellt und eingehende E-Rechnungen lesen kann. Mehr dazu steht in unserem Ratgeber zur E-Rechnungspflicht.
+      - Arbeiten Sie nach Stunden, hilft eine Zeiterfassung, aus der sich Rechnungen erstellen lassen. Nutzen Sie die Kleinunternehmerregelung, muss das Programm Rechnungen ohne Umsatzsteuer mit dem passenden Hinweis erstellen.
+    points:
+      - Rechnungen und Angebote, auch als E-Rechnung
+      - Einnahmen-Überschuss-Rechnung
+      - Kleinunternehmerregelung, falls Sie sie nutzen
+      - Zeiterfassung, wenn Sie nach Stunden abrechnen
+    sources:
+      - *ustg14
+related:
+  guides:
+    - buchhaltungssoftware-kleinunternehmer
+    - e-rechnungspflicht-software
+    - kostenlose-buchhaltungssoftware
+  comparisons:
+    - sevdesk-vs-papierkram
+    - fastbill-vs-easybill
+status: published
+published: 2026-10-26
+updated: 2026-10-26
+author: dietmar-riedel

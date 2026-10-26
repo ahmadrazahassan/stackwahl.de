@@ -105,10 +105,13 @@ export function HomeCompare({
   products,
   presets,
   initial,
+  picker = true,
 }: {
   products: CompareProduct[];
   presets: ComparePreset[];
   initial: string[];
+  /** false on editorial comparison pages, where the programs are fixed. */
+  picker?: boolean;
 }) {
   const [slugs, setSlugs] = useState<string[]>(initial);
   const [onlyDifferences, setOnlyDifferences] = useState(false);
@@ -218,57 +221,59 @@ export function HomeCompare({
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex flex-col gap-6 rounded-card bg-bg p-5 sm:p-6">
-        <div>
-          <p className="text-small font-medium">Schnellauswahl</p>
-          <ul className="mt-3 flex flex-wrap gap-2">
-            {presets.map((preset) => {
-              const active = preset.slugs.join() === slugs.join();
-              return (
-                <li key={preset.label}>
-                  <button
-                    type="button"
-                    aria-pressed={active}
-                    onClick={() => setSlugs(preset.slugs)}
-                    className={cn(
-                      "inline-flex min-h-11 items-center rounded-pill border px-4 text-small font-medium transition-colors",
-                      active
-                        ? "border-primary bg-primary text-surface"
-                        : "border-line bg-surface hover:border-ink",
-                    )}
-                  >
-                    {preset.label}
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
+      {picker ? (
+        <div className="flex flex-col gap-6 rounded-card bg-bg p-5 sm:p-6">
+          <div>
+            <p className="text-small font-medium">Schnellauswahl</p>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {presets.map((preset) => {
+                const active = preset.slugs.join() === slugs.join();
+                return (
+                  <li key={preset.label}>
+                    <button
+                      type="button"
+                      aria-pressed={active}
+                      onClick={() => setSlugs(preset.slugs)}
+                      className={cn(
+                        "inline-flex min-h-11 items-center rounded-pill border px-4 text-small font-medium transition-colors",
+                        active
+                          ? "border-primary bg-primary text-surface"
+                          : "border-line bg-surface hover:border-ink",
+                      )}
+                    >
+                      {preset.label}
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <fieldset className="grid gap-4 sm:grid-cols-3">
+            <legend className="sr-only">Programme für den Vergleich wählen</legend>
+            {[0, 1, 2].map((index) => (
+              <label key={index} className="flex flex-col gap-2 text-small font-medium">
+                {index === 2 ? "Programm 3 (optional)" : `Programm ${index + 1}`}
+                <Select
+                  value={slugs[index] ?? ""}
+                  onChange={(e) => setSlot(index, e.target.value)}
+                  disabled={index === 2 && slugs.length < 2}
+                >
+                  {index >= 1 ? <option value="">Kein Programm</option> : null}
+                  {products.map((p) => (
+                    <option
+                      key={p.slug}
+                      value={p.slug}
+                      disabled={slugs.includes(p.slug) && slugs[index] !== p.slug}
+                    >
+                      {p.name}
+                    </option>
+                  ))}
+                </Select>
+              </label>
+            ))}
+          </fieldset>
         </div>
-        <fieldset className="grid gap-4 sm:grid-cols-3">
-          <legend className="sr-only">Programme für den Vergleich wählen</legend>
-          {[0, 1, 2].map((index) => (
-            <label key={index} className="flex flex-col gap-2 text-small font-medium">
-              {index === 2 ? "Programm 3 (optional)" : `Programm ${index + 1}`}
-              <Select
-                value={slugs[index] ?? ""}
-                onChange={(e) => setSlot(index, e.target.value)}
-                disabled={index === 2 && slugs.length < 2}
-              >
-                {index >= 1 ? <option value="">Kein Programm</option> : null}
-                {products.map((p) => (
-                  <option
-                    key={p.slug}
-                    value={p.slug}
-                    disabled={slugs.includes(p.slug) && slugs[index] !== p.slug}
-                  >
-                    {p.name}
-                  </option>
-                ))}
-              </Select>
-            </label>
-          ))}
-        </fieldset>
-      </div>
+      ) : null}
 
       {chosen.length < 2 ? (
         <p className="text-small text-muted" aria-live="polite">

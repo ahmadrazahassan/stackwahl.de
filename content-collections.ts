@@ -4,6 +4,7 @@ import {
   authorSchema,
   categorySchema,
   comparisonSchema,
+  useCaseSchema,
   glossaryTermSchema,
   guideSchema,
   softwareSchema,
@@ -67,6 +68,15 @@ const comparisons = defineCollection({
   transform: slugMatchesFile,
 });
 
+const useCases = defineCollection({
+  name: "useCases",
+  directory: "content/use-cases",
+  include: "*.yaml",
+  parser: "yaml",
+  schema: useCaseSchema,
+  transform: slugMatchesFile,
+});
+
 const affiliateLinks = defineCollection({
   name: "affiliateLinks",
   directory: "content/affiliate",
@@ -94,5 +104,15 @@ const glossary = defineCollection({
 });
 
 export default defineConfig({
-  content: [vendors, categories, software, authors, comparisons, affiliateLinks, guides, glossary],
+  content: [
+    vendors,
+    categories,
+    software,
+    authors,
+    comparisons,
+    useCases,
+    affiliateLinks,
+    guides,
+    glossary,
+  ],
 });

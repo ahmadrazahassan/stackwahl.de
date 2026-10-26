@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import {
   getAllSoftware,
   getAuthors,
+  getComparisons,
+  getUseCases,
   getGlossary,
   getGuides,
   getLiveCategories,
@@ -40,6 +42,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...guides.map((g) => entry(routes.guide(g.slug), g.updated)),
     ...(glossary.length > 0 ? [entry(routes.glossary())] : []),
     ...glossary.map((t) => entry(routes.glossaryTerm(t.slug), t.lastReviewed)),
+    ...getComparisons().map((c) => entry(routes.comparison(c.slug), c.updated)),
+    ...(getUseCases().length > 0 ? [entry(routes.useCases())] : []),
+    ...getUseCases().map((u) => entry(routes.useCase(u.slug), u.updated)),
     ...(siteConfig.features.finder ? [entry(routes.finder())] : []),
     ...(siteConfig.features.comparisonTool ? [entry(routes.comparisonTool())] : []),
     ...(siteConfig.features.costCalculator ? [entry(routes.costCalculator())] : []),

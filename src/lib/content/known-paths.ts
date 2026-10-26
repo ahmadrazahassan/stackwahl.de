@@ -1,5 +1,13 @@
 import "server-only";
-import { getAllSoftware, getAuthors, getGlossary, getGuides, getLiveCategories } from "./index";
+import {
+  getAllSoftware,
+  getAuthors,
+  getComparisons,
+  getGlossary,
+  getGuides,
+  getLiveCategories,
+  getUseCases,
+} from "./index";
 
 // Visible slugs per dynamic route, for the request-time 404 check in src/proxy.ts. Computed once
 // per server start from the generated content, so the check stays fast.
@@ -9,6 +17,8 @@ export const knownSlugs = {
   glossar: new Set(getGlossary().map((t) => t.slug)),
   ratgeber: new Set(getGuides().map((g) => g.slug)),
   redaktion: new Set(getAuthors().map((a) => a.slug)),
+  vergleich: new Set(getComparisons().map((c) => c.slug)),
+  "software-fuer": new Set(getUseCases().map((u) => u.slug)),
 };
 
 const SOFTWARE_SUBPAGES = new Set(["preise", "alternativen"]);
@@ -33,5 +43,9 @@ export function isUnknownContentPath(pathname: string): boolean {
     return (subpage !== undefined && !isOgImage(subpage)) || !knownSlugs.ratgeber.has(slug);
   if (section === "redaktion" && slug)
     return subpage !== undefined || !knownSlugs.redaktion.has(slug);
+  if (section === "vergleich" && slug)
+    return subpage !== undefined || !knownSlugs.vergleich.has(slug);
+  if (section === "software-fuer" && slug)
+    return subpage !== undefined || !knownSlugs["software-fuer"].has(slug);
   return false;
 }

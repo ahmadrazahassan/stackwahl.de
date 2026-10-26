@@ -1,0 +1,76 @@
+slug: lexware-office-vs-wiso-meinbuero
+title: "Lexware Office vs. WISO MeinBüro: Preise, Laufzeit und Umsatzgrenzen"
+description: Lexware Office und WISO MeinBüro im Vergleich, mit Jahreskosten, Monats- oder Jahresabo, Umsatzgrenzen, Lohn, DATEV und Datenschutz.
+software:
+  - lexware-office
+  - wiso-meinbuero
+centralQuestion: Welches der beiden bekannten Programme aus Deutschland passt zu meinem Umsatz, meinem Team und meiner Steuerberatung?
+intro: Lexware Office und WISO MeinBüro kommen beide von großen deutschen Softwarehäusern, Lexware aus Freiburg, WISO MeinBüro von Buhl aus Neunkirchen. Beide decken Rechnungen, E-Rechnung, Buchhaltung und Umsatzsteuer ab. Sie unterscheiden sich vor allem darin, wie Sie bezahlen, wie viel Umsatz die kleinen Pläne erlauben und was es zusätzlich gibt.
+sources:
+  - &lexpreise
+    url: https://www.lexware.de/preise/
+    title: Lexware Office Preise und Versionen
+    accessed: 2026-10-24
+  - &lexfakten
+    url: https://www.lexware.de/facts/lexware-office/
+    title: Lexware Office Kernfakten
+    accessed: 2026-10-24
+  - &lexsicher
+    url: https://www.lexware.de/datenschutz-datensicherheit/
+    title: Datenschutz und Datensicherheit mit Lexware Office
+    accessed: 2026-10-24
+  - &mbpreise
+    url: https://www.meinbuero.de/preise/
+    title: WISO MeinBüro Preise
+    accessed: 2026-10-24
+  - &mbsicher
+    url: https://www.meinbuero.de/datensicherheit/
+    title: WISO MeinBüro Datensicherheit
+    accessed: 2026-10-24
+sections:
+  - id: preise
+    title: Monatlich kündbar oder Jahresabo
+    paragraphs:
+      - Lexware Office gibt es in vier Versionen, alle monatlich kündbar. S für 7,90 € deckt Belege ab, M für 12,90 € Angebote, E-Rechnungen und Mahnungen, L für 21,90 € die Buchhaltung mit EÜR und Umsatzsteuer, XL für 32,90 € besondere Rechnungstypen und eine Programmierschnittstelle. WISO MeinBüro gibt es nur im Jahresabo, jährlich im Voraus bezahlt.
+      - Der kleinste Plan von WISO MeinBüro kostet 130,80 € im Jahr und enthält schon E-Rechnungen, EÜR und die Umsatzsteuer-Voranmeldung, ist aber auf 25.000 € Umsatz in 365 Tagen begrenzt. Der Plan Buchhaltung kostet 238,80 € im Jahr bis 120.000 € Umsatz. Lexware Office L kostet ohne Umsatzgrenze 262,80 € netto im Jahr.
+    points:
+      - "Bis 25.000 € Umsatz: WISO MeinBüro 130,80 €, Lexware Office L 262,80 € netto im Jahr"
+      - "Bis 120.000 € Umsatz: WISO MeinBüro 238,80 €, Lexware Office L 262,80 € netto im Jahr"
+    sources:
+      - *lexpreise
+      - *mbpreise
+  - id: funktionen
+    title: Lohn, Team und Steuerberatung
+    paragraphs:
+      - Lexware Office bietet eine Lohnabrechnung, die sich zu jeder Version hinzubuchen lässt, ab 12,90 € im Monat. Für WISO MeinBüro nennt die Preisseite keine Lohnabrechnung, dafür größere Pläne mit Auftragswesen und Warenwirtschaft. Der Plan Auftragswesen enthält zwei Nutzer, Warenwirtschaft fünf, jeder weitere Nutzer kostet 6 € im Monat. Lexware nennt die Zahl der enthaltenen Benutzer auf der Preisseite nicht.
+      - Für die Steuerberatung arbeitet Lexware Office über DATEV mit der elektronischen Pendelakte, die Kanzlei übernimmt Daten und Belege. WISO MeinBüro exportiert für DATEV, Simba, Agenda, ADDISON und Stotax und eignet sich damit auch für Kanzleien ohne DATEV.
+    sources:
+      - *lexpreise
+      - *lexfakten
+      - *mbpreise
+  - id: daten
+    title: Datenschutz und Testphase
+    paragraphs:
+      - Lexware Office speichert laut Anbieter in mehreren nach DIN ISO 27001 geprüften Rechenzentren in Frankfurt am Main, das Belegarchiv wird regelmäßig von einer Wirtschaftsprüfungsgesellschaft geprüft. WISO MeinBüro nutzt eigene Rechenzentren in Deutschland mit einer Zertifizierung nach VdS 10000.
+      - Lexware Office lässt sich 30 Tage mit allen Funktionen der Version XL und der Lohnabrechnung testen, WISO MeinBüro 14 Tage.
+    sources:
+      - *lexsicher
+      - *mbsicher
+      - *lexpreise
+      - *mbpreise
+choose:
+  - software: lexware-office
+    reasons:
+      - Sie monatlich kündbar bleiben möchten.
+      - Sie Mitarbeitende haben und die Lohnabrechnung im selben Programm wollen.
+      - Ihr Umsatz über den Grenzen der kleinen MeinBüro-Pläne liegt.
+  - software: wiso-meinbuero
+    reasons:
+      - Ihr Umsatz unter 25.000 € oder 120.000 € im Jahr bleibt und Sie den günstigeren Jahrespreis nutzen wollen.
+      - Ihre Steuerberatung nicht mit DATEV, sondern mit Simba, Agenda, ADDISON oder Stotax arbeitet.
+      - Sie später Auftragswesen oder Lager im selben Programm brauchen.
+verdict: WISO MeinBüro ist für kleine Umsätze deutlich günstiger und bietet viele Exportformate für die Steuerberatung, bindet Sie aber an ein Jahresabo und an Umsatzgrenzen. Lexware Office kostet mehr, bleibt monatlich kündbar und bietet eine Lohnabrechnung. Wer Mitarbeitende beschäftigt, landet eher bei Lexware Office, wer allein und mit überschaubarem Umsatz arbeitet, eher bei WISO MeinBüro.
+status: published
+published: 2026-10-26
+updated: 2026-10-26
+author: dietmar-riedel

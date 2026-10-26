@@ -1,0 +1,77 @@
+slug: sage-active-vs-lexware-office
+title: "Sage Active vs. Lexware Office: Buchhaltung, Lohn und Bilanz im Vergleich"
+description: Sage Active und Lexware Office im Vergleich, mit Preisen für Buchhaltung und Lohn, Nutzern, Bilanz, E-Rechnung, ELSTER und DATEV.
+software:
+  - sage-active
+  - lexware-office
+centralQuestion: Welche Cloud-Lösung passt zu einem kleinen Unternehmen mit Angestellten, das Buchhaltung und Lohnabrechnung zusammen erledigen will?
+intro: Sage Active und Lexware Office sind die Cloud-Lösungen von zwei großen Anbietern für Unternehmenssoftware in Deutschland. Beide verbinden Rechnungen, Buchhaltung und Lohnabrechnung. Sie rechnen aber sehr unterschiedlich ab, Sage Active mit zwei Paketen und vielen enthaltenen Nutzern, Lexware Office mit vier Versionen und einer Lohnabrechnung als Zusatz.
+sources:
+  - &sage
+    url: https://www.sage.com/de-de/produkte/sage-active/
+    title: Sage Active Produktseite, Pakete und FAQ
+    accessed: 2026-10-26
+  - &sageess
+    url: https://www.sage.com/de-de/produkte/sage-active/essentials/
+    title: Sage Active Essentials
+    accessed: 2026-10-25
+  - &lexpreise
+    url: https://www.lexware.de/preise/
+    title: Lexware Office Preise und Versionen
+    accessed: 2026-10-24
+  - &lexfakten
+    url: https://www.lexware.de/facts/lexware-office/
+    title: Lexware Office Kernfakten
+    accessed: 2026-10-24
+  - &lexsicher
+    url: https://www.lexware.de/datenschutz-datensicherheit/
+    title: Datenschutz und Datensicherheit mit Lexware Office
+    accessed: 2026-10-24
+sections:
+  - id: preise
+    title: Pakete, Nutzer und Kosten
+    paragraphs:
+      - Sage Active Starter kostet 25 € im Monat und enthält fünf Nutzer, 300 Rechnungen im Monat, Angebote, Rechnungen, eine KI für Belege und den Bankkontenabgleich. Essentials kostet 49 € im Monat mit zehn Nutzern, 500 Rechnungen, doppelter Buchführung mit GuV, Bilanz und EÜR, Umsatzsteuer-Voranmeldung per ELSTER und Lohnabrechnung für zwei Mitarbeitende. Jede weitere Person in Lohn und HR kostet 3 € im Monat.
+      - Lexware Office kostet für die Buchhaltung mit EÜR und Umsatzsteuer in Version L 21,90 € im Monat, die Lohnabrechnung kommt ab 12,90 € im Monat hinzu, zusammen also ab 34,80 €. Beide Anbieter sind monatlich kündbar. Ein Betrieb mit zwei Angestellten zahlt bei Sage Active Essentials 588 € und bei Lexware Office L mit Lohn ab 417,60 € netto im Jahr.
+    points:
+      - "Buchhaltung mit Lohn für zwei Angestellte: Sage Active 588 €, Lexware Office ab 417,60 € netto im Jahr"
+      - "Sage Active enthält fünf beziehungsweise zehn Nutzer, Lexware Office nennt keine Nutzerzahl"
+    sources:
+      - *sage
+      - *sageess
+      - *lexpreise
+  - id: buchhaltung
+    title: Bilanz, E-Rechnung und Steuerberatung
+    paragraphs:
+      - Für eine GmbH oder UG ist die doppelte Buchführung mit Bilanz wichtig. Sage Active nennt GuV und Bilanz ausdrücklich im Paket Essentials. Die Preisseite von Lexware Office nennt für Version L EÜR und Umsatzsteuer, eine Bilanz nennt sie nicht. Bilanzierende Unternehmen sollten das in der Testphase prüfen.
+      - Bei der E-Rechnung liegt Lexware Office vorn. Es erstellt und versendet XRechnung und ZUGFeRD. Sage Active liest eingehende E-Rechnungen ein, den Versand nennt der Anbieter erst als „in Kürze“ verfügbar. Für die Steuerberatung exportiert Sage Active im DATEV-Format, Lexware Office übergibt Daten und Belege per DATEV-Pendelakte an die Kanzlei.
+    sources:
+      - *sageess
+      - *sage
+      - *lexpreise
+      - *lexfakten
+  - id: daten
+    title: Datenschutz und Testphase
+    paragraphs:
+      - Lexware Office speichert laut Anbieter in nach DIN ISO 27001 geprüften Rechenzentren in Frankfurt am Main und stellt einen Vertrag zur Auftragsverarbeitung zum Download bereit. Für Sage Active nennen die geprüften Seiten weder Serverstandort noch Auftragsverarbeitung. Fragen Sie das vor dem Abschluss bei Sage nach.
+      - Lexware Office lässt sich 30 Tage mit allen Funktionen und der Lohnabrechnung testen, Sage Active 14 Tage. Beide Anbieter warben am Prüfdatum mit 50 % Rabatt für die ersten drei Monate.
+    sources:
+      - *lexsicher
+      - *sage
+      - *lexpreise
+choose:
+  - software: sage-active
+    reasons:
+      - Mehrere Personen im Programm arbeiten, denn fünf oder zehn Nutzer sind enthalten.
+      - Sie als GmbH oder UG eine Bilanz brauchen und diese ausdrücklich im Paket sehen wollen.
+      - Sie Lohn und HR mit Self-Service für Mitarbeitende in einer Lösung möchten.
+  - software: lexware-office
+    reasons:
+      - Sie E-Rechnungen schon heute aus dem Programm versenden müssen.
+      - Sie mit einer günstigeren Version beginnen und Lohn erst später dazubuchen.
+      - Ihnen dokumentierte Angaben zu Rechenzentren und Auftragsverarbeitung wichtig sind.
+verdict: Sage Active ist für Teams und bilanzierende Kapitalgesellschaften attraktiv, weil viele Nutzer und die Bilanz im Paket stecken. Lexware Office ist für kleine Betriebe mit wenigen Angestellten günstiger und versendet E-Rechnungen schon heute. Klären Sie bei Sage Active vor dem Abschluss Serverstandort und Auftragsverarbeitung, bei Lexware Office die Bilanzfunktion.
+status: published
+published: 2026-10-26
+updated: 2026-10-26
+author: dietmar-riedel
