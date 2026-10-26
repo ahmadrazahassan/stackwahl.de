@@ -69,7 +69,7 @@ export const publisher = {
   "@id": `${brand.url}/#organization`,
   name: brand.name,
   url: brand.url,
-  logo: absoluteUrl("/icon.svg"),
+  logo: absoluteUrl("/brand/stackwahl-mark.svg"),
 } as const;
 
 export function organizationLd() {

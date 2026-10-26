@@ -1,7 +1,9 @@
 import { cn } from "@/lib/cn";
 
 // Three wordmark options for the owner to choose from (Section 13.10). Flat, no gradient,
-// no container. Option B carries the mark: three stacked bars, one in primary (the choice).
+// no container. Option B carries the mark "Stapel-S": three stacked bars shifted into an S.
+// The full-width middle bar is set in primary (the choice, "Wahl"). The offsets keep it from
+// reading as a menu icon, and the 32-unit grid keeps every edge on whole pixels at 16 and 32 px.
 
 export type WordmarkOption = "a" | "b" | "c";
 
@@ -10,14 +12,14 @@ export function StackMark({ className, size }: { className?: string; size?: numb
     <svg
       width={size}
       height={size}
-      viewBox="0 0 28 28"
+      viewBox="0 0 32 32"
       aria-hidden="true"
       focusable="false"
       className={className}
     >
-      <rect x="2" y="4" width="24" height="5" rx="1.5" fill="currentColor" />
-      <rect x="2" y="11.5" width="24" height="5" rx="1.5" fill="var(--color-primary)" />
-      <rect x="2" y="19" width="24" height="5" rx="1.5" fill="currentColor" />
+      <rect x="2" y="3" width="19" height="7.5" rx="2" fill="currentColor" />
+      <rect x="2" y="12.25" width="28" height="7.5" rx="2" fill="var(--color-primary)" />
+      <rect x="11" y="21.5" width="19" height="7.5" rx="2" fill="currentColor" />
     </svg>
   );
 }

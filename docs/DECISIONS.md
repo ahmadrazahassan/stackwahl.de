@@ -244,3 +244,10 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 
 - **Addresses from the owner.** kontakt@stackwahl.de is the legal address (Impressum, Datenschutz, structured data). redaktion@stackwahl.de takes corrections and press, partner@stackwahl.de vendors and affiliate networks. Kontakt lists all three; Methodik, Redaktion and Transparenz name the matching one. All are `mailto:` links.
 - **Footer links blocked by the wordmark.** The giant "Stackwahl" wordmark uses `leading-[0.78]`, so its glyph box reached over the legal links and took the clicks on desktop. The decorative block is now `pointer-events-none`, and the link row sits above it (`relative z-10`). An E2E test clicks the footer links.
+
+## 26.10.2026: New mark "Stapel-S"
+
+- **Why.** The old mark (three equal bars, middle in primary) read as a menu icon, right next to the real menu button in the header.
+- **The mark.** Three stacked bars on a 32-unit grid: top bar left-aligned, full-width middle bar in primary, bottom bar right-aligned. Together they read as an S for Stackwahl and as a stack of layers; the primary bar is the choice ("Wahl"). Flat, no gradient, no container. Every edge sits on whole pixels at 16 and 32 px.
+- **Where.** `StackMark` in `src/components/brand/wordmark.tsx` (header, mobile menu, footer wordmark, styleguide option B), `src/app/icon.svg` (switches the ink bars to white in dark mode), `src/app/favicon.ico` (16, 32, 48 px for older browsers), `src/app/apple-icon.tsx` (180 px on the page background), the social cards, and the Organization logo in structured data.
+- **Files for other uses.** `public/brand/stackwahl-mark.svg` (ink), `stackwahl-mark-white.svg` (for dark backgrounds), `stackwahl-mark-mono.svg` (one color, e.g. stamps or fax). The wordmark text stays live text in Google Sans Flex; an outlined lockup needs a design tool that can read the font.

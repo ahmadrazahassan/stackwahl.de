@@ -26,10 +26,19 @@ export function OgCard({
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-        <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-          <div style={{ width: 44, height: 9, borderRadius: 3, backgroundColor: "#191919" }} />
-          <div style={{ width: 44, height: 9, borderRadius: 3, backgroundColor: "#2f2fc1" }} />
-          <div style={{ width: 44, height: 9, borderRadius: 3, backgroundColor: "#191919" }} />
+        {/* The "Stapel-S" mark, same proportions as src/app/icon.svg. */}
+        <div style={{ display: "flex", flexDirection: "column", width: 48, gap: 3.5 }}>
+          <div style={{ width: 33, height: 13, borderRadius: 3.5, backgroundColor: "#191919" }} />
+          <div style={{ width: 48, height: 13, borderRadius: 3.5, backgroundColor: "#2f2fc1" }} />
+          <div
+            style={{
+              width: 33,
+              height: 13,
+              borderRadius: 3.5,
+              backgroundColor: "#191919",
+              alignSelf: "flex-end",
+            }}
+          />
         </div>
         <div style={{ fontSize: 40, fontWeight: 600, letterSpacing: -1.5 }}>Stackwahl</div>
       </div>
