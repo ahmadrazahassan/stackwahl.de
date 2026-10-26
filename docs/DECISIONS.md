@@ -233,3 +233,9 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 - **Consistent score copy.** Home page, Über uns and the category notes no longer say that there is no score without a test. Category pages score every program against that category's requirements (`researchScore(software, category)`); the score breakdown shows the vendor's note for each fact.
 - **SEO.** `features.indexing` is on. robots.txt allows everything except redirects, internal pages, search, Finder results, the newsletter confirmation and the 404 page, and names the sitemap. Every page has canonical, Open Graph and Twitter data; profiles and guides get their own social image. JSON-LD describes only what the page shows: no `aggregateRating` or `Review`, because the Recherche-Wertung is not a user or test rating. A favicon and Apple touch icon were added.
 - **Internal styleguide** returns 404 in production; it keeps its fictitious demo data for development and preview.
+
+## 26.10.2026: Comparison on the home page
+
+- **Direktvergleich section.** Two or three programs side by side: entry price (net, minimum seats included), free plan, trial, Recherche-Wertung, six compliance facts and ten features, with "Website besuchen" and "Profil lesen" per program and links to /vergleich and the cost calculator. Presets cover the pairings people search for (sevdesk vs. Lexware Office, the Sage products, free start, invoicing, ERP).
+- **Highlights only from data.** "Günstigster Einstieg", "Längste Testphase" and "Höchste Recherche-Wertung" are computed from the stored values. When per-user and flat prices meet, the summary says that it compares one user; programs without a stated price or trial are named as such, never counted as cheapest or longest.
+- **Two layouts.** From md a table with equal columns; below md each row is a label with the values side by side, so phones need no sideways scrolling.

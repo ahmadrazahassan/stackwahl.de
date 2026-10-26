@@ -1,6 +1,7 @@
 import { ArticleGrid } from "@/components/guides/article-card";
 import { FactBoard } from "@/components/home/fact-board";
 import { FeaturedSoftware } from "@/components/home/featured-software";
+import { HomeCompare } from "@/components/home/home-compare";
 import { OverviewList } from "@/components/home/overview-list";
 import { SituationLinks } from "@/components/home/situation-links";
 import { SoftwareShowcase } from "@/components/home/software-showcase";
@@ -15,6 +16,8 @@ import { Container, Panel, SplitGrid } from "@/components/ui/layout";
 import { Eyebrow, Headline, Lead } from "@/components/ui/typography";
 import { getAllSoftware, getLiveCategories } from "@/lib/content";
 import {
+  comparePresets,
+  compareProducts,
   factLists,
   featuredSoftware,
   homeLogos,
@@ -59,6 +62,8 @@ export default function HomePage() {
   const stand = latestReview();
   const articles = articleTeasers(6);
   const featured = featuredSoftware(4);
+  const compare = compareProducts();
+  const presets = comparePresets(compare);
   const finder = siteConfig.features.finder;
 
   const steps: Step[] = [
@@ -160,6 +165,26 @@ export default function HomePage() {
             </SplitGrid>
             <div className="mt-12">
               <FeaturedSoftware items={featured} />
+            </div>
+          </Container>
+        </Panel>
+      ) : null}
+
+      {compare.length >= 2 && presets.length > 0 ? (
+        <Panel as="section" aria-labelledby="vergleich-titel">
+          <Container className="py-16 sm:py-24">
+            <SplitGrid aside={<Eyebrow className="text-muted">Direktvergleich</Eyebrow>}>
+              <Headline id="vergleich-titel" size="h2" tail="Zwei oder drei auf einmal.">
+                Programme direkt vergleichen.
+              </Headline>
+              <p className="mt-6 max-w-[62ch] text-body text-muted">
+                Wählen Sie zwei oder drei Programme und sehen Sie auf einen Blick, welches am
+                günstigsten startet, welches Sie kostenlos testen können und was jedes Programm für
+                E-Rechnung, DATEV und ELSTER mitbringt.
+              </p>
+            </SplitGrid>
+            <div className="mt-12">
+              <HomeCompare products={compare} presets={presets} initial={presets[0].slugs} />
             </div>
           </Container>
         </Panel>

@@ -35,6 +35,48 @@ test.describe("Home page", () => {
     await expect(page.getByRole("region", { name: /So entsteht die Wertung/ })).toBeVisible();
   });
 
+  test("comparison shows cheapest start, trial and free plan, with vendor and profile actions", async ({
+    page,
+  }) => {
+    await page.goto("/");
+    const section = page.getByRole("region", { name: /Programme direkt vergleichen/ });
+    const summary = section.locator("ul[aria-live]");
+    // Default: sevdesk (9,90 €, 14 days, free plan) against Lexware Office (7,90 €, 30 days).
+    await expect(summary.getByText("Lexware Office").first()).toBeVisible();
+    await expect(summary.getByText(/30 Tage kostenlos/)).toBeVisible();
+    await expect(summary.getByText("sevdesk")).toBeVisible();
+
+    await section.getByRole("button", { name: "ERP für Händler" }).click();
+    const compare = section.getByRole("region", { name: /Vergleich: weclapp, Xentral, Sage 100/ });
+    await expect(compare).toBeVisible();
+    await expect(
+      compare.getByRole("link", { name: /Website( besuchen)? von Xentral/ }),
+    ).toHaveAttribute("target", "_blank");
+    await expect(
+      compare.getByRole("link", { name: /Profil( lesen)? zu Sage 100/ }),
+    ).toHaveAttribute("href", "/software/sage-100");
+    await expect(summary.getByText(/gerechnet für einen Nutzer/)).toBeVisible();
+    await expect(section.getByRole("link", { name: "Alle Details vergleichen" })).toHaveAttribute(
+      "href",
+      "/vergleich?software=weclapp,xentral,sage-100",
+    );
+  });
+
+  test("comparison lets visitors pick programs and hide equal rows", async ({ page }) => {
+    await page.goto("/");
+    const section = page.getByRole("region", { name: /Programme direkt vergleichen/ });
+    await section.getByLabel("Programm 3 (optional)").selectOption("papierkram");
+    const compare = section.getByRole("region", {
+      name: /Vergleich: sevdesk, Lexware Office, Papierkram/,
+    });
+    await expect(compare).toBeVisible();
+    const before = await compare.getByText("Angebote", { exact: true }).count();
+    await section.getByRole("switch", { name: "Nur Unterschiede zeigen" }).click();
+    // All three offer quotes, so the row disappears when only differences are shown.
+    expect(before).toBeGreaterThan(0);
+    await expect(compare.getByText("Angebote", { exact: true })).toHaveCount(0);
+  });
+
   test("situation shortcuts open the Finder result with the matching answers", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("link", { name: /Meine Kanzlei arbeitet mit DATEV/ }).click();

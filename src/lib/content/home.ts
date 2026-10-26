@@ -3,7 +3,8 @@ import type { VendorLogo } from "@/components/marketing/logo-row";
 import type { SoftwareSummary } from "@/components/software/types";
 import type { Software } from "@/content/schemas";
 import { entryPriceCents } from "@/content/visibility";
-import { researchScore, type ResearchScore } from "@/lib/research-score";
+import type { ComparePreset, CompareProduct } from "@/lib/content/compare-types";
+import { entryPrice, researchScore, type ResearchScore } from "@/lib/research-score";
 import { routes } from "@/lib/routes";
 import {
   getAllSoftware,
@@ -214,4 +215,80 @@ export function latestReview(): string | null {
     .map((s) => s.lastReviewed)
     .sort();
   return dates.at(-1) ?? null;
+}
+
+const COMPARE_COMPLIANCE = [
+  "eRechnungVersand",
+  "eRechnungEmpfang",
+  "datevExport",
+  "elster",
+  "gobd",
+  "serverstandort",
+] as const;
+const COMPARE_FEATURES = [
+  "angebote",
+  "mahnwesen",
+  "belegerfassungOcr",
+  "bankabgleich",
+  "euer",
+  "bilanz",
+  "lohn",
+  "lager",
+  "steuerberaterzugang",
+  "mobileApp",
+] as const;
+
+/** Every published program with the facts the home page comparison shows. */
+export function compareProducts(): CompareProduct[] {
+  return getAllSoftware()
+    .map((s) => {
+      const summary = toSummary(s);
+      const entry = entryPrice(s.plans);
+      const plan = entry ? s.plans.find((p) => p.name === entry.planName) : undefined;
+      const facts = Object.fromEntries([
+        ...COMPARE_COMPLIANCE.map((k) => [k, s.compliance[k].status]),
+        ...COMPARE_FEATURES.map((k) => [k, s.features[k]?.status ?? "unbekannt"]),
+      ]) as CompareProduct["facts"];
+      return {
+        slug: s.slug,
+        name: s.name,
+        category: summary.category,
+        ...(summary.logo ? { logo: summary.logo } : {}),
+        research: summary.research,
+        entry: entry
+          ? {
+              cents: entry.monthlyNetCents,
+              perUser: plan?.perUser ?? false,
+              seats: entry.seats,
+              plan: entry.planName,
+            }
+          : null,
+        freePlan: s.freePlan,
+        freeTrialDays: s.freeTrialDays,
+        facts,
+        profileHref: routes.software(s.slug),
+        pricingHref: routes.softwarePricing(s.slug),
+        vendor: {
+          ...vendorLink(s, "start"),
+          host: new URL(s.website).hostname.replace(/^www./, ""),
+        },
+      };
+    })
+    .sort((a, b) => a.name.localeCompare(b.name, "de"));
+}
+
+/** Pairings people search for; only presets whose programs are all published are shown. */
+export function comparePresets(products: CompareProduct[]): ComparePreset[] {
+  const presets: ComparePreset[] = [
+    { label: "sevdesk oder Lexware Office", slugs: ["sevdesk", "lexware-office"] },
+    {
+      label: "Sage 50, Sage Active, Lexware Office",
+      slugs: ["sage-50", "sage-active", "lexware-office"],
+    },
+    { label: "Kostenlos starten", slugs: ["collmex", "papierkram", "sevdesk"] },
+    { label: "Rechnungen schreiben", slugs: ["easybill", "fastbill", "billomat"] },
+    { label: "ERP für Händler", slugs: ["weclapp", "xentral", "sage-100"] },
+  ];
+  const known = new Set(products.map((p) => p.slug));
+  return presets.filter((p) => p.slugs.every((slug) => known.has(slug)));
 }
