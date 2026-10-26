@@ -213,3 +213,12 @@ logo:
   height: 48
   sourceUrl: https://www.candis.io/
   accessed: 2026-10-26
+videos:
+  - provider: "youtube"
+    id: "FDGOoyM7ICI"
+    originalTitle: "So arbeitest du mit Candis: Live Demo der DATEV Exporte"
+    channel: "Candis"
+    source:
+      url: "https://www.candis.io/"
+      title: "Candis Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26

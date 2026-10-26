@@ -259,3 +259,12 @@ review:
       sources:
         - *funktionen
         - *preise2
+videos:
+  - provider: "youtube"
+    id: "mayhmBrH5q0"
+    originalTitle: "Amtliches Formular Anlage EÜR & Übermittlung an ELSTER | BuchhaltungsButler"
+    channel: "BuchhaltungsButler GmbH"
+    source:
+      url: "https://www.buchhaltungsbutler.de/"
+      title: "BuchhaltungsButler Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26

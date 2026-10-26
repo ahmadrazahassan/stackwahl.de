@@ -229,3 +229,12 @@ logo:
   height: 123
   sourceUrl: https://www.scopevisio.com/
   accessed: 2026-10-26
+videos:
+  - provider: "youtube"
+    id: "C2CobpZH7VE"
+    originalTitle: "Scopevisio ERP-Cloud Unternehmenssoftware"
+    channel: "Scopevisio AG"
+    source:
+      url: "https://www.scopevisio.com/"
+      title: "Scopevisio Startseite mit eingebettetem Video"
+      accessed: 2026-10-26

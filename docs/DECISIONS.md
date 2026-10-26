@@ -212,3 +212,11 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 - **Known limits, stated on /methodik.** The score does not judge usability, and it counts a feature regardless of the plan it is in.
 - **Display.** Every profile shows the full derivation (each fact with its points, the price rule). Cards show the value labeled "Recherche-Wertung". Category pages sort by it, with the explanation above the list.
 - **"Im Fokus" on the home page.** The four programs with the highest Recherche-Wertung across all categories, ties by name, with the rule next to the section. Affiliate placement `fokus`.
+
+## 26.10.2026: Screenshots and videos on profiles
+
+- **Only official material.** Screenshots come from vendor press pages that offer them for reporting (Lexware, Papierkram, FastBill); videos only from channels the vendor links on its own site or videos the vendor embeds itself. Title and channel of every video were checked with the oEmbed endpoint. Everything is listed in `docs/MEDIA.md`; the content guard fails when a file or video id is missing there, or a screenshot file is missing in `public/`.
+- **Labeled as vendor material.** The profile section "Bilder und Videos" says that the material comes from the vendor and replaces no test. Each image names its press page and access date. FastBill's press screenshots show an older interface (the VAT example says May 2021), and the captions say so.
+- **Click-to-load (Section 3.6).** No request goes to YouTube or Vimeo before the click, not even a thumbnail. YouTube loads in privacy-enhanced mode (youtube-nocookie.com), Vimeo with `dnt=1`. The click counts as consent for that one video and is not stored, so the consent banner list stays empty. The privacy policy has a new section "Videos der Anbieter" and the cookie page mentions the embeds (Section 3.10). The lawyer review is still pending.
+- **Gaps stay visible.** Profiles without verified material have no media section; nothing is filled with stock or generated images. Missing: videos for Billomat, WISO MeinBüro, Collmex, Norman (only Polish and English videos), Sage 50 Handwerk; screenshots for 17 vendors.
+- **Video titles are quotes.** `originalTitle` keeps the vendor's wording (some use "du") and is exempt from the copy lint; it is always shown in quotation marks.

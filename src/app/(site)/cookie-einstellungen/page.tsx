@@ -23,8 +23,10 @@ export default function CookieSettingsPage() {
         <Prose>
           {CONSENT_SERVICES.length === 0 ? (
             <p>
-              Stackwahl setzt derzeit keine Cookies und lädt keine Dienste, die Ihre Einwilligung
-              brauchen. Es gibt deshalb nichts einzustellen. Sobald sich das ändert, können Sie Ihre
+              Stackwahl setzt derzeit keine Cookies und lädt von sich aus keine Dienste, die Ihre
+              Einwilligung brauchen. Es gibt deshalb nichts einzustellen. Videos der Anbieter auf
+              YouTube oder Vimeo laden nur, wenn Sie beim einzelnen Video auf „Video laden“ klicken;
+              diese Entscheidung speichern wir nicht. Sobald sich das ändert, können Sie Ihre
               Auswahl hier jederzeit anpassen. Details stehen in der{" "}
               <Link href={routes.privacy()}>Datenschutzerklärung</Link>.
             </p>

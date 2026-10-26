@@ -250,3 +250,20 @@ logo:
   height: 71
   sourceUrl: https://www.weclapp.com/de/
   accessed: 2026-10-26
+videos:
+  - provider: "youtube"
+    id: "S_U9OJpP6rI"
+    originalTitle: "weclapp Tool Insight: ERP Handel"
+    channel: "weclapp"
+    source:
+      url: "https://www.weclapp.com/de/"
+      title: "weclapp Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26
+  - provider: "youtube"
+    id: "ZqvIVtAr1i0"
+    originalTitle: "weclapp Tool Insight: Buchhaltung"
+    channel: "weclapp"
+    source:
+      url: "https://www.weclapp.com/de/"
+      title: "weclapp Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26

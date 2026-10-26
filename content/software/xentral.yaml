@@ -231,3 +231,12 @@ logo:
   height: 224
   sourceUrl: https://xentral.com/de
   accessed: 2026-10-26
+videos:
+  - provider: "youtube"
+    id: "7xU0w-EPriA"
+    originalTitle: "Agent Hub ist live: KI-Agenten im ERP mit Demo & Pricing | Xentral ERP"
+    channel: "Xentral ERP Software"
+    source:
+      url: "https://xentral.com/de"
+      title: "Xentral Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26

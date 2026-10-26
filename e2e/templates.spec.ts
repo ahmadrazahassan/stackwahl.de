@@ -10,6 +10,8 @@ const PAGES = [
   "/software/sevdesk",
   "/software/sevdesk/preise",
   "/software/weclapp",
+  "/software/papierkram",
+  "/software/fastbill",
   "/software/collmex/preise",
   "/kategorien/erp-software",
   "/software/wiso-meinbuero/alternativen",

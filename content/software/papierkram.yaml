@@ -287,3 +287,43 @@ review:
         - Papierkram passt zu Freiberuflern, Selbstständigen und Kleinunternehmern mit EÜR, die Rechnungen, Belege, Bank, Projekte und Zeiterfassung in einem Werkzeug wollen und mit einem kostenlosen Paket beginnen möchten. GoBD-Zertifizierung, Rechenzentren in Deutschland, DATEV-Anbindung und günstige weitere Nutzer sprechen dafür, die fehlende direkte ELSTER-Übermittlung und der reine Formular-Support dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
       sources:
         - *preise2
+videos:
+  - provider: "youtube"
+    id: "SOkufTeni_8"
+    originalTitle: "Papierkram - die smarte und innovative Online-Buchhaltungssoftware"
+    channel: "Papierkram.de"
+    source:
+      url: "https://www.papierkram.de/"
+      title: "Papierkram Startseite mit eingebettetem Video"
+      accessed: 2026-10-26
+screenshots:
+  - file: "/screenshots/papierkram/dashboard.webp"
+    width: 1600
+    height: 1125
+    alt: "Startseite von Papierkram mit Arbeitszeiten der Woche, Projekten, Dokumenten und Finanzübersicht"
+    caption: "Startseite mit Zeiterfassung, Projekten und Finanzen. Bild aus dem Pressematerial von Papierkram mit Beispieldaten."
+    origin: "presse"
+    source:
+      url: "https://www.papierkram.de/presse/"
+      title: "Papierkram Presse, Materialien zur Verwendung"
+      accessed: 2026-10-26
+  - file: "/screenshots/papierkram/rechnung.webp"
+    width: 1600
+    height: 1465
+    alt: "Rechnungsformular von Papierkram mit Kunde, Position, Steuersatz und Summen"
+    caption: "Rechnungsformular mit Positionen, Steuersatz und Summen. Bild aus dem Pressematerial von Papierkram."
+    origin: "presse"
+    source:
+      url: "https://www.papierkram.de/presse/"
+      title: "Papierkram Presse, Materialien zur Verwendung"
+      accessed: 2026-10-26
+  - file: "/screenshots/papierkram/bwa.webp"
+    width: 1600
+    height: 979
+    alt: "Betriebswirtschaftliche Auswertung in Papierkram mit Monatswerten"
+    caption: "Betriebswirtschaftliche Auswertung (BWA). Bild aus dem Pressematerial von Papierkram mit Beispieldaten."
+    origin: "presse"
+    source:
+      url: "https://www.papierkram.de/presse/"
+      title: "Papierkram Presse, Materialien zur Verwendung"
+      accessed: 2026-10-26

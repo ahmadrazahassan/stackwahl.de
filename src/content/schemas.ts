@@ -160,6 +160,36 @@ export const reviewSchema = z.strictObject({
 });
 export type Review = z.infer<typeof reviewSchema>;
 
+/**
+ * Official vendor video. Only from a channel the vendor links on its own site, or a video the
+ * vendor embeds there; `source` is that vendor page. Shown behind a click-to-load placeholder.
+ */
+export const videoSchema = z.strictObject({
+  provider: z.enum(["youtube", "vimeo"]),
+  id: z.string().regex(/^[A-Za-z0-9_-]{6,20}$/, "Video-ID des Anbieters"),
+  /** The vendor's own title, quoted as published (exempt from our copy rules). */
+  originalTitle: z.string().min(5),
+  channel: z.string().min(2),
+  source: sourceSchema,
+});
+export type Video = z.infer<typeof videoSchema>;
+
+/**
+ * Product screenshot. "presse": vendor press material that the vendor offers for reporting
+ * (labeled as such on the page). "eigene": taken by the editors in a trial account.
+ */
+export const screenshotSchema = z.strictObject({
+  file: z.string().regex(/^\/screenshots\/[a-z0-9-]+\/[a-z0-9-]+\.(webp|png|jpg)$/),
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+  alt: z.string().min(10),
+  caption: z.string().min(10),
+  origin: z.enum(["presse", "eigene"]),
+  /** Where the file and its usage terms are published (press page), or the test date. */
+  source: sourceSchema,
+});
+export type Screenshot = z.infer<typeof screenshotSchema>;
+
 export const softwareSchema = z.strictObject({
   slug: slugSchema,
   name: z.string().min(2),
@@ -200,6 +230,8 @@ export const softwareSchema = z.strictObject({
   verdict: z.string().min(40).optional(),
   review: reviewSchema.optional(),
   rating: ratingSchema.nullable().default(null),
+  videos: z.array(videoSchema).max(3).default([]),
+  screenshots: z.array(screenshotSchema).max(6).default([]),
   logo: z
     .strictObject({
       file: z.string().regex(/^\/logos\/.+\.(svg|png|webp)$/),

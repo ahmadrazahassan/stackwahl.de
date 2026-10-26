@@ -248,3 +248,12 @@ review:
         - orgaMAX passt zu Handwerks-, Dienstleistungs- und Handelsbetrieben, die Auftragswesen, Buchhaltung mit UStVA, Dokumente und später Lager in einem System führen und persönlichen Support schätzen. Deutsches Rechenzentrum, GoBD-konforme Archivierung und Exporte für DATEV und andere Kanzleisysteme sprechen dafür. Der höhere Einstiegspreis, Kosten je weiterem Nutzer und widersprüchliche Preisangaben sprechen dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
       sources:
         - *preise2
+videos:
+  - provider: "youtube"
+    id: "ahadcQnrMrU"
+    originalTitle: "Schluss mit Bürochaos. So einfach ist orgaMAX"
+    channel: "orgaMAX"
+    source:
+      url: "https://www.orgamax.de/"
+      title: "orgaMAX Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26

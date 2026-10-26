@@ -38,7 +38,8 @@ export type Issue = {
     | "unverified-published"
     | "missing-author"
     | "unavailable-without-note"
-    | "logo-asset";
+    | "logo-asset"
+    | "media-asset";
   where: string;
   message: string;
 };
@@ -52,6 +53,8 @@ export type GuardOptions = {
   publicFiles?: ReadonlySet<string>;
   /** Text of docs/LOGOS.md. Every logo file must be listed there with its source. */
   logosDoc?: string;
+  /** Text of docs/MEDIA.md. Every screenshot file and video must be listed there with its source. */
+  mediaDoc?: string;
 };
 
 export const PRICE_MAX_AGE_DAYS = 90;
@@ -147,6 +150,10 @@ function softwareSources(
     section.sources.forEach((source, i) =>
       list.push({ where: `review.${section.id}.sources[${i}]`, source, kind: "fact" }),
     ),
+  );
+  s.videos.forEach((v, i) => list.push({ where: `videos[${i}]`, source: v.source, kind: "fact" }));
+  s.screenshots.forEach((shot, i) =>
+    list.push({ where: `screenshots[${i}]`, source: shot.source, kind: "fact" }),
   );
   return list;
 }
@@ -250,6 +257,7 @@ export function checkContent(content: ContentSet, options: GuardOptions): Issue[
       ...s.plans.flatMap((p) => [p.note, ...p.includes]),
       ...Object.values(s.compliance).map((f) => f.note),
       ...Object.values(s.features).map((f) => f?.note),
+      ...s.screenshots.flatMap((shot) => [shot.alt, shot.caption]),
     ];
     issues.push(...copyIssues(at, texts));
 
@@ -301,6 +309,42 @@ export function checkContent(content: ContentSet, options: GuardOptions): Issue[
         });
       }
     }
+    s.screenshots.forEach((shot, i) => {
+      if (options.publicFiles && !options.publicFiles.has(shot.file)) {
+        issues.push({
+          severity: "error",
+          code: "media-asset",
+          where: `${at}.screenshots[${i}]`,
+          message: `Screenshot ${shot.file} fehlt in public/.`,
+        });
+      }
+      if (!shot.file.startsWith(`/screenshots/${s.slug}/`)) {
+        issues.push({
+          severity: "error",
+          code: "media-asset",
+          where: `${at}.screenshots[${i}]`,
+          message: `Screenshot gehört nach /screenshots/${s.slug}/.`,
+        });
+      }
+      if (options.mediaDoc !== undefined && !options.mediaDoc.includes(shot.file)) {
+        issues.push({
+          severity: "error",
+          code: "media-asset",
+          where: `${at}.screenshots[${i}]`,
+          message: `Screenshot ${shot.file} ist nicht mit Quelle in docs/MEDIA.md eingetragen.`,
+        });
+      }
+    });
+    s.videos.forEach((v, i) => {
+      if (options.mediaDoc !== undefined && !options.mediaDoc.includes(v.id)) {
+        issues.push({
+          severity: "error",
+          code: "media-asset",
+          where: `${at}.videos[${i}]`,
+          message: `Video ${v.id} ist nicht mit Quelle in docs/MEDIA.md eingetragen.`,
+        });
+      }
+    });
     if (s.marketAvailability.status !== "verfuegbar" && !s.marketAvailability.note) {
       issues.push({
         severity: "error",

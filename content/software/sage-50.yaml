@@ -217,3 +217,12 @@ review:
         - Sage 50 passt zu kleinen Betrieben, die mehr brauchen als Rechnungen und Belege, also Lager, Bestellwesen, Onlineshop-Anbindung und eine vollständige Buchhaltung bis zur Bilanz. Die E-Rechnung ist in beide Richtungen abgedeckt, die DATEV-Schnittstelle ist enthalten. Die Mindestzahl an Arbeitsplätzen und die Jahresbindung machen das Programm für Einzelunternehmer teuer. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
       sources:
         - *produkt
+videos:
+  - provider: "youtube"
+    id: "VUIH_MYl5Nc"
+    originalTitle: "Sage 50 Connected - Desktop trifft Cloud"
+    channel: "SageGermany"
+    source:
+      url: "https://www.sage.com/de-de/"
+      title: "Sage Deutschland Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26

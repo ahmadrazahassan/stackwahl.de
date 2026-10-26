@@ -267,3 +267,20 @@ review:
       sources:
         - *preise
         - *funktionen
+videos:
+  - provider: "youtube"
+    id: "mHjOzsave0k"
+    originalTitle: "Einsteiger Webinar | Erste Schritte mit sevdesk"
+    channel: "sevdesk"
+    source:
+      url: "https://sevdesk.de/"
+      title: "sevdesk Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26
+  - provider: "youtube"
+    id: "V0yMwzNpLHM"
+    originalTitle: "Kleinunternehmer-Rechnung schreiben: So gehts ganz easy"
+    channel: "sevdesk"
+    source:
+      url: "https://sevdesk.de/"
+      title: "sevdesk Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26

@@ -130,6 +130,9 @@ export function lintYaml(file: string, source: string): CopyFinding[] {
           "author",
           "reviewer",
           "accessed",
+          // Quoted vendor wording of an embedded video, shown as a quote, never as our text.
+          "originalTitle",
+          "channel",
         ].includes(key)
       )
         return;

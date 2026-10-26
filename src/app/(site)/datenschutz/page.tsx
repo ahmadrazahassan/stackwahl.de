@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 // Draft for lawyer review (Section 9). It describes the site as it is built today: hosting on
-// Vercel, no cookies, no analytics, no third-party embeds, self-hosted fonts, no forms.
+// Vercel, no cookies, no analytics, self-hosted fonts, vendor videos only after a click.
 // Every new processor, cookie or form must be added here in the same commit (Section 3.10).
 
 export default function PrivacyPage() {
@@ -74,10 +74,47 @@ export default function PrivacyPage() {
       <PageSection id="cookies" label="Cookies" title="Cookies, Analyse und eingebundene Dienste">
         <Prose>
           <p>
-            Diese Website setzt keine Cookies, nutzt keine Analyse- oder Werbedienste und bindet
-            keine Inhalte von Drittanbietern ein. Die Schriften liegen auf unserem eigenen Server.
-            Eine Einwilligung nach § 25 TDDDG ist daher derzeit nicht erforderlich. Den aktuellen
-            Stand finden Sie unter <Link href={routes.cookieSettings()}>Cookie-Einstellungen</Link>.
+            Diese Website setzt keine Cookies und nutzt keine Analyse- oder Werbedienste. Die
+            Schriften liegen auf unserem eigenen Server. Inhalte von Drittanbietern binden wir nur
+            ein, wenn Sie es selbst auslösen: Videos der Softwareanbieter laden erst nach Ihrem
+            Klick (siehe <Link href="#videos">Videos der Anbieter</Link>). Den aktuellen Stand
+            finden Sie unter <Link href={routes.cookieSettings()}>Cookie-Einstellungen</Link>.
+          </p>
+        </Prose>
+      </PageSection>
+
+      <PageSection id="videos" label="Videos" title="Videos der Anbieter">
+        <Prose>
+          <p>
+            Einige Softwareprofile zeigen Videos der Anbieter, die auf YouTube oder Vimeo liegen.
+            Solange Sie nicht auf „Video laden“ klicken, stellt Ihr Browser keine Verbindung zu
+            diesen Diensten her, auch Vorschaubilder laden wir nicht. Erst mit dem Klick lädt Ihr
+            Browser den Player des jeweiligen Dienstes. Dabei werden mindestens Ihre IP-Adresse, die
+            aufgerufene Seite und technische Angaben zu Ihrem Browser an den Dienst übertragen. Der
+            Dienst kann Cookies oder ähnliche Technologien einsetzen.
+          </p>
+          <p>
+            YouTube wird betrieben von Google Ireland Limited, Gordon House, Barrow Street, Dublin
+            4, Irland. Wir nutzen den erweiterten Datenschutzmodus (youtube-nocookie.com). Vimeo
+            wird betrieben von Vimeo.com, Inc. mit Sitz in New York, USA. Wir binden Vimeo mit dem
+            Parameter „dnt=1“ ein, mit dem der Player keine Nutzungsdaten der Sitzung erfassen soll.
+            Bei Vimeo können Daten in die USA übermittelt werden. Wie die Dienste Ihre Daten
+            verarbeiten und auf welcher Grundlage sie Daten in Drittländer übermitteln, steht in
+            ihren Datenschutzerklärungen:{" "}
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+              Google
+            </a>
+            ,{" "}
+            <a href="https://vimeo.com/privacy" target="_blank" rel="noopener">
+              Vimeo
+            </a>
+            .
+          </p>
+          <p>
+            Rechtsgrundlage ist Ihre Einwilligung nach § 25 Abs. 1 TDDDG und Art. 6 Abs. 1 lit. a
+            DSGVO, die Sie mit dem Klick für dieses eine Video erteilen. Wir speichern diese
+            Entscheidung nicht: Beim nächsten Seitenaufruf ist das Video wieder gesperrt. Sie können
+            die Einwilligung jederzeit widerrufen, indem Sie die Seite neu laden.
           </p>
         </Prose>
       </PageSection>

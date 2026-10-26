@@ -274,3 +274,51 @@ review:
       sources:
         - *preise2
         - *funktionen
+videos:
+  - provider: "vimeo"
+    id: "914343976"
+    originalTitle: "Jetzt starten mit FastBill"
+    channel: "FastBill GmbH"
+    source:
+      url: "https://www.fastbill.com/funktionen"
+      title: "FastBill Funktionen mit eingebetteten Videos"
+      accessed: 2026-10-26
+  - provider: "vimeo"
+    id: "937598228"
+    originalTitle: "Belege sammeln und erfassen"
+    channel: "FastBill GmbH"
+    source:
+      url: "https://www.fastbill.com/funktionen"
+      title: "FastBill Funktionen mit eingebetteten Videos"
+      accessed: 2026-10-26
+screenshots:
+  - file: "/screenshots/fastbill/dashboard.webp"
+    width: 1600
+    height: 815
+    alt: "FastBill Dashboard mit Schnellzugriffen, Dokumenten-Upload und Umsatzdiagramm"
+    caption: "Dashboard mit Schnellzugriffen und Belegupload. Älterer Stand aus dem Pressematerial von FastBill, die heutige Oberfläche kann abweichen."
+    origin: "presse"
+    source:
+      url: "https://www.fastbill.com/pressematerial"
+      title: "FastBill Pressematerial, Screenshots der Anwendung"
+      accessed: 2026-10-26
+  - file: "/screenshots/fastbill/rechnungsmaske.webp"
+    width: 1600
+    height: 814
+    alt: "Rechnungsmaske von FastBill mit Kunde, Positionen und Beträgen"
+    caption: "Rechnung erstellen. Älterer Stand aus dem Pressematerial von FastBill, die heutige Oberfläche kann abweichen."
+    origin: "presse"
+    source:
+      url: "https://www.fastbill.com/pressematerial"
+      title: "FastBill Pressematerial, Screenshots der Anwendung"
+      accessed: 2026-10-26
+  - file: "/screenshots/fastbill/ustva.webp"
+    width: 1600
+    height: 815
+    alt: "Umsatzsteuer-Voranmeldung in FastBill mit automatisch ausgefüllten Feldern"
+    caption: "Umsatzsteuer-Voranmeldung, das Beispiel zeigt Mai 2021. Älterer Stand aus dem Pressematerial von FastBill, die heutige Oberfläche kann abweichen."
+    origin: "presse"
+    source:
+      url: "https://www.fastbill.com/pressematerial"
+      title: "FastBill Pressematerial, Screenshots der Anwendung"
+      accessed: 2026-10-26

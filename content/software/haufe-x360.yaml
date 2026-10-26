@@ -211,3 +211,20 @@ logo:
   height: 36
   sourceUrl: https://www.haufe-x360.de/
   accessed: 2026-10-26
+videos:
+  - provider: "youtube"
+    id: "SBd5QZ6b9SM"
+    originalTitle: "Die Funktionalitäten der neuen Haufe X360 Modern UI im Detail"
+    channel: "Haufe X360 – die Unternehmensplattform"
+    source:
+      url: "https://www.haufe-x360.de/"
+      title: "Haufe X360 Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26
+  - provider: "youtube"
+    id: "UB44XcT3Nc0"
+    originalTitle: "Eingangsbelege automatisiert verarbeiten"
+    channel: "Haufe X360 – die Unternehmensplattform"
+    source:
+      url: "https://www.haufe-x360.de/"
+      title: "Haufe X360 Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26

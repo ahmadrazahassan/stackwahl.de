@@ -265,3 +265,31 @@ review:
       sources:
         - *preise2
         - *sicherheit2
+videos:
+  - provider: "vimeo"
+    id: "1004498883"
+    originalTitle: "Eine Rechnung schreiben | Lexware Office erklärt's"
+    channel: "Lexware Office"
+    source:
+      url: "https://help.lexware.de/de-form/articles/548959-so-gelingt-der-einstieg-in-lexware-office"
+      title: "Lexware Office Hilfe-Center, So gelingt der Einstieg"
+      accessed: 2026-10-26
+  - provider: "vimeo"
+    id: "806750355"
+    originalTitle: "Mehrere Belege gleichzeitig hochladen | Lexware Office erklärt's"
+    channel: "Lexware Office"
+    source:
+      url: "https://help.lexware.de/de-form/articles/548959-so-gelingt-der-einstieg-in-lexware-office"
+      title: "Lexware Office Hilfe-Center, So gelingt der Einstieg"
+      accessed: 2026-10-26
+screenshots:
+  - file: "/screenshots/lexware-office/dashboard-funktionen.webp"
+    width: 1600
+    height: 818
+    alt: "Werbegrafik von Lexware Office mit Dashboard, Bankumsätzen und App auf Laptop, Tablet, Smartphone und Uhr"
+    caption: "Werbegrafik aus dem Pressematerial von Lexware mit Dashboard, Bankansicht und mobilen Geräten."
+    origin: "presse"
+    source:
+      url: "https://www.lexware.de/presse/"
+      title: "Lexware Presse, Bildmaterial für die Berichterstattung"
+      accessed: 2026-10-26

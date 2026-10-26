@@ -276,3 +276,12 @@ review:
         - easybill passt zu Onlinehändlern und Dienstleistern, die viele Rechnungen und E-Rechnungen automatisiert erstellen und an ihre Steuerberatung übergeben. Kostenloser Einstieg, Server in Deutschland, DATEV-Schnittstelle schon kostenlos und eine Kostenbremse für Spitzenmonate sprechen dafür. Die zusätzlichen Archivierungskosten und die fehlende Buchhaltung gehören in jede Kostenrechnung. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
       sources:
         - *preise2
+videos:
+  - provider: "youtube"
+    id: "rUVdDN_crlE"
+    originalTitle: "Einstieg in easybill"
+    channel: "easybill TV"
+    source:
+      url: "https://www.easybill.de/"
+      title: "easybill Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26

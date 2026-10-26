@@ -222,3 +222,12 @@ review:
         - Sage 100 passt zu mittelständischen Handels- und Fertigungsbetrieben, die Warenwirtschaft, Produktion und Finanzbuchhaltung mit DATEV, ELSTER und E-Rechnung in einem anpassbaren System führen wollen und die Wahl zwischen eigenem Server und Cloud schätzen. Die veröffentlichten Modulpreise erleichtern den ersten Vergleich, die Gesamtkosten hängen aber stark von Zusatzlösungen und Einführung ab. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
       sources:
         - *produkt
+videos:
+  - provider: "youtube"
+    id: "nrAeLHYfMkY"
+    originalTitle: "Sage 100 – Entdecken Sie den neuen Artikelstamm"
+    channel: "SageGermany"
+    source:
+      url: "https://www.sage.com/de-de/"
+      title: "Sage Deutschland Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26

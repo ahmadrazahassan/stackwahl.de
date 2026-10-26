@@ -249,3 +249,12 @@ review:
         - Sage Active passt zu kleinen B2B-Unternehmen mit Mitarbeitenden, die Aufträge, Buchhaltung mit UStVA per ELSTER und DATEV-Export sowie Lohn und HR in einer monatlich kündbaren Cloud-Lösung führen wollen. Viele Nutzer im Grundpreis und die integrierte Lohnabrechnung sprechen dafür, der fehlende E-Rechnungsversand und die offenen Fragen zu Serverstandort und Auftragsverarbeitung dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
       sources:
         - *sa
+videos:
+  - provider: "youtube"
+    id: "eA99stQ96uM"
+    originalTitle: "Sage Active Anleitung: Einrichtung, Buchen, Umsatzsteuer & DATEV-Export"
+    channel: "SageGermany"
+    source:
+      url: "https://www.sage.com/de-de/"
+      title: "Sage Deutschland Startseite mit Link zum YouTube-Kanal"
+      accessed: 2026-10-26

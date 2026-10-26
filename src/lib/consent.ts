@@ -12,7 +12,8 @@ export type ConsentService = {
 };
 
 /**
- * Services that need consent. Currently none: no analytics, no embeds, no marketing tags.
+ * Services that need consent. Currently none: no analytics, no marketing tags. Vendor videos
+ * are click-to-load per video (VideoEmbed) and need no stored decision, so they are not here.
  * Every entry here must also be described in the privacy policy in the same commit.
  */
 export const CONSENT_SERVICES: readonly ConsentService[] = [];

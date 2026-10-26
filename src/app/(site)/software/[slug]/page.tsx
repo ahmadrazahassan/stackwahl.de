@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { PageSection } from "@/components/page/page-header";
 import { ComplianceChecklist } from "@/components/software/compliance-checklist";
 import { PriceTable } from "@/components/software/price-table";
+import { ProfileMedia } from "@/components/software/profile-media";
 import { ProfileReview } from "@/components/software/profile-review";
 import { Breadcrumbs, ProfileHeader } from "@/components/software/profile-header";
 import { ProfileTabs } from "@/components/software/profile-tabs";
@@ -57,6 +58,7 @@ export async function generateMetadata({
 const allSections = [
   { id: "ueberblick", label: "Überblick" },
   { id: "wertung", label: "Wertung" },
+  { id: "einblicke", label: "Bilder und Videos" },
   { id: "im-detail", label: "Im Detail" },
   { id: "funktionen", label: "Funktionen" },
   { id: "preise", label: "Preise" },
@@ -115,6 +117,7 @@ export default async function SoftwarePage({ params }: PageProps<"/software/[slu
     (s) =>
       (s.id !== "im-detail" || software.review) &&
       (s.id !== "wertung" || research) &&
+      (s.id !== "einblicke" || software.screenshots.length + software.videos.length > 0) &&
       (s.id !== "alternativen" || alternatives.length > 0),
   );
 
@@ -216,6 +219,20 @@ export default async function SoftwarePage({ params }: PageProps<"/software/[slu
           title={`So entsteht die Wertung für ${software.name}`}
         >
           <ResearchScoreBreakdown score={research} categoryName={summary.category} />
+        </PageSection>
+      ) : null}
+
+      {software.screenshots.length + software.videos.length > 0 ? (
+        <PageSection
+          id="einblicke"
+          label="Bilder und Videos"
+          title={`${software.name} in Bildern und Videos`}
+        >
+          <ProfileMedia
+            name={vendor?.name ?? software.name}
+            screenshots={software.screenshots}
+            videos={software.videos}
+          />
         </PageSection>
       ) : null}
 

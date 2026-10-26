@@ -98,8 +98,15 @@ const publicFiles = new Set(
   listFiles(publicDir).map((f) => "/" + relative(publicDir, f).split("\\").join("/")),
 );
 const logosDoc = readFileSync(join(root, "docs", "LOGOS.md"), "utf8");
+const mediaDoc = readFileSync(join(root, "docs", "MEDIA.md"), "utf8");
 
-const issues = checkContent(content, { today: utcToday(), production, publicFiles, logosDoc });
+const issues = checkContent(content, {
+  today: utcToday(),
+  production,
+  publicFiles,
+  logosDoc,
+  mediaDoc,
+});
 const errors = issues.filter((i) => i.severity === "error");
 const warnings = issues.filter((i) => i.severity === "warning");
 
