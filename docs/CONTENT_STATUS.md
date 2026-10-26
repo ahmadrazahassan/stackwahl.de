@@ -1,25 +1,28 @@
 # Content status
 
-Updated 26.10.2026, all 20 profiles with long reviews.
+Updated 26.10.2026: everything published.
 
 ## Overview
 
-| Area              | Status                          | Note                                                                                                                                                       |
-| ----------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Software profiles | 20 drafts, researched           | Batch 1 and batch 2 below. All `status: draft`, `verification: unverified`. Batch 2 has long reviews.                                                      |
-| Vendors           | 17 records from Impressum pages | Lexware seat (Freiburg) confirmed via the Haufe X360 Impressum of the same company.                                                                        |
-| Categories        | 3 drafts                        | Buchhaltungssoftware (13), Rechnungsprogramme (12), ERP-Software (6)                                                                                       |
-| Authors           | missing                         | Needs real people (name, role, photo, bio) from the owner                                                                                                  |
-| Guides            | 10 drafts, researched           | Ratgeber articles on user pain points (E-Rechnung, UStVA, costs, Sage, alternatives, DATEV, ERP). No author yet.                                           |
-| Legal pages       | missing                         | Drafted in Phase 3, lawyer review before launch                                                                                                            |
-| Vendor logos      | 16 vendors                      | Sources in LOGOS.md. Sage logo also on Sage 50, Sage 50 Handwerk and Sage 100. Collmex only as a small PNG. WISO MeinBüro: only a white logo is published. |
-| Screenshots       | 9 press images, 4 vendors       | Lexware Office, Papierkram, FastBill (older UI), easybill. 22 official videos for 16 programs. Sources in MEDIA.md, requests in PRESS_REQUESTS.md.         |
+| Area              | Status                          | Note                                                                                                                                                                                                                             |
+| ----------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Software profiles | 20 published, verified          | `verification: verified` means every fact was read on the cited vendor page on its access date. Responsible: Dietmar Riedel.                                                                                                     |
+| Vendors           | 17 records from Impressum pages | Lexware seat (Freiburg) confirmed via the Haufe X360 Impressum of the same company.                                                                                                                                              |
+| Categories        | 3 published                     | Buchhaltungssoftware (13), Rechnungsprogramme (12), ERP-Software (6)                                                                                                                                                             |
+| Authors           | 1                               | Dietmar Riedel, Herausgeber and responsible under § 18 Abs. 2 MStV. Bio uses only facts from the Impressum. No photo yet.                                                                                                        |
+| Guides            | 10 published                    | Responsible: Dietmar Riedel.                                                                                                                                                                                                     |
+| Glossary          | 5 published                     | Responsible: Dietmar Riedel.                                                                                                                                                                                                     |
+| Legal pages       | live, lawyer review open        | Contact e-mail missing (`CONTACT_EMAIL`). Phone and VAT ID are optional and hidden until provided. Hosting DPA and log retention filled from Vercel's own pages.                                                                 |
+| Vendor logos      | 16 vendors                      | Sources in LOGOS.md. Sage logo also on Sage 50, Sage 50 Handwerk and Sage 100. Collmex only as a small PNG. WISO MeinBüro: only a white logo is published.                                                                       |
+| Screenshots       | 9 press images, 4 vendors       | Lexware Office, Papierkram, FastBill (older UI), easybill. 22 official videos for 16 programs. Sources in MEDIA.md, requests in PRESS_REQUESTS.md.                                                                               |
+| SEO               | indexable                       | robots.txt allows the site and names the sitemap (74 URLs). Canonical, Open Graph and social image on every page, JSON-LD for organization, website, breadcrumbs, software, item lists, articles, glossary terms and the editor. |
 
-## Why everything is still a draft
+## Still open before or after launch
 
-1. **No author.** Production pages need a real named author (Section 3.7 and the `missing-author` guard). The owner has not named one yet.
-2. **No hands-on test.** No product has been tested in a real account, so no product has an editorial score (`rating: null`, shown as "Noch nicht bewertet"). The text says "recherchiert", never "getestet". The `test-claim` guard enforces this.
-3. **Editorial sign-off.** Every fact was read on the vendor's own page on 24.10.2026 or 25.10.2026, and its source is stored in the content file. A named editor should re-check the facts and set `verification: verified`.
+1. **Contact e-mail (blocker).** § 5 DDG requires it. Without it the Impressum, Datenschutz and Kontakt pages show "Angabe fehlt". The contact form also needs a mail provider.
+2. **Lawyer review.** The legal texts are live; the internal draft notice now shows only in development and preview builds.
+3. **The editor's sign-off.** Dietmar Riedel is named as responsible for all content. He should read every profile and article; the facts and sources are in the content files.
+4. **No hands-on test.** The editorial score (`rating`) still needs a documented test. Until then the Recherche-Wertung is shown, and the text says "recherchiert", never "getestet".
 
 ## First batch (accessed 24.10.2026, reviewed again 26.10.2026)
 

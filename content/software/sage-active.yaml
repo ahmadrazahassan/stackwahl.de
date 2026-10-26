@@ -7,10 +7,10 @@ vendor: sage
 categories:
   - buchhaltungssoftware
   - rechnungsprogramme
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-26
-author: null
+author: dietmar-riedel
 summary: Cloud-Lösung von Sage für Angebote, Rechnungen, Buchhaltung und Lohn, mit UStVA per ELSTER und DATEV-Export.
 website: https://www.sage.com/de-de/produkte/sage-active/
 marketAvailability:

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArticleGrid } from "@/components/guides/article-card";
 import { ArticleProductCard } from "@/components/guides/article-product";
 import { ArticleThumbnail } from "@/components/guides/article-thumbnail";
+import { Byline } from "@/components/page/byline";
 import { PageHeader } from "@/components/page/page-header";
 import { Container, Panel } from "@/components/ui/layout";
 import { Eyebrow, Prose } from "@/components/ui/typography";
@@ -13,6 +14,9 @@ import { articleProduct, readingMinutes, relatedArticles, thumbLogos } from "@/l
 import { formatDate } from "@/lib/format";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/site.config";
+import { JsonLd } from "@/components/seo/json-ld";
+import { breadcrumbLd, pageMetadata, personLd, publisher } from "@/lib/seo";
+import { getAuthor } from "@/lib/content";
 
 // Every known slug is prerendered and unknown slugs are answered in src/proxy.ts, so this route
 // may block on navigation instead of streaming a skeleton (docs/DECISIONS.md).
@@ -31,18 +35,15 @@ export async function generateMetadata({
 }: PageProps<"/ratgeber/[slug]">): Promise<Metadata> {
   const guide = load((await params).slug);
   if (!guide) return {};
-  return {
+  return pageMetadata({
     title: guide.title,
     description: guide.description,
-    alternates: { canonical: routes.guide(guide.slug) },
-    openGraph: {
-      type: "article",
-      title: guide.title,
-      description: guide.description,
-      publishedTime: guide.published,
-      modifiedTime: guide.updated,
-    },
-  };
+    path: routes.guide(guide.slug),
+    type: "article",
+    published: guide.published,
+    modified: guide.updated,
+    ownImage: true,
+  });
 }
 
 function SourceLink({ source }: { source: Source }) {
@@ -73,6 +74,7 @@ export default async function GuidePage({ params }: PageProps<"/ratgeber/[slug]"
     (s, i, list) => list.findIndex((o) => o.url === s.url) === i,
   );
 
+  const author = getAuthor(guide.author);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -82,15 +84,25 @@ export default async function GuidePage({ params }: PageProps<"/ratgeber/[slug]"
     dateModified: guide.updated,
     inLanguage: "de-DE",
     mainEntityOfPage: `${siteConfig.brand.url}${routes.guide(guide.slug)}`,
-    publisher: { "@type": "Organization", name: siteConfig.brand.name, url: siteConfig.brand.url },
+    publisher,
+    ...(author ? { author: personLd(author) } : {}),
     citation: allSources.map((s) => s.url),
   };
 
   return (
     <main id="inhalt" className="flex flex-col gap-3 pt-3 sm:gap-4 sm:pt-4">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+      <JsonLd
+        data={[
+          jsonLd,
+          breadcrumbLd(
+            [
+              { label: "Start", href: routes.home() },
+              { label: "Ratgeber", href: routes.guides() },
+              { label: guide.title },
+            ],
+            routes.guide(guide.slug),
+          ),
+        ]}
       />
       <PageHeader
         crumbs={[
@@ -107,7 +119,11 @@ export default async function GuidePage({ params }: PageProps<"/ratgeber/[slug]"
             {guide.updated !== guide.published
               ? `, aktualisiert am ${formatDate(guide.updated)}`
               : ""}
-            {` · ${minutes} Min. Lesezeit · Recherchiert auf den Seiten der Anbieter und in den Gesetzestexten, ohne eigenen Praxistest.`}
+            {` · ${minutes} Min. Lesezeit · `}
+            <Byline author={guide.author} />
+            {
+              " · Recherchiert auf den Seiten der Anbieter und in den Gesetzestexten, ohne eigenen Praxistest."
+            }
           </>
         }
         draft={guide.status === "draft"}

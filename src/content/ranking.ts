@@ -24,7 +24,7 @@ export function rankSoftware<T extends Rankable>(list: readonly T[]): RankingRes
       items: byValue((s) => s.score),
       basis: "score",
       explanation:
-        "Sortiert nach unserer Wertung, bei gleicher Wertung nach Name. Programme ohne Praxistest stehen alphabetisch am Ende.",
+        "Sortiert nach unserer Wertung, bei gleicher Wertung nach Name. Programme ohne Praxistest stehen alphabetisch am Ende. Provisionen haben keinen Einfluss.",
     };
   }
   if (list.some((s) => s.research != null)) {
@@ -39,6 +39,6 @@ export function rankSoftware<T extends Rankable>(list: readonly T[]): RankingRes
     items: [...list].sort(byName),
     basis: "alphabetical",
     explanation:
-      "Sortiert nach Name. Eine Wertung vergeben wir erst nach einem Praxistest, bisher ist keines dieser Programme getestet.",
+      "Sortiert nach Name. Eine Wertung vergeben wir erst nach einem Praxistest, bisher ist keines dieser Programme getestet. Provisionen haben keinen Einfluss.",
   };
 }

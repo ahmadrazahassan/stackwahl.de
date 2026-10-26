@@ -4,10 +4,10 @@ name: BuchhaltungsButler
 vendor: buchhaltungsbutler
 categories:
   - buchhaltungssoftware
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-26
-author: null
+author: dietmar-riedel
 summary: Cloud-Buchhaltung für EÜR und Bilanz mit KI-Belegerkennung, Bankanbindung und Steuerberater-Zugang in allen Paketen.
 website: https://www.buchhaltungsbutler.de
 marketAvailability:

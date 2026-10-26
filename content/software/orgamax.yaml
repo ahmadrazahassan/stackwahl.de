@@ -7,10 +7,10 @@ vendor: deltra
 categories:
   - buchhaltungssoftware
   - rechnungsprogramme
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-26
-author: null
+author: dietmar-riedel
 summary: Bürosoftware aus Detmold für Aufträge, E-Rechnungen, Buchhaltung und Warenwirtschaft, mit Serverstandort Deutschland.
 website: https://www.orgamax.de
 marketAvailability:

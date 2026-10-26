@@ -5,10 +5,10 @@ vendor: fastbill
 categories:
   - rechnungsprogramme
   - buchhaltungssoftware
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-26
-author: null
+author: dietmar-riedel
 summary: Rechnungsprogramm mit Belegverwaltung, E-Rechnung in allen Tarifen, DATEV-Export und Banking ab 9 € im Monat.
 website: https://www.fastbill.com
 marketAvailability:

@@ -6,10 +6,10 @@ vendor: collmex
 categories:
   - buchhaltungssoftware
   - rechnungsprogramme
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-25
-author: null
+author: dietmar-riedel
 summary: Browser-Buchhaltung aus Saarbrücken mit UStVA per ELSTER, E-Rechnung, Online-Banking und DATEV-Format, kostenloser Einstieg, Komplettpaket ab 16,95 €.
 website: https://www.collmex.de/
 marketAvailability:

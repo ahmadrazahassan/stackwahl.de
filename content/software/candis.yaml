@@ -5,10 +5,10 @@ name: Candis
 vendor: candis
 categories:
   - buchhaltungssoftware
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-25
-author: null
+author: dietmar-riedel
 summary: Rechnungseingang aus Berlin mit KI-Erfassung, Freigaben, Archiv und DATEV-Schnittstelle, unbegrenzte Nutzer und Server in Deutschland, ab 389 €.
 website: https://www.candis.io/
 marketAvailability:

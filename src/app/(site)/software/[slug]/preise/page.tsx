@@ -8,6 +8,8 @@ import { costOverview, yearlySaving } from "@/lib/costs";
 import { formatDate, formatEuro } from "@/lib/format";
 import { routes } from "@/lib/routes";
 import { loadProfile } from "../data";
+import { JsonLd } from "@/components/seo/json-ld";
+import { breadcrumbLd, pageMetadata } from "@/lib/seo";
 
 // Every known slug is prerendered and unknown slugs are answered in src/proxy.ts, so this route
 // may block on navigation instead of streaming a skeleton (docs/DECISIONS.md).
@@ -23,11 +25,11 @@ export async function generateMetadata({
   const data = loadProfile((await params).slug);
   if (!data) return {};
   const { software } = data;
-  return {
+  return pageMetadata({
     title: `${software.name} Preise: alle Tarife und Kosten`,
     description: `Alle Tarife von ${software.name} mit Listenpreisen netto und brutto, hochgerechnet auf 12 und 36 Monate. Mit Prüfdatum und Quelle.`,
-    alternates: { canonical: routes.softwarePricing(software.slug) },
-  };
+    path: routes.softwarePricing(software.slug),
+  });
 }
 
 export default async function PricingPage({ params }: PageProps<"/software/[slug]/preise">) {
@@ -38,6 +40,9 @@ export default async function PricingPage({ params }: PageProps<"/software/[slug
 
   return (
     <main id="inhalt" className="flex flex-col gap-3 pt-3 sm:gap-4 sm:pt-4">
+      <JsonLd
+        data={breadcrumbLd([...crumbs, { label: "Preise" }], routes.softwarePricing(software.slug))}
+      />
       <PageHeader
         crumbs={[...crumbs, { label: "Preise" }]}
         eyebrow="Preise"

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
+import { SHOW_DRAFTS } from "@/content/visibility";
 import { Wordmark, type WordmarkOption } from "@/components/brand/wordmark";
 import {
   Arcs,
@@ -126,6 +128,8 @@ const demoNav = buildNavigation({
 });
 
 export default function StyleguidePage() {
+  // Internal page with fictitious demo data: development and preview builds only.
+  if (!SHOW_DRAFTS) notFound();
   const demo = demoSoftware[0];
   return (
     <main id="inhalt" className="flex flex-col gap-3 pt-3 sm:gap-4 sm:pt-4">

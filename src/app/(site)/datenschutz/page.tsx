@@ -62,11 +62,17 @@ export default function PrivacyPage() {
             Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO).
           </p>
           <p>
-            Vertrag über die Auftragsverarbeitung nach Art. 28 DSGVO mit Vercel:{" "}
-            <ConfigValue value={siteConfig.services.hostingDpa} />
-            <br />
-            Speicherdauer der Protokolldaten bei Vercel:{" "}
-            <ConfigValue value={siteConfig.services.hostingLogRetention} />
+            Mit Vercel besteht ein Vertrag über die Auftragsverarbeitung nach Art. 28 DSGVO: Das{" "}
+            <a href="https://vercel.com/legal/dpa" target="_blank" rel="noopener">
+              Data Processing Addendum von Vercel
+            </a>{" "}
+            wird mit Abschluss des Nutzungsvertrags verbindlich und enthält zusätzlich die
+            Standardvertragsklauseln der EU-Kommission (Beschluss 2021/914).
+          </p>
+          <p>
+            Vercel speichert Protokolle der Seitenaufrufe nur für begrenzte Zeit. Laut Vercel
+            beträgt die Speicherdauer je nach Tarif zwischen einer Stunde und 30 Tagen. Wir werten
+            diese Protokolle nur aus, um Fehler und Angriffe zu erkennen.
           </p>
         </Prose>
       </PageSection>

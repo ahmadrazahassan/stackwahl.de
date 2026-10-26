@@ -26,8 +26,8 @@ export default function AboutPage() {
         <Prose>
           <p>
             Wir wollen Vergleiche, bei denen Sie jede Angabe selbst nachprüfen können: jede Angabe
-            mit Quelle und Datum, eine Wertung nur nach einem Praxistest und eine Reihenfolge, die
-            keine Provision verschieben kann.
+            mit Quelle und Datum, eine Wertung nach veröffentlichter Formel statt nach Bauchgefühl
+            und eine Reihenfolge, die keine Provision verschieben kann.
           </p>
           <p>
             Unser Schwerpunkt ist der deutsche Markt: GoBD, E-Rechnung, DATEV, ELSTER und die Frage,
@@ -41,7 +41,8 @@ export default function AboutPage() {
           <p>
             Stackwahl wird betrieben von {legal.ownerName}, {legal.street}, {legal.postalCode}{" "}
             {legal.city}. Alle Pflichtangaben stehen im{" "}
-            <Link href={routes.imprint()}>Impressum</Link>.
+            <Link href={routes.imprint()}>Impressum</Link>. Wer Profile und Ratgeber verantwortet,
+            steht in der <Link href={routes.editorial()}>Redaktion</Link>.
           </p>
         </Prose>
       </PageSection>

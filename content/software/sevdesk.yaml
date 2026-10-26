@@ -5,10 +5,10 @@ vendor: sevdesk
 categories:
   - buchhaltungssoftware
   - rechnungsprogramme
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-25
-author: null
+author: dietmar-riedel
 summary: Cloud-Buchhaltung mit kostenlosem E-Rechnungs-Tarif, DATEV-Schnittstelle ab dem kleinsten Bezahltarif und UStVA per ELSTER.
 website: https://sevdesk.de
 marketAvailability:

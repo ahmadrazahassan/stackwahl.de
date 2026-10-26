@@ -4,4 +4,4 @@ description: Programme für Angebote, Rechnungen und Mahnungen, inklusive E-Rech
 intro: >-
   Ein Rechnungsprogramm erstellt Angebote, Rechnungen und Mahnungen und behält offene Posten im Blick. Seit 2025 müssen Unternehmen in Deutschland E-Rechnungen empfangen können, die Pflicht zum Versand folgt in Stufen. Das Programm sollte deshalb XRechnung und ZUGFeRD beherrschen.
 launchOrder: 2
-status: draft
+status: published

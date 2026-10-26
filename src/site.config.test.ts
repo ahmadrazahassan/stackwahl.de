@@ -10,8 +10,8 @@ describe("siteConfig", () => {
     expect(siteConfig.brand.locale).toBe("de-DE");
   });
 
-  it("keeps indexing off until launch", () => {
-    expect(siteConfig.features.indexing).toBe(false);
+  it("is indexable for the launch", () => {
+    expect(siteConfig.features.indexing).toBe(true);
   });
 
   it("lists open placeholders", () => {

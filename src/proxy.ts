@@ -17,5 +17,6 @@ export const config = {
     "/kategorien/:slug/:rest*",
     "/glossar/:slug/:rest*",
     "/ratgeber/:slug/:rest*",
+    "/redaktion/:slug/:rest*",
   ],
 };

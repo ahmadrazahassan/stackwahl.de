@@ -21,6 +21,8 @@ const PAGES = [
   "/glossar",
   "/glossar/e-rechnung",
   "/methodik",
+  "/redaktion",
+  "/redaktion/dietmar-riedel",
   "/transparenz",
   "/ueber-uns",
   "/kontakt",
@@ -86,7 +88,11 @@ test.describe("Templates", () => {
     const wertung = page.getByRole("region", { name: /So entsteht die Wertung für sevdesk/ });
     await expect(wertung.getByText("Erst nach einem Praxistest")).toBeVisible();
     await expect(page.getByText(/noch nicht in einem eigenen Konto ausprobiert/)).toBeVisible();
-    await expect(page.getByText("Entwurf, nicht veröffentlicht")).toBeVisible();
+    await expect(page.getByText("Entwurf, nicht veröffentlicht")).toHaveCount(0);
+    await expect(page.getByRole("link", { name: "Dietmar Riedel" }).first()).toHaveAttribute(
+      "href",
+      "/redaktion/dietmar-riedel",
+    );
     const vendor = page.getByRole("link", { name: /Zum Anbieter/ });
     await expect(vendor).toHaveAttribute("rel", "noopener");
     await expect(page.getByRole("navigation", { name: "Abschnitte des Profils" })).toBeVisible();
@@ -142,5 +148,32 @@ test.describe("Templates", () => {
     expect(xml).toContain("https://stackwahl.de/software/sevdesk</loc>");
     expect(xml).not.toContain("/alternativen");
     expect(xml).not.toContain("/intern/");
+  });
+});
+
+test.describe("Redaktion and SEO", () => {
+  test("editor page lists everything the editor is responsible for", async ({ page }) => {
+    await page.goto("/redaktion/dietmar-riedel");
+    await expect(page.getByRole("heading", { level: 1 })).toContainText("Dietmar Riedel");
+    await expect(page.getByText(/Verantwortet 20 Softwareprofile/)).toBeVisible();
+    await expect(page.getByText(/Verantwortet 10 Ratgeber/)).toBeVisible();
+  });
+
+  test("profiles carry breadcrumbs, software data and their own social image", async ({
+    page,
+    request,
+  }) => {
+    await page.goto("/software/sage-active");
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join(
+      " ",
+    );
+    expect(ld).toContain('"@type":"BreadcrumbList"');
+    expect(ld).toContain('"@type":"SoftwareApplication"');
+    // No rating markup: the Recherche-Wertung is not a user or test rating.
+    expect(ld).not.toContain("aggregateRating");
+    const image = await page.locator('meta[property="og:image"]').getAttribute("content");
+    const response = await request.get(new URL(image!).pathname + new URL(image!).search);
+    expect(response.status()).toBe(200);
+    expect(response.headers()["content-type"]).toContain("image/png");
   });
 });

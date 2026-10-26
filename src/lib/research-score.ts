@@ -112,7 +112,7 @@ export const POINTS_PER_DOUBLING = 2;
 export const FREE_PLAN_BONUS = 1;
 const VAT = 1.19;
 
-export type ScoreItem = { label: string; status: FactStatus; points: number };
+export type ScoreItem = { label: string; status: FactStatus; points: number; note?: string };
 
 export type EntryPrice = {
   planName: string;
@@ -159,7 +159,12 @@ function itemFor(software: ScorableSoftware, item: Item): ScoreItem {
     item.kind === "feature" ? software.features[item.key] : software.compliance[item.key];
   const status = fact?.status ?? "unbekannt";
   const label = item.kind === "feature" ? FEATURES[item.key].label : COMPLIANCE[item.key].label;
-  return { label, status, points: STATUS_POINTS[status] };
+  return {
+    label,
+    status,
+    points: STATUS_POINTS[status],
+    ...(fact?.note ? { note: fact.note } : {}),
+  };
 }
 
 /** Share of the possible points, on the 0 to 10 scale. */
@@ -202,8 +207,16 @@ export function pricePoints(
   return clamp(base + bonus, 0, 10);
 }
 
-export function researchScore(software: ScorableSoftware): ResearchScore | null {
-  const category = software.categories[0];
+/**
+ * Score against the needs of one category: by default the main (first) category; a category
+ * page passes its own slug, so every program in its list is measured by the same rules.
+ */
+export function researchScore(
+  software: ScorableSoftware,
+  forCategory?: string,
+): ResearchScore | null {
+  const category =
+    forCategory && software.categories.includes(forCategory) ? forCategory : software.categories[0];
   if (!isScoredCategory(category)) return null;
 
   const features = FEATURE_SETS[category].map((i) => itemFor(software, i));

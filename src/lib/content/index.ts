@@ -49,6 +49,10 @@ export function getAuthor(slug: string | null) {
   return slug ? allAuthors.find((a) => a.slug === slug) : undefined;
 }
 
+export function getAuthors() {
+  return [...allAuthors].sort((a, b) => a.name.localeCompare(b.name, "de"));
+}
+
 export function getAllCategories() {
   return allCategories.filter((c) => isVisible(c)).sort((a, b) => a.launchOrder - b.launchOrder);
 }
@@ -98,10 +102,20 @@ export function editorialScore(software: Software): number | null {
   return weightedScore(SCORE_CRITERIA.map((k) => ({ weight: k.weight, value: values[k.key] })));
 }
 
+/** Highest published monthly price of any plan, for the price range in structured data. */
+export function highestPriceCents(software: Software): number | null {
+  const prices = software.plans.flatMap((p) =>
+    [p.monthlyCents, p.yearlyMonthlyCents].filter((v): v is number => v !== null && v > 0),
+  );
+  return prices.length > 0 ? Math.max(...prices) : null;
+}
+
 /** Maps a content record to the UI summary used by cards and headers. */
 export function toSummary(
   software: Software,
   affiliateEnabled = siteConfig.features.affiliateLinks,
+  /** Category whose requirements the Recherche-Wertung uses (category pages). */
+  scoreCategory?: string,
 ): SoftwareSummary {
   const vendor = getVendor(software.vendor);
   const category = getCategory(software.categories[0]);
@@ -124,7 +138,7 @@ export function toSummary(
     vendor: vendor?.name ?? software.vendor,
     category: category?.name ?? software.categories[0],
     score: editorialScore(software),
-    research: researchScore(software)?.total ?? null,
+    research: researchScore(software, scoreCategory)?.total ?? null,
     priceFromCents: entryPriceCents(software),
     freePlan: software.freePlan,
     priceNet: cheapest.plan.net,

@@ -4,10 +4,10 @@ name: easybill
 vendor: easybill
 categories:
   - rechnungsprogramme
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-26
-author: null
+author: dietmar-riedel
 summary: Rechnungsprogramm mit dauerhaft kostenlosem Einstieg, E-Rechnung, DATEV-Anbindung und Automatisierung für Onlinehändler.
 website: https://www.easybill.de
 marketAvailability:

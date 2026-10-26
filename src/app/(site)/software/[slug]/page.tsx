@@ -1,6 +1,7 @@
 import { Check, CircleHelp, ExternalLink, Minus, X } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Byline } from "@/components/page/byline";
 import { PageSection } from "@/components/page/page-header";
 import { ComplianceChecklist } from "@/components/software/compliance-checklist";
 import { PriceTable } from "@/components/software/price-table";
@@ -20,6 +21,7 @@ import { cn } from "@/lib/cn";
 import {
   alternativesFor,
   factsCheckedAt,
+  highestPriceCents,
   featureGroups,
   getAllSoftware,
   profileSources,
@@ -33,6 +35,8 @@ import { formatDate } from "@/lib/format";
 import { researchScore } from "@/lib/research-score";
 import { routes } from "@/lib/routes";
 import { loadProfile } from "./data";
+import { JsonLd } from "@/components/seo/json-ld";
+import { breadcrumbLd, pageMetadata, softwareLd } from "@/lib/seo";
 
 // Every known slug is prerendered and unknown slugs are answered in src/proxy.ts, so this route
 // may block on navigation instead of streaming a skeleton (docs/DECISIONS.md).
@@ -48,11 +52,12 @@ export async function generateMetadata({
   const data = loadProfile((await params).slug);
   if (!data) return {};
   const { software } = data;
-  return {
+  return pageMetadata({
     title: `${software.name}: Preise, Funktionen, Vor- und Nachteile`,
     description: software.summary,
-    alternates: { canonical: routes.software(software.slug) },
-  };
+    path: routes.software(software.slug),
+    ownImage: true,
+  });
 }
 
 const allSections = [
@@ -145,6 +150,22 @@ export default async function SoftwarePage({ params }: PageProps<"/software/[slu
 
   return (
     <main id="inhalt" className="flex flex-col gap-3 pt-3 sm:gap-4 sm:pt-4">
+      <JsonLd
+        data={[
+          breadcrumbLd(crumbs, routes.software(software.slug)),
+          softwareLd({
+            name: software.name,
+            summary: software.summary,
+            path: routes.software(software.slug),
+            vendorName: vendor?.name ?? software.name,
+            website: software.website,
+            cloud: software.deployment.includes("cloud"),
+            lowPriceCents: summary.priceFromCents,
+            highPriceCents: highestPriceCents(software),
+            priceDate: summary.priceCheckedAt,
+          }),
+        ]}
+      />
       <Panel>
         <Container className="pt-12 sm:pt-16">
           <Breadcrumbs
@@ -198,7 +219,8 @@ export default async function SoftwarePage({ params }: PageProps<"/software/[slu
             </div>
             <p className="rounded-card bg-bg p-5 text-small text-muted">
               Recherchiert auf den Seiten des Anbieters, Stand {formatDate(software.lastReviewed)}.
-              Wir haben dieses Programm noch nicht in einem eigenen Konto ausprobiert.
+              Wir haben dieses Programm noch nicht in einem eigenen Konto ausprobiert.{" "}
+              <Byline author={software.author} />.
             </p>
           </div>
           <dl className="text-body">

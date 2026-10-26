@@ -1,5 +1,7 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { ConfigValue, LegalDraftNotice } from "@/components/page/legal";
+import { isPlaceholder } from "@/lib/placeholders";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { Prose } from "@/components/ui/typography";
 import { routes } from "@/lib/routes";
@@ -47,10 +49,14 @@ export default function ImprintPage() {
           <Row term="E-Mail">
             <ConfigValue value={legal.email} />
           </Row>
-          <Row term="Telefon">
-            <ConfigValue value={legal.phone} />
+          {/* Phone and VAT ID are optional (§ 5 DDG): shown once the owner provides them. */}
+          {!isPlaceholder(legal.phone) ? <Row term="Telefon">{legal.phone}</Row> : null}
+          <Row term="Kontaktformular">
+            <Link href={routes.contact()} className="underline decoration-1 underline-offset-4">
+              Zur Kontaktseite
+            </Link>
           </Row>
-          {legal.vatId !== null ? (
+          {legal.vatId !== null && !isPlaceholder(legal.vatId) ? (
             <Row term="Umsatzsteuer-Identifikationsnummer">
               <ConfigValue value={legal.vatId} />
             </Row>

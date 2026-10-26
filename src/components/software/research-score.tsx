@@ -181,6 +181,9 @@ export function ResearchScoreBreakdown({
                       <span>
                         {item.label}
                         <span className="text-muted">: {statusText[item.status]}</span>
+                        {item.note ? (
+                          <span className="mt-1 block text-muted">{item.note}</span>
+                        ) : null}
                       </span>
                     </span>
                     <span className="shrink-0 text-muted tabular">

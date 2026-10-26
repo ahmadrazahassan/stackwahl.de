@@ -5,10 +5,10 @@ name: Sage 50 Handwerk
 vendor: sage
 categories:
   - rechnungsprogramme
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-25
-author: null
+author: dietmar-riedel
 summary: Handwerkersoftware von Sage für Angebote, Aufmaß, Projekte und Abschlagsrechnungen, mit E-Rechnung und GAEB, ab 19,90 € im Monat.
 website: https://www.sage.com/de-de/produkte/sage-50-handwerk/
 marketAvailability:

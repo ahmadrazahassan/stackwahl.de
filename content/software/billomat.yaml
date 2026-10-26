@@ -4,10 +4,10 @@ name: Billomat
 vendor: aifinyo
 categories:
   - rechnungsprogramme
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-26
-author: null
+author: dietmar-riedel
 summary: Cloud-Rechnungsprogramm der aifinyo AG mit E-Rechnung, Banking und DATEV Buchungsdatenservice, ab 19 € im Monat.
 website: https://www.billomat.com
 marketAvailability:

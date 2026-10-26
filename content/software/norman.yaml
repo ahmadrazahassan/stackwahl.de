@@ -6,10 +6,10 @@ vendor: norman
 categories:
   - buchhaltungssoftware
   - rechnungsprogramme
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-25
-author: null
+author: dietmar-riedel
 summary: KI-Buchhaltung aus Berlin mit kostenlosem Tarif, E-Rechnung, UStVA per ELSTER-Schnittstelle und Jahresabschluss für GmbHs, ab 9 € im Monat.
 website: https://norman.finance/de
 marketAvailability:

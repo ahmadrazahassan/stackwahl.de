@@ -8,9 +8,9 @@ definition: >-
   Vorauszahlung ist ebenfalls am zehnten Tag nach Ablauf des Zeitraums fällig. Die amtliche
   Schnittstelle ist ELSTER. Viele Buchhaltungsprogramme erstellen die Voranmeldung aus den
   Buchungen und senden sie direkt.
-status: draft
+status: published
 lastReviewed: 2026-10-24
-author: null
+author: dietmar-riedel
 related:
   - kleinunternehmerregelung
   - einnahmen-ueberschuss-rechnung

@@ -28,6 +28,8 @@ import { newsletterAvailable } from "@/lib/forms/availability";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/site.config";
 import { subscribeNewsletter } from "./newsletter/actions";
+import { JsonLd } from "@/components/seo/json-ld";
+import { organizationLd, websiteLd } from "@/lib/seo";
 
 const pillars = [
   {
@@ -96,6 +98,7 @@ export default function HomePage() {
 
   return (
     <main id="inhalt" className="flex flex-col gap-3 pt-3 sm:gap-4 sm:pt-4">
+      <JsonLd data={[organizationLd(), websiteLd()]} />
       <Panel as="section" aria-labelledby="start-titel">
         <Container className="pt-16 pb-10 sm:pt-24 lg:pt-32">
           <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
@@ -210,8 +213,9 @@ export default function HomePage() {
             <p className="mt-6 max-w-[62ch] text-body text-muted">
               Wir lesen die Preisseiten, Funktionslisten und Datenschutzangaben der Anbieter selbst
               und speichern zu jeder Angabe die Quelle und das Prüfdatum. Was ein Anbieter nicht
-              angibt, steht bei uns als „Keine Angabe“, nicht als Nein. Eine Wertung gibt es erst
-              nach einem Praxistest.
+              angibt, steht bei uns als „Keine Angabe“, nicht als Nein. Aus diesen Angaben berechnen
+              wir nach fester Formel die Recherche-Wertung; eine Note für die Bedienung vergeben wir
+              erst nach einem Praxistest.
             </p>
             <ArrowLink href={routes.methodology()} className="mt-6">
               Methodik lesen

@@ -20,7 +20,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: brand.name,
+    title: `${brand.name}: ${brand.tagline}`,
+    description:
+      "Unabhängige Vergleiche von Business-Software für Unternehmen in Deutschland: Funktionen, Preise, Vor- und Nachteile, mit Quelle für jede Angabe.",
+    url: brand.url,
   },
+  twitter: { card: "summary_large_image" },
+  alternates: { canonical: "/" },
+  formatDetection: { telephone: false },
 };
 
 export const viewport: Viewport = {

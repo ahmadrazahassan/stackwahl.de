@@ -2,11 +2,14 @@ import { ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Byline } from "@/components/page/byline";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { Prose } from "@/components/ui/typography";
 import { getGlossary, getTerm, PLACEHOLDER_SLUG, staticSlugs } from "@/lib/content";
 import { formatDate } from "@/lib/format";
 import { routes } from "@/lib/routes";
+import { JsonLd } from "@/components/seo/json-ld";
+import { absoluteUrl, breadcrumbLd, pageMetadata } from "@/lib/seo";
 
 // Every known slug is prerendered and unknown slugs are answered in src/proxy.ts, so this route
 // may block on navigation instead of streaming a skeleton (docs/DECISIONS.md).
@@ -25,11 +28,11 @@ export async function generateMetadata({
 }: PageProps<"/glossar/[slug]">): Promise<Metadata> {
   const term = load((await params).slug);
   if (!term) return {};
-  return {
+  return pageMetadata({
     title: `${term.term}: Erklärung`,
     description: term.short,
-    alternates: { canonical: routes.glossaryTerm(term.slug) },
-  };
+    path: routes.glossaryTerm(term.slug),
+  });
 }
 
 export default async function TermPage({ params }: PageProps<"/glossar/[slug]">) {
@@ -39,6 +42,26 @@ export default async function TermPage({ params }: PageProps<"/glossar/[slug]">)
 
   return (
     <main id="inhalt" className="flex flex-col gap-3 pt-3 sm:gap-4 sm:pt-4">
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "DefinedTerm",
+            name: term.term,
+            description: term.short,
+            url: absoluteUrl(routes.glossaryTerm(term.slug)),
+            inDefinedTermSet: absoluteUrl(routes.glossary()),
+          },
+          breadcrumbLd(
+            [
+              { label: "Start", href: routes.home() },
+              { label: "Glossar", href: routes.glossary() },
+              { label: term.term },
+            ],
+            routes.glossaryTerm(term.slug),
+          ),
+        ]}
+      />
       <PageHeader
         crumbs={[
           { label: "Start", href: routes.home() },
@@ -48,7 +71,11 @@ export default async function TermPage({ params }: PageProps<"/glossar/[slug]">)
         eyebrow="Glossar"
         title={term.term}
         lead={term.short}
-        meta={`Stand ${formatDate(term.lastReviewed)}`}
+        meta={
+          <>
+            Stand {formatDate(term.lastReviewed)} · <Byline author={term.author} />
+          </>
+        }
         draft={term.status === "draft"}
       />
       <PageSection id="erklaerung" label="Erklärung" title={`Was ${term.term} bedeutet`}>

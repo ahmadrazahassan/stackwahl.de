@@ -21,6 +21,8 @@ import {
   toSummary,
 } from "@/lib/content";
 import { routes } from "@/lib/routes";
+import { JsonLd } from "@/components/seo/json-ld";
+import { breadcrumbLd, itemListLd, pageMetadata } from "@/lib/seo";
 
 // Every known slug is prerendered and unknown slugs are answered in src/proxy.ts, so this route
 // may block on navigation instead of streaming a skeleton (docs/DECISIONS.md).
@@ -42,11 +44,11 @@ export async function generateMetadata({
 }: PageProps<"/kategorien/[slug]">): Promise<Metadata> {
   const data = liveCategory((await params).slug);
   if (!data) return {};
-  return {
-    title: `${data.category.name} im Vergleich`,
+  return pageMetadata({
+    title: `${data.category.name} im Vergleich: ${data.software.length} Programme mit Preisen`,
     description: data.category.description,
-    alternates: { canonical: routes.category(data.category.slug) },
-  };
+    path: routes.category(data.category.slug),
+  });
 }
 
 const factLabel: Record<FactStatus, string> = {
@@ -62,7 +64,8 @@ export default async function CategoryPage({ params }: PageProps<"/kategorien/[s
   if (!data) notFound();
   const { category, software } = data;
 
-  const summaries = software.map((s) => toSummary(s));
+  // Every program is scored against this category's requirements, so the list is comparable.
+  const summaries = software.map((s) => toSummary(s, undefined, category.slug));
   const ranking = rankSoftware(summaries);
   const ordered = ranking.items.map((summary) => software.find((s) => s.slug === summary.slug)!);
   const latest = software
@@ -112,6 +115,22 @@ export default async function CategoryPage({ params }: PageProps<"/kategorien/[s
 
   return (
     <main id="inhalt" className="flex flex-col gap-3 pt-3 sm:gap-4 sm:pt-4">
+      <JsonLd
+        data={[
+          breadcrumbLd(
+            [
+              { label: "Start", href: routes.home() },
+              { label: "Kategorien", href: routes.categories() },
+              { label: category.name },
+            ],
+            routes.category(category.slug),
+          ),
+          itemListLd(
+            `${category.name} im Vergleich`,
+            ordered.map((s) => ({ name: s.name, path: routes.software(s.slug) })),
+          ),
+        ]}
+      />
       <PageHeader
         crumbs={[
           { label: "Start", href: routes.home() },
@@ -133,7 +152,7 @@ export default async function CategoryPage({ params }: PageProps<"/kategorien/[s
               Die Programme
             </h2>
             <p className="max-w-[60ch] text-small text-muted">
-              {ranking.explanation} Provisionen beeinflussen die Reihenfolge nicht.{" "}
+              {ranking.explanation}{" "}
               <Link
                 href={routes.methodology()}
                 className="underline decoration-1 underline-offset-4 hover:text-ink"

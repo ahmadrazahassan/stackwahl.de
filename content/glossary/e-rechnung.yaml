@@ -8,9 +8,9 @@ definition: >-
   ihr der strukturierte Datensatz fehlt. In Deutschland verbreitete Formate sind XRechnung und
   ZUGFeRD. Ob eine Software E-Rechnungen nur erstellen oder auch empfangen und auslesen kann,
   steht in jedem Softwareprofil unter Rechtssicherheit.
-status: draft
+status: published
 lastReviewed: 2026-10-24
-author: null
+author: dietmar-riedel
 related:
   - kleinunternehmerregelung
   - aufbewahrungsfristen

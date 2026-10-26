@@ -6,10 +6,10 @@ vendor: sage
 categories:
   - buchhaltungssoftware
   - erp-software
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-25
-author: null
+author: dietmar-riedel
 summary: Buchhaltung, Warenwirtschaft und Auftragsbearbeitung von Sage für kleine Betriebe, mit E-Rechnung, DATEV-Schnittstelle und ab 35 € je Arbeitsplatz.
 website: https://www.sage.com/de-de/produkte/sage-50connected/
 marketAvailability:

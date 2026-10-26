@@ -6,10 +6,10 @@ vendor: lexware
 categories:
   - buchhaltungssoftware
   - rechnungsprogramme
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-26
-author: null
+author: dietmar-riedel
 summary: Cloud-Software von Lexware (früher lexoffice) für Belege, E-Rechnungen, Buchhaltung und optionale Lohnabrechnung in vier Versionen.
 website: https://www.lexware.de
 marketAvailability:

@@ -8,9 +8,9 @@ definition: >-
   100.000 Euro nicht überschreitet. Kleinunternehmer weisen auf ihren Rechnungen keine Umsatzsteuer
   aus und können im Gegenzug keine Vorsteuer abziehen. Rechnungsprogramme sollten die Regelung
   deshalb als Einstellung anbieten, damit der passende Hinweis auf jeder Rechnung steht.
-status: draft
+status: published
 lastReviewed: 2026-10-24
-author: null
+author: dietmar-riedel
 related:
   - umsatzsteuer-voranmeldung
   - e-rechnung

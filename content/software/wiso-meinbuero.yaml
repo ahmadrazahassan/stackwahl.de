@@ -6,10 +6,10 @@ vendor: buhl
 categories:
   - buchhaltungssoftware
   - rechnungsprogramme
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-26
-author: null
+author: dietmar-riedel
 summary: Web-Bürosoftware von Buhl mit E-Rechnung, UStVA per ELSTER und DATEV-Schnittstelle schon im kleinsten Plan, nur im Jahresabo.
 website: https://www.meinbuero.de
 marketAvailability:

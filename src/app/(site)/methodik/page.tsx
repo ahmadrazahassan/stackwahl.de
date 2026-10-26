@@ -178,7 +178,9 @@ export default function MethodologyPage() {
           <p>
             Gemessen wird jedes Programm an den Anforderungen seiner Hauptkategorie, also der ersten
             Kategorie im Profil. Ein Rechnungsprogramm muss keine Umsatzsteuer-Voranmeldung senden,
-            eine Buchhaltungssoftware schon.
+            eine Buchhaltungssoftware schon. Auf einer Kategorieseite gelten für alle Programme die
+            Anforderungen dieser Kategorie, damit die Liste vergleichbar ist. Ein Programm in zwei
+            Kategorien kann dort deshalb eine andere Wertung haben als im Profil.
           </p>
           {SCORED_CATEGORIES.map((slug) => (
             <div key={slug}>

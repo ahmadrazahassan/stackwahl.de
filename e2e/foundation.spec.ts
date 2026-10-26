@@ -2,12 +2,24 @@ import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
 test.describe("Foundation", () => {
-  test("home renders in German and is noindex before launch", async ({ page }) => {
+  test("home renders in German and is indexable with canonical and social image", async ({
+    page,
+  }) => {
     await page.goto("/");
     await expect(page.locator("html")).toHaveAttribute("lang", "de");
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     await expect(page).toHaveTitle(/Stackwahl/);
-    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "index, follow");
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+      "href",
+      "https://stackwahl.de",
+    );
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+      "content",
+      /opengraph-image/,
+    );
+    const ld = await page.locator('script[type="application/ld+json"]').allTextContents();
+    expect(ld.join(" ")).toContain('"@type":"WebSite"');
   });
 
   test("skip link moves focus to the main content", async ({ page, isMobile }) => {
@@ -32,9 +44,18 @@ test.describe("Foundation", () => {
     }
   });
 
-  test("robots.txt blocks everything before launch", async ({ request }) => {
-    const response = await request.get("/robots.txt");
-    expect(await response.text()).toContain("Disallow: /");
+  test("robots.txt allows the site, blocks redirects and points to the sitemap", async ({
+    request,
+  }) => {
+    const robots = await (await request.get("/robots.txt")).text();
+    expect(robots).toContain("Allow: /");
+    expect(robots).toContain("Disallow: /go/");
+    expect(robots).not.toMatch(/^Disallow: \/\s*$/m);
+    expect(robots).toContain("Sitemap: https://stackwahl.de/sitemap.xml");
+    const sitemap = await (await request.get("/sitemap.xml")).text();
+    expect(sitemap).toContain("https://stackwahl.de/software/sage-active");
+    expect(sitemap).toContain("https://stackwahl.de/redaktion/dietmar-riedel");
+    expect(sitemap).not.toContain("/alternativen");
   });
 
   test("has no axe violations (WCAG 2.2 AA)", async ({ page }) => {

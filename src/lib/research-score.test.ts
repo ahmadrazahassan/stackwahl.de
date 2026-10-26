@@ -144,6 +144,21 @@ describe("researchScore", () => {
     expect(score.criteria.find((c) => c.key === "preis")?.value).toBe(8.3);
   });
 
+  it("scores against another listed category on request, never an unlisted one", () => {
+    const both = software({ categories: ["rechnungsprogramme", "buchhaltungssoftware"] });
+    expect(researchScore(both)?.category).toBe("rechnungsprogramme");
+    expect(researchScore(both, "buchhaltungssoftware")?.category).toBe("buchhaltungssoftware");
+    expect(researchScore(both, "erp-software")?.category).toBe("rechnungsprogramme");
+  });
+
+  it("keeps the vendor note of each fact", () => {
+    const withNote = software({
+      compliance: { ...compliance("ja"), elster: { status: "nein", note: "Erst ab Pro.", source } },
+    });
+    const legal = researchScore(withNote)!.criteria.find((c) => c.key === "rechtssicherheit")!;
+    expect(legal.items.find((i) => i.status === "nein")?.note).toBe("Erst ab Pro.");
+  });
+
   it("uses the main category and returns null for categories without a rule set", () => {
     expect(researchScore(software({ categories: ["erp-software"] }))?.category).toBe(
       "erp-software",

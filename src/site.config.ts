@@ -38,16 +38,12 @@ const siteConfigSchema = z.object({
     database: openString,
     analytics: openString,
     affiliateNetworks: openString,
-    /** Date the Vercel DPA was concluded, or a placeholder until then. */
-    hostingDpa: openString,
-    /** How long the host keeps request logs (from the host's documentation). */
-    hostingLogRetention: openString,
   }),
   score: z.object({
     name: openString,
   }),
   features: z.object({
-    // Stays false until launch (Section 11): every page is noindex.
+    // false blocks every page (noindex and robots.txt); true since the launch preparation.
     indexing: z.boolean(),
     newsletter: z.boolean(),
     userReviews: z.boolean(),
@@ -98,14 +94,12 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
     database: "{{DATABASE_PROVIDER}}",
     analytics: "{{ANALYTICS_PROVIDER}}",
     affiliateNetworks: "{{AFFILIATE_NETWORKS}}",
-    hostingDpa: "{{HOSTING_DPA}}",
-    hostingLogRetention: "{{HOSTING_LOG_RETENTION}}",
   },
   score: {
     name: "Stackwahl-Wertung",
   },
   features: {
-    indexing: false,
+    indexing: true,
     newsletter: true,
     userReviews: false,
     consultationRequest: false,

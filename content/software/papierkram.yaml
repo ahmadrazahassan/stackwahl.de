@@ -5,10 +5,10 @@ vendor: odacer
 categories:
   - buchhaltungssoftware
   - rechnungsprogramme
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-26
-author: null
+author: dietmar-riedel
 summary: Online-Buchhaltung mit kostenlosem Einstieg, E-Rechnung in allen Paketen, EÜR, UStVA und Kleinunternehmerregelung.
 website: https://www.papierkram.de
 marketAvailability:

@@ -1,3 +1,4 @@
+import { SHOW_DRAFTS } from "@/content/visibility";
 import { isPlaceholder } from "@/lib/placeholders";
 import { siteConfig } from "@/site.config";
 
@@ -18,9 +19,12 @@ export function ConfigValue({ value }: { value: string | null }) {
   return <>{value}</>;
 }
 
-/** Shown on every legal page until a lawyer has reviewed the texts (Section 9). */
+/**
+ * Internal reminder on every legal page until a lawyer has reviewed the texts (Section 9).
+ * Only in development and preview builds; the review status is tracked in CONTENT_STATUS.
+ */
 export function LegalDraftNotice() {
-  if (siteConfig.features.legalReviewed) return null;
+  if (siteConfig.features.legalReviewed || !SHOW_DRAFTS) return null;
   return (
     <p className="rounded-card border border-dashed border-negative p-4 text-small text-negative">
       Entwurf: Dieser Text ist noch nicht anwaltlich geprüft und wird vor dem Start der Website

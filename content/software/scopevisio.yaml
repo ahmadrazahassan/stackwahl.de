@@ -6,10 +6,10 @@ vendor: scopevisio
 categories:
   - erp-software
   - buchhaltungssoftware
-status: draft
-verification: unverified
+status: published
+verification: verified
 lastReviewed: 2026-10-25
-author: null
+author: dietmar-riedel
 summary: Cloud-ERP aus Bonn für den Mittelstand mit Finanzbuchhaltung, DMS, Projekten und Abrechnung, Rechenzentrum in Frankfurt und GoBD-Testat.
 website: https://www.scopevisio.com/
 marketAvailability:
