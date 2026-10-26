@@ -7,7 +7,7 @@ categories:
   - buchhaltungssoftware
 status: draft
 verification: unverified
-lastReviewed: 2026-10-25
+lastReviewed: 2026-10-26
 author: null
 summary: Rechnungsprogramm mit Belegverwaltung, E-Rechnung in allen Tarifen, DATEV-Export und Banking ab 9 € im Monat.
 website: https://www.fastbill.com
@@ -193,3 +193,84 @@ logo:
   height: 126
   sourceUrl: https://www.fastbill.com/presse
   accessed: 2026-10-25
+review:
+  sections:
+    - id: einordnung
+      title: Was FastBill ist und für wen es gedacht ist
+      paragraphs:
+        - FastBill ist ein Rechnungs- und Belegprogramm der FastBill GmbH aus Frankfurt am Main, das im Browser läuft. Der Schwerpunkt liegt auf Angeboten, Rechnungen, E-Rechnungen, Mahnungen und einer digitalen Belegverwaltung, aus der die Daten an die Steuerberatung gehen. Eine vollständige Finanzbuchhaltung mit Bilanz gehört nicht zum beschriebenen Umfang. Laut Funktionsseite erledigen Sie in FastBill die Vorkontierung oder schicken die erfassten Belege per DATEV-Schnittstelle an die Steuerberatung.
+        - Die Tarife wachsen mit der Automatisierung. Solo richtet sich an Solopreneure, Plus verbessert Dokumentenverwaltung und Kundenzusammenarbeit, Pro ergänzt Teamfunktionen und wiederkehrende Rechnungen, Premium beschreibt FastBill als Buchhaltungsassistenten mit automatischem Belegimport, Bankabgleich und Mahnwesen.
+      sources:
+        - &preise2
+          url: https://www.fastbill.com/preise
+          title: FastBill Preise und Funktionsvergleich
+          accessed: 2026-10-26
+        - &funktionen
+          url: https://www.fastbill.com/funktionen
+          title: FastBill Funktionen
+          accessed: 2026-10-26
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Rechnungen und Angebote entstehen mit einem Layouteditor, in dem Sie Logo, Briefpapier und sogar eine eigene Schriftart hinterlegen. Ab Plus sind unbegrenzt viele Vorlagen möglich, außerdem Auftragsbestätigungen, Lieferscheine, Rechnungsanhänge, Rechnungen in anderen Währungen und die Umwandlung von Dokumenten in andere Typen. Zahlungsfristen werden je Kunde übernommen, Produkte und Leistungen aus einem Katalog eingefügt. Rechnungen gehen per E-Mail oder per Post hinaus, Kunden rufen sie im Kundencenter ab und bezahlen dort ab Tarif Pro.
+        - Der Status jeder Rechnung ist farblich markiert, bezahlt, offen, fällig oder gemahnt. Zahlungserinnerungen und drei Mahnstufen gibt es in allen Tarifen, das vollautomatische Mahnwesen als Add-on oder im Tarif Premium mit 20 Vorgängen. Wiederkehrende Rechnungen und Aborechnungen gibt es ab Pro.
+        - Belege erfassen Sie per Scan-App, per E-Mail-Inbox ab Pro, per Upload oder im Tarif Premium vollautomatisch aus Portalen wie Amazon und DHL, laut Anbieter aus mehr als 10.000 Portalen. FastBill erkennt Texte und Metadaten und lernt bei der Kategorisierung mit. Bankkonten werden in einer Timeline dargestellt, ein Zahlungsabgleich schlägt passende Belege und Rechnungen vor, im Tarif Premium läuft der Abgleich automatisch.
+        - Eine Zeiterfassung für eigene Arbeitszeiten und die von Mitarbeitenden ist in allen Tarifen enthalten, die Zeiten lassen sich in Rechnungen übernehmen. Über die FastBill-API und eine Zapier-App mit mehr als 4.000 Business-Tools lässt sich FastBill an andere Software anbinden. Berichte zeigen offene Posten, Lieferanten, Kategorien und eine Umsatzsteuerprognose.
+      sources:
+        - *funktionen
+        - *preise2
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - FastBill kostet im Tarif Solo 10 € im Monat oder 9 € bei jährlicher Abbuchung, Plus 15 € oder 14 €, Pro 30 € oder 27 € und Premium ab 59 € oder ab 53 € im Monat. Alle Preise sind Nettopreise zuzüglich Umsatzsteuer. Premium wird über eine Demo abgeschlossen. Solo und Plus enthalten einen Benutzer, Pro drei und Premium fünf, in Plus lassen sich weitere Mitarbeiter per Add-on ergänzen.
+        - Im Jahr kostet Solo bei jährlicher Abbuchung 108 € netto oder 128,52 € brutto, Plus 168 € netto. Ein Team mit drei Personen im Tarif Pro zahlt 324 € netto oder 385,56 € brutto im Jahr. Premium kostet mindestens 636 € netto im Jahr. Im Vergleich zu Programmen, die je Benutzer abrechnen, wird FastBill für kleine Teams ab Pro günstiger, weil drei Benutzer im Grundpreis stecken.
+        - Begrenzt sind vor allem die Bankkonten, Solo enthält eins, Plus fünf und ab Pro sind sie unbegrenzt. Das vollautomatische Mahnwesen ist in Solo, Plus und Pro ein kostenpflichtiges Add-on, dessen Preis die Vergleichstabelle nicht nennt.
+      sources:
+        - *preise2
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und Umsatzsteuer
+      paragraphs:
+        - E-Rechnungen in den Formaten ZUGFeRD und XRechnung erstellt, versendet, empfängt und stellt FastBill schon im kleinsten Tarif dar. Die Vergleichstabelle führt die GoBD-konforme Aufbewahrung in allen Tarifen, eine Bescheinigung eines Wirtschaftsprüfers nennt die Seite nicht. Die Kleinunternehmerregelung lässt sich einstellen.
+        - Die Umsatzsteuer-Voranmeldung reichen Sie laut Funktionsseite direkt über FastBill beim Finanzamt ein, ein gesondertes ELSTER-Zertifikat ist laut Hilfe-Center nicht nötig. Wichtig ist eine Einschränkung, FastBill füllt die Voranmeldung auf Basis der Rechnungen und Belege bei Soll-Versteuerung automatisch aus. Wer nach vereinnahmten Entgelten versteuert, sollte prüfen, wie die Werte entstehen.
+        - Für die Steuerberatung gibt es einen DATEV-Export in allen Tarifen und ab Pro den DATEV Rechnungsdatenservice 1.0. Die Vorkontierung lässt sich in FastBill erledigen, oder die erfassten Belege gehen direkt über die DATEV-Schnittstelle an die Kanzlei.
+      sources:
+        - *preise2
+        - *funktionen
+        - url: https://support.fastbill.com/hc/de/articles/360012662874-Umsatzsteuer-Voranmeldung-USt-VA
+          title: FastBill Hilfe, Umsatzsteuer-Voranmeldung
+          accessed: 2026-10-25
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Laut Hilfe-Center speichert FastBill die Daten bei einem Cloud-Hosting-Dienstleister in einem Rechenzentrum in Deutschland. Der Login lässt sich in allen Tarifen mit Zwei-Faktor-Authentifizierung absichern.
+        - Die Vereinbarung zur Auftragsverarbeitung nach Art. 28 DSGVO schließen Kunden im Account ab, über ein Pop-up oder unter den Stammdaten. Damit entfällt der Versand eines unterschriebenen Vertrags.
+      sources:
+        - url: https://support.fastbill.com/hc/de/articles/231642667-Ort-der-Datenspeicherung
+          title: FastBill Hilfe, Ort der Datenspeicherung
+          accessed: 2026-10-24
+        - url: https://support.fastbill.com/hc/de/articles/360004441953-Vereinbarung-zur-Auftragsverarbeitung-AVV
+          title: FastBill Hilfe, Vereinbarung zur Auftragsverarbeitung
+          accessed: 2026-10-25
+        - *preise2
+    - id: einstieg-und-support
+      title: Einstieg, Testphase und Support
+      paragraphs:
+        - Solo, Plus und Pro lassen sich 14 Tage kostenlos testen, Premium wird über eine Demo vorgestellt. Den Support beschreibt FastBill als E-Mail-Support, dazu ein Hilfe-Center mit Videoerklärungen. Im Tarif Premium gibt es einen Premium-Support mit Telefontermin.
+        - Eine eigene Scan-App mit Direktupload ist in allen Tarifen enthalten. Für welche Plattformen sie erhältlich ist, nennen die geprüften Seiten nicht.
+      sources:
+        - *preise2
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - FastBill ist kein vollständiges Buchhaltungsprogramm. Eine Einnahmen-Überschuss-Rechnung oder eine Bilanz nennen die geprüften Seiten nicht, die Buchhaltung bleibt bei der Steuerberatung. Die stärksten Automatisierungen, automatischer Belegimport, Belegerfassung und Bankabgleich, gibt es nur im Tarif Premium ab 53 € im Monat.
+        - Offen sind nach unserer Recherche die Plattformen der Scan-App, der Preis des Add-ons für das automatische Mahnwesen und die Behandlung der Ist-Versteuerung bei der automatisch ausgefüllten Umsatzsteuer-Voranmeldung.
+      sources:
+        - *preise2
+        - *funktionen
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - FastBill passt zu Freiberuflern und kleinen Teams, die vor allem Rechnungen und E-Rechnungen schreiben, Belege digital sammeln und die Daten per DATEV an die Steuerberatung geben. Der günstige Einstieg, E-Rechnung in beide Richtungen, die UStVA ohne ELSTER-Zertifikat und drei Benutzer ab Pro sprechen dafür. Wer die Buchhaltung bis zum Abschluss selbst führen will, braucht ein anderes Programm. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise2
+        - *funktionen

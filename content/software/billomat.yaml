@@ -6,7 +6,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-25
+lastReviewed: 2026-10-26
 author: null
 summary: Cloud-Rechnungsprogramm der aifinyo AG mit E-Rechnung, Banking und DATEV Buchungsdatenservice, ab 19 € im Monat.
 website: https://www.billomat.com
@@ -69,7 +69,12 @@ compliance:
       title: Billomat und die DSGVO
       accessed: 2026-10-24
   deutscherSupport:
-    status: unbekannt
+    status: ja
+    note: Wissensdatenbank und Ticket-Support, im Tarif Enterprise persönlicher Ansprechpartner und eine Stunde technischer Support im Monat.
+    source:
+      url: https://www.billomat.com/preise/
+      title: Billomat Preise und Funktionsvergleich
+      accessed: 2026-10-26
 features:
   rechnungen:
     status: ja
@@ -88,6 +93,48 @@ features:
       url: https://www.billomat.com/funktionen/
       title: Billomat Funktionen
       accessed: 2026-10-25
+  angebote:
+    status: ja
+    note: Angebote mit Annahmefunktion, Auftragsbestätigungen und Lieferscheine.
+    source:
+      url: https://www.billomat.com/preise/
+      title: Billomat Preise und Funktionsvergleich
+      accessed: 2026-10-26
+  wiederkehrendeRechnungen:
+    status: ja
+    note: Abo-, Jahres- und wiederkehrende Rechnungen.
+    source:
+      url: https://www.billomat.com/funktionen/
+      title: Billomat Funktionen
+      accessed: 2026-10-26
+  mahnwesen:
+    status: ja
+    note: Automatisches Mahnwesen mit individuellen Mahnstufen und Mahngebühren.
+    source:
+      url: https://www.billomat.com/funktionen/
+      title: Billomat Funktionen
+      accessed: 2026-10-26
+  belegerfassungOcr:
+    status: ja
+    note: Automatische Belegerfassung mit Texterkennung, Belege per App scannen.
+    source:
+      url: https://www.billomat.com/funktionen/
+      title: Billomat Funktionen
+      accessed: 2026-10-26
+  bankabgleich:
+    status: ja
+    note: Banking-Verknüpfung mit automatischem Zahlungsabgleich.
+    source:
+      url: https://www.billomat.com/preise/
+      title: Billomat Preise und Funktionsvergleich
+      accessed: 2026-10-26
+  euer:
+    status: ja
+    note: Einnahmen-Überschuss-Rechnung, Kontenrahmen SKR03 und SKR04.
+    source:
+      url: https://www.billomat.com/preise/
+      title: Billomat Preise und Funktionsvergleich
+      accessed: 2026-10-26
 plans:
   - name: Professional
     monthlyCents: 2900
@@ -95,35 +142,45 @@ plans:
     perUser: false
     net: true
     includes:
-      - 1 Nutzer
-      - keine weiteren Nutzer möglich
+      - 1 Nutzer, keine weiteren möglich
+      - 30 Rechnungen im Monat
       - Basis-Funktionsumfang
+      - Wissensdatenbank und Ticket-Support
     note: Ab-Preis.
-    source: *preise
+    source:
+      url: https://www.billomat.com/preise/
+      title: Billomat Preise und Funktionsvergleich
+      accessed: 2026-10-26
   - name: Business
     monthlyCents: 3900
     yearlyMonthlyCents: 2900
     perUser: false
     net: true
     includes:
-      - 1 Nutzer
-      - jeder weitere 10 € im Monat
+      - 1 Nutzer, jeder weitere 10 € im Monat
+      - Unbegrenzte Rechnungen
       - Kompletter Funktionsumfang
-      - API
+      - 100 API-Aufrufe je 15 Minuten
     note: Ab-Preis.
-    source: *preise
+    source:
+      url: https://www.billomat.com/preise/
+      title: Billomat Preise und Funktionsvergleich
+      accessed: 2026-10-26
   - name: Enterprise
     monthlyCents: 11900
     yearlyMonthlyCents: 9900
     perUser: false
     net: true
     includes:
-      - 5 Nutzer
-      - jeder weitere 10 € im Monat
-      - 300 API-Aufrufe je 15 Minuten
-      - Sandbox-Account
+      - 5 Nutzer, jeder weitere 10 € im Monat
+      - 300 API-Aufrufe je 15 Minuten, Sandbox-Account
+      - Persönlicher Ansprechpartner
+      - 1 Stunde technischer Support im Monat
     note: Ab-Preis.
-    source: *preise
+    source:
+      url: https://www.billomat.com/preise/
+      title: Billomat Preise und Funktionsvergleich
+      accessed: 2026-10-26
 pros:
   - 14 Tage kostenlos testen, die Testphase endet automatisch.
   - DATEV Buchungsdatenservice überträgt Dokumente direkt an das DATEV-Rechenzentrum.
@@ -132,6 +189,7 @@ cons:
   - Im Tarif Professional ist nur ein Nutzer möglich.
   - Die API gibt es erst ab Tarif Business für 29 € im Monat.
   - Jeder weitere Nutzer kostet in den Tarifen Business und Enterprise 10 € im Monat.
+  - Im Tarif Professional sind nur 30 Rechnungen im Monat enthalten.
 idealFor:
   - Selbstständige und Unternehmen, die Rechnungen schreiben und Belege per DATEV an die Kanzlei übergeben
 notIdealFor:
@@ -142,3 +200,82 @@ logo:
   height: 41
   sourceUrl: https://www.billomat.com/
   accessed: 2026-10-25
+review:
+  sections:
+    - id: einordnung
+      title: Was Billomat ist und für wen es gedacht ist
+      paragraphs:
+        - Billomat ist ein Rechnungs- und Buchhaltungsprogramm, das zur aifinyo AG aus Berlin gehört und im Browser sowie als App für iOS und Android läuft. Es schreibt Angebote, Rechnungen, E-Rechnungen und Mahnungen, verwaltet Eingangsrechnungen und Belege, gleicht Zahlungen ab und erstellt die Einnahmen-Überschuss-Rechnung. Daten gehen über den DATEV Buchungsdatenservice an die Kanzlei.
+        - Eine Besonderheit ist die Verbindung mit Finanzdienstleistungen der Muttergesellschaft. Über aifinyo lassen sich Rechnungen per Factoring vorfinanzieren, Wareneinkäufe per Finetrading finanzieren, offene Forderungen an ein Inkasso geben, Geräte leasen und Auslandsüberweisungen per Flatrate ausführen. Die Tarife richten sich an Selbstständige und Freelancer, an Unternehmen, Start-ups und den E-Commerce sowie an den wachsenden Mittelstand.
+      sources:
+        - &fn2
+          url: https://www.billomat.com/funktionen/
+          title: Billomat Funktionen
+          accessed: 2026-10-26
+        - url: https://www.billomat.com/impressum/
+          title: Billomat Impressum
+          accessed: 2026-10-26
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Rechnungen entstehen laut Anbieter in weniger als einer Minute aus Vorlagen mit allen Pflichtangaben, dazu Korrektur- und Stornorechnungen, XRechnungen und ZUGFeRD-Rechnungen. Angebote mit Annahmefunktion, Auftragsbestätigungen und Lieferscheine lassen sich auch unterwegs in der App erstellen. Abo-, Jahres- und wiederkehrende Rechnungen laufen automatisch. Das Mahnwesen erinnert an überfällige Rechnungen, versendet Mahnungen per E-Mail und arbeitet mit individuellen Mahnstufen und Mahngebühren. Rechnungen lassen sich über EMAILBRIEF als Brief der Deutschen Post verschicken.
+        - Eingangsrechnungen ordnen Sie per Drag and Drop zu, die automatische Texterkennung liest sie aus, Belege scannen Sie mit der App und legen sie in Kategorien ab. Der Zahlungsabgleich verbindet das Bankkonto, ein Finance Dashboard zeigt Ein- und Ausgänge. Für die Buchhaltung gibt es individuelle Steuersätze, Kostenstellen, die Kontenrahmen SKR03 und SKR04 und die EÜR.
+        - Im Team lassen sich Zugriffs- und Bearbeitungsrechte vergeben, Zeitzone und Sprache sind je Mitarbeiter einstellbar. Billomat ist auf Deutsch und Englisch verfügbar und über individuelle Steuersätze und Gebietsschemata auch für Unternehmen mit Sitz außerhalb Deutschlands nutzbar. Ein WooCommerce-Add-on automatisiert die Rechnungsstellung im Onlineshop, ab dem Tarif Business steht eine API zur Verfügung.
+      sources:
+        - *fn2
+        - &preise2
+          url: https://www.billomat.com/preise/
+          title: Billomat Preise und Funktionsvergleich
+          accessed: 2026-10-26
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Billomat nennt Ab-Preise zuzüglich Umsatzsteuer. Professional kostet ab 29 € im Monat oder ab 19 € bei jährlicher Zahlung, Business ab 39 € oder ab 29 € und Enterprise ab 119 € oder ab 99 €. Professional enthält einen Nutzer ohne Erweiterung und laut Funktionsvergleich 30 Rechnungen im Monat, Business einen Nutzer und unbegrenzte Rechnungen, Enterprise fünf Nutzer. Jeder weitere Nutzer kostet in Business und Enterprise 10 € im Monat.
+        - Im Jahr kostet Business bei jährlicher Zahlung 348 € netto oder 414,12 € brutto, bei monatlicher Zahlung 468 € netto. Ein Team mit drei Personen im Tarif Business zahlt bei jährlicher Zahlung 49 € netto im Monat oder 588 € netto im Jahr. Enterprise mit fünf Nutzern kostet bei jährlicher Zahlung 1.188 € netto im Jahr.
+        - Zusätzlich bietet Billomat den Tarif Business mit Einkaufsfinanzierung für 49 € im Monat bei 24 Monaten Laufzeit an. Enterprise enthält einen persönlichen Ansprechpartner und eine Stunde technischen Support im Monat, laut Preisseite im Wert von 200 €.
+      sources:
+        - *preise2
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und Umsatzsteuer
+      paragraphs:
+        - XRechnung und ZUGFeRD führt der Funktionsvergleich für das Erstellen von Rechnungen, und laut Billomat-Magazin steht der Empfang und die Verarbeitung von E-Rechnungen seit dem 01.01.2025 allen Nutzern ohne Zusatzkosten zur Verfügung. Damit sind Versand und Empfangspflicht abgedeckt.
+        - Über den DATEV Buchungsdatenservice übermitteln Sie Dokumente per Klick direkt an das DATEV-Rechenzentrum, dazu kommen DATEVconnect und ein Zugang für die Steuerberatung, mit der sich Steuererklärungen und Jahresabschlüsse vorbereiten lassen. Eine Umsatzsteuer-Voranmeldung per ELSTER, eine Einstellung für die Kleinunternehmerregelung und eine Aussage zur GoBD haben wir auf den geprüften Seiten nicht gefunden. Die Startseite nennt Kleinunternehmer als Zielgruppe, das ersetzt aber keine Funktionsangabe.
+      sources:
+        - *preise2
+        - url: https://www.billomat.com/magazin/e-rechnung-die-zukunft-der-rechnungsstellung/
+          title: Billomat Magazin, E-Rechnung
+          accessed: 2026-10-25
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Laut englischsprachiger Banking-Seite stehen die Server in Deutschland. Ein Beitrag im Billomat-Magazin aus dem Jahr 2018 beschreibt den Umzug der Infrastruktur zu Amazon Web Services in der Region Frankfurt und einen Penetrationstest durch einen BSI-zertifizierten Anbieter. Weil der Beitrag älter ist, sollte der aktuelle Stand vor dem Vertrag bestätigt werden.
+        - Den Vertrag zur Auftragsverarbeitung schließt Billomat laut demselben Beitrag mit allen Auftraggebern, er lässt sich über die Datenschutzbestimmungen digital signieren. Für Datenschutzfragen nennt der Beitrag den Kundensupport per Telefon und E-Mail sowie den Datenschutzbeauftragten.
+      sources:
+        - url: https://www.billomat.com/en/banking/
+          title: Billomat Banking
+          accessed: 2026-10-25
+        - url: https://www.billomat.com/magazin/billomat-und-dsgvo/
+          title: Billomat Magazin, Billomat und DSGVO
+          accessed: 2026-10-26
+    - id: einstieg-und-support
+      title: Einstieg, Testphase und Support
+      paragraphs:
+        - Billomat lässt sich 14 Tage kostenlos testen, der Test endet automatisch und eine Kreditkarte ist nicht nötig. Für den Einstieg gibt es geführte Touren im Programm.
+        - Der Support läuft über eine Wissensdatenbank und Ticket-Support. Im Tarif Enterprise kommen ein persönlicher Ansprechpartner und eine Stunde technischer Support im Monat hinzu.
+      sources:
+        - *preise2
+        - *fn2
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Der günstige Tarif Professional ist mit einem Nutzer und 30 Rechnungen im Monat deutlich begrenzt, wer mehr schreibt, braucht Business. Weitere Nutzer kosten je 10 € im Monat, für Teams wird Billomat damit schnell teurer als Programme mit mehreren Nutzern im Grundpreis.
+        - Offen sind nach unserer Recherche die ELSTER-Übertragung der Umsatzsteuer-Voranmeldung, die Kleinunternehmerregelung, eine GoBD-Aussage und der aktuelle Stand der Infrastruktur, den nur ein älterer Magazinbeitrag ausführlich beschreibt.
+      sources:
+        - *preise2
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - Billomat passt zu Selbstständigen und kleinen Unternehmen, die Rechnungen, E-Rechnungen, Mahnungen und Belege in einem Programm führen, die EÜR selbst erstellen und die Daten über den DATEV Buchungsdatenservice an die Kanzlei geben. Die Anbindung an Factoring und Finanzierung der aifinyo AG ist ein Alleinstellungsmerkmal. Die Grenzen des kleinsten Tarifs und die offenen Fragen zu ELSTER und GoBD sprechen dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise2
+        - *fn2

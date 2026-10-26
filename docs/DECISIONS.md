@@ -187,3 +187,10 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 - **ERP category.** New draft category `erp-software` with six profiles, above the threshold of five.
 - **Logos for new vendors.** Not downloaded yet. The owner's approval covered the logos of the first ten vendors; the seven new vendors show their names as text until approved.
 - **Finder race fixed.** After the last step, "Ergebnis anzeigen" could be clicked before nuqs had written the step to the URL; the late write then pushed the Finder URL over the result page (seen as a flaky E2E test, 1 in 8 runs). The link now waits for the pending URL write and then navigates. Without JavaScript the plain link still works.
+
+## 26.10.2026: Long reviews for the first ten profiles
+
+- **Same structure everywhere.** All 20 profiles now have the same eight review sections (Einordnung, Funktionen, Preise mit Rechenbeispielen, Rechtssicherheit, Datenschutz, Einstieg und Support, Grenzen, Zusammenfassung), each with its sources.
+- **Refetch before writing.** The reviews are based on pages fetched on 26.10.2026, not on the notes from 24.10. Where a page now says something else, the facts, plans, pros and cons were updated in the same change (see CONTENT_STATUS). Where a page could no longer be fetched (FastBill help center, 403), the earlier access date stays.
+- **Contradictions on vendor pages are named, not resolved.** If a vendor shows two different prices on the same page (sevdesk, orgaMAX, BuchhaltungsButler), the review says so and recommends checking the price in the order process. We store the price from the tariff cards.
+- **Sage Active terms.** The FAQ distinguishes subscriptions before and after 01.02.2026. The profile uses the current terms and mentions the old ones.

@@ -7,7 +7,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-25
+lastReviewed: 2026-10-26
 author: null
 summary: Online-Buchhaltung mit kostenlosem Einstieg, E-Rechnung in allen Paketen, EÜR, UStVA und Kleinunternehmerregelung.
 website: https://www.papierkram.de
@@ -26,15 +26,18 @@ deployment:
   - cloud
 apps:
   web: true
-  ios: null
-  android: null
+  ios: true
+  android: true
 freeTrialDays: null
 freePlan: true
 compliance:
   gobd:
     status: ja
-    note: Die Preisseite nennt eine GoBD-Zertifizierung.
-    source: *preise
+    note: Laut Anbieter sind alle Abo-Versionen hinsichtlich der GoBD-Vorgaben uneingeschränkt zertifiziert.
+    source:
+      url: https://www.papierkram.de/preise/
+      title: Papierkram Preise und Funktionsübersicht
+      accessed: 2026-10-26
   eRechnungEmpfang:
     status: ja
     note: E-Rechnungen, XRechnungen und ZUGFeRD in allen Paketen empfangen, ablegen und verbuchen.
@@ -67,11 +70,11 @@ compliance:
     source: *preise
   serverstandort:
     status: ja
-    note: Komplette Infrastruktur in deutschen Rechenzentren, Daten in Frankfurt am Main.
+    note: Komplette Infrastruktur in deutschen Rechenzentren, Daten in Frankfurt am Main und Hamburg.
     source:
       url: https://www.papierkram.de/sicher-und-zuverlaessig-papierkram-buchhaltung-aus-der-cloud
-      title: Papierkram Sicherheit
-      accessed: 2026-10-24
+      title: Papierkram Sicherheit der Cloud-Buchhaltung
+      accessed: 2026-10-26
   avv:
     status: ja
     note: Die Auftragsverarbeitung lässt sich in den Einstellungen akzeptieren, speichern und einsehen.
@@ -97,6 +100,61 @@ features:
     status: ja
     note: "EÜR, UStVA und BWA werden automatisch erstellt."
     source: *preise
+  angebote:
+    status: ja
+    note: Angebote mit Kundenportal zum Annehmen, Ablehnen und Kommentieren.
+    source:
+      url: https://www.papierkram.de/preise/
+      title: Papierkram Preise und Funktionsübersicht
+      accessed: 2026-10-26
+  wiederkehrendeRechnungen:
+    status: ja
+    source:
+      url: https://www.papierkram.de/preise/
+      title: Papierkram Preise und Funktionsübersicht
+      accessed: 2026-10-26
+  mahnwesen:
+    status: ja
+    note: Erste, zweite und dritte Mahnung mit einem Klick.
+    source:
+      url: https://www.papierkram.de/preise/
+      title: Papierkram Preise und Funktionsübersicht
+      accessed: 2026-10-26
+  belegerfassungOcr:
+    status: ja
+    note: MagicSuggest liest E-Rechnungen aus, MagicSuggest+ mit KI auch Fotos und Scans.
+    source:
+      url: https://www.papierkram.de/preise/
+      title: Papierkram Preise und Funktionsübersicht
+      accessed: 2026-10-26
+  kassenbuch:
+    status: ja
+    note: Integriertes Kassenbuch in allen Paketen.
+    source:
+      url: https://www.papierkram.de/preise/
+      title: Papierkram Preise und Funktionsübersicht
+      accessed: 2026-10-26
+  projektzeiten:
+    status: ja
+    note: Projekte, Aufgaben und Zeiterfassung im Browser, Zeiten direkt in die Rechnung.
+    source:
+      url: https://www.papierkram.de/preise/
+      title: Papierkram Preise und Funktionsübersicht
+      accessed: 2026-10-26
+  api:
+    status: ja
+    note: API mit Credits je Aufruf.
+    source:
+      url: https://www.papierkram.de/preise/
+      title: Papierkram Preise und Funktionsübersicht
+      accessed: 2026-10-26
+  mobileApp:
+    status: ja
+    note: App für iOS und Android für Zeiten, Belege, Angebote, Rechnungen, Kontakte und Projekte.
+    source:
+      url: https://www.papierkram.de/preise/
+      title: Papierkram Preise und Funktionsübersicht
+      accessed: 2026-10-26
 plans:
   - name: Free
     monthlyCents: 0
@@ -151,3 +209,81 @@ logo:
   height: 262
   sourceUrl: https://www.papierkram.de/presse/
   accessed: 2026-10-25
+review:
+  sections:
+    - id: einordnung
+      title: Was Papierkram ist und für wen es gedacht ist
+      paragraphs:
+        - Papierkram ist eine Online-Buchhaltung der odacer finanzsoftware GmbH aus Wiesbaden. Sie verbindet Angebote, Rechnungen, Belege, Bank, Projekte mit Zeiterfassung und die Steuerberichte EÜR, Umsatzsteuer-Voranmeldung und Zusammenfassende Meldung in einem Werkzeug im Browser, dazu kommt eine App für iOS und Android. Die Pakete reichen vom kostenlosen Einstieg für nebenberufliche Gründer bis zum Paket L für größere Teams.
+        - Die Zielgruppe sind Freiberufler, Selbstständige, Kleinunternehmer und kleine Unternehmen mit Einnahmen-Überschuss-Rechnung. Personen- und Kapitalgesellschaften wie GbR, OHG, KG oder GmbH können Papierkram laut Preisseite ebenfalls nutzen, je nach Anforderungen sind dann aber einzelne Funktionen wie die Steuerberichte nicht nutzbar. Für Österreich und die Schweiz eignen sich viele, aber nicht alle Funktionen.
+      sources:
+        - &preise2
+          url: https://www.papierkram.de/preise/
+          title: Papierkram Preise und Funktionsübersicht
+          accessed: 2026-10-26
+        - url: https://www.papierkram.de/impressum/
+          title: Papierkram Impressum
+          accessed: 2026-10-25
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Angebote und Rechnungen entstehen aus hinterlegten Waren und Leistungen mit beliebig vielen Positionen, Gruppen und Rabatten, auf eigenem Briefpapier mit eigenen Schriften und auf Wunsch mit eigenen CSS-Anweisungen für das Layout. Papierkram erstellt Abschlags- und Schlussrechnungen, wiederkehrende Rechnungen, Lieferscheine, Brutto- und Nettorechnungen, englische Dokumente und korrekte Rechnungen ins EU-Ausland und in Drittländer. Lohnkosten für Handwerker- und haushaltsnahe Leistungen werden automatisch gesondert ausgewiesen. Über ein Kundenportal nehmen Kunden Angebote an und bezahlen Rechnungen per GiroCode oder PayPal-Link.
+        - Das Mahnwesen erstellt die erste, zweite und dritte Mahnung mit einem Klick, eine Übersicht zeigt alle offenen Posten. Belege kommen per Upload oder über einen eigenen E-Mail-Posteingang ins Programm. MagicSuggest liest strukturierte Daten aus E-Rechnungen aus, MagicSuggest+ extrahiert mit KI auch Daten aus Fotos und Scans bis hin zu Einzelpositionen, laut Funktionsübersicht in einem Umfang von bis zu 15 Belegen im Monat in einer der Stufen. Wiederkehrende Belege, Anlagegüter und ein Kassenbuch sind enthalten.
+        - Online- und PayPal-Konten werden PSD2-konform abgerufen oder Umsätze im Format MT940 oder CAMT importiert und mit Rechnungen und Belegen abgeglichen. Die Funktionsübersicht nennt je nach Paket bis zu zwei oder unbegrenzt viele Bankverbindungen. In der Projektverwaltung legen Sie Projekte mit Budget, Aufgaben und Finanzübersicht an, erfassen Zeiten im Team direkt im Browser und übernehmen sie mit einem Klick in die Rechnung.
+        - Die App für iOS und Android erfasst unterwegs Zeiten und Belege, zeigt Angebote und Rechnungen und legt Kontakte und Projekte an. Über eine API, die je nach Aufruf Credits verbraucht, lassen sich andere Werkzeuge anbinden.
+      sources:
+        - *preise2
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Das Paket Free kostet 0 € und ist auf 15 Belege im Monat begrenzt, Dokumente tragen dort ein Papierkram-Logo im Fuß. S kostet 15,90 € im Monat oder 12,90 € bei jährlicher Zahlung, M 29,90 € oder 24,90 € und L 59,90 € oder 49,90 €, jeweils netto zuzüglich Umsatzsteuer. Die Laufzeit ist wahlweise monatlich oder jährlich, gekündigt werden kann jeweils zum Ende der gewählten Laufzeit. Hosting, Datensicherung, Updates und Support sind enthalten.
+        - Im Jahr kostet S bei jährlicher Zahlung 154,80 € netto oder 184,21 € brutto. Das beliebteste Paket M kostet 298,80 € netto bei jährlicher und 358,80 € netto bei monatlicher Zahlung. L kostet 598,80 € netto im Jahr.
+        - Weitere Nutzer kosten 2,90 € im Monat im Monatspaket und 2,32 € im Jahrespaket. Zwei Personen im Paket M zahlen bei jährlicher Zahlung damit 27,22 € netto im Monat oder 326,64 € netto im Jahr, deutlich weniger als bei Anbietern, die je Nutzer den vollen Preis berechnen.
+      sources:
+        - *preise2
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und ELSTER
+      paragraphs:
+        - Laut Preisseite wurden alle Abo-Versionen hinsichtlich der Einhaltung der GoBD uneingeschränkt zertifiziert, auf einer eigenen Seite erklärt Papierkram die Zertifizierung. E-Rechnungen im XML-Format, XRechnungen und ZUGFeRD-Rechnungen erstellt Papierkram in allen Versionen, ebenso empfängt, legt ab und verbucht es sie. Aus den XML-Daten erzeugt das Programm automatisch einen lesbaren Beleganhang.
+        - Für die Steuerberatung lässt sich der Account mit DATEV verbinden, dann gehen alle Buchungsdaten automatisch im Hintergrund an DATEV Unternehmen online. Alternativ werden die Buchungsdaten eines beliebigen Zeitraums im DATEV-Format exportiert. Die Kontenrahmen SKR03 und SKR04 sind wählbar und lassen sich wechseln.
+        - Die Umsatzsteuer-Voranmeldung erstellt Papierkram monatlich, vierteljährlich oder jährlich, ebenso die Zusammenfassende Meldung und die EÜR. Die UStVA wird allerdings nicht direkt übertragen. Sie laden sie als XML-Datei herunter und im ELSTER-Portal selbst hoch, deshalb führen wir ELSTER als Teilweise. Die Kleinunternehmerregelung lässt sich aktivieren.
+      sources:
+        - *preise2
+        - url: https://www.papierkram.de/funktionen/berichte-und-integrationen/
+          title: Papierkram Berichte und Integrationen
+          accessed: 2026-10-26
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Papierkram betreibt laut Sicherheitsseite seine komplette Infrastruktur in deutschen Rechenzentren und speichert die Daten in Frankfurt am Main und in Hamburg. Der Zugriff ist per SSL verschlüsselt. Ein Export aller Daten mit einem Tastendruck soll den Wechsel zu einem anderen Anbieter erleichtern.
+        - Die Vereinbarung zur Auftragsverarbeitung akzeptieren, speichern und sehen Sie laut Hilfe-Center in den Einstellungen unter Vertrag und Konto ein.
+      sources:
+        - url: https://www.papierkram.de/sicher-und-zuverlaessig-papierkram-buchhaltung-aus-der-cloud
+          title: Papierkram Sicherheit der Cloud-Buchhaltung
+          accessed: 2026-10-26
+        - url: https://www.papierkram.de/hilfe/einstellungen/
+          title: Papierkram Hilfe, Einstellungen
+          accessed: 2026-10-25
+    - id: einstieg-und-support
+      title: Einstieg und Support
+      paragraphs:
+        - Der Einstieg beginnt kostenlos im Paket Free, das sich laut Anbieter auch zum Testen eignet. Kunden, Lieferanten, Waren und Rechnungen lassen sich per CSV importieren. Zur Anmeldung gab es am 26.10.2026 ein kostenloses E-Book.
+        - Support ist in allen Paketen enthalten. Laut Impressum läuft er ausschließlich über ein Formular unter mein.papierkram.de, die Telefonnummer ist kein Support-Kanal.
+      sources:
+        - *preise2
+        - url: https://www.papierkram.de/impressum/
+          title: Papierkram Impressum
+          accessed: 2026-10-25
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Die größte Einschränkung ist die UStVA ohne direkte Übermittlung, der Upload im ELSTER-Portal bleibt ein zusätzlicher Schritt. Telefonischer Support fehlt. Für bilanzierende Kapitalgesellschaften sind laut Anbieter einzelne Funktionen nicht nutzbar, eine Bilanz nennt die Funktionsübersicht nicht.
+        - Offen ist nach unserer Recherche, welches Paket genau welche Grenzen hat, etwa bei Bankverbindungen und der KI-Belegerkennung, weil die Funktionsübersicht die Zuordnung nur über Spalten zeigt. Das lässt sich im kostenlosen Paket vor dem Wechsel in ein Abo prüfen.
+      sources:
+        - *preise2
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - Papierkram passt zu Freiberuflern, Selbstständigen und Kleinunternehmern mit EÜR, die Rechnungen, Belege, Bank, Projekte und Zeiterfassung in einem Werkzeug wollen und mit einem kostenlosen Paket beginnen möchten. GoBD-Zertifizierung, Rechenzentren in Deutschland, DATEV-Anbindung und günstige weitere Nutzer sprechen dafür, die fehlende direkte ELSTER-Übermittlung und der reine Formular-Support dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise2

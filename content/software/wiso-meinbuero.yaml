@@ -8,7 +8,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-25
+lastReviewed: 2026-10-26
 author: null
 summary: Web-Bürosoftware von Buhl mit E-Rechnung, UStVA per ELSTER und DATEV-Schnittstelle schon im kleinsten Plan, nur im Jahresabo.
 website: https://www.meinbuero.de
@@ -175,3 +175,80 @@ trialSource:
   url: https://www.meinbuero.de/
   title: WISO MeinBüro Startseite, FAQ
   accessed: 2026-10-25
+review:
+  sections:
+    - id: einordnung
+      title: Was WISO MeinBüro ist und für wen es gedacht ist
+      paragraphs:
+        - WISO MeinBüro ist die Bürosoftware der Buhl Data Service GmbH, des Herstellers der Steuersoftware WISO Steuer. Die hier beschriebene Version läuft laut Startseite komplett im Browser, auf PC, Laptop, Tablet oder Smartphone, ohne Download und Installation. Daneben gibt es weiterhin eine Desktop-Version, die auf der Preisseite verlinkt ist und hier nicht bewertet wird.
+        - Die vier Pläne bauen aufeinander auf, von Rechnungen und Angeboten über Buchhaltung und Auftragswesen bis zur Warenwirtschaft. Die zwei kleineren Pläne sind auf einen Umsatz begrenzt, Rechnungen und Angebote auf 25.000 € und Buchhaltung auf 120.000 € in 365 Tagen. Damit richtet sich der Einstieg klar an Kleinunternehmer, Gründer und nebenberuflich Selbstständige.
+      sources:
+        - &home2
+          url: https://www.meinbuero.de/
+          title: WISO MeinBüro Startseite und FAQ
+          accessed: 2026-10-26
+        - &preise2
+          url: https://www.meinbuero.de/preise/
+          title: WISO MeinBüro Preise und Pläne
+          accessed: 2026-10-26
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Im kleinsten Plan verwaltet MeinBüro Stammdaten, schreibt Angebote, Rechnungen und E-Rechnungen, versendet Mahnungen, archiviert Belege und erledigt Steuern mit EÜR und Umsatzsteuer-Voranmeldung. Angebote lassen sich per Klick in eine Rechnung umwandeln, Kunden nehmen Angebote über ein Online-Kundenportal an und bezahlen Rechnungen dort. Belege fotografieren Sie mit der App für iOS und Android, das Programm liest sie aus und bereitet die Zahlung vor.
+        - Der Plan Buchhaltung ergänzt Finanzen, Buchhaltung und Banking, laut Anbieter mit einer BaFin-lizenzierten Bankanbindung. Auftragswesen ergänzt Digitalisierung und Automatisierung sowie eine Dokumentenverwaltung, in der sich Dokumente im Browser unterschreiben lassen. Warenwirtschaft ergänzt die Verwaltung von Artikeln und Beständen. Über eine Schnittstelle lässt sich die EÜR laut Preisseite direkt nach WISO Steuer übertragen, was für Nutzer der Steuersoftware desselben Herstellers praktisch ist.
+        - In allen Plänen enthalten sind laut Preisseite die Mobile App, ein Stammdatenimport, Mehrmandantenfähigkeit für mehrere Unternehmen in einem Kundenkonto, das Online-Kundenportal und Schnittstellen zu Partnersystemen.
+      sources:
+        - *preise2
+        - *home2
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - MeinBüro gibt es nur im Jahresabo, bezahlt wird jährlich im Voraus. Rechnungen und Angebote kostet 130,80 €, Buchhaltung 238,80 €, Auftragswesen 478,80 € und Warenwirtschaft 838,80 € im Jahr, jeweils zuzüglich Umsatzsteuer. Umgerechnet sind das 10,90 €, 19,90 €, 39,90 € und 69,90 € im Monat. Enthalten sind ein Nutzer in den zwei kleineren Plänen, zwei Nutzer im Auftragswesen und fünf in der Warenwirtschaft.
+        - Am 26.10.2026 gewährte der Anbieter im ersten Vertragsjahr Rabatte von 40 % bis 70 %. Rechnungen und Angebote kostete dann 6,54 € im Monat, also 78,48 € netto im ersten Jahr, Buchhaltung 9,95 € im Monat oder 119,40 € netto im ersten Jahr. Ab dem zweiten Jahr gilt der volle Preis, für Buchhaltung 238,80 € netto oder 284,17 € brutto.
+        - Weitere Nutzer kosten je 6 € im Monat, elektronische Signaturen 6 € und englische Vorlagen 3 €. Ein Team mit drei Personen im Plan Auftragswesen zahlt damit 550,80 € netto im Jahr. Einmalige Services sind ein Premium-Service für 179 € mit Onboarding und Webinar-Flatrate, eine persönliche Einführung für 89 €, individuelle Schulungen für 69,90 € je 30 Minuten und Webinare zu E-Rechnung, Buchhaltung, GoBD und anderen Themen für 19 € bis 49 €.
+      sources:
+        - *preise2
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und ELSTER
+      paragraphs:
+        - E-Rechnungen in XRechnung und ZUGFeRD erstellt, versendet und empfängt MeinBüro schon im kleinsten Plan. Die Umsatzsteuer-Voranmeldung geht über die ELSTER-Schnittstelle direkt an das Finanzamt, ebenfalls ab dem kleinsten Plan. Die Kleinunternehmerregelung nach § 19 UStG wird laut Anbieter automatisch berücksichtigt.
+        - Für die Steuerberatung gibt es eine DATEV-Schnittstelle und einen Export für DATEV, Simba, Agenda, ADDISON und Stotax sowie einen Zugang für die Kanzlei. Zur GoBD bietet Buhl ein kostenpflichtiges Webinar zu Verfahrensdokumentation und GoBD an. Eine Aussage zur GoBD-Konformität der Software selbst oder eine Bescheinigung haben wir auf den geprüften Seiten nicht gefunden, deshalb führen wir den Punkt als Keine Angabe.
+      sources:
+        - *preise2
+        - url: https://www.meinbuero.de/funktionen-fuer-kleinunternehmer/
+          title: WISO MeinBüro für Kleinunternehmer
+          accessed: 2026-10-25
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Buhl betreibt laut Sicherheitsseite eigene Rechenzentren in Deutschland und setzt keine Server von Drittanbietern ein, Betrieb, Wartung und Überwachung liegen beim Anbieter. Die Rechenzentren sind nach VdS 10000 zertifiziert, alle Systemkomponenten sind mehrfach vorhanden, und eine Netzersatzanlage hält die Stromversorgung bei Ausfällen aufrecht.
+        - Den Auftragsverarbeitungsvertrag nach Art. 28 DSGVO gibt es laut Handbuch als Download und im buhl:Konto. Kündigen lässt er sich nur durch die Löschung des buhl:Kontos.
+      sources:
+        - url: https://www.meinbuero.de/datensicherheit/
+          title: WISO MeinBüro Datensicherheit
+          accessed: 2026-10-26
+        - url: https://handbuch.meinbuero.de/mb/dsgvo-avv
+          title: WISO MeinBüro Handbuch, DSGVO-AVV
+          accessed: 2026-10-25
+    - id: einstieg-und-support
+      title: Einstieg, Testphase und Support
+      paragraphs:
+        - MeinBüro lässt sich 14 Tage kostenlos testen, ohne Zahlungsdaten. Die Testphase endet automatisch, eine Kündigung ist nicht nötig. Die Preisseite empfiehlt, in der Testphase zu prüfen, ob das eigene Bankkonto angebunden werden kann.
+        - Der Support ist schriftlich und telefonisch erreichbar. Für den Einstieg bietet Buhl kostenpflichtige Einführungen, Schulungen und Webinare an, für Steuerberater gibt es einen eigenen Bereich.
+      sources:
+        - *home2
+        - *preise2
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Eine monatliche Zahlung ist nicht vorgesehen, und die günstigen Pläne enden bei 25.000 € beziehungsweise 120.000 € Umsatz in 365 Tagen. Wer darüber liegt, muss in den Plan Auftragswesen für 478,80 € im Jahr wechseln. Die Rabatte gelten nur im ersten Vertragsjahr, der Preis im zweiten Jahr liegt deutlich höher.
+        - Offen ist nach unserer Recherche eine Aussage zur GoBD-Konformität der Software. Außerdem sollte die Verfügbarkeit der eigenen Bank in der Testphase geprüft werden, wie der Anbieter selbst empfiehlt.
+      sources:
+        - *preise2
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - WISO MeinBüro passt zu Kleinunternehmern und Gründern mit überschaubarem Umsatz, die schon im kleinsten Plan E-Rechnungen, UStVA per ELSTER und einen DATEV-Export brauchen und mit einem Jahresabo leben können. Eigene Rechenzentren in Deutschland und der Bezug zu WISO Steuer sprechen dafür, die Umsatzgrenzen, das reine Jahresabo und die fehlende GoBD-Aussage dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise2
+        - *home2

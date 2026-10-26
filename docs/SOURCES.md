@@ -58,6 +58,21 @@ Every fact and every review section also carries its source inline in `content/s
 | Norman                              | https://norman.finance/de/preise, https://norman.finance/de/ustva/ohne-elster, https://norman.finance/de/datenschutz, https://norman.finance/de/avv, https://norman.finance/de/impressum                                                                                                                              |
 | Law                                 | https://www.gesetze-im-internet.de/ustdv_1980/__33.html (§ 33 UStDV, accessed 26.10.2026)                                                                                                                                                                                                                             |
 
+## Pages fetched again for the batch 1 reviews (accessed 26.10.2026)
+
+| Vendor             | Pages                                                                                                                                                                                       |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sevdesk            | https://sevdesk.de/preise/, https://sevdesk.de/funktionen/, https://sevdesk.de/datenschutz/                                                                                                 |
+| Lexware Office     | https://www.lexware.de/preise/, https://www.lexware.de/facts/lexware-office/, https://www.lexware.de/datenschutz-datensicherheit/                                                           |
+| BuchhaltungsButler | https://www.buchhaltungsbutler.de/preise/, https://www.buchhaltungsbutler.de/funktionen/, https://www.buchhaltungsbutler.de/, https://www.buchhaltungsbutler.de/datenschutz-saas/           |
+| FastBill           | https://www.fastbill.com/preise, https://www.fastbill.com/funktionen (help center articles return 403 to scripts since 26.10.2026; their 24./25.10. access dates stay)                      |
+| orgaMAX            | https://www.orgamax.de/preise                                                                                                                                                               |
+| WISO MeinBüro      | https://www.meinbuero.de/preise/, https://www.meinbuero.de/, https://www.meinbuero.de/datensicherheit/                                                                                      |
+| Sage Active        | https://www.sage.com/de-de/produkte/sage-active/ (the /essentials/ and /starter/ pages now redirect here)                                                                                   |
+| Papierkram         | https://www.papierkram.de/preise/, https://www.papierkram.de/funktionen/berichte-und-integrationen/, https://www.papierkram.de/sicher-und-zuverlaessig-papierkram-buchhaltung-aus-der-cloud |
+| easybill           | https://www.easybill.de/preise/, https://www.easybill.de/ (https://www.easybill.de/produkte/invoice/ returns 404 and is no longer cited)                                                    |
+| Billomat           | https://www.billomat.com/preise/, https://www.billomat.com/funktionen/, https://www.billomat.com/magazin/billomat-und-dsgvo/, https://www.billomat.com/impressum/                           |
+
 ## Hosting facts (accessed 25.10.2026)
 
 | Fact                                                                                                                                                                          | Source                               |

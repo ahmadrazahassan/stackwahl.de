@@ -6,7 +6,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-25
+lastReviewed: 2026-10-26
 author: null
 summary: Rechnungsprogramm mit dauerhaft kostenlosem Einstieg, E-Rechnung, DATEV-Anbindung und Automatisierung für Onlinehändler.
 website: https://www.easybill.de
@@ -27,7 +27,7 @@ apps:
   web: true
   ios: null
   android: null
-freeTrialDays: null
+freeTrialDays: 7
 freePlan: true
 compliance:
   gobd:
@@ -57,14 +57,19 @@ compliance:
   kleinunternehmer:
     status: unbekannt
   bankanbindung:
-    status: unbekannt
+    status: ja
+    note: Bankkonto oder PayPal verbinden für den automatischen Zahlungsabgleich; SEPA-Zahlungen über finAPI je 0,29 €.
+    source:
+      url: https://www.easybill.de/
+      title: easybill Startseite
+      accessed: 2026-10-26
   serverstandort:
     status: ja
-    note: Laut Produktseite Serverstandort Deutschland.
+    note: Daten laut FAQ ausschließlich auf Servern in Deutschland, Zwei-Faktor-Anmeldung verfügbar.
     source:
-      url: https://www.easybill.de/produkte/invoice/
-      title: easybill Invoice
-      accessed: 2026-10-24
+      url: https://www.easybill.de/preise/
+      title: easybill Preise, Archivierungskosten und FAQ
+      accessed: 2026-10-26
   avv:
     status: ja
     note: Der Vertrag nach Art. 28 DSGVO wird im Account unter DSGVO Auftragsverarbeitung bereitgestellt.
@@ -92,8 +97,11 @@ features:
     source: *preise
   mahnwesen:
     status: ja
-    note: Automatisches Mahnwesen.
-    source: *preise
+    note: Mahnungen in allen Paketen, automatisiertes Mahnwesen nach Regeln im Paket Premium.
+    source:
+      url: https://www.easybill.de/preise/
+      title: easybill Preise, Archivierungskosten und FAQ
+      accessed: 2026-10-26
   belegerfassungOcr:
     status: ja
     note: Belegerfassung mit KI ab Paket Starter.
@@ -105,6 +113,19 @@ features:
     status: ja
     note: 1 Zugang im Paket Free.
     source: *preise
+  projektzeiten:
+    status: aufpreis
+    note: Projektverwaltung und Zeiterfassung im Paket Premium.
+    source:
+      url: https://www.easybill.de/preise/
+      title: easybill Preise, Archivierungskosten und FAQ
+      accessed: 2026-10-26
+  bankabgleich:
+    status: ja
+    source:
+      url: https://www.easybill.de/
+      title: easybill Startseite
+      accessed: 2026-10-26
 plans:
   - name: Free
     monthlyCents: 0
@@ -135,10 +156,30 @@ plans:
     net: true
     includes:
       - Unbegrenzte Kunden
+      - Ab 500 Dokumente im Monat, wählbar bis 200.000
       - Wiederkehrende Dokumente
       - Versandmanagement
       - Cloud-Backup
-    source: *preise
+    source:
+      url: https://www.easybill.de/preise/
+      title: easybill Preise, Archivierungskosten und FAQ
+      accessed: 2026-10-26
+  - name: Premium
+    monthlyCents: 4500
+    yearlyMonthlyCents: 3700
+    perUser: false
+    net: true
+    includes:
+      - Alle Funktionen aus Professional
+      - Ab 500 Dokumente im Monat
+      - Automatisiertes Mahnwesen
+      - Projektverwaltung und Zeiterfassung
+      - Weitere Mitarbeiter je 5 € im Monat
+    note: Ab-Preis, individualisierbar. Jahrespaket wird im Voraus bezahlt.
+    source:
+      url: https://www.easybill.de/preise/
+      title: easybill Preise, Archivierungskosten und FAQ
+      accessed: 2026-10-26
 pros:
   - Dauerhaft kostenloses Paket mit 50 Dokumenten im Monat, inklusive E-Rechnung.
   - DATEV-Anbindung und Steuerberater-Zugang schon im kostenlosen Paket.
@@ -147,6 +188,7 @@ cons:
   - Das Paket Free erlaubt nur 3 Kontakte, Starter 20 Kontakte.
   - Wiederkehrende Dokumente erst ab Paket Professional für 25 € im Monat.
   - Die Zahl der Dokumente ist je Paket begrenzt, im Paket Free auf 50 und im Paket Starter auf 250 im Monat.
+  - Für die unbegrenzte GoBD-konforme Archivierung fallen je nach Dokumentenzahl 2 € bis 15 € im Monat extra an.
 idealFor:
   - Onlinehändler und Dienstleister, die viele Rechnungen automatisiert erstellen
 notIdealFor:
@@ -157,3 +199,80 @@ logo:
   height: 52
   sourceUrl: https://www.easybill.de/presse/
   accessed: 2026-10-25
+trialSource:
+  url: https://www.easybill.de/preise/
+  title: easybill Preise, Archivierungskosten und FAQ
+  accessed: 2026-10-26
+review:
+  sections:
+    - id: einordnung
+      title: Was easybill ist und für wen es gedacht ist
+      paragraphs:
+        - easybill ist ein Rechnungsprogramm der easybill GmbH aus Kaarst, das im Browser läuft. Es schreibt Angebote, Aufträge, Rechnungen, E-Rechnungen und Lieferscheine, verwaltet Mahnungen und automatisiert für Onlinehändler die Rechnungserstellung und den Versand über Schnittstellen zu Shops und Marktplätzen. Laut Preisseite nutzen über 80.000 Unternehmen easybill Invoice täglich.
+        - easybill ist ausdrücklich kein vollständiges Buchhaltungsprogramm, die Buchhaltung und die Steuermeldungen bleiben bei der Steuerberatung oder in einem angebundenen Programm wie DATEV oder Lexware Office. Die Pakete reichen von einem dauerhaft kostenlosen Einstieg bis zum individualisierbaren Paket Premium für große Unternehmen mit vielen Dokumenten.
+      sources:
+        - &preise2
+          url: https://www.easybill.de/preise/
+          title: easybill Preise, Archivierungskosten und FAQ
+          accessed: 2026-10-26
+        - &home2
+          url: https://www.easybill.de/
+          title: easybill Startseite
+          accessed: 2026-10-26
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Alle Pakete erstellen Angebote, Aufträge, Rechnungen mit E-Rechnung und Lieferscheine. Ab Starter kommen eigenes Briefpapier und Layouts, eine Belegerfassung mit KI und digitale Unterschriften für Dokumente hinzu. Professional ergänzt unbegrenzte Kunden, wiederkehrende Dokumente, ein Versandmanagement, Cloud-Backups, E-Mails ohne easybill-Branding und ein kostenloses Designpaket. Premium ergänzt ein nach Regeln automatisiertes Mahnwesen, Projektverwaltung mit Zeiterfassung und zusätzliche Mitarbeiterzugänge.
+        - Für den Onlinehandel ist easybill auf Automatisierung ausgelegt. Die Software wertet laut Startseite EU-Verkäufe je Land aus, warnt vor dem Überschreiten von Lieferschwellen und berechnet die Steuersätze auch beim OSS- und IOSS-Verfahren und bei der Differenzbesteuerung. Bankkonten und PayPal lassen sich für einen automatischen Zahlungsabgleich verbinden, SEPA-Zahlungen und Lastschriften laufen über den Dienstleister finAPI.
+        - Laut Preisseite gibt es über 1.000 Schnittstellen, darunter DATEV, Lexware Office und eine Inkasso-Schnittstelle schon im kostenlosen Paket. Ein Steuerberater-Zugang ist ebenfalls schon im Paket Free enthalten.
+      sources:
+        - *preise2
+        - *home2
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Das Paket Free kostet dauerhaft 0 € und erlaubt 50 Dokumente und 3 Kontakte im Monat. Starter kostet 12 € im Monat oder 9 € bei jährlicher Zahlung und erlaubt bis zu 250 Dokumente und 20 Kontakte. Professional kostet 39 € oder 25 € und Premium 45 € oder 37 € im Monat, beide ab 500 Dokumenten, wählbar in Stufen bis 200.000 Dokumente. Alle Preise sind netto zuzüglich Umsatzsteuer. Laufzeiten gibt es für einen Monat, ein Quartal, ein Halbjahr und ein Jahr, das Jahrespaket wird im Voraus bezahlt.
+        - Als Dokument zählt jedes Ausgangs- und Eingangsdokument, also auch erfasste Belege. Wer das Kontingent überschreitet, zahlt über die Flex-Option 0,29 € je zusätzlichem Dokument, nach oben begrenzt durch eine Kostenbremse. Im Beispiel der Preisseite kosten 150 zusätzliche Dokumente im Paket Premium 43,50 €, bei 1.500 zusätzlichen Dokumenten greift die Bremse bei 258 € statt 435 €. Weitere Mitarbeiter kosten im Paket Premium je 5 € im Monat.
+        - Dazu kommen Archivierungskosten. easybill speichert die Dokumente laut Preisseite zeitlich unbegrenzt und GoBD-konform, solange die Archivierungskosten bezahlt werden. Sie richten sich nach der Gesamtzahl der gespeicherten Dokumente und reichen von 2 € im Monat bis 15 € im Monat ab 50.000 Dokumenten. Ein Händler im Paket Professional bei jährlicher Zahlung mit bis zu 2.000 archivierten Dokumenten zahlt so 25 € plus 5 €, also 360 € netto oder 428,40 € brutto im Jahr.
+      sources:
+        - *preise2
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und Umsatzsteuer
+      paragraphs:
+        - E-Rechnungen erstellt und versendet easybill in allen Paketen, eingehende E-Rechnungen im Format ZUGFeRD oder XRechnung lassen sich laut Ratgeber kostenlos empfangen, prüfen und archivieren, auch im Paket Free. Die Archivierung beschreibt easybill als GoBD-konform, allerdings gegen die genannten Archivierungskosten.
+        - Für die Steuerberatung gibt es eine DATEV-Schnittstelle und einen Steuerberater-Zugang schon im kostenlosen Paket. Eine Umsatzsteuer-Voranmeldung erstellt easybill laut Produktbeschreibung nicht, das Programm ist kein Buchhaltungsprogramm und erstellt keine Steuererklärungen. Die Startseite bezeichnet easybill als geeignet für Kleinunternehmer, eine ausdrückliche Einstellung für die Kleinunternehmerregelung haben wir auf den geprüften Seiten nicht gefunden.
+      sources:
+        - *preise2
+        - *home2
+        - url: https://www.easybill.de/ratgeber/e-rechnung-empfangen/
+          title: easybill Ratgeber, E-Rechnung empfangen
+          accessed: 2026-10-25
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Laut FAQ der Preisseite speichert easybill die Daten ausschließlich auf Servern in Deutschland und schützt sie mit modernen Verschlüsselungsstandards, eine Zwei-Faktor-Anmeldung steht zur Verfügung. Den Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO stellt easybill im Account unter DSGVO Auftragsverarbeitung bereit, eine Kopie kommt per E-Mail.
+      sources:
+        - *preise2
+        - url: https://support.easybill.de/hc/de/articles/360001287249-Vertragsdokument-Auftrag-gem%C3%A4%C3%9F-Art-28-DSGVO-Vereinbarung
+          title: easybill Helpcenter, Vertragsdokument Art. 28 DSGVO
+          accessed: 2026-10-25
+    - id: einstieg-und-support
+      title: Einstieg, Testphase und Support
+      paragraphs:
+        - easybill lässt sich 7 Tage kostenlos und ohne Kreditkarte testen, die Testphase umfasst immer das Paket Premium. Danach aktiviert sich automatisch das kostenlose Paket Free, ein Abo muss also nicht gekündigt werden. Gekündigte Pakete fallen ebenfalls in das Paket Free zurück, die Daten bleiben erhalten, solange der Account genutzt wird.
+        - In allen bezahlten Paketen sind ein kostenloser Einrichtungs-Service und ein Kundenservice mit echten Menschen enthalten. Dazu kommen ein digitaler Assistent namens Eric rund um die Uhr, Videocalls für komplexe Fälle, Hilfe bei Shop-Anbindungen und Layouts, Webinare mit Fachexperten und Videoanleitungen.
+      sources:
+        - *preise2
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - easybill ersetzt keine Buchhaltung, für die UStVA und die Gewinnermittlung braucht es die Steuerberatung oder ein weiteres Programm. Das kostenlose Paket ist mit drei Kontakten eher zum Kennenlernen geeignet als für den Alltag, und die Kosten setzen sich aus Paket, Flex-Option, Archivierung und Zusatzleistungen zusammen, was den Vergleich erschwert.
+        - Offen sind nach unserer Recherche die Kleinunternehmerregelung und die Frage, ob es eine App für iOS und Android gibt. Wer viele Belege erfasst, sollte berücksichtigen, dass auch Eingangsdokumente auf das Kontingent zählen.
+      sources:
+        - *preise2
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - easybill passt zu Onlinehändlern und Dienstleistern, die viele Rechnungen und E-Rechnungen automatisiert erstellen und an ihre Steuerberatung übergeben. Kostenloser Einstieg, Server in Deutschland, DATEV-Schnittstelle schon kostenlos und eine Kostenbremse für Spitzenmonate sprechen dafür. Die zusätzlichen Archivierungskosten und die fehlende Buchhaltung gehören in jede Kostenrechnung. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise2

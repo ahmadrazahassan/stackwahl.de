@@ -8,7 +8,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-25
+lastReviewed: 2026-10-26
 author: null
 summary: Cloud-Software von Lexware (früher lexoffice) für Belege, E-Rechnungen, Buchhaltung und optionale Lohnabrechnung in vier Versionen.
 website: https://www.lexware.de
@@ -52,9 +52,12 @@ compliance:
     note: ZUGFeRD und XRechnung erstellen und übermitteln.
     source: *preise
   datevExport:
-    status: teilweise
-    note: Steuerberater übernehmen Daten per elektronischer Pendelakte; ein DATEV-Export wird auf der Preisseite nicht ausdrücklich genannt.
-    source: *preise
+    status: ja
+    note: Laut Anbieter Integration mit Steuerkanzleien über DATEV; die Kanzlei übernimmt Daten und Belege per elektronischer Pendelakte.
+    source:
+      url: https://www.lexware.de/facts/lexware-office/
+      title: Lexware Office Kernfakten
+      accessed: 2026-10-26
   elster:
     status: ja
     note: USt-Voranmeldung und Zusammenfassende Meldung, laut Preisseite ab Version L.
@@ -173,7 +176,7 @@ pros:
   - Daten in mehreren ISO-27001-geprüften Rechenzentren in Frankfurt am Main.
 cons:
   - Buchhaltung mit EÜR und Umsatzsteuer erst ab Version L für 21,90 € im Monat.
-  - Ein ausdrücklicher DATEV-Export wird auf der Preisseite nicht genannt, die Übergabe läuft über die Pendelakte.
+  - Die DATEV-Übergabe läuft über die Pendelakte zur Kanzlei, einen Export zum Selbstbuchen nennt die Preisseite nicht.
   - Die Anzahl der enthaltenen Benutzer nennt die Preisseite nicht.
 idealFor:
   - Selbstständige und kleine Unternehmen mit Mitarbeitenden, die Lohn und Buchhaltung in einem Werkzeug wollen
@@ -185,3 +188,80 @@ logo:
   height: 15
   sourceUrl: https://www.lexware.de/presse/
   accessed: 2026-10-25
+review:
+  sections:
+    - id: einordnung
+      title: Was Lexware Office ist und für wen es gedacht ist
+      paragraphs:
+        - Lexware Office, früher unter dem Namen lexoffice bekannt, ist die Cloud-Plattform der Haufe-Lexware GmbH & Co. KG aus Freiburg für Rechnungen, Belege, Banking, Buchhaltung und Lohn. Sie läuft vollständig im Browser und in Apps für iOS und Android, eine Installation ist nicht nötig. Laut Kernfakten-Seite richtet sich Lexware Office an Selbstständige, Gründer und kleine Unternehmen und ergänzt die klassischen, lokal installierten Lexware-Programme um eine reine Cloud-Variante.
+        - Der Aufbau folgt vier Versionen, die aufeinander aufbauen. S deckt nur Belegerfassung und Archiv ab, M ergänzt Angebote, Rechnungen und Mahnungen, L die Buchhaltung mit EÜR und Umsatzsteuer, XL besondere Rechnungstypen und eine Programmierschnittstelle. Die Lohnabrechnung lässt sich zu jeder Version hinzubuchen. Laut Preisseite nutzen über 50.000 Steuerberater in Deutschland den kostenlosen Online-Zugang zu den Konten ihrer Mandanten.
+      sources:
+        - &fakten2
+          url: https://www.lexware.de/facts/lexware-office/
+          title: Lexware Office Kernfakten
+          accessed: 2026-10-26
+        - &preise2
+          url: https://www.lexware.de/preise/
+          title: Lexware Office Preise und Versionsvergleich
+          accessed: 2026-10-26
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Im Auftragsbereich erstellt Lexware Office Angebote, Auftragsbestätigungen, Lieferscheine und Rechnungen mit Auto-Vervollständigung, Belegnummernkreisen, Kundenrabatten und Zahlungsbedingungen. Häufige Produkte und Leistungen werden als Vorlagen gespeichert. Wiederkehrende Rechnungen gehen im eingestellten Intervall automatisch hinaus. In Version XL kommen Abschlags-, Sammel- und Schlussrechnungen, Rechnungen ins Ausland, Rechnungen für Bauleistungen nach § 13b UStG und für Photovoltaikanlagen hinzu. Kunden können Angebote online auswählen, Aufträge bestätigen und Rechnungen per Überweisung oder PayPal bezahlen.
+        - Belege scannen Sie mit der Lexware App, das Programm erkennt die nötigen Angaben und schlägt eine Buchung vor. Bis zu 20 Lieferanten-Adressen lassen sich als autorisierte Absender hinterlegen, deren Rechnungen per E-Mail automatisch im Rechnungseingang landen. Abschreibungspflichtige Investitionen erkennt die Software beim Scan und schreibt sie monatlich ab. Alle Bankkonten lassen sich anbinden, Zahlungen werden automatisch mit offenen Rechnungen abgeglichen, und Überweisungen gehen direkt aus dem Programm. Eine IBAN-Sperrliste soll vor betrügerischen Überweisungen schützen.
+        - In der Buchhaltung ab Version L gibt es Kassenbuch, Einnahmen-Überschuss-Rechnung, Gewinn- und Verlustrechnung, BWA mit Drill-Down und eine automatische Umsatzsteuerprognose. Kontakte lassen sich aus dem Smartphone-Telefonbuch übernehmen, zu jedem Kunden zeigt eine Kundenakte die Vorgänge, Dokumente und Umsatzstatistiken. Über 140 Partner-Erweiterungen verbinden Onlineshops, Zeiterfassung und Reisekosten.
+        - Das Zusatzmodul Lohn und Gehalt rechnet laut Preisseite alle Mitarbeitertypen ab, mit Ausnahmen wie Baulohn, öffentlichem Dienst und Haushaltshilfen. Es versendet die Meldungen an Krankenkassen und Finanzamt automatisch, überweist Löhne und Abgaben direkt, stellt Mitarbeitenden ihre Lohndokumente online bereit und verbucht die Personalkosten in der Buchhaltung.
+      sources:
+        - *preise2
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Alle Versionen sind monatlich kündbar, eine Mindestlaufzeit gibt es laut FAQ nicht. Version S kostet 7,90 €, M 12,90 €, L 21,90 € und XL 32,90 € im Monat, jeweils zuzüglich Umsatzsteuer. Hosting, Datensicherung, Updates und Support sind enthalten. Am 26.10.2026 galt für Neukunden ein Rabatt von 50 % für die ersten drei Monate, also zum Beispiel 10,95 € statt 21,90 € für Version L.
+        - Im Jahr kostet Version L nach Listenpreis 262,80 € netto oder 312,73 € brutto. Mit dem Rabatt der ersten drei Monate sind es im ersten Jahr 229,95 € netto. Version XL kostet 394,80 € netto im Jahr. Die Lohnabrechnung kostet zusätzlich ab 12,90 € im Monat, der Preis staffelt sich nach Zahl der Mitarbeitenden von bis zu 2 bis zu 50. Version L mit Lohn kostet damit mindestens 34,80 € netto im Monat oder 417,60 € netto im Jahr.
+        - Wie viele Benutzer in einer Version enthalten sind, nennt die Preisseite nicht. Sie verweist auf eine Fair Usage Policy in den AGB, die Höchstgrenzen für die Nutzung festlegt. Bezahlt wird per Lastschrift oder Kreditkarte, die Version lässt sich jederzeit in den Einstellungen wechseln.
+      sources:
+        - *preise2
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und ELSTER
+      paragraphs:
+        - E-Rechnungen nach der Norm EN 16931 erfasst Lexware Office in einem strukturierten Datensatz. Ab Version M erstellt und übermittelt das Programm E-Rechnungen in den Formaten ZUGFeRD und XRechnung, auch an Behörden. Damit sind Empfangspflicht und Versand abgedeckt.
+        - Für die Umsatzsteuer erstellt Lexware Office ab Version L die Umsatzsteuer-Voranmeldung und versendet sie mit einem Klick elektronisch an das Finanzamt, bei Bedarf auch die Zusammenfassende Meldung an das Bundeszentralamt für Steuern. Die Zusammenarbeit mit der Kanzlei läuft laut Kernfakten über DATEV. Die Steuerberatung bekommt einen kostenlosen Online-Zugang und übernimmt Buchhaltungsdaten und Belege über die elektronische Pendelakte in die Kanzleibuchhaltung.
+        - Für die GoBD gibt es ein elektronisches Langzeitbelegarchiv, in dem auch Word- und Excel-Rechnungen und Korrespondenz abgelegt werden können. Datenschutz und Datensicherheit prüft laut Anbieter regelmäßig eine unabhängige Wirtschaftsprüfungsgesellschaft nach IDW PS 880, IDW RS FAIT 1 und GoBD. Eine Aussage zur Kleinunternehmerregelung haben wir auf den geprüften Seiten nicht gefunden.
+      sources:
+        - *preise2
+        - *fakten2
+        - &sicherheit2
+          url: https://www.lexware.de/datenschutz-datensicherheit/
+          title: Datenschutz und Datensicherheit mit Lexware Office
+          accessed: 2026-10-26
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Die Daten liegen laut Anbieter in mehreren Hochsicherheitsrechenzentren am Standort Frankfurt am Main, die nach ISO 27001 und PCI DSS zertifiziert sind. Für Lexware Office werden dort abgetrennte Server in zutrittsgeschützten Bereichen betrieben, ein Intrusion Detection System wehrt Angriffe ab. Die Verbindung ist mit 256-Bit-TLS verschlüsselt, besonders sensible Daten mit AES. Alle Daten werden täglich gesichert und auf mehrere voneinander unabhängige Rechenzentren in Frankfurt verteilt, unabhängige Dienstleister suchen regelmäßig nach Schwachstellen.
+        - Den Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO stellt Lexware im Hilfe-Center zum Download bereit.
+      sources:
+        - *sicherheit2
+        - url: https://help.lexware.de/de-form/articles/548171-dsgvo-vertrag-zur-auftragsverarbeitung
+          title: Lexware Office Hilfe, Vertrag zur Auftragsverarbeitung
+          accessed: 2026-10-25
+    - id: einstieg-und-support
+      title: Einstieg, Testphase und Support
+      paragraphs:
+        - Lexware Office lässt sich 30 Tage kostenlos und unverbindlich testen. In der Testphase stehen alle Funktionen der Version XL und das Modul Lohn und Gehalt zur Verfügung, danach wählen Sie eine Version. Die Apps für iOS und Android sind im Preis enthalten, mit ihnen schreiben Sie unterwegs Rechnungen und Angebote und erfassen Belege.
+        - Der Support ist im Preis enthalten. Das Service-Team erreichen Sie laut FAQ über das Fragezeichen-Symbol im Programm, per E-Mail und über eine kostenlose Servicenummer. Neuerungen werden laufend kostenlos eingespielt und in einer Timeline dokumentiert.
+      sources:
+        - *preise2
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Die günstigen Versionen S und M enthalten keine Buchhaltung. Wer EÜR, Umsatzsteuer-Voranmeldung und Kassenbuch braucht, landet bei Version L für 21,90 € im Monat, besondere Rechnungstypen wie Abschlagsrechnungen gibt es erst in XL. Einen DATEV-Export zum Selbstbuchen im eigenen Haus nennt die Preisseite nicht, die Übergabe ist auf die Zusammenarbeit mit der Kanzlei ausgerichtet.
+        - Offen sind nach unserer Recherche die Zahl der enthaltenen Benutzer, die Grenzen der Fair Usage Policy und die Unterstützung der Kleinunternehmerregelung. Diese Punkte lassen sich in der 30-tägigen Testphase klären.
+      sources:
+        - *preise2
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - Lexware Office passt zu Selbstständigen und kleinen Unternehmen, die Rechnungen, Belege, Bank, Buchhaltung und auf Wunsch Lohn in einer monatlich kündbaren Cloud-Lösung führen und eng mit ihrer Steuerberatung zusammenarbeiten wollen. Rechenzentren in Frankfurt, ein geprüftes Belegarchiv und der Download des Auftragsverarbeitungsvertrags sprechen dafür. Die Buchhaltung beginnt allerdings erst in Version L. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise2
+        - *sicherheit2

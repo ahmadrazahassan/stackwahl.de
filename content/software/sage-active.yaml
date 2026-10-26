@@ -9,7 +9,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-25
+lastReviewed: 2026-10-26
 author: null
 summary: Cloud-Lösung von Sage für Angebote, Rechnungen, Buchhaltung und Lohn, mit UStVA per ELSTER und DATEV-Export.
 website: https://www.sage.com/de-de/produkte/sage-active/
@@ -28,7 +28,7 @@ apps:
   web: true
   ios: null
   android: null
-freeTrialDays: null
+freeTrialDays: 14
 freePlan: false
 compliance:
   gobd:
@@ -92,6 +92,41 @@ features:
   mobileApp:
     status: ja
     source: *produkt
+  bankabgleich:
+    status: ja
+    note: Einfacher Bankkontenabgleich schon in Starter, Zahlungen werden offenen Rechnungen zugeordnet.
+    source:
+      url: https://www.sage.com/de-de/produkte/sage-active/
+      title: Sage Active Produktseite, Pakete und FAQ
+      accessed: 2026-10-26
+  euer:
+    status: ja
+    note: EÜR-Bericht in Essentials zum Abruf und Export.
+    source:
+      url: https://www.sage.com/de-de/produkte/sage-active/
+      title: Sage Active Produktseite, Pakete und FAQ
+      accessed: 2026-10-26
+  bilanz:
+    status: ja
+    note: Doppelte Buchführung nach SKR03 und SKR04, Echtzeitberichte aus GuV und Bilanz in Essentials; keine E-Bilanz.
+    source:
+      url: https://www.sage.com/de-de/produkte/sage-active/
+      title: Sage Active Produktseite, Pakete und FAQ
+      accessed: 2026-10-26
+  api:
+    status: ja
+    note: Open API in beiden Paketen.
+    source:
+      url: https://www.sage.com/de-de/produkte/sage-active/
+      title: Sage Active Produktseite, Pakete und FAQ
+      accessed: 2026-10-26
+  steuerberaterzugang:
+    status: ja
+    note: Zusammenarbeit mit externem Buchhalter schon in Starter.
+    source:
+      url: https://www.sage.com/de-de/produkte/sage-active/
+      title: Sage Active Produktseite, Pakete und FAQ
+      accessed: 2026-10-26
 plans:
   - name: Sage Active Starter
     monthlyCents: 2500
@@ -99,32 +134,41 @@ plans:
     perUser: false
     net: true
     includes:
-      - 2 Nutzer
-      - Auftragsbearbeitung
-      - Forderungen und Verbindlichkeiten
-    note: Zum Prüfdatum 50 % Rabatt für 3 Monate für Neukunden (12,50 €), Aktion bis 04.01.2027. Laufzeit auf der Seite nicht angegeben.
-    source: *produkt
+      - 5 Nutzer, weitere über die Verwaltung
+      - 300 Rechnungen im Monat
+      - Angebote und Rechnungen, KI für Belege und E-Rechnungen
+      - Bankkontenabgleich, Open API, Mobile App
+    note: Monatlich verlängert, zum Ende des Abrechnungsmonats kündbar. Zum Prüfdatum 50 % Rabatt für 3 Monate für Neukunden (12,50 €), Aktion bis 04.01.2027.
+    source:
+      url: https://www.sage.com/de-de/produkte/sage-active/
+      title: Sage Active Produktseite, Pakete und FAQ
+      accessed: 2026-10-26
   - name: Sage Active Essentials
     monthlyCents: 4900
     yearlyMonthlyCents: null
     perUser: false
     net: true
     includes:
-      - 4 Nutzer
-      - Einkauf und Verkauf
-      - Buchhaltung
-      - UStVA per ELSTER
-    note: Zum Prüfdatum 50 % Rabatt für 3 Monate für Neukunden (24,50 €). Laufzeit auf der Seite nicht angegeben.
-    source: *produkt
+      - 10 Nutzer, 2 Mitarbeitende in Lohn und HR
+      - 500 Rechnungen im Monat
+      - Doppelte Buchführung, GuV, Bilanz, EÜR
+      - UStVA per ELSTER, DATEV-Export
+      - Lohnabrechnung und HR
+    note: Monatlich verlängert, zum Ende des Abrechnungsmonats kündbar. Zum Prüfdatum 50 % Rabatt für 3 Monate für Neukunden (24,50 €). Weitere Mitarbeitende in Lohn und HR je 3 € im Monat.
+    source:
+      url: https://www.sage.com/de-de/produkte/sage-active/
+      title: Sage Active Produktseite, Pakete und FAQ
+      accessed: 2026-10-26
 pros:
-  - Im Starter-Tarif sind 2 Nutzer enthalten, in Essentials 4 Nutzer.
+  - Im Paket Starter sind 5 Nutzer enthalten, in Essentials 10 Nutzer.
   - Umsatzsteuer-Voranmeldung per ELSTER und Export im DATEV-Format.
-  - Lohnabrechnung und HR in derselben Lösung.
+  - Lohnabrechnung und HR in derselben Lösung, zwei Mitarbeitende inklusive.
+  - Monatlich kündbar zum Ende des Abrechnungsmonats.
 cons:
   - Serverstandort und Auftragsverarbeitung für Sage Active sind auf den geprüften Seiten nicht dokumentiert.
-  - Buchhaltung erst im Tarif Essentials für 49 € im Monat.
-  - Die Vertragslaufzeit steht nicht auf der Produktseite.
+  - Buchhaltung erst im Paket Essentials für 49 € im Monat.
   - E-Rechnungen lassen sich bisher nur empfangen, der Versand ist laut Anbieter angekündigt.
+  - Rechnungen sind auf 300 beziehungsweise 500 im Monat begrenzt, weitere kosten extra.
 idealFor:
   - Kleine Unternehmen mit Mitarbeitenden, die Aufträge, Buchhaltung und Lohn aus einer Hand wollen
 notIdealFor:
@@ -135,3 +179,73 @@ logo:
   height: 32
   sourceUrl: https://www.sage.com/de-de/
   accessed: 2026-10-25
+trialSource:
+  url: https://www.sage.com/de-de/produkte/sage-active/
+  title: Sage Active Produktseite, Pakete und FAQ
+  accessed: 2026-10-26
+review:
+  sections:
+    - id: einordnung
+      title: Was Sage Active ist und für wen es gedacht ist
+      paragraphs:
+        - Sage Active ist die Cloud-Lösung der Sage GmbH aus Frankfurt am Main für kleine Unternehmen. Sie verbindet Auftragsbearbeitung, Buchhaltung, Lohnabrechnung und HR in einer Anwendung, die im Browser auf PCs und Tablets mit Windows, macOS und Android läuft, dazu kommt eine App. Laut FAQ richtet sich Sage Active vorwiegend an Unternehmen im B2B-Umfeld, besonders an neu gegründete und wachsende Betriebe.
+        - Es gibt zwei Pakete. Starter automatisiert Angebote, Rechnungen, Forderungen und Verbindlichkeiten und überlässt die Buchführung einem externen Buchhalter. Essentials richtet sich an Unternehmen, die Buchhaltung, Lohnabrechnung und HR selbst erledigen wollen, aber keine Lagerbestände verwalten müssen. Für das Buchhaltungsmodul empfiehlt Sage ausdrücklich Buchhaltungskenntnisse.
+      sources:
+        - &sa
+          url: https://www.sage.com/de-de/produkte/sage-active/
+          title: Sage Active Produktseite, Pakete und FAQ
+          accessed: 2026-10-26
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Im Verkauf erstellen Sie Angebote und wandeln sie direkt in Aufträge, Lieferscheine und Rechnungen um, mit individuellen Preisen und Rabatten. Angebote und Rechnungen gehen per E-Mail hinaus, Rechnungen können einen Zahlungslink für Überweisungen enthalten. Zahlungen werden automatisch offenen Rechnungen zugeordnet, Dashboards zeigen Kontostände in Echtzeit, und Zahlungsfristen bleiben im Blick.
+        - Eingangsrechnungen und Belege laden Sie als Bild, PDF oder E-Rechnung per Drag and Drop hoch, eine KI liest die Daten aus und übernimmt sie in die Buchhaltung. Buchungen entstehen automatisch aus Verkaufsrechnungen und Bankbewegungen. Essentials bucht nach Soll- und Ist-Versteuerung, auf Basis der Kontenrahmen SKR03 oder SKR04 oder eines importierten Kontenplans, und liefert Echtzeitberichte aus GuV und Bilanz sowie einen EÜR-Bericht.
+        - Neu in Essentials sind Lohnabrechnung und HR. Die Lohnabrechnung erledigt laut Anbieter alle gesetzlichen Meldungen, Mitarbeitende pflegen ihre Daten im Self-Service-Portal, und HR-Prozesse werden zentral verwaltet. Zwei Mitarbeitende sind im Paket enthalten.
+        - Der KI-Assistent Sage Copilot weist auf überfällige Rechnungen, offene Lieferantenzahlungen und unbestätigte Angebote hin und schreibt Entwürfe für Zahlungserinnerungen. Laut Produktseite ist er für kurze Zeit kostenlos enthalten. Die App erfasst Belege per Foto, zeigt Kennzahlen, Rechnungen und Angebote und verwaltet Kunden und Lieferanten. Über eine Open API und Erweiterungen wie N2F für Spesen lässt sich Sage Active anbinden, für Dokumente stehen 5 GB Speicher zur Verfügung.
+      sources:
+        - *sa
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Starter kostet 25 € und Essentials 49 € im Monat zuzüglich Umsatzsteuer. Das Abo verlängert sich monatlich und lässt sich jederzeit zum Ende des Abrechnungsmonats kündigen. Am 26.10.2026 galt für Neukunden ein Rabatt von 50 % für die ersten drei Monate, also 12,50 € und 24,50 € im Monat, laut Fußnote bis zum 04.01.2027.
+        - Im Jahr kostet Essentials nach Listenpreis 588 € netto oder 699,72 € brutto, mit dem Rabatt der ersten drei Monate 514,50 € netto im ersten Jahr. Starter kostet 300 € netto im Jahr oder mit Rabatt 262,50 € im ersten Jahr. Weitere Unternehmen lassen sich ohne Begrenzung anlegen und werden jeweils voll berechnet.
+        - Enthalten sind in Starter 5 Nutzer und 300 Rechnungen im Monat, in Essentials 10 Nutzer und 500 Rechnungen. Zusätzliche Rechnungspakete kosten 10 € für 100, 40 € für 500 und 65 € für 1.000 Rechnungen, jede weitere Rechnung über dem Paket 0,15 €. Weitere Mitarbeitende in Lohn und HR kosten in Essentials je 3 € im Monat. Für Abos vor dem 01.02.2026 gelten laut FAQ andere Bedingungen mit 2 und 4 Nutzern.
+      sources:
+        - *sa
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und ELSTER
+      paragraphs:
+        - Eingehende E-Rechnungen im Format XRechnung und ZUGFeRD liest Sage Active in beiden Paketen ein, damit ist die Empfangspflicht erfüllt. Den Versand von E-Rechnungen aus dem Programm kündigt Sage laut FAQ für die nahe Zukunft an. Bis dahin führen wir den Versand als Nein.
+        - Mit Essentials erstellen Sie die Umsatzsteuer-Voranmeldung und reichen sie monatlich oder vierteljährlich automatisch über ELSTER ein. Alle Buchungen lassen sich im DATEV-Format exportieren. Wer nach EÜR ermittelt, wählt die Ist-Versteuerung und gibt den EÜR-Bericht an die Steuerberatung, die die Erklärung einreicht. Jahressteuererklärungen und die E-Bilanz sind laut FAQ nicht möglich, Sage empfiehlt dafür eine Drittlösung. Zur GoBD schreibt Sage, dass die Software zertifiziert ist und konform mit den GoBD-Vorgaben arbeitet.
+      sources:
+        - *sa
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Einen Serverstandort und einen Auftragsverarbeitungsvertrag für Sage Active nennen die geprüften Seiten nicht, und Sage Active steht nicht in der Liste der Sage Cloud Services der Datenschutzerklärung. Beides sollte vor dem Einsatz bei Sage erfragt werden, besonders weil Essentials auch Lohn- und Personaldaten verarbeitet.
+        - Laut FAQ endet der Zugriff auf die Daten mit dem Ablauf eines gekündigten Abos, nach sechs Monaten werden sie endgültig gelöscht. Daten sollten deshalb vor dem Ende des Abos gesichert werden.
+      sources:
+        - *sa
+        - url: https://www.sage.com/de-de/rechtliches/datenschutz-cookies/cloud-services/
+          title: Datenschutzerklärung Sage Cloud Services
+          accessed: 2026-10-24
+    - id: einstieg-und-support
+      title: Einstieg, Testphase und Support
+      paragraphs:
+        - Starter lässt sich 14 Tage kostenlos und ohne Kreditkarte testen, mit vollem Funktionsumfang, geführtem Onboarding und echten Firmendaten. Nach Ablauf endet der Zugang automatisch, es gibt keinen automatischen Tarifwechsel. Essentials lässt sich 30 Tage kostenlos testen, allerdings mit Angabe der Zahlungsdaten, eine Kündigung in der Testphase ist möglich. Kunden-, Lieferanten-, Produkt- und Buchungsdaten lassen sich über CSV-Vorlagen importieren.
+        - Für Hilfe nennt Sage eine integrierte Online-Hilfe, Assistenten, Videos und ein Supportteam, dessen Hilfestellungen direkt im Produkt erreichbar sind. Außerdem bietet Sage einen unverbindlichen Beratungstermin an. Mit der ersten Anmeldung verzichten Kunden laut FAQ auf ihr Widerrufsrecht.
+      sources:
+        - *sa
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Die Buchhaltung beginnt erst mit Essentials, und E-Rechnungen lassen sich noch nicht versenden. Eine Lagerverwaltung gibt es nicht, und Jahressteuererklärungen sowie die E-Bilanz laufen außerhalb von Sage Active. Die Rechnungskontingente reichen für die meisten kleinen Unternehmen, bei vielen Rechnungen kommen Zusatzpakete hinzu.
+        - Offen sind nach unserer Recherche der Serverstandort, der Auftragsverarbeitungsvertrag, die Plattformen der App und die Unterstützung der Kleinunternehmerregelung nach § 19 UStG.
+      sources:
+        - *sa
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - Sage Active passt zu kleinen B2B-Unternehmen mit Mitarbeitenden, die Aufträge, Buchhaltung mit UStVA per ELSTER und DATEV-Export sowie Lohn und HR in einer monatlich kündbaren Cloud-Lösung führen wollen. Viele Nutzer im Grundpreis und die integrierte Lohnabrechnung sprechen dafür, der fehlende E-Rechnungsversand und die offenen Fragen zu Serverstandort und Auftragsverarbeitung dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *sa

@@ -9,7 +9,7 @@ categories:
   - rechnungsprogramme
 status: draft
 verification: unverified
-lastReviewed: 2026-10-25
+lastReviewed: 2026-10-26
 author: null
 summary: Bürosoftware aus Detmold für Aufträge, E-Rechnungen, Buchhaltung und Warenwirtschaft, mit Serverstandort Deutschland.
 website: https://www.orgamax.de
@@ -180,3 +180,71 @@ logo:
   height: 210
   sourceUrl: https://www.orgamax.de/
   accessed: 2026-10-25
+review:
+  sections:
+    - id: einordnung
+      title: Was orgaMAX ist und für wen es gedacht ist
+      paragraphs:
+        - orgaMAX ist eine Bürosoftware der deltra Business Software GmbH & Co. KG aus Detmold. Sie verbindet Auftragswesen, Buchhaltung, Dokumentenmanagement und in den größeren Plänen Lager und Einkauf in einem durchgängigen Ablauf. Das Logo trägt den Zusatz Bürosoftware, und genau so ist das Produkt aufgebaut, vom Angebot über die Rechnung bis zur Verbuchung und Umsatzsteuer-Voranmeldung.
+        - Die Pläne bauen aufeinander auf. Auftrag ist die Basis für Angebote, Aufträge, Rechnungen, Belege, Banking, Buchhaltung und Steuern. Auftrag Pro ergänzt Teil-, Sammel-, Abschlags- und Schlussrechnungen, Projekte mit Zeiterfassung und digitale Unterschriften. Warenwirtschaft ergänzt Lager, Bestellungen und Einkaufskonditionen, Warenwirtschaft Pro wird nach Beratung individuell zusammengestellt. Damit passt orgaMAX besonders zu Handwerks-, Dienstleistungs- und Handelsbetrieben, die mehr als Rechnungen brauchen.
+      sources:
+        - &preise2
+          url: https://www.orgamax.de/preise
+          title: orgaMAX Preise und Funktionsvergleich
+          accessed: 2026-10-26
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Im Verkauf erstellt orgaMAX E-Rechnungen, Angebote mit Optionen und Alternativen, Auftragsbestätigungen, Lieferscheine, Gutschriften, Stornos, Rechnungskorrekturen und Geschäftsbriefe. Briefpapier, Textbausteine, Rabatte und englische Vorlagen sind enthalten. Für das Handwerk wichtig sind der automatische Ausweis des Lohnanteils für § 35a EStG und die Differenzbesteuerung. Zahlungserinnerungen und mehrstufige Mahnungen werden automatisch versendet, Kunden nehmen Angebote digital an und bezahlen Rechnungen online per PayPal, Überweisung oder Lastschrift, wofür Gebühren der Zahlungsanbieter anfallen.
+        - In der Buchhaltung erfasst eine KI-gestützte Belegerkennung Eingangsrechnungen, Belege kommen über die orgaMAX App oder ein eigenes E-Mail-Postfach. Bankkonten und PayPal-Konten werden eingebunden, Zahlungen automatisch abgeglichen, SEPA-Überweisungen und Lastschriften direkt ausgelöst. Dazu kommen ein elektronisches Kassenbuch, einfache und doppelte Buchführung nach SKR03 oder SKR04, Einnahmen-Überschuss-Rechnung, Gewinn- und Verlustrechnung sowie Anlagen und Abschreibungen. Die automatische Belegverbuchung kennzeichnet die Vergleichstabelle als bald verfügbar.
+        - Das Dokumentenmanagement importiert externe Dokumente mit 25 GB Speicher, verknüpft sie mit Vorgängen, bietet Volltextsuche, Ordner, Tags und Rechte und lässt externe Dokumente digital unterschreiben. Ein KI-Agent namens MAX prüft, optimiert und übersetzt Vorgangs- und Leistungstexte, mit reportMAX lassen sich Geschäftsberichte per Frage erstellen.
+        - Im Plan Warenwirtschaft verwaltet orgaMAX Lager, Bestände und Reservierungen, Lieferantenbestellungen mit lieferantenspezifischen Preisen, Losgrößen und Beschreibungen sowie mehrere Preislisten und Staffelpreise. Warenwirtschaft Pro ergänzt nach Bedarf Serien, Chargen, mehrere Lager, Produktion, E-Commerce-Schnittstellen, Kassenanbindung, individuelle Kontenpläne und Vertragsverwaltung.
+      sources:
+        - *preise2
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Laut Preiskarten kostet Auftrag 49 €, Auftrag Pro 69 €, Warenwirtschaft 99 € und Warenwirtschaft Pro 149 € im Monat bei jährlicher Zahlung, jeweils zuzüglich Umsatzsteuer. Ein Nutzer ist enthalten. Am 26.10.2026 galt für Neukunden ein Rabatt von 50 % in den ersten sechs Monaten bei jährlicher Zahlung, mit einer Mindestlaufzeit von 12 Monaten, ab dem siebten Monat gilt der reguläre Preis.
+        - Im Jahr kostet Auftrag nach Listenpreis 588 € netto oder 699,72 € brutto, mit dem Rabatt der ersten sechs Monate 441 € netto im ersten Jahr. Auftrag Pro kostet 828 € netto im Jahr. Jeder weitere Büronutzer kostet 20 € im Monat, zwei Personen im Plan Auftrag zahlen damit 69 € netto im Monat oder 828 € netto im Jahr.
+        - Als Add-ons nennt die Preisseite Abos und wiederkehrende Rechnungen für 10 € im Monat, die orgaMAX API für 30 €, weitere Briefpapiere und weitere 10 GB Speicher für je 5 € und weitere Mandanten ab 49 € im Monat. Uneinheitlich ist die Vergleichstabelle auf derselben Seite, die für die Pläne 39 €, 49 € und 69 € nennt, während die Preiskarten 49 €, 69 € und 99 € zeigen. Vor dem Kauf sollte der Preis im Bestellvorgang geprüft werden.
+      sources:
+        - *preise2
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und ELSTER
+      paragraphs:
+        - E-Rechnungen empfängt, verarbeitet und versendet orgaMAX in allen Plänen. Die Umsatzsteuer-Voranmeldung ist in allen Plänen enthalten, die Archivierung beschreibt der Anbieter als GoBD-konform. Die Kleinunternehmerregelung lässt sich laut FAQ in den Steuereinstellungen aktivieren.
+        - Für die Steuerberatung gibt es einen Steuerberaterzugang, einen Buchungsdatenexport für DATEV, Agenda, Simba, ADDISON und Stotax, einen PDF-Belegexport und einen automatischen Buchungs- und Belegexport über die DATEV Cloud Services. Damit deckt orgaMAX auch Kanzleien ab, die nicht mit DATEV arbeiten.
+      sources:
+        - *preise2
+        - url: https://info.orgamax.de/faq-orgamax-buchhaltung/die-steuereinstellungen
+          title: orgaMAX FAQ, Steuereinstellungen
+          accessed: 2026-10-25
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Unter Datensicherheit nennt die Preisseite ein deutsches Rechenzentrum, verschlüsselte Übertragung, automatische Datensicherungen und eine hohe Ausfallsicherheit. Den Vertrag zur Auftragsverarbeitung fordern Kunden laut FAQ in den Einstellungen der App an.
+      sources:
+        - *preise2
+        - url: https://info.orgamax.de/faq-orgamax-buchhaltung/einstellungen-der-orgamax-buchhaltung-app
+          title: orgaMAX FAQ, Einstellungen der Buchhaltung-App
+          accessed: 2026-10-25
+    - id: einstieg-und-support
+      title: Einstieg, Testphase und Support
+      paragraphs:
+        - orgaMAX lässt sich 14 Tage kostenlos testen, Zahlungsdaten sind dafür nicht nötig. Für die Wahl des Plans bieten Beraterinnen und Berater ein persönliches Gespräch an, Warenwirtschaft Pro wird nur über einen Beratungstermin gebucht.
+        - Persönlicher Support per Telefon, Mail und Fernwartung ist in jedem Plan enthalten. Der Anbieter betont, dass Mitarbeitende antworten, die orgaMAX aus der Praxis kennen, und kein Callcenter. Eine Mobile App mit Kunden- und Vorgangsdaten, Belegerfassung sowie Angeboten und Rechnungen ist ebenfalls in allen Plänen enthalten, Updates laufen automatisch.
+      sources:
+        - *preise2
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Mit 49 € im Monat bei jährlicher Zahlung ist schon der Einstieg teurer als reine Rechnungsprogramme, und weitere Nutzer kosten je 20 €. Wiederkehrende Rechnungen und die API sind kostenpflichtige Add-ons. Eine Bilanz nennt die Vergleichstabelle nicht, sie führt einfache und doppelte Buchführung, EÜR und GuV.
+        - Offen sind nach unserer Recherche, ob orgaMAX vollständig im Browser läuft oder installiert wird, auf welchen Plattformen die Mobile App erscheint und welcher der beiden Preisblöcke gilt. Außerdem kennzeichnet die Vergleichstabelle einzelne Funktionen wie die automatische Belegverbuchung als bald verfügbar.
+      sources:
+        - *preise2
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - orgaMAX passt zu Handwerks-, Dienstleistungs- und Handelsbetrieben, die Auftragswesen, Buchhaltung mit UStVA, Dokumente und später Lager in einem System führen und persönlichen Support schätzen. Deutsches Rechenzentrum, GoBD-konforme Archivierung und Exporte für DATEV und andere Kanzleisysteme sprechen dafür. Der höhere Einstiegspreis, Kosten je weiterem Nutzer und widersprüchliche Preisangaben sprechen dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise2

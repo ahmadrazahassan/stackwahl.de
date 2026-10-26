@@ -6,7 +6,7 @@ categories:
   - buchhaltungssoftware
 status: draft
 verification: unverified
-lastReviewed: 2026-10-25
+lastReviewed: 2026-10-26
 author: null
 summary: Cloud-Buchhaltung für EÜR und Bilanz mit KI-Belegerkennung, Bankanbindung und Steuerberater-Zugang in allen Paketen.
 website: https://www.buchhaltungsbutler.de
@@ -45,11 +45,19 @@ compliance:
     note: Buchungen werden samt Kommentaren an DATEV oder andere Kanzleisoftware übergeben.
     source: *preise
   elster:
-    status: teilweise
-    note: Die Preisseite nennt die EÜR mit direkter ELSTER-Übermittlung; die Umsatzsteuer-Voranmeldung wird dort nicht ausdrücklich genannt.
-    source: *preise
+    status: ja
+    note: UStVA und Zusammenfassende Meldung ab Paket Smart über die eigene Elster-Integration, ohne eigenes Zertifikat.
+    source:
+      url: https://www.buchhaltungsbutler.de/funktionen/
+      title: BuchhaltungsButler Funktionen
+      accessed: 2026-10-26
   kleinunternehmer:
-    status: unbekannt
+    status: ja
+    note: Laut Funktionsseite für Kleinunternehmer, Soll- und Istversteuerer, EÜR und Bilanz geeignet.
+    source:
+      url: https://www.buchhaltungsbutler.de/funktionen/
+      title: BuchhaltungsButler Funktionen
+      accessed: 2026-10-26
   bankanbindung:
     status: ja
     note: Über drei Schnittstellenpartner mehr als 5.000 Banken.
@@ -169,3 +177,85 @@ logo:
   height: 80
   sourceUrl: https://www.buchhaltungsbutler.de/
   accessed: 2026-10-25
+review:
+  sections:
+    - id: einordnung
+      title: Was BuchhaltungsButler ist und für wen es gedacht ist
+      paragraphs:
+        - BuchhaltungsButler ist eine Cloud-Buchhaltung der BuchhaltungsButler GmbH aus Berlin, die laut Startseite zur Visma-Gruppe gehört. Das Programm automatisiert die laufende Buchhaltung mit KI-gestützter Belegerkennung, Bankabgleich und Regeln und richtet sich an kleine und mittlere Unternehmen, Selbstständige, Online-Händler, Vereine und Kanzleien.
+        - Der Ansatz ist die Arbeitsteilung mit der Steuerberatung. Im Paket Light buchen Sie vor und die Kanzlei schließt ab, ab dem Paket Smart lässt sich die komplette Buchhaltung mit Umsatzsteuer-Voranmeldung, EÜR oder Bilanz selbst erledigen. Laut Funktionsseite eignet sich das Programm für Kleinunternehmer, Soll- und Istversteuerer, Einnahmen-Überschuss-Rechner und Bilanzierer gleichermaßen.
+      sources:
+        - &home2
+          url: https://www.buchhaltungsbutler.de/
+          title: BuchhaltungsButler Startseite
+          accessed: 2026-10-26
+        - &funktionen
+          url: https://www.buchhaltungsbutler.de/funktionen/
+          title: BuchhaltungsButler Funktionen
+          accessed: 2026-10-26
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Belege kommen per Scan-App für iOS und Android, per Upload, per E-Mail oder über einen mit Dropbox synchronisierten Ordner ins Programm. Die KI-gestützte Belegerkennung erfasst die wichtigen Angaben einer Rechnung, was nicht erkannt wird, markieren Sie mit der Maus und übernehmen es in das Feld. Belege werden anhand von Betrag, Gegenpartei oder Rechnungsnummer automatisch den passenden Zahlungen zugeordnet. Bankkonten, Kreditkarten und PayPal lassen sich anbinden, laut Anbieter über drei Schnittstellenpartner mehr als 5.000 Banken.
+        - Offene Rechnungen bezahlen Sie direkt aus dem Programm, die Angaben sind vorausgefüllt und die Überweisung wird per TAN freigegeben, mehrere Belege auch als Sammelüberweisung per SEPA-XML. Regeln, Automatik und Sammelfunktionen kontieren viele Belege oder Zahlungen auf einmal. Bilanzierende arbeiten mit Debitoren- und Kreditorenkonten in der doppelten Buchführung.
+        - Ausgangsrechnungen, Angebote und Gutschriften erstellen Sie im Programm, E-Rechnungen werden gesendet und empfangen. Als Auswertungen gibt es BWA, Summen- und Saldenliste und Kontenblätter, ab Smart auch EÜR, Bilanz, Kostenstellen, Projektbuchhaltung und eine Anlagenverwaltung. Im Paket Premium kommen eine Rechteverwaltung, ein Freigabeprozess für Rechnungen, Aufgaben für Mitarbeitende, ein Controlling-Dashboard und ein API-Client hinzu.
+        - Für Online-Händler gibt es eigene Pakete mit Schnittstellen zu Amazon, eBay, Stripe, Shopify und Billbee, einem Abgleich der Ausgangsrechnungen über die Transaktions-ID und dem OSS-Verfahren für EU-Umsätze.
+      sources:
+        - *funktionen
+        - &preise2
+          url: https://www.buchhaltungsbutler.de/preise/
+          title: BuchhaltungsButler Preise
+          accessed: 2026-10-26
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - Bei monatlicher Laufzeit kostet Light 39,90 €, Smart 46,90 € und Premium 89,90 € im Monat. Bei jährlicher Laufzeit sinken die Preise auf 29,90 €, 34,90 € und 59,90 € im Monat, abgerechnet wird auch dann monatlich. Alle Preise verstehen sich zuzüglich Umsatzsteuer. Am 26.10.2026 gab es bei Sofortkauf 70 % Rabatt auf den ersten Monat und eine 30-tägige Geld-zurück-Garantie.
+        - Im Jahr kostet Smart bei jährlicher Laufzeit 418,80 € netto oder 498,37 € brutto, mit dem Rabatt im ersten Monat 394,64 € netto im ersten Jahr. Bei monatlicher Laufzeit sind es 562,80 € netto. Premium mit fünf Nutzern kostet bei jährlicher Laufzeit 718,80 € netto im Jahr. Für Online-Händler nennt die Preisseite die Pakete E-Commerce Smart für 84,90 € und E-Commerce Premium für 119,90 € im Monat bei monatlicher Laufzeit.
+        - In allen Paketen gilt eine Fair-Use-Grenze von 500 Belegen im Monat, ein Nutzer und ein Steuerberater-Zugang sind enthalten, Premium enthält fünf Nutzer. Die assistierte Buchhaltung, bei der Mitarbeitende des Anbieters bei der Verbuchung einzelner Geschäftsvorfälle helfen, kostet zu Smart zusätzlich 29,90 € im Monat und ist in Premium enthalten. Laut Anbieter ist sie keine steuerliche Beratung. Für gemeinnützige Organisationen nennt die Preisseite einen Rabatt von 20 %.
+        - Uneinheitlich ist eine zweite Tabelle mit Zusatzleistungen auf derselben Seite. Sie nennt andere Preise und ein Paket Premium und Teams mit unbegrenzten Nutzern, das in der Tariftabelle nicht vorkommt. Vor dem Kauf sollte der Preis im Bestellvorgang geprüft werden.
+      sources:
+        - *preise2
+        - *home2
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und ELSTER
+      paragraphs:
+        - Die Umsatzsteuer-Voranmeldung und die Zusammenfassende Meldung übermittelt BuchhaltungsButler ab dem Paket Smart über eine eigene Elster-Integration direkt an die Finanzverwaltung, ein eigenes Elster-Zertifikat ist nicht nötig. Vor der Übermittlung lassen sich alle Buchungen revisionssicher festschreiben. Für EÜR-Nutzer mit SKR 03 oder SKR 04 erstellt das Programm die Einnahmen-Überschuss-Rechnung im amtlichen Format mit direkter ELSTER-Übermittlung.
+        - E-Rechnungen in den Formaten XRechnung und ZUGFeRD werden laut FAQ erstellt, versendet und empfangen, eingehende E-Rechnungen erkennt das System. Für die Kanzlei exportiert BuchhaltungsButler Buchungssätze und Belege im DATEV-Format, der Steuerberater-Zugang ist kostenlos. Die Festschreibung der Buchungen ist ein Baustein der GoBD, eine Bescheinigung eines Wirtschaftsprüfers nennen die geprüften Seiten nicht.
+      sources:
+        - *funktionen
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Laut Datenschutzbestimmungen für die Software wird BuchhaltungsButler ausschließlich auf Servern in zertifizierten Hochsicherheitsrechenzentren in Deutschland gehostet, zertifiziert nach ISO/IEC 27001, 27017 und 27018. Eine Ausnahme ist die Belegerkennung. Belege werden für einen begrenzten Zeitraum mit dem Dienst ABBYY Cloud OCR SDK in Rechenzentren in den Niederlanden verarbeitet und nach 24, spätestens nach 48 Stunden von den Servern gelöscht.
+        - Der Auftragsverarbeitungsvertrag wird laut Datenschutzbestimmungen schon mit der Registrierung für einen Testaccount Vertragsbestandteil. Eine gesonderte Anforderung ist also nicht nötig.
+      sources:
+        - &datenschutz2
+          url: https://www.buchhaltungsbutler.de/datenschutz-saas/
+          title: BuchhaltungsButler Datenschutzbestimmungen (Software)
+          accessed: 2026-10-26
+    - id: einstieg-und-support
+      title: Einstieg, Testphase und Support
+      paragraphs:
+        - BuchhaltungsButler lässt sich 14 Tage kostenlos und unverbindlich testen. Für Testnutzer gibt es eine Sprechstunde, dazu ein Webinar zu den Grundlagen der Buchhaltung und ein Einführungswebinar. Premium enthält eine gemeinsame Account-Einrichtung, für die anderen Pakete bietet der Anbieter ein begleitetes Onboarding an.
+        - Der Support läuft per Ticket über das Hilfe-Center. Im Paket Premium ist ein priorisierter Support mit einer Antwortzeit von höchstens vier Stunden innerhalb der Geschäftszeiten enthalten. Support-Termine von 30 oder 60 Minuten lassen sich zusätzlich buchen.
+      sources:
+        - *home2
+        - *preise2
+        - url: https://www.buchhaltungsbutler.de/kontaktmoeglichkeit/
+          title: BuchhaltungsButler Kontaktmöglichkeiten
+          accessed: 2026-10-25
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - BuchhaltungsButler ist teurer als reine Einsteigerprogramme, und die Umsatzsteuer-Voranmeldung beginnt erst im Paket Smart. Nur Premium enthält mehr als einen Nutzer. Die Fair-Use-Grenze von 500 Belegen im Monat reicht für die meisten kleinen Unternehmen, Online-Händler mit vielen Bestellungen sollten sie im Blick behalten.
+        - Offen sind nach unserer Recherche die widersprüchlichen Angaben zu Zusatzleistungen und dem Paket Premium und Teams. Wer keine Belege außerhalb Deutschlands verarbeiten lassen möchte, sollte die Verarbeitung durch ABBYY in den Niederlanden bedenken.
+      sources:
+        - *preise2
+        - *datenschutz2
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - BuchhaltungsButler passt zu kleinen und mittleren Unternehmen, die ihre Buchhaltung stark automatisieren und arbeitsteilig mit der Steuerberatung führen wollen, bis hin zur doppelten Buchführung und zur Übermittlung von UStVA und Zusammenfassender Meldung per Elster. Hosting in Deutschland, DATEV-Export und ein Steuerberater-Zugang in jedem Paket sprechen dafür, der höhere Preis und die uneinheitlichen Preisangaben dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *funktionen
+        - *preise2

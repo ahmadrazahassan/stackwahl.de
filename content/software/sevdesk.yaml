@@ -191,3 +191,79 @@ logo:
   height: 36
   sourceUrl: https://sevdesk.de/presse/
   accessed: 2026-10-25
+review:
+  sections:
+    - id: einordnung
+      title: Was sevdesk ist und für wen es gedacht ist
+      paragraphs:
+        - sevdesk ist eine Buchhaltungs- und Rechnungssoftware der sevDesk GmbH aus Offenburg, die im Browser und als App läuft. Sie richtet sich vor allem an Selbstständige, Freiberufler und kleine Unternehmen, die Angebote und Rechnungen schreiben, Belege erfassen und die Umsatzsteuer-Voranmeldung selbst erledigen wollen. Die Tarife reichen von einem dauerhaft kostenlosen Einstieg für wenige E-Rechnungen bis zur doppelten Buchführung mit Kostenstellen und Programmierschnittstelle.
+        - Ein Schwerpunkt liegt auf der Zusammenarbeit mit der Steuerberatung. sevdesk bietet ein eigenes Steuerberaterportal, über das Kanzleien direkt auf die Daten ihrer Mandanten zugreifen und sie in die Kanzleisoftware exportieren. Für Kanzleien gibt es laut Funktionsseite einen kostenlosen 45-minütigen Einstiegstermin.
+      sources:
+        - &funktionen
+          url: https://sevdesk.de/funktionen/
+          title: sevdesk Funktionen
+          accessed: 2026-10-26
+        - *preise
+    - id: funktionen
+      title: Funktionen im Detail
+      paragraphs:
+        - Im Verkauf erstellt sevdesk Angebote, Auftragsbestätigungen, Lieferscheine, Rechnungen und Gutschriften mit allen Pflichtangaben. Die Umsatzsteuer wird automatisch berechnet, Rechnungen lassen sich in Englisch und in anderen Währungen schreiben, und wiederkehrende Rechnungen entstehen monatlich, quartalsweise oder jährlich von selbst. Angebote können per E-Mail oder über eine Postschnittstelle verschickt werden. Für den Onlinehandel unterstützt sevdesk Rechnungen im OSS-Verfahren für Verkäufe an Verbraucher in anderen EU-Staaten.
+        - Bei offenen Rechnungen hilft eine Übersicht der fälligen Posten. Zahlungserinnerungen gibt es ab dem Tarif Rechnung, mehrstufige Mahnungen ab dem Tarif Buchhaltung. Briefpapier, Logo, Textbausteine und Layouts lassen sich anpassen, zusätzliche Layouts und Briefpapiere kosten als Add-on extra.
+        - In der laufenden Buchhaltung scannen Sie Belege mit der App, laden sie per Drag and Drop hoch oder leiten sie per E-Mail weiter. sevdesk ordnet sie passenden Zahlungen zu und schlägt eine Buchungskategorie vor. Das Online-Banking unterstützt laut Anbieter über 4.000 Banken und Neobanken. Dazu kommen ein Kassenbuch, wiederkehrende Belege für Miete und Abonnements, die Umrechnung von Fremdwährungsbelegen, eine Anlagenbuchführung mit automatischen Abschreibungen sowie Kostenstellen im Tarif Buchhaltung Pro.
+        - Für die Auswertung erstellt sevdesk die Einnahmen-Überschuss-Rechnung, die Gewinn- und Verlustrechnung und die Summen- und Saldenliste, im Tarif Buchhaltung Pro auch die BWA. Aufgaben mit Erinnerungen lassen sich an Mitarbeitende verteilen, Berechtigungen je Benutzer vergeben und E-Mails über einen eigenen SMTP-Server versenden. Über einen Marktplatz binden Sie Integrationen von Partnern an, im Tarif Buchhaltung Pro steht eine REST-API zur Verfügung.
+      sources:
+        - *funktionen
+        - *preise
+    - id: preise
+      title: Preise und Kosten im Detail
+      paragraphs:
+        - sevdesk hat vier Tarife. Kostenlos kostet dauerhaft 0 € und erlaubt drei Rechnungen oder E-Rechnungen im Monat. Rechnung kostet 11,90 € im Monat, 9,90 € bei 12 Monaten und 8,90 € bei 24 Monaten Laufzeit. Buchhaltung kostet 25,90 €, 22,90 € oder 19,90 €, Buchhaltung Pro 34,90 €, 30,90 € oder 27,90 € im Monat. Alle Preise verstehen sich zuzüglich Umsatzsteuer und gelten für einen Benutzer.
+        - Im Jahr kostet der Tarif Buchhaltung damit 310,80 € netto bei monatlicher Zahlung, 274,80 € netto oder 327,01 € brutto bei 12 Monaten Laufzeit und 238,80 € netto bei 24 Monaten Laufzeit. Jeder weitere Benutzer kostet 5,90 € im Monat. Ein Team mit drei Personen im Tarif Buchhaltung zahlt bei 12 Monaten Laufzeit 34,70 € netto im Monat oder 416,40 € netto im Jahr.
+        - Als Add-ons nennt die Preisseite Premium Layouts für 3,90 €, einen zusätzlichen Layout-Slot, weitere Briefpapiere und eine Zeiterfassung für je 4,90 € sowie die Erweiterung Inventar für 19,90 € im Monat. Persönliche Services wie ein Einrichtungstermin für 49 €, ein Expertentermin ab 24,90 € je 15 Minuten und ein 4-Augen-Check für 3 € je Dokument lassen sich zusätzlich buchen.
+        - Am 26.10.2026 bewarb die Preisseite eine befristete Aktion, bei der der Tarif Rechnung 4,45 € im Monat kostete. Uneinheitlich ist ein zweiter Preisblock auf derselben Seite, der für 24 Monate Laufzeit 12,90 €, 25,90 € und 34,90 € nennt, während die Tariftabelle 8,90 €, 19,90 € und 27,90 € angibt. Vor dem Abschluss sollte der Preis im Bestellvorgang geprüft werden.
+      sources:
+        - *preise
+    - id: rechtssicherheit
+      title: GoBD, E-Rechnung, DATEV und ELSTER
+      paragraphs:
+        - E-Rechnungen in den Formaten ZUGFeRD und XRechnung schreibt sevdesk schon im kostenlosen Tarif, ab dem Tarif Rechnung unbegrenzt. Empfangene E-Rechnungen laden Sie hoch, und die Rechnungsdaten werden automatisch für die Buchhaltung ausgelesen. Damit sind Empfangspflicht und Versand abgedeckt.
+        - Die Umsatzsteuer-Voranmeldung erstellt sevdesk ab dem Tarif Buchhaltung und sendet sie über eine integrierte ELSTER-Schnittstelle direkt an das Finanzamt, ein eigenes Zertifikat ist nicht nötig. Für die Steuerberatung gibt es eine DATEV- und ADDISON-Schnittstelle ab dem Tarif Rechnung und DATEV-konforme Exporte. Die Kleinunternehmerregelung lässt sich in den Einstellungen wählen, der Hinweis nach § 19 UStG erscheint dann automatisch auf den Rechnungen.
+        - Zur GoBD schreibt sevdesk auf der Funktionsseite, dass Angebote GoBD-konform erstellt werden. Eine Aussage zur GoBD-konformen Archivierung aller Belege oder eine Bescheinigung eines Wirtschaftsprüfers haben wir auf den geprüften Seiten nicht gefunden. Wir führen den Punkt deshalb als Keine Angabe.
+      sources:
+        - *funktionen
+        - *preise
+        - url: https://hilfe.sevdesk.de/de/articles/9382213-einstellung-zu-buchhaltung-steuer
+          title: sevdesk Hilfe, Einstellung zu Buchhaltung und Steuer
+          accessed: 2026-10-25
+    - id: datenschutz
+      title: Datenschutz und Serverstandort
+      paragraphs:
+        - Laut Datenschutzseite hat sich sevdesk bewusst für den Serverstandort Deutschland entschieden. Auf derselben Seite sind die datenschutzrelevanten Dokumente verlinkt, darunter die Auftragsverarbeitungserklärung und die technischen und organisatorischen Maßnahmen zur IT-Sicherheit. Den Datenschutzbeauftragten erreichen Sie per E-Mail.
+      sources:
+        - *datenschutz
+    - id: einstieg-und-support
+      title: Einstieg, Apps und Support
+      paragraphs:
+        - Der Einstieg beginnt mit dem kostenlosen Tarif oder einer 14-tägigen Testphase der Bezahltarife, eine Kreditkarte ist für den kostenlosen Tarif nicht nötig. Die Apps für iOS und Android sind kostenlos, laut Apps-Seite stehen dort alle Funktionen zur Verfügung, und Belege lassen sich mit der Kamera erfassen.
+        - In allen Bezahltarifen gibt es persönlichen Support per Live-Chat, E-Mail und Telefon. Dazu kommen eine Wissensdatenbank, Webinare mit offenen Fragerunden, Video-Tutorials und ein KI-Agent namens Sevi, der rund um die Uhr Fragen aus dem Hilfematerial beantwortet.
+      sources:
+        - *preise
+        - *funktionen
+        - url: https://sevdesk.de/apps/
+          title: sevdesk Apps
+          accessed: 2026-10-25
+    - id: grenzen
+      title: Grenzen und offene Fragen
+      paragraphs:
+        - Jeder Tarif enthält nur einen Benutzer, für Teams steigen die Kosten deshalb schnell. Mehrstufige Mahnungen, die UStVA und das Online-Banking gibt es erst ab dem Tarif Buchhaltung, Kostenstellen, BWA und REST-API erst im Tarif Buchhaltung Pro. Eine Lagerverwaltung ist nur über die kostenpflichtige Erweiterung Inventar möglich.
+        - Offen ist nach unserer Recherche die GoBD-Aussage für die gesamte Archivierung. Außerdem sollten die widersprüchlichen Preisangaben für 24 Monate Laufzeit und die befristeten Aktionspreise vor einem Vertrag mit langer Laufzeit geklärt werden.
+      sources:
+        - *preise
+        - *funktionen
+    - id: zusammenfassung
+      title: Zusammenfassung der Recherche
+      paragraphs:
+        - sevdesk passt zu Selbstständigen und kleinen Unternehmen, die mit einem kostenlosen Tarif für E-Rechnungen beginnen und später Buchhaltung, UStVA per ELSTER und DATEV-Export im selben Programm nutzen wollen. Server in Deutschland, ein Steuerberaterportal und persönlicher Support in allen Bezahltarifen sprechen dafür, die Kosten je Benutzer und die uneinheitlichen Laufzeitpreise dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+      sources:
+        - *preise
+        - *funktionen
