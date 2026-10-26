@@ -8,6 +8,7 @@ import { ProfileReview } from "@/components/software/profile-review";
 import { Breadcrumbs, ProfileHeader } from "@/components/software/profile-header";
 import { ProfileTabs } from "@/components/software/profile-tabs";
 import { ProsCons } from "@/components/software/pros-cons";
+import { ResearchScoreBreakdown } from "@/components/software/research-score";
 import { SoftwareCard } from "@/components/software/software-card";
 import { ArrowLink } from "@/components/ui/button";
 import { DemoNote } from "@/components/ui/labels";
@@ -28,6 +29,7 @@ import {
   vendorLink,
 } from "@/lib/content";
 import { formatDate } from "@/lib/format";
+import { researchScore } from "@/lib/research-score";
 import { routes } from "@/lib/routes";
 import { loadProfile } from "./data";
 
@@ -54,6 +56,7 @@ export async function generateMetadata({
 
 const allSections = [
   { id: "ueberblick", label: "Überblick" },
+  { id: "wertung", label: "Wertung" },
   { id: "im-detail", label: "Im Detail" },
   { id: "funktionen", label: "Funktionen" },
   { id: "preise", label: "Preise" },
@@ -107,9 +110,11 @@ export default async function SoftwarePage({ params }: PageProps<"/software/[slu
   const summary = toSummary(software);
   const alternatives = alternativesFor(software);
   const sources = profileSources(software);
+  const research = software.rating ? null : researchScore(software);
   const sections = allSections.filter(
     (s) =>
       (s.id !== "im-detail" || software.review) &&
+      (s.id !== "wertung" || research) &&
       (s.id !== "alternativen" || alternatives.length > 0),
   );
 
@@ -203,6 +208,16 @@ export default async function SoftwarePage({ params }: PageProps<"/software/[slu
           </dl>
         </div>
       </PageSection>
+
+      {research ? (
+        <PageSection
+          id="wertung"
+          label="Wertung"
+          title={`So entsteht die Wertung für ${software.name}`}
+        >
+          <ResearchScoreBreakdown score={research} categoryName={summary.category} />
+        </PageSection>
+      ) : null}
 
       {software.review ? (
         <PageSection id="im-detail" label="Im Detail" title={`${software.name} im Detail`}>

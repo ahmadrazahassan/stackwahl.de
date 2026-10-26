@@ -8,6 +8,7 @@ export type CalculatorProduct = {
     monthlyCents: number | null;
     yearlyMonthlyCents: number | null;
     perUser: boolean;
+    minUsers?: number;
     net: boolean;
     note?: string;
     sourceUrl: string;

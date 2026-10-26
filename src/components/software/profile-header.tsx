@@ -5,6 +5,7 @@ import { VendorButton } from "@/components/ui/button";
 import { DisclosureLabel } from "@/components/ui/labels";
 import { cn } from "@/lib/cn";
 import { formatDate, formatPriceFrom } from "@/lib/format";
+import { ResearchScoreDisplay } from "./research-score";
 import { ScoreDisplay } from "./score";
 import { SoftwareLogo } from "./software-card";
 import type { SoftwareSummary } from "./types";
@@ -74,6 +75,19 @@ export function ProfileHeader({
       <div className="flex min-w-0 flex-col gap-6 lg:col-span-4 lg:col-start-9">
         {software.score !== null ? (
           <ScoreDisplay value={software.score} />
+        ) : software.research !== null ? (
+          <div>
+            <ResearchScoreDisplay value={software.research} />
+            <p className="mt-3 text-small text-muted">
+              Aus den belegten Angaben berechnet, ohne Praxistest.{" "}
+              <a
+                href="#wertung"
+                className="underline decoration-1 underline-offset-4 hover:text-ink"
+              >
+                Zur Herleitung
+              </a>
+            </p>
+          </div>
         ) : (
           <div>
             <p className="font-display text-h3 font-medium">Noch nicht bewertet</p>

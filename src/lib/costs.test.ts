@@ -47,6 +47,18 @@ describe("rankSoftware", () => {
     expect(result.explanation).toMatch(/Praxistest/);
   });
 
+  it("sorts by research score while nothing is tested, without score last", () => {
+    const result = rankSoftware([
+      { name: "C", score: null, research: null },
+      { name: "B", score: null, research: 7.5 },
+      { name: "A", score: null, research: 7.5 },
+      { name: "D", score: null, research: 8.2 },
+    ]);
+    expect(result.basis).toBe("research");
+    expect(result.items.map((s) => s.name)).toEqual(["D", "A", "B", "C"]);
+    expect(result.explanation).toMatch(/ohne Praxistest/);
+  });
+
   it("puts rated software first by score, unrated after, ties by name", () => {
     const result = rankSoftware([
       { name: "C", score: null },
@@ -62,6 +74,16 @@ describe("rankSoftware", () => {
 describe("computeCost", () => {
   const flat = { monthlyCents: 1990, yearlyMonthlyCents: 1590, net: true, perUser: false };
   const seat = { monthlyCents: 990, yearlyMonthlyCents: null, net: true, perUser: true };
+
+  it("bills at least the minimum number of seats", () => {
+    const minimum = { ...seat, minUsers: 3 };
+    expect(
+      computeCost({ plan: minimum, billing: "monatlich", users: 1, months: 1 })?.total.net,
+    ).toBe(2970);
+    expect(
+      computeCost({ plan: minimum, billing: "monatlich", users: 4, months: 1 })?.total.net,
+    ).toBe(3960);
+  });
 
   it("multiplies by users only for per-user plans", () => {
     expect(computeCost({ plan: flat, billing: "monatlich", users: 5, months: 12 })?.total.net).toBe(

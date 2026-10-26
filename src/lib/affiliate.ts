@@ -3,6 +3,7 @@
 
 export const PLACEMENTS = [
   "start",
+  "fokus",
   "kategorie",
   "profil",
   "preise",

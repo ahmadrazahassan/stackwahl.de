@@ -19,10 +19,14 @@ export function scoreName(): string {
 export function ScoreDisplay({
   value,
   size = "lg",
+  name = scoreName(),
+  method = { label: `Methode ${METHOD_VERSION}`, href: routes.methodology() },
   className,
 }: {
   value: number;
   size?: "sm" | "lg";
+  name?: string;
+  method?: { label: string; href: string };
   className?: string;
 }) {
   return (
@@ -37,14 +41,14 @@ export function ScoreDisplay({
         <span className="sr-only"> von 10</span>
       </p>
       <div className="pb-1.5">
-        <p className="text-small font-medium">{scoreName()}</p>
+        <p className="text-small font-medium">{name}</p>
         <p className="text-small text-muted">
           von 10 ·{" "}
           <Link
-            href={routes.methodology()}
+            href={method.href}
             className="underline decoration-1 underline-offset-4 hover:text-ink"
           >
-            Methode {METHOD_VERSION}
+            {method.label}
           </Link>
         </p>
       </div>
@@ -52,17 +56,38 @@ export function ScoreDisplay({
   );
 }
 
-/** Compact score for cards and tables. */
-export function ScoreBadge({ value, className }: { value: number | null; className?: string }) {
-  if (value === null) {
+/**
+ * Compact score for cards and tables. Without a tested score it shows the Recherche-Wertung,
+ * labeled as such, so it is never mistaken for a test result.
+ */
+export function ScoreBadge({
+  value,
+  research = null,
+  className,
+}: {
+  value: number | null;
+  research?: number | null;
+  className?: string;
+}) {
+  const shown = value ?? research;
+  if (shown === null) {
     return <span className={cn("text-small text-muted", className)}>Noch nicht bewertet</span>;
   }
   return (
-    <span className={cn("inline-flex items-baseline gap-1.5", className)}>
-      <span className="font-display text-h3 leading-none font-medium tabular">
-        {formatScore(value)}
+    <span className={cn("inline-flex flex-col items-end gap-1", className)}>
+      <span className="inline-flex items-baseline gap-1.5">
+        <span className="font-display text-h3 leading-none font-medium tabular">
+          {formatScore(shown)}
+        </span>
+        <span className="text-small text-muted">
+          / 10<span className="sr-only">{value === null ? ", Recherche-Wertung" : ""}</span>
+        </span>
       </span>
-      <span className="text-small text-muted">/ 10</span>
+      {value === null ? (
+        <span aria-hidden="true" className="text-[0.75rem] leading-none text-muted">
+          Recherche-Wertung
+        </span>
+      ) : null}
     </span>
   );
 }

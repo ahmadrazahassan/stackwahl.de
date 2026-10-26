@@ -109,6 +109,7 @@ plans:
     monthlyCents: null
     yearlyMonthlyCents: 3500
     perUser: true
+    minUsers: 2
     net: true
     includes:
       - Preis je Arbeitsplatz, buchbar ab 2 Arbeitsplätzen
@@ -122,6 +123,7 @@ plans:
     monthlyCents: null
     yearlyMonthlyCents: 4000
     perUser: true
+    minUsers: 3
     net: true
     includes:
       - Preis je Arbeitsplatz, buchbar ab 3 Arbeitsplätzen

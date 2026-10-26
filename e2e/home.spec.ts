@@ -9,6 +9,32 @@ test.describe("Home page", () => {
     await expect(page.getByText("Bewertete Software")).toHaveCount(0);
   });
 
+  test("Im Fokus shows the four highest research scores with the rule and both actions", async ({
+    page,
+  }) => {
+    await page.goto("/");
+    const section = page.getByRole("region", {
+      name: /Die Programme mit den meisten belegten Stärken/,
+    });
+    await expect(
+      section.getByText(/Provisionen haben keinen Einfluss auf Auswahl und Reihenfolge/),
+    ).toBeVisible();
+    const cards = section.getByRole("article");
+    await expect(cards).toHaveCount(4);
+    const scores = await cards.locator("p.font-display").allInnerTexts();
+    const values = scores.map((t) => Number(t.replace(/s.*$/s, "").replace(",", ".")));
+    expect([...values].sort((a, b) => b - a)).toEqual(values);
+    await expect(cards.first().getByRole("link", { name: /Website besuchen/ })).toHaveAttribute(
+      "target",
+      "_blank",
+    );
+    await cards
+      .first()
+      .getByRole("link", { name: /Profil und Wertung/ })
+      .click();
+    await expect(page.getByRole("region", { name: /So entsteht die Wertung/ })).toBeVisible();
+  });
+
   test("situation shortcuts open the Finder result with the matching answers", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("link", { name: /Meine Kanzlei arbeitet mit DATEV/ }).click();

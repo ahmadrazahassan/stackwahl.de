@@ -3,6 +3,7 @@ import type { VendorLogo } from "@/components/marketing/logo-row";
 import type { SoftwareSummary } from "@/components/software/types";
 import type { Software } from "@/content/schemas";
 import { entryPriceCents } from "@/content/visibility";
+import { researchScore, type ResearchScore } from "@/lib/research-score";
 import { routes } from "@/lib/routes";
 import {
   getAllSoftware,
@@ -14,7 +15,8 @@ import {
 } from "./index";
 
 // Data for the home page sections. Everything is derived from the sourced profiles: no
-// popularity, ratings or review counts are shown, because none exist yet (Section 3.2).
+// popularity, user ratings or review counts are shown, because none exist yet (Section 3.2).
+// The only score is the Recherche-Wertung, computed by a published formula.
 
 /**
  * The order used on the home page lists: cheapest paid plan first, then name. Commercial
@@ -35,6 +37,40 @@ export function homeLogos(): VendorLogo[] {
       src: s.logo!.file,
       width: s.logo!.width,
       height: s.logo!.height,
+    }));
+}
+
+export type FeaturedItem = {
+  rank: number;
+  summary: SoftwareSummary;
+  score: ResearchScore;
+  pros: string[];
+  idealFor: string;
+  vendor: { href: string; affiliate: boolean };
+};
+
+/**
+ * "Im Fokus": the programs with the highest Recherche-Wertung across all categories, ties by
+ * name. The rule is stated next to the section and on /methodik; commissions are no input.
+ */
+export function featuredSoftware(limit = 4): FeaturedItem[] {
+  return getAllSoftware()
+    .flatMap((s) => {
+      const score = s.rating ? null : researchScore(s);
+      return score ? [{ software: s, score }] : [];
+    })
+    .sort(
+      (a, b) =>
+        b.score.total - a.score.total || a.software.name.localeCompare(b.software.name, "de"),
+    )
+    .slice(0, limit)
+    .map(({ software, score }, i) => ({
+      rank: i + 1,
+      summary: toSummary(software),
+      score,
+      pros: software.pros.slice(0, 2),
+      idealFor: software.idealFor[0],
+      vendor: vendorLink(software, "fokus", i + 1),
     }));
 }
 

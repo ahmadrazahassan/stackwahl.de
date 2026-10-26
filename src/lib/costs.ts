@@ -43,7 +43,7 @@ export function yearlySaving(plan: CostPlan): number | null {
 }
 
 export type CostInput = {
-  plan: CostPlan & { perUser: boolean };
+  plan: CostPlan & { perUser: boolean; minUsers?: number };
   billing: "monatlich" | "jährlich";
   users: number;
   months: number;
@@ -60,7 +60,8 @@ export function computeCost({ plan, billing, users, months }: CostInput): CostRe
   if (perMonthCents === null) return null;
   if (!Number.isInteger(users) || users < 1) throw new Error(`Ungültige Nutzerzahl: ${users}`);
   if (!Number.isInteger(months) || months < 1) throw new Error(`Ungültige Laufzeit: ${months}`);
-  const seats = plan.perUser ? users : 1;
+  // Per-user plans are billed for at least the minimum number of seats the vendor sells.
+  const seats = plan.perUser ? Math.max(users, plan.minUsers ?? 1) : 1;
   return {
     perMonth: netGross(perMonthCents * seats, plan.net),
     total: netGross(perMonthCents * seats * months, plan.net),

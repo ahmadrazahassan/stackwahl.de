@@ -151,7 +151,7 @@ export function CostCalculator({ products }: { products: CalculatorProduct[] }) 
             <p className="text-small text-muted">
               Listenpreis {plan.net ? "zzgl." : "inkl."} MwSt.
               {plan.perUser
-                ? `, ${users} ${users === 1 ? "Nutzer" : "Nutzer"}`
+                ? `, ${Math.max(users, plan.minUsers ?? 1)} Nutzer${plan.minUsers && users < plan.minUsers ? ` (Mindestabnahme des Anbieters)` : ""}`
                 : ", Pauschalpreis unabhängig von der Nutzerzahl"}
               . Zusatzmodule und weitere Nutzer über das Tarifkontingent hinaus sind nicht
               eingerechnet.

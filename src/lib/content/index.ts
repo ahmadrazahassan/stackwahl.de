@@ -23,6 +23,7 @@ import {
 import type { CalculatorProduct } from "@/lib/content/calculator-types";
 import type { Placement } from "@/lib/affiliate";
 import type { FinderProduct } from "@/lib/finder";
+import { researchScore } from "@/lib/research-score";
 import { routes } from "@/lib/routes";
 import { SCORE_CRITERIA, weightedScore } from "@/lib/scoring";
 
@@ -123,6 +124,7 @@ export function toSummary(
     vendor: vendor?.name ?? software.vendor,
     category: category?.name ?? software.categories[0],
     score: editorialScore(software),
+    research: researchScore(software)?.total ?? null,
     priceFromCents: entryPriceCents(software),
     freePlan: software.freePlan,
     priceNet: cheapest.plan.net,
@@ -193,6 +195,7 @@ export function toPricePlans(software: Software): PricePlan[] {
     monthlyCents: p.monthlyCents,
     yearlyMonthlyCents: p.yearlyMonthlyCents,
     perUser: p.perUser,
+    minUsers: p.minUsers,
     net: p.net,
     includes: p.includes,
     note: p.note,
@@ -289,6 +292,7 @@ export function calculatorProducts(): CalculatorProduct[] {
         monthlyCents: p.monthlyCents,
         yearlyMonthlyCents: p.yearlyMonthlyCents,
         perUser: p.perUser,
+        minUsers: p.minUsers,
         net: p.net,
         note: p.note,
         sourceUrl: p.sourceUrl,

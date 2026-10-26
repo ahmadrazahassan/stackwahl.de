@@ -26,6 +26,8 @@ export type SoftwareSummary = {
   category: string;
   /** Editorial score 0 to 10, or null while not rated. */
   score: number | null;
+  /** Recherche-Wertung from the sourced facts (no test), or null for unscored categories. */
+  research: number | null;
   /** Cheapest paid plan per month; free plans are flagged by freePlan. */
   priceFromCents: number | null;
   freePlan: boolean;
@@ -44,6 +46,8 @@ export type PricePlan = {
   /** Per month with yearly billing. */
   yearlyMonthlyCents: number | null;
   perUser: boolean;
+  /** Smallest number of seats sold for a per-user plan. */
+  minUsers?: number;
   net: boolean;
   includes: string[];
   note?: string;

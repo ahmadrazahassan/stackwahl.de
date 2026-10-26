@@ -1,5 +1,6 @@
 import { ArticleGrid } from "@/components/guides/article-card";
 import { FactBoard } from "@/components/home/fact-board";
+import { FeaturedSoftware } from "@/components/home/featured-software";
 import { OverviewList } from "@/components/home/overview-list";
 import { SituationLinks } from "@/components/home/situation-links";
 import { SoftwareShowcase } from "@/components/home/software-showcase";
@@ -13,7 +14,14 @@ import { ArrowLink, ButtonLink } from "@/components/ui/button";
 import { Container, Panel, SplitGrid } from "@/components/ui/layout";
 import { Eyebrow, Headline, Lead } from "@/components/ui/typography";
 import { getAllSoftware, getLiveCategories } from "@/lib/content";
-import { factLists, homeLogos, latestReview, overviewTabs, showcaseTabs } from "@/lib/content/home";
+import {
+  factLists,
+  featuredSoftware,
+  homeLogos,
+  latestReview,
+  overviewTabs,
+  showcaseTabs,
+} from "@/lib/content/home";
 import { articleTeasers } from "@/lib/content/guides";
 import { formatDate } from "@/lib/format";
 import { newsletterAvailable } from "@/lib/forms/availability";
@@ -48,6 +56,7 @@ export default function HomePage() {
   const logos = homeLogos();
   const stand = latestReview();
   const articles = articleTeasers(6);
+  const featured = featuredSoftware(4);
   const finder = siteConfig.features.finder;
 
   const steps: Step[] = [
@@ -128,6 +137,30 @@ export default function HomePage() {
           ) : null}
         </Container>
       </Panel>
+
+      {featured.length > 0 ? (
+        <Panel as="section" aria-labelledby="fokus-titel">
+          <Container className="py-16 sm:py-24">
+            <SplitGrid aside={<Eyebrow className="text-muted">Im Fokus</Eyebrow>}>
+              <Headline id="fokus-titel" size="h2" tail="Nach Recherche-Wertung.">
+                Die Programme mit den meisten belegten Stärken.
+              </Headline>
+              <p className="mt-6 max-w-[62ch] text-body text-muted">
+                Die vier Programme mit der höchsten Recherche-Wertung über alle Kategorien. Sie
+                entsteht nach fester Formel aus Funktionen, Rechtssicherheit, Einstiegspreis sowie
+                Support und Datenschutz, jeweils mit Quelle, aber ohne Praxistest. Provisionen haben
+                keinen Einfluss auf Auswahl und Reihenfolge.
+              </p>
+              <ArrowLink href={`${routes.methodology()}#recherche-wertung`} className="mt-6">
+                So entsteht die Wertung
+              </ArrowLink>
+            </SplitGrid>
+            <div className="mt-12">
+              <FeaturedSoftware items={featured} />
+            </div>
+          </Container>
+        </Panel>
+      ) : null}
 
       {finder && software.length > 0 ? (
         <Panel as="section" aria-labelledby="schnellstart-titel">

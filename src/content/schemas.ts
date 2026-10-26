@@ -97,6 +97,8 @@ export const planSchema = z
     /** Price per month when billed yearly. null: plan not offered yearly. */
     yearlyMonthlyCents: centsSchema.nullable(),
     perUser: z.boolean(),
+    /** Smallest number of seats the vendor sells for a per-user plan. */
+    minUsers: z.number().int().min(2).optional(),
     net: z.boolean(),
     includes: z.array(z.string().min(2)).min(1),
     note: z.string().optional(),

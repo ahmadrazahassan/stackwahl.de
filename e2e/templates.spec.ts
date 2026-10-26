@@ -49,7 +49,7 @@ test.describe("Templates", () => {
 
   test("category page lists the profiles and explains the order", async ({ page }) => {
     await page.goto("/kategorien/buchhaltungssoftware");
-    await expect(page.getByText(/Sortiert nach Name/)).toBeVisible();
+    await expect(page.getByText(/Sortiert nach der Recherche-Wertung/)).toBeVisible();
     await expect(page.getByRole("link", { name: "Zum Profil" })).toHaveCount(13);
     await expect(
       page.getByRole("region", { name: "Rechtssicherheit und Preise: Buchhaltungssoftware" }),
@@ -78,7 +78,11 @@ test.describe("Templates", () => {
   test("profile is honest about research, prices and sources", async ({ page }) => {
     await page.goto("/software/sevdesk");
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("sevdesk im Überblick");
-    await expect(page.getByText("Noch nicht bewertet").first()).toBeVisible();
+    // Without a test the profile shows the computed Recherche-Wertung and how it was derived.
+    await expect(page.getByText("Recherche-Wertung").first()).toBeVisible();
+    await expect(page.getByText(/ohne Praxistest/).first()).toBeVisible();
+    const wertung = page.getByRole("region", { name: /So entsteht die Wertung für sevdesk/ });
+    await expect(wertung.getByText("Erst nach einem Praxistest")).toBeVisible();
     await expect(page.getByText(/noch nicht in einem eigenen Konto ausprobiert/)).toBeVisible();
     await expect(page.getByText("Entwurf, nicht veröffentlicht")).toBeVisible();
     const vendor = page.getByRole("link", { name: /Zum Anbieter/ });

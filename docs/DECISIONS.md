@@ -202,3 +202,13 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 - **Topics from buying questions.** The ten articles answer the questions people search before buying (E-Rechnungspflicht, UStVA per ELSTER, Kleinunternehmer, free plans, hidden costs, Lexware Office alternatives, sevdesk vs. Lexware Office, Sage 50/100/Active, ERP costs, DATEV). Every figure comes from a vendor page or a law text with a date.
 - **No author yet.** All articles are drafts with `author: null`. The guard blocks publishing without a real author.
 - **Home page.** A Ratgeber section shows the six newest articles and links to the index.
+
+## 26.10.2026: Recherche-Wertung and "Im Fokus"
+
+- **Score from facts, approved by the owner.** Until a hands-on test exists, every program gets a Recherche-Wertung (method R1.0), computed in `src/lib/research-score.ts` from the sourced facts and prices. It is never entered by hand. Four criteria: Funktionsumfang 30 %, Rechtssicherheit 25 %, Einstiegspreis 25 %, Support und Datenschutz 20 %. These are the approved weights without "Bedienung", rounded to whole percent. "Bedienung" is shown as "Erst nach einem Praxistest". A tested `rating` replaces the Recherche-Wertung.
+- **Only evidence counts.** "Ja" 1 point, "Gegen Aufpreis" 0.75, "Teilweise" 0.5, "Nein" and "Keine Angabe" 0. Each program is measured against the item list of its main (first) category, so an invoicing program is not marked down for missing ELSTER.
+- **Price.** Cheapest paid plan, net per month, yearly billing where offered, times the vendor's minimum seats (new optional `minUsers` on plans; Sage 50 Comfort 2, Professional 3, also used by the cost calculator). 10 points up to 5 € (invoicing, accounting) or 25 € (ERP), minus 2 per doubling, plus 1 for a free plan.
+- **Pros and cons are not counted.** They are free text written from the same facts; counting them would double-count facts and reward long lists. The score uses the facts directly.
+- **Known limits, stated on /methodik.** The score does not judge usability, and it counts a feature regardless of the plan it is in.
+- **Display.** Every profile shows the full derivation (each fact with its points, the price rule). Cards show the value labeled "Recherche-Wertung". Category pages sort by it, with the explanation above the list.
+- **"Im Fokus" on the home page.** The four programs with the highest Recherche-Wertung across all categories, ties by name, with the rule next to the section. Affiliate placement `fokus`.
