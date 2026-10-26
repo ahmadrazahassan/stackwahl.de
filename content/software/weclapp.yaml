@@ -244,3 +244,9 @@ review:
       sources:
         - *preise
         - *buchhaltung
+logo:
+  file: /logos/weclapp.svg
+  width: 380
+  height: 71
+  sourceUrl: https://www.weclapp.com/de/
+  accessed: 2026-10-26

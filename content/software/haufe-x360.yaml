@@ -205,3 +205,9 @@ review:
       sources:
         - *preise
         - *home
+logo:
+  file: /logos/haufe-x360.svg
+  width: 110
+  height: 36
+  sourceUrl: https://www.haufe-x360.de/
+  accessed: 2026-10-26

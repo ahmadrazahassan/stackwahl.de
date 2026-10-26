@@ -225,3 +225,9 @@ review:
       sources:
         - *preise
         - *buchhaltung
+logo:
+  file: /logos/xentral.svg
+  width: 957
+  height: 224
+  sourceUrl: https://xentral.com/de
+  accessed: 2026-10-26

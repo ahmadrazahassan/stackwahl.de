@@ -293,3 +293,9 @@ review:
       sources:
         - *preise
         - *komplett
+logo:
+  file: /logos/collmex.png
+  width: 184
+  height: 36
+  sourceUrl: https://www.collmex.de/
+  accessed: 2026-10-26

@@ -271,3 +271,9 @@ review:
         - *preise
         - *ustva
         - *datenschutz
+logo:
+  file: /logos/norman.svg
+  width: 1000
+  height: 181
+  sourceUrl: https://norman.finance/de
+  accessed: 2026-10-26

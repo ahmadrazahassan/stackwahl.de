@@ -207,3 +207,9 @@ review:
       sources:
         - *home
         - *datev
+logo:
+  file: /logos/candis.svg
+  width: 250
+  height: 48
+  sourceUrl: https://www.candis.io/
+  accessed: 2026-10-26

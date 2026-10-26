@@ -4,16 +4,16 @@ Updated 26.10.2026, all 20 profiles with long reviews.
 
 ## Overview
 
-| Area              | Status                          | Note                                                                                                                                                                                                |
-| ----------------- | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Software profiles | 20 drafts, researched           | Batch 1 and batch 2 below. All `status: draft`, `verification: unverified`. Batch 2 has long reviews.                                                                                               |
-| Vendors           | 17 records from Impressum pages | Lexware seat (Freiburg) confirmed via the Haufe X360 Impressum of the same company.                                                                                                                 |
-| Categories        | 3 drafts                        | Buchhaltungssoftware (13), Rechnungsprogramme (12), ERP-Software (6)                                                                                                                                |
-| Authors           | missing                         | Needs real people (name, role, photo, bio) from the owner                                                                                                                                           |
-| Guides            | missing                         | Phase 5                                                                                                                                                                                             |
-| Legal pages       | missing                         | Drafted in Phase 3, lawyer review before launch                                                                                                                                                     |
-| Vendor logos      | 9 vendors                       | Sources in LOGOS.md. Sage logo also on the three new Sage profiles. Not yet requested: weclapp, Xentral, Haufe, Scopevisio, Candis, Collmex, Norman. WISO MeinBüro: only a white logo is published. |
-| Screenshots       | missing                         | Need real trial accounts                                                                                                                                                                            |
+| Area              | Status                          | Note                                                                                                                                                       |
+| ----------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Software profiles | 20 drafts, researched           | Batch 1 and batch 2 below. All `status: draft`, `verification: unverified`. Batch 2 has long reviews.                                                      |
+| Vendors           | 17 records from Impressum pages | Lexware seat (Freiburg) confirmed via the Haufe X360 Impressum of the same company.                                                                        |
+| Categories        | 3 drafts                        | Buchhaltungssoftware (13), Rechnungsprogramme (12), ERP-Software (6)                                                                                       |
+| Authors           | missing                         | Needs real people (name, role, photo, bio) from the owner                                                                                                  |
+| Guides            | missing                         | Phase 5                                                                                                                                                    |
+| Legal pages       | missing                         | Drafted in Phase 3, lawyer review before launch                                                                                                            |
+| Vendor logos      | 16 vendors                      | Sources in LOGOS.md. Sage logo also on Sage 50, Sage 50 Handwerk and Sage 100. Collmex only as a small PNG. WISO MeinBüro: only a white logo is published. |
+| Screenshots       | missing                         | Need real trial accounts                                                                                                                                   |
 
 ## Why everything is still a draft
 

@@ -223,3 +223,9 @@ review:
         - *preise
         - *finanzen
         - *gobd
+logo:
+  file: /logos/scopevisio.svg
+  width: 609
+  height: 123
+  sourceUrl: https://www.scopevisio.com/
+  accessed: 2026-10-26
