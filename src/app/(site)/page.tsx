@@ -1,16 +1,22 @@
-import Link from "next/link";
+import { FactBoard } from "@/components/home/fact-board";
+import { OverviewList } from "@/components/home/overview-list";
+import { SituationLinks } from "@/components/home/situation-links";
+import { SoftwareShowcase } from "@/components/home/software-showcase";
 import { Lattice, NestedSquares, RayBurst, StackLines } from "@/components/illustrations/line-art";
 import { FeatureTiles } from "@/components/marketing/feature-tiles";
+import { LogoRow } from "@/components/marketing/logo-row";
 import { Marquee } from "@/components/marketing/marquee";
 import { NewsletterPanel } from "@/components/marketing/newsletter-panel";
 import { StepCards, type Step } from "@/components/marketing/step-cards";
-import { SoftwareCard } from "@/components/software/software-card";
 import { ArrowLink, ButtonLink } from "@/components/ui/button";
 import { Container, Panel, SplitGrid } from "@/components/ui/layout";
 import { Eyebrow, Headline, Lead } from "@/components/ui/typography";
-import { getAllSoftware, getLiveCategories, getSoftwareInCategory, toSummary } from "@/lib/content";
+import { getAllSoftware, getLiveCategories } from "@/lib/content";
+import { factLists, homeLogos, latestReview, overviewTabs, showcaseTabs } from "@/lib/content/home";
+import { formatDate } from "@/lib/format";
 import { newsletterAvailable } from "@/lib/forms/availability";
 import { routes } from "@/lib/routes";
+import { siteConfig } from "@/site.config";
 import { subscribeNewsletter } from "./newsletter/actions";
 
 const pillars = [
@@ -34,6 +40,12 @@ const pillars = [
 export default function HomePage() {
   const categories = getLiveCategories();
   const software = getAllSoftware();
+  const showcase = showcaseTabs();
+  const overview = overviewTabs();
+  const facts = factLists();
+  const logos = homeLogos();
+  const stand = latestReview();
+  const finder = siteConfig.features.finder;
 
   const steps: Step[] = [
     {
@@ -41,6 +53,7 @@ export default function HomePage() {
       label: "Anforderungen",
       title: "Was Ihr Unternehmen braucht",
       text: "Rechtsform, Umsatz und Steuerberatung bestimmen, welche Funktionen Pflicht sind: etwa E-Rechnung, ELSTER oder ein DATEV-Export.",
+      cta: finder ? { label: "Software-Finder starten", href: routes.finder() } : undefined,
     },
     {
       id: "vergleich",
@@ -56,6 +69,9 @@ export default function HomePage() {
       label: "Kosten",
       title: "Was es wirklich kostet",
       text: "Jedes Profil rechnet die Listenpreise auf 12 und 36 Monate hoch, netto und brutto, bei monatlicher und jährlicher Zahlung.",
+      cta: siteConfig.features.costCalculator
+        ? { label: "Zum Kostenrechner", href: routes.costCalculator() }
+        : undefined,
     },
     {
       id: "entscheidung",
@@ -69,39 +85,85 @@ export default function HomePage() {
   return (
     <main id="inhalt" className="flex flex-col gap-3 pt-3 sm:gap-4 sm:pt-4">
       <Panel as="section" aria-labelledby="start-titel">
-        <Container className="grid gap-12 py-16 sm:py-24 lg:grid-cols-12 lg:items-end lg:py-32">
-          <div className="min-w-0 lg:col-span-8">
-            <Eyebrow className="text-muted">Business-Software für Deutschland</Eyebrow>
-            <Headline
-              as="h1"
-              id="start-titel"
-              size="display"
-              tail="Unabhängig verglichen."
-              className="mt-6 max-w-[16ch]"
-            >
-              Die passende Software für Ihr Unternehmen.
-            </Headline>
-            <Lead className="mt-8">
-              Stackwahl vergleicht Buchhaltungssoftware und Rechnungsprogramme für Unternehmen in
-              Deutschland: Preise mit Datum und Quelle, Funktionen und Rechtssicherheit von GoBD bis
-              E-Rechnung.
-            </Lead>
-            <div className="mt-10 flex flex-wrap gap-3">
-              {categories.length > 0 ? (
-                <ButtonLink href={routes.categories()} size="lg">
-                  Kategorien ansehen
-                </ButtonLink>
-              ) : null}
-              <ButtonLink href={routes.methodology()} variant="outline" size="lg">
-                So vergleichen wir
-              </ButtonLink>
+        <Container className="pt-16 pb-10 sm:pt-24 lg:pt-32">
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
+            <div className="min-w-0 lg:col-span-8">
+              <Eyebrow className="text-muted">Business-Software für Deutschland</Eyebrow>
+              <Headline
+                as="h1"
+                id="start-titel"
+                size="display"
+                tail="Unabhängig verglichen."
+                className="mt-6 max-w-[16ch] max-sm:text-h1"
+              >
+                Die passende Software für Ihr Unternehmen.
+              </Headline>
+              <Lead className="mt-8">
+                {software.length > 0
+                  ? `${software.length} Programme für Buchhaltung, Rechnungen und ERP, recherchiert auf den Seiten der Anbieter: Preise mit Datum und Quelle, Funktionen und Rechtssicherheit von GoBD bis E-Rechnung.`
+                  : "Buchhaltung, Rechnungen und ERP, recherchiert auf den Seiten der Anbieter: Preise mit Datum und Quelle, Funktionen und Rechtssicherheit von GoBD bis E-Rechnung."}
+              </Lead>
+              <div className="mt-10 flex flex-wrap gap-3">
+                {finder ? (
+                  <ButtonLink href={routes.finder()} size="lg">
+                    Software finden
+                  </ButtonLink>
+                ) : null}
+                {categories.length > 0 ? (
+                  <ButtonLink href={routes.categories()} variant="outline" size="lg">
+                    Kategorien ansehen
+                  </ButtonLink>
+                ) : null}
+              </div>
+            </div>
+            <div className="hidden justify-end text-ink lg:col-span-4 lg:flex">
+              <StackLines size={260} />
             </div>
           </div>
-          <div className="hidden justify-end text-ink lg:col-span-4 lg:flex">
-            <StackLines size={260} />
-          </div>
+          {logos.length > 0 ? (
+            <LogoRow logos={logos} className="mt-16 border-t border-line pt-8 sm:mt-24" />
+          ) : null}
         </Container>
       </Panel>
+
+      {finder && software.length > 0 ? (
+        <Panel as="section" aria-labelledby="schnellstart-titel">
+          <Container className="py-16 sm:py-24">
+            <SplitGrid aside={<Eyebrow className="text-muted">Schnellstart</Eyebrow>}>
+              <Headline id="schnellstart-titel" size="h2" tail="Ein Klick zur Auswahl.">
+                Was ist Ihnen am wichtigsten?
+              </Headline>
+              <p className="mt-6 max-w-[62ch] text-body text-muted">
+                Wählen Sie die Lage, die zu Ihrem Unternehmen passt. Der Software-Finder zeigt Ihnen
+                dann die Programme, die dazu passen, und begründet jede Empfehlung mit den belegten
+                Funktionen.
+              </p>
+            </SplitGrid>
+            <div className="mt-12">
+              <SituationLinks />
+            </div>
+          </Container>
+        </Panel>
+      ) : null}
+
+      {showcase.length > 0 ? (
+        <Panel as="section" aria-labelledby="entdecken-titel">
+          <Container className="py-16 sm:py-24">
+            <SplitGrid aside={<Eyebrow className="text-muted">Software entdecken</Eyebrow>}>
+              <Headline id="entdecken-titel" size="h2" tail="Nach Aufgabe sortiert.">
+                Software für Ihr Büro.
+              </Headline>
+              <p className="mt-6 max-w-[62ch] text-small text-muted">
+                Innerhalb jeder Kategorie sortiert nach dem günstigsten bezahlten Tarif. Provisionen
+                haben keinen Einfluss auf die Reihenfolge.
+              </p>
+            </SplitGrid>
+            <div className="mt-12">
+              <SoftwareShowcase tabs={showcase} />
+            </div>
+          </Container>
+        </Panel>
+      ) : null}
 
       <Panel as="section" aria-labelledby="methode-titel">
         <Container className="py-16 sm:py-24">
@@ -124,34 +186,38 @@ export default function HomePage() {
 
       <FeatureTiles tiles={pillars} />
 
-      {categories.length > 0 ? (
-        <Panel as="section" aria-labelledby="kategorien-titel">
+      {overview.length > 0 ? (
+        <Panel as="section" aria-labelledby="ueberblick-titel" tone="bg">
           <Container className="py-16 sm:py-24">
-            <SplitGrid aside={<Eyebrow className="text-muted">Kategorien</Eyebrow>}>
-              <Headline id="kategorien-titel" size="h2" tail="Nach Aufgabe sortiert.">
-                Software für Ihr Büro.
+            <SplitGrid aside={<Eyebrow className="text-muted">Marktüberblick</Eyebrow>}>
+              <Headline id="ueberblick-titel" size="h2" tail="Mit Stärken und Grenzen.">
+                Die Programme im Überblick.
+              </Headline>
+              <p className="mt-6 max-w-[62ch] text-body text-muted">
+                Je Kategorie die fünf Programme mit dem günstigsten bezahlten Einstieg, jeweils mit
+                Zielgruppe, den wichtigsten Stärken und dem, was Sie vor dem Abschluss wissen
+                sollten. Provisionen beeinflussen weder Auswahl noch Reihenfolge.
+                {stand ? ` Stand der Recherche: ${formatDate(stand)}.` : ""}
+              </p>
+            </SplitGrid>
+            <div className="mt-12">
+              <OverviewList tabs={overview} />
+            </div>
+          </Container>
+        </Panel>
+      ) : null}
+
+      {facts.length > 0 ? (
+        <Panel as="section" aria-labelledby="fakten-titel">
+          <Container className="py-16 sm:py-24">
+            <SplitGrid aside={<Eyebrow className="text-muted">Auf einen Blick</Eyebrow>}>
+              <Headline id="fakten-titel" size="h2" tail="Schnell beantwortet.">
+                Drei Fragen vor jeder Entscheidung.
               </Headline>
             </SplitGrid>
-            <ul className="mt-12 grid gap-4 md:grid-cols-2">
-              {categories.map((c) => (
-                <li key={c.slug}>
-                  <Link
-                    href={routes.category(c.slug)}
-                    className="group flex h-full flex-col justify-between gap-10 rounded-card border border-line p-6 transition-colors hover:border-ink sm:p-8"
-                  >
-                    <div>
-                      <h3 className="text-h3 group-hover:underline group-hover:underline-offset-4">
-                        {c.name}
-                      </h3>
-                      <p className="mt-3 max-w-[52ch] text-small text-muted">{c.description}</p>
-                    </div>
-                    <p className="text-small font-medium tabular">
-                      {getSoftwareInCategory(c.slug).length} Programme im Vergleich
-                    </p>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="mt-12">
+              <FactBoard lists={facts} />
+            </div>
           </Container>
         </Panel>
       ) : null}
@@ -166,25 +232,6 @@ export default function HomePage() {
           <StepCards steps={steps} label="Schritte zur Softwarewahl" className="mt-12" />
         </Container>
       </Panel>
-
-      {software.length > 0 ? (
-        <Panel as="section" aria-labelledby="programme-titel">
-          <Container className="py-16 sm:py-24">
-            <SplitGrid aside={<Eyebrow className="text-muted">Im Vergleich</Eyebrow>}>
-              <Headline id="programme-titel" size="h2" tail="Alphabetisch sortiert.">
-                Alle Programme im Überblick.
-              </Headline>
-            </SplitGrid>
-            <ul className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              {software.map((s) => (
-                <li key={s.slug}>
-                  <SoftwareCard software={toSummary(s)} />
-                </li>
-              ))}
-            </ul>
-          </Container>
-        </Panel>
-      ) : null}
 
       <Marquee text="Klar vergleichen. Sicher entscheiden." className="py-6" />
 

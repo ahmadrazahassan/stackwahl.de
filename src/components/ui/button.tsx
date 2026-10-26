@@ -59,7 +59,11 @@ function ButtonInner({
   const Icon = arrow === "external" ? ArrowUpRight : ArrowRight;
   return (
     <>
-      <span className={cn("flex items-center px-5", arrow === "none" && "px-6")}>{children}</span>
+      <span
+        className={cn("flex flex-1 items-center px-5", arrow === "none" && "justify-center px-6")}
+      >
+        {children}
+      </span>
       {arrow === "none" ? null : (
         <span aria-hidden="true" className={segment({ variant })}>
           <Icon
@@ -116,12 +120,14 @@ export function VendorButton({
   affiliate,
   children,
   variant = "primary",
+  size,
   className,
 }: {
   href: string;
   affiliate: boolean;
   children: ReactNode;
   variant?: ButtonStyle["variant"];
+  size?: ButtonStyle["size"];
   className?: string;
 }) {
   return (
@@ -129,7 +135,7 @@ export function VendorButton({
       href={href}
       target="_blank"
       rel={affiliate ? "sponsored nofollow noopener" : "noopener"}
-      className={cn(button({ variant }), className)}
+      className={cn(button({ variant, size }), className)}
     >
       <ButtonInner arrow="external" variant={variant}>
         {children}
