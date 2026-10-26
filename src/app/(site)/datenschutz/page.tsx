@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ConfigValue, LegalDraftNotice } from "@/components/page/legal";
+import { ConfigValue, LegalDraftNotice, MailLink } from "@/components/page/legal";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { Prose } from "@/components/ui/typography";
 import { contactFormAvailable, newsletterAvailable } from "@/lib/forms/availability";
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
           <p>
             Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) ist {legal.ownerName},{" "}
             {legal.street}, {legal.postalCode} {legal.city}, E-Mail:{" "}
-            <ConfigValue value={legal.email} />.
+            <MailLink address={legal.email} />.
           </p>
         </Prose>
       </PageSection>

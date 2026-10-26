@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ConfigValue, LegalDraftNotice } from "@/components/page/legal";
+import { ConfigValue, LegalDraftNotice, MailLink } from "@/components/page/legal";
 import { isPlaceholder } from "@/lib/placeholders";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { Prose } from "@/components/ui/typography";
@@ -47,7 +47,7 @@ export default function ImprintPage() {
             {legal.country}
           </Row>
           <Row term="E-Mail">
-            <ConfigValue value={legal.email} />
+            <MailLink address={legal.email} />
           </Row>
           {/* Phone and VAT ID are optional (§ 5 DDG): shown once the owner provides them. */}
           {!isPlaceholder(legal.phone) ? <Row term="Telefon">{legal.phone}</Row> : null}

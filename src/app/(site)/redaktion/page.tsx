@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { MailLink } from "@/components/page/legal";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Prose } from "@/components/ui/typography";
 import { getAuthors } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { breadcrumbLd, pageMetadata } from "@/lib/seo";
+import { siteConfig } from "@/site.config";
 
 export const metadata: Metadata = pageMetadata({
   title: "Redaktion: Wer hinter Stackwahl steht",
@@ -60,7 +62,8 @@ export default function EditorialPage() {
             Wie die Recherche-Wertung entsteht und wie wir sortieren, steht in der{" "}
             <Link href={routes.methodology()}>Methodik</Link>. Wie wir uns finanzieren, steht unter{" "}
             <Link href={routes.transparency()}>Transparenz</Link>. Fehler können Sie uns jederzeit
-            über die <Link href={routes.contact()}>Kontaktseite</Link> melden.
+            an <MailLink address={siteConfig.legal.editorialEmail} className="" /> oder über die{" "}
+            <Link href={routes.contact()}>Kontaktseite</Link> melden.
           </p>
         </Prose>
       </PageSection>

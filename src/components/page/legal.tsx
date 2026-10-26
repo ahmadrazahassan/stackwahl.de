@@ -19,6 +19,19 @@ export function ConfigValue({ value }: { value: string | null }) {
   return <>{value}</>;
 }
 
+/** An e-mail address as a mailto link; an open placeholder stays a marked gap. */
+export function MailLink({ address, className }: { address: string; className?: string }) {
+  if (isPlaceholder(address)) return <ConfigValue value={address} />;
+  return (
+    <a
+      href={`mailto:${address}`}
+      className={className ?? "underline decoration-1 underline-offset-4 hover:text-primary"}
+    >
+      {address}
+    </a>
+  );
+}
+
 /**
  * Internal reminder on every legal page until a lawyer has reviewed the texts (Section 9).
  * Only in development and preview builds; the review status is tracked in CONTENT_STATUS.

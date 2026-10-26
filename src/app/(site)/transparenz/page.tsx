@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MailLink } from "@/components/page/legal";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { Prose } from "@/components/ui/typography";
 import { routes } from "@/lib/routes";
@@ -48,6 +49,12 @@ export default function TransparencyPage() {
             gekennzeichneten Link ein Programm buchen, kann uns der Anbieter eine Provision zahlen.
             Möglich sind später auch bezahlte Platzierungen. Diese würden immer als „Anzeige“
             gekennzeichnet und nie als Teil einer Rangfolge dargestellt.
+          </p>
+          <p>
+            Anbieter und Partnerprogramme erreichen uns unter{" "}
+            <MailLink address={siteConfig.legal.partnerEmail} className="" />. Korrekturen zu Fakten
+            gehen an <MailLink address={siteConfig.legal.editorialEmail} className="" /> und werden
+            wie jeder andere Hinweis an der Originalquelle geprüft.
           </p>
         </Prose>
       </PageSection>

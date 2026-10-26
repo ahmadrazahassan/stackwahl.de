@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/forms/contact-form";
-import { ConfigValue } from "@/components/page/legal";
+import { MailLink } from "@/components/page/legal";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { Prose } from "@/components/ui/typography";
 import { contactFormAvailable } from "@/lib/forms/availability";
-import { isPlaceholder } from "@/lib/placeholders";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/site.config";
 import { sendContact } from "./actions";
@@ -18,7 +17,6 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const { legal } = siteConfig;
-  const email = legal.email;
   return (
     <main id="inhalt" className="flex flex-col gap-3 pt-3 sm:gap-4 sm:pt-4">
       <PageHeader
@@ -29,18 +27,21 @@ export default function ContactPage() {
       />
       <PageSection id="kontaktdaten" label="Kontaktdaten" title="So erreichen Sie uns">
         <dl className="max-w-xl text-body">
-          <div className="flex justify-between gap-6 border-t border-line py-3">
-            <dt className="text-muted">E-Mail</dt>
-            <dd className="text-right">
-              {isPlaceholder(email) ? (
-                <ConfigValue value={email} />
-              ) : (
-                <a href={`mailto:${email}`} className="underline decoration-1 underline-offset-4">
-                  {email}
-                </a>
-              )}
-            </dd>
-          </div>
+          {[
+            { label: "Allgemein", address: legal.email },
+            { label: "Redaktion und Korrekturen", address: legal.editorialEmail },
+            { label: "Anbieter und Partner", address: legal.partnerEmail },
+          ].map((row) => (
+            <div
+              key={row.label}
+              className="flex flex-wrap justify-between gap-x-6 gap-y-1 border-t border-line py-3"
+            >
+              <dt className="text-muted">{row.label}</dt>
+              <dd className="text-right">
+                <MailLink address={row.address} />
+              </dd>
+            </div>
+          ))}
           <div className="flex justify-between gap-6 border-t border-line py-3">
             <dt className="text-muted">Post</dt>
             <dd className="text-right">
@@ -54,8 +55,10 @@ export default function ContactPage() {
         </dl>
         <Prose className="mt-8">
           <p>
-            Anbieter: Korrekturen zu Fakten sind willkommen, bitte mit Link zur Quelle. Kommerzielle
-            Beziehungen beeinflussen weder Profile noch Wertungen, siehe Transparenz.
+            Hinweise auf veraltete oder falsche Angaben schicken Sie bitte an die Redaktion, am
+            besten mit Link zur Quelle. Anbieter und Partnerprogramme erreichen uns unter der
+            Partner-Adresse. Kommerzielle Beziehungen beeinflussen weder Profile noch Wertungen,
+            siehe Transparenz.
           </p>
         </Prose>
       </PageSection>

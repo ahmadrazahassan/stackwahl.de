@@ -55,7 +55,7 @@ export function SiteFooter({
             ))}
           </nav>
         </div>
-        <div className="mt-16 flex flex-col gap-4 border-t border-muted px-6 py-6 text-small sm:flex-row sm:items-center sm:justify-between sm:px-10">
+        <div className="relative z-10 mt-16 flex flex-col gap-4 border-t border-muted px-6 py-6 text-small sm:flex-row sm:items-center sm:justify-between sm:px-10">
           <p>
             © {year} {siteConfig.legal.ownerName}, {siteConfig.brand.name}
           </p>
@@ -72,7 +72,11 @@ export function SiteFooter({
             ))}
           </ul>
         </div>
-        <div aria-hidden="true" className="flex items-end gap-[1.5cqw] px-4 pb-2 sm:px-8">
+        {/* Decorative: the glyphs reach above the line box, so they must never take clicks. */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none flex items-end gap-[1.5cqw] px-4 pb-2 select-none sm:px-8"
+        >
           <StackMark className="mb-[2.2cqw] size-[11cqw] shrink-0 text-surface" />
           <span className="font-display text-[19.6cqw] leading-[0.78] font-medium tracking-[-0.055em]">
             Stackwahl

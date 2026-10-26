@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MailLink } from "@/components/page/legal";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { METHOD_VERSION, scoreName } from "@/components/software/score";
 import { Prose } from "@/components/ui/typography";
@@ -22,6 +23,7 @@ import {
 } from "@/lib/research-score";
 import { routes } from "@/lib/routes";
 import { SCORE_CRITERIA } from "@/lib/scoring";
+import { siteConfig } from "@/site.config";
 
 export const metadata: Metadata = {
   title: "Methodik: So vergleichen und bewerten wir",
@@ -243,7 +245,8 @@ export default function MethodologyPage() {
         <Prose>
           <p>
             Anbieter und Leser können uns veraltete oder falsche Angaben melden. Wir prüfen jeden
-            Hinweis an der Originalquelle und passen das Profil mit neuem Datum an. Kontakt:{" "}
+            Hinweis an der Originalquelle und passen das Profil mit neuem Datum an. Schreiben Sie an{" "}
+            <MailLink address={siteConfig.legal.editorialEmail} className="" /> oder nutzen Sie die{" "}
             <Link href={routes.contact()}>Kontaktseite</Link>.
           </p>
         </Prose>

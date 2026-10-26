@@ -16,7 +16,9 @@ describe("siteConfig", () => {
 
   it("lists open placeholders", () => {
     const names = findPlaceholders(siteConfig).map((p) => p.name);
-    expect(names).toContain("CONTACT_EMAIL");
+    // The contact e-mail is set; phone and VAT ID stay optional and open.
+    expect(names).not.toContain("CONTACT_EMAIL");
+    expect(names).toContain("CONTACT_PHONE");
     expect(names).not.toContain("BRAND_NAME");
   });
 });

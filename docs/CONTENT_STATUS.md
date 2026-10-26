@@ -12,14 +12,14 @@ Updated 26.10.2026: everything published.
 | Authors           | 1                               | Dietmar Riedel, Herausgeber and responsible under § 18 Abs. 2 MStV. Bio uses only facts from the Impressum. No photo yet.                                                                                                        |
 | Guides            | 10 published                    | Responsible: Dietmar Riedel.                                                                                                                                                                                                     |
 | Glossary          | 5 published                     | Responsible: Dietmar Riedel.                                                                                                                                                                                                     |
-| Legal pages       | live, lawyer review open        | Contact e-mail missing (`CONTACT_EMAIL`). Phone and VAT ID are optional and hidden until provided. Hosting DPA and log retention filled from Vercel's own pages.                                                                 |
+| Legal pages       | live, lawyer review open        | kontakt@ in Impressum and Datenschutz; Kontakt lists kontakt@, redaktion@ and partner@. Phone and VAT ID optional, hidden until provided. Hosting DPA and log retention from Vercel's pages.                                     |
 | Vendor logos      | 16 vendors                      | Sources in LOGOS.md. Sage logo also on Sage 50, Sage 50 Handwerk and Sage 100. Collmex only as a small PNG. WISO MeinBüro: only a white logo is published.                                                                       |
 | Screenshots       | 9 press images, 4 vendors       | Lexware Office, Papierkram, FastBill (older UI), easybill. 22 official videos for 16 programs. Sources in MEDIA.md, requests in PRESS_REQUESTS.md.                                                                               |
 | SEO               | indexable                       | robots.txt allows the site and names the sitemap (74 URLs). Canonical, Open Graph and social image on every page, JSON-LD for organization, website, breadcrumbs, software, item lists, articles, glossary terms and the editor. |
 
 ## Still open before or after launch
 
-1. **Contact e-mail (blocker).** § 5 DDG requires it. Without it the Impressum, Datenschutz and Kontakt pages show "Angabe fehlt". The contact form also needs a mail provider.
+1. **Mail sending.** The addresses exist, but the contact form and newsletter stay hidden until a mail provider (`MAIL_PROVIDER`, `MAIL_TRANSPORT`, `MAIL_FROM`) is configured and named in the Datenschutz.
 2. **Lawyer review.** The legal texts are live; the internal draft notice now shows only in development and preview builds.
 3. **The editor's sign-off.** Dietmar Riedel is named as responsible for all content. He should read every profile and article; the facts and sources are in the content files.
 4. **No hands-on test.** The editorial score (`rating`) still needs a documented test. Until then the Recherche-Wertung is shown, and the text says "recherchiert", never "getestet".

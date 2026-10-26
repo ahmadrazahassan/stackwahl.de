@@ -116,11 +116,29 @@ test.describe("Templates", () => {
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
   });
 
-  test("legal pages mark missing data and the missing lawyer review", async ({ page }) => {
+  test("Impressum names the operator and a working e-mail; contact lists all addresses", async ({
+    page,
+  }) => {
     await page.goto("/impressum");
     await expect(page.getByText("Dietmar Riedel").first()).toBeVisible();
-    await expect(page.getByText("Angabe fehlt: CONTACT_EMAIL")).toBeVisible();
+    await expect(page.getByRole("link", { name: "kontakt@stackwahl.de" })).toHaveAttribute(
+      "href",
+      "mailto:kontakt@stackwahl.de",
+    );
+    await expect(page.getByText(/Angabe fehlt/)).toHaveCount(0);
+    // The review reminder is internal and appears only in development and preview builds.
     await expect(page.getByText(/noch nicht anwaltlich geprüft/)).toBeVisible();
+    await page.goto("/kontakt");
+    for (const address of [
+      "kontakt@stackwahl.de",
+      "redaktion@stackwahl.de",
+      "partner@stackwahl.de",
+    ]) {
+      await expect(page.getByRole("link", { name: address })).toHaveAttribute(
+        "href",
+        `mailto:${address}`,
+      );
+    }
   });
 
   test("unknown pages answer 404 in German", async ({ page }) => {

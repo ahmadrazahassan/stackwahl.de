@@ -78,6 +78,27 @@ export function organizationLd() {
     "@context": "https://schema.org",
     ...publisher,
     founder: { "@type": "Person", name: legal.ownerName },
+    email: legal.email,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: legal.email,
+        availableLanguage: "de",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "editorial",
+        email: legal.editorialEmail,
+        availableLanguage: "de",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "partnerships",
+        email: legal.partnerEmail,
+        availableLanguage: "de",
+      },
+    ],
     address: {
       "@type": "PostalAddress",
       streetAddress: legal.street,

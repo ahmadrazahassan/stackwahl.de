@@ -239,3 +239,8 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 - **Direktvergleich section.** Two or three programs side by side: entry price (net, minimum seats included), free plan, trial, Recherche-Wertung, six compliance facts and ten features, with "Website besuchen" and "Profil lesen" per program and links to /vergleich and the cost calculator. Presets cover the pairings people search for (sevdesk vs. Lexware Office, the Sage products, free start, invoicing, ERP).
 - **Highlights only from data.** "Günstigster Einstieg", "Längste Testphase" and "Höchste Recherche-Wertung" are computed from the stored values. When per-user and flat prices meet, the summary says that it compares one user; programs without a stated price or trial are named as such, never counted as cheapest or longest.
 - **Two layouts.** From md a table with equal columns; below md each row is a label with the values side by side, so phones need no sideways scrolling.
+
+## 26.10.2026: Contact addresses and footer fix
+
+- **Addresses from the owner.** kontakt@stackwahl.de is the legal address (Impressum, Datenschutz, structured data). redaktion@stackwahl.de takes corrections and press, partner@stackwahl.de vendors and affiliate networks. Kontakt lists all three; Methodik, Redaktion and Transparenz name the matching one. All are `mailto:` links.
+- **Footer links blocked by the wordmark.** The giant "Stackwahl" wordmark uses `leading-[0.78]`, so its glyph box reached over the legal links and took the clicks on desktop. The decorative block is now `pointer-events-none`, and the link row sits above it (`relative z-10`). An E2E test clicks the footer links.

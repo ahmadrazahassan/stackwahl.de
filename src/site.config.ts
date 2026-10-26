@@ -23,6 +23,10 @@ const siteConfigSchema = z.object({
     city: z.string().min(1),
     country: z.string().min(1),
     email: openString,
+    /** Corrections, reader mail, press. */
+    editorialEmail: openString,
+    /** Vendors, affiliate networks, partnerships. */
+    partnerEmail: openString,
     phone: openString,
     // null hides the block in the Impressum.
     vatId: z.union([openString, z.null()]),
@@ -79,7 +83,9 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
     postalCode: "60314",
     city: "Frankfurt am Main",
     country: "Deutschland",
-    email: "{{CONTACT_EMAIL}}",
+    email: "kontakt@stackwahl.de",
+    editorialEmail: "redaktion@stackwahl.de",
+    partnerEmail: "partner@stackwahl.de",
     phone: "{{CONTACT_PHONE}}",
     vatId: "{{VAT_ID}}",
     responsibleEditor: {
