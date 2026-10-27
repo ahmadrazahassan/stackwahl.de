@@ -25,8 +25,8 @@ test.describe("Ratgeber", () => {
 
   test("home page shows the latest articles with a link to all", async ({ page }) => {
     await page.goto("/");
-    const section = page.getByRole("region", { name: /Antworten auf die Fragen vor dem Kauf/ });
-    await expect(section.getByRole("article")).toHaveCount(6);
+    const section = page.getByRole("region", { name: "Ratgeber" });
+    await expect(section.getByRole("article")).toHaveCount(3);
     await section.getByRole("link", { name: "Alle Artikel" }).click();
     await expect(page).toHaveURL(/\/ratgeber$/);
   });

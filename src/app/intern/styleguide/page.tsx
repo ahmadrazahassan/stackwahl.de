@@ -16,7 +16,6 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { buildNavigation } from "@/components/layout/navigation";
 import { FeatureTiles } from "@/components/marketing/feature-tiles";
 import { GuideCards } from "@/components/marketing/guide-cards";
-import { Marquee } from "@/components/marketing/marquee";
 import { NewsletterPanel } from "@/components/marketing/newsletter-panel";
 import { StepCards } from "@/components/marketing/step-cards";
 import { VerdictCard } from "@/components/marketing/verdict-card";
@@ -150,7 +149,7 @@ export default function StyleguidePage() {
                 <li key={id}>
                   <a
                     href={`#${id}`}
-                    className="inline-flex min-h-11 items-center rounded-pill bg-bg px-4 text-small font-medium hover:bg-primary-tint"
+                    className="inline-flex min-h-11 items-center bg-bg px-4 text-small font-medium hover:bg-primary-tint"
                   >
                     {label}
                   </a>
@@ -298,9 +297,7 @@ export default function StyleguidePage() {
                 <ButtonLink href={routes.comparisonTool()} variant="outline">
                   Vergleichen
                 </ButtonLink>
-                <Button arrow="none" variant="outline">
-                  Ohne Pfeil
-                </Button>
+                <Button variant="outline">Ohne Pfeil</Button>
                 <Button disabled>Deaktiviert</Button>
                 <ButtonLink href={routes.finder()} size="lg">
                   Groß
@@ -475,8 +472,6 @@ export default function StyleguidePage() {
         </Container>
       </Panel>
 
-      <Marquee text="Klar vergleichen. Sicher entscheiden." className="py-6" />
-
       <Panel id="newsletter" className="scroll-mt-16">
         <Container className="py-14 sm:py-20">
           <div className="mb-10 flex justify-end">
@@ -512,12 +507,7 @@ export default function StyleguidePage() {
             <CommandPalette entries={demoSearch} />
           </Container>
         </Section>
-        <SiteFooter
-          categories={demoCategories}
-          columns={demoNav.footer}
-          cta={demoNav.cta}
-          year={2026}
-        />
+        <SiteFooter categories={demoCategories} columns={demoNav.footer} year={2026} />
       </section>
     </main>
   );

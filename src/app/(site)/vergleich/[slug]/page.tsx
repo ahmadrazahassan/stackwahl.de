@@ -9,7 +9,7 @@ import { SourcedSection, SourceList } from "@/components/page/sourced-section";
 import { JsonLd } from "@/components/seo/json-ld";
 import { SoftwareLogo } from "@/components/software/software-card";
 import { ButtonLink, VendorButton } from "@/components/ui/button";
-import { DisclosureLabel } from "@/components/ui/labels";
+import { AffiliateNote, DisclosureLabel } from "@/components/ui/labels";
 import { Container, Panel } from "@/components/ui/layout";
 import { Eyebrow } from "@/components/ui/typography";
 import {
@@ -167,6 +167,7 @@ export default async function ComparisonPage({ params }: PageProps<"/vergleich/[
           <h2 id="wahl-titel" className="mt-4 text-h2">
             Welches Programm passt zu Ihnen?
           </h2>
+          <AffiliateNote className="mt-4 max-w-[68ch]" />
           <ul className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {comparison.choose.map((choice, i) => {
               const software = getSoftware(choice.software);
@@ -208,7 +209,6 @@ export default async function ComparisonPage({ params }: PageProps<"/vergleich/[
                       <ButtonLink
                         href={routes.software(software.slug)}
                         variant="outline"
-                        arrow="none"
                         className="w-full"
                       >
                         Profil lesen<span className="sr-only"> zu {software.name}</span>

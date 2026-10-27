@@ -31,12 +31,10 @@ export function NewsletterPanel({
   return (
     <div className={cn("grid gap-10 lg:grid-cols-12", className)}>
       <div className="min-w-0 lg:col-span-6">
-        <Headline size="h2" tail="Einmal im Monat.">
-          Neue Profile, Preisänderungen und Fristen.
-        </Headline>
+        <Headline size="h2">Einmal im Monat: neue Profile, Preisänderungen und Fristen.</Headline>
         <p className="mt-6 max-w-[48ch] text-body text-muted">
-          Kein Spam, keine Weitergabe Ihrer Adresse. Nach der Anmeldung bestätigen Sie per Link,
-          abmelden können Sie sich jederzeit. Details in der{" "}
+          Nach der Anmeldung bestätigen Sie per Link, abmelden können Sie sich jederzeit. Ihre
+          Adresse geben wir nicht weiter. Details in der{" "}
           <Link
             href={routes.privacy()}
             className="underline decoration-1 underline-offset-4 hover:text-ink"

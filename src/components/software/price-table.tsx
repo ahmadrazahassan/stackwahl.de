@@ -72,9 +72,7 @@ export function PriceTable({ plans, className }: { plans: PricePlan[]; className
               </li>
             ))}
           </ul>
-          {plan.note ? (
-            <p className="rounded-control bg-bg p-3 text-small text-muted">{plan.note}</p>
-          ) : null}
+          {plan.note ? <p className="bg-bg p-3 text-small text-muted">{plan.note}</p> : null}
           <p className="mt-auto text-small text-muted">
             Stand {formatDate(plan.checkedAt)} ·{" "}
             <a

@@ -27,7 +27,6 @@ export default function GuidesPage() {
         crumbs={[{ label: "Start", href: routes.home() }, { label: "Ratgeber" }]}
         eyebrow="Ratgeber"
         title="Wissen für die Softwarewahl."
-        tail="Mit Quellen."
         lead="Was die E-Rechnungspflicht verlangt, welche Programme die UStVA selbst senden, was Software wirklich kostet und welche Alternativen es gibt. Jeder Artikel nennt die Seiten und Gesetze, auf denen er beruht."
       />
       {featured ? (

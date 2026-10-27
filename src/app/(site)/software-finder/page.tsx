@@ -19,7 +19,6 @@ export default function FinderPage() {
         crumbs={[{ label: "Start", href: routes.home() }, { label: "Software-Finder" }]}
         eyebrow="Software-Finder"
         title="Welche Software passt zu Ihnen?"
-        tail="Sechs Fragen."
         lead="Beantworten Sie ein paar Fragen zu Ihrem Unternehmen. Wir speichern nichts, Ihre Antworten stehen nur in der Adresszeile."
       />
       <Panel>

@@ -6,7 +6,7 @@ import { useId, type ComponentProps, type ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
 const control =
-  "min-h-12 w-full rounded-control border border-line bg-surface px-4 text-body text-ink transition-colors duration-200 placeholder:text-muted hover:border-muted focus-visible:border-primary focus-visible:outline-2 focus-visible:outline-offset-0 aria-invalid:border-negative";
+  "min-h-12 w-full border border-line bg-surface px-4 text-body text-ink transition-colors duration-200 placeholder:text-muted hover:border-muted focus-visible:border-primary focus-visible:outline-2 focus-visible:outline-offset-0 aria-invalid:border-negative";
 
 /**
  * Label, hint and error wired with `aria-describedby` (Section 8, forms).

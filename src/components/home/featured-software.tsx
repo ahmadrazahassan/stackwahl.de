@@ -115,7 +115,7 @@ function FeaturedCard({ item }: { item: FeaturedItem }) {
           <span className="sr-only"> von {summary.name}</span>
         </VendorButton>
         {item.vendor.affiliate ? <DisclosureLabel kind="affiliate" /> : null}
-        <ButtonLink href={profile} variant="outline" arrow="none" className="w-full">
+        <ButtonLink href={profile} variant="outline" className="w-full">
           Profil und Wertung
           <span className="sr-only"> zu {summary.name}</span>
         </ButtonLink>

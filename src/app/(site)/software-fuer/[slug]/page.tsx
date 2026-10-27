@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { ResearchScoreDisplay } from "@/components/software/research-score";
 import { SoftwareLogo } from "@/components/software/software-card";
 import { ButtonLink, VendorButton } from "@/components/ui/button";
-import { DisclosureLabel } from "@/components/ui/labels";
+import { AffiliateNote, DisclosureLabel } from "@/components/ui/labels";
 import { Container, Panel } from "@/components/ui/layout";
 import { Eyebrow } from "@/components/ui/typography";
 import { COMPLIANCE, FEATURES } from "@/content/features";
@@ -156,7 +156,7 @@ export default async function UseCasePage({ params }: PageProps<"/software-fuer/
           </h2>
           <p className="mt-4 max-w-[68ch] text-small text-muted">
             {useCase.rule.explanation} Sortiert nach der Recherche-Wertung, bei gleicher Wertung
-            nach Name. Provisionen haben keinen Einfluss auf Auswahl und Reihenfolge.{" "}
+            nach Name.{" "}
             <Link
               href={`${routes.methodology()}#recherche-wertung`}
               className="underline decoration-1 underline-offset-4 hover:text-ink"
@@ -164,6 +164,7 @@ export default async function UseCasePage({ params }: PageProps<"/software-fuer/
               So entsteht die Wertung
             </Link>
           </p>
+          <AffiliateNote className="mt-3 max-w-[68ch]" />
           <ol className="mt-8 flex flex-col gap-4">
             {programs.map((software, i) => {
               const summary = toSummary(software);
@@ -262,7 +263,6 @@ export default async function UseCasePage({ params }: PageProps<"/software-fuer/
                         <ButtonLink
                           href={routes.software(software.slug)}
                           variant="outline"
-                          arrow="none"
                           className="w-full"
                         >
                           Profil lesen<span className="sr-only"> zu {software.name}</span>

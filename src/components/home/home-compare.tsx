@@ -235,7 +235,7 @@ export function HomeCompare({
                       aria-pressed={active}
                       onClick={() => setSlugs(preset.slugs)}
                       className={cn(
-                        "inline-flex min-h-11 items-center rounded-pill border px-4 text-small font-medium transition-colors",
+                        "inline-flex min-h-11 items-center border px-4 text-small font-medium transition-colors",
                         active
                           ? "border-primary bg-primary text-surface"
                           : "border-line bg-surface hover:border-ink",
@@ -393,7 +393,7 @@ export function HomeCompare({
                           <span
                             key={cell.slug}
                             className={cn(
-                              "min-w-0 rounded-control px-2 py-1.5 break-words",
+                              "min-w-0 px-2 py-1.5 break-words",
                               cell.highlight && "bg-primary-tint",
                             )}
                           >
@@ -498,7 +498,7 @@ function ProductHead({
         </VendorButton>
         {compact ? null : <span className="text-muted">Weiter zu {p.vendor.host}</span>}
         {p.vendor.affiliate ? <DisclosureLabel kind="affiliate" /> : null}
-        <ButtonLink href={p.profileHref} variant="outline" arrow="none" className="w-full">
+        <ButtonLink href={p.profileHref} variant="outline" className="w-full">
           {compact ? "Profil" : "Profil lesen"}
           <span className="sr-only"> zu {p.name}</span>
         </ButtonLink>

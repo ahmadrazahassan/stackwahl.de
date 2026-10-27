@@ -23,7 +23,6 @@ export default function CategoriesPage() {
         crumbs={[{ label: "Start", href: routes.home() }, { label: "Kategorien" }]}
         eyebrow="Kategorien"
         title="Software nach Aufgabe."
-        tail="Mit Quelle für jede Angabe."
         lead="Jede Kategorie zeigt die recherchierten Programme, ihre Preise und die Rechtssicherheit für Unternehmen in Deutschland."
       />
       <Panel>

@@ -22,7 +22,6 @@ export default function GlossaryPage() {
         crumbs={[{ label: "Start", href: routes.home() }, { label: "Glossar" }]}
         eyebrow="Glossar"
         title="Begriffe kurz erklärt."
-        tail="Mit Gesetzesquelle."
         lead="Die wichtigsten Begriffe für die Wahl einer Buchhaltungssoftware, jeweils mit dem Gesetz, auf das sie sich stützen."
       />
       <Panel>

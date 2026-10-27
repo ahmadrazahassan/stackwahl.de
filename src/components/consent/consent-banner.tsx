@@ -96,12 +96,11 @@ export function ConsentBanner({
         </ul>
       ) : null}
       <div className="mt-6 grid gap-2 sm:grid-cols-2">
-        <Button variant="outline" arrow="none" onClick={() => save([])} className="justify-center">
+        <Button variant="outline" onClick={() => save([])} className="justify-center">
           Ablehnen
         </Button>
         <Button
           variant="outline"
-          arrow="none"
           onClick={() => save(services.map((s) => s.id))}
           className="justify-center"
         >
@@ -110,12 +109,7 @@ export function ConsentBanner({
       </div>
       <div className="mt-2">
         {details ? (
-          <Button
-            variant="light"
-            arrow="none"
-            onClick={() => save(chosen)}
-            className="w-full justify-center"
-          >
+          <Button variant="light" onClick={() => save(chosen)} className="w-full justify-center">
             Auswahl speichern
           </Button>
         ) : (

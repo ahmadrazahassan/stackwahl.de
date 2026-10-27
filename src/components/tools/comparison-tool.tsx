@@ -88,7 +88,7 @@ export function ComparisonTool({ products }: { products: FinderProduct[] }) {
                   disabled={disabled}
                   onClick={() => toggle(p.slug)}
                   className={cn(
-                    "inline-flex min-h-11 items-center rounded-pill border px-4 text-small font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50",
+                    "inline-flex min-h-11 items-center border px-4 text-small font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50",
                     isChosen
                       ? "border-primary bg-primary text-surface"
                       : "border-line bg-surface hover:border-ink",

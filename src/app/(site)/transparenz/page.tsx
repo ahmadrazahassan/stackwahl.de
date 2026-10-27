@@ -21,7 +21,6 @@ export default function TransparencyPage() {
         crumbs={[{ label: "Start", href: routes.home() }, { label: "Transparenz" }]}
         eyebrow="Transparenz"
         title="Wie sich Stackwahl finanziert."
-        tail="Offen gesagt."
         lead="Unabhängigkeit heißt für uns: Jede kommerzielle Beziehung ist sichtbar, und keine davon beeinflusst eine Wertung."
       />
 

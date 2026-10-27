@@ -20,7 +20,6 @@ export default function CostCalculatorPage() {
         crumbs={[{ label: "Start", href: routes.home() }, { label: "Kostenrechner" }]}
         eyebrow="Kostenrechner"
         title="Was kostet das wirklich?"
-        tail="Netto und brutto."
         lead="Wählen Sie Programm, Tarif und Zahlweise. Grundlage sind die Listenpreise der Anbieter ohne Aktionen."
       />
       <Panel>

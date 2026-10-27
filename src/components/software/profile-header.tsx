@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { routes } from "@/lib/routes";
 import { VendorButton } from "@/components/ui/button";
-import { DisclosureLabel } from "@/components/ui/labels";
+import { AffiliateNote, DisclosureLabel } from "@/components/ui/labels";
 import { cn } from "@/lib/cn";
 import { formatPriceFrom } from "@/lib/format";
 import { ResearchScoreDisplay } from "./research-score";
@@ -121,6 +121,7 @@ export function ProfileHeader({
             </VendorButton>
             {software.affiliate ? <DisclosureLabel kind="affiliate" /> : null}
           </div>
+          <AffiliateNote />
         </div>
       </div>
     </header>

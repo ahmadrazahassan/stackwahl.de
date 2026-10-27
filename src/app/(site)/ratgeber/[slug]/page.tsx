@@ -6,6 +6,7 @@ import { ArticleProductCard } from "@/components/guides/article-product";
 import { ArticleThumbnail } from "@/components/guides/article-thumbnail";
 import { Byline } from "@/components/page/byline";
 import { PageHeader } from "@/components/page/page-header";
+import { AffiliateNote } from "@/components/ui/labels";
 import { Container, Panel } from "@/components/ui/layout";
 import { Eyebrow, Prose } from "@/components/ui/typography";
 import type { Source } from "@/content/schemas";
@@ -231,9 +232,9 @@ export default async function GuidePage({ params }: PageProps<"/ratgeber/[slug]"
               Die Programme aus diesem Artikel
             </h2>
             <p className="mt-4 max-w-[62ch] text-small text-muted">
-              In der Reihenfolge des Artikels. Provisionen beeinflussen weder Auswahl noch
-              Reihenfolge. Preise sind Listenpreise mit Prüfdatum.
+              In der Reihenfolge des Artikels. Preise sind Listenpreise mit Prüfdatum.
             </p>
+            <AffiliateNote className="mt-3 max-w-[62ch]" />
             <ul className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {products.map((product) => (
                 <li key={product.summary.slug}>

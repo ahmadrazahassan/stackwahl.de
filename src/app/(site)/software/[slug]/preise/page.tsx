@@ -47,7 +47,6 @@ export default async function PricingPage({ params }: PageProps<"/software/[slug
         crumbs={[...crumbs, { label: "Preise" }]}
         eyebrow="Preise"
         title={`${software.name} Preise`}
-        tail="Alle Tarife im Überblick."
         lead="Listenpreise ohne Aktionen. Laufende Rabatte stehen beim jeweiligen Tarif, weitere Nutzer und Zusatzmodule sind nicht eingerechnet."
         meta={`Preisstand ${formatDate(checked)}`}
         draft={software.status === "draft"}

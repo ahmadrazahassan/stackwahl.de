@@ -35,13 +35,6 @@ export default function ImprintPage() {
       <PageSection id="anbieter" label="§ 5 DDG" title="Angaben zum Anbieter">
         <dl className="max-w-3xl text-body">
           <Row term="Anbieter">{legal.ownerName}</Row>
-          <Row term="Anschrift">
-            {legal.street}
-            <br />
-            {legal.postalCode} {legal.city}
-            <br />
-            {legal.country}
-          </Row>
           <Row term="E-Mail">
             <MailLink address={legal.email} />
           </Row>
@@ -67,7 +60,6 @@ export default function ImprintPage() {
           <Row term="Name">
             <ConfigValue value={legal.responsibleEditor.name} />
           </Row>
-          <Row term="Anschrift">{legal.responsibleEditor.address}</Row>
         </dl>
       </PageSection>
       <PageSection id="marken" label="Hinweis" title="Marken und Logos">

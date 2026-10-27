@@ -13,7 +13,7 @@ import { CommandPalette, type SearchEntry } from "./command-palette";
 import type { NavLink } from "./navigation";
 
 const navLink =
-  "inline-flex min-h-11 items-center gap-1 rounded-control px-3 text-small font-medium text-ink transition-colors hover:bg-bg data-[active]:text-primary aria-[current=page]:text-primary";
+  "inline-flex min-h-11 items-center gap-1 px-3 text-small font-medium text-ink transition-colors hover:bg-bg data-[active]:text-primary aria-[current=page]:text-primary";
 
 /**
  * Header (docs/PLAN.md): wordmark, Kategorien mega menu, three routes, search and one primary
@@ -67,7 +67,7 @@ export function SiteHeader({
                         <NavigationMenu.Link asChild active={pathname === category.href}>
                           <Link
                             href={category.href}
-                            className="group/item flex min-h-11 flex-col justify-center rounded-control px-4 py-3 transition-colors hover:bg-bg"
+                            className="group/item flex min-h-11 flex-col justify-center px-4 py-3 transition-colors hover:bg-bg"
                           >
                             <span className="flex items-center justify-between text-small font-medium">
                               {category.label}
@@ -155,7 +155,7 @@ function MobileMenu({
   const close = () => setOpen(false);
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
-      <Dialog.Trigger className="inline-flex size-11 items-center justify-center rounded-control text-ink hover:bg-bg lg:hidden">
+      <Dialog.Trigger className="inline-flex size-11 items-center justify-center text-ink hover:bg-bg lg:hidden">
         <Menu aria-hidden="true" className="size-5" strokeWidth={1.5} />
         <span className="sr-only">Menü öffnen</span>
       </Dialog.Trigger>
@@ -167,7 +167,7 @@ function MobileMenu({
           <div className="flex min-h-16 items-center justify-between rounded-card bg-surface py-2 pr-2 pl-5">
             <Dialog.Title className="sr-only">Menü</Dialog.Title>
             <Wordmark option={ACTIVE_WORDMARK} />
-            <Dialog.Close className="inline-flex size-11 items-center justify-center rounded-control hover:bg-bg">
+            <Dialog.Close className="inline-flex size-11 items-center justify-center hover:bg-bg">
               <X aria-hidden="true" className="size-5" strokeWidth={1.5} />
               <span className="sr-only">Menü schließen</span>
             </Dialog.Close>

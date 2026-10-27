@@ -28,7 +28,6 @@ export default function EditorialPage() {
         crumbs={crumbs}
         eyebrow="Redaktion"
         title="Die Redaktion von Stackwahl."
-        tail="Mit klarer Verantwortung."
         lead="Profile, Vergleiche und Ratgeber schreibt die Redaktion von Stackwahl. Verantwortlich für alle Inhalte ist der Gründer und Herausgeber, der jeden Text freigibt."
       />
       <PageSection id="personen" label="Verantwortlich" title="Gründer und Herausgeber">

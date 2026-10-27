@@ -26,7 +26,6 @@ export default function UseCasesPage() {
         crumbs={crumbs}
         eyebrow="Software für …"
         title="Die passende Software für Ihren Betrieb."
-        tail="Nach fester Regel ausgewählt."
         lead="Jede Seite nennt die Regel, nach der die Programme ausgewählt sind, und sortiert sie nach der Recherche-Wertung. Dazu erklären wir, worauf es in Ihrer Branche oder Rechtsform ankommt."
       />
       <Panel>

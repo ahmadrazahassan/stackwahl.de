@@ -46,7 +46,9 @@ test.describe("Use-case pages", () => {
     await expect(
       page.getByText(/deren Anbieter Handwerksbetriebe als Zielgruppe nennt/),
     ).toBeVisible();
-    await expect(page.getByText(/Provisionen haben keinen Einfluss/).first()).toBeVisible();
+    await expect(
+      page.getByRole("main").getByText(/Stackwahl kann eine Provision erhalten/),
+    ).toBeVisible();
     const list = page.getByRole("region", { name: /Programme für Handwerksbetriebe/ });
     await expect(list.getByRole("heading", { name: "Sage 50 Handwerk" })).toBeVisible();
     await expect(list.getByRole("heading", { name: "orgaMAX" })).toBeVisible();

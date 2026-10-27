@@ -72,7 +72,7 @@ export function VideoEmbed({
             <div className="flex flex-col gap-4">
               <p className="max-w-[40ch] font-display text-h3 text-balance">„{title}“</p>
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-                <Button variant="light" arrow="next" onClick={() => setLoaded(true)}>
+                <Button variant="light" onClick={() => setLoaded(true)}>
                   Video laden<span className="sr-only">: {title}</span>
                 </Button>
                 <p className="text-small text-line">

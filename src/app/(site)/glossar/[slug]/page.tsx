@@ -111,7 +111,7 @@ export default async function TermPage({ params }: PageProps<"/glossar/[slug]">)
               <li key={t.slug}>
                 <Link
                   href={routes.glossaryTerm(t.slug)}
-                  className="inline-flex min-h-11 items-center rounded-pill bg-bg px-4 text-small font-medium hover:bg-primary-tint"
+                  className="inline-flex min-h-11 items-center bg-bg px-4 text-small font-medium hover:bg-primary-tint"
                 >
                   {t.term}
                 </Link>

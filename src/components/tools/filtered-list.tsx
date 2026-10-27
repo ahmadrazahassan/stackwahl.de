@@ -32,7 +32,7 @@ export function FilteredList({ items }: { items: FilterableSoftware[] }) {
                   aria-pressed={on}
                   onClick={() => setActive(on ? active.filter((k) => k !== key) : [...active, key])}
                   className={cn(
-                    "inline-flex min-h-11 items-center rounded-pill border px-4 text-small font-medium transition-colors",
+                    "inline-flex min-h-11 items-center border px-4 text-small font-medium transition-colors",
                     on
                       ? "border-primary bg-primary text-surface"
                       : "border-line bg-surface hover:border-ink",

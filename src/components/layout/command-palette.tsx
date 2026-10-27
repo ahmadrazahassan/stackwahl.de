@@ -48,7 +48,7 @@ export function CommandPalette({
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger
         className={cn(
-          "inline-flex min-h-11 items-center gap-3 rounded-control border border-line bg-surface text-small text-muted transition-colors hover:border-ink hover:text-ink",
+          "inline-flex min-h-11 items-center gap-3 border border-line bg-surface text-small text-muted transition-colors hover:border-ink hover:text-ink",
           compact ? "w-11 justify-center" : "px-4",
           className,
         )}
@@ -101,7 +101,7 @@ export function CommandPalette({
                           setOpen(false);
                           router.push(entry.href);
                         }}
-                        className="flex min-h-11 cursor-pointer items-center justify-between gap-4 rounded-control px-3 text-body data-[selected=true]:bg-primary-tint"
+                        className="flex min-h-11 cursor-pointer items-center justify-between gap-4 px-3 text-body data-[selected=true]:bg-primary-tint"
                       >
                         <span>{entry.label}</span>
                         {entry.hint ? (

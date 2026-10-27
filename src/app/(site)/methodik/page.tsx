@@ -39,7 +39,6 @@ export default function MethodologyPage() {
         crumbs={[{ label: "Start", href: routes.home() }, { label: "Methodik" }]}
         eyebrow="Methodik"
         title="So vergleichen wir."
-        tail="Nachvollziehbar und mit Quelle."
         lead="Diese Seite erklärt, woher unsere Angaben stammen, wie die Wertung entsteht und nach welchen Kriterien wir Programme sortieren."
         meta={`Methode ${METHOD_VERSION}`}
       />

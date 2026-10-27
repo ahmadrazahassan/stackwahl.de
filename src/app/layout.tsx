@@ -40,7 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-dvh">
         <a
           href="#inhalt"
-          className="sr-only rounded-control bg-ink px-4 py-3 text-small text-surface focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50"
+          className="sr-only bg-ink px-4 py-3 text-small text-surface focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50"
         >
           Zum Inhalt springen
         </a>

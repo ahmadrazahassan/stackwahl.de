@@ -36,6 +36,26 @@ export function DisclosureLabel({
   );
 }
 
+/**
+ * One-line commission notice above lists and blocks with links to vendors (the trusted.de
+ * pattern). It explains the business model; the per-link label above marks each affiliate link.
+ */
+export function AffiliateNote({ className }: { className?: string }) {
+  return (
+    <p className={cn("text-small text-muted", className)}>
+      Stackwahl kann eine Provision erhalten, wenn Sie über einen Link zu einem Anbieter einen
+      Vertrag abschließen. Ihr Preis ändert sich dadurch nicht, unsere Wertung und Reihenfolge auch
+      nicht.{" "}
+      <Link
+        href={routes.transparency()}
+        className="text-ink underline decoration-1 underline-offset-4"
+      >
+        So finanzieren wir uns
+      </Link>
+    </p>
+  );
+}
+
 /** Neutral tag for categories and topics. */
 export function Tag({ className, ...props }: ComponentProps<"span">) {
   return (

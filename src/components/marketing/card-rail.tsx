@@ -89,7 +89,7 @@ function RailButton({
       aria-label={label}
       disabled={disabled}
       onClick={onClick}
-      className="inline-flex size-11 items-center justify-center rounded-pill border border-line text-ink transition-colors duration-200 hover:border-ink disabled:cursor-not-allowed disabled:text-muted disabled:hover:border-line"
+      className="inline-flex size-11 items-center justify-center border border-line text-ink transition-colors duration-200 hover:border-ink disabled:cursor-not-allowed disabled:text-muted disabled:hover:border-line"
     >
       {children}
     </button>

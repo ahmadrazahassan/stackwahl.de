@@ -24,7 +24,6 @@ export default function FinderResultsPage() {
         ]}
         eyebrow="Software-Finder"
         title="Ihr Ergebnis"
-        tail="Mit Begründung."
       />
       <Panel>
         <Container className="py-12 sm:py-16">

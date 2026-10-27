@@ -18,10 +18,7 @@ const siteConfigSchema = z.object({
   }),
   legal: z.object({
     ownerName: z.string().min(1),
-    street: z.string().min(1),
-    postalCode: z.string().regex(/^\d{5}$/),
-    city: z.string().min(1),
-    country: z.string().min(1),
+    // No postal address and no phone number on the site (owner decision, 28.10.2026).
     email: openString,
     /** Corrections, reader mail, press. */
     editorialEmail: openString,
@@ -31,7 +28,6 @@ const siteConfigSchema = z.object({
     vatId: z.union([openString, z.null()]),
     responsibleEditor: z.object({
       name: openString,
-      address: z.string().min(1),
     }),
   }),
   /** The company profile on LinkedIn (null hides it). The founder's profile is in his author record. */
@@ -82,17 +78,12 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
   },
   legal: {
     ownerName: "Dietmar Riedel",
-    street: "Neue Kräme 32",
-    postalCode: "60314",
-    city: "Frankfurt am Main",
-    country: "Deutschland",
     email: "kontakt@stackwahl.de",
     editorialEmail: "redaktion@stackwahl.de",
     partnerEmail: "partner@stackwahl.de",
     vatId: "{{VAT_ID}}",
     responsibleEditor: {
       name: "Dietmar Riedel",
-      address: "Neue Kräme 32, 60314 Frankfurt am Main",
     },
   },
   social: {

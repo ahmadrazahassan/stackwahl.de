@@ -233,12 +233,7 @@ export function Finder() {
       </div>
       <div className="mt-10">{steps[current - 1]}</div>
       <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6">
-        <Button
-          variant="outline"
-          arrow="none"
-          onClick={() => setStep(current - 1)}
-          disabled={current === 1}
-        >
+        <Button variant="outline" onClick={() => setStep(current - 1)} disabled={current === 1}>
           Zurück
         </Button>
         {current < total ? (

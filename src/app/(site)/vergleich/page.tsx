@@ -21,7 +21,6 @@ export default function ComparisonPage() {
         crumbs={[{ label: "Start", href: routes.home() }, { label: "Vergleich" }]}
         eyebrow="Vergleich"
         title="Programme nebeneinander."
-        tail="Bis zu drei auf einmal."
         lead="„Keine Angabe“ heißt: Der Anbieter nennt es auf den geprüften Seiten nicht. Die Quellen stehen im jeweiligen Profil."
       />
       <Panel>

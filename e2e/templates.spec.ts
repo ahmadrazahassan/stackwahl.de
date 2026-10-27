@@ -134,10 +134,11 @@ test.describe("Templates", () => {
       "mailto:kontakt@stackwahl.de",
     );
     await expect(page.getByText(/Angabe fehlt/)).toHaveCount(0);
-    // No phone number and no internal review notice; the postal address stays only here.
+    // No phone number, no postal address and no internal review notice anywhere.
     await expect(page.getByText(/noch nicht anwaltlich geprüft/)).toHaveCount(0);
     await expect(page.getByText("Telefon")).toHaveCount(0);
-    await expect(page.getByText(/Neue Kräme 32/).first()).toBeVisible();
+    await expect(page.getByText("Anschrift")).toHaveCount(0);
+    await expect(page.getByText(/Neue Kräme/)).toHaveCount(0);
     await page.goto("/kontakt");
     await expect(page.getByText(/Neue Kräme/)).toHaveCount(0);
     for (const address of [

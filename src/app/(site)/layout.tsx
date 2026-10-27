@@ -47,12 +47,7 @@ export default async function SiteLayout({ children }: LayoutProps<"/">) {
         cta={nav.cta}
       />
       {children}
-      <SiteFooter
-        categories={categories}
-        columns={footerColumns}
-        cta={nav.cta}
-        year={await currentYear()}
-      />
+      <SiteFooter categories={categories} columns={footerColumns} year={await currentYear()} />
       {CONSENT_SERVICES.length > 0 ? <ConsentBanner services={CONSENT_SERVICES} /> : null}
     </NuqsAdapter>
   );

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { StackMark } from "@/components/brand/wordmark";
-import { ButtonLink } from "@/components/ui/button";
+import { routes } from "@/lib/routes";
 import { siteConfig } from "@/site.config";
 import { legalNav, type NavLink } from "./navigation";
 
@@ -8,12 +8,10 @@ import { legalNav, type NavLink } from "./navigation";
 export function SiteFooter({
   categories,
   columns: navColumns,
-  cta,
   year,
 }: {
   categories: NavLink[];
   columns: { title: string; links: NavLink[] }[];
-  cta: NavLink | null;
   year: number;
 }) {
   const columns = [
@@ -29,11 +27,18 @@ export function SiteFooter({
               Unabhängige Vergleiche von Business-Software für Deutschland, mit Quelle für jede
               Angabe.
             </p>
-            {cta ? (
-              <ButtonLink href={cta.href} variant="light" className="mt-8">
-                {cta.label}
-              </ButtonLink>
-            ) : null}
+            {/* Site-wide commission notice; each affiliate link carries its own label as well. */}
+            <p className="mt-6 max-w-[48ch] text-small">
+              Stackwahl kann eine Provision erhalten, wenn Sie über einen Link zu einem Anbieter
+              einen Vertrag abschließen. Ihr Preis ändert sich dadurch nicht, Wertung und
+              Reihenfolge auch nicht.{" "}
+              <Link
+                href={routes.transparency()}
+                className="underline decoration-1 underline-offset-4"
+              >
+                So finanzieren wir uns
+              </Link>
+            </p>
           </div>
           <nav
             aria-label="Fußzeile"
