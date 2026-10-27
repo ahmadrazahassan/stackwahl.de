@@ -99,13 +99,7 @@ export function organizationLd() {
         availableLanguage: "de",
       },
     ],
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: legal.street,
-      postalCode: legal.postalCode,
-      addressLocality: legal.city,
-      addressCountry: "DE",
-    },
+    ...(siteConfig.social.linkedinCompany ? { sameAs: [siteConfig.social.linkedinCompany] } : {}),
   };
 }
 
@@ -206,11 +200,17 @@ export function editorialAuthorLd(author: { slug: string; name: string; role: st
   };
 }
 
-export function personLd(author: { slug: string; name: string; role: string }) {
+export function personLd(author: {
+  slug: string;
+  name: string;
+  role: string;
+  links?: { label: string; url: string }[];
+}) {
   return {
     "@type": "Person",
     name: author.name,
     jobTitle: author.role,
     url: absoluteUrl(routes.author(author.slug)),
+    ...(author.links && author.links.length > 0 ? { sameAs: author.links.map((l) => l.url) } : {}),
   };
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ConfigValue, LegalDraftNotice, MailLink } from "@/components/page/legal";
+import { ConfigValue, MailLink } from "@/components/page/legal";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { Prose } from "@/components/ui/typography";
 import { contactFormAvailable, newsletterAvailable } from "@/lib/forms/availability";
@@ -26,11 +26,7 @@ export default function PrivacyPage() {
         crumbs={[{ label: "Start", href: routes.home() }, { label: "Datenschutz" }]}
         eyebrow="Rechtliches"
         title="Datenschutzerklärung"
-      >
-        <div className="mt-8">
-          <LegalDraftNotice />
-        </div>
-      </PageHeader>
+      ></PageHeader>
 
       <PageSection
         id="verantwortlicher"
@@ -39,9 +35,9 @@ export default function PrivacyPage() {
       >
         <Prose>
           <p>
-            Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) ist {legal.ownerName},{" "}
-            {legal.street}, {legal.postalCode} {legal.city}, E-Mail:{" "}
-            <MailLink address={legal.email} />.
+            Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) ist {legal.ownerName},
+            E-Mail: <MailLink address={legal.email} />. Die vollständigen Angaben zum Anbieter
+            stehen im <Link href={routes.imprint()}>Impressum</Link>.
           </p>
         </Prose>
       </PageSection>

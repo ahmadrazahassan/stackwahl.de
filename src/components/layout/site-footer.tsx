@@ -61,6 +61,19 @@ export function SiteFooter({
         <div className="relative z-10 mt-16 flex flex-col gap-4 border-t border-muted px-6 py-6 text-small sm:flex-row sm:items-center sm:justify-between sm:px-10">
           <p>
             © {year} {siteConfig.legal.ownerName}, {siteConfig.brand.name}
+            {siteConfig.social.linkedinCompany ? (
+              <>
+                {" · "}
+                <a
+                  href={siteConfig.social.linkedinCompany}
+                  target="_blank"
+                  rel="noopener"
+                  className="underline-offset-4 hover:underline"
+                >
+                  LinkedIn<span className="sr-only"> (öffnet in neuem Tab)</span>
+                </a>
+              </>
+            ) : null}
           </p>
           <ul className="flex flex-wrap gap-x-6 gap-y-1">
             {legalNav.map((link) => (

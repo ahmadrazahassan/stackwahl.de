@@ -42,16 +42,6 @@ export default function ContactPage() {
               </dd>
             </div>
           ))}
-          <div className="flex justify-between gap-6 border-t border-line py-3">
-            <dt className="text-muted">Post</dt>
-            <dd className="text-right">
-              {legal.ownerName}
-              <br />
-              {legal.street}
-              <br />
-              {legal.postalCode} {legal.city}
-            </dd>
-          </div>
         </dl>
         <Prose className="mt-8">
           <p>

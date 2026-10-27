@@ -27,13 +27,16 @@ const siteConfigSchema = z.object({
     editorialEmail: openString,
     /** Vendors, affiliate networks, partnerships. */
     partnerEmail: openString,
-    phone: openString,
     // null hides the block in the Impressum.
     vatId: z.union([openString, z.null()]),
     responsibleEditor: z.object({
       name: openString,
       address: z.string().min(1),
     }),
+  }),
+  /** The company profile on LinkedIn (null hides it). The founder's profile is in his author record. */
+  social: z.object({
+    linkedinCompany: z.url().nullable(),
   }),
   services: z.object({
     hosting: z.string().min(1),
@@ -86,12 +89,14 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
     email: "kontakt@stackwahl.de",
     editorialEmail: "redaktion@stackwahl.de",
     partnerEmail: "partner@stackwahl.de",
-    phone: "{{CONTACT_PHONE}}",
     vatId: "{{VAT_ID}}",
     responsibleEditor: {
       name: "Dietmar Riedel",
       address: "Neue Kräme 32, 60314 Frankfurt am Main",
     },
+  },
+  social: {
+    linkedinCompany: null,
   },
   services: {
     hosting: "Vercel Inc., Region Frankfurt (fra1)",

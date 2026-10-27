@@ -26,7 +26,7 @@ Zur Transparenz: Stackwahl wird sich später teilweise über Affiliate-Links fin
 Vielen Dank und freundliche Grüße
 
 Dietmar Riedel
-Stackwahl, Neue Kräme 32, 60314 Frankfurt am Main
+Gründer und Herausgeber, Stackwahl
 redaktion@stackwahl.de
 
 ## Recipients

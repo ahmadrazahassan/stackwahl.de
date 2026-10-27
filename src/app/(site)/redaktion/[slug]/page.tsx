@@ -85,6 +85,23 @@ export default async function AuthorPage({ params }: PageProps<"/redaktion/[slug
             </li>
           ))}
         </ul>
+        {author.links.length > 0 ? (
+          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-1 text-small">
+            {author.links.map((l) => (
+              <li key={l.url}>
+                <a
+                  href={l.url}
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex min-h-11 items-center font-medium underline underline-offset-4"
+                >
+                  {l.label}
+                  <span className="sr-only"> (öffnet in neuem Tab)</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </PageSection>
       {software.length > 0 ? (
         <PageSection

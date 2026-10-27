@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { LegalDraftNotice } from "@/components/page/legal";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { Prose } from "@/components/ui/typography";
 import { routes } from "@/lib/routes";
@@ -19,11 +18,7 @@ export default function AccessibilityPage() {
         crumbs={[{ label: "Start", href: routes.home() }, { label: "Barrierefreiheit" }]}
         eyebrow="Rechtliches"
         title="Erklärung zur Barrierefreiheit"
-      >
-        <div className="mt-8">
-          <LegalDraftNotice />
-        </div>
-      </PageHeader>
+      ></PageHeader>
       <PageSection id="standard" label="Standard" title="Unser Ziel">
         <Prose>
           <p>

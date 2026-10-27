@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ConfigValue, LegalDraftNotice, MailLink } from "@/components/page/legal";
+import { ConfigValue, MailLink } from "@/components/page/legal";
 import { isPlaceholder } from "@/lib/placeholders";
 import { PageHeader, PageSection } from "@/components/page/page-header";
 import { Prose } from "@/components/ui/typography";
@@ -31,11 +31,7 @@ export default function ImprintPage() {
         crumbs={[{ label: "Start", href: routes.home() }, { label: "Impressum" }]}
         eyebrow="Rechtliches"
         title="Impressum"
-      >
-        <div className="mt-8">
-          <LegalDraftNotice />
-        </div>
-      </PageHeader>
+      />
       <PageSection id="anbieter" label="§ 5 DDG" title="Angaben zum Anbieter">
         <dl className="max-w-3xl text-body">
           <Row term="Anbieter">{legal.ownerName}</Row>
@@ -49,8 +45,7 @@ export default function ImprintPage() {
           <Row term="E-Mail">
             <MailLink address={legal.email} />
           </Row>
-          {/* Phone and VAT ID are optional (§ 5 DDG): shown once the owner provides them. */}
-          {!isPlaceholder(legal.phone) ? <Row term="Telefon">{legal.phone}</Row> : null}
+          {/* The VAT ID is optional (§ 5 DDG) and shown once the owner provides it. */}
           <Row term="Kontaktformular">
             <Link href={routes.contact()} className="underline decoration-1 underline-offset-4">
               Zur Kontaktseite

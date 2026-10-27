@@ -134,9 +134,12 @@ test.describe("Templates", () => {
       "mailto:kontakt@stackwahl.de",
     );
     await expect(page.getByText(/Angabe fehlt/)).toHaveCount(0);
-    // The review reminder is internal and appears only in development and preview builds.
-    await expect(page.getByText(/noch nicht anwaltlich geprüft/)).toBeVisible();
+    // No phone number and no internal review notice; the postal address stays only here.
+    await expect(page.getByText(/noch nicht anwaltlich geprüft/)).toHaveCount(0);
+    await expect(page.getByText("Telefon")).toHaveCount(0);
+    await expect(page.getByText(/Neue Kräme 32/).first()).toBeVisible();
     await page.goto("/kontakt");
+    await expect(page.getByText(/Neue Kräme/)).toHaveCount(0);
     for (const address of [
       "kontakt@stackwahl.de",
       "redaktion@stackwahl.de",
