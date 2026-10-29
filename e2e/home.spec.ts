@@ -75,4 +75,21 @@ test.describe("Home page", () => {
       await expect(footer.getByText(/Stackwahl kann eine Provision erhalten/)).toBeVisible();
     }
   });
+
+  test("partner banner is labeled as an ad and leaves through /go", async ({ page, request }) => {
+    await page.goto("/");
+    const banner = page.locator('section[aria-labelledby="partner-titel"]');
+    await expect(banner.getByText("Anzeige", { exact: true })).toBeVisible();
+    await expect(banner.getByRole("link", { name: /^Affiliate-Link/ })).toBeVisible();
+    const cta = banner.getByRole("link", { name: /Lexware Office testen/ });
+    await expect(cta).toHaveAttribute("href", "/go/lexware-office?from=banner&pos=1");
+    await expect(cta).toHaveAttribute("rel", "sponsored nofollow noopener");
+    await expect(cta).toHaveAttribute("target", "_blank");
+    // The redirect adds only the placement and is never indexed or cached.
+    const response = await request.get("/go/lexware-office?from=banner&pos=1", { maxRedirects: 0 });
+    expect(response.status()).toBe(307);
+    expect(response.headers()["location"]).toContain("office.lexware.de");
+    expect(response.headers()["location"]).toContain("utm_content=banner-1");
+    expect(response.headers()["x-robots-tag"]).toBe("noindex, nofollow");
+  });
 });

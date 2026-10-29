@@ -33,11 +33,16 @@ function FeaturedCard({ item }: { item: FeaturedItem }) {
       aria-labelledby={`fokus-${summary.slug}`}
       className="flex h-full flex-col gap-6 rounded-card border border-line bg-surface p-6"
     >
-      <div className="flex items-center justify-between gap-4">
+      {/* The disclosure sits at the top, so the card reads as commercial before anything else. */}
+      <div className="flex min-h-6 items-center justify-between gap-4">
         <span className="eyebrow text-muted tabular">
           Platz {String(item.rank).padStart(2, "0")}
         </span>
-        <span className="text-small text-muted">{summary.category}</span>
+        {item.vendor.affiliate ? (
+          <DisclosureLabel kind="affiliate" />
+        ) : (
+          <span className="text-small text-muted">{summary.category}</span>
+        )}
       </div>
 
       <div className="min-h-10">
@@ -50,9 +55,11 @@ function FeaturedCard({ item }: { item: FeaturedItem }) {
             {summary.name}
           </Link>
         </h3>
-        {summary.vendor !== summary.name ? (
-          <p className="mt-1 text-small text-muted">{summary.vendor}</p>
-        ) : null}
+        <p className="mt-1 text-small text-muted">
+          {summary.vendor !== summary.name
+            ? `${summary.category} · ${summary.vendor}`
+            : summary.category}
+        </p>
       </div>
 
       <ResearchScoreDisplay value={score.total} size="sm" />
@@ -114,7 +121,6 @@ function FeaturedCard({ item }: { item: FeaturedItem }) {
           Website besuchen
           <span className="sr-only"> von {summary.name}</span>
         </VendorButton>
-        {item.vendor.affiliate ? <DisclosureLabel kind="affiliate" /> : null}
         <ButtonLink href={profile} variant="outline" className="w-full">
           Profil und Wertung
           <span className="sr-only"> zu {summary.name}</span>

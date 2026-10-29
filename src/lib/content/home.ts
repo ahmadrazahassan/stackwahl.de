@@ -180,3 +180,48 @@ export function compareProducts(): CompareProduct[] {
     })
     .sort((a, b) => a.name.localeCompare(b.name, "de"));
 }
+
+/**
+ * Partner banners: advertising material a partner gave us (docs/MEDIA.md, "Partner banners").
+ * A banner only appears while its affiliate link is active, so an ad never points anywhere
+ * but through /go. It sits outside every ranking and is labeled "Anzeige".
+ */
+const PARTNER_BANNERS = [
+  {
+    software: "lexware-office",
+    headline: "Rechnungen, Belege, Bank und Buchhaltung in einem Programm.",
+    image: {
+      src: "/partner/lexware-office/plattform-geraete-dunkel.webp",
+      width: 1600,
+      height: 937,
+      alt: "Lexware Office im Browser, auf Smartphone und Smartwatch, daneben die Lexware Visa Business Karte (Werbematerial von Lexware)",
+    },
+  },
+] as const;
+
+export type PartnerBannerData = {
+  summary: SoftwareSummary;
+  headline: string;
+  text: string;
+  trialDays: number | null;
+  vendor: { href: string; affiliate: boolean };
+  image: { src: string; width: number; height: number; alt: string };
+};
+
+export function partnerBanner(pos = 1): PartnerBannerData | null {
+  for (const banner of PARTNER_BANNERS) {
+    const software = getAllSoftware().find((s) => s.slug === banner.software);
+    if (!software) continue;
+    const vendor = vendorLink(software, "banner", pos);
+    if (!vendor.affiliate) continue;
+    return {
+      summary: toSummary(software),
+      headline: banner.headline,
+      text: software.summary,
+      trialDays: software.freeTrialDays ?? null,
+      vendor,
+      image: banner.image,
+    };
+  }
+  return null;
+}

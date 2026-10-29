@@ -7,6 +7,7 @@ import { SoftwareShowcase } from "@/components/home/software-showcase";
 import { EditorialLinks } from "@/components/page/editorial-links";
 import { LogoRow } from "@/components/marketing/logo-row";
 import { NewsletterPanel } from "@/components/marketing/newsletter-panel";
+import { PartnerBanner } from "@/components/marketing/partner-banner";
 import { JsonLd } from "@/components/seo/json-ld";
 import { GermanFlag } from "@/components/ui/german-flag";
 import { ArrowLink } from "@/components/ui/button";
@@ -15,7 +16,13 @@ import { Container, Panel } from "@/components/ui/layout";
 import { Headline, Lead } from "@/components/ui/typography";
 import { getAllSoftware, getComparisons, getLiveCategories, getUseCases } from "@/lib/content";
 import { articleTeasers } from "@/lib/content/guides";
-import { featuredSoftware, homeLogos, homeScreenshots, showcaseTabs } from "@/lib/content/home";
+import {
+  featuredSoftware,
+  homeLogos,
+  homeScreenshots,
+  partnerBanner,
+  showcaseTabs,
+} from "@/lib/content/home";
 import { newsletterAvailable } from "@/lib/forms/availability";
 import { routes } from "@/lib/routes";
 import { organizationLd, websiteLd } from "@/lib/seo";
@@ -81,6 +88,7 @@ export default function HomePage() {
   const articles = articleTeasers(4);
   const articleCount = articleTeasers().length;
   const featured = featuredSoftware(4);
+  const banner = partnerBanner(1);
   const comparisons = getComparisons();
   const useCases = getUseCases();
   const finder = siteConfig.features.finder;
@@ -211,6 +219,14 @@ export default function HomePage() {
             <div className="mt-8">
               <FeaturedSoftware items={featured} />
             </div>
+          </Container>
+        </Panel>
+      ) : null}
+
+      {banner ? (
+        <Panel as="section" aria-labelledby="partner-titel">
+          <Container className="py-14 sm:py-20">
+            <PartnerBanner banner={banner} />
           </Container>
         </Panel>
       ) : null}

@@ -308,3 +308,10 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 - **Mark in brand blue.** The mark is set in primary #2f2fc1 in header, mobile menu, favicon, apple icon and `public/brand/stackwahl-mark.svg` (light blue `accent` in the dark-mode favicon); the name stays ink. White and mono variants stay for dark and one-colour use.
 - **Mango yellow selection.** The selected header pill is `mango` #ffc142 with ink text and an ink dot (contrast tested).
 - **Dot always rendered.** The selection dot is always in the DOM and only shown via `group-data-[current=true]`. Mounting it on navigation crashed React ("insertBefore … not a child") when a browser translation had wrapped the label text.
+
+## 29.10.2026: First affiliate partner (Lexware), labeled banner
+
+- **Link.** `content/affiliate/lexware-office.yaml` holds the partner link from the owner. `features.affiliateLinks` is on. Every "Website besuchen" link to Lexware Office now goes through `/go/lexware-office?from=<placement>&pos=<n>`, which answers 307 with `noindex, nofollow` and `no-store` and appends `utm_content=<placement>-<n>`. No personal data is passed or stored; the Datenschutz page says so.
+- **Disclosure.** "Affiliate-Link" stands next to every partner link (as before); on the home page cards it moves to the top right of the card. Partner links never change rank or score: Lexware Office stays fourth in "Am besten bewertet".
+- **Banner.** One partner banner on the home page after "Am besten bewertet", labeled "Anzeige" and "Affiliate-Link" before anything else, with the partner's own image (`docs/MEDIA.md`, "Partner banners"), facts from the sourced profile (trial, entry price) and a link to our profile. A banner only renders while its affiliate link is active (`partnerBanner()` in `src/lib/content/home.ts`). New placement `banner`.
+- **Not used.** The partner banner with a 2020 "Testsieger" seal (old third-party claim), the tax-adviser badge and the tax-adviser PDFs.

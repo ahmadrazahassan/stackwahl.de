@@ -12,6 +12,7 @@ export const PLACEMENTS = [
   "finder",
   "ratgeber",
   "branche",
+  "banner",
 ] as const;
 export type Placement = (typeof PLACEMENTS)[number];
 
