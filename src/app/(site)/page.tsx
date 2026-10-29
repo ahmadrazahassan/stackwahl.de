@@ -8,10 +8,11 @@ import { EditorialLinks } from "@/components/page/editorial-links";
 import { LogoRow } from "@/components/marketing/logo-row";
 import { NewsletterPanel } from "@/components/marketing/newsletter-panel";
 import { JsonLd } from "@/components/seo/json-ld";
+import { GermanFlag } from "@/components/ui/german-flag";
 import { ArrowLink } from "@/components/ui/button";
 import { AffiliateNote } from "@/components/ui/labels";
 import { Container, Panel } from "@/components/ui/layout";
-import { Eyebrow, Headline, Lead } from "@/components/ui/typography";
+import { Headline, Lead } from "@/components/ui/typography";
 import { getAllSoftware, getComparisons, getLiveCategories, getUseCases } from "@/lib/content";
 import { articleTeasers } from "@/lib/content/guides";
 import { featuredSoftware, homeLogos, homeScreenshots, showcaseTabs } from "@/lib/content/home";
@@ -91,7 +92,10 @@ export default function HomePage() {
       <Panel as="section" aria-labelledby="start-titel">
         <Container className="pt-12 pb-10 sm:pt-16 lg:pt-20">
           <div className="max-w-4xl">
-            <Eyebrow className="text-muted">Business-Software für Deutschland</Eyebrow>
+            <p className="flex items-center gap-2.5 eyebrow text-muted">
+              <GermanFlag className="h-3" />
+              Business-Software für Deutschland
+            </p>
             <Headline
               as="h1"
               id="start-titel"

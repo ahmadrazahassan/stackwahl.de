@@ -1,10 +1,15 @@
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { BrandMark } from "@/components/brand/wordmark";
+import { GermanFlag } from "@/components/ui/german-flag";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/site.config";
 import { legalNav, type NavLink } from "./navigation";
 
-/** Footer panel on ink with navigation columns and the giant wordmark (reference 1). */
+/**
+ * Footer: one white card. A question with one link on the left, the link columns on the
+ * right (small grey heading, larger links), a hairline and the company line with the legal
+ * links at the bottom.
+ */
 export function SiteFooter({
   categories,
   columns: navColumns,
@@ -18,41 +23,53 @@ export function SiteFooter({
     ...(categories.length > 0 ? [{ title: "Kategorien", links: categories }] : []),
     ...navColumns,
   ];
+  const { legal, social, features } = siteConfig;
   return (
-    <footer className="px-3 pb-3 sm:px-4 sm:pb-4">
-      <div className="@container overflow-hidden rounded-[1.25rem] bg-ink text-surface sm:rounded-panel">
-        <div className="grid gap-12 px-6 pt-14 sm:px-10 sm:pt-20 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <p className="max-w-[24ch] font-display text-h3 font-normal tracking-[-0.02em]">
-              Unabhängige Vergleiche von Business-Software für Deutschland, mit Quelle für jede
-              Angabe.
+    <footer className="px-3 pt-3 pb-3 sm:px-4 sm:pt-4 sm:pb-4">
+      <div className="rounded-[1.25rem] bg-surface px-6 pt-12 text-ink sm:rounded-panel sm:px-10 sm:pt-14">
+        <div className="grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <p className="max-w-[18ch] font-display text-h3 font-normal tracking-[-0.02em]">
+              Welche Software passt zu Ihrem Betrieb?
+            </p>
+            <Link
+              href={features.finder ? routes.finder() : routes.categories()}
+              className="mt-6 inline-flex min-h-11 items-center gap-8 border-b border-line text-body transition-colors hover:border-ink"
+            >
+              {features.finder ? "Software-Finder starten" : "Kategorien ansehen"}
+              <ArrowUpRight aria-hidden="true" className="size-4" strokeWidth={1.5} />
+            </Link>
+            <p className="mt-10 flex items-center gap-2 text-small text-muted">
+              <GermanFlag />
+              Recherchiert für den deutschen Markt
             </p>
             {/* Site-wide commission notice; each affiliate link carries its own label as well. */}
-            <p className="mt-6 max-w-[48ch] text-small">
+            <p className="mt-3 max-w-[46ch] text-small text-muted">
               Stackwahl kann eine Provision erhalten, wenn Sie über einen Link zu einem Anbieter
               einen Vertrag abschließen. Ihr Preis ändert sich dadurch nicht, Wertung und
               Reihenfolge auch nicht.{" "}
               <Link
                 href={routes.transparency()}
-                className="underline decoration-1 underline-offset-4"
+                className="text-ink underline decoration-1 underline-offset-4"
               >
                 So finanzieren wir uns
               </Link>
             </p>
           </div>
+
           <nav
             aria-label="Fußzeile"
-            className="grid gap-10 sm:grid-cols-2 lg:col-span-7 xl:grid-cols-4"
+            className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-4"
           >
             {columns.map((column) => (
               <div key={column.title}>
-                <h2 className="eyebrow">{column.title}</h2>
-                <ul className="mt-4 flex flex-col">
+                <h2 className="text-small text-muted">{column.title}</h2>
+                <ul className="mt-3 flex flex-col">
                   {column.links.map((link) => (
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="inline-flex min-h-11 items-center text-small underline-offset-4 hover:underline"
+                        className="inline-flex min-h-9 items-center text-body transition-colors hover:text-primary"
                       >
                         {link.label}
                       </Link>
@@ -63,45 +80,39 @@ export function SiteFooter({
             ))}
           </nav>
         </div>
-        <div className="relative z-10 mt-16 flex flex-col gap-4 border-t border-muted px-6 py-6 text-small sm:flex-row sm:items-center sm:justify-between sm:px-10">
-          <p>
-            © {year} {siteConfig.legal.companyName}
-            {siteConfig.social.linkedinCompany ? (
-              <>
-                {" · "}
-                <a
-                  href={siteConfig.social.linkedinCompany}
-                  target="_blank"
-                  rel="noopener"
-                  className="underline-offset-4 hover:underline"
-                >
-                  LinkedIn<span className="sr-only"> (öffnet in neuem Tab)</span>
-                </a>
-              </>
+
+        <div className="mt-16 flex flex-col gap-3 border-t border-line py-6 text-small sm:flex-row sm:items-center sm:justify-between">
+          <p className="flex flex-wrap items-center gap-x-2">
+            <span>
+              © {year} {legal.companyName}
+            </span>
+            <span className="inline-flex items-center gap-2 text-muted">
+              <GermanFlag />
+              {legal.city}, Deutschland
+            </span>
+            {social.linkedinCompany ? (
+              <a
+                href={social.linkedinCompany}
+                target="_blank"
+                rel="noopener"
+                className="text-muted underline-offset-4 hover:text-ink hover:underline"
+              >
+                LinkedIn<span className="sr-only"> (öffnet in neuem Tab)</span>
+              </a>
             ) : null}
           </p>
-          <ul className="flex flex-wrap gap-x-6 gap-y-1">
+          <ul className="flex flex-wrap gap-x-6">
             {legalNav.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="inline-flex min-h-11 items-center underline-offset-4 hover:underline"
+                  className="inline-flex min-h-11 items-center text-muted transition-colors hover:text-ink"
                 >
                   {link.label}
                 </Link>
               </li>
             ))}
           </ul>
-        </div>
-        {/* Decorative: the glyphs reach above the line box, so they must never take clicks. */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none flex items-end gap-[1.5cqw] px-4 pb-2 select-none sm:px-8"
-        >
-          <BrandMark className="mb-[2.4cqw] h-[11cqw] w-[12.4cqw] shrink-0 text-surface" />
-          <span className="font-display text-[19.6cqw] leading-[0.78] font-semibold tracking-[-0.065em]">
-            stackwahl
-          </span>
         </div>
       </div>
     </footer>

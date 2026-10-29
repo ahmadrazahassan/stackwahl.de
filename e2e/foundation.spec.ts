@@ -22,9 +22,9 @@ test.describe("Foundation", () => {
     expect(ld.join(" ")).toContain('"@type":"WebSite"');
   });
 
-  test("footer links can be clicked, also under the large wordmark", async ({ page }) => {
+  test("footer links can be clicked", async ({ page }) => {
     await page.goto("/methodik");
-    // A real click fails if another element (the decorative wordmark) covers the link.
+    // A real click fails if another element covers the link.
     await page.getByRole("contentinfo").getByRole("link", { name: "Impressum" }).click();
     await expect(page).toHaveURL(/\/impressum$/);
     await page.getByRole("contentinfo").getByRole("link", { name: "Cookie-Einstellungen" }).click();
