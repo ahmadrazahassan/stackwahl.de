@@ -105,7 +105,7 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
     domain: "IONOS SE",
     mailProvider: "{{MAIL_PROVIDER}}",
     database: "{{DATABASE_PROVIDER}}",
-    analytics: "{{ANALYTICS_PROVIDER}}",
+    analytics: "Vercel Web Analytics (Vercel Inc.)",
     affiliateNetworks: "Lexware, FastBill und sevdesk Partnerprogramm (direkt)",
   },
   score: {
@@ -117,7 +117,7 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
     userReviews: false,
     consultationRequest: false,
     affiliateLinks: true,
-    analytics: false,
+    analytics: true,
     finder: true,
     comparisonTool: true,
     costCalculator: true,

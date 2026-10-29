@@ -342,3 +342,9 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 ## 30.10.2026: Publish dates set by the owner
 
 - **Dates.** On the owner's instruction, the publish dates of the 10 guides, 5 comparisons and 5 "Software für" pages are spread over 02.09.–22.10.2026. `updated`, `lastReviewed` and every source's `accessed` date stay the real research dates (24.–29.10.2026).
+
+## 30.10.2026: Vercel Web Analytics
+
+- **What.** `@vercel/analytics` (v2) in the root layout behind `features.analytics`. Cookieless: Vercel identifies visits by a request hash discarded after 24 hours and stores no IP address (Vercel docs, "Privacy and Compliance"). No consent banner, because nothing is stored on or read from the device (§ 25 TDDDG); legal basis Art. 6 Abs. 1 lit. f DSGVO, documented in the Datenschutzerklärung section "Reichweitenmessung".
+- **Redaction.** `SiteAnalytics` drops the query string on `/newsletter` (confirmation tokens) and `/suche` (free-text search terms) before sending.
+- **Owner step.** Web Analytics must be enabled for the project in the Vercel dashboard (Analytics tab), otherwise the script loads but nothing is recorded.

@@ -15,7 +15,8 @@ export const metadata: Metadata = {
 };
 
 // Draft for lawyer review (Section 9). It describes the site as it is built today: hosting on
-// Vercel, no cookies, no analytics, self-hosted fonts, vendor videos only after a click.
+// Vercel, no cookies, cookieless Vercel Web Analytics, self-hosted fonts, vendor videos only
+// after a click.
 // Every new processor, cookie or form must be added here in the same commit (Section 3.10).
 
 export default function PrivacyPage() {
@@ -77,14 +78,57 @@ export default function PrivacyPage() {
       <PageSection id="cookies" label="Cookies" title="Cookies, Analyse und eingebundene Dienste">
         <Prose>
           <p>
-            Diese Website setzt keine Cookies und nutzt keine Analyse- oder Werbedienste. Die
-            Schriften liegen auf unserem eigenen Server. Inhalte von Drittanbietern binden wir nur
-            ein, wenn Sie es selbst auslösen: Videos der Softwareanbieter laden erst nach Ihrem
+            Diese Website setzt keine Cookies und nutzt keine Werbedienste.
+            {siteConfig.features.analytics ? (
+              <>
+                {" "}
+                Für eine anonyme Reichweitenmessung nutzen wir Vercel Web Analytics (siehe{" "}
+                <Link href="#analyse">Reichweitenmessung</Link>).
+              </>
+            ) : (
+              " Analysedienste nutzen wir nicht."
+            )}{" "}
+            Die Schriften liegen auf unserem eigenen Server. Inhalte von Drittanbietern binden wir
+            nur ein, wenn Sie es selbst auslösen: Videos der Softwareanbieter laden erst nach Ihrem
             Klick (siehe <Link href="#videos">Videos der Anbieter</Link>). Den aktuellen Stand
             finden Sie unter <Link href={routes.cookieSettings()}>Cookie-Einstellungen</Link>.
           </p>
         </Prose>
       </PageSection>
+
+      {siteConfig.features.analytics ? (
+        <PageSection
+          id="analyse"
+          label="Analyse"
+          title="Reichweitenmessung mit Vercel Web Analytics"
+        >
+          <Prose>
+            <p>
+              Um zu sehen, welche Seiten gelesen werden, nutzen wir Vercel Web Analytics der Vercel
+              Inc., unseres Hosters. Der Dienst setzt keine Cookies und speichert nichts auf Ihrem
+              Gerät. Zur Unterscheidung von Besuchen bildet Vercel aus der Anfrage einen Hashwert,
+              der laut Vercel nach 24 Stunden verworfen wird; Ihre IP-Adresse wird dafür nicht
+              gespeichert.
+            </p>
+            <p>
+              Erfasst werden je Seitenaufruf Zeitpunkt, aufgerufene Adresse, verweisende Seite,
+              ungefährer Standort (Land, Region, Stadt), Betriebssystem, Browser und Gerätetyp. Bei
+              der Suche und bei Newsletter-Links entfernen wir den Teil der Adresse nach dem
+              Fragezeichen, damit weder Suchbegriffe noch Bestätigungscodes übertragen werden. Wir
+              sehen nur zusammengefasste Zahlen, keine einzelnen Personen.
+            </p>
+            <p>
+              Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt
+              darin, zu verstehen, welche Inhalte hilfreich sind, und die Website zu verbessern. Da
+              nichts auf Ihrem Gerät gespeichert oder ausgelesen wird, ist keine Einwilligung nach §
+              25 TDDDG nötig. Für Vercel gelten der Vertrag über die Auftragsverarbeitung und die
+              Angaben zur Übermittlung in die USA aus dem Abschnitt{" "}
+              <Link href="#hosting">Hosting</Link>. Sie können der Verarbeitung nach Art. 21 DSGVO
+              widersprechen, etwa per E-Mail an <MailLink address={legal.email} />.
+            </p>
+          </Prose>
+        </PageSection>
+      ) : null}
 
       <PageSection id="videos" label="Videos" title="Videos der Anbieter">
         <Prose>

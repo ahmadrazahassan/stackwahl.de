@@ -4,6 +4,7 @@ import { PageHeader, PageSection } from "@/components/page/page-header";
 import { Prose } from "@/components/ui/typography";
 import { CONSENT_SERVICES } from "@/lib/consent";
 import { routes } from "@/lib/routes";
+import { siteConfig } from "@/site.config";
 
 export const metadata: Metadata = {
   title: "Cookie-Einstellungen",
@@ -24,10 +25,13 @@ export default function CookieSettingsPage() {
           {CONSENT_SERVICES.length === 0 ? (
             <p>
               Stackwahl setzt derzeit keine Cookies und lädt von sich aus keine Dienste, die Ihre
-              Einwilligung brauchen. Es gibt deshalb nichts einzustellen. Videos der Anbieter auf
-              YouTube oder Vimeo laden nur, wenn Sie beim einzelnen Video auf „Video laden“ klicken;
-              diese Entscheidung speichern wir nicht. Sobald sich das ändert, können Sie Ihre
-              Auswahl hier jederzeit anpassen. Details stehen in der{" "}
+              Einwilligung brauchen. Es gibt deshalb nichts einzustellen.
+              {siteConfig.features.analytics
+                ? " Die Reichweitenmessung mit Vercel Web Analytics arbeitet ohne Cookies und ohne Speicherung auf Ihrem Gerät."
+                : null}{" "}
+              Videos der Anbieter auf YouTube oder Vimeo laden nur, wenn Sie beim einzelnen Video
+              auf „Video laden“ klicken; diese Entscheidung speichern wir nicht. Sobald sich das
+              ändert, können Sie Ihre Auswahl hier jederzeit anpassen. Details stehen in der{" "}
               <Link href={routes.privacy()}>Datenschutzerklärung</Link>.
             </p>
           ) : null}

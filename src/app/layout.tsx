@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { SiteAnalytics } from "@/components/layout/site-analytics";
 import { googleSansFlex, inter } from "@/fonts/fonts";
 import { siteConfig } from "@/site.config";
 import "./globals.css";
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Zum Inhalt springen
         </a>
         {children}
+        {features.analytics ? <SiteAnalytics /> : null}
       </body>
     </html>
   );
