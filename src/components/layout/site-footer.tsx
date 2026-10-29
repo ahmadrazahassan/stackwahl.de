@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { StackMark } from "@/components/brand/wordmark";
+import { BrandMark } from "@/components/brand/wordmark";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/site.config";
 import { legalNav, type NavLink } from "./navigation";
@@ -98,9 +98,9 @@ export function SiteFooter({
           aria-hidden="true"
           className="pointer-events-none flex items-end gap-[1.5cqw] px-4 pb-2 select-none sm:px-8"
         >
-          <StackMark className="mb-[2.2cqw] size-[11cqw] shrink-0 text-surface" />
-          <span className="font-display text-[19.6cqw] leading-[0.78] font-medium tracking-[-0.055em]">
-            Stackwahl
+          <BrandMark className="mb-[2.4cqw] h-[11cqw] w-[12.4cqw] shrink-0 text-surface" />
+          <span className="font-display text-[19.6cqw] leading-[0.78] font-semibold tracking-[-0.065em]">
+            stackwahl
           </span>
         </div>
       </div>

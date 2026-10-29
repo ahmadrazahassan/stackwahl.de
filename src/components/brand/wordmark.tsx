@@ -1,70 +1,43 @@
+import { useId } from "react";
 import { cn } from "@/lib/cn";
 
-// Three wordmark options for the owner to choose from (Section 13.10). Flat, no gradient,
-// no container. Option B carries the mark "Stapel-S": three stacked bars shifted into an S.
-// The full-width middle bar is set in primary (the choice, "Wahl"). The offsets keep it from
-// reading as a menu icon, and the 32-unit grid keeps every edge on whole pixels at 16 and 32 px.
+// The mark: two offset slabs merge into one solid block that reads as an "S" and as a stack
+// ("Stack"). The ballot cross ("Wahl") is cut out where the slabs meet, so it always shows the
+// background. Flat, no gradient. 36 x 32 grid, outer corners r6, inner fillets r2.
 
-export type WordmarkOption = "a" | "b" | "c";
+export const MARK_SHAPE =
+  "M6 0H22A6 6 0 0 1 28 6V14A2 2 0 0 0 30 16A6 6 0 0 1 36 22V26A6 6 0 0 1 30 32H14A6 6 0 0 1 8 26V18A2 2 0 0 0 6 16A6 6 0 0 1 0 10V6A6 6 0 0 1 6 0Z";
+export const MARK_CROSS = "M14.25 12.25L21.75 19.75M21.75 12.25L14.25 19.75";
+export const MARK_CROSS_WIDTH = 2.6;
 
-export function StackMark({ className, size }: { className?: string; size?: number }) {
+export function BrandMark({ className, size = 28 }: { className?: string; size?: number }) {
+  const mask = useId();
   return (
     <svg
-      width={size}
+      width={(size * 36) / 32}
       height={size}
-      viewBox="0 0 32 32"
+      viewBox="0 0 36 32"
       aria-hidden="true"
       focusable="false"
       className={className}
     >
-      <rect x="2" y="3" width="19" height="7.5" rx="2" fill="currentColor" />
-      <rect x="2" y="12.25" width="28" height="7.5" rx="2" fill="var(--color-primary)" />
-      <rect x="11" y="21.5" width="19" height="7.5" rx="2" fill="currentColor" />
+      <mask id={mask}>
+        <rect x="-1" y="-1" width="38" height="34" fill="white" />
+        <path d={MARK_CROSS} stroke="black" strokeWidth={MARK_CROSS_WIDTH} strokeLinecap="round" />
+      </mask>
+      <path d={MARK_SHAPE} fill="currentColor" mask={`url(#${mask})`} />
     </svg>
   );
 }
 
-export function Wordmark({
-  option = "b",
-  className,
-}: {
-  option?: WordmarkOption;
-  className?: string;
-}) {
-  if (option === "a") {
-    return (
-      <span
-        className={cn(
-          "font-display text-[1.5rem] leading-none font-medium tracking-[-0.045em]",
-          className,
-        )}
-      >
-        Stackwahl
-      </span>
-    );
-  }
-  if (option === "c") {
-    return (
-      <span
-        className={cn(
-          "inline-flex items-baseline font-display text-[1.5rem] leading-none font-medium tracking-[-0.045em]",
-          className,
-        )}
-      >
-        stackwahl
-        <span aria-hidden="true" className="ml-0.5 inline-block size-[0.28em] bg-primary" />
-      </span>
-    );
-  }
+/** Mark and name, used in header, footer and the mobile menu. */
+export function Wordmark({ className }: { className?: string }) {
   return (
-    <span className={cn("inline-flex items-center gap-2", className)}>
-      <StackMark size={26} />
-      <span className="font-display text-[1.5rem] leading-none font-medium tracking-[-0.045em]">
-        Stackwahl
+    <span className={cn("inline-flex items-center gap-2.5", className)}>
+      <BrandMark size={24} />
+      <span className="font-display text-[1.5rem] leading-none font-semibold tracking-[-0.055em]">
+        stackwahl
       </span>
     </span>
   );
 }
-
-/** The approved option used in header and footer. */
-export const ACTIVE_WORDMARK: WordmarkOption = "b"; // approved by the owner on 24.10.2026

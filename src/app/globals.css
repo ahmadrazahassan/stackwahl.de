@@ -20,6 +20,9 @@
   --color-primary: #2f2fc1;
   --color-primary-hover: #2424a0;
   --color-primary-tint: #e6e6f8;
+  /* Light blue for primary calls to action and search, always with ink text (owner, 29.10.2026) */
+  --color-accent: #a8c8ff;
+  --color-accent-hover: #8cb5ff;
   --color-ink: #191919;
   --color-bg: #f1f1f1;
   --color-surface: #ffffff;
@@ -27,6 +30,14 @@
   --color-line: #dcdcdc;
   --color-positive: #1d6f3a;
   --color-negative: #b3261e;
+  /* Frosted glass, only for the Ratgeber card on the home page (owner request, 29.10.2026) */
+  /* Sticky header: frosted white, the page shows through blurred when scrolling */
+  --color-frost: #ffffffe0;
+  --color-glass: #ffffff29;
+  --color-glass-line: #ffffff47;
+  --color-glass-soft: #ffffffb3;
+  --color-glass-ink: #19191926;
+  --color-glass-ink-strong: #19191940;
 
   /* Type scale (fluid) */
   --text-display: clamp(3.5rem, 2.2rem + 5.2vw, 7rem);
@@ -128,6 +139,17 @@
       scroll-behavior: auto !important;
     }
   }
+}
+
+@keyframes glass-in {
+  from {
+    opacity: 0;
+    translate: 0 0.5rem;
+  }
+}
+
+@utility animate-glass-in {
+  animation: glass-in 450ms var(--ease-out);
 }
 
 @utility tabular {

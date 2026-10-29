@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Search } from "lucide-react";
-import { ArticleGrid } from "@/components/guides/article-card";
 import { FeaturedSoftware } from "@/components/home/featured-software";
+import { GuideSpotlight } from "@/components/home/guide-spotlight";
 import { ScreenshotGallery } from "@/components/home/screenshot-gallery";
 import { SoftwareShowcase } from "@/components/home/software-showcase";
 import { EditorialLinks } from "@/components/page/editorial-links";
@@ -77,7 +77,8 @@ export default function HomePage() {
   const showcase = showcaseTabs();
   const logos = homeLogos();
   const screenshots = homeScreenshots(4);
-  const articles = articleTeasers(3);
+  const articles = articleTeasers(4);
+  const articleCount = articleTeasers().length;
   const featured = featuredSoftware(4);
   const comparisons = getComparisons();
   const useCases = getUseCases();
@@ -126,7 +127,7 @@ export default function HomePage() {
               />
               <button
                 type="submit"
-                className="inline-flex h-full shrink-0 items-center gap-2 bg-ink px-6 text-small font-medium text-surface transition-colors hover:bg-primary focus-visible:outline-none max-sm:px-4"
+                className="inline-flex h-full shrink-0 items-center gap-2 bg-accent px-6 text-small font-medium text-ink transition-colors hover:bg-accent-hover focus-visible:outline-none max-sm:px-4"
               >
                 <Search aria-hidden="true" className="size-4" strokeWidth={1.5} />
                 Suchen
@@ -240,16 +241,24 @@ export default function HomePage() {
       ) : null}
 
       {articles.length > 0 ? (
-        <Panel as="section" aria-labelledby="ratgeber-titel">
-          <Container className="py-14 sm:py-20">
-            <SectionHead
-              id="ratgeber-titel"
-              title="Ratgeber"
-              text="E-Rechnung, Umsatzsteuer, Kosten und Wechsel: die Fragen vor dem Kauf, mit Angaben der Anbieter und Gesetzestexten."
-              link={{ href: routes.guides(), label: "Alle Artikel" }}
-            />
-            <ArticleGrid articles={articles} className="mt-10" />
+        <Panel
+          as="section"
+          tone="primary"
+          aria-labelledby="ratgeber-titel"
+          className="overflow-hidden"
+        >
+          <Container className="relative z-10 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 pt-12 sm:pt-16">
+            <h2 id="ratgeber-titel" className="text-h2">
+              Ratgeber
+            </h2>
+            <Link
+              href={routes.guides()}
+              className="inline-flex min-h-11 items-center text-small font-medium underline decoration-1 underline-offset-4"
+            >
+              Alle {articleCount} Artikel
+            </Link>
           </Container>
+          <GuideSpotlight articles={articles} />
         </Panel>
       ) : null}
 

@@ -12,6 +12,7 @@ export type Availability = {
   authors: boolean;
   reviewPolicy: boolean;
   categories: boolean;
+  useCases: boolean;
 };
 
 const when = (condition: boolean, link: NavLink) => (condition ? [link] : []);
@@ -23,6 +24,43 @@ export function buildNavigation(a: Availability) {
     ...when(a.guides, { label: "Ratgeber", href: routes.guides() }),
     ...when(a.glossary, { label: "Glossar", href: routes.glossary() }),
   ];
+
+  // Header: pills on the left, the wordmark in the centre, dropdowns and Kontakt on the right.
+  const header = {
+    left: [
+      { label: "Start", href: routes.home() },
+      ...when(a.comparisonTool, { label: "Vergleich", href: routes.comparisonTool() }),
+      ...when(a.finder, { label: "Software-Finder", href: routes.finder() }),
+    ],
+    knowledge: [
+      ...when(a.guides, {
+        label: "Ratgeber",
+        href: routes.guides(),
+        description: "Die Fragen vor dem Kauf, mit Quellen",
+      }),
+      ...when(a.useCases, {
+        label: "Software für …",
+        href: routes.useCases(),
+        description: "Empfehlungen nach Branche und Rechtsform",
+      }),
+      ...when(a.glossary, {
+        label: "Glossar",
+        href: routes.glossary(),
+        description: "Begriffe von E-Rechnung bis UStVA",
+      }),
+      ...when(a.costCalculator, {
+        label: "Kostenrechner",
+        href: routes.costCalculator(),
+        description: "Listenpreise für Ihr Team, netto und brutto",
+      }),
+      {
+        label: "Methodik",
+        href: routes.methodology(),
+        description: "So recherchieren und werten wir",
+      },
+    ],
+    contact: { label: "Kontakt", href: routes.contact() },
+  };
 
   const cta: NavLink | null = a.finder
     ? { label: "Software finden", href: routes.finder() }
@@ -52,7 +90,7 @@ export function buildNavigation(a: Availability) {
     { title: "Über Stackwahl", links: about },
   ];
 
-  return { primary, cta, footer, legal: legalNav };
+  return { primary, header, cta, footer, legal: legalNav };
 }
 
 export const legalNav: NavLink[] = [

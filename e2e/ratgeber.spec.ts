@@ -23,11 +23,24 @@ test.describe("Ratgeber", () => {
     await expect(page.getByText(/Testsieger|im Test/)).toHaveCount(0);
   });
 
-  test("home page shows the latest articles with a link to all", async ({ page }) => {
+  test("home page shows the latest articles in a glass card with a link to all", async ({
+    page,
+  }) => {
     await page.goto("/");
     const section = page.getByRole("region", { name: "Ratgeber" });
-    await expect(section.getByRole("article")).toHaveCount(3);
-    await section.getByRole("link", { name: "Alle Artikel" }).click();
+    const card = section.getByRole("article");
+    await expect(card).toHaveAttribute("aria-label", "Artikel 1 von 4");
+    // The dots switch the article; the read link follows.
+    const dots = section.getByRole("list", { name: "Artikel wählen" }).getByRole("button");
+    await expect(dots).toHaveCount(4);
+    await dots.nth(2).click();
+    await expect(card).toHaveAttribute("aria-label", "Artikel 3 von 4");
+    await expect(dots.nth(2)).toHaveAttribute("aria-current", "true");
+    await expect(card.getByRole("link", { name: /^Lesen/ })).toHaveAttribute(
+      "href",
+      /\/ratgeber\//,
+    );
+    await section.getByRole("link", { name: /Alle \d+ Artikel/ }).click();
     await expect(page).toHaveURL(/\/ratgeber$/);
   });
 

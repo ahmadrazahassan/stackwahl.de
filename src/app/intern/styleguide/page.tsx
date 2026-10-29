@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { SHOW_DRAFTS } from "@/content/visibility";
-import { Wordmark, type WordmarkOption } from "@/components/brand/wordmark";
+import { Wordmark } from "@/components/brand/wordmark";
 import {
   Arcs,
   Lattice,
@@ -66,6 +66,14 @@ const swatchClass: Record<ColorToken, string> = {
   line: "bg-line",
   positive: "bg-positive",
   negative: "bg-negative",
+  accent: "bg-accent",
+  "accent-hover": "bg-accent-hover",
+  frost: "bg-frost",
+  glass: "bg-glass",
+  "glass-line": "bg-glass-line",
+  "glass-soft": "bg-glass-soft",
+  "glass-ink": "bg-glass-ink",
+  "glass-ink-strong": "bg-glass-ink-strong",
 };
 
 const toc = [
@@ -124,6 +132,7 @@ const demoNav = buildNavigation({
   authors: true,
   reviewPolicy: true,
   categories: true,
+  useCases: true,
 });
 
 export default function StyleguidePage() {
@@ -256,31 +265,17 @@ export default function StyleguidePage() {
 
           <Specimen
             id="wortmarke"
-            title="Wortmarke: drei Optionen"
-            note="Bitte eine Option wählen. Aktiv im Header und Footer ist vorläufig Option B."
+            title="Wortmarke"
+            note="Zeichen „Wahlkreuz“: vier Klingen zeigen auf eine Mitte, die vierte in Primärblau ist die Wahl."
           >
-            <ul className="grid gap-4 md:grid-cols-3">
-              {(["a", "b", "c"] as WordmarkOption[]).map((option) => (
-                <li key={option} className="flex flex-col gap-4">
-                  <div className="flex min-h-36 items-center justify-center rounded-card border border-line bg-surface">
-                    <Wordmark option={option} className="scale-150" />
-                  </div>
-                  <div className="flex min-h-36 items-center justify-center rounded-card bg-ink text-surface">
-                    <Wordmark option={option} className="scale-150" />
-                  </div>
-                  <p className="text-small font-medium">
-                    Option {option.toUpperCase()}
-                    <span className="font-normal text-muted">
-                      {option === "a"
-                        ? ": reine Wortmarke"
-                        : option === "b"
-                          ? ": Zeichen (drei Balken) und Wortmarke"
-                          : ": Kleinschreibung mit Quadrat"}
-                    </span>
-                  </p>
-                </li>
-              ))}
-            </ul>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="flex min-h-36 items-center justify-center rounded-card border border-line bg-surface">
+                <Wordmark className="scale-150" />
+              </div>
+              <div className="flex min-h-36 items-center justify-center rounded-card bg-ink text-surface">
+                <Wordmark className="scale-150" />
+              </div>
+            </div>
           </Specimen>
 
           <Specimen
@@ -496,12 +491,7 @@ export default function StyleguidePage() {
             </p>
           </Container>
         </Panel>
-        <SiteHeader
-          categories={demoCategories}
-          searchEntries={demoSearch}
-          primary={demoNav.primary}
-          cta={demoNav.cta}
-        />
+        <SiteHeader categories={demoCategories} searchEntries={demoSearch} nav={demoNav.header} />
         <Section className="py-8 sm:py-10 lg:py-10">
           <Container>
             <CommandPalette entries={demoSearch} />

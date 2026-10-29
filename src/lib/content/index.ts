@@ -234,6 +234,7 @@ export function getAvailability(): Availability {
     authors: allAuthors.length > 0,
     reviewPolicy: features.userReviews,
     categories: getLiveCategories().length > 0,
+    useCases: getUseCases().length > 0,
   };
 }
 
