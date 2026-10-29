@@ -7,7 +7,7 @@ import { getGlossary } from "@/lib/content";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
-  title: "Glossar",
+  title: "Glossar: Buchhaltung, Steuern und E-Rechnung erklärt",
   description:
     "Begriffe rund um Buchhaltung und Rechnungen in Deutschland, kurz erklärt und mit Gesetzesquelle: E-Rechnung, EÜR, UStVA und mehr.",
   alternates: { canonical: routes.glossary() },

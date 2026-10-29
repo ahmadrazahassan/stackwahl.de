@@ -44,8 +44,14 @@ export async function generateMetadata({
 }: PageProps<"/kategorien/[slug]">): Promise<Metadata> {
   const data = liveCategory((await params).slug);
   if (!data) return {};
+  // The year of the latest price check, so the title never names a year we have not checked.
+  const checked = data.software
+    .map((s) => s.lastReviewed)
+    .sort()
+    .at(-1)
+    ?.slice(0, 4);
   return pageMetadata({
-    title: `${data.category.name} im Vergleich: ${data.software.length} Programme mit Preisen`,
+    title: `${data.category.name} Vergleich ${checked}: ${data.software.length} Programme mit Preisen`,
     description: data.category.description,
     path: routes.category(data.category.slug),
   });

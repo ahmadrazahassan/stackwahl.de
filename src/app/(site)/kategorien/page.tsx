@@ -7,7 +7,7 @@ import { getLiveCategories, getSoftwareInCategory } from "@/lib/content";
 import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
-  title: "Kategorien",
+  title: "Software-Kategorien: Buchhaltung, Rechnungen und ERP",
   description:
     "Alle Software-Kategorien bei Stackwahl: Buchhaltungssoftware und Rechnungsprogramme für Unternehmen in Deutschland im Vergleich.",
   alternates: { canonical: routes.categories() },

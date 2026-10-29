@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { OG_SIZE, OgCard } from "@/components/seo/og-card";
 
-export const alt = "Stackwahl: Business-Software unabhängig verglichen";
+export const alt = "Stackwahl: Buchhaltungssoftware, Rechnungsprogramme und ERP im Vergleich";
 export const size = OG_SIZE;
 export const contentType = "image/png";
 

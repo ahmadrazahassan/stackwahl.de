@@ -127,7 +127,7 @@ export default function PrivacyPage() {
           <p>
             Links zu Softwareanbietern führen direkt auf deren Website. Links zu Partnern, als
             „Affiliate-Link“ gekennzeichnet, führen über unsere Weiterleitung unter
-            stackwahl.de/go/. Dabei zählen wir nur, welches Programm an welcher Stelle der Seite
+            www.stackwahl.de/go/. Dabei zählen wir nur, welches Programm an welcher Stelle der Seite
             geklickt wurde, ohne IP-Adresse, Cookie oder Kennung. An den Partner geben wir in der
             Adresse nur diese Stelle weiter (zum Beispiel „banner-1“), keine Daten über Sie. Mit dem
             Aufruf der Anbieterseite gilt deren Datenschutzerklärung; der Anbieter kann dort eigene

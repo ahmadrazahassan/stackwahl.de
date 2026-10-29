@@ -29,7 +29,7 @@ export async function generateMetadata({
   const term = load((await params).slug);
   if (!term) return {};
   return pageMetadata({
-    title: `${term.term}: Erklärung`,
+    title: `${term.term}: Definition und Erklärung`,
     description: term.short,
     path: routes.glossaryTerm(term.slug),
   });

@@ -76,8 +76,8 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
   brand: {
     name: "Stackwahl",
     domain: "stackwahl.de",
-    url: "https://stackwahl.de",
-    tagline: "Business-Software unabhängig verglichen",
+    url: "https://www.stackwahl.de",
+    tagline: "Buchhaltungssoftware, Rechnungsprogramme und ERP im Vergleich",
     locale: "de-DE",
     language: "de",
     currency: "EUR",

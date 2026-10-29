@@ -70,7 +70,7 @@ test.describe("Use-case pages", () => {
 
   test("new pages are in the sitemap", async ({ request }) => {
     const sitemap = await (await request.get("/sitemap.xml")).text();
-    expect(sitemap).toContain("https://stackwahl.de/vergleich/weclapp-vs-xentral");
-    expect(sitemap).toContain("https://stackwahl.de/software-fuer/lohnabrechnung");
+    expect(sitemap).toContain("https://www.stackwahl.de/vergleich/weclapp-vs-xentral");
+    expect(sitemap).toContain("https://www.stackwahl.de/software-fuer/lohnabrechnung");
   });
 });

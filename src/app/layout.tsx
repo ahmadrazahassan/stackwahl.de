@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: `%s | ${brand.name}`,
   },
   description:
-    "Unabhängige Vergleiche von Business-Software für Unternehmen in Deutschland: Funktionen, Preise, Vor- und Nachteile, mit Quelle für jede Angabe.",
+    "Buchhaltungssoftware, Rechnungsprogramme und ERP für Unternehmen in Deutschland unabhängig verglichen: Preise, Funktionen, E-Rechnung und DATEV, mit Quelle für jede Angabe.",
   applicationName: brand.name,
   // Indexing stays off until launch (docs/BUILD_PROMPT.md, Section 11 and Phase 7).
   robots: features.indexing ? { index: true, follow: true } : { index: false, follow: false },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: brand.name,
     title: `${brand.name}: ${brand.tagline}`,
     description:
-      "Unabhängige Vergleiche von Business-Software für Unternehmen in Deutschland: Funktionen, Preise, Vor- und Nachteile, mit Quelle für jede Angabe.",
+      "Buchhaltungssoftware, Rechnungsprogramme und ERP für Unternehmen in Deutschland unabhängig verglichen: Preise, Funktionen, E-Rechnung und DATEV, mit Quelle für jede Angabe.",
     url: brand.url,
   },
   twitter: { card: "summary_large_image" },

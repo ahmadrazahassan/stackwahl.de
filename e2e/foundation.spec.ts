@@ -12,7 +12,7 @@ test.describe("Foundation", () => {
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "index, follow");
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       "href",
-      "https://stackwahl.de",
+      "https://www.stackwahl.de",
     );
     await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
       "content",
@@ -60,10 +60,10 @@ test.describe("Foundation", () => {
     expect(robots).toContain("Allow: /");
     expect(robots).toContain("Disallow: /go/");
     expect(robots).not.toMatch(/^Disallow: \/\s*$/m);
-    expect(robots).toContain("Sitemap: https://stackwahl.de/sitemap.xml");
+    expect(robots).toContain("Sitemap: https://www.stackwahl.de/sitemap.xml");
     const sitemap = await (await request.get("/sitemap.xml")).text();
-    expect(sitemap).toContain("https://stackwahl.de/software/sage-active");
-    expect(sitemap).toContain("https://stackwahl.de/redaktion/milan-schultheis");
+    expect(sitemap).toContain("https://www.stackwahl.de/software/sage-active");
+    expect(sitemap).toContain("https://www.stackwahl.de/redaktion/milan-schultheis");
     expect(sitemap).not.toContain("/alternativen");
   });
 

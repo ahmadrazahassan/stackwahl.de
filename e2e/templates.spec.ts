@@ -177,7 +177,7 @@ test.describe("Templates", () => {
 
   test("sitemap lists profiles and leaves out noindex pages", async ({ request }) => {
     const xml = await (await request.get("/sitemap.xml")).text();
-    expect(xml).toContain("https://stackwahl.de/software/sevdesk</loc>");
+    expect(xml).toContain("https://www.stackwahl.de/software/sevdesk</loc>");
     expect(xml).not.toContain("/alternativen");
     expect(xml).not.toContain("/intern/");
   });
