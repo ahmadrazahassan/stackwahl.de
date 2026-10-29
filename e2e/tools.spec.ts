@@ -151,9 +151,10 @@ test.describe("Newsletter", () => {
 
 test.describe("Affiliate redirect", () => {
   test("falls back to the profile while no partner link is active", async ({ request }) => {
-    const response = await request.get("/go/sevdesk?from=profil&pos=1", { maxRedirects: 0 });
+    // Papierkram has no partner link.
+    const response = await request.get("/go/papierkram?from=profil&pos=1", { maxRedirects: 0 });
     expect(response.status()).toBe(307);
-    expect(new URL(response.headers().location).pathname).toBe("/software/sevdesk");
+    expect(new URL(response.headers().location).pathname).toBe("/software/papierkram");
     expect(response.headers()["x-robots-tag"]).toBe("noindex, nofollow");
     expect(response.headers()["cache-control"]).toBe("no-store");
   });

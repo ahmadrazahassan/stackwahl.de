@@ -103,5 +103,11 @@ test.describe("Home page", () => {
     expect(fastbill.status()).toBe(307);
     expect(fastbill.headers()["location"]).toContain("fastbill.com");
     expect(fastbill.headers()["location"]).toContain("utm_content=banner-2");
+
+    // sevdesk has a partner link but no banner yet; its card links leave through /go too.
+    const sevdesk = await request.get("/go/sevdesk?from=fokus&pos=3", { maxRedirects: 0 });
+    expect(sevdesk.status()).toBe(307);
+    expect(sevdesk.headers()["location"]).toContain("sevdesk.de");
+    expect(sevdesk.headers()["location"]).toContain("utm_content=fokus-3");
   });
 });

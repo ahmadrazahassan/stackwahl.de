@@ -101,8 +101,11 @@ test.describe("Templates", () => {
       "href",
       "/redaktion/milan-schultheis",
     );
+    // sevdesk is a partner: the vendor link leaves through /go and is marked as sponsored.
     const vendor = page.getByRole("link", { name: /Zum Anbieter/ });
-    await expect(vendor).toHaveAttribute("rel", "noopener");
+    await expect(vendor).toHaveAttribute("rel", "sponsored nofollow noopener");
+    await expect(vendor).toHaveAttribute("href", "/go/sevdesk?from=profil&pos=1");
+    await expect(page.getByRole("link", { name: /^Affiliate-Link/ }).first()).toBeVisible();
     await expect(page.getByRole("navigation", { name: "Abschnitte des Profils" })).toBeVisible();
     await expect(page.getByRole("link", { name: /sevdesk Preise/ }).first()).toHaveAttribute(
       "href",

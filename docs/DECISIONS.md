@@ -320,3 +320,9 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 
 - **Link.** `content/affiliate/fastbill.yaml` with the owner's FastBill link; `/go/fastbill` appends `utm_content=<placement>-<n>` like Lexware.
 - **Banner.** A second slot on the home page before the Ratgeber, mirrored (image left) so the two ads do not repeat one layout. Image: FastBill's own dashboard screenshot from the material the owner placed in `public/fastbll` (not tracked by Git; only the converted `public/partner/fastbill/dashboard.webp` is). `partnerBanners()` numbers the slots, so the clicks arrive as `banner-1` (Lexware) and `banner-2` (FastBill).
+
+## 29.10.2026: Third affiliate partner (sevdesk), no banner yet
+
+- **Link.** `content/affiliate/sevdesk.yaml` with the owner's sevdesk link; `/go/sevdesk` appends `utm_content=<placement>-<n>`. All sevdesk vendor links (profile, cards, comparisons, Ratgeber) now carry "Affiliate-Link" and `rel="sponsored nofollow noopener"`.
+- **No banner.** The sevdesk images the owner placed in `public/sevdesk` are 240 px wide thumbnails; enlarged to banner size they blur. The banner waits for files of at least 1600 px width. The folder is not tracked by Git.
+- **Tests.** The "inactive partner falls back to the profile" test now uses Papierkram, which has no partner link.

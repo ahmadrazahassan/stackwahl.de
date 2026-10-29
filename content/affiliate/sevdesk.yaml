@@ -1,0 +1,9 @@
+# sevdesk partner link from the owner (29.10.2026). /go/sevdesk adds the placement and
+# position as utm_content, e.g. utm_content=profil-1; the vendor's own UTM values stay as given.
+software: sevdesk
+network: sevdesk Partnerprogramm (direkt)
+targetUrl: https://sevdesk.de/?utm_source=stackwahl.de&utm_medium=stackwahl.de&utm_campaign=listing
+subIdParam: utm_content
+active: true
+added: 2026-10-29
+checked: 2026-10-29
