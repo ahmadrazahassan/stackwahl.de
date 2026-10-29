@@ -20,7 +20,7 @@ import {
   featuredSoftware,
   homeLogos,
   homeScreenshots,
-  partnerBanner,
+  partnerBanners,
   showcaseTabs,
 } from "@/lib/content/home";
 import { newsletterAvailable } from "@/lib/forms/availability";
@@ -88,7 +88,7 @@ export default function HomePage() {
   const articles = articleTeasers(4);
   const articleCount = articleTeasers().length;
   const featured = featuredSoftware(4);
-  const banner = partnerBanner(1);
+  const [banner, secondBanner] = partnerBanners();
   const comparisons = getComparisons();
   const useCases = getUseCases();
   const finder = siteConfig.features.finder;
@@ -226,7 +226,7 @@ export default function HomePage() {
       {banner ? (
         <Panel as="section" aria-labelledby="partner-titel">
           <Container className="py-14 sm:py-20">
-            <PartnerBanner banner={banner} />
+            <PartnerBanner banner={banner} id="partner-titel" />
           </Container>
         </Panel>
       ) : null}
@@ -256,6 +256,14 @@ export default function HomePage() {
                 links={useCases.map((u) => ({ href: routes.useCase(u.slug), label: u.title }))}
               />
             </div>
+          </Container>
+        </Panel>
+      ) : null}
+
+      {secondBanner ? (
+        <Panel as="section" aria-labelledby="partner-2-titel">
+          <Container className="py-14 sm:py-20">
+            <PartnerBanner banner={secondBanner} id="partner-2-titel" reverse />
           </Container>
         </Panel>
       ) : null}

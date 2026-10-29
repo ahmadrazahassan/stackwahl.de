@@ -5,6 +5,7 @@ import { ArrowLink, VendorButton } from "@/components/ui/button";
 import { DisclosureLabel } from "@/components/ui/labels";
 import type { PartnerBannerData } from "@/lib/content/home";
 import { formatPriceFrom } from "@/lib/format";
+import { cn } from "@/lib/cn";
 import { routes } from "@/lib/routes";
 
 /**
@@ -12,7 +13,16 @@ import { routes } from "@/lib/routes";
  * first. Button and image both leave through /go with rel="sponsored"; the image link is
  * hidden from keyboard and screen readers because the button carries the same target.
  */
-export function PartnerBanner({ banner }: { banner: PartnerBannerData }) {
+export function PartnerBanner({
+  banner,
+  id,
+  reverse = false,
+}: {
+  banner: PartnerBannerData;
+  id: string;
+  /** Image on the left from lg, so two banners on one page do not repeat the same layout. */
+  reverse?: boolean;
+}) {
   const { summary, vendor } = banner;
   const facts = [
     banner.trialDays ? `${banner.trialDays} Tage kostenlos testen` : null,
@@ -34,7 +44,7 @@ export function PartnerBanner({ banner }: { banner: PartnerBannerData }) {
         <div className="mt-8">
           {summary.logo ? <SoftwareLogo software={summary} size={34} /> : null}
         </div>
-        <h2 id="partner-titel" className="mt-6 max-w-[20ch] text-h2">
+        <h2 id={id} className="mt-6 max-w-[20ch] text-h2">
           {banner.headline}
         </h2>
         <p className="mt-4 max-w-[52ch] text-body text-muted">{banner.text}</p>
@@ -65,7 +75,11 @@ export function PartnerBanner({ banner }: { banner: PartnerBannerData }) {
         rel="sponsored nofollow noopener"
         tabIndex={-1}
         aria-hidden="true"
-        className="block overflow-hidden rounded-card bg-ink lg:col-span-7"
+        className={cn(
+          "block overflow-hidden rounded-card lg:col-span-7",
+          reverse && "lg:order-first",
+          banner.tone === "ink" ? "bg-ink" : "bg-bg p-3 sm:p-5",
+        )}
       >
         <Image
           src={banner.image.src}

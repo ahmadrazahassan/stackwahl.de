@@ -315,3 +315,8 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 - **Disclosure.** "Affiliate-Link" stands next to every partner link (as before); on the home page cards it moves to the top right of the card. Partner links never change rank or score: Lexware Office stays fourth in "Am besten bewertet".
 - **Banner.** One partner banner on the home page after "Am besten bewertet", labeled "Anzeige" and "Affiliate-Link" before anything else, with the partner's own image (`docs/MEDIA.md`, "Partner banners"), facts from the sourced profile (trial, entry price) and a link to our profile. A banner only renders while its affiliate link is active (`partnerBanner()` in `src/lib/content/home.ts`). New placement `banner`.
 - **Not used.** The partner banner with a 2020 "Testsieger" seal (old third-party claim), the tax-adviser badge and the tax-adviser PDFs.
+
+## 29.10.2026: Second affiliate partner (FastBill)
+
+- **Link.** `content/affiliate/fastbill.yaml` with the owner's FastBill link; `/go/fastbill` appends `utm_content=<placement>-<n>` like Lexware.
+- **Banner.** A second slot on the home page before the Ratgeber, mirrored (image left) so the two ads do not repeat one layout. Image: FastBill's own dashboard screenshot from the material the owner placed in `public/fastbll` (not tracked by Git; only the converted `public/partner/fastbill/dashboard.webp` is). `partnerBanners()` numbers the slots, so the clicks arrive as `banner-1` (Lexware) and `banner-2` (FastBill).

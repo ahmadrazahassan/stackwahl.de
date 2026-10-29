@@ -106,7 +106,7 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
     mailProvider: "{{MAIL_PROVIDER}}",
     database: "{{DATABASE_PROVIDER}}",
     analytics: "{{ANALYTICS_PROVIDER}}",
-    affiliateNetworks: "Lexware Partnerprogramm (direkt)",
+    affiliateNetworks: "Lexware Partnerprogramm (direkt), FastBill Partnerprogramm (direkt)",
   },
   score: {
     name: "Stackwahl-Wertung",

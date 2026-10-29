@@ -27,13 +27,14 @@ Every screenshot and video on a profile, with its source. The content guard fail
 
 Advertising material from affiliate partners, shown only inside a placement labeled „Anzeige“ and „Affiliate-Link“ that links through `/go/<software>`. Never used as an editorial screenshot. Converted to WebP, at most 1600 px wide, without other changes.
 
-| File                                                    | Software       | Source                                                                  | Received   |
-| ------------------------------------------------------- | -------------- | ----------------------------------------------------------------------- | ---------- |
-| `/partner/lexware-office/plattform-geraete.webp`        | lexware-office | Lexware partner material, provided by the operator as affiliate partner | 2026-10-29 |
-| `/partner/lexware-office/plattform-geraete-dunkel.webp` | lexware-office | Lexware partner material, provided by the operator as affiliate partner | 2026-10-29 |
-| `/partner/lexware-office/dashboard-laptop.webp`         | lexware-office | Lexware partner material, provided by the operator as affiliate partner | 2026-10-29 |
+| File                                                    | Software       | Source                                                                                                                                               | Received   |
+| ------------------------------------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| `/partner/lexware-office/plattform-geraete.webp`        | lexware-office | Lexware partner material, provided by the operator as affiliate partner                                                                              | 2026-10-29 |
+| `/partner/lexware-office/plattform-geraete-dunkel.webp` | lexware-office | Lexware partner material, provided by the operator as affiliate partner                                                                              | 2026-10-29 |
+| `/partner/lexware-office/dashboard-laptop.webp`         | lexware-office | Lexware partner material, provided by the operator as affiliate partner                                                                              | 2026-10-29 |
+| `/partner/fastbill/dashboard.webp`                      | fastbill       | FastBill partner material (`FastBill_Dashboard.png`), provided by the operator as affiliate partner; older interface with sample company "Mola GmbH" | 2026-10-29 |
 
-Not used: the banner with third-party seals and a "Testsieger" badge from 2020 (an old test claim we cannot verify), the "Kanzlei mit lexofficer" badge (for tax advisers, not for our readers) and the PDFs for tax advisers.
+Not used: the Lexware banner with third-party seals and a "Testsieger" badge from 2020 (an old test claim we cannot verify), the "Kanzlei mit lexofficer" badge (for tax advisers, not for our readers) and the PDFs for tax advisers. From the FastBill set, Banking and Dokumente show real company names as sample bookings (Allianz, HUK-Coburg, Telekom, Amazon) and stay out, as with easybill.
 
 ## Videos
 

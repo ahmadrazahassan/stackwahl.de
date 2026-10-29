@@ -196,6 +196,18 @@ const PARTNER_BANNERS = [
       height: 937,
       alt: "Lexware Office im Browser, auf Smartphone und Smartwatch, daneben die Lexware Visa Business Karte (Werbematerial von Lexware)",
     },
+    tone: "ink",
+  },
+  {
+    software: "fastbill",
+    headline: "Rechnungen schreiben, Belege sammeln, Banking im Blick.",
+    image: {
+      src: "/partner/fastbill/dashboard.webp",
+      width: 1600,
+      height: 815,
+      alt: "Dashboard von FastBill mit Schnellzugriffen, Dokumenten-Upload und Umsatzdiagramm (Werbematerial von FastBill)",
+    },
+    tone: "light",
   },
 ] as const;
 
@@ -206,22 +218,29 @@ export type PartnerBannerData = {
   trialDays: number | null;
   vendor: { href: string; affiliate: boolean };
   image: { src: string; width: number; height: number; alt: string };
+  /** Background behind the partner image: ink for dark artwork, light for screenshots. */
+  tone: "ink" | "light";
 };
 
-export function partnerBanner(pos = 1): PartnerBannerData | null {
-  for (const banner of PARTNER_BANNERS) {
+/** Every banner whose affiliate link is active, numbered by its slot on the page (pos). */
+export function partnerBanners(): PartnerBannerData[] {
+  return PARTNER_BANNERS.flatMap((banner) => {
     const software = getAllSoftware().find((s) => s.slug === banner.software);
-    if (!software) continue;
-    const vendor = vendorLink(software, "banner", pos);
-    if (!vendor.affiliate) continue;
-    return {
+    return software ? [{ banner, software }] : [];
+  })
+    .map(({ banner, software }, i) => ({
+      banner,
+      software,
+      vendor: vendorLink(software, "banner", i + 1),
+    }))
+    .filter(({ vendor }) => vendor.affiliate)
+    .map(({ banner, software, vendor }) => ({
       summary: toSummary(software),
       headline: banner.headline,
       text: software.summary,
       trialDays: software.freeTrialDays ?? null,
       vendor,
       image: banner.image,
-    };
-  }
-  return null;
+      tone: banner.tone,
+    }));
 }

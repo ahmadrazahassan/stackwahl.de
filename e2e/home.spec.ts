@@ -91,5 +91,17 @@ test.describe("Home page", () => {
     expect(response.headers()["location"]).toContain("office.lexware.de");
     expect(response.headers()["location"]).toContain("utm_content=banner-1");
     expect(response.headers()["x-robots-tag"]).toBe("noindex, nofollow");
+
+    // The second partner gets its own slot, also labeled.
+    const second = page.locator('section[aria-labelledby="partner-2-titel"]');
+    await expect(second.getByText("Anzeige", { exact: true })).toBeVisible();
+    await expect(second.getByRole("link", { name: /FastBill testen/ })).toHaveAttribute(
+      "href",
+      "/go/fastbill?from=banner&pos=2",
+    );
+    const fastbill = await request.get("/go/fastbill?from=banner&pos=2", { maxRedirects: 0 });
+    expect(fastbill.status()).toBe(307);
+    expect(fastbill.headers()["location"]).toContain("fastbill.com");
+    expect(fastbill.headers()["location"]).toContain("utm_content=banner-2");
   });
 });
