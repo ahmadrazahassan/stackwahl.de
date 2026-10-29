@@ -173,7 +173,8 @@ export default async function CategoryPage({ params }: PageProps<"/kategorien/[s
       >
         <p className="mb-6 max-w-[62ch] text-body text-muted">
           „Keine Angabe“ heißt: Der Anbieter nennt das auf den geprüften Seiten nicht. Das ist kein
-          Nein. Die Quellen stehen im jeweiligen Profil.
+          Nein, in der Recherche-Wertung bringt es aber keinen Punkt. Die Quellen stehen im
+          jeweiligen Profil.
         </p>
         <ComparisonTable
           caption={`Rechtssicherheit und Preise: ${category.name}`}

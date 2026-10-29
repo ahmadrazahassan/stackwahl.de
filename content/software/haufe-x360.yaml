@@ -1,4 +1,4 @@
-# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest.
 # Preise nur als Beispielkonfigurationen; als Tarif steht hier der Mindestbuchungsbetrag.
 slug: haufe-x360
 name: Haufe X360
@@ -201,7 +201,7 @@ review:
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - Haufe X360 ist ein umfassendes Cloud-ERP für den Mittelstand mit Hosting in Deutschland, kostenloser Mobile App und vielen Schnittstellen. Es passt zu Unternehmen, die von einem Rechnungsprogramm wie Lexware Office in ein vollwertiges ERP wechseln und dafür einen Einführungspartner einplanen. Der Mindestbetrag und die Preise nur als Beispiele erschweren den schnellen Vergleich. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - Haufe X360 ist ein umfassendes Cloud-ERP für den Mittelstand mit Hosting in Deutschland, kostenloser Mobile App und vielen Schnittstellen. Es passt zu Unternehmen, die von einem Rechnungsprogramm wie Lexware Office in ein vollwertiges ERP wechseln und dafür einen Einführungspartner einplanen. Der Mindestbetrag und die Preise nur als Beispiele erschweren den schnellen Vergleich.
       sources:
         - *preise
         - *home

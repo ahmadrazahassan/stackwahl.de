@@ -1,4 +1,4 @@
-# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest.
 slug: sage-100
 name: Sage 100
 vendor: sage
@@ -6,7 +6,7 @@ categories:
   - erp-software
 status: published
 verification: verified
-lastReviewed: 2026-10-25
+lastReviewed: 2026-10-29
 author: milan-schultheis
 summary: Modulares ERP von Sage für den Mittelstand mit Warenwirtschaft, Rechnungswesen und Produktion, lokal oder in der Cloud, ab 56 € je Nutzer.
 website: https://www.sage.com/de-de/produkte/sage-100/
@@ -60,7 +60,12 @@ compliance:
     note: Die Cloud-Version speichert laut Anbieter in deutschen Rechenzentren; alternativ läuft Sage 100 auf eigenen Servern.
     source: *produkt
   avv:
-    status: unbekannt
+    status: ja
+    note: Der Vertrag zur Auftragsverarbeitung der Sage GmbH ist Teil der Nutzungsbedingungen, für alle Käufe ab 01.05.2025.
+    source: &avv
+      url: https://www.sage.com/de-de/rechtliches/avv/
+      title: Sage Vertrag zur Auftragsverarbeitung
+      accessed: 2026-10-29
   deutscherSupport:
     status: ja
     note: Support durch Experten von Sage, Telefon 069 50007-6300 für Fragen zum Produkt.
@@ -199,9 +204,10 @@ review:
       title: Datenschutz und Serverstandort
       paragraphs:
         - Sage 100 kann auf eigenen Servern betrieben werden. Dann bleiben die Daten vollständig im Unternehmen. Die Cloud-Version bietet laut FAQ automatische Backup-Pläne und speichert die Daten in deutschen Rechenzentren. Den KI-Assistenten beschreibt Sage als DSGVO-konform und sowohl in der Cloud als auch lokal nutzbar.
-        - Einen Auftragsverarbeitungsvertrag für die Cloud-Version nennt die Produktseite nicht. Sage führt in der Navigation einen DSGVO-Service, über den sich der Vertrag anfordern lassen sollte.
+        - Den Vertrag zur Auftragsverarbeitung stellt Sage auf einer eigenen Seite zum Download bereit. Er ist Teil der Nutzungsbedingungen und gilt für alle, die ab dem 01.05.2025 ein Produkt oder einen Service von Sage kaufen oder erweitern. Für die Cloud-Version muss er also nicht eigens angefordert werden.
       sources:
         - *produkt
+        - *avv
     - id: einstieg-und-support
       title: Einführung und Support
       paragraphs:
@@ -213,13 +219,13 @@ review:
       title: Grenzen und offene Fragen
       paragraphs:
         - Sage 100 ist ein ERP-Projekt und kein Programm, das man an einem Nachmittag einrichtet. Die Lizenzpreise je Modul sind veröffentlicht, die Kosten für Zusatzlösungen, Einführung und die Cloud-Version aber nicht. Eine belastbare Gesamtkostenrechnung entsteht erst mit einem Angebot.
-        - Offen sind nach unserer Recherche die Unterstützung der Kleinunternehmerregelung, der Auftragsverarbeitungsvertrag für die Cloud-Version und die Frage, ob es eine Browseroberfläche oder Apps gibt. Die FAQ nennt mobilen Zugriff über Notebook, Tablet und Smartphone für xRM und Projektmanagement, ohne die Technik näher zu beschreiben.
+        - Offen sind nach unserer Recherche die Unterstützung der Kleinunternehmerregelung und die Frage, ob es eine Browseroberfläche oder Apps gibt. Die FAQ nennt mobilen Zugriff über Notebook, Tablet und Smartphone für xRM und Projektmanagement, ohne die Technik näher zu beschreiben.
       sources:
         - *produkt
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - Sage 100 passt zu mittelständischen Handels- und Fertigungsbetrieben, die Warenwirtschaft, Produktion und Finanzbuchhaltung mit DATEV, ELSTER und E-Rechnung in einem anpassbaren System führen wollen und die Wahl zwischen eigenem Server und Cloud schätzen. Die veröffentlichten Modulpreise erleichtern den ersten Vergleich, die Gesamtkosten hängen aber stark von Zusatzlösungen und Einführung ab. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - Sage 100 passt zu mittelständischen Handels- und Fertigungsbetrieben, die Warenwirtschaft, Produktion und Finanzbuchhaltung mit DATEV, ELSTER und E-Rechnung in einem anpassbaren System führen wollen und die Wahl zwischen eigenem Server und Cloud schätzen. Die veröffentlichten Modulpreise erleichtern den ersten Vergleich, die Gesamtkosten hängen aber stark von Zusatzlösungen und Einführung ab.
       sources:
         - *produkt
 videos:

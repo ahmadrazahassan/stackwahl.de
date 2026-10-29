@@ -1,6 +1,6 @@
-# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
-# Sage Active steht nicht in der Liste der Sage Cloud Services der Datenschutzerklärung;
-# Serverstandort und AVV für Sage Active vor Veröffentlichung beim Anbieter klären.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest.
+# Serverstandort und AVV am 29.10.2026 ergänzt: Liste der Datenverarbeiter von Sage (Customer
+# Due Diligence) und AVV-Seite von Sage.
 slug: sage-active
 name: Sage Active
 vendor: sage
@@ -9,7 +9,7 @@ categories:
   - rechnungsprogramme
 status: published
 verification: verified
-lastReviewed: 2026-10-26
+lastReviewed: 2026-10-29
 author: milan-schultheis
 summary: Cloud-Lösung von Sage für Angebote, Rechnungen, Buchhaltung und Lohn, mit UStVA per ELSTER und DATEV-Export.
 website: https://www.sage.com/de-de/produkte/sage-active/
@@ -64,9 +64,19 @@ compliance:
       title: Sage Active Essentials
       accessed: 2026-10-25
   serverstandort:
-    status: unbekannt
+    status: ja
+    note: Rechenzentrum bei Microsoft Azure mit Datenverarbeitung in Deutschland, laut Liste der Datenverarbeiter von Sage.
+    source: &dienstleister
+      url: https://www.sage.com/de-de/vertrauen-sicherheit/datenschutz/customer-due-diligence/
+      title: Sage Customer Due Diligence, Liste der Datenverarbeiter
+      accessed: 2026-10-29
   avv:
-    status: unbekannt
+    status: ja
+    note: Der Vertrag zur Auftragsverarbeitung der Sage GmbH ist Teil der Nutzungsbedingungen, für alle Käufe ab 01.05.2025.
+    source: &avv
+      url: https://www.sage.com/de-de/rechtliches/avv/
+      title: Sage Vertrag zur Auftragsverarbeitung
+      accessed: 2026-10-29
   deutscherSupport:
     status: ja
     note: Supportteam, Hilfestellungen direkt im Produkt.
@@ -165,7 +175,6 @@ pros:
   - Lohnabrechnung und HR in derselben Lösung, zwei Mitarbeitende inklusive.
   - Monatlich kündbar zum Ende des Abrechnungsmonats.
 cons:
-  - Serverstandort und Auftragsverarbeitung für Sage Active sind auf den geprüften Seiten nicht dokumentiert.
   - Buchhaltung erst im Paket Essentials für 49 € im Monat.
   - E-Rechnungen lassen sich bisher nur empfangen, der Versand ist laut Anbieter angekündigt.
   - Rechnungen sind auf 300 beziehungsweise 500 im Monat begrenzt, weitere kosten extra.
@@ -222,13 +231,13 @@ review:
     - id: datenschutz
       title: Datenschutz und Serverstandort
       paragraphs:
-        - Einen Serverstandort und einen Auftragsverarbeitungsvertrag für Sage Active nennen die geprüften Seiten nicht, und Sage Active steht nicht in der Liste der Sage Cloud Services der Datenschutzerklärung. Beides sollte vor dem Einsatz bei Sage erfragt werden, besonders weil Essentials auch Lohn- und Personaldaten verarbeitet.
+        - Die Liste der Datenverarbeiter von Sage nennt für Sage Active als Rechenzentrum Microsoft Azure mit Datenverarbeitung in Deutschland. Für Aufgaben wie Web-Sicherheit, Support und den Versand von E-Mails führt sie weitere Dienstleister auf, einige davon mit Verarbeitung in den USA.
+        - Den Vertrag zur Auftragsverarbeitung stellt Sage zum Download bereit. Er ist Teil der Nutzungsbedingungen und gilt für alle, die ab dem 01.05.2025 ein Produkt von Sage kaufen oder erweitern, er muss also nicht eigens abgeschlossen werden. Das ist wichtig, weil Essentials auch Lohn- und Personaldaten verarbeitet.
         - Laut FAQ endet der Zugriff auf die Daten mit dem Ablauf eines gekündigten Abos, nach sechs Monaten werden sie endgültig gelöscht. Daten sollten deshalb vor dem Ende des Abos gesichert werden.
       sources:
+        - *dienstleister
+        - *avv
         - *sa
-        - url: https://www.sage.com/de-de/rechtliches/datenschutz-cookies/cloud-services/
-          title: Datenschutzerklärung Sage Cloud Services
-          accessed: 2026-10-24
     - id: einstieg-und-support
       title: Einstieg, Testphase und Support
       paragraphs:
@@ -240,13 +249,13 @@ review:
       title: Grenzen und offene Fragen
       paragraphs:
         - Die Buchhaltung beginnt erst mit Essentials, und E-Rechnungen lassen sich noch nicht versenden. Eine Lagerverwaltung gibt es nicht, und Jahressteuererklärungen sowie die E-Bilanz laufen außerhalb von Sage Active. Die Rechnungskontingente reichen für die meisten kleinen Unternehmen, bei vielen Rechnungen kommen Zusatzpakete hinzu.
-        - Offen sind nach unserer Recherche der Serverstandort, der Auftragsverarbeitungsvertrag, die Plattformen der App und die Unterstützung der Kleinunternehmerregelung nach § 19 UStG.
+        - Offen sind nach unserer Recherche die Plattformen der App und die Unterstützung der Kleinunternehmerregelung nach § 19 UStG.
       sources:
         - *sa
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - Sage Active passt zu kleinen B2B-Unternehmen mit Mitarbeitenden, die Aufträge, Buchhaltung mit UStVA per ELSTER und DATEV-Export sowie Lohn und HR in einer monatlich kündbaren Cloud-Lösung führen wollen. Viele Nutzer im Grundpreis und die integrierte Lohnabrechnung sprechen dafür, der fehlende E-Rechnungsversand und die offenen Fragen zu Serverstandort und Auftragsverarbeitung dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - Sage Active passt zu kleinen B2B-Unternehmen mit Mitarbeitenden, die Aufträge, Buchhaltung mit UStVA per ELSTER und DATEV-Export sowie Lohn und HR in einer monatlich kündbaren Cloud-Lösung führen wollen. Viele Nutzer im Grundpreis, die integrierte Lohnabrechnung und ein Rechenzentrum in Deutschland sprechen dafür, der noch fehlende E-Rechnungsversand und die Buchhaltung erst ab Essentials dagegen.
       sources:
         - *sa
 videos:

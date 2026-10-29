@@ -27,6 +27,14 @@ sources:
     url: https://www.lexware.de/datenschutz-datensicherheit/
     title: Datenschutz und Datensicherheit mit Lexware Office
     accessed: 2026-10-24
+  - &sagedienstleister
+    url: https://www.sage.com/de-de/vertrauen-sicherheit/datenschutz/customer-due-diligence/
+    title: Sage Customer Due Diligence, Liste der Datenverarbeiter
+    accessed: 2026-10-29
+  - &sageavv
+    url: https://www.sage.com/de-de/rechtliches/avv/
+    title: Sage Vertrag zur Auftragsverarbeitung
+    accessed: 2026-10-29
 sections:
   - id: preise
     title: Pakete, Nutzer und Kosten
@@ -53,10 +61,12 @@ sections:
   - id: daten
     title: Datenschutz und Testphase
     paragraphs:
-      - Lexware Office speichert laut Anbieter in nach DIN ISO 27001 geprüften Rechenzentren in Frankfurt am Main und stellt einen Vertrag zur Auftragsverarbeitung zum Download bereit. Für Sage Active nennen die geprüften Seiten weder Serverstandort noch Auftragsverarbeitung. Fragen Sie das vor dem Abschluss bei Sage nach.
-      - Lexware Office lässt sich 30 Tage mit allen Funktionen und der Lohnabrechnung testen, Sage Active 14 Tage. Beide Anbieter warben am Prüfdatum mit 50 % Rabatt für die ersten drei Monate.
+      - Beide speichern in Deutschland. Lexware Office nennt nach DIN ISO 27001 geprüfte Rechenzentren in Frankfurt am Main, für Sage Active führt die Liste der Datenverarbeiter von Sage Microsoft Azure mit Datenverarbeitung in Deutschland. Beide Anbieter stellen einen Vertrag zur Auftragsverarbeitung zum Download bereit, bei Sage ist er Teil der Nutzungsbedingungen.
+      - Lexware Office lässt sich 30 Tage mit allen Funktionen und der Lohnabrechnung testen. Bei Sage Active sind es für Starter 14 Tage ohne Kreditkarte und für Essentials mit Buchhaltung und Lohn 30 Tage mit Angabe der Zahlungsdaten. Beide Anbieter warben am Prüfdatum mit 50 % Rabatt für die ersten drei Monate.
     sources:
       - *lexsicher
+      - *sagedienstleister
+      - *sageavv
       - *sage
       - *lexpreise
 choose:
@@ -69,9 +79,9 @@ choose:
     reasons:
       - Sie E-Rechnungen schon heute aus dem Programm versenden müssen.
       - Sie mit einer günstigeren Version beginnen und Lohn erst später dazubuchen.
-      - Ihnen dokumentierte Angaben zu Rechenzentren und Auftragsverarbeitung wichtig sind.
-verdict: Sage Active ist für Teams und bilanzierende Kapitalgesellschaften attraktiv, weil viele Nutzer und die Bilanz im Paket stecken. Lexware Office ist für kleine Betriebe mit wenigen Angestellten günstiger und versendet E-Rechnungen schon heute. Klären Sie bei Sage Active vor dem Abschluss Serverstandort und Auftragsverarbeitung, bei Lexware Office die Bilanzfunktion.
+      - Sie Daten und Belege per DATEV-Pendelakte an die Kanzlei übergeben wollen.
+verdict: Sage Active ist für Teams und bilanzierende Kapitalgesellschaften attraktiv, weil viele Nutzer und die Bilanz im Paket stecken. Lexware Office ist für kleine Betriebe mit wenigen Angestellten günstiger und versendet E-Rechnungen schon heute. Klären Sie bei Lexware Office vor dem Abschluss die Bilanzfunktion.
 status: published
 published: 2026-10-26
-updated: 2026-10-26
+updated: 2026-10-29
 author: milan-schultheis

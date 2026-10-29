@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest.
 # Die Preisseite gilt für die Web-Version; WISO MeinBüro Desktop ist ein eigenes Produkt.
 slug: wiso-meinbuero
 name: WISO MeinBüro
@@ -248,7 +248,7 @@ review:
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - WISO MeinBüro passt zu Kleinunternehmern und Gründern mit überschaubarem Umsatz, die schon im kleinsten Plan E-Rechnungen, UStVA per ELSTER und einen DATEV-Export brauchen und mit einem Jahresabo leben können. Eigene Rechenzentren in Deutschland und der Bezug zu WISO Steuer sprechen dafür, die Umsatzgrenzen, das reine Jahresabo und die fehlende GoBD-Aussage dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - WISO MeinBüro passt zu Kleinunternehmern und Gründern mit überschaubarem Umsatz, die schon im kleinsten Plan E-Rechnungen, UStVA per ELSTER und einen DATEV-Export brauchen und mit einem Jahresabo leben können. Eigene Rechenzentren in Deutschland und der Bezug zu WISO Steuer sprechen dafür, die Umsatzgrenzen, das reine Jahresabo und die fehlende GoBD-Aussage dagegen.
       sources:
         - *preise2
         - *home2

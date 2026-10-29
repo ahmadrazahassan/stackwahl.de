@@ -1,4 +1,4 @@
-# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest.
 # Norman hat getrennte Tarife für Selbstständige und für UG und GmbH; beide stehen hier als Tarife.
 slug: norman
 name: Norman
@@ -266,7 +266,7 @@ review:
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - Norman bietet einen kostenlosen Einstieg in Buchhaltung und E-Rechnung und deckt in den bezahlten Tarifen die Steuererklärungen bis zum Jahresabschluss einer GmbH ab. Die UStVA über die ELSTER-Schnittstelle, die Verarbeitung in Frankfurt und der öffentliche Auftragsverarbeitungsvertrag sprechen für den Anbieter. Offene Punkte zur GoBD und zum E-Rechnungsempfang sollten vor dem Wechsel geklärt werden. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - Norman bietet einen kostenlosen Einstieg in Buchhaltung und E-Rechnung und deckt in den bezahlten Tarifen die Steuererklärungen bis zum Jahresabschluss einer GmbH ab. Die UStVA über die ELSTER-Schnittstelle, die Verarbeitung in Frankfurt und der öffentliche Auftragsverarbeitungsvertrag sprechen für den Anbieter. Offene Punkte zur GoBD und zum E-Rechnungsempfang sollten vor dem Wechsel geklärt werden.
       sources:
         - *preise
         - *ustva

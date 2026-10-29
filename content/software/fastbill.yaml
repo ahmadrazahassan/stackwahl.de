@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest.
 slug: fastbill
 name: FastBill
 vendor: fastbill
@@ -270,7 +270,7 @@ review:
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - FastBill passt zu Freiberuflern und kleinen Teams, die vor allem Rechnungen und E-Rechnungen schreiben, Belege digital sammeln und die Daten per DATEV an die Steuerberatung geben. Der günstige Einstieg, E-Rechnung in beide Richtungen, die UStVA ohne ELSTER-Zertifikat und drei Benutzer ab Pro sprechen dafür. Wer die Buchhaltung bis zum Abschluss selbst führen will, braucht ein anderes Programm. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - FastBill passt zu Freiberuflern und kleinen Teams, die vor allem Rechnungen und E-Rechnungen schreiben, Belege digital sammeln und die Daten per DATEV an die Steuerberatung geben. Der günstige Einstieg, E-Rechnung in beide Richtungen, die UStVA ohne ELSTER-Zertifikat und drei Benutzer ab Pro sprechen dafür. Wer die Buchhaltung bis zum Abschluss selbst führen will, braucht ein anderes Programm.
       sources:
         - *preise2
         - *funktionen

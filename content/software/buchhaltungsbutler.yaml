@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest.
 slug: buchhaltungsbutler
 name: BuchhaltungsButler
 vendor: buchhaltungsbutler
@@ -255,7 +255,7 @@ review:
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - BuchhaltungsButler passt zu kleinen und mittleren Unternehmen, die ihre Buchhaltung stark automatisieren und arbeitsteilig mit der Steuerberatung führen wollen, bis hin zur doppelten Buchführung und zur Übermittlung von UStVA und Zusammenfassender Meldung per Elster. Hosting in Deutschland, DATEV-Export und ein Steuerberater-Zugang in jedem Paket sprechen dafür, der höhere Preis und die uneinheitlichen Preisangaben dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - BuchhaltungsButler passt zu kleinen und mittleren Unternehmen, die ihre Buchhaltung stark automatisieren und arbeitsteilig mit der Steuerberatung führen wollen, bis hin zur doppelten Buchführung und zur Übermittlung von UStVA und Zusammenfassender Meldung per Elster. Hosting in Deutschland, DATEV-Export und ein Steuerberater-Zugang in jedem Paket sprechen dafür, der höhere Preis und die uneinheitlichen Preisangaben dagegen.
       sources:
         - *funktionen
         - *preise2

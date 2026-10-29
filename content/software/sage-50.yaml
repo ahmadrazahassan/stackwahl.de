@@ -1,4 +1,4 @@
-# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest.
 # Die Produktseite heißt „Sage 50 Connected“; die Testversion wird heruntergeladen und installiert.
 slug: sage-50
 name: Sage 50
@@ -8,7 +8,7 @@ categories:
   - erp-software
 status: published
 verification: verified
-lastReviewed: 2026-10-25
+lastReviewed: 2026-10-29
 author: milan-schultheis
 summary: Buchhaltung, Warenwirtschaft und Auftragsbearbeitung von Sage für kleine Betriebe, mit E-Rechnung, DATEV-Schnittstelle und ab 35 € je Arbeitsplatz.
 website: https://www.sage.com/de-de/produkte/sage-50connected/
@@ -62,7 +62,12 @@ compliance:
     note: Laut Anbieter zertifiziertes Microsoft-Azure-Rechenzentrum in Deutschland für die Cloud-Funktionen.
     source: *produkt
   avv:
-    status: unbekannt
+    status: ja
+    note: Der Vertrag zur Auftragsverarbeitung der Sage GmbH ist Teil der Nutzungsbedingungen, für alle Käufe ab 01.05.2025.
+    source: &avv
+      url: https://www.sage.com/de-de/rechtliches/avv/
+      title: Sage Vertrag zur Auftragsverarbeitung
+      accessed: 2026-10-29
   deutscherSupport:
     status: ja
     note: Persönlicher Telefon- und Onlinesupport, Servicewelt mit über 440 Artikeln und Videos.
@@ -194,9 +199,10 @@ review:
       title: Datenschutz und Serverstandort
       paragraphs:
         - Für die Cloud-Funktionen nennt Sage ein zertifiziertes Microsoft-Azure-Rechenzentrum in Deutschland. Die eigentliche Software läuft als Installation auf den Rechnern des Unternehmens, die Buchhaltungsdaten liegen damit grundsätzlich im eigenen Netzwerk. Welche Daten genau in die Cloud übertragen werden, hängt von den genutzten Cloud-Funktionen ab und steht nicht auf der Produktseite.
-        - Einen Vertrag zur Auftragsverarbeitung erwähnt die Produktseite nicht. Sage betreibt einen eigenen DSGVO-Service, den die Navigation unter Support nennt. Vor dem Einsatz der Cloud-Funktionen sollten Unternehmen dort den Auftragsverarbeitungsvertrag anfordern.
+        - Den Vertrag zur Auftragsverarbeitung stellt Sage auf einer eigenen Seite zum Download bereit. Er ist Teil der Nutzungsbedingungen und gilt für alle, die ab dem 01.05.2025 ein Produkt oder einen Service von Sage kaufen oder erweitern. Für die Cloud-Funktionen muss er also nicht eigens angefordert werden.
       sources:
         - *produkt
+        - *avv
     - id: einstieg-und-support
       title: Einstieg, Testphase und Support
       paragraphs:
@@ -208,13 +214,13 @@ review:
       title: Grenzen und offene Fragen
       paragraphs:
         - Die wichtigste Einschränkung ist die Mindestzahl an Arbeitsplätzen. Ein Betrieb mit nur einer Person im Büro zahlt bei Comfort trotzdem für zwei Arbeitsplätze. Zweitens ist Sage 50 eine installierte Software mit Cloud-Ergänzung und keine reine Browserlösung. Wer von mehreren Orten ohne eigene Server arbeiten möchte, sollte klären, welche Funktionen über die Cloud erreichbar sind.
-        - Offen sind nach unserer Recherche die direkte ELSTER-Übertragung der Umsatzsteuer-Voranmeldung, die Unterstützung der Kleinunternehmerregelung und der Auftragsverarbeitungsvertrag für die Cloud-Funktionen. Diese Punkte stehen nicht auf der Produktseite und sollten in der Testphase oder im Gespräch mit Sage geklärt werden.
+        - Offen sind nach unserer Recherche die direkte ELSTER-Übertragung der Umsatzsteuer-Voranmeldung und die Unterstützung der Kleinunternehmerregelung. Diese Punkte stehen nicht auf der Produktseite und sollten in der Testphase oder im Gespräch mit Sage geklärt werden.
       sources:
         - *produkt
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - Sage 50 passt zu kleinen Betrieben, die mehr brauchen als Rechnungen und Belege, also Lager, Bestellwesen, Onlineshop-Anbindung und eine vollständige Buchhaltung bis zur Bilanz. Die E-Rechnung ist in beide Richtungen abgedeckt, die DATEV-Schnittstelle ist enthalten. Die Mindestzahl an Arbeitsplätzen und die Jahresbindung machen das Programm für Einzelunternehmer teuer. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - Sage 50 passt zu kleinen Betrieben, die mehr brauchen als Rechnungen und Belege, also Lager, Bestellwesen, Onlineshop-Anbindung und eine vollständige Buchhaltung bis zur Bilanz. Die E-Rechnung ist in beide Richtungen abgedeckt, die DATEV-Schnittstelle ist enthalten. Die Mindestzahl an Arbeitsplätzen und die Jahresbindung machen das Programm für Einzelunternehmer teuer.
       sources:
         - *produkt
 videos:

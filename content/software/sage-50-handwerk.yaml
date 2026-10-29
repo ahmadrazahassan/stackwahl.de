@@ -1,4 +1,4 @@
-# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest.
 # Die FAQ nennt noch die Versionen Start, Basic und Professional, die Preistabelle Essential und Enterprise.
 slug: sage-50-handwerk
 name: Sage 50 Handwerk
@@ -7,7 +7,7 @@ categories:
   - rechnungsprogramme
 status: published
 verification: verified
-lastReviewed: 2026-10-25
+lastReviewed: 2026-10-29
 author: milan-schultheis
 summary: Handwerkersoftware von Sage für Angebote, Aufmaß, Projekte und Abschlagsrechnungen, mit E-Rechnung und GAEB, ab 19,90 € im Monat.
 website: https://www.sage.com/de-de/produkte/sage-50-handwerk/
@@ -57,7 +57,12 @@ compliance:
     note: Die Software wird lokal installiert; das Cloud-Dokumentenmanagement speichert laut Anbieter in einem deutschen Rechenzentrum.
     source: *produkt
   avv:
-    status: unbekannt
+    status: ja
+    note: Der Vertrag zur Auftragsverarbeitung der Sage GmbH ist Teil der Nutzungsbedingungen, für alle Käufe ab 01.05.2025.
+    source: &avv
+      url: https://www.sage.com/de-de/rechtliches/avv/
+      title: Sage Vertrag zur Auftragsverarbeitung
+      accessed: 2026-10-29
   deutscherSupport:
     status: ja
     note: Support-Team von Sage und zertifizierte Fachhandelspartner, Telefon 069-50007-2020 für Fragen zum Produkt.
@@ -172,9 +177,10 @@ review:
       title: Datenschutz und Serverstandort
       paragraphs:
         - Sage 50 Handwerk läuft auf den Rechnern des Betriebs, die Daten bleiben damit grundsätzlich im eigenen Netzwerk. Laut FAQ braucht die Installation mindestens 2 GB freien Speicherplatz, einen Prozessor mit 2,0 GHz und 4 GB Arbeitsspeicher. Das Cloud-Dokumentenmanagement speichert Dokumente laut Anbieter in einem deutschen Rechenzentrum. Das Cloud-Paket für mobiles Arbeiten stammt laut Webinar-Hinweis vom Partner Loginfinity.
-        - Einen Auftragsverarbeitungsvertrag für die Cloud-Dienste nennt die Produktseite nicht. Er sollte vor der Nutzung des Cloud-Pakets und des Cloud-Dokumentenmanagements angefordert werden.
+        - Den Vertrag zur Auftragsverarbeitung stellt Sage auf einer eigenen Seite zum Download bereit. Er ist Teil der Nutzungsbedingungen und gilt für alle, die ab dem 01.05.2025 ein Produkt oder einen Service von Sage kaufen oder erweitern. Für das Cloud-Paket und das Cloud-Dokumentenmanagement muss er also nicht eigens angefordert werden.
       sources:
         - *produkt
+        - *avv
     - id: einstieg-und-support
       title: Einstieg, Testphase und Support
       paragraphs:
@@ -186,12 +192,12 @@ review:
       title: Grenzen und offene Fragen
       paragraphs:
         - Der günstige Einstiegspreis gilt für ein schlankes Grundpaket. Wer GoBD-konform archivieren, die Buchhaltung im selben Programm führen und mobil auf der Baustelle arbeiten möchte, braucht Zusatzmodule, deren Preise nicht veröffentlicht sind. Die tatsächlichen Kosten lassen sich deshalb erst mit einem Angebot beurteilen.
-        - Offen sind nach unserer Recherche der DATEV-Export, die ELSTER-Übertragung, die Bankanbindung und der Auftragsverarbeitungsvertrag. Außerdem sollte die Abweichung zwischen den Versionsnamen in der FAQ und in der Preistabelle geklärt werden.
+        - Offen sind nach unserer Recherche der DATEV-Export, die ELSTER-Übertragung und die Bankanbindung. Außerdem sollte die Abweichung zwischen den Versionsnamen in der FAQ und in der Preistabelle geklärt werden.
       sources:
         - *produkt
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - Sage 50 Handwerk ist auf die Abläufe im Handwerk zugeschnitten, von Aufmaß und GAEB-Ausschreibung bis zu Abschlags- und Schlussrechnung, und bietet die E-Rechnung schon im kleinsten Paket. Der Grundpreis ist niedrig, viele wichtige Funktionen kommen aber als Zusatzmodule hinzu. Für Betriebe, die eine lokale Installation und Betreuung durch einen Fachhändler bevorzugen, ist das Programm eine naheliegende Wahl. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - Sage 50 Handwerk ist auf die Abläufe im Handwerk zugeschnitten, von Aufmaß und GAEB-Ausschreibung bis zu Abschlags- und Schlussrechnung, und bietet die E-Rechnung schon im kleinsten Paket. Der Grundpreis ist niedrig, viele wichtige Funktionen kommen aber als Zusatzmodule hinzu. Für Betriebe, die eine lokale Installation und Betreuung durch einen Fachhändler bevorzugen, ist das Programm eine naheliegende Wahl.
       sources:
         - *produkt

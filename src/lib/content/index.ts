@@ -135,6 +135,13 @@ export function getAffiliateLink(software: string, enabled: boolean) {
   return allAffiliateLinks.find((l) => l.software === software && l.active);
 }
 
+/** Programs with an active affiliate link, by name, for the partner list on /transparenz. */
+export function getAffiliatePartners(enabled = siteConfig.features.affiliateLinks) {
+  return getAllSoftware()
+    .filter((s) => getAffiliateLink(s.slug, enabled))
+    .map((s) => ({ slug: s.slug, name: s.name }));
+}
+
 export function editorialScore(software: Software): number | null {
   if (!software.rating) return null;
   const c = software.rating.criteria;

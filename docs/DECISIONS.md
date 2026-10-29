@@ -326,3 +326,15 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 - **Link.** `content/affiliate/sevdesk.yaml` with the owner's sevdesk link; `/go/sevdesk` appends `utm_content=<placement>-<n>`. All sevdesk vendor links (profile, cards, comparisons, Ratgeber) now carry "Affiliate-Link" and `rel="sponsored nofollow noopener"`.
 - **No banner.** The sevdesk images the owner placed in `public/sevdesk` are 240 px wide thumbnails; enlarged to banner size they blur. The banner waits for files of at least 1600 px width. The folder is not tracked by Git.
 - **Tests.** The "inactive partner falls back to the profile" test now uses Papierkram, which has no partner link.
+
+## 30.10.2026: Corrections after a review from the view of an affiliate manager
+
+- **Sage facts.** Sage Active: server location "Ja" (Microsoft Azure with processing in Germany, Sage's list of processors on the Customer Due Diligence page) and AVV "Ja" (Sage's AVV page: part of the terms of use for every purchase from 01.05.2025). The AVV is also "Ja" for Sage 50, Sage 50 Handwerk and Sage 100. Both sources accessed 29.10.2026. The con "nicht dokumentiert", the open questions and the comparison with Lexware Office now say what Sage documents. Sage Active's Recherche-Wertung rises from 6,2 to 7,5 by the unchanged formula R1.0.
+- **Score sentence.** Every profile ended with "Eine Wertung vergeben wir erst nach einem eigenen Praxistest", next to a visible Recherche-Wertung. Removed from all 20 profiles. The fallback "Noch nicht bewertet" for a profile without any score keeps its sentence.
+- **"Keine Angabe".** The formula stays: an unknown fact earns no point, because only what is documented counts. The category page and Methodik now say so next to "Das ist kein Nein".
+- **Datenschutz.** The supervisory authority for a company in Aachen is the LDI NRW in Düsseldorf, not the Hessian authority.
+- **Transparenz.** Present tense instead of "Künftig wollen wir": the page names the active partner programs and the home-page ads from the content data (`getAffiliatePartners()`, `partnerBanners()`) and says that partners pay only the commission.
+
+## 30.10.2026: Real mailboxes, domain live
+
+- **Addresses.** The domain is live (www.stackwahl.de, mail at IONOS). The owner uses two mailboxes: info@stackwahl.de is the legal and general address (Impressum, Datenschutz, contact), milan.schultheis@stackwahl.de takes corrections and partner requests. kontakt@, redaktion@ and partner@ are gone.

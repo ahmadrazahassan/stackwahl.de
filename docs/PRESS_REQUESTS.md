@@ -1,6 +1,6 @@
 # Press requests for screenshots and videos
 
-Drafts for the vendors whose press pages offer no screenshots with usage terms (as of 26.10.2026). Nothing has been sent. Send them from redaktion@stackwahl.de, so answers reach the editors.
+Drafts for the vendors whose press pages offer no screenshots with usage terms (as of 26.10.2026). Nothing has been sent. Send them from milan.schultheis@stackwahl.de, so answers reach the editors.
 
 When a vendor answers with files, put them in `public/screenshots/<slug>/`, list them with the vendor's permission in `docs/MEDIA.md` and add them to the profile with `origin: presse` and the source (the e-mail permission is kept with the owner, the source points to the vendor's press or contact page).
 
@@ -27,7 +27,7 @@ Vielen Dank und freundliche Grüße
 
 Milan Schultheis
 Geschäftsführer, Stackwahl UG (haftungsbeschränkt)
-redaktion@stackwahl.de
+milan.schultheis@stackwahl.de
 
 ## Recipients
 

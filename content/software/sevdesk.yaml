@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest.
 slug: sevdesk
 name: sevdesk
 vendor: sevdesk
@@ -263,7 +263,7 @@ review:
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - sevdesk passt zu Selbstständigen und kleinen Unternehmen, die mit einem kostenlosen Tarif für E-Rechnungen beginnen und später Buchhaltung, UStVA per ELSTER und DATEV-Export im selben Programm nutzen wollen. Server in Deutschland, ein Steuerberaterportal und persönlicher Support in allen Bezahltarifen sprechen dafür, die Kosten je Benutzer und die uneinheitlichen Laufzeitpreise dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - sevdesk passt zu Selbstständigen und kleinen Unternehmen, die mit einem kostenlosen Tarif für E-Rechnungen beginnen und später Buchhaltung, UStVA per ELSTER und DATEV-Export im selben Programm nutzen wollen. Server in Deutschland, ein Steuerberaterportal und persönlicher Support in allen Bezahltarifen sprechen dafür, die Kosten je Benutzer und die uneinheitlichen Laufzeitpreise dagegen.
       sources:
         - *preise
         - *funktionen

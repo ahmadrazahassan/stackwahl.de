@@ -187,8 +187,9 @@ export default function PrivacyPage() {
           </p>
           <p>
             Sie können sich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77
-            DSGVO). Zuständig für uns ist: Der Hessische Beauftragte für Datenschutz und
-            Informationsfreiheit, Wilhelmstraße 7, 65185 Wiesbaden.
+            DSGVO). Zuständig für uns als Unternehmen mit Sitz in Aachen ist die Landesbeauftragte
+            für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestraße 2–4,
+            40213 Düsseldorf.
           </p>
         </Prose>
       </PageSection>

@@ -1,4 +1,4 @@
-# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest.
 # Candis verarbeitet eingehende Rechnungen und Ausgaben; es schreibt keine Ausgangsrechnungen.
 slug: candis
 name: Candis
@@ -203,7 +203,7 @@ review:
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - Candis passt zu mittelständischen Unternehmen mit vielen Eingangsrechnungen und verteilten Freigaben, die ihre Buchhaltung in DATEV führen. Die enge DATEV-Anbindung, unbegrenzte Nutzer, Server in Deutschland und der veröffentlichte Auftragsverarbeitungsvertrag sprechen für das Werkzeug. Für Selbstständige und Kleinbetriebe ist es zu groß und zu teuer. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - Candis passt zu mittelständischen Unternehmen mit vielen Eingangsrechnungen und verteilten Freigaben, die ihre Buchhaltung in DATEV führen. Die enge DATEV-Anbindung, unbegrenzte Nutzer, Server in Deutschland und der veröffentlichte Auftragsverarbeitungsvertrag sprechen für das Werkzeug. Für Selbstständige und Kleinbetriebe ist es zu groß und zu teuer.
       sources:
         - *home
         - *datev

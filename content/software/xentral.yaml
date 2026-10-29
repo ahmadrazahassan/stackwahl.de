@@ -1,4 +1,4 @@
-# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest.
 # Die Preisseite zeigt standardmäßig die Jahrespreise; die Monatspreise stehen in den Seitendaten.
 slug: xentral
 name: Xentral
@@ -221,7 +221,7 @@ review:
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - Xentral passt zu Onlinehändlern, die viele Aufträge über mehrere Kanäle abwickeln und Lager und Versand automatisieren wollen, ohne für jeden Nutzer zu zahlen. E-Rechnung und DATEV-Übergabe sind abgedeckt, die Umsatzsteuer-Voranmeldung nicht. Wer ein ERP mit vollständiger Finanzbuchhaltung sucht, sollte weclapp, Haufe X360 oder Sage 100 vergleichen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - Xentral passt zu Onlinehändlern, die viele Aufträge über mehrere Kanäle abwickeln und Lager und Versand automatisieren wollen, ohne für jeden Nutzer zu zahlen. E-Rechnung und DATEV-Übergabe sind abgedeckt, die Umsatzsteuer-Voranmeldung nicht. Wer ein ERP mit vollständiger Finanzbuchhaltung sucht, sollte weclapp, Haufe X360 oder Sage 100 vergleichen.
       sources:
         - *preise
         - *buchhaltung

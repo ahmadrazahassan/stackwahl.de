@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest.
 slug: easybill
 name: easybill
 vendor: easybill
@@ -273,7 +273,7 @@ review:
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - easybill passt zu Onlinehändlern und Dienstleistern, die viele Rechnungen und E-Rechnungen automatisiert erstellen und an ihre Steuerberatung übergeben. Kostenloser Einstieg, Server in Deutschland, DATEV-Schnittstelle schon kostenlos und eine Kostenbremse für Spitzenmonate sprechen dafür. Die zusätzlichen Archivierungskosten und die fehlende Buchhaltung gehören in jede Kostenrechnung. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - easybill passt zu Onlinehändlern und Dienstleistern, die viele Rechnungen und E-Rechnungen automatisiert erstellen und an ihre Steuerberatung übergeben. Kostenloser Einstieg, Server in Deutschland, DATEV-Schnittstelle schon kostenlos und eine Kostenbremse für Spitzenmonate sprechen dafür. Die zusätzlichen Archivierungskosten und die fehlende Buchhaltung gehören in jede Kostenrechnung.
       sources:
         - *preise2
 videos:

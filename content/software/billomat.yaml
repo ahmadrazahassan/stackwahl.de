@@ -1,4 +1,4 @@
-# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 24.10.2026, ergänzt am 25.10.2026, auf den Seiten des Anbieters. Kein Praxistest.
 slug: billomat
 name: Billomat
 vendor: aifinyo
@@ -275,7 +275,7 @@ review:
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - Billomat passt zu Selbstständigen und kleinen Unternehmen, die Rechnungen, E-Rechnungen, Mahnungen und Belege in einem Programm führen, die EÜR selbst erstellen und die Daten über den DATEV Buchungsdatenservice an die Kanzlei geben. Die Anbindung an Factoring und Finanzierung der aifinyo AG ist ein Alleinstellungsmerkmal. Die Grenzen des kleinsten Tarifs und die offenen Fragen zu ELSTER und GoBD sprechen dagegen. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - Billomat passt zu Selbstständigen und kleinen Unternehmen, die Rechnungen, E-Rechnungen, Mahnungen und Belege in einem Programm führen, die EÜR selbst erstellen und die Daten über den DATEV Buchungsdatenservice an die Kanzlei geben. Die Anbindung an Factoring und Finanzierung der aifinyo AG ist ein Alleinstellungsmerkmal. Die Grenzen des kleinsten Tarifs und die offenen Fragen zu ELSTER und GoBD sprechen dagegen.
       sources:
         - *preise2
         - *fn2

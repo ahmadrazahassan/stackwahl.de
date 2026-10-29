@@ -1,4 +1,4 @@
-# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest, daher keine Wertung.
+# Recherchiert am 25.10.2026 auf den Seiten des Anbieters. Kein Praxistest.
 slug: weclapp
 name: weclapp
 vendor: weclapp
@@ -240,7 +240,7 @@ review:
     - id: zusammenfassung
       title: Zusammenfassung der Recherche
       paragraphs:
-        - weclapp ist ein durchgängiges Cloud-ERP mit veröffentlichten Preisen, deutschen Rechenzentren und einem öffentlich verfügbaren Auftragsverarbeitungsvertrag. E-Rechnung, DATEV-Export und UStVA sind laut Anbieter in allen Paketen enthalten. Für Dienstleister und Händler, die CRM, Projekte, Lager und Buchhaltung bündeln wollen, ist es eine naheliegende Wahl, für reine Rechnungsstellung ist es überdimensioniert. Eine Wertung vergeben wir erst nach einem eigenen Praxistest.
+        - weclapp ist ein durchgängiges Cloud-ERP mit veröffentlichten Preisen, deutschen Rechenzentren und einem öffentlich verfügbaren Auftragsverarbeitungsvertrag. E-Rechnung, DATEV-Export und UStVA sind laut Anbieter in allen Paketen enthalten. Für Dienstleister und Händler, die CRM, Projekte, Lager und Buchhaltung bündeln wollen, ist es eine naheliegende Wahl, für reine Rechnungsstellung ist es überdimensioniert.
       sources:
         - *preise
         - *buchhaltung

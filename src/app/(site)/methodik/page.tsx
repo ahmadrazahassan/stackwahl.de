@@ -53,8 +53,9 @@ export default function MethodologyPage() {
           <p>
             Was ein Anbieter auf den geprüften Seiten nicht nennt, steht bei uns als „Keine Angabe“.
             Das ist bewusst kein Nein: Eine fehlende Erwähnung beweist nicht, dass eine Funktion
-            fehlt. Aussagen des Anbieters, die wir nicht selbst prüfen können, kennzeichnen wir als
-            Angabe des Anbieters.
+            fehlt. In der Recherche-Wertung bringt eine fehlende Angabe trotzdem keinen Punkt, weil
+            wir nur werten, was belegt ist. Aussagen des Anbieters, die wir nicht selbst prüfen
+            können, kennzeichnen wir als Angabe des Anbieters.
           </p>
           <p>
             Preise geben wir als Listenpreise an, netto oder brutto so, wie der Anbieter sie nennt.

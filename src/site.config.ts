@@ -89,9 +89,9 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
     postalCode: "52070",
     city: "Aachen",
     register: { court: "Amtsgericht Aachen", number: "HRB 24686" },
-    email: "kontakt@stackwahl.de",
-    editorialEmail: "redaktion@stackwahl.de",
-    partnerEmail: "partner@stackwahl.de",
+    email: "info@stackwahl.de",
+    editorialEmail: "milan.schultheis@stackwahl.de",
+    partnerEmail: "milan.schultheis@stackwahl.de",
     vatId: "DE342188146",
     responsibleEditor: {
       name: "Milan Schultheis",

@@ -23,7 +23,7 @@ Updated 26.10.2026: everything published.
 
 1. **Mail sending.** The addresses exist, but the contact form and newsletter stay hidden until a mail provider (`MAIL_PROVIDER`, `MAIL_TRANSPORT`, `MAIL_FROM`) is configured and named in the Datenschutz.
 2. **Lawyer review.** The legal texts are live; the internal draft notice now shows only in development and preview builds.
-3. **The editor's sign-off.** Dietmar Riedel is named as responsible for all content. He should read every profile and article; the facts and sources are in the content files.
+3. **The editor's sign-off.** Milan Schultheis is named as responsible for all content and should read every profile and article; the facts and sources are in the content files.
 4. **No hands-on test.** The editorial score (`rating`) still needs a documented test. Until then the Recherche-Wertung is shown, and the text says "recherchiert", never "getestet".
 
 ## First batch (accessed 24.10.2026, reviewed again 26.10.2026)
@@ -40,7 +40,7 @@ Changes found on 26.10.2026: BuchhaltungsButler UStVA per Elster and Kleinuntern
 | FastBill           | App platforms                                           | UStVA is filled in automatically for Soll-Versteuerung; check Ist-Versteuerung.                                          |
 | orgaMAX            | Web, iOS and Android apps                               | Comparison table shows 39 / 49 / 69 €, the plan cards 49 / 69 / 99 €. Browser or installed app?                          |
 | WISO MeinBüro      | GoBD (only a paid GoBD webinar)                         | None.                                                                                                                    |
-| Sage Active        | Kleinunternehmer, server location, AVV, app platforms   | Not listed among "Sage Cloud Services". E-invoice sending is announced, not live.                                        |
+| Sage Active        | Kleinunternehmer, app platforms                         | E-invoice sending is announced, not live. Server location and AVV filled on 29.10.2026 (see DECISIONS.md).               |
 | Papierkram         | None                                                    | Plan limits (bank connections, AI extraction) only shown as table columns.                                               |
 | easybill           | ELSTER (not an accounting tool), Kleinunternehmer, apps | Total cost needs archive fees and the Flex option.                                                                       |
 | Billomat           | GoBD, ELSTER, Kleinunternehmer                          | Infrastructure details only in a 2018 magazine article (AWS Frankfurt); server location in German only via that article. |
@@ -51,9 +51,9 @@ Each profile has a long review (`review`, 8 sections) with the sources of every 
 
 | Software         | Categories              | Prices                                                         | Still `unbekannt` and other open items                                                                    |
 | ---------------- | ----------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Sage 50          | Buchhaltung, ERP        | Per workplace, yearly billing, minimum 2 or 3 workplaces       | ELSTER transmission path, Kleinunternehmer, AVV, apps.                                                    |
-| Sage 50 Handwerk | Rechnungen              | Yearly billing; many modules on request                        | DATEV, ELSTER, Kleinunternehmer, bank, AVV. The FAQ names other editions (Start, Basic, Professional).    |
-| Sage 100         | ERP                     | Per module and user, yearly billing; cloud on request          | Kleinunternehmer, AVV, apps, trial.                                                                       |
+| Sage 50          | Buchhaltung, ERP        | Per workplace, yearly billing, minimum 2 or 3 workplaces       | ELSTER transmission path, Kleinunternehmer, apps.                                                         |
+| Sage 50 Handwerk | Rechnungen              | Yearly billing; many modules on request                        | DATEV, ELSTER, Kleinunternehmer, bank. The FAQ names other editions (Start, Basic, Professional).         |
+| Sage 100         | ERP                     | Per module and user, yearly billing; cloud on request          | Kleinunternehmer, apps, trial.                                                                            |
 | weclapp          | ERP                     | Per user, monthly and yearly                                   | Kleinunternehmer, general apps. Support package prices: billing period not stated.                        |
 | Xentral          | ERP                     | Flat per plan, monthly and yearly (yearly is the default view) | Server location, AVV, Kleinunternehmer, trial length. No UStVA by design (vendor statement).              |
 | Haufe X360       | ERP                     | Minimum 449 € a month, example configurations only             | GoBD statement, DATEV, Kleinunternehmer, AVV, support, cost of the e-invoice connector.                   |

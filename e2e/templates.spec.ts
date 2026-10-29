@@ -136,9 +136,9 @@ test.describe("Templates", () => {
     await expect(page.getByText("Registernummer: HRB 24686")).toBeVisible();
     await expect(page.getByText("DE342188146")).toBeVisible();
     await expect(page.getByText(/52070 Aachen/).first()).toBeVisible();
-    await expect(page.getByRole("link", { name: "kontakt@stackwahl.de" })).toHaveAttribute(
+    await expect(page.getByRole("link", { name: "info@stackwahl.de" })).toHaveAttribute(
       "href",
-      "mailto:kontakt@stackwahl.de",
+      "mailto:info@stackwahl.de",
     );
     await expect(page.getByText(/Angabe fehlt/)).toHaveCount(0);
     // No phone number, no tax number, no former founder and no internal review notice.
@@ -147,12 +147,8 @@ test.describe("Templates", () => {
     await expect(page.getByText(/Steuernummer/)).toHaveCount(0);
     await expect(page.getByText(/Dietmar Riedel/)).toHaveCount(0);
     await page.goto("/kontakt");
-    for (const address of [
-      "kontakt@stackwahl.de",
-      "redaktion@stackwahl.de",
-      "partner@stackwahl.de",
-    ]) {
-      await expect(page.getByRole("link", { name: address })).toHaveAttribute(
+    for (const address of ["info@stackwahl.de", "milan.schultheis@stackwahl.de"]) {
+      await expect(page.getByRole("link", { name: address }).first()).toHaveAttribute(
         "href",
         `mailto:${address}`,
       );
