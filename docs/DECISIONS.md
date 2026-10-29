@@ -302,3 +302,9 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 
 - **Footer.** One white card instead of the ink panel with the giant wordmark (owner's reference): a question with one underlined link (Software-Finder) on the left, the link columns on the right with a small grey heading and larger links, a hairline, then the company line and the legal links. The commission notice stays in the footer on every page.
 - **German flag.** Drawn as SVG in the official colours (Schwarz, Rot 221/0/0, Gold 255/206/0) in `src/components/ui/german-flag.tsx`. The colours are SVG attributes, so the token-only CSS check is unaffected. Used three times, always next to text that names Germany or the place: the home hero eyebrow, "Recherchiert für den deutschen Markt" and "Aachen, Deutschland" in the footer.
+
+## 29.10.2026: Blue mark, mango yellow selection
+
+- **Mark in brand blue.** The mark is set in primary #2f2fc1 in header, mobile menu, favicon, apple icon and `public/brand/stackwahl-mark.svg` (light blue `accent` in the dark-mode favicon); the name stays ink. White and mono variants stay for dark and one-colour use.
+- **Mango yellow selection.** The selected header pill is `mango` #ffc142 with ink text and an ink dot (contrast tested).
+- **Dot always rendered.** The selection dot is always in the DOM and only shown via `group-data-[current=true]`. Mounting it on navigation crashed React ("insertBefore … not a child") when a browser translation had wrapped the label text.

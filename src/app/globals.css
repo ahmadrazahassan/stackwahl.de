@@ -23,6 +23,8 @@
   /* Light blue for primary calls to action and search, always with ink text (owner, 29.10.2026) */
   --color-accent: #a8c8ff;
   --color-accent-hover: #8cb5ff;
+  /* Mango yellow for the selected navigation item, with ink text (owner, 29.10.2026) */
+  --color-mango: #ffc142;
   --color-ink: #191919;
   --color-bg: #f1f1f1;
   --color-surface: #ffffff;

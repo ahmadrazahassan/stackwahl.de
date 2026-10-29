@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -2 36 36">
   <style>
-    .ink { fill: #191919; }
-    @media (prefers-color-scheme: dark) { .ink { fill: #ffffff; } }
+    .ink { fill: #2f2fc1; }
+    @media (prefers-color-scheme: dark) { .ink { fill: #a8c8ff; } }
   </style>
   <mask id="x"><rect x="-1" y="-1" width="38" height="34" fill="#fff"/><path d="M14.25 12.25L21.75 19.75M21.75 12.25L14.25 19.75" stroke="#000" stroke-width="2.6" stroke-linecap="round"/></mask><path d="M6 0H22A6 6 0 0 1 28 6V14A2 2 0 0 0 30 16A6 6 0 0 1 36 22V26A6 6 0 0 1 30 32H14A6 6 0 0 1 8 26V18A2 2 0 0 0 6 16A6 6 0 0 1 0 10V6A6 6 0 0 1 6 0Z" class="ink" mask="url(#x)"/>
 </svg>

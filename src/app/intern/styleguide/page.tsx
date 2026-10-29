@@ -68,6 +68,7 @@ const swatchClass: Record<ColorToken, string> = {
   negative: "bg-negative",
   accent: "bg-accent",
   "accent-hover": "bg-accent-hover",
+  mango: "bg-mango",
   frost: "bg-frost",
   glass: "bg-glass",
   "glass-line": "bg-glass-line",

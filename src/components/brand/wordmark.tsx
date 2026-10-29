@@ -30,11 +30,11 @@ export function BrandMark({ className, size = 28 }: { className?: string; size?:
   );
 }
 
-/** Mark and name, used in header, footer and the mobile menu. */
+/** Mark in brand blue and name in ink, used in header and mobile menu. */
 export function Wordmark({ className }: { className?: string }) {
   return (
     <span className={cn("inline-flex items-center gap-2.5", className)}>
-      <BrandMark size={24} />
+      <BrandMark size={24} className="text-primary" />
       <span className="font-display text-[1.5rem] leading-none font-semibold tracking-[-0.055em]">
         stackwahl
       </span>

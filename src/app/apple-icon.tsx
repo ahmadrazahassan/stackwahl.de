@@ -20,7 +20,7 @@ export default function AppleIcon() {
       }}
     >
       <svg width="117" height="104" viewBox="0 0 36 32">
-        <path d={MARK_SHAPE} fill="#191919" />
+        <path d={MARK_SHAPE} fill="#2f2fc1" />
         <path
           d={MARK_CROSS}
           stroke="#f1f1f1"

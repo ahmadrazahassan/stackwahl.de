@@ -13,17 +13,27 @@ import type { NavLink } from "./navigation";
 
 export type HeaderNav = { left: NavLink[]; knowledge: NavLink[]; contact: NavLink };
 
-// Light grey pills on the frosted bar. The current page is inverted (ink with a light blue
-// dot), so it reads as selected at a glance; hover and open menus only darken the grey.
+// Light grey pills on the frosted bar. The current page is mango yellow with an ink dot, so it
+// reads as selected at a glance; hover and open menus only darken the grey.
 const pill =
-  "group inline-flex h-10 items-center gap-2 rounded-pill bg-bg px-4 text-[0.8125rem] text-ink transition-colors hover:bg-line data-[state=open]:bg-line data-[current=true]:bg-ink data-[current=true]:text-surface";
+  "group inline-flex h-10 items-center gap-2 rounded-pill bg-bg px-4 text-[0.8125rem] text-ink transition-colors hover:bg-line data-[state=open]:bg-line data-[current=true]:bg-mango data-[current=true]:font-medium";
 
 function isCurrent(pathname: string, href: string) {
   return href === routes.home() ? pathname === href : pathname.startsWith(href);
 }
 
-function CurrentDot({ show }: { show: boolean }) {
-  return show ? <span aria-hidden="true" className="size-1.5 rounded-pill bg-accent" /> : null;
+/**
+ * Always in the DOM and only shown on the current item (data-current on the parent pill).
+ * Inserting it on navigation made React fail when a browser translation had wrapped the
+ * label text in its own elements.
+ */
+function CurrentDot() {
+  return (
+    <span
+      aria-hidden="true"
+      className="hidden size-1.5 rounded-pill bg-ink group-data-[current=true]:block"
+    />
+  );
 }
 
 /** True once the page has scrolled, so the floating bar gets its shadow. */
@@ -76,7 +86,7 @@ export function SiteHeader({
                     data-current={current}
                     aria-current={current ? "page" : undefined}
                   >
-                    <CurrentDot show={current} />
+                    <CurrentDot />
                     {item.label}
                   </Link>
                 </li>
@@ -126,9 +136,9 @@ export function SiteHeader({
             href={nav.contact.href}
             aria-current={isCurrent(pathname, nav.contact.href) ? "page" : undefined}
             data-current={isCurrent(pathname, nav.contact.href)}
-            className="hidden h-10 items-center gap-2 rounded-pill border border-line bg-surface px-5 text-[0.8125rem] font-medium text-ink transition-colors hover:border-ink data-[current=true]:border-ink data-[current=true]:bg-ink data-[current=true]:text-surface lg:inline-flex"
+            className="group hidden h-10 items-center gap-2 rounded-pill border border-line bg-surface px-5 text-[0.8125rem] font-medium text-ink transition-colors hover:border-ink data-[current=true]:border-mango data-[current=true]:bg-mango lg:inline-flex"
           >
-            <CurrentDot show={isCurrent(pathname, nav.contact.href)} />
+            <CurrentDot />
             {nav.contact.label}
           </Link>
           <MobileMenu categories={categories} searchEntries={searchEntries} nav={nav} />
@@ -155,7 +165,7 @@ function Dropdown({
   return (
     <NavigationMenu.Item className="relative">
       <NavigationMenu.Trigger className={pill} data-current={current}>
-        <CurrentDot show={current} />
+        <CurrentDot />
         {label}
         <ChevronDown
           aria-hidden="true"
