@@ -25,8 +25,8 @@ Zur Transparenz: Stackwahl wird sich später teilweise über Affiliate-Links fin
 
 Vielen Dank und freundliche Grüße
 
-Dietmar Riedel
-Gründer und Herausgeber, Stackwahl
+Milan Schultheis
+Geschäftsführer, Stackwahl UG (haftungsbeschränkt)
 redaktion@stackwahl.de
 
 ## Recipients

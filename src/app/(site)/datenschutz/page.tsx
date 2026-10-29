@@ -35,9 +35,10 @@ export default function PrivacyPage() {
       >
         <Prose>
           <p>
-            Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) ist {legal.ownerName},
-            E-Mail: <MailLink address={legal.email} />. Weitere Angaben zum Anbieter stehen im{" "}
-            <Link href={routes.imprint()}>Impressum</Link>.
+            Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die{" "}
+            {legal.companyName}, {legal.street}, {legal.postalCode} {legal.city}, vertreten durch
+            den Geschäftsführer {legal.managingDirector}, E-Mail: <MailLink address={legal.email} />
+            . Weitere Angaben zum Anbieter stehen im <Link href={routes.imprint()}>Impressum</Link>.
           </p>
         </Prose>
       </PageSection>

@@ -39,10 +39,10 @@ export default function AboutPage() {
       <PageSection id="betreiber" label="Betreiber" title="Wer dahintersteht">
         <Prose>
           <p>
-            Stackwahl wurde von {legal.ownerName} gegründet, der als Herausgeber für alle Inhalte
-            verantwortlich ist. Die Pflichtangaben stehen im{" "}
-            <Link href={routes.imprint()}>Impressum</Link>. Wer Profile und Ratgeber verantwortet,
-            steht in der <Link href={routes.editorial()}>Redaktion</Link>.
+            Stackwahl wird von der {legal.companyName} aus {legal.city} betrieben. Geschäftsführer
+            ist {legal.managingDirector}, der für alle Inhalte verantwortlich ist. Die
+            Pflichtangaben stehen im <Link href={routes.imprint()}>Impressum</Link>. Wer Profile und
+            Ratgeber verantwortet, steht in der <Link href={routes.editorial()}>Redaktion</Link>.
           </p>
         </Prose>
       </PageSection>

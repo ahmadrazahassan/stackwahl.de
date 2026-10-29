@@ -17,8 +17,14 @@ const siteConfigSchema = z.object({
     currency: z.literal("EUR"),
   }),
   legal: z.object({
-    ownerName: z.string().min(1),
-    // No postal address and no phone number on the site (owner decision, 28.10.2026).
+    /** Operator with legal form, exactly as in the Handelsregister (§ 5 Abs. 1 Nr. 1 DDG). */
+    companyName: z.string().min(1),
+    managingDirector: z.string().min(1),
+    // Required for a company (ladungsfähige Anschrift). No phone number on the site.
+    street: z.string().min(1),
+    postalCode: z.string().regex(/^\d{5}$/),
+    city: z.string().min(1),
+    register: z.object({ court: z.string().min(1), number: z.string().min(1) }),
     email: openString,
     /** Corrections, reader mail, press. */
     editorialEmail: openString,
@@ -30,7 +36,7 @@ const siteConfigSchema = z.object({
       name: openString,
     }),
   }),
-  /** The company profile on LinkedIn (null hides it). The founder's profile is in his author record. */
+  /** The company profile on LinkedIn (null hides it). Personal profiles are in the author record. */
   social: z.object({
     linkedinCompany: z.url().nullable(),
   }),
@@ -77,13 +83,18 @@ export const siteConfig: SiteConfig = siteConfigSchema.parse({
     currency: "EUR",
   },
   legal: {
-    ownerName: "Dietmar Riedel",
+    companyName: "Stackwahl UG (haftungsbeschränkt)",
+    managingDirector: "Milan Schultheis",
+    street: "Charlottenstr. 14",
+    postalCode: "52070",
+    city: "Aachen",
+    register: { court: "Amtsgericht Aachen", number: "HRB 24686" },
     email: "kontakt@stackwahl.de",
     editorialEmail: "redaktion@stackwahl.de",
     partnerEmail: "partner@stackwahl.de",
-    vatId: "{{VAT_ID}}",
+    vatId: "DE342188146",
     responsibleEditor: {
-      name: "Dietmar Riedel",
+      name: "Milan Schultheis",
     },
   },
   social: {

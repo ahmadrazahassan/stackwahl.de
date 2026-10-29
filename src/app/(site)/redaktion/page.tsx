@@ -28,9 +28,9 @@ export default function EditorialPage() {
         crumbs={crumbs}
         eyebrow="Redaktion"
         title="Die Redaktion von Stackwahl."
-        lead="Profile, Vergleiche und Ratgeber schreibt die Redaktion von Stackwahl. Verantwortlich für alle Inhalte ist der Gründer und Herausgeber, der jeden Text freigibt."
+        lead="Profile, Vergleiche und Ratgeber schreibt die Redaktion von Stackwahl. Verantwortlich für alle Inhalte ist der Geschäftsführer, der jeden Text freigibt."
       />
-      <PageSection id="personen" label="Verantwortlich" title="Gründer und Herausgeber">
+      <PageSection id="personen" label="Verantwortlich" title="Geschäftsführer">
         <ul className="grid gap-4 md:grid-cols-2">
           {authors.map((a) => (
             <li key={a.slug}>

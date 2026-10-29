@@ -63,7 +63,7 @@ test.describe("Foundation", () => {
     expect(robots).toContain("Sitemap: https://stackwahl.de/sitemap.xml");
     const sitemap = await (await request.get("/sitemap.xml")).text();
     expect(sitemap).toContain("https://stackwahl.de/software/sage-active");
-    expect(sitemap).toContain("https://stackwahl.de/redaktion/dietmar-riedel");
+    expect(sitemap).toContain("https://stackwahl.de/redaktion/milan-schultheis");
     expect(sitemap).not.toContain("/alternativen");
   });
 

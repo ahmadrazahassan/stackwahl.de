@@ -34,18 +34,31 @@ export default function ImprintPage() {
       />
       <PageSection id="anbieter" label="§ 5 DDG" title="Angaben zum Anbieter">
         <dl className="max-w-3xl text-body">
-          <Row term="Anbieter">{legal.ownerName}</Row>
+          <Row term="Anbieter">
+            {legal.companyName}
+            <br />
+            {legal.street}
+            <br />
+            {legal.postalCode} {legal.city}
+          </Row>
+          <Row term="Vertreten durch">{legal.managingDirector} (Geschäftsführer)</Row>
           <Row term="E-Mail">
             <MailLink address={legal.email} />
           </Row>
-          {/* The VAT ID is optional (§ 5 DDG) and shown once the owner provides it. */}
           <Row term="Kontaktformular">
             <Link href={routes.contact()} className="underline decoration-1 underline-offset-4">
               Zur Kontaktseite
             </Link>
           </Row>
+          <Row term="Registereintrag">
+            Eintragung im Handelsregister
+            <br />
+            Registergericht: {legal.register.court}
+            <br />
+            Registernummer: {legal.register.number}
+          </Row>
           {legal.vatId !== null && !isPlaceholder(legal.vatId) ? (
-            <Row term="Umsatzsteuer-Identifikationsnummer">
+            <Row term="Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz">
               <ConfigValue value={legal.vatId} />
             </Row>
           ) : null}
@@ -59,6 +72,11 @@ export default function ImprintPage() {
         <dl className="max-w-3xl text-body">
           <Row term="Name">
             <ConfigValue value={legal.responsibleEditor.name} />
+          </Row>
+          <Row term="Anschrift">
+            {legal.street}
+            <br />
+            {legal.postalCode} {legal.city}
           </Row>
         </dl>
       </PageSection>

@@ -65,7 +65,7 @@ export function SiteFooter({
         </div>
         <div className="relative z-10 mt-16 flex flex-col gap-4 border-t border-muted px-6 py-6 text-small sm:flex-row sm:items-center sm:justify-between sm:px-10">
           <p>
-            © {year} {siteConfig.legal.ownerName}, {siteConfig.brand.name}
+            © {year} {siteConfig.legal.companyName}
             {siteConfig.social.linkedinCompany ? (
               <>
                 {" · "}

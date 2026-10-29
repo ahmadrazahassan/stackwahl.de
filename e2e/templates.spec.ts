@@ -26,7 +26,7 @@ const PAGES = [
   "/glossar/e-rechnung",
   "/methodik",
   "/redaktion",
-  "/redaktion/dietmar-riedel",
+  "/redaktion/milan-schultheis",
   "/transparenz",
   "/ueber-uns",
   "/kontakt",
@@ -97,9 +97,9 @@ test.describe("Templates", () => {
       "href",
       "/redaktion",
     );
-    await expect(page.getByRole("link", { name: "Dietmar Riedel" }).first()).toHaveAttribute(
+    await expect(page.getByRole("link", { name: "Milan Schultheis" }).first()).toHaveAttribute(
       "href",
-      "/redaktion/dietmar-riedel",
+      "/redaktion/milan-schultheis",
     );
     const vendor = page.getByRole("link", { name: /Zum Anbieter/ });
     await expect(vendor).toHaveAttribute("rel", "noopener");
@@ -128,19 +128,22 @@ test.describe("Templates", () => {
     page,
   }) => {
     await page.goto("/impressum");
-    await expect(page.getByText("Dietmar Riedel").first()).toBeVisible();
+    await expect(page.getByText("Stackwahl UG (haftungsbeschränkt)").first()).toBeVisible();
+    await expect(page.getByText("Milan Schultheis (Geschäftsführer)")).toBeVisible();
+    await expect(page.getByText("Registernummer: HRB 24686")).toBeVisible();
+    await expect(page.getByText("DE342188146")).toBeVisible();
+    await expect(page.getByText(/52070 Aachen/).first()).toBeVisible();
     await expect(page.getByRole("link", { name: "kontakt@stackwahl.de" })).toHaveAttribute(
       "href",
       "mailto:kontakt@stackwahl.de",
     );
     await expect(page.getByText(/Angabe fehlt/)).toHaveCount(0);
-    // No phone number, no postal address and no internal review notice anywhere.
+    // No phone number, no tax number, no former founder and no internal review notice.
     await expect(page.getByText(/noch nicht anwaltlich geprüft/)).toHaveCount(0);
     await expect(page.getByText("Telefon")).toHaveCount(0);
-    await expect(page.getByText("Anschrift")).toHaveCount(0);
-    await expect(page.getByText(/Neue Kräme/)).toHaveCount(0);
+    await expect(page.getByText(/Steuernummer/)).toHaveCount(0);
+    await expect(page.getByText(/Dietmar Riedel/)).toHaveCount(0);
     await page.goto("/kontakt");
-    await expect(page.getByText(/Neue Kräme/)).toHaveCount(0);
     for (const address of [
       "kontakt@stackwahl.de",
       "redaktion@stackwahl.de",
@@ -183,8 +186,8 @@ test.describe("Templates", () => {
 
 test.describe("Redaktion and SEO", () => {
   test("editor page lists everything the editor is responsible for", async ({ page }) => {
-    await page.goto("/redaktion/dietmar-riedel");
-    await expect(page.getByRole("heading", { level: 1 })).toContainText("Dietmar Riedel");
+    await page.goto("/redaktion/milan-schultheis");
+    await expect(page.getByRole("heading", { level: 1 })).toContainText("Milan Schultheis");
     await expect(page.getByText(/Verantwortet 20 Softwareprofile/)).toBeVisible();
     await expect(page.getByText(/Verantwortet 10 Ratgeber/)).toBeVisible();
   });

@@ -16,10 +16,10 @@ describe("siteConfig", () => {
 
   it("lists open placeholders", () => {
     const names = findPlaceholders(siteConfig).map((p) => p.name);
-    // The contact e-mail is set; no phone number is published; the VAT ID stays optional.
+    // E-mail and VAT ID are set; no phone number is published.
     expect(names).not.toContain("CONTACT_EMAIL");
     expect(names).not.toContain("CONTACT_PHONE");
-    expect(names).toContain("VAT_ID");
+    expect(names).not.toContain("VAT_ID");
     expect(names).not.toContain("BRAND_NAME");
   });
 });

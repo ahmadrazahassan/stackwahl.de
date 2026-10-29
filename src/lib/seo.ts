@@ -3,6 +3,7 @@
 // describes what the page shows: no ratings or reviews, because no hands-on test exists yet.
 
 import type { Metadata } from "next";
+import { isPlaceholder } from "@/lib/placeholders";
 import { routes } from "@/lib/routes";
 import { siteConfig } from "@/site.config";
 
@@ -77,7 +78,15 @@ export function organizationLd() {
   return {
     "@context": "https://schema.org",
     ...publisher,
-    founder: { "@type": "Person", name: legal.ownerName },
+    legalName: legal.companyName,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: legal.street,
+      postalCode: legal.postalCode,
+      addressLocality: legal.city,
+      addressCountry: "DE",
+    },
+    ...(legal.vatId !== null && !isPlaceholder(legal.vatId) ? { vatID: legal.vatId } : {}),
     email: legal.email,
     contactPoint: [
       {
@@ -186,8 +195,8 @@ export function itemListLd(name: string, items: { name: string; path: string }[]
 }
 
 /**
- * Articles are written by the editorial team; the founder is the accountable person. Both are
- * real: the team as an organization, the founder by name.
+ * Articles are written by the editorial team; the managing director is the accountable person.
+ * Both are real: the team as an organization, the managing director by name.
  */
 export function editorialAuthorLd(author: { slug: string; name: string; role: string }) {
   return {

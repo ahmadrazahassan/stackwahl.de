@@ -5,8 +5,8 @@ import { routes } from "@/lib/routes";
 const link = "underline decoration-1 underline-offset-4 hover:text-ink";
 
 /**
- * "Redaktion Stackwahl · Verantwortlich: Name": the editorial team writes, the founder is the
- * person responsible for the content (§ 18 Abs. 2 MStV). Nothing without a responsible person.
+ * "Redaktion Stackwahl · Verantwortlich: Name": the editorial team writes, the managing director
+ * is the person responsible for the content (§ 18 Abs. 2 MStV). Nothing without a responsible person.
  */
 export function Byline({ author, className }: { author: string | null; className?: string }) {
   const person = getAuthor(author);
