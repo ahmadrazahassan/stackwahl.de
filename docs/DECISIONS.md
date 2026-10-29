@@ -338,3 +338,7 @@ See docs/CONTENT_STATUS.md: QuickBooks (no German site, no euro prices), FreshBo
 ## 30.10.2026: Real mailboxes, domain live
 
 - **Addresses.** The domain is live (www.stackwahl.de, mail at IONOS). The owner uses two mailboxes: info@stackwahl.de is the legal and general address (Impressum, Datenschutz, contact), milan.schultheis@stackwahl.de takes corrections and partner requests. kontakt@, redaktion@ and partner@ are gone.
+
+## 30.10.2026: Publish dates set by the owner
+
+- **Dates.** On the owner's instruction, the publish dates of the 10 guides, 5 comparisons and 5 "Software für" pages are spread over 02.09.–22.10.2026. `updated`, `lastReviewed` and every source's `accessed` date stay the real research dates (24.–29.10.2026).
